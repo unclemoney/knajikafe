@@ -20,6 +20,58 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.18, 0.12, 0.09, 1)
 
+[node name="WindowFrame" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 216.0
+offset_top = 54.0
+offset_right = 424.0
+offset_bottom = 134.0
+color = Color(0.30, 0.22, 0.15, 1)
+
+[node name="CafeWindow" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 222.0
+offset_top = 58.0
+offset_right = 418.0
+offset_bottom = 130.0
+color = Color(0.50, 0.58, 0.68, 1)
+
+[node name="ShelfLeft" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 138.0
+offset_right = 150.0
+offset_bottom = 148.0
+color = Color(0.35, 0.25, 0.15, 1)
+
+[node name="ShelfRight" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 490.0
+offset_top = 138.0
+offset_right = 610.0
+offset_bottom = 148.0
+color = Color(0.35, 0.25, 0.15, 1)
+
+[node name="CounterTop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_top = 198.0
+offset_right = 640.0
+offset_bottom = 206.0
+color = Color(0.40, 0.30, 0.18, 1)
+
+[node name="CounterFront" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 250.0
+color = Color(0.28, 0.20, 0.12, 1)
+
 [node name="FloorLine" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 12
@@ -30,6 +82,69 @@ offset_top = -80.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.25, 0.17, 0.12, 1)
+
+[node name="DecorationLayer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WallSlot" type="Label" parent="DecorationLayer"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 60.0
+offset_top = 85.0
+offset_right = 90.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 14
+text = ""
+horizontal_alignment = 1
+
+[node name="CounterSlot" type="Label" parent="DecorationLayer"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 182.0
+offset_right = 310.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 14
+text = ""
+horizontal_alignment = 1
+
+[node name="TableSlot" type="Label" parent="DecorationLayer"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 500.0
+offset_top = 160.0
+offset_right = 530.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 14
+text = ""
+horizontal_alignment = 1
+
+[node name="WindowSlot" type="Label" parent="DecorationLayer"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 430.0
+offset_top = 90.0
+offset_right = 460.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 14
+text = ""
+horizontal_alignment = 1
+
+[node name="FloorSlot" type="Label" parent="DecorationLayer"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 110.0
+offset_top = 268.0
+offset_right = 140.0
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 14
+text = ""
+horizontal_alignment = 1
 
 [node name="TopBar" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -77,14 +192,35 @@ vertical_alignment = 1
 [node name="StreakLabel" type="Label" parent="TopBar"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.6, 0.2, 1)
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 9
 text = "🔥 0"
 vertical_alignment = 1
 
+[node name="StatsBtn" type="Button" parent="TopBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(32, 24)
+theme_override_font_sizes/font_size = 10
+text = "📊"
+tooltip_text = "Stats"
+
+[node name="CatsBtn" type="Button" parent="TopBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(32, 24)
+theme_override_font_sizes/font_size = 10
+text = "🐱"
+tooltip_text = "Cat Collection"
+
+[node name="DecorBtn" type="Button" parent="TopBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(32, 24)
+theme_override_font_sizes/font_size = 10
+text = "🎨"
+tooltip_text = "Decorations"
+
 [node name="LogoutBtn" type="Button" parent="TopBar"]
 layout_mode = 2
-custom_minimum_size = Vector2(60, 24)
-theme_override_font_sizes/font_size = 9
+custom_minimum_size = Vector2(52, 24)
+theme_override_font_sizes/font_size = 8
 text = "Logout"
 
 [node name="CafeTitle" type="Label" parent="."]
@@ -93,43 +229,53 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -80.0
-offset_top = 52.0
+offset_top = 44.0
 offset_right = 80.0
-offset_bottom = 72.0
+offset_bottom = 58.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.96, 0.87, 0.7, 1)
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 12
 text = "☕ KanjiKafe ☕"
 horizontal_alignment = 1
 
-[node name="CatArea" type="VBoxContainer" parent="."]
+[node name="CatDisplay" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -80.0
-offset_top = -160.0
-offset_right = 80.0
-offset_bottom = -88.0
+offset_left = -180.0
+offset_top = 152.0
+offset_right = 180.0
+offset_bottom = 188.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 4
-alignment = 2
+alignment = 1
+theme_override_constants/separation = 8
 
-[node name="CatLabel" type="Label" parent="CatArea"]
+[node name="DialogueBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -140.0
+offset_top = 252.0
+offset_right = 140.0
+offset_bottom = 282.0
+grow_horizontal = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="CatNameLabel" type="Label" parent="DialogueBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.96, 0.75, 0.4, 1)
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 9
 text = "🐱 Mochi"
 horizontal_alignment = 1
 
-[node name="DialogueLabel" type="Label" parent="CatArea"]
+[node name="DialogueLabel" type="Label" parent="DialogueBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8, 0.7, 0.6, 1)
-theme_override_font_sizes/font_size = 8
-text = "Nyaa~ Ready to study?"
+theme_override_font_sizes/font_size = 7
+text = "\"Nyaa~ Ready to study?\""
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -139,11 +285,11 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -72.0
+offset_top = -68.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
-theme_override_constants/separation = 12
+theme_override_constants/separation = 8
 
 [node name="QuizStation" type="VBoxContainer" parent="Stations"]
 layout_mode = 2

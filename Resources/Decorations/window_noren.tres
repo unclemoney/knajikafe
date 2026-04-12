@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "window_noren"
+display_name = "Noren Curtain"
+description = "Traditional split curtain with the cafe's name in kanji."
+slot = "window"
+icon_text = "🎏"
+unlock_condition = "level:7"

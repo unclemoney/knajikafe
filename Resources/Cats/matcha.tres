@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CatCharacter" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/cat_character.gd" id="cat_character"]
+
+[resource]
+script = ExtResource("cat_character")
+cat_id = "matcha"
+cat_name = "Matcha"
+personality = "A serene green-eyed cat who believes in meditation and careful study. Patient and wise."
+specialty_game = "FlashcardReview"
+unlock_condition = "level:5"
+dialogue_lines = PackedStringArray("Take your time... breathe... study~", "Patience is the key to mastery, nyaa.", "Flip the card when you're ready.", "A calm mind remembers better.", "I like my tea like my kanji — green and complex.", "Rate yourself honestly, nyaa.", "The answer is within you~", "Again? That's okay. Try once more.", "Good... very good... excellent!", "Today's review, tomorrow's knowledge.")
+accent_color = Color(0.5, 0.8, 0.4, 1)

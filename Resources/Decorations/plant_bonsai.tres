@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "plant_bonsai"
+display_name = "Bonsai Tree"
+description = "A miniature pine bonsai for the counter. Brings zen to the cafe."
+slot = "counter"
+icon_text = "🌲"
+unlock_condition = "default"

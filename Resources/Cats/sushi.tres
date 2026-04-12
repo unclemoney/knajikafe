@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CatCharacter" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/cat_character.gd" id="cat_character"]
+
+[resource]
+script = ExtResource("cat_character")
+cat_id = "sushi"
+cat_name = "Sushi"
+personality = "A playful tuxedo cat with a sharp memory. Loves matching games and hiding treats under cups."
+specialty_game = "KanjiMatching"
+unlock_condition = "level:3"
+dialogue_lines = PackedStringArray("Can you find the matching pair, nyaa?", "My memory is purrfect!", "Two cards, one match — let's go!", "I hid them all... now find them!", "Sushi roll? No, I'm Sushi the cat!", "Match faster, faster!", "You remembered! Sugoi!", "Let me flip that card for you~", "Memory training is my specialty!", "Keep your eyes on the cards, nyaa~")
+accent_color = Color(0.4, 0.7, 0.9, 1)

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CatCharacter" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/cat_character.gd" id="cat_character"]
+
+[resource]
+script = ExtResource("cat_character")
+cat_id = "kinako"
+cat_name = "Kinako"
+personality = "A speedy orange tabby who types faster than any cat. Competitive and energetic."
+specialty_game = "TypingInput"
+unlock_condition = "level:10"
+dialogue_lines = PackedStringArray("Type it out! Quick, quick!", "My paws are faster than yours, nyaa!", "Spell it right or try again!", "Kinako power! Let's type!", "Hiragana, katakana — I know them all!", "Speed and accuracy, that's the goal!", "Don't look at the keyboard, look at me!", "You can do it! Type, type, type!", "Every keystroke counts, nyaa~", "Romaji works too, but hiragana is cooler!")
+accent_color = Color(0.95, 0.7, 0.3, 1)

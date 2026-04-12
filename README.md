@@ -252,13 +252,22 @@ Test scenes are located in `Tests/`. To run a specific test:
 - [x] Cat Cafe Orders (timed ordering game — cat orders in Japanese, pick correct item)
 - [x] All 7 stations wired in Cafe Hub (Quiz, Flashcards, Matching, Fill Blank, Typing, Orders, Settings)
 
-### Phase 5: Interactive Cafe Hub
-- [ ] Cafe background art (side-view interior with parallax)
+### Phase 5: Interactive Cafe Hub ✅
+- [x] Cafe background art (side-view interior with layered ColorRect wall, window, shelves, counter, floor)
 - [x] Clickable stations for all 6 mini-games + settings
-- [ ] Cat characters (5-8 with sprites, personalities, dialogue)
-- [ ] Cat unlock system (level/achievement-based)
-- [ ] Cafe decoration system (visual upgrades)
-- [ ] Stats/Progress screen (words learned, accuracy, JLPT progress, cat collection)
+- [x] Cat characters — 6 cats with unique personalities, specialty games, and dialogue lines:
+  - **Mochi** (default, MultipleChoice) — warm calico cafe owner
+  - **Sushi** (Lv.3, KanjiMatching) — playful tuxedo, memory expert
+  - **Matcha** (Lv.5, FlashcardReview) — serene green-eyed, patient study guide
+  - **Sakura** (Lv.7, FillInBlank) — graceful reader, sentence puzzle lover
+  - **Kinako** (Lv.10, TypingInput) — speedy orange tabby, typing champion
+  - **Azuki** (Lv.12, CafeOrders) — chubby kitchen cat, food vocabulary master
+- [x] Cat unlock system (level-based: auto-check on hub load, silhouettes for locked cats)
+- [x] Cat collection screen (`Scenes/CatCollection/`) — browse all cats, view personality & dialogue
+- [x] Cafe decoration system — 8 decorations across 5 slot types (wall, counter, table, window, floor)
+- [x] Decoration shop screen (`Scenes/DecorationShop/`) — equip/unequip decorations per slot
+- [x] Stats/Progress screen (`Scenes/Stats/`) — player overview, streak, review stats, cat & decoration counts
+- [x] Navigation buttons (📊 Stats, 🐱 Cats, 🎨 Decorations) added to cafe hub top bar
 
 ### Phase 6: Polish & Content
 - [ ] Background music (lofi cafe ambiance, game tracks)

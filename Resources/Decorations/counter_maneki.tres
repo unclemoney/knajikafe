@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "counter_maneki"
+display_name = "Maneki-neko"
+description = "A lucky beckoning cat statue for the counter. Invites good fortune!"
+slot = "counter"
+icon_text = "🐱"
+unlock_condition = "level:8"

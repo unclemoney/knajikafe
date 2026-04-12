@@ -1,16 +1,13 @@
 extends MiniGameBase
-## multiple_choice.gd
+## fill_in_blank.gd
 ##
-## Multiple Choice Quiz mini-game.
-## Shows a Japanese word and 4 English answer choices.
-## Reports results to SRSEngine and calculates XP.
+## Fill in the Blank mini-game.
+## Shows a sentence with one word blanked out. Player picks
+## the correct word from 4 choices. Falls back to a meaning-to-word
+## format if no example sentences are available for a word.
 
-## Emitted when a question is answered. Used internally for timing.
-signal question_answered(correct: bool)
-
-@onready var vocab_display: VocabDisplay = $GameArea/WordDisplay
-@onready var progress_label: Label = $TopBar/ProgressLabel
-@onready var score_label: Label = $TopBar/ScoreLabel
+@onready var sentence_label: Label = $GameArea/SentenceLabel
+@onready var hint_label: Label = $GameArea/HintLabel
 @onready var answer_btns: Array[Button] = [
 	$GameArea/AnswerGrid/Answer1,
 	$GameArea/AnswerGrid/Answer2,
@@ -18,10 +15,15 @@ signal question_answered(correct: bool)
 	$GameArea/AnswerGrid/Answer4,
 ]
 @onready var feedback_label: Label = $GameArea/FeedbackLabel
+@onready var progress_label: Label = $TopBar/ProgressLabel
+@onready var score_label: Label = $TopBar/ScoreLabel
 @onready var cat_label: Label = $CatReaction/CatLabel
 
 ## Whether the player can currently answer.
 var _is_answering: bool = false
+
+## The correct answer text for the current question.
+var _correct_answer: String = ""
 
 
 func _ready() -> void:
@@ -33,7 +35,6 @@ func _ready() -> void:
 	_setup_session()
 
 
-## Called when session setup completes — show the first question.
 func _on_session_ready() -> void:
 	if _words_per_session == 0:
 		feedback_label.text = "No words available!"
@@ -41,26 +42,42 @@ func _on_session_ready() -> void:
 	_show_question()
 
 
-## Displays the current question.
+## Displays the current fill-in-the-blank question.
 func _show_question() -> void:
 	_is_answering = true
 	feedback_label.text = ""
 	cat_label.text = "🐱"
 
 	var word := _session_words[_current_index]
-
-	# Display the word — hide English since that's what we're quizzing
-	vocab_display.show_word(word, {"show_english": false})
-
-	# Update progress
 	progress_label.text = "%d / %d" % [_current_index + 1, _words_per_session]
 	score_label.text = "Score: %d" % _correct_count
 
-	# Generate answer choices
-	var correct_meaning := word.get_primary_meaning()
-	var choices: Array[String] = [correct_meaning]
+	# Try to use an example sentence
+	var used_sentence := false
+	if word.example_sentences.size() > 0:
+		var sentence_pair: String = word.example_sentences[randi() % word.example_sentences.size()]
+		var parts := sentence_pair.split("|")
+		if parts.size() >= 2:
+			var jp_sentence: String = parts[0]
+			var en_sentence: String = parts[1]
+			var display_text := word.get_display_text()
+			if display_text in jp_sentence:
+				var blanked := jp_sentence.replace(display_text, "______")
+				sentence_label.text = blanked
+				hint_label.text = en_sentence
+				hint_label.visible = true
+				_correct_answer = display_text
+				used_sentence = true
 
-	# Get 3 wrong answers from other words
+	# Fallback: "Which word means [English]?"
+	if not used_sentence:
+		sentence_label.text = "Which word means: \"%s\"?" % word.get_primary_meaning()
+		hint_label.visible = false
+		_correct_answer = word.get_display_text()
+
+	# Build answer choices
+	var choices: Array[String] = [_correct_answer]
+
 	var exclude := PackedStringArray([word.id])
 	var distractors := VocabDatabase.get_random_words(10, exclude)
 	distractors.shuffle()
@@ -68,18 +85,17 @@ func _show_question() -> void:
 	for d in distractors:
 		if choices.size() >= 4:
 			break
-		var meaning := d.get_primary_meaning()
-		if meaning != "" and meaning != correct_meaning and meaning not in choices:
-			choices.append(meaning)
+		var d_text := d.get_display_text()
+		if d_text != "" and d_text != _correct_answer and d_text not in choices:
+			choices.append(d_text)
 
-	# Pad with fallback if not enough distractors
+	# Pad if needed
 	var fallbacks: Array[String] = ["???", "...", "---"]
 	var fi := 0
 	while choices.size() < 4:
 		choices.append(fallbacks[fi % fallbacks.size()])
 		fi += 1
 
-	# Shuffle choices and assign to buttons
 	choices.shuffle()
 	for i in 4:
 		answer_btns[i].text = choices[i]
@@ -93,17 +109,13 @@ func _on_answer_pressed(index: int) -> void:
 		return
 	_is_answering = false
 
-	var word := _session_words[_current_index]
 	var card := _session_cards[_current_index]
-	var correct_meaning := word.get_primary_meaning()
 	var chosen := answer_btns[index].text
-	var is_correct := chosen == correct_meaning
+	var is_correct := chosen == _correct_answer
 
-	# Disable all buttons
 	for btn in answer_btns:
 		btn.disabled = true
 
-	# Highlight correct/wrong
 	if is_correct:
 		answer_btns[index].modulate = Color(0.3, 0.9, 0.3)
 		feedback_label.text = "Correct!"
@@ -117,15 +129,12 @@ func _on_answer_pressed(index: int) -> void:
 	else:
 		answer_btns[index].modulate = Color(0.9, 0.3, 0.3)
 		for btn in answer_btns:
-			if btn.text == correct_meaning:
+			if btn.text == _correct_answer:
 				btn.modulate = Color(0.3, 0.9, 0.3)
-		feedback_label.text = "Wrong! It was: %s" % correct_meaning
+		feedback_label.text = "It was: %s" % _correct_answer
 		cat_label.text = "🐱 💦"
 		_report_incorrect(card)
 		AudioManager.play_wrong()
 
-	question_answered.emit(is_correct)
-
-	# Wait then advance
 	await get_tree().create_timer(FEEDBACK_DELAY).timeout
 	_advance()

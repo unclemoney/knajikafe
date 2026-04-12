@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://Scenes/MiniGames/MultipleChoice/multiple_choice.gd" id="1"]
+[ext_resource type="Script" path="res://Scenes/MiniGames/FlashcardReview/flashcard_review.gd" id="1"]
 [ext_resource type="PackedScene" path="res://Scenes/Components/VocabDisplay/vocab_display.tscn" id="2"]
 
-[node name="MultipleChoice" type="Control"]
+[node name="FlashcardReview" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,14 +37,7 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.76, 0.65, 0.52, 1)
 theme_override_font_sizes/font_size = 10
 text = "1 / 10"
-
-[node name="ScoreLabel" type="Label" parent="TopBar"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
-theme_override_font_sizes/font_size = 10
-text = "Score: 0"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="GameArea" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -54,56 +47,77 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -200.0
-offset_top = -110.0
+offset_top = -120.0
 offset_right = 200.0
-offset_bottom = 110.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="WordDisplay" parent="GameArea" instance=ExtResource("2")]
+[node name="CardFront" parent="GameArea" instance=ExtResource("2")]
 layout_mode = 2
 
-[node name="Spacer" type="Control" parent="GameArea"]
+[node name="CardBack" type="VBoxContainer" parent="GameArea"]
+visible = false
 layout_mode = 2
-custom_minimum_size = Vector2(0, 12)
+theme_override_constants/separation = 4
+alignment = 1
 
-[node name="AnswerGrid" type="GridContainer" parent="GameArea"]
+[node name="ReadingLabel" type="Label" parent="GameArea/CardBack"]
 layout_mode = 2
-columns = 2
-theme_override_constants/h_separation = 8
-theme_override_constants/v_separation = 8
+theme_override_colors/font_color = Color(0.7, 0.6, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
 
-[node name="Answer1" type="Button" parent="GameArea/AnswerGrid"]
+[node name="MeaningLabel" type="Label" parent="GameArea/CardBack"]
 layout_mode = 2
-custom_minimum_size = Vector2(190, 36)
-theme_override_font_sizes/font_size = 10
-text = "Answer 1"
+theme_override_colors/font_color = Color(0.5, 0.7, 0.5, 1)
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
 
-[node name="Answer2" type="Button" parent="GameArea/AnswerGrid"]
+[node name="FlipBtn" type="Button" parent="GameArea"]
 layout_mode = 2
-custom_minimum_size = Vector2(190, 36)
-theme_override_font_sizes/font_size = 10
-text = "Answer 2"
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(160, 36)
+theme_override_font_sizes/font_size = 11
+text = "Flip Card"
 
-[node name="Answer3" type="Button" parent="GameArea/AnswerGrid"]
+[node name="RatingBox" type="HBoxContainer" parent="GameArea"]
+visible = false
 layout_mode = 2
-custom_minimum_size = Vector2(190, 36)
-theme_override_font_sizes/font_size = 10
-text = "Answer 3"
+alignment = 1
+theme_override_constants/separation = 6
 
-[node name="Answer4" type="Button" parent="GameArea/AnswerGrid"]
+[node name="AgainBtn" type="Button" parent="GameArea/RatingBox"]
 layout_mode = 2
-custom_minimum_size = Vector2(190, 36)
-theme_override_font_sizes/font_size = 10
-text = "Answer 4"
+custom_minimum_size = Vector2(80, 32)
+theme_override_font_sizes/font_size = 9
+text = "Again"
+
+[node name="HardBtn" type="Button" parent="GameArea/RatingBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 32)
+theme_override_font_sizes/font_size = 9
+text = "Hard"
+
+[node name="GoodBtn" type="Button" parent="GameArea/RatingBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 32)
+theme_override_font_sizes/font_size = 9
+text = "Good"
+
+[node name="EasyBtn" type="Button" parent="GameArea/RatingBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 32)
+theme_override_font_sizes/font_size = 9
+text = "Easy"
 
 [node name="FeedbackLabel" type="Label" parent="GameArea"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 20)
 theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 10
 text = ""
 horizontal_alignment = 1
 

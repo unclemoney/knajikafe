@@ -12,6 +12,11 @@ extends Control
 @onready var cat_label: Label = $CatArea/CatLabel
 @onready var cat_dialogue: Label = $CatArea/DialogueLabel
 @onready var quiz_btn: Button = $Stations/QuizStation/QuizBtn
+@onready var flashcard_btn: Button = $Stations/FlashcardStation/FlashcardBtn
+@onready var matching_btn: Button = $Stations/MatchingStation/MatchingBtn
+@onready var fill_blank_btn: Button = $Stations/FillBlankStation/FillBlankBtn
+@onready var typing_btn: Button = $Stations/TypingStation/TypingBtn
+@onready var orders_btn: Button = $Stations/OrdersStation/OrdersBtn
 @onready var settings_btn: Button = $Stations/SettingsStation/SettingsBtn
 @onready var logout_btn: Button = $TopBar/LogoutBtn
 
@@ -27,6 +32,11 @@ var _cat_dialogues: PackedStringArray = [
 
 func _ready() -> void:
 	quiz_btn.pressed.connect(_on_quiz_pressed)
+	flashcard_btn.pressed.connect(_on_flashcard_pressed)
+	matching_btn.pressed.connect(_on_matching_pressed)
+	fill_blank_btn.pressed.connect(_on_fill_blank_pressed)
+	typing_btn.pressed.connect(_on_typing_pressed)
+	orders_btn.pressed.connect(_on_orders_pressed)
 	settings_btn.pressed.connect(_on_settings_pressed)
 	logout_btn.pressed.connect(_on_logout_pressed)
 	_update_streak()
@@ -86,6 +96,85 @@ func _on_quiz_pressed() -> void:
 
 	quiz_btn.disabled = true
 	GameController.change_scene("res://Scenes/MiniGames/MultipleChoice/multiple_choice.tscn")
+
+
+## Starts the Flashcard Review.
+func _on_flashcard_pressed() -> void:
+	var profile := GameController.current_profile
+	if profile == null:
+		return
+
+	var words_per_session: int = profile.settings.get("words_per_session", 10)
+	GameController.session_data = {
+		"game_type": "flashcard_review",
+		"words_per_session": words_per_session,
+	}
+
+	flashcard_btn.disabled = true
+	GameController.change_scene("res://Scenes/MiniGames/FlashcardReview/flashcard_review.tscn")
+
+
+## Starts the Kanji Matching game.
+func _on_matching_pressed() -> void:
+	var profile := GameController.current_profile
+	if profile == null:
+		return
+
+	GameController.session_data = {
+		"game_type": "kanji_matching",
+		"words_per_session": 6,
+	}
+
+	matching_btn.disabled = true
+	GameController.change_scene("res://Scenes/MiniGames/KanjiMatching/kanji_matching.tscn")
+
+
+## Starts the Fill in the Blank game.
+func _on_fill_blank_pressed() -> void:
+	var profile := GameController.current_profile
+	if profile == null:
+		return
+
+	var words_per_session: int = profile.settings.get("words_per_session", 10)
+	GameController.session_data = {
+		"game_type": "fill_in_blank",
+		"words_per_session": words_per_session,
+	}
+
+	fill_blank_btn.disabled = true
+	GameController.change_scene("res://Scenes/MiniGames/FillInBlank/fill_in_blank.tscn")
+
+
+## Starts the Typing Input game.
+func _on_typing_pressed() -> void:
+	var profile := GameController.current_profile
+	if profile == null:
+		return
+
+	var words_per_session: int = profile.settings.get("words_per_session", 10)
+	GameController.session_data = {
+		"game_type": "typing_input",
+		"words_per_session": words_per_session,
+	}
+
+	typing_btn.disabled = true
+	GameController.change_scene("res://Scenes/MiniGames/TypingInput/typing_input.tscn")
+
+
+## Starts the Cat Cafe Orders game.
+func _on_orders_pressed() -> void:
+	var profile := GameController.current_profile
+	if profile == null:
+		return
+
+	var words_per_session: int = profile.settings.get("words_per_session", 10)
+	GameController.session_data = {
+		"game_type": "cafe_orders",
+		"words_per_session": words_per_session,
+	}
+
+	orders_btn.disabled = true
+	GameController.change_scene("res://Scenes/MiniGames/CafeOrders/cafe_orders.tscn")
 
 
 ## Returns to profile select (logout).

@@ -143,7 +143,7 @@ offset_top = -72.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
-theme_override_constants/separation = 24
+theme_override_constants/separation = 12
 
 [node name="QuizStation" type="VBoxContainer" parent="Stations"]
 layout_mode = 2
@@ -153,21 +153,146 @@ alignment = 1
 [node name="StationIcon" type="Label" parent="Stations/QuizStation"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9, 0.8, 0.6, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "📋"
 horizontal_alignment = 1
 
 [node name="QuizBtn" type="Button" parent="Stations/QuizStation"]
 layout_mode = 2
-custom_minimum_size = Vector2(100, 28)
-theme_override_font_sizes/font_size = 9
-text = "Multiple Choice"
+custom_minimum_size = Vector2(80, 24)
+theme_override_font_sizes/font_size = 7
+text = "Quiz"
 
 [node name="StationLabel" type="Label" parent="Stations/QuizStation"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6, 0.5, 0.4, 1)
-theme_override_font_sizes/font_size = 7
+theme_override_font_sizes/font_size = 6
 text = "Menu Board"
+horizontal_alignment = 1
+
+[node name="FlashcardStation" type="VBoxContainer" parent="Stations"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="StationIcon" type="Label" parent="Stations/FlashcardStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.6, 1)
+theme_override_font_sizes/font_size = 16
+text = "📖"
+horizontal_alignment = 1
+
+[node name="FlashcardBtn" type="Button" parent="Stations/FlashcardStation"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 24)
+theme_override_font_sizes/font_size = 7
+text = "Flashcards"
+
+[node name="StationLabel" type="Label" parent="Stations/FlashcardStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.5, 0.4, 1)
+theme_override_font_sizes/font_size = 6
+text = "Counter"
+horizontal_alignment = 1
+
+[node name="MatchingStation" type="VBoxContainer" parent="Stations"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="StationIcon" type="Label" parent="Stations/MatchingStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.6, 1)
+theme_override_font_sizes/font_size = 16
+text = "🀄"
+horizontal_alignment = 1
+
+[node name="MatchingBtn" type="Button" parent="Stations/MatchingStation"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 24)
+theme_override_font_sizes/font_size = 7
+text = "Matching"
+
+[node name="StationLabel" type="Label" parent="Stations/MatchingStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.5, 0.4, 1)
+theme_override_font_sizes/font_size = 6
+text = "Table"
+horizontal_alignment = 1
+
+[node name="FillBlankStation" type="VBoxContainer" parent="Stations"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="StationIcon" type="Label" parent="Stations/FillBlankStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.6, 1)
+theme_override_font_sizes/font_size = 16
+text = "📝"
+horizontal_alignment = 1
+
+[node name="FillBlankBtn" type="Button" parent="Stations/FillBlankStation"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 24)
+theme_override_font_sizes/font_size = 7
+text = "Fill Blank"
+
+[node name="StationLabel" type="Label" parent="Stations/FillBlankStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.5, 0.4, 1)
+theme_override_font_sizes/font_size = 6
+text = "Bookshelf"
+horizontal_alignment = 1
+
+[node name="TypingStation" type="VBoxContainer" parent="Stations"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="StationIcon" type="Label" parent="Stations/TypingStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.6, 1)
+theme_override_font_sizes/font_size = 16
+text = "⌨️"
+horizontal_alignment = 1
+
+[node name="TypingBtn" type="Button" parent="Stations/TypingStation"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 24)
+theme_override_font_sizes/font_size = 7
+text = "Typing"
+
+[node name="StationLabel" type="Label" parent="Stations/TypingStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.5, 0.4, 1)
+theme_override_font_sizes/font_size = 6
+text = "Register"
+horizontal_alignment = 1
+
+[node name="OrdersStation" type="VBoxContainer" parent="Stations"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="StationIcon" type="Label" parent="Stations/OrdersStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.6, 1)
+theme_override_font_sizes/font_size = 16
+text = "🍵"
+horizontal_alignment = 1
+
+[node name="OrdersBtn" type="Button" parent="Stations/OrdersStation"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 24)
+theme_override_font_sizes/font_size = 7
+text = "Orders"
+
+[node name="StationLabel" type="Label" parent="Stations/OrdersStation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.5, 0.4, 1)
+theme_override_font_sizes/font_size = 6
+text = "Kitchen"
 horizontal_alignment = 1
 
 [node name="SettingsStation" type="VBoxContainer" parent="Stations"]
@@ -178,14 +303,14 @@ alignment = 1
 [node name="SettingsIcon" type="Label" parent="Stations/SettingsStation"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9, 0.8, 0.6, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "⚙️"
 horizontal_alignment = 1
 
 [node name="SettingsBtn" type="Button" parent="Stations/SettingsStation"]
 layout_mode = 2
-custom_minimum_size = Vector2(100, 28)
-theme_override_font_sizes/font_size = 9
+custom_minimum_size = Vector2(80, 24)
+theme_override_font_sizes/font_size = 7
 text = "Settings"
 
 [node name="SettingsLabel" type="Label" parent="Stations/SettingsStation"]

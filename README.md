@@ -109,14 +109,25 @@ res://
 │   │   ├── cafe_hub.tscn
 │   │   └── cafe_hub.gd
 │   ├── MiniGames/
+│   │   ├── mini_game_base.gd     # Abstract base class for all mini-games
 │   │   ├── MultipleChoice/       # 4-answer quiz with SRS integration
 │   │   │   ├── multiple_choice.tscn
 │   │   │   └── multiple_choice.gd
-│   │   ├── FlashcardReview/
-│   │   ├── KanjiMatching/
-│   │   ├── TypingInput/
-│   │   ├── FillInBlank/
-│   │   └── CafeOrders/
+│   │   ├── FlashcardReview/      # Flip cards, self-rate with SM-2
+│   │   │   ├── flashcard_review.tscn
+│   │   │   └── flashcard_review.gd
+│   │   ├── KanjiMatching/        # Memory card matching (4×3 grid)
+│   │   │   ├── kanji_matching.tscn
+│   │   │   └── kanji_matching.gd
+│   │   ├── FillInBlank/          # Sentence completion with 4 choices
+│   │   │   ├── fill_in_blank.tscn
+│   │   │   └── fill_in_blank.gd
+│   │   ├── TypingInput/          # Type reading from English prompt
+│   │   │   ├── typing_input.tscn
+│   │   │   └── typing_input.gd
+│   │   └── CafeOrders/           # Timed cafe ordering game
+│   │       ├── cafe_orders.tscn
+│   │       └── cafe_orders.gd
 │   ├── Results/                  # Post-quiz summary with XP and accuracy
 │   │   ├── results_screen.tscn
 │   │   └── results_screen.gd
@@ -231,17 +242,19 @@ Test scenes are located in `Tests/`. To run a specific test:
 - [x] Level-up notification overlay (animated toast via GameController)
 - [x] Streak display in Cafe Hub and Results Screen
 
-### Phase 4: Remaining Mini-Games
-- [ ] Mini-game base framework (MiniGameBase class, session config widget)
-- [ ] Flashcard Review (card flip, self-rate, SM-2 quality)
-- [ ] Kanji Matching (memory card grid, pair matching)
-- [ ] Typing Input (on-screen Hiragana/Katakana keyboard)
-- [ ] Fill in the Blank (sentence completion with word choices)
-- [ ] Cat Cafe Orders (themed ordering game with timed rounds)
+### Phase 4: Remaining Mini-Games ✅
+- [x] Mini-game base framework (MiniGameBase class with shared session setup/finish/XP logic)
+- [x] Refactored Multiple Choice to extend MiniGameBase
+- [x] Flashcard Review (card flip, self-rate Again/Hard/Good/Easy → SM-2 quality)
+- [x] Kanji Matching (4×3 memory card grid, match kanji to English meanings)
+- [x] Fill in the Blank (sentence completion with 4 word choices, fallback format)
+- [x] Typing Input (type hiragana/romaji reading from English prompt, skip option)
+- [x] Cat Cafe Orders (timed ordering game — cat orders in Japanese, pick correct item)
+- [x] All 7 stations wired in Cafe Hub (Quiz, Flashcards, Matching, Fill Blank, Typing, Orders, Settings)
 
 ### Phase 5: Interactive Cafe Hub
 - [ ] Cafe background art (side-view interior with parallax)
-- [ ] Clickable stations for all 6 mini-games
+- [x] Clickable stations for all 6 mini-games + settings
 - [ ] Cat characters (5-8 with sprites, personalities, dialogue)
 - [ ] Cat unlock system (level/achievement-based)
 - [ ] Cafe decoration system (visual upgrades)

@@ -1,0 +1,55 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="KanjiKafe"
+run/main_scene="res://Scenes/TitleScreen/title_screen.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameController="*res://Autoloads/game_controller.gd"
+AudioManager="*res://Autoloads/audio_manager.gd"
+SaveManager="*res://Autoloads/save_manager.gd"
+SRSEngine="*res://Autoloads/srs_engine.gd"
+VocabDatabase="*res://Autoloads/vocab_database.gd"
+TweenFX="*res://addons/TweenFX/TweenFX.gd"
+GDAIMCPRuntime="*res://addons/gdai-mcp-plugin-godot/gdai_mcp_runtime.gd"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/TweenFX/plugin.cfg", "res://addons/gdai-mcp-plugin-godot/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Art/": "red",
+"res://Audio/": "orange",
+"res://Autoloads/": "yellow",
+"res://Resources/": "green",
+"res://Scenes/": "teal",
+"res://Tests/": "blue",
+"res://Themes/": "purple",
+"res://addons/": "gray"
+}
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

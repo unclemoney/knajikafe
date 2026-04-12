@@ -23,10 +23,17 @@ var bgm_volume: float = 0.8:
 ## Current SFX volume (0.0–1.0).
 var sfx_volume: float = 0.8
 
+## Placeholder procedural SFX (generated at startup).
+var _sfx_correct: AudioStreamWAV = null
+var _sfx_wrong: AudioStreamWAV = null
+var _sfx_click: AudioStreamWAV = null
+var _sfx_level_up: AudioStreamWAV = null
+
 
 func _ready() -> void:
 	_setup_bgm_player()
 	_setup_sfx_pool()
+	_generate_placeholder_sfx()
 
 
 ## Plays background music, crossfading from any current track.
@@ -93,3 +100,84 @@ func _setup_sfx_pool() -> void:
 		player.bus = "Master"
 		add_child(player)
 		_sfx_players.append(player)
+
+
+## Plays the correct-answer SFX.
+func play_correct() -> void:
+	if _sfx_correct:
+		play_sfx(_sfx_correct)
+
+
+## Plays the wrong-answer SFX.
+func play_wrong() -> void:
+	if _sfx_wrong:
+		play_sfx(_sfx_wrong)
+
+
+## Plays the UI click SFX.
+func play_click() -> void:
+	if _sfx_click:
+		play_sfx(_sfx_click)
+
+
+## Plays the level-up SFX.
+func play_level_up() -> void:
+	if _sfx_level_up:
+		play_sfx(_sfx_level_up)
+
+
+## Generates simple procedural placeholder sounds.
+func _generate_placeholder_sfx() -> void:
+	_sfx_correct = _generate_tone(660.0, 0.15, 0.6)
+	_sfx_wrong = _generate_tone(220.0, 0.25, 0.5)
+	_sfx_click = _generate_tone(880.0, 0.05, 0.3)
+	_sfx_level_up = _generate_rising_tone(440.0, 880.0, 0.4, 0.6)
+
+
+## Generates a simple sine wave tone as an AudioStreamWAV.
+func _generate_tone(freq: float, duration: float, volume: float) -> AudioStreamWAV:
+	var sample_rate := 22050
+	var num_samples := int(sample_rate * duration)
+	var data := PackedByteArray()
+	data.resize(num_samples * 2)
+
+	for i in num_samples:
+		var t := float(i) / float(sample_rate)
+		var envelope := 1.0 - (float(i) / float(num_samples))
+		var sample_val := sin(t * freq * TAU) * volume * envelope
+		var value := int(sample_val * 32767.0)
+		value = clampi(value, -32768, 32767)
+		data[i * 2] = value & 0xFF
+		data[i * 2 + 1] = (value >> 8) & 0xFF
+
+	var stream := AudioStreamWAV.new()
+	stream.format = AudioStreamWAV.FORMAT_16_BITS
+	stream.mix_rate = sample_rate
+	stream.data = data
+	return stream
+
+
+## Generates a rising pitch tone (for level-up jingle).
+func _generate_rising_tone(freq_start: float, freq_end: float, duration: float, volume: float) -> AudioStreamWAV:
+	var sample_rate := 22050
+	var num_samples := int(sample_rate * duration)
+	var data := PackedByteArray()
+	data.resize(num_samples * 2)
+
+	var phase := 0.0
+	for i in num_samples:
+		var t := float(i) / float(num_samples)
+		var freq := freq_start + (freq_end - freq_start) * t
+		var envelope := 1.0 - t * 0.5
+		phase += freq / float(sample_rate)
+		var sample_val := sin(phase * TAU) * volume * envelope
+		var value := int(sample_val * 32767.0)
+		value = clampi(value, -32768, 32767)
+		data[i * 2] = value & 0xFF
+		data[i * 2 + 1] = (value >> 8) & 0xFF
+
+	var stream := AudioStreamWAV.new()
+	stream.format = AudioStreamWAV.FORMAT_16_BITS
+	stream.mix_rate = sample_rate
+	stream.data = data
+	return stream

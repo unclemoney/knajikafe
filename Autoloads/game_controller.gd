@@ -22,12 +22,19 @@ var current_scene_path: String = ""
 ## Reference to the scene tree's current scene node.
 var current_scene_node: Node = null
 
+## Generic dictionary for passing data between scenes (e.g., quiz results).
+var session_data: Dictionary = {}
+
 ## Transition overlay for fade effects.
 var _transition_rect: ColorRect = null
+
+## Level-up notification overlay.
+var _level_up_notification: LevelUpNotification = null
 
 
 func _ready() -> void:
 	_setup_transition_overlay()
+	_setup_level_up_notification()
 	current_scene_node = get_tree().current_scene
 
 
@@ -81,3 +88,15 @@ func _fade_in() -> void:
 	var tween := create_tween()
 	tween.tween_property(_transition_rect, "color:a", 0.0, 0.3)
 	await tween.finished
+
+
+## Shows the level-up notification overlay.
+func show_level_up(new_level: int) -> void:
+	if _level_up_notification:
+		_level_up_notification.show_level_up(new_level)
+
+
+## Creates the level-up notification overlay.
+func _setup_level_up_notification() -> void:
+	_level_up_notification = LevelUpNotification.new()
+	add_child(_level_up_notification)

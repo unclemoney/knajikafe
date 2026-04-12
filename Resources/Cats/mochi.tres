@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CatCharacter" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/cat_character.gd" id="cat_character"]
+
+[resource]
+script = ExtResource("cat_character")
+cat_id = "mochi"
+cat_name = "Mochi"
+personality = "A warm and encouraging calico cat who runs the cafe. Always ready with a kind word and a cup of tea."
+specialty_game = "MultipleChoice"
+unlock_condition = "default"
+dialogue_lines = PackedStringArray("Nyaa~ Welcome to KanjiKafe!", "Ready to learn some kanji?", "You're doing great, keep it up!", "Coffee and kanji go great together!", "I believe in you, nyaa~", "Let's try the quiz station!", "Every word you learn is a step forward!", "Don't worry about mistakes, that's how we learn!", "Nyaa~ Another perfect score!", "Time for a study break? Have some tea!")
+accent_color = Color(0.96, 0.75, 0.4, 1)

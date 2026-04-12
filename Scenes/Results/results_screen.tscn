@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scenes/Results/results_screen.gd" id="1"]
+
+[node name="ResultsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.07, 0.05, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -120.0
+offset_right = 180.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.87, 0.7, 1)
+theme_override_font_sizes/font_size = 18
+text = "Quiz Complete!"
+horizontal_alignment = 1
+
+[node name="Separator" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="StatsBox" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="WordsLabel" type="Label" parent="Panel/VBox/StatsBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.7, 0.6, 1)
+theme_override_font_sizes/font_size = 10
+text = "Words Reviewed: 10"
+horizontal_alignment = 1
+
+[node name="AccuracyLabel" type="Label" parent="Panel/VBox/StatsBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.7, 0.6, 1)
+theme_override_font_sizes/font_size = 10
+text = "Correct: 8 / 10  (80%)"
+horizontal_alignment = 1
+
+[node name="XPLabel" type="Label" parent="Panel/VBox/StatsBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
+theme_override_font_sizes/font_size = 11
+text = "XP Earned: +100"
+horizontal_alignment = 1
+
+[node name="StreakLabel" type="Label" parent="Panel/VBox/StatsBox"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.6, 0.2, 1)
+theme_override_font_sizes/font_size = 10
+text = "🔥 1 day streak!"
+horizontal_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="Panel/VBox/StatsBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.6, 0.5, 1)
+theme_override_font_sizes/font_size = 9
+text = "Level: 1  |  Total XP: 100"
+horizontal_alignment = 1
+
+[node name="LevelUpLabel" type="Label" parent="Panel/VBox"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.3, 1)
+theme_override_font_sizes/font_size = 12
+text = "⭐ Level Up! ⭐"
+horizontal_alignment = 1
+
+[node name="Separator2" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="ReturnBtn" type="Button" parent="Panel/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(140, 32)
+theme_override_font_sizes/font_size = 11
+text = "Return to Cafe"

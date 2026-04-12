@@ -36,11 +36,13 @@ class_name VocabWord
 @export var part_of_speech: String = ""
 
 
-## Returns the primary display text — kanji if available, else hiragana.
+## Returns the primary display text — kanji if available, then hiragana, then katakana.
 func get_display_text() -> String:
 	if kanji != "":
 		return kanji
-	return hiragana
+	if hiragana != "":
+		return hiragana
+	return katakana
 
 
 ## Returns the first English meaning, or empty string.

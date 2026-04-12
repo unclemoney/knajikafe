@@ -1,0 +1,206 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scenes/Settings/settings.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Scenes/Components/VocabDisplay/vocab_display.tscn" id="2"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.07, 0.05, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -160.0
+offset_right = 260.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="TitleLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.87, 0.7, 1)
+theme_override_font_sizes/font_size = 14
+text = "⚙️ Settings"
+horizontal_alignment = 1
+
+[node name="DisplaySection" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="DisplayHeader" type="Label" parent="Panel/VBox/DisplaySection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
+theme_override_font_sizes/font_size = 10
+text = "Display Settings"
+
+[node name="KanjiToggle" type="CheckButton" parent="Panel/VBox/DisplaySection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+button_pressed = true
+text = "Show Kanji"
+
+[node name="FuriganaToggle" type="CheckButton" parent="Panel/VBox/DisplaySection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+button_pressed = true
+text = "Show Furigana"
+
+[node name="RomajiToggle" type="CheckButton" parent="Panel/VBox/DisplaySection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Show Romaji"
+
+[node name="EnglishToggle" type="CheckButton" parent="Panel/VBox/DisplaySection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+button_pressed = true
+text = "Show English"
+
+[node name="AudioSection" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="AudioHeader" type="Label" parent="Panel/VBox/AudioSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
+theme_override_font_sizes/font_size = 10
+text = "Audio"
+
+[node name="BGMRow" type="HBoxContainer" parent="Panel/VBox/AudioSection"]
+layout_mode = 2
+
+[node name="BGMLabel" type="Label" parent="Panel/VBox/AudioSection/BGMRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(40, 0)
+theme_override_font_sizes/font_size = 9
+text = "BGM"
+
+[node name="BGMSlider" type="HSlider" parent="Panel/VBox/AudioSection/BGMRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+step = 5.0
+value = 80.0
+
+[node name="BGMValue" type="Label" parent="Panel/VBox/AudioSection/BGMRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(36, 0)
+theme_override_font_sizes/font_size = 9
+text = "80%"
+horizontal_alignment = 2
+
+[node name="SFXRow" type="HBoxContainer" parent="Panel/VBox/AudioSection"]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="Panel/VBox/AudioSection/SFXRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(40, 0)
+theme_override_font_sizes/font_size = 9
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="Panel/VBox/AudioSection/SFXRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+step = 5.0
+value = 80.0
+
+[node name="SFXValue" type="Label" parent="Panel/VBox/AudioSection/SFXRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(36, 0)
+theme_override_font_sizes/font_size = 9
+text = "80%"
+horizontal_alignment = 2
+
+[node name="SessionSection" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="SessionHeader" type="Label" parent="Panel/VBox/SessionSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
+theme_override_font_sizes/font_size = 10
+text = "Session"
+
+[node name="WordsRow" type="HBoxContainer" parent="Panel/VBox/SessionSection"]
+layout_mode = 2
+
+[node name="WordsLabel" type="Label" parent="Panel/VBox/SessionSection/WordsRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Words per session:"
+
+[node name="WordsSpinBox" type="SpinBox" parent="Panel/VBox/SessionSection/WordsRow"]
+layout_mode = 2
+min_value = 5.0
+max_value = 50.0
+step = 5.0
+value = 10.0
+
+[node name="PreviewSection" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="PreviewHeader" type="Label" parent="Panel/VBox/PreviewSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
+theme_override_font_sizes/font_size = 10
+text = "Preview"
+
+[node name="VocabDisplay" parent="Panel/VBox/PreviewSection" instance=ExtResource("2")]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.9, 0.5, 1)
+theme_override_font_sizes/font_size = 9
+text = ""
+horizontal_alignment = 1
+
+[node name="ButtonRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 16
+
+[node name="SaveBtn" type="Button" parent="Panel/VBox/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 28)
+theme_override_font_sizes/font_size = 10
+text = "Save"
+
+[node name="BackBtn" type="Button" parent="Panel/VBox/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 28)
+theme_override_font_sizes/font_size = 10
+text = "Back"

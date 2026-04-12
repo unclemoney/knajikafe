@@ -43,6 +43,12 @@ class_name PlayerProfile
 }
 
 
+## Maximum streak bonus multiplier (e.g., 1.5 = +50% XP at max streak).
+const MAX_STREAK_MULTIPLIER: float = 1.5
+
+## Number of streak days to reach maximum bonus.
+const STREAK_CAP_DAYS: int = 30
+
 ## XP thresholds for each level. Index = level, value = cumulative XP needed.
 const LEVEL_THRESHOLDS: Array[int] = [
 	0,     # Level 1 (starting)
@@ -96,3 +102,58 @@ func level_progress() -> float:
 	if range_size <= 0:
 		return 1.0
 	return float(xp - current_threshold) / float(range_size)
+
+
+## Updates the daily streak based on the current date.
+## Call this once per session (e.g., when entering Cafe Hub).
+## Returns true if the streak increased.
+func update_streak(current_date: String) -> bool:
+	if last_played == "":
+		# First ever session
+		streak_days = 1
+		last_played = current_date
+		return true
+
+	if last_played == current_date:
+		# Already played today — no change
+		return false
+
+	var yesterday := _subtract_days(current_date, 1)
+	if last_played == yesterday:
+		# Consecutive day — increment streak
+		streak_days += 1
+		last_played = current_date
+		return true
+	else:
+		# Missed a day — reset streak
+		streak_days = 1
+		last_played = current_date
+		return false
+
+
+## Returns the XP multiplier based on current streak.
+## Ranges from 1.0 (no streak) to MAX_STREAK_MULTIPLIER.
+func get_streak_multiplier() -> float:
+	if streak_days <= 1:
+		return 1.0
+	var progress := minf(float(streak_days) / float(STREAK_CAP_DAYS), 1.0)
+	return 1.0 + progress * (MAX_STREAK_MULTIPLIER - 1.0)
+
+
+## Subtracts days from an ISO date string and returns the new date.
+func _subtract_days(date_str: String, days: int) -> String:
+	var parts := date_str.split("-")
+	if parts.size() != 3:
+		return date_str
+	var dict := {
+		"year": parts[0].to_int(),
+		"month": parts[1].to_int(),
+		"day": parts[2].to_int(),
+		"hour": 0,
+		"minute": 0,
+		"second": 0,
+	}
+	var unix := Time.get_unix_time_from_datetime_dict(dict)
+	unix -= days * 86400
+	var new_dict := Time.get_date_dict_from_unix_time(unix)
+	return "%04d-%02d-%02d" % [new_dict["year"], new_dict["month"], new_dict["day"]]

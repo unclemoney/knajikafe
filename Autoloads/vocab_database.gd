@@ -108,32 +108,27 @@ func _load_all_data() -> void:
 	print("VocabDatabase: Loaded %d words, %d kanji." % [_words.size(), _kanji.size()])
 
 
-## Loads a single vocab .tres file (expects an array resource of VocabWord).
+## Loads a single vocab .tres file (expects a VocabList resource).
 func _load_vocab_file(path: String) -> void:
 	if not ResourceLoader.exists(path):
 		return
 	var resource = ResourceLoader.load(path)
 	if resource == null:
 		return
-	# Resource is expected to have a "words" property that is an Array of VocabWord
-	if resource.has_method("get") or "words" in resource:
-		var words_array = resource.get("words")
-		if words_array is Array:
-			for word in words_array:
-				if word is VocabWord and word.id != "":
-					_words[word.id] = word
+	if resource is VocabList:
+		for word in resource.words:
+			if word is VocabWord and word.id != "":
+				_words[word.id] = word
 
 
-## Loads a single kanji .tres file (expects an array resource of KanjiEntry).
+## Loads a single kanji .tres file (expects a KanjiList resource).
 func _load_kanji_file(path: String) -> void:
 	if not ResourceLoader.exists(path):
 		return
 	var resource = ResourceLoader.load(path)
 	if resource == null:
 		return
-	if resource.has_method("get") or "entries" in resource:
-		var entries_array = resource.get("entries")
-		if entries_array is Array:
-			for entry in entries_array:
-				if entry is KanjiEntry and entry.character != "":
-					_kanji[entry.character] = entry
+	if resource is KanjiList:
+		for entry in resource.entries:
+			if entry is KanjiEntry and entry.character != "":
+				_kanji[entry.character] = entry

@@ -30,6 +30,8 @@ func _animate_intro() -> void:
 
 	var tween := create_tween()
 	tween.tween_property(title_label, "modulate:a", 1.0, 0.8)
+	tween.tween_callback(func(): TweenFX.pop_in(title_label, 0.4))
 	tween.tween_property(subtitle_label, "modulate:a", 1.0, 0.5)
 	tween.tween_property(start_btn, "modulate:a", 1.0, 0.4)
+	tween.tween_callback(func(): TweenFX.pulsate(start_btn, 0.6))
 	tween.tween_property(version_label, "modulate:a", 0.6, 0.3)

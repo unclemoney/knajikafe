@@ -70,6 +70,23 @@ func _ready() -> void:
 	_check_cat_unlocks()
 	_display_cafe_cats()
 	_display_decorations()
+	AudioManager.play_cafe_bgm()
+	AchievementManager.check_achievements()
+	_animate_hub_entrance()
+	_check_tutorial()
+
+
+# ── Tutorial ────────────────────────────────────────
+
+const TUTORIAL_SCENE := preload("res://Scenes/Tutorial/tutorial.tscn")
+
+
+## Shows the tutorial overlay for first-time players.
+func _check_tutorial() -> void:
+	var profile := GameController.current_profile
+	if profile and not profile.has_completed_tutorial:
+		var tut := TUTORIAL_SCENE.instantiate()
+		add_child(tut)
 
 
 # ── Cat System ──────────────────────────────────────
@@ -387,3 +404,26 @@ func _update_streak() -> void:
 	var today := GameController.get_current_date()
 	profile.update_streak(today)
 	SaveManager.save_profile(profile)
+
+
+## Animates UI elements on hub entrance using TweenFX.
+func _animate_hub_entrance() -> void:
+	# Pop in the station buttons with a stagger
+	var stations := [quiz_btn, flashcard_btn, matching_btn, fill_blank_btn, typing_btn, orders_btn]
+	for i in stations.size():
+		var btn: Button = stations[i]
+		btn.modulate.a = 0.0
+		btn.scale = Vector2.ZERO
+		var tween := create_tween()
+		tween.tween_interval(0.1 * i)
+		tween.tween_property(btn, "modulate:a", 1.0, 0.2)
+		tween.parallel().tween_property(btn, "scale", Vector2.ONE, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+	# Float-bob the cat display
+	if cat_display.get_child_count() > 0:
+		TweenFX.breathe(cat_display)
+
+	# Gentle sway on the dialogue box
+	var dialogue_box := get_node_or_null("DialogueBox")
+	if dialogue_box:
+		TweenFX.fade_in(dialogue_box, 0.6)

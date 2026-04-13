@@ -1,8 +1,9 @@
 extends Node
 ## VocabDatabase (Autoload)
 ##
-## Loads and queries the vocabulary and kanji databases from Resource files.
-## Registered as an autoload singleton.
+## Loads and queries the vocabulary and kanji databases.
+## Vocab data is loaded from JSON files (immune to Godot .tres resave issues).
+## Kanji data is still loaded from .tres Resource files.
 
 ## All loaded VocabWord resources, keyed by id.
 var _words: Dictionary = {}
@@ -10,11 +11,10 @@ var _words: Dictionary = {}
 ## All loaded KanjiEntry resources, keyed by character.
 var _kanji: Dictionary = {}
 
-## Paths to vocabulary resource files to load on startup.
-var _vocab_paths: PackedStringArray = [
-	"res://Resources/Vocabulary/n5_vocab.tres",
-	"res://Resources/Vocabulary/n4_vocab.tres",
-	"res://Resources/Vocabulary/custom_vocab.tres",
+## Paths to vocabulary JSON files to load on startup.
+var _vocab_json_paths: PackedStringArray = [
+	"res://Resources/Vocabulary/n5_vocab.json",
+	"res://Resources/Vocabulary/n4_vocab.json",
 ]
 
 ## Paths to kanji resource files to load on startup.
@@ -99,26 +99,58 @@ func get_kanji_count() -> int:
 	return _kanji.size()
 
 
-## Loads all vocabulary and kanji data from resource files.
+## Loads all vocabulary and kanji data.
 func _load_all_data() -> void:
-	for path in _vocab_paths:
-		_load_vocab_file(path)
+	for path in _vocab_json_paths:
+		_load_vocab_json(path)
 	for path in _kanji_paths:
 		_load_kanji_file(path)
 	print("VocabDatabase: Loaded %d words, %d kanji." % [_words.size(), _kanji.size()])
 
 
-## Loads a single vocab .tres file (expects a VocabList resource).
-func _load_vocab_file(path: String) -> void:
-	if not ResourceLoader.exists(path):
+## Loads a single vocab JSON file and creates VocabWord instances.
+func _load_vocab_json(path: String) -> void:
+	if not FileAccess.file_exists(path):
 		return
-	var resource = ResourceLoader.load(path)
-	if resource == null:
+	var file := FileAccess.open(path, FileAccess.READ)
+	if file == null:
+		push_warning("VocabDatabase: Could not open %s" % path)
 		return
-	if resource is VocabList:
-		for word in resource.words:
-			if word is VocabWord and word.id != "":
-				_words[word.id] = word
+	var text := file.get_as_text()
+	file.close()
+
+	var parsed = JSON.parse_string(text)
+	if parsed == null:
+		push_warning("VocabDatabase: Failed to parse JSON in %s" % path)
+		return
+	if parsed is not Array:
+		push_warning("VocabDatabase: Expected Array in %s" % path)
+		return
+
+	for entry in parsed:
+		if entry is not Dictionary:
+			continue
+		var word_id: String = entry.get("id", "")
+		if word_id == "":
+			continue
+		var word := VocabWord.new()
+		word.id = word_id
+		word.kanji = entry.get("kanji", "")
+		word.hiragana = entry.get("hiragana", "")
+		word.katakana = entry.get("katakana", "")
+		word.romaji = entry.get("romaji", "")
+		var meanings = entry.get("english_meanings", [])
+		for m in meanings:
+			word.english_meanings.append(m)
+		word.jlpt_level = entry.get("jlpt_level", 0)
+		var cats = entry.get("categories", [])
+		for c in cats:
+			word.categories.append(c)
+		var sentences = entry.get("example_sentences", [])
+		for s in sentences:
+			word.example_sentences.append(s)
+		word.part_of_speech = entry.get("part_of_speech", "")
+		_words[word.id] = word
 
 
 ## Loads a single kanji .tres file (expects a KanjiList resource).

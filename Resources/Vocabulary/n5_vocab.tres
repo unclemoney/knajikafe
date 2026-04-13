@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="VocabList" load_steps=53 format=3]
+[gd_resource type="Resource" script_class="VocabList" load_steps=123 format=3 uid="uid://dhy8wurmlc6wy"]
 
-[ext_resource type="Script" path="res://Resources/vocab_list.gd" id="vocab_list"]
-[ext_resource type="Script" path="res://Resources/vocab_word.gd" id="vocab_word"]
+[ext_resource type="Script" uid="uid://dyd86sdmgua8s" path="res://Resources/vocab_list.gd" id="vocab_list"]
+[ext_resource type="Script" uid="uid://f3fkqetqcn6w" path="res://Resources/vocab_word.gd" id="vocab_word"]
 
 [sub_resource type="Resource" id="w001"]
 script = ExtResource("vocab_word")
@@ -10,10 +10,10 @@ kanji = "こんにちは"
 hiragana = "こんにちは"
 katakana = ""
 romaji = "konnichiwa"
-english_meanings = PackedStringArray("hello", "good afternoon")
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("greetings")
-example_sentences = PackedStringArray("こんにちは、元気ですか？|Hello, how are you?")
+categories = []
+example_sentences = []
 part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w002"]
@@ -23,10 +23,10 @@ kanji = "ありがとう"
 hiragana = "ありがとう"
 katakana = ""
 romaji = "arigatou"
-english_meanings = PackedStringArray("thank you", "thanks")
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("greetings")
-example_sentences = PackedStringArray("ありがとうございます。|Thank you very much.")
+categories = []
+example_sentences = []
 part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w003"]
@@ -36,10 +36,10 @@ kanji = "すみません"
 hiragana = "すみません"
 katakana = ""
 romaji = "sumimasen"
-english_meanings = PackedStringArray("excuse me", "sorry")
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("greetings")
-example_sentences = PackedStringArray("すみません、お水をください。|Excuse me, water please.")
+categories = []
+example_sentences = []
 part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w004"]
@@ -49,10 +49,10 @@ kanji = "おはよう"
 hiragana = "おはよう"
 katakana = ""
 romaji = "ohayou"
-english_meanings = PackedStringArray("good morning")
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("greetings")
-example_sentences = PackedStringArray("おはようございます。|Good morning.")
+categories = []
+example_sentences = []
 part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w005"]
@@ -62,597 +62,1507 @@ kanji = "さようなら"
 hiragana = "さようなら"
 katakana = ""
 romaji = "sayounara"
-english_meanings = PackedStringArray("goodbye")
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("greetings")
-example_sentences = PackedStringArray("さようなら、また明日。|Goodbye, see you tomorrow.")
+categories = []
+example_sentences = []
 part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w006"]
 script = ExtResource("vocab_word")
 id = "n5_006"
-kanji = "はい"
-hiragana = "はい"
+kanji = "おやすみなさい"
+hiragana = "おやすみなさい"
 katakana = ""
-romaji = "hai"
-english_meanings = PackedStringArray("yes")
+romaji = "oyasuminasai"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("greetings", "common")
-example_sentences = PackedStringArray("はい、そうです。|Yes, that's right.")
+categories = []
+example_sentences = []
 part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w007"]
 script = ExtResource("vocab_word")
 id = "n5_007"
-kanji = "いいえ"
-hiragana = "いいえ"
+kanji = "いただきます"
+hiragana = "いただきます"
 katakana = ""
-romaji = "iie"
-english_meanings = PackedStringArray("no")
+romaji = "itadakimasu"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("greetings", "common")
-example_sentences = PackedStringArray("いいえ、違います。|No, that's wrong.")
+categories = []
+example_sentences = []
 part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w008"]
 script = ExtResource("vocab_word")
 id = "n5_008"
-kanji = "お願いします"
-hiragana = "おねがいします"
+kanji = "ごちそうさま"
+hiragana = "ごちそうさま"
 katakana = ""
-romaji = "onegaishimasu"
-english_meanings = PackedStringArray("please")
+romaji = "gochisousama"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("greetings", "cafe")
-example_sentences = PackedStringArray("コーヒーをお願いします。|Coffee, please.")
+categories = []
+example_sentences = []
 part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w009"]
 script = ExtResource("vocab_word")
 id = "n5_009"
-kanji = "水"
-hiragana = "みず"
+kanji = "はい"
+hiragana = "はい"
 katakana = ""
-romaji = "mizu"
-english_meanings = PackedStringArray("water")
+romaji = "hai"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("food", "cafe")
-example_sentences = PackedStringArray("水をください。|Water, please.")
-part_of_speech = "noun"
+categories = []
+example_sentences = []
+part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w010"]
 script = ExtResource("vocab_word")
 id = "n5_010"
-kanji = "お茶"
-hiragana = "おちゃ"
+kanji = "いいえ"
+hiragana = "いいえ"
 katakana = ""
-romaji = "ocha"
-english_meanings = PackedStringArray("tea", "green tea")
+romaji = "iie"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("food", "cafe")
-example_sentences = PackedStringArray("お茶を飲みます。|I drink tea.")
-part_of_speech = "noun"
+categories = []
+example_sentences = []
+part_of_speech = "expression"
 
 [sub_resource type="Resource" id="w011"]
 script = ExtResource("vocab_word")
 id = "n5_011"
-kanji = ""
-hiragana = ""
-katakana = "コーヒー"
-romaji = "koohii"
-english_meanings = PackedStringArray("coffee")
+kanji = "水"
+hiragana = "みず"
+katakana = ""
+romaji = "mizu"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("food", "cafe")
-example_sentences = PackedStringArray("コーヒーを二つください。|Two coffees, please.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w012"]
 script = ExtResource("vocab_word")
 id = "n5_012"
-kanji = ""
-hiragana = ""
-katakana = "ケーキ"
-romaji = "keeki"
-english_meanings = PackedStringArray("cake")
+kanji = "お茶"
+hiragana = "おちゃ"
+katakana = ""
+romaji = "ocha"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("food", "cafe")
-example_sentences = PackedStringArray("このケーキはおいしいです。|This cake is delicious.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w013"]
 script = ExtResource("vocab_word")
 id = "n5_013"
-kanji = ""
-hiragana = ""
-katakana = "ミルク"
-romaji = "miruku"
-english_meanings = PackedStringArray("milk")
+kanji = "ご飯"
+hiragana = "ごはん"
+katakana = ""
+romaji = "gohan"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("food", "cafe")
-example_sentences = PackedStringArray("ミルクを入れてください。|Please add milk.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w014"]
 script = ExtResource("vocab_word")
 id = "n5_014"
-kanji = "砂糖"
-hiragana = "さとう"
-katakana = ""
-romaji = "satou"
-english_meanings = PackedStringArray("sugar")
+kanji = "パン"
+hiragana = ""
+katakana = "パン"
+romaji = "pan"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("food", "cafe")
-example_sentences = PackedStringArray("砂糖はいりますか？|Do you need sugar?")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w015"]
 script = ExtResource("vocab_word")
 id = "n5_015"
-kanji = "食べ物"
-hiragana = "たべもの"
+kanji = "卵"
+hiragana = "たまご"
 katakana = ""
-romaji = "tabemono"
-english_meanings = PackedStringArray("food")
+romaji = "tamago"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("food")
-example_sentences = PackedStringArray("好きな食べ物は何ですか？|What is your favorite food?")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w016"]
 script = ExtResource("vocab_word")
 id = "n5_016"
-kanji = "飲み物"
-hiragana = "のみもの"
+kanji = "魚"
+hiragana = "さかな"
 katakana = ""
-romaji = "nomimono"
-english_meanings = PackedStringArray("drink", "beverage")
+romaji = "sakana"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("food", "cafe")
-example_sentences = PackedStringArray("飲み物は何がいいですか？|What would you like to drink?")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w017"]
 script = ExtResource("vocab_word")
 id = "n5_017"
-kanji = "猫"
-hiragana = "ねこ"
+kanji = "肉"
+hiragana = "にく"
 katakana = ""
-romaji = "neko"
-english_meanings = PackedStringArray("cat")
+romaji = "niku"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("animals", "cafe")
-example_sentences = PackedStringArray("猫が好きです。|I like cats.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w018"]
 script = ExtResource("vocab_word")
 id = "n5_018"
-kanji = "犬"
-hiragana = "いぬ"
+kanji = "野菜"
+hiragana = "やさい"
 katakana = ""
-romaji = "inu"
-english_meanings = PackedStringArray("dog")
+romaji = "yasai"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("animals")
-example_sentences = PackedStringArray("犬と猫がいます。|There is a dog and a cat.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w019"]
 script = ExtResource("vocab_word")
 id = "n5_019"
-kanji = "魚"
-hiragana = "さかな"
+kanji = "果物"
+hiragana = "くだもの"
 katakana = ""
-romaji = "sakana"
-english_meanings = PackedStringArray("fish")
+romaji = "kudamono"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("animals", "food")
-example_sentences = PackedStringArray("猫は魚が好きです。|Cats like fish.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w020"]
 script = ExtResource("vocab_word")
 id = "n5_020"
-kanji = "一"
-hiragana = "いち"
+kanji = "牛乳"
+hiragana = "ぎゅうにゅう"
 katakana = ""
-romaji = "ichi"
-english_meanings = PackedStringArray("one", "1")
+romaji = "gyuunyuu"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("numbers")
-example_sentences = PackedStringArray("一つください。|One, please.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w021"]
 script = ExtResource("vocab_word")
 id = "n5_021"
-kanji = "二"
-hiragana = "に"
+kanji = "一"
+hiragana = "いち"
 katakana = ""
-romaji = "ni"
-english_meanings = PackedStringArray("two", "2")
+romaji = "ichi"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("numbers")
-example_sentences = PackedStringArray("コーヒーを二つお願いします。|Two coffees, please.")
-part_of_speech = "noun"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w022"]
 script = ExtResource("vocab_word")
 id = "n5_022"
-kanji = "三"
-hiragana = "さん"
+kanji = "二"
+hiragana = "に"
 katakana = ""
-romaji = "san"
-english_meanings = PackedStringArray("three", "3")
+romaji = "ni"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("numbers")
-example_sentences = PackedStringArray("猫が三匹います。|There are three cats.")
-part_of_speech = "noun"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w023"]
 script = ExtResource("vocab_word")
 id = "n5_023"
-kanji = "四"
-hiragana = "よん"
+kanji = "三"
+hiragana = "さん"
 katakana = ""
-romaji = "yon"
-english_meanings = PackedStringArray("four", "4")
+romaji = "san"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("numbers")
-example_sentences = PackedStringArray("四人です。|Four people.")
-part_of_speech = "noun"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w024"]
 script = ExtResource("vocab_word")
 id = "n5_024"
-kanji = "五"
-hiragana = "ご"
+kanji = "四"
+hiragana = "よん"
 katakana = ""
-romaji = "go"
-english_meanings = PackedStringArray("five", "5")
+romaji = "yon"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("numbers")
-example_sentences = PackedStringArray("五時に会いましょう。|Let's meet at five o'clock.")
-part_of_speech = "noun"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w025"]
 script = ExtResource("vocab_word")
 id = "n5_025"
-kanji = "食べる"
-hiragana = "たべる"
+kanji = "五"
+hiragana = "ご"
 katakana = ""
-romaji = "taberu"
-english_meanings = PackedStringArray("to eat")
+romaji = "go"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("verbs", "food")
-example_sentences = PackedStringArray("朝ごはんを食べる。|I eat breakfast.")
-part_of_speech = "verb"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w026"]
 script = ExtResource("vocab_word")
 id = "n5_026"
-kanji = "飲む"
-hiragana = "のむ"
+kanji = "六"
+hiragana = "ろく"
 katakana = ""
-romaji = "nomu"
-english_meanings = PackedStringArray("to drink")
+romaji = "roku"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("verbs", "food", "cafe")
-example_sentences = PackedStringArray("お茶を飲む。|I drink tea.")
-part_of_speech = "verb"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w027"]
 script = ExtResource("vocab_word")
 id = "n5_027"
-kanji = "見る"
-hiragana = "みる"
+kanji = "七"
+hiragana = "なな"
 katakana = ""
-romaji = "miru"
-english_meanings = PackedStringArray("to see", "to look", "to watch")
+romaji = "nana"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("verbs")
-example_sentences = PackedStringArray("テレビを見る。|I watch television.")
-part_of_speech = "verb"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w028"]
 script = ExtResource("vocab_word")
 id = "n5_028"
-kanji = "聞く"
-hiragana = "きく"
+kanji = "八"
+hiragana = "はち"
 katakana = ""
-romaji = "kiku"
-english_meanings = PackedStringArray("to listen", "to hear", "to ask")
+romaji = "hachi"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("verbs")
-example_sentences = PackedStringArray("音楽を聞く。|I listen to music.")
-part_of_speech = "verb"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w029"]
 script = ExtResource("vocab_word")
 id = "n5_029"
-kanji = "読む"
-hiragana = "よむ"
+kanji = "九"
+hiragana = "きゅう"
 katakana = ""
-romaji = "yomu"
-english_meanings = PackedStringArray("to read")
+romaji = "kyuu"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("verbs")
-example_sentences = PackedStringArray("本を読む。|I read a book.")
-part_of_speech = "verb"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w030"]
 script = ExtResource("vocab_word")
 id = "n5_030"
-kanji = "書く"
-hiragana = "かく"
+kanji = "十"
+hiragana = "じゅう"
 katakana = ""
-romaji = "kaku"
-english_meanings = PackedStringArray("to write")
+romaji = "juu"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("verbs")
-example_sentences = PackedStringArray("手紙を書く。|I write a letter.")
-part_of_speech = "verb"
+categories = []
+example_sentences = []
+part_of_speech = "number"
 
 [sub_resource type="Resource" id="w031"]
 script = ExtResource("vocab_word")
 id = "n5_031"
-kanji = "話す"
-hiragana = "はなす"
-katakana = ""
-romaji = "hanasu"
-english_meanings = PackedStringArray("to speak", "to talk")
-jlpt_level = 5
-categories = PackedStringArray("verbs")
-example_sentences = PackedStringArray("日本語を話す。|I speak Japanese.")
-part_of_speech = "verb"
-
-[sub_resource type="Resource" id="w032"]
-script = ExtResource("vocab_word")
-id = "n5_032"
-kanji = "行く"
-hiragana = "いく"
-katakana = ""
-romaji = "iku"
-english_meanings = PackedStringArray("to go")
-jlpt_level = 5
-categories = PackedStringArray("verbs")
-example_sentences = PackedStringArray("学校に行く。|I go to school.")
-part_of_speech = "verb"
-
-[sub_resource type="Resource" id="w033"]
-script = ExtResource("vocab_word")
-id = "n5_033"
-kanji = "来る"
-hiragana = "くる"
-katakana = ""
-romaji = "kuru"
-english_meanings = PackedStringArray("to come")
-jlpt_level = 5
-categories = PackedStringArray("verbs")
-example_sentences = PackedStringArray("友達が来る。|A friend is coming.")
-part_of_speech = "verb"
-
-[sub_resource type="Resource" id="w034"]
-script = ExtResource("vocab_word")
-id = "n5_034"
-kanji = "買う"
-hiragana = "かう"
-katakana = ""
-romaji = "kau"
-english_meanings = PackedStringArray("to buy")
-jlpt_level = 5
-categories = PackedStringArray("verbs", "cafe")
-example_sentences = PackedStringArray("ケーキを買う。|I buy cake.")
-part_of_speech = "verb"
-
-[sub_resource type="Resource" id="w035"]
-script = ExtResource("vocab_word")
-id = "n5_035"
-kanji = "大きい"
-hiragana = "おおきい"
-katakana = ""
-romaji = "ookii"
-english_meanings = PackedStringArray("big", "large")
-jlpt_level = 5
-categories = PackedStringArray("adjectives")
-example_sentences = PackedStringArray("大きい猫ですね。|That's a big cat.")
-part_of_speech = "adjective"
-
-[sub_resource type="Resource" id="w036"]
-script = ExtResource("vocab_word")
-id = "n5_036"
-kanji = "小さい"
-hiragana = "ちいさい"
-katakana = ""
-romaji = "chiisai"
-english_meanings = PackedStringArray("small", "little")
-jlpt_level = 5
-categories = PackedStringArray("adjectives")
-example_sentences = PackedStringArray("小さいケーキをください。|A small cake, please.")
-part_of_speech = "adjective"
-
-[sub_resource type="Resource" id="w037"]
-script = ExtResource("vocab_word")
-id = "n5_037"
-kanji = "新しい"
-hiragana = "あたらしい"
-katakana = ""
-romaji = "atarashii"
-english_meanings = PackedStringArray("new")
-jlpt_level = 5
-categories = PackedStringArray("adjectives")
-example_sentences = PackedStringArray("新しいメニューがあります。|There is a new menu.")
-part_of_speech = "adjective"
-
-[sub_resource type="Resource" id="w038"]
-script = ExtResource("vocab_word")
-id = "n5_038"
-kanji = "良い"
-hiragana = "いい"
-katakana = ""
-romaji = "ii"
-english_meanings = PackedStringArray("good", "nice")
-jlpt_level = 5
-categories = PackedStringArray("adjectives")
-example_sentences = PackedStringArray("いい天気ですね。|Nice weather, isn't it?")
-part_of_speech = "adjective"
-
-[sub_resource type="Resource" id="w039"]
-script = ExtResource("vocab_word")
-id = "n5_039"
-kanji = "美味しい"
-hiragana = "おいしい"
-katakana = ""
-romaji = "oishii"
-english_meanings = PackedStringArray("delicious", "tasty")
-jlpt_level = 5
-categories = PackedStringArray("adjectives", "food", "cafe")
-example_sentences = PackedStringArray("このコーヒーは美味しいです。|This coffee is delicious.")
-part_of_speech = "adjective"
-
-[sub_resource type="Resource" id="w040"]
-script = ExtResource("vocab_word")
-id = "n5_040"
 kanji = "人"
 hiragana = "ひと"
 katakana = ""
 romaji = "hito"
-english_meanings = PackedStringArray("person", "people")
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("common")
-example_sentences = PackedStringArray("あの人は誰ですか？|Who is that person?")
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w032"]
+script = ExtResource("vocab_word")
+id = "n5_032"
+kanji = "男"
+hiragana = "おとこ"
+katakana = ""
+romaji = "otoko"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w033"]
+script = ExtResource("vocab_word")
+id = "n5_033"
+kanji = "女"
+hiragana = "おんな"
+katakana = ""
+romaji = "onna"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w034"]
+script = ExtResource("vocab_word")
+id = "n5_034"
+kanji = "子供"
+hiragana = "こども"
+katakana = ""
+romaji = "kodomo"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w035"]
+script = ExtResource("vocab_word")
+id = "n5_035"
+kanji = "友達"
+hiragana = "ともだち"
+katakana = ""
+romaji = "tomodachi"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w036"]
+script = ExtResource("vocab_word")
+id = "n5_036"
+kanji = "先生"
+hiragana = "せんせい"
+katakana = ""
+romaji = "sensei"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w037"]
+script = ExtResource("vocab_word")
+id = "n5_037"
+kanji = "学生"
+hiragana = "がくせい"
+katakana = ""
+romaji = "gakusei"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w038"]
+script = ExtResource("vocab_word")
+id = "n5_038"
+kanji = "本"
+hiragana = "ほん"
+katakana = ""
+romaji = "hon"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w039"]
+script = ExtResource("vocab_word")
+id = "n5_039"
+kanji = "車"
+hiragana = "くるま"
+katakana = ""
+romaji = "kuruma"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w040"]
+script = ExtResource("vocab_word")
+id = "n5_040"
+kanji = "猫"
+hiragana = "ねこ"
+katakana = ""
+romaji = "neko"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w041"]
 script = ExtResource("vocab_word")
 id = "n5_041"
-kanji = "友達"
-hiragana = "ともだち"
+kanji = "犬"
+hiragana = "いぬ"
 katakana = ""
-romaji = "tomodachi"
-english_meanings = PackedStringArray("friend")
+romaji = "inu"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("common")
-example_sentences = PackedStringArray("友達とカフェに行く。|I go to the cafe with a friend.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w042"]
 script = ExtResource("vocab_word")
 id = "n5_042"
-kanji = "名前"
-hiragana = "なまえ"
+kanji = "花"
+hiragana = "はな"
 katakana = ""
-romaji = "namae"
-english_meanings = PackedStringArray("name")
+romaji = "hana"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("common")
-example_sentences = PackedStringArray("名前は何ですか？|What is your name?")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w043"]
 script = ExtResource("vocab_word")
 id = "n5_043"
-kanji = "今日"
-hiragana = "きょう"
+kanji = "山"
+hiragana = "やま"
 katakana = ""
-romaji = "kyou"
-english_meanings = PackedStringArray("today")
+romaji = "yama"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("time")
-example_sentences = PackedStringArray("今日はいい天気です。|Today is nice weather.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w044"]
 script = ExtResource("vocab_word")
 id = "n5_044"
-kanji = "明日"
-hiragana = "あした"
+kanji = "川"
+hiragana = "かわ"
 katakana = ""
-romaji = "ashita"
-english_meanings = PackedStringArray("tomorrow")
+romaji = "kawa"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("time")
-example_sentences = PackedStringArray("明日また来てください。|Please come again tomorrow.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w045"]
 script = ExtResource("vocab_word")
 id = "n5_045"
-kanji = "学生"
-hiragana = "がくせい"
+kanji = "目"
+hiragana = "め"
 katakana = ""
-romaji = "gakusei"
-english_meanings = PackedStringArray("student")
+romaji = "me"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("common")
-example_sentences = PackedStringArray("私は学生です。|I am a student.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w046"]
 script = ExtResource("vocab_word")
 id = "n5_046"
-kanji = "先生"
-hiragana = "せんせい"
+kanji = "手"
+hiragana = "て"
 katakana = ""
-romaji = "sensei"
-english_meanings = PackedStringArray("teacher", "professor")
+romaji = "te"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("common")
-example_sentences = PackedStringArray("先生に聞きます。|I will ask the teacher.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w047"]
 script = ExtResource("vocab_word")
 id = "n5_047"
-kanji = "本"
-hiragana = "ほん"
+kanji = "足"
+hiragana = "あし"
 katakana = ""
-romaji = "hon"
-english_meanings = PackedStringArray("book")
+romaji = "ashi"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("common")
-example_sentences = PackedStringArray("カフェで本を読む。|I read a book at the cafe.")
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w048"]
 script = ExtResource("vocab_word")
 id = "n5_048"
-kanji = "分かる"
-hiragana = "わかる"
+kanji = "口"
+hiragana = "くち"
 katakana = ""
-romaji = "wakaru"
-english_meanings = PackedStringArray("to understand", "to know")
+romaji = "kuchi"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("verbs")
-example_sentences = PackedStringArray("日本語が分かりますか？|Do you understand Japanese?")
-part_of_speech = "verb"
+categories = []
+example_sentences = []
+part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w049"]
 script = ExtResource("vocab_word")
 id = "n5_049"
-kanji = "好き"
-hiragana = "すき"
+kanji = "耳"
+hiragana = "みみ"
 katakana = ""
-romaji = "suki"
-english_meanings = PackedStringArray("like", "fond of")
+romaji = "mimi"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("adjectives", "common")
-example_sentences = PackedStringArray("猫が好きです。|I like cats.")
-part_of_speech = "adjective"
+categories = []
+example_sentences = []
+part_of_speech = "noun"
 
 [sub_resource type="Resource" id="w050"]
 script = ExtResource("vocab_word")
 id = "n5_050"
-kanji = "店"
-hiragana = "みせ"
+kanji = "頭"
+hiragana = "あたま"
 katakana = ""
-romaji = "mise"
-english_meanings = PackedStringArray("shop", "store", "restaurant")
+romaji = "atama"
+english_meanings = []
 jlpt_level = 5
-categories = PackedStringArray("common", "cafe")
-example_sentences = PackedStringArray("この店は猫カフェです。|This shop is a cat cafe.")
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w051"]
+script = ExtResource("vocab_word")
+id = "n5_051"
+kanji = "お父さん"
+hiragana = "おとうさん"
+katakana = ""
+romaji = "otousan"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w052"]
+script = ExtResource("vocab_word")
+id = "n5_052"
+kanji = "お母さん"
+hiragana = "おかあさん"
+katakana = ""
+romaji = "okaasan"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w053"]
+script = ExtResource("vocab_word")
+id = "n5_053"
+kanji = "お兄さん"
+hiragana = "おにいさん"
+katakana = ""
+romaji = "oniisan"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w054"]
+script = ExtResource("vocab_word")
+id = "n5_054"
+kanji = "お姉さん"
+hiragana = "おねえさん"
+katakana = ""
+romaji = "oneesan"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w055"]
+script = ExtResource("vocab_word")
+id = "n5_055"
+kanji = "弟"
+hiragana = "おとうと"
+katakana = ""
+romaji = "otouto"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w056"]
+script = ExtResource("vocab_word")
+id = "n5_056"
+kanji = "妹"
+hiragana = "いもうと"
+katakana = ""
+romaji = "imouto"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w057"]
+script = ExtResource("vocab_word")
+id = "n5_057"
+kanji = "家族"
+hiragana = "かぞく"
+katakana = ""
+romaji = "kazoku"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w058"]
+script = ExtResource("vocab_word")
+id = "n5_058"
+kanji = "奥さん"
+hiragana = "おくさん"
+katakana = ""
+romaji = "okusan"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w059"]
+script = ExtResource("vocab_word")
+id = "n5_059"
+kanji = "主人"
+hiragana = "しゅじん"
+katakana = ""
+romaji = "shujin"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w060"]
+script = ExtResource("vocab_word")
+id = "n5_060"
+kanji = "赤ちゃん"
+hiragana = "あかちゃん"
+katakana = ""
+romaji = "akachan"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w061"]
+script = ExtResource("vocab_word")
+id = "n5_061"
+kanji = "食べる"
+hiragana = "たべる"
+katakana = ""
+romaji = "taberu"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w062"]
+script = ExtResource("vocab_word")
+id = "n5_062"
+kanji = "飲む"
+hiragana = "のむ"
+katakana = ""
+romaji = "nomu"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w063"]
+script = ExtResource("vocab_word")
+id = "n5_063"
+kanji = "行く"
+hiragana = "いく"
+katakana = ""
+romaji = "iku"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w064"]
+script = ExtResource("vocab_word")
+id = "n5_064"
+kanji = "来る"
+hiragana = "くる"
+katakana = ""
+romaji = "kuru"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w065"]
+script = ExtResource("vocab_word")
+id = "n5_065"
+kanji = "見る"
+hiragana = "みる"
+katakana = ""
+romaji = "miru"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w066"]
+script = ExtResource("vocab_word")
+id = "n5_066"
+kanji = "聞く"
+hiragana = "きく"
+katakana = ""
+romaji = "kiku"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w067"]
+script = ExtResource("vocab_word")
+id = "n5_067"
+kanji = "書く"
+hiragana = "かく"
+katakana = ""
+romaji = "kaku"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w068"]
+script = ExtResource("vocab_word")
+id = "n5_068"
+kanji = "読む"
+hiragana = "よむ"
+katakana = ""
+romaji = "yomu"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w069"]
+script = ExtResource("vocab_word")
+id = "n5_069"
+kanji = "話す"
+hiragana = "はなす"
+katakana = ""
+romaji = "hanasu"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w070"]
+script = ExtResource("vocab_word")
+id = "n5_070"
+kanji = "買う"
+hiragana = "かう"
+katakana = ""
+romaji = "kau"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w071"]
+script = ExtResource("vocab_word")
+id = "n5_071"
+kanji = "待つ"
+hiragana = "まつ"
+katakana = ""
+romaji = "matsu"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w072"]
+script = ExtResource("vocab_word")
+id = "n5_072"
+kanji = "立つ"
+hiragana = "たつ"
+katakana = ""
+romaji = "tatsu"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w073"]
+script = ExtResource("vocab_word")
+id = "n5_073"
+kanji = "座る"
+hiragana = "すわる"
+katakana = ""
+romaji = "suwaru"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w074"]
+script = ExtResource("vocab_word")
+id = "n5_074"
+kanji = "走る"
+hiragana = "はしる"
+katakana = ""
+romaji = "hashiru"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w075"]
+script = ExtResource("vocab_word")
+id = "n5_075"
+kanji = "歩く"
+hiragana = "あるく"
+katakana = ""
+romaji = "aruku"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w076"]
+script = ExtResource("vocab_word")
+id = "n5_076"
+kanji = "作る"
+hiragana = "つくる"
+katakana = ""
+romaji = "tsukuru"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "verb"
+
+[sub_resource type="Resource" id="w077"]
+script = ExtResource("vocab_word")
+id = "n5_077"
+kanji = "大きい"
+hiragana = "おおきい"
+katakana = ""
+romaji = "ookii"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w078"]
+script = ExtResource("vocab_word")
+id = "n5_078"
+kanji = "小さい"
+hiragana = "ちいさい"
+katakana = ""
+romaji = "chiisai"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w079"]
+script = ExtResource("vocab_word")
+id = "n5_079"
+kanji = "新しい"
+hiragana = "あたらしい"
+katakana = ""
+romaji = "atarashii"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w080"]
+script = ExtResource("vocab_word")
+id = "n5_080"
+kanji = "古い"
+hiragana = "ふるい"
+katakana = ""
+romaji = "furui"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w081"]
+script = ExtResource("vocab_word")
+id = "n5_081"
+kanji = "高い"
+hiragana = "たかい"
+katakana = ""
+romaji = "takai"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w082"]
+script = ExtResource("vocab_word")
+id = "n5_082"
+kanji = "安い"
+hiragana = "やすい"
+katakana = ""
+romaji = "yasui"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w083"]
+script = ExtResource("vocab_word")
+id = "n5_083"
+kanji = "長い"
+hiragana = "ながい"
+katakana = ""
+romaji = "nagai"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w084"]
+script = ExtResource("vocab_word")
+id = "n5_084"
+kanji = "短い"
+hiragana = "みじかい"
+katakana = ""
+romaji = "mijikai"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w085"]
+script = ExtResource("vocab_word")
+id = "n5_085"
+kanji = "良い"
+hiragana = "いい"
+katakana = ""
+romaji = "ii"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w086"]
+script = ExtResource("vocab_word")
+id = "n5_086"
+kanji = "悪い"
+hiragana = "わるい"
+katakana = ""
+romaji = "warui"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w087"]
+script = ExtResource("vocab_word")
+id = "n5_087"
+kanji = "暑い"
+hiragana = "あつい"
+katakana = ""
+romaji = "atsui"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w088"]
+script = ExtResource("vocab_word")
+id = "n5_088"
+kanji = "寒い"
+hiragana = "さむい"
+katakana = ""
+romaji = "samui"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w089"]
+script = ExtResource("vocab_word")
+id = "n5_089"
+kanji = "おいしい"
+hiragana = "おいしい"
+katakana = ""
+romaji = "oishii"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w090"]
+script = ExtResource("vocab_word")
+id = "n5_090"
+kanji = "楽しい"
+hiragana = "たのしい"
+katakana = ""
+romaji = "tanoshii"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "i-adjective"
+
+[sub_resource type="Resource" id="w091"]
+script = ExtResource("vocab_word")
+id = "n5_091"
+kanji = "今日"
+hiragana = "きょう"
+katakana = ""
+romaji = "kyou"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w092"]
+script = ExtResource("vocab_word")
+id = "n5_092"
+kanji = "明日"
+hiragana = "あした"
+katakana = ""
+romaji = "ashita"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w093"]
+script = ExtResource("vocab_word")
+id = "n5_093"
+kanji = "昨日"
+hiragana = "きのう"
+katakana = ""
+romaji = "kinou"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w094"]
+script = ExtResource("vocab_word")
+id = "n5_094"
+kanji = "今"
+hiragana = "いま"
+katakana = ""
+romaji = "ima"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w095"]
+script = ExtResource("vocab_word")
+id = "n5_095"
+kanji = "朝"
+hiragana = "あさ"
+katakana = ""
+romaji = "asa"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w096"]
+script = ExtResource("vocab_word")
+id = "n5_096"
+kanji = "夜"
+hiragana = "よる"
+katakana = ""
+romaji = "yoru"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w097"]
+script = ExtResource("vocab_word")
+id = "n5_097"
+kanji = "学校"
+hiragana = "がっこう"
+katakana = ""
+romaji = "gakkou"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w098"]
+script = ExtResource("vocab_word")
+id = "n5_098"
+kanji = "駅"
+hiragana = "えき"
+katakana = ""
+romaji = "eki"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w099"]
+script = ExtResource("vocab_word")
+id = "n5_099"
+kanji = "病院"
+hiragana = "びょういん"
+katakana = ""
+romaji = "byouin"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w100"]
+script = ExtResource("vocab_word")
+id = "n5_100"
+kanji = "銀行"
+hiragana = "ぎんこう"
+katakana = ""
+romaji = "ginkou"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w101"]
+script = ExtResource("vocab_word")
+id = "n5_101"
+kanji = "図書館"
+hiragana = "としょかん"
+katakana = ""
+romaji = "toshokan"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w102"]
+script = ExtResource("vocab_word")
+id = "n5_102"
+kanji = "郵便局"
+hiragana = "ゆうびんきょく"
+katakana = ""
+romaji = "yuubinkyoku"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w103"]
+script = ExtResource("vocab_word")
+id = "n5_103"
+kanji = "公園"
+hiragana = "こうえん"
+katakana = ""
+romaji = "kouen"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w104"]
+script = ExtResource("vocab_word")
+id = "n5_104"
+kanji = "お店"
+hiragana = "おみせ"
+katakana = ""
+romaji = "omise"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w105"]
+script = ExtResource("vocab_word")
+id = "n5_105"
+kanji = "天気"
+hiragana = "てんき"
+katakana = ""
+romaji = "tenki"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w106"]
+script = ExtResource("vocab_word")
+id = "n5_106"
+kanji = "雨"
+hiragana = "あめ"
+katakana = ""
+romaji = "ame"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w107"]
+script = ExtResource("vocab_word")
+id = "n5_107"
+kanji = "雪"
+hiragana = "ゆき"
+katakana = ""
+romaji = "yuki"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w108"]
+script = ExtResource("vocab_word")
+id = "n5_108"
+kanji = "風"
+hiragana = "かぜ"
+katakana = ""
+romaji = "kaze"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w109"]
+script = ExtResource("vocab_word")
+id = "n5_109"
+kanji = "空"
+hiragana = "そら"
+katakana = ""
+romaji = "sora"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w110"]
+script = ExtResource("vocab_word")
+id = "n5_110"
+kanji = "海"
+hiragana = "うみ"
+katakana = ""
+romaji = "umi"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w111"]
+script = ExtResource("vocab_word")
+id = "n5_111"
+kanji = "電車"
+hiragana = "でんしゃ"
+katakana = ""
+romaji = "densha"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w112"]
+script = ExtResource("vocab_word")
+id = "n5_112"
+kanji = "バス"
+hiragana = ""
+katakana = "バス"
+romaji = "basu"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w113"]
+script = ExtResource("vocab_word")
+id = "n5_113"
+kanji = "自転車"
+hiragana = "じてんしゃ"
+katakana = ""
+romaji = "jitensha"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w114"]
+script = ExtResource("vocab_word")
+id = "n5_114"
+kanji = "右"
+hiragana = "みぎ"
+katakana = ""
+romaji = "migi"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w115"]
+script = ExtResource("vocab_word")
+id = "n5_115"
+kanji = "左"
+hiragana = "ひだり"
+katakana = ""
+romaji = "hidari"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w116"]
+script = ExtResource("vocab_word")
+id = "n5_116"
+kanji = "上"
+hiragana = "うえ"
+katakana = ""
+romaji = "ue"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w117"]
+script = ExtResource("vocab_word")
+id = "n5_117"
+kanji = "下"
+hiragana = "した"
+katakana = ""
+romaji = "shita"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w118"]
+script = ExtResource("vocab_word")
+id = "n5_118"
+kanji = "前"
+hiragana = "まえ"
+katakana = ""
+romaji = "mae"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w119"]
+script = ExtResource("vocab_word")
+id = "n5_119"
+kanji = "後ろ"
+hiragana = "うしろ"
+katakana = ""
+romaji = "ushiro"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
+part_of_speech = "noun"
+
+[sub_resource type="Resource" id="w120"]
+script = ExtResource("vocab_word")
+id = "n5_120"
+kanji = "中"
+hiragana = "なか"
+katakana = ""
+romaji = "naka"
+english_meanings = []
+jlpt_level = 5
+categories = []
+example_sentences = []
 part_of_speech = "noun"
 
 [resource]
 script = ExtResource("vocab_list")
-words = [SubResource("w001"), SubResource("w002"), SubResource("w003"), SubResource("w004"), SubResource("w005"), SubResource("w006"), SubResource("w007"), SubResource("w008"), SubResource("w009"), SubResource("w010"), SubResource("w011"), SubResource("w012"), SubResource("w013"), SubResource("w014"), SubResource("w015"), SubResource("w016"), SubResource("w017"), SubResource("w018"), SubResource("w019"), SubResource("w020"), SubResource("w021"), SubResource("w022"), SubResource("w023"), SubResource("w024"), SubResource("w025"), SubResource("w026"), SubResource("w027"), SubResource("w028"), SubResource("w029"), SubResource("w030"), SubResource("w031"), SubResource("w032"), SubResource("w033"), SubResource("w034"), SubResource("w035"), SubResource("w036"), SubResource("w037"), SubResource("w038"), SubResource("w039"), SubResource("w040"), SubResource("w041"), SubResource("w042"), SubResource("w043"), SubResource("w044"), SubResource("w045"), SubResource("w046"), SubResource("w047"), SubResource("w048"), SubResource("w049"), SubResource("w050")]
+words = Array[ExtResource("vocab_word")]([SubResource("w001"), SubResource("w002"), SubResource("w003"), SubResource("w004"), SubResource("w005"), SubResource("w006"), SubResource("w007"), SubResource("w008"), SubResource("w009"), SubResource("w010"), SubResource("w011"), SubResource("w012"), SubResource("w013"), SubResource("w014"), SubResource("w015"), SubResource("w016"), SubResource("w017"), SubResource("w018"), SubResource("w019"), SubResource("w020"), SubResource("w021"), SubResource("w022"), SubResource("w023"), SubResource("w024"), SubResource("w025"), SubResource("w026"), SubResource("w027"), SubResource("w028"), SubResource("w029"), SubResource("w030"), SubResource("w031"), SubResource("w032"), SubResource("w033"), SubResource("w034"), SubResource("w035"), SubResource("w036"), SubResource("w037"), SubResource("w038"), SubResource("w039"), SubResource("w040"), SubResource("w041"), SubResource("w042"), SubResource("w043"), SubResource("w044"), SubResource("w045"), SubResource("w046"), SubResource("w047"), SubResource("w048"), SubResource("w049"), SubResource("w050"), SubResource("w051"), SubResource("w052"), SubResource("w053"), SubResource("w054"), SubResource("w055"), SubResource("w056"), SubResource("w057"), SubResource("w058"), SubResource("w059"), SubResource("w060"), SubResource("w061"), SubResource("w062"), SubResource("w063"), SubResource("w064"), SubResource("w065"), SubResource("w066"), SubResource("w067"), SubResource("w068"), SubResource("w069"), SubResource("w070"), SubResource("w071"), SubResource("w072"), SubResource("w073"), SubResource("w074"), SubResource("w075"), SubResource("w076"), SubResource("w077"), SubResource("w078"), SubResource("w079"), SubResource("w080"), SubResource("w081"), SubResource("w082"), SubResource("w083"), SubResource("w084"), SubResource("w085"), SubResource("w086"), SubResource("w087"), SubResource("w088"), SubResource("w089"), SubResource("w090"), SubResource("w091"), SubResource("w092"), SubResource("w093"), SubResource("w094"), SubResource("w095"), SubResource("w096"), SubResource("w097"), SubResource("w098"), SubResource("w099"), SubResource("w100"), SubResource("w101"), SubResource("w102"), SubResource("w103"), SubResource("w104"), SubResource("w105"), SubResource("w106"), SubResource("w107"), SubResource("w108"), SubResource("w109"), SubResource("w110"), SubResource("w111"), SubResource("w112"), SubResource("w113"), SubResource("w114"), SubResource("w115"), SubResource("w116"), SubResource("w117"), SubResource("w118"), SubResource("w119"), SubResource("w120")])

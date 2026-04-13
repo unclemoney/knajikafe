@@ -53,6 +53,10 @@ func _show_question() -> void:
 	flip_btn.visible = true
 	flip_btn.disabled = false
 	rating_box.visible = false
+	again_btn.disabled = false
+	hard_btn.disabled = false
+	good_btn.disabled = false
+	easy_btn.disabled = false
 	feedback_label.text = "Tap to flip"
 	cat_label.text = "🐱"
 
@@ -94,11 +98,13 @@ func _on_rate_pressed(quality: int) -> void:
 		feedback_label.text = "Nice! 📚"
 		cat_label.text = "🐱 ✨"
 		AudioManager.play_correct()
+		TweenFX.pop_in(feedback_label, 0.3)
 	else:
 		_report_incorrect(card)
 		feedback_label.text = "Keep studying! 💪"
 		cat_label.text = "🐱 💦"
 		AudioManager.play_wrong()
+		TweenFX.shake(feedback_label, 0.3, 5.0)
 
 	await get_tree().create_timer(FEEDBACK_DELAY).timeout
 	_advance()

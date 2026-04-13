@@ -29,6 +29,12 @@ class_name PlayerProfile
 ## IDs of purchased/unlocked cafe decorations.
 @export var cafe_decorations: PackedStringArray = []
 
+## IDs of unlocked achievements.
+@export var unlocked_achievements: PackedStringArray = []
+
+## Whether the player has completed the tutorial.
+@export var has_completed_tutorial: bool = false
+
 ## Player settings stored as a flat dictionary.
 ## Keys: "show_kanji", "show_furigana", "show_romaji", "show_english",
 ##        "bgm_volume", "sfx_volume", "words_per_session"

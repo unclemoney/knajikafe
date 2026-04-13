@@ -27,9 +27,32 @@ var _correct_count: int = 0
 var _total_xp: int = 0
 
 
+## Adds an exit button to the top-right corner of the mini-game.
+## Called automatically during _setup_session().
+func _add_exit_button() -> void:
+	var exit_btn := Button.new()
+	exit_btn.text = "✕"
+	exit_btn.custom_minimum_size = Vector2(28, 28)
+	exit_btn.add_theme_font_size_override("font_size", 12)
+	exit_btn.set_anchors_preset(Control.PRESET_TOP_RIGHT)
+	exit_btn.offset_left = -36
+	exit_btn.offset_top = 4
+	exit_btn.offset_right = -4
+	exit_btn.offset_bottom = 32
+	exit_btn.grow_horizontal = Control.GROW_DIRECTION_BEGIN
+	exit_btn.pressed.connect(_on_exit_pressed)
+	add_child(exit_btn)
+
+
+## Returns to the cafe hub when the exit button is pressed.
+func _on_exit_pressed() -> void:
+	GameController.change_scene("res://Scenes/CafeHub/cafe_hub.tscn")
+
+
 ## Prepares the session: loads due/new cards and resolves to VocabWords.
 ## Call this from _ready() after setting up UI references.
 func _setup_session() -> void:
+	_add_exit_button()
 	var config := GameController.session_data
 	_words_per_session = config.get("words_per_session", 10)
 
@@ -61,6 +84,7 @@ func _setup_session() -> void:
 				_session_words.append(new_words[j])
 
 	_words_per_session = _session_words.size()
+	AudioManager.play_quiz_bgm()
 	_on_session_ready()
 
 
@@ -112,6 +136,8 @@ func _finish_session() -> void:
 		if leveled_up:
 			GameController.show_level_up(profile.level)
 			AudioManager.play_level_up()
+
+		AchievementManager.check_achievements()
 
 		GameController.session_data = {
 			"words_reviewed": _words_per_session,

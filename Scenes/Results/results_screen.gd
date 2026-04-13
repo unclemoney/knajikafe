@@ -16,6 +16,7 @@ extends Control
 
 func _ready() -> void:
 	return_btn.pressed.connect(_on_return_pressed)
+	AudioManager.play_results_bgm()
 	_display_results()
 
 
@@ -59,21 +60,35 @@ func _display_results() -> void:
 	else:
 		level_label.text = ""
 
-	if leveled_up:
-		level_up_label.text = "⭐ Level Up! You are now Level %d! ⭐" % new_level
-		level_up_label.visible = true
-	else:
-		level_up_label.visible = false
-
 	# Set title based on performance
 	if accuracy >= 90.0:
 		title_label.text = "Excellent! 🌟"
+		TweenFX.tada(title_label, 0.6)
 	elif accuracy >= 70.0:
 		title_label.text = "Good job! ✨"
+		TweenFX.pop_in(title_label, 0.4)
 	elif accuracy >= 50.0:
 		title_label.text = "Keep practicing! 📖"
+		TweenFX.fade_in(title_label, 0.5)
 	else:
 		title_label.text = "Don't give up! 💪"
+		TweenFX.fade_in(title_label, 0.5)
+
+	# Animate stats with staggered pop-in
+	var stat_nodes: Array[Label] = [words_label, accuracy_label, xp_label, level_label]
+	for i in stat_nodes.size():
+		var node: Label = stat_nodes[i]
+		node.modulate.a = 0.0
+		var tween := create_tween()
+		tween.tween_interval(0.15 * i + 0.3)
+		tween.tween_property(node, "modulate:a", 1.0, 0.3)
+
+	if leveled_up:
+		level_up_label.text = "⭐ Level Up! You are now Level %d! ⭐" % new_level
+		level_up_label.visible = true
+		TweenFX.upgrade(level_up_label, 0.8)
+	else:
+		level_up_label.visible = false
 
 
 ## Returns to the Cafe Hub.

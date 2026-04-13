@@ -1,0 +1,11 @@
+﻿[gd_resource type="Resource" script_class="AchievementDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/achievement_def.gd" id="script"]
+
+[resource]
+script = ExtResource("script")
+id = "ach_streak_30"
+title = "Iron Will"
+description = "Maintain a 30-day study streak."
+unlock_condition = "streak:30"
+is_hidden = true

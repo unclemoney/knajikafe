@@ -15,6 +15,9 @@ extends MiniGameBase
 @onready var score_label: Label = $TopBar/ScoreLabel
 @onready var cat_label: Label = $CatReaction/CatLabel
 
+## On-screen kana keyboard instance.
+var _kana_keyboard: KanaKeyboard = null
+
 ## Whether the player can currently submit.
 var _is_answering: bool = false
 
@@ -23,6 +26,18 @@ func _ready() -> void:
 	submit_btn.pressed.connect(_on_submit_pressed)
 	skip_btn.pressed.connect(_on_skip_pressed)
 	input_field.text_submitted.connect(_on_text_submitted)
+
+	# Create on-screen kana keyboard
+	_kana_keyboard = KanaKeyboard.new()
+	_kana_keyboard.key_pressed.connect(_on_kana_key)
+	_kana_keyboard.submit_pressed.connect(_on_submit_pressed)
+	_kana_keyboard.backspace_pressed.connect(_on_kana_backspace)
+	_kana_keyboard.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
+	_kana_keyboard.offset_top = -185
+	_kana_keyboard.offset_left = 8
+	_kana_keyboard.offset_right = -8
+	_kana_keyboard.grow_vertical = Control.GROW_DIRECTION_BEGIN
+	add_child(_kana_keyboard)
 
 	feedback_label.text = ""
 	cat_label.text = "🐱"
@@ -98,6 +113,8 @@ func _on_submit_pressed() -> void:
 		feedback_label.text = "Correct! (%s)" % word.hiragana
 		cat_label.text = "🐱 ✨"
 		AudioManager.play_correct()
+		TweenFX.pop_in(feedback_label, 0.3)
+		TweenFX.hop(cat_label, 0.4)
 
 		var quality := SRSEngine.Quality.GOOD
 		if card.repetitions == 0:
@@ -112,6 +129,7 @@ func _on_submit_pressed() -> void:
 		feedback_label.text = "Answer: %s" % correct_reading
 		cat_label.text = "🐱 💦"
 		AudioManager.play_wrong()
+		TweenFX.shake(feedback_label, 0.3, 5.0)
 		_report_incorrect(card)
 
 	await get_tree().create_timer(FEEDBACK_DELAY * 1.5).timeout
@@ -141,3 +159,20 @@ func _on_skip_pressed() -> void:
 
 	await get_tree().create_timer(FEEDBACK_DELAY).timeout
 	_advance()
+
+
+## Handles kana keyboard key press — appends character to input field.
+func _on_kana_key(character: String) -> void:
+	if not _is_answering:
+		return
+	input_field.text += character
+	input_field.caret_column = input_field.text.length()
+
+
+## Handles kana keyboard backspace — removes last character.
+func _on_kana_backspace() -> void:
+	if not _is_answering:
+		return
+	if input_field.text.length() > 0:
+		input_field.text = input_field.text.substr(0, input_field.text.length() - 1)
+		input_field.caret_column = input_field.text.length()

@@ -69,7 +69,7 @@ KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who
 | `AudioManager` | BGM crossfade, SFX pool (8 channels), volume control |
 | `SaveManager` | Profile CRUD, SRS data persistence, file I/O to `user://profiles/` |
 | `SRSEngine` | SM-2 algorithm, card scheduling, due queue management |
-| `VocabDatabase` | Loads/queries vocabulary and kanji Resource data |
+| `VocabDatabase` | Loads/queries vocabulary (JSON) and kanji (Resource) data |
 
 #### Custom Resource Types
 | Resource | Purpose |
@@ -94,10 +94,11 @@ KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who
 res://
 ├── Autoloads/                    # Singleton scripts (no class_name)
 │   ├── game_controller.gd
-│   ├── audio_manager.gd
+│   ├── audio_manager.gd          # Procedural SFX + BGM (cafe/quiz/results)
 │   ├── save_manager.gd
 │   ├── srs_engine.gd
-│   └── vocab_database.gd
+│   ├── vocab_database.gd
+│   └── achievement_manager.gd    # Achievement tracking + unlock notifications
 ├── Scenes/
 │   ├── TitleScreen/              # Animated logo, start button
 │   │   ├── title_screen.tscn
@@ -138,8 +139,15 @@ res://
 │   │   ├── VocabDisplay/         # Reusable word display component
 │   │   │   ├── vocab_display.tscn
 │   │   │   └── vocab_display.gd
-│   │   └── LevelUpNotification/  # Animated level-up toast overlay
-│   │       └── level_up_notification.gd
+│   │   ├── LevelUpNotification/  # Animated level-up toast overlay
+│   │   │   └── level_up_notification.gd
+│   │   ├── AchievementPopup/     # Queue-based achievement popup
+│   │   │   └── achievement_popup.gd
+│   │   └── KanaKeyboard/         # On-screen hiragana keyboard
+│   │       └── kana_keyboard.gd
+│   ├── Tutorial/                 # First-time onboarding (Mochi guide)
+│   │   ├── tutorial.tscn
+│   │   └── tutorial.gd
 │   └── Stats/                    # Progress overview, cat collection
 ├── Resources/
 │   ├── vocab_word.gd             # VocabWord Resource class
@@ -151,7 +159,8 @@ res://
 │   ├── vocab_list.gd             # VocabList container Resource class
 │   ├── kanji_list.gd             # KanjiList container Resource class
 │   ├── Vocabulary/
-│   │   └── n5_vocab.tres         # 50 hand-curated N5 vocabulary words
+│   │   ├── n5_vocab.json         # 120 N5 vocabulary words (JSON)
+│   │   └── n4_vocab.json         # 100 N4 vocabulary words (JSON)
 │   ├── Kanji/                    # .tres kanji lists (n5, n4)
 │   ├── Cats/                     # Per-cat .tres definitions
 │   │   └── mochi.tres            # Mascot cat companion
@@ -270,13 +279,13 @@ Test scenes are located in `Tests/`. To run a specific test:
 - [x] Navigation buttons (📊 Stats, 🐱 Cats, 🎨 Decorations) added to cafe hub top bar
 
 ### Phase 6: Polish & Content
-- [ ] Background music (lofi cafe ambiance, game tracks)
-- [ ] Sound effects (correct/wrong, card flip, meows, UI clicks, fanfares)
-- [ ] Achievement system (15-20 achievements with popup notifications)
-- [ ] Expand vocabulary to full N5 + N4 + custom curated list
-- [ ] On-screen keyboard polish (dakuten, handakuten, small kana toggles)
-- [ ] Scene transition and animation polish (TweenFX throughout)
-- [ ] Tutorial/onboarding flow (mascot cat introduction, guided first quiz)
+- [x] Background music (lofi cafe ambiance, quiz upbeat, results gentle — all procedural)
+- [x] Sound effects (correct/wrong, card flip, meows, achievement fanfare, streak — all procedural)
+- [x] Achievement system (18 achievements with popup notifications, AchievementManager autoload)
+- [x] Expand vocabulary to full N5 (120 words) + N4 (100 words)
+- [x] On-screen kana keyboard polish (dakuten, handakuten, small kana toggles)
+- [x] Scene transition and animation polish (TweenFX pop-in, shake, hop, tada, fade across all scenes)
+- [x] Tutorial/onboarding flow (Mochi cat 10-step introduction, guided cafe tour)
 
 ## Coding Standards
 

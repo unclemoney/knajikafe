@@ -128,6 +128,8 @@ func _on_item_pressed(index: int) -> void:
 		feedback_label.text = "Correct order! 🍵"
 		cat_label.text = "🐱 ✨"
 		AudioManager.play_correct()
+		TweenFX.pop_in(feedback_label, 0.3)
+		TweenFX.hop(cat_label, 0.4)
 
 		# Faster answers = better quality
 		var quality := SRSEngine.Quality.GOOD
@@ -140,6 +142,7 @@ func _on_item_pressed(index: int) -> void:
 		feedback_label.text = "Wrong! It was: %s" % word.get_primary_meaning()
 		cat_label.text = "🐱 💢"
 		AudioManager.play_wrong()
+		TweenFX.shake(feedback_label, 0.3, 5.0)
 		_report_incorrect(card)
 
 	order_meaning_label.text = "(%s)" % word.get_primary_meaning()
@@ -165,6 +168,7 @@ func _on_time_up() -> void:
 	feedback_label.text = "Time's up! It was: %s" % word.get_primary_meaning()
 	cat_label.text = "🐱 💤"
 	AudioManager.play_wrong()
+	TweenFX.shake(feedback_label, 0.3, 5.0)
 	_report_incorrect(card)
 
 	order_meaning_label.text = "(%s)" % word.get_primary_meaning()

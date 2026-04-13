@@ -22,6 +22,7 @@ AudioManager="*res://Autoloads/audio_manager.gd"
 SaveManager="*res://Autoloads/save_manager.gd"
 SRSEngine="*res://Autoloads/srs_engine.gd"
 VocabDatabase="*res://Autoloads/vocab_database.gd"
+AchievementManager="*res://Autoloads/achievement_manager.gd"
 TweenFX="*res://addons/TweenFX/TweenFX.gd"
 GDAIMCPRuntime="*res://addons/gdai-mcp-plugin-godot/gdai_mcp_runtime.gd"
 

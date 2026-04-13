@@ -1,0 +1,11 @@
+﻿[gd_resource type="Resource" script_class="AchievementDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/achievement_def.gd" id="script"]
+
+[resource]
+script = ExtResource("script")
+id = "ach_xp_5000"
+title = "XP Hoarder"
+description = "Accumulate 5000 total XP."
+unlock_condition = "xp:5000"
+is_hidden = false

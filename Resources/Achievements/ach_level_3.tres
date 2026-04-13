@@ -1,0 +1,11 @@
+﻿[gd_resource type="Resource" script_class="AchievementDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/achievement_def.gd" id="script"]
+
+[resource]
+script = ExtResource("script")
+id = "ach_level_3"
+title = "Rising Star"
+description = "Reach Level 3."
+unlock_condition = "level:3"
+is_hidden = false

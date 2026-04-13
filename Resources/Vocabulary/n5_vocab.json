@@ -1,0 +1,1990 @@
+[
+  {
+    "id": "n5_001",
+    "kanji": "こんにちは",
+    "hiragana": "こんにちは",
+    "katakana": "",
+    "romaji": "konnichiwa",
+    "english_meanings": [
+      "hello",
+      "good afternoon"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_002",
+    "kanji": "ありがとう",
+    "hiragana": "ありがとう",
+    "katakana": "",
+    "romaji": "arigatou",
+    "english_meanings": [
+      "thank you"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_003",
+    "kanji": "すみません",
+    "hiragana": "すみません",
+    "katakana": "",
+    "romaji": "sumimasen",
+    "english_meanings": [
+      "excuse me",
+      "sorry"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_004",
+    "kanji": "おはよう",
+    "hiragana": "おはよう",
+    "katakana": "",
+    "romaji": "ohayou",
+    "english_meanings": [
+      "good morning"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_005",
+    "kanji": "さようなら",
+    "hiragana": "さようなら",
+    "katakana": "",
+    "romaji": "sayounara",
+    "english_meanings": [
+      "goodbye"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_006",
+    "kanji": "おやすみなさい",
+    "hiragana": "おやすみなさい",
+    "katakana": "",
+    "romaji": "oyasuminasai",
+    "english_meanings": [
+      "good night"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_007",
+    "kanji": "いただきます",
+    "hiragana": "いただきます",
+    "katakana": "",
+    "romaji": "itadakimasu",
+    "english_meanings": [
+      "bon appetit",
+      "let's eat"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings",
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_008",
+    "kanji": "ごちそうさま",
+    "hiragana": "ごちそうさま",
+    "katakana": "",
+    "romaji": "gochisousama",
+    "english_meanings": [
+      "thank you for the meal"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings",
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_009",
+    "kanji": "はい",
+    "hiragana": "はい",
+    "katakana": "",
+    "romaji": "hai",
+    "english_meanings": [
+      "yes"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_010",
+    "kanji": "いいえ",
+    "hiragana": "いいえ",
+    "katakana": "",
+    "romaji": "iie",
+    "english_meanings": [
+      "no"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "greetings"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "expression"
+  },
+  {
+    "id": "n5_011",
+    "kanji": "水",
+    "hiragana": "みず",
+    "katakana": "",
+    "romaji": "mizu",
+    "english_meanings": [
+      "water"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_012",
+    "kanji": "お茶",
+    "hiragana": "おちゃ",
+    "katakana": "",
+    "romaji": "ocha",
+    "english_meanings": [
+      "tea",
+      "green tea"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_013",
+    "kanji": "ご飯",
+    "hiragana": "ごはん",
+    "katakana": "",
+    "romaji": "gohan",
+    "english_meanings": [
+      "rice",
+      "meal"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_014",
+    "kanji": "パン",
+    "hiragana": "",
+    "katakana": "パン",
+    "romaji": "pan",
+    "english_meanings": [
+      "bread"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_015",
+    "kanji": "卵",
+    "hiragana": "たまご",
+    "katakana": "",
+    "romaji": "tamago",
+    "english_meanings": [
+      "egg"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_016",
+    "kanji": "魚",
+    "hiragana": "さかな",
+    "katakana": "",
+    "romaji": "sakana",
+    "english_meanings": [
+      "fish"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_017",
+    "kanji": "肉",
+    "hiragana": "にく",
+    "katakana": "",
+    "romaji": "niku",
+    "english_meanings": [
+      "meat"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_018",
+    "kanji": "野菜",
+    "hiragana": "やさい",
+    "katakana": "",
+    "romaji": "yasai",
+    "english_meanings": [
+      "vegetables"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_019",
+    "kanji": "果物",
+    "hiragana": "くだもの",
+    "katakana": "",
+    "romaji": "kudamono",
+    "english_meanings": [
+      "fruit"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_020",
+    "kanji": "牛乳",
+    "hiragana": "ぎゅうにゅう",
+    "katakana": "",
+    "romaji": "gyuunyuu",
+    "english_meanings": [
+      "milk"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_021",
+    "kanji": "一",
+    "hiragana": "いち",
+    "katakana": "",
+    "romaji": "ichi",
+    "english_meanings": [
+      "one"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_022",
+    "kanji": "二",
+    "hiragana": "に",
+    "katakana": "",
+    "romaji": "ni",
+    "english_meanings": [
+      "two"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_023",
+    "kanji": "三",
+    "hiragana": "さん",
+    "katakana": "",
+    "romaji": "san",
+    "english_meanings": [
+      "three"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_024",
+    "kanji": "四",
+    "hiragana": "よん",
+    "katakana": "",
+    "romaji": "yon",
+    "english_meanings": [
+      "four"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_025",
+    "kanji": "五",
+    "hiragana": "ご",
+    "katakana": "",
+    "romaji": "go",
+    "english_meanings": [
+      "five"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_026",
+    "kanji": "六",
+    "hiragana": "ろく",
+    "katakana": "",
+    "romaji": "roku",
+    "english_meanings": [
+      "six"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_027",
+    "kanji": "七",
+    "hiragana": "なな",
+    "katakana": "",
+    "romaji": "nana",
+    "english_meanings": [
+      "seven"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_028",
+    "kanji": "八",
+    "hiragana": "はち",
+    "katakana": "",
+    "romaji": "hachi",
+    "english_meanings": [
+      "eight"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_029",
+    "kanji": "九",
+    "hiragana": "きゅう",
+    "katakana": "",
+    "romaji": "kyuu",
+    "english_meanings": [
+      "nine"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_030",
+    "kanji": "十",
+    "hiragana": "じゅう",
+    "katakana": "",
+    "romaji": "juu",
+    "english_meanings": [
+      "ten"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "numbers"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "number"
+  },
+  {
+    "id": "n5_031",
+    "kanji": "人",
+    "hiragana": "ひと",
+    "katakana": "",
+    "romaji": "hito",
+    "english_meanings": [
+      "person",
+      "people"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_032",
+    "kanji": "男",
+    "hiragana": "おとこ",
+    "katakana": "",
+    "romaji": "otoko",
+    "english_meanings": [
+      "man",
+      "male"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_033",
+    "kanji": "女",
+    "hiragana": "おんな",
+    "katakana": "",
+    "romaji": "onna",
+    "english_meanings": [
+      "woman",
+      "female"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_034",
+    "kanji": "子供",
+    "hiragana": "こども",
+    "katakana": "",
+    "romaji": "kodomo",
+    "english_meanings": [
+      "child",
+      "children"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_035",
+    "kanji": "友達",
+    "hiragana": "ともだち",
+    "katakana": "",
+    "romaji": "tomodachi",
+    "english_meanings": [
+      "friend"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_036",
+    "kanji": "先生",
+    "hiragana": "せんせい",
+    "katakana": "",
+    "romaji": "sensei",
+    "english_meanings": [
+      "teacher",
+      "doctor"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "school"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_037",
+    "kanji": "学生",
+    "hiragana": "がくせい",
+    "katakana": "",
+    "romaji": "gakusei",
+    "english_meanings": [
+      "student"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "school"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_038",
+    "kanji": "本",
+    "hiragana": "ほん",
+    "katakana": "",
+    "romaji": "hon",
+    "english_meanings": [
+      "book"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "objects"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_039",
+    "kanji": "車",
+    "hiragana": "くるま",
+    "katakana": "",
+    "romaji": "kuruma",
+    "english_meanings": [
+      "car"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "transport"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_040",
+    "kanji": "猫",
+    "hiragana": "ねこ",
+    "katakana": "",
+    "romaji": "neko",
+    "english_meanings": [
+      "cat"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "animals",
+      "cafe"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_041",
+    "kanji": "犬",
+    "hiragana": "いぬ",
+    "katakana": "",
+    "romaji": "inu",
+    "english_meanings": [
+      "dog"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "animals"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_042",
+    "kanji": "花",
+    "hiragana": "はな",
+    "katakana": "",
+    "romaji": "hana",
+    "english_meanings": [
+      "flower"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "nature"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_043",
+    "kanji": "山",
+    "hiragana": "やま",
+    "katakana": "",
+    "romaji": "yama",
+    "english_meanings": [
+      "mountain"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "nature"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_044",
+    "kanji": "川",
+    "hiragana": "かわ",
+    "katakana": "",
+    "romaji": "kawa",
+    "english_meanings": [
+      "river"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "nature"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_045",
+    "kanji": "目",
+    "hiragana": "め",
+    "katakana": "",
+    "romaji": "me",
+    "english_meanings": [
+      "eye"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "body"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_046",
+    "kanji": "手",
+    "hiragana": "て",
+    "katakana": "",
+    "romaji": "te",
+    "english_meanings": [
+      "hand"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "body"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_047",
+    "kanji": "足",
+    "hiragana": "あし",
+    "katakana": "",
+    "romaji": "ashi",
+    "english_meanings": [
+      "foot",
+      "leg"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "body"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_048",
+    "kanji": "口",
+    "hiragana": "くち",
+    "katakana": "",
+    "romaji": "kuchi",
+    "english_meanings": [
+      "mouth"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "body"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_049",
+    "kanji": "耳",
+    "hiragana": "みみ",
+    "katakana": "",
+    "romaji": "mimi",
+    "english_meanings": [
+      "ear"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "body"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_050",
+    "kanji": "頭",
+    "hiragana": "あたま",
+    "katakana": "",
+    "romaji": "atama",
+    "english_meanings": [
+      "head"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "body"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_051",
+    "kanji": "お父さん",
+    "hiragana": "おとうさん",
+    "katakana": "",
+    "romaji": "otousan",
+    "english_meanings": [
+      "father",
+      "dad"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_052",
+    "kanji": "お母さん",
+    "hiragana": "おかあさん",
+    "katakana": "",
+    "romaji": "okaasan",
+    "english_meanings": [
+      "mother",
+      "mom"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_053",
+    "kanji": "お兄さん",
+    "hiragana": "おにいさん",
+    "katakana": "",
+    "romaji": "oniisan",
+    "english_meanings": [
+      "older brother"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_054",
+    "kanji": "お姉さん",
+    "hiragana": "おねえさん",
+    "katakana": "",
+    "romaji": "oneesan",
+    "english_meanings": [
+      "older sister"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_055",
+    "kanji": "弟",
+    "hiragana": "おとうと",
+    "katakana": "",
+    "romaji": "otouto",
+    "english_meanings": [
+      "younger brother"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_056",
+    "kanji": "妹",
+    "hiragana": "いもうと",
+    "katakana": "",
+    "romaji": "imouto",
+    "english_meanings": [
+      "younger sister"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_057",
+    "kanji": "家族",
+    "hiragana": "かぞく",
+    "katakana": "",
+    "romaji": "kazoku",
+    "english_meanings": [
+      "family"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_058",
+    "kanji": "奥さん",
+    "hiragana": "おくさん",
+    "katakana": "",
+    "romaji": "okusan",
+    "english_meanings": [
+      "wife"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_059",
+    "kanji": "主人",
+    "hiragana": "しゅじん",
+    "katakana": "",
+    "romaji": "shujin",
+    "english_meanings": [
+      "husband"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_060",
+    "kanji": "赤ちゃん",
+    "hiragana": "あかちゃん",
+    "katakana": "",
+    "romaji": "akachan",
+    "english_meanings": [
+      "baby"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "people",
+      "family"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_061",
+    "kanji": "食べる",
+    "hiragana": "たべる",
+    "katakana": "",
+    "romaji": "taberu",
+    "english_meanings": [
+      "to eat"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs",
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_062",
+    "kanji": "飲む",
+    "hiragana": "のむ",
+    "katakana": "",
+    "romaji": "nomu",
+    "english_meanings": [
+      "to drink"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs",
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_063",
+    "kanji": "行く",
+    "hiragana": "いく",
+    "katakana": "",
+    "romaji": "iku",
+    "english_meanings": [
+      "to go"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_064",
+    "kanji": "来る",
+    "hiragana": "くる",
+    "katakana": "",
+    "romaji": "kuru",
+    "english_meanings": [
+      "to come"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_065",
+    "kanji": "見る",
+    "hiragana": "みる",
+    "katakana": "",
+    "romaji": "miru",
+    "english_meanings": [
+      "to see",
+      "to look",
+      "to watch"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_066",
+    "kanji": "聞く",
+    "hiragana": "きく",
+    "katakana": "",
+    "romaji": "kiku",
+    "english_meanings": [
+      "to hear",
+      "to listen",
+      "to ask"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_067",
+    "kanji": "書く",
+    "hiragana": "かく",
+    "katakana": "",
+    "romaji": "kaku",
+    "english_meanings": [
+      "to write"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs",
+      "school"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_068",
+    "kanji": "読む",
+    "hiragana": "よむ",
+    "katakana": "",
+    "romaji": "yomu",
+    "english_meanings": [
+      "to read"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs",
+      "school"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_069",
+    "kanji": "話す",
+    "hiragana": "はなす",
+    "katakana": "",
+    "romaji": "hanasu",
+    "english_meanings": [
+      "to speak",
+      "to talk"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_070",
+    "kanji": "買う",
+    "hiragana": "かう",
+    "katakana": "",
+    "romaji": "kau",
+    "english_meanings": [
+      "to buy"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_071",
+    "kanji": "待つ",
+    "hiragana": "まつ",
+    "katakana": "",
+    "romaji": "matsu",
+    "english_meanings": [
+      "to wait"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_072",
+    "kanji": "立つ",
+    "hiragana": "たつ",
+    "katakana": "",
+    "romaji": "tatsu",
+    "english_meanings": [
+      "to stand"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_073",
+    "kanji": "座る",
+    "hiragana": "すわる",
+    "katakana": "",
+    "romaji": "suwaru",
+    "english_meanings": [
+      "to sit"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_074",
+    "kanji": "走る",
+    "hiragana": "はしる",
+    "katakana": "",
+    "romaji": "hashiru",
+    "english_meanings": [
+      "to run"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_075",
+    "kanji": "歩く",
+    "hiragana": "あるく",
+    "katakana": "",
+    "romaji": "aruku",
+    "english_meanings": [
+      "to walk"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_076",
+    "kanji": "作る",
+    "hiragana": "つくる",
+    "katakana": "",
+    "romaji": "tsukuru",
+    "english_meanings": [
+      "to make",
+      "to create"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "verbs"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "verb"
+  },
+  {
+    "id": "n5_077",
+    "kanji": "大きい",
+    "hiragana": "おおきい",
+    "katakana": "",
+    "romaji": "ookii",
+    "english_meanings": [
+      "big",
+      "large"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_078",
+    "kanji": "小さい",
+    "hiragana": "ちいさい",
+    "katakana": "",
+    "romaji": "chiisai",
+    "english_meanings": [
+      "small",
+      "little"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_079",
+    "kanji": "新しい",
+    "hiragana": "あたらしい",
+    "katakana": "",
+    "romaji": "atarashii",
+    "english_meanings": [
+      "new"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_080",
+    "kanji": "古い",
+    "hiragana": "ふるい",
+    "katakana": "",
+    "romaji": "furui",
+    "english_meanings": [
+      "old (things)"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_081",
+    "kanji": "高い",
+    "hiragana": "たかい",
+    "katakana": "",
+    "romaji": "takai",
+    "english_meanings": [
+      "expensive",
+      "tall",
+      "high"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_082",
+    "kanji": "安い",
+    "hiragana": "やすい",
+    "katakana": "",
+    "romaji": "yasui",
+    "english_meanings": [
+      "cheap",
+      "inexpensive"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_083",
+    "kanji": "長い",
+    "hiragana": "ながい",
+    "katakana": "",
+    "romaji": "nagai",
+    "english_meanings": [
+      "long"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_084",
+    "kanji": "短い",
+    "hiragana": "みじかい",
+    "katakana": "",
+    "romaji": "mijikai",
+    "english_meanings": [
+      "short (length)"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_085",
+    "kanji": "良い",
+    "hiragana": "いい",
+    "katakana": "",
+    "romaji": "ii",
+    "english_meanings": [
+      "good"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_086",
+    "kanji": "悪い",
+    "hiragana": "わるい",
+    "katakana": "",
+    "romaji": "warui",
+    "english_meanings": [
+      "bad"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_087",
+    "kanji": "暑い",
+    "hiragana": "あつい",
+    "katakana": "",
+    "romaji": "atsui",
+    "english_meanings": [
+      "hot (weather)"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives",
+      "weather"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_088",
+    "kanji": "寒い",
+    "hiragana": "さむい",
+    "katakana": "",
+    "romaji": "samui",
+    "english_meanings": [
+      "cold (weather)"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives",
+      "weather"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_089",
+    "kanji": "おいしい",
+    "hiragana": "おいしい",
+    "katakana": "",
+    "romaji": "oishii",
+    "english_meanings": [
+      "delicious",
+      "tasty"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives",
+      "food"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_090",
+    "kanji": "楽しい",
+    "hiragana": "たのしい",
+    "katakana": "",
+    "romaji": "tanoshii",
+    "english_meanings": [
+      "fun",
+      "enjoyable"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "adjectives"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "i-adjective"
+  },
+  {
+    "id": "n5_091",
+    "kanji": "今日",
+    "hiragana": "きょう",
+    "katakana": "",
+    "romaji": "kyou",
+    "english_meanings": [
+      "today"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "time"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_092",
+    "kanji": "明日",
+    "hiragana": "あした",
+    "katakana": "",
+    "romaji": "ashita",
+    "english_meanings": [
+      "tomorrow"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "time"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_093",
+    "kanji": "昨日",
+    "hiragana": "きのう",
+    "katakana": "",
+    "romaji": "kinou",
+    "english_meanings": [
+      "yesterday"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "time"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_094",
+    "kanji": "今",
+    "hiragana": "いま",
+    "katakana": "",
+    "romaji": "ima",
+    "english_meanings": [
+      "now"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "time"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_095",
+    "kanji": "朝",
+    "hiragana": "あさ",
+    "katakana": "",
+    "romaji": "asa",
+    "english_meanings": [
+      "morning"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "time"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_096",
+    "kanji": "夜",
+    "hiragana": "よる",
+    "katakana": "",
+    "romaji": "yoru",
+    "english_meanings": [
+      "night",
+      "evening"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "time"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_097",
+    "kanji": "学校",
+    "hiragana": "がっこう",
+    "katakana": "",
+    "romaji": "gakkou",
+    "english_meanings": [
+      "school"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "places",
+      "school"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_098",
+    "kanji": "駅",
+    "hiragana": "えき",
+    "katakana": "",
+    "romaji": "eki",
+    "english_meanings": [
+      "station"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "places",
+      "transport"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_099",
+    "kanji": "病院",
+    "hiragana": "びょういん",
+    "katakana": "",
+    "romaji": "byouin",
+    "english_meanings": [
+      "hospital"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "places"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_100",
+    "kanji": "銀行",
+    "hiragana": "ぎんこう",
+    "katakana": "",
+    "romaji": "ginkou",
+    "english_meanings": [
+      "bank"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "places"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_101",
+    "kanji": "図書館",
+    "hiragana": "としょかん",
+    "katakana": "",
+    "romaji": "toshokan",
+    "english_meanings": [
+      "library"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "places",
+      "school"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_102",
+    "kanji": "郵便局",
+    "hiragana": "ゆうびんきょく",
+    "katakana": "",
+    "romaji": "yuubinkyoku",
+    "english_meanings": [
+      "post office"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "places"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_103",
+    "kanji": "公園",
+    "hiragana": "こうえん",
+    "katakana": "",
+    "romaji": "kouen",
+    "english_meanings": [
+      "park"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "places",
+      "nature"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_104",
+    "kanji": "お店",
+    "hiragana": "おみせ",
+    "katakana": "",
+    "romaji": "omise",
+    "english_meanings": [
+      "shop",
+      "store"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "places"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_105",
+    "kanji": "天気",
+    "hiragana": "てんき",
+    "katakana": "",
+    "romaji": "tenki",
+    "english_meanings": [
+      "weather"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "nature",
+      "weather"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_106",
+    "kanji": "雨",
+    "hiragana": "あめ",
+    "katakana": "",
+    "romaji": "ame",
+    "english_meanings": [
+      "rain"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "nature",
+      "weather"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_107",
+    "kanji": "雪",
+    "hiragana": "ゆき",
+    "katakana": "",
+    "romaji": "yuki",
+    "english_meanings": [
+      "snow"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "nature",
+      "weather"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_108",
+    "kanji": "風",
+    "hiragana": "かぜ",
+    "katakana": "",
+    "romaji": "kaze",
+    "english_meanings": [
+      "wind"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "nature",
+      "weather"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_109",
+    "kanji": "空",
+    "hiragana": "そら",
+    "katakana": "",
+    "romaji": "sora",
+    "english_meanings": [
+      "sky"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "nature"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_110",
+    "kanji": "海",
+    "hiragana": "うみ",
+    "katakana": "",
+    "romaji": "umi",
+    "english_meanings": [
+      "sea",
+      "ocean"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "nature"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_111",
+    "kanji": "電車",
+    "hiragana": "でんしゃ",
+    "katakana": "",
+    "romaji": "densha",
+    "english_meanings": [
+      "train"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "transport"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_112",
+    "kanji": "バス",
+    "hiragana": "",
+    "katakana": "バス",
+    "romaji": "basu",
+    "english_meanings": [
+      "bus"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "transport"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_113",
+    "kanji": "自転車",
+    "hiragana": "じてんしゃ",
+    "katakana": "",
+    "romaji": "jitensha",
+    "english_meanings": [
+      "bicycle"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "transport"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_114",
+    "kanji": "右",
+    "hiragana": "みぎ",
+    "katakana": "",
+    "romaji": "migi",
+    "english_meanings": [
+      "right"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "directions"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_115",
+    "kanji": "左",
+    "hiragana": "ひだり",
+    "katakana": "",
+    "romaji": "hidari",
+    "english_meanings": [
+      "left"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "directions"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_116",
+    "kanji": "上",
+    "hiragana": "うえ",
+    "katakana": "",
+    "romaji": "ue",
+    "english_meanings": [
+      "up",
+      "above"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "directions"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_117",
+    "kanji": "下",
+    "hiragana": "した",
+    "katakana": "",
+    "romaji": "shita",
+    "english_meanings": [
+      "down",
+      "below"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "directions"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_118",
+    "kanji": "前",
+    "hiragana": "まえ",
+    "katakana": "",
+    "romaji": "mae",
+    "english_meanings": [
+      "front",
+      "before"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "directions"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_119",
+    "kanji": "後ろ",
+    "hiragana": "うしろ",
+    "katakana": "",
+    "romaji": "ushiro",
+    "english_meanings": [
+      "behind",
+      "back"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "directions"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  },
+  {
+    "id": "n5_120",
+    "kanji": "中",
+    "hiragana": "なか",
+    "katakana": "",
+    "romaji": "naka",
+    "english_meanings": [
+      "inside",
+      "middle"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "directions"
+    ],
+    "example_sentences": [],
+    "part_of_speech": "noun"
+  }
+]

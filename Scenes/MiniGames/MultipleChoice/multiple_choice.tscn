@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://dh6f286wd6rqr"]
 
-[ext_resource type="Script" path="res://Scenes/MiniGames/MultipleChoice/multiple_choice.gd" id="1"]
+[ext_resource type="Script" uid="uid://dn2p6s3bk55jt" path="res://Scenes/MiniGames/MultipleChoice/multiple_choice.gd" id="1"]
 [ext_resource type="PackedScene" path="res://Scenes/Components/VocabDisplay/vocab_display.tscn" id="2"]
 
 [node name="MultipleChoice" type="Control"]
@@ -66,45 +66,44 @@ alignment = 1
 layout_mode = 2
 
 [node name="Spacer" type="Control" parent="GameArea"]
-layout_mode = 2
 custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
 
 [node name="AnswerGrid" type="GridContainer" parent="GameArea"]
 layout_mode = 2
-columns = 2
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 8
+columns = 2
 
 [node name="Answer1" type="Button" parent="GameArea/AnswerGrid"]
-layout_mode = 2
 custom_minimum_size = Vector2(190, 36)
+layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "Answer 1"
 
 [node name="Answer2" type="Button" parent="GameArea/AnswerGrid"]
-layout_mode = 2
 custom_minimum_size = Vector2(190, 36)
+layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "Answer 2"
 
 [node name="Answer3" type="Button" parent="GameArea/AnswerGrid"]
-layout_mode = 2
 custom_minimum_size = Vector2(190, 36)
+layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "Answer 3"
 
 [node name="Answer4" type="Button" parent="GameArea/AnswerGrid"]
-layout_mode = 2
 custom_minimum_size = Vector2(190, 36)
+layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "Answer 4"
 
 [node name="FeedbackLabel" type="Label" parent="GameArea"]
-layout_mode = 2
 custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
 theme_override_font_sizes/font_size = 11
-text = ""
 horizontal_alignment = 1
 
 [node name="CatReaction" type="VBoxContainer" parent="."]

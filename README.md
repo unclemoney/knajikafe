@@ -287,6 +287,71 @@ Test scenes are located in `Tests/`. To run a specific test:
 - [x] Scene transition and animation polish (TweenFX pop-in, shake, hop, tada, fade across all scenes)
 - [x] Tutorial/onboarding flow (Mochi cat 10-step introduction, guided cafe tour)
 
+## Vocabulary Data Best Practices
+
+### Why JSON — Not .tres — For Vocab
+
+Godot 4.4 **automatically re-saves `.tres` resource files** when the project is opened in the editor. During this resave, the engine resets any `PackedStringArray` field that holds non-default data back to `[]` (the empty default). This silently destroys `english_meanings`, `categories`, and `example_sentences` on every `VocabWord` sub-resource, causing mini-games to display `???`, `""`, or `---` instead of actual content.
+
+This issue was reproduced multiple times: `gen_vocab.py` would write valid `.tres` files, Godot would open the project, and within seconds all `PackedStringArray` values were gone. The `.tres` format is therefore **not safe for any vocabulary data that uses array-type fields**.
+
+Vocabulary data is stored as **JSON files** in `Resources/Vocabulary/`. Godot does not import, resave, or modify `.json` files. The `VocabDatabase` autoload reads JSON at runtime via `FileAccess` and instantiates `VocabWord` objects in GDScript.
+
+### Vocabulary Update Workflow
+
+Follow this exact workflow any time vocabulary words are added or changed:
+
+1. **Edit `Tools/gen_vocab.py` only** — all vocabulary data lives in the word tuples in that file. Do not hand-edit the `.json` files directly.
+2. **Run the generator** from the project root:
+   ```
+   python Tools/gen_vocab.py
+   ```
+   This writes `Resources/Vocabulary/n5_vocab.json` and `Resources/Vocabulary/n4_vocab.json`.
+3. **Verify the output** — check that `english_meanings` is populated in the first few entries:
+   ```powershell
+   python -c "import json; d=json.load(open('Resources/Vocabulary/n5_vocab.json',encoding='utf-8')); print(d[0]['id'], d[0]['english_meanings'])"
+   ```
+   Expected output: `n5_001 ['hello', 'good afternoon']`
+4. **Do not open the JSON files in the Godot editor's built-in text editor** — it is safe, but unnecessary. Godot does not need to import them.
+5. **Do not convert vocab back to `.tres`** — this will reintroduce the stripping bug.
+
+### VocabWord Fields Reference
+
+Each JSON entry must contain these keys (all strings unless noted):
+
+| Key | Type | Example |
+|-----|------|---------|
+| `id` | string | `"n5_001"` |
+| `kanji` | string | `"今日は"` (empty string if none) |
+| `hiragana` | string | `"こんにちは"` |
+| `katakana` | string | `"コンニチハ"` (empty string if none) |
+| `romaji` | string | `"konnichiwa"` |
+| `english_meanings` | array of strings | `["hello", "good afternoon"]` |
+| `jlpt_level` | integer | `5` |
+| `categories` | array of strings | `["greetings"]` |
+| `example_sentences` | array of strings | `[]` (may be empty) |
+| `part_of_speech` | string | `"expression"` |
+
+### JSON Encoding Rules
+
+- The JSON files **must be UTF-8 without BOM**. `gen_vocab.py` uses `json.dump(..., ensure_ascii=False)` and opens files with `encoding='utf-8'`. Do not change this.
+- **Never add a BOM** (`\xef\xbb\xbf`) to the JSON files — GDScript's `JSON.parse_string()` does not strip BOM and will fail to parse the file, silently loading zero words.
+- If characters appear as `???` or boxes in-game after a vocab update, first check that the JSON files are valid UTF-8 (no BOM, no double-encoding) before investigating anywhere else.
+- Kanji and hiragana are stored as literal Unicode characters in the JSON (e.g. `"今日は"`), not as escape sequences. This is intentional and correct.
+
+### What NOT To Do
+
+- **Do not store vocab data in `.tres` files** — Godot will strip `PackedStringArray` values.
+- **Do not store vocab data in `.gd` constant arrays in VocabDatabase** — this bloats the autoload and is harder to maintain.
+- **Do not add `@export var` arrays of VocabWord to any `.tres` sub_resource** — same stripping bug applies to any `PackedStringArray` or `Array[String]` field in a sub_resource exported to `.tres`.
+- **Do not regenerate vocab by duplicating JSON entries by hand** — always use `gen_vocab.py` as the single source of truth.
+
+### Kanji Data (Still Uses .tres)
+
+Kanji data (`Resources/Kanji/n5_kanji.tres`, `n4_kanji.tres`) uses `.tres` format and loads fine because `KanjiEntry` resources use `String` fields, not `PackedStringArray`. This is safe. Do not change kanji to JSON unless a `PackedStringArray` field is added to `KanjiEntry`.
+
+---
+
 ## Coding Standards
 
 - **Godot 4.4** GDScript syntax

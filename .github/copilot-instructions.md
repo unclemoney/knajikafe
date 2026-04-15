@@ -27,6 +27,21 @@ Testing will be done by creating simple test scenes that can be run in the edito
 - Autoload scripts should not have class_name declarations.
 - When applicable be sure to use the godot-tools MCP server tools.
 
+## Vocabulary Data Guardrail
+
+Vocabulary word data is stored as **JSON files** (`Resources/Vocabulary/n5_vocab.json`, `n4_vocab.json`), NOT as `.tres` resources. This is a deliberate, permanent architectural decision, not a shortcut.
+
+**Root cause of previous bugs:** Godot 4.4 re-saves `.tres` resource files on project open, silently stripping all `PackedStringArray` field values back to `[]`. This destroyed `english_meanings`, `categories`, and `example_sentences` on every VocabWord sub-resource, causing `???`, `""`, and `---` to appear throughout all mini-games.
+
+**Rules to follow at all times:**
+- **Never** suggest storing vocab word data (or any data with array-of-string fields) in `.tres` sub-resources.
+- **Never** add a `PackedStringArray` or `Array[String]` field to a Resource that is saved as a `.tres` sub-resource — Godot will strip it.
+- The single source of truth for vocabulary is **`Tools/gen_vocab.py`**. To add or update words, edit that file and re-run `python Tools/gen_vocab.py`.
+- JSON files must be **UTF-8 without BOM**. `gen_vocab.py` already handles this. Do not add BOM or change the encoding.
+- After regenerating vocab JSON, always verify with: `python -c "import json; d=json.load(open('Resources/Vocabulary/n5_vocab.json',encoding='utf-8')); print(d[0]['id'], d[0]['english_meanings'])"`
+- `VocabDatabase` loads vocab at runtime via `FileAccess` + `JSON.parse_string()` and creates `VocabWord` instances in GDScript. Do not change it to use `ResourceLoader`.
+- Kanji data (no `PackedStringArray` fields) may continue to use `.tres` safely.
+
 ## API Verification Guardrail
 Before calling any method, signal, or property from another script, **always verify its exact signature** (name, argument count, argument types, return type) by reading the source file.  Common mistakes this prevents:
 - Calling a method with the wrong number of arguments (e.g. `select_channel(channel)` when the method takes 0 args).

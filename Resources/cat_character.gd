@@ -27,3 +27,6 @@ class_name CatCharacter
 
 ## Color tint for this cat's theme/accent in UI.
 @export var accent_color: Color = Color.WHITE
+
+## Numeric index for sprite sheet loading (CAT_{cat_number}_{State}.png).
+@export var cat_number: int = 1

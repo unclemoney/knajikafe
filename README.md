@@ -108,7 +108,12 @@ res://
 │   │   └── profile_select.gd
 │   ├── CafeHub/                  # Side-view cafe with clickable stations
 │   │   ├── cafe_hub.tscn
-│   │   └── cafe_hub.gd
+│   │   ├── cafe_hub.gd
+│   │   └── Cats/                 # Animated cat character system
+│   │       ├── cafe_cat.tscn     # CafeCat CharacterBody2D scene
+│   │       ├── cafe_cat.gd       # Physics, movement, animation, speech bubble
+│   │       ├── cat_state_machine.gd  # FSM with 12 states, weighted transitions
+│   │       └── cat_sprite_loader.gd  # Runtime SpriteFrames from sprite sheets
 │   ├── MiniGames/
 │   │   ├── mini_game_base.gd     # Abstract base class for all mini-games
 │   │   ├── MultipleChoice/       # 4-answer quiz with SRS integration
@@ -178,8 +183,8 @@ res://
 │   └── main_theme.tres           # Global Godot Theme resource
 ├── Tests/                        # Test scenes for verification
 └── addons/
-    ├── TweenFX/                  # Juicy tween animation library
-    └── gdai-mcp-plugin-godot/    # MCP integration for AI dev
+	├── TweenFX/                  # Juicy tween animation library
+	└── gdai-mcp-plugin-godot/    # MCP integration for AI dev
 ```
 
 ### Save Data Layout
@@ -189,8 +194,8 @@ user://profiles/
 │   ├── profile.tres              # PlayerProfile resource
 │   └── srs_data.json             # SRS card data (JSON for flexibility)
 └── another_player/
-    ├── profile.tres
-    └── srs_data.json
+	├── profile.tres
+	└── srs_data.json
 ```
 
 ## Setup
@@ -287,6 +292,17 @@ Test scenes are located in `Tests/`. To run a specific test:
 - [x] Scene transition and animation polish (TweenFX pop-in, shake, hop, tada, fade across all scenes)
 - [x] Tutorial/onboarding flow (Mochi cat 10-step introduction, guided cafe tour)
 
+### Phase 7: Animated Cat Characters
+- [x] CafeCat CharacterBody2D with gravity, walk speed, directional movement
+- [x] CatStateMachine FSM with 12 states: STANDING, IDLE, WALKING, SITTING (transition), SITTING_IDLE, LAYING_DOWN (transition), LAYING_DOWN_IDLE, WALKING_TO_JUMP, JUMPING, PLAYING, EATING, SLEEPING
+- [x] Transition states (SITTING, LAYING_DOWN) play one animation loop then auto-advance to idle variant
+- [x] Smart jump-to-furniture: cat walks to nearest platform (counter/shelf), then jumps up and forward to land on top
+- [x] CatSpriteLoader builds SpriteFrames at runtime from per-cat sprite sheets (CAT_N_State.png)
+- [x] Per-state animation FPS and loop settings (transition anims don't loop)
+- [x] Weighted random state transitions with configurable durations
+- [x] Speech bubble on click with random dialogue from CatCharacter data
+- [x] Test scene (`Tests/cat_state_machine_test.tscn`) with state force buttons for each state
+
 ## Vocabulary Data Best Practices
 
 ### Why JSON — Not .tres — For Vocab
@@ -365,4 +381,3 @@ Kanji data (`Resources/Kanji/n5_kanji.tres`, `n4_kanji.tres`) uses `.tres` forma
 ## License
 
 TBD
-

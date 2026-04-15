@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://Scenes/CafeHub/cafe_hub.gd" id="1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
+size = Vector2(640, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shelf"]
+size = Vector2(120, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(4, 400)
 
 [node name="CafeHub" type="Control"]
 layout_mode = 3
@@ -146,6 +155,54 @@ theme_override_font_sizes/font_size = 14
 text = ""
 horizontal_alignment = 1
 
+[node name="CatWorld" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Floor" type="StaticBody2D" parent="CatWorld"]
+position = Vector2(320, 284)
+
+[node name="FloorCollision" type="CollisionShape2D" parent="CatWorld/Floor"]
+shape = SubResource("RectangleShape2D_floor")
+
+[node name="CounterPlatform" type="StaticBody2D" parent="CatWorld"]
+position = Vector2(320, 202)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CounterCollision" type="CollisionShape2D" parent="CatWorld/CounterPlatform"]
+shape = SubResource("RectangleShape2D_floor")
+one_way_collision = true
+
+[node name="ShelfLeftBody" type="StaticBody2D" parent="CatWorld"]
+position = Vector2(90, 142)
+collision_layer = 2
+collision_mask = 0
+
+[node name="ShelfLeftCollision" type="CollisionShape2D" parent="CatWorld/ShelfLeftBody"]
+shape = SubResource("RectangleShape2D_shelf")
+one_way_collision = true
+
+[node name="ShelfRightBody" type="StaticBody2D" parent="CatWorld"]
+position = Vector2(550, 142)
+collision_layer = 2
+collision_mask = 0
+
+[node name="ShelfRightCollision" type="CollisionShape2D" parent="CatWorld/ShelfRightBody"]
+shape = SubResource("RectangleShape2D_shelf")
+one_way_collision = true
+
+[node name="WallLeft" type="StaticBody2D" parent="CatWorld"]
+position = Vector2(-2, 180)
+
+[node name="WallLeftCollision" type="CollisionShape2D" parent="CatWorld/WallLeft"]
+shape = SubResource("RectangleShape2D_wall")
+
+[node name="WallRight" type="StaticBody2D" parent="CatWorld"]
+position = Vector2(642, 180)
+
+[node name="WallRightCollision" type="CollisionShape2D" parent="CatWorld/WallRight"]
+shape = SubResource("RectangleShape2D_wall")
+
 [node name="TopBar" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 10
@@ -237,47 +294,6 @@ theme_override_colors/font_color = Color(0.96, 0.87, 0.7, 1)
 theme_override_font_sizes/font_size = 12
 text = "☕ KanjiKafe ☕"
 horizontal_alignment = 1
-
-[node name="CatDisplay" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -180.0
-offset_top = 152.0
-offset_right = 180.0
-offset_bottom = 188.0
-grow_horizontal = 2
-alignment = 1
-theme_override_constants/separation = 8
-
-[node name="DialogueBox" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -140.0
-offset_top = 252.0
-offset_right = 140.0
-offset_bottom = 282.0
-grow_horizontal = 2
-theme_override_constants/separation = 2
-alignment = 1
-
-[node name="CatNameLabel" type="Label" parent="DialogueBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.96, 0.75, 0.4, 1)
-theme_override_font_sizes/font_size = 9
-text = "🐱 Mochi"
-horizontal_alignment = 1
-
-[node name="DialogueLabel" type="Label" parent="DialogueBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.8, 0.7, 0.6, 1)
-theme_override_font_sizes/font_size = 7
-text = "\"Nyaa~ Ready to study?\""
-horizontal_alignment = 1
-autowrap_mode = 2
 
 [node name="Stations" type="HBoxContainer" parent="."]
 layout_mode = 1

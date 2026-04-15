@@ -11,3 +11,4 @@ specialty_game = "CafeOrders"
 unlock_condition = "level:12"
 dialogue_lines = PackedStringArray("Order up! What did the customer say?", "The kitchen is my domain, nyaa!", "Ocha? Koohii? Listen carefully!", "I cook, you serve — teamwork!", "Food words are the most delicious to learn!", "Hurry, the customer is waiting!", "That's the wrong order, nyaa! Try again!", "Azuki beans are the best topping~", "Fast service means happy cats!", "Another satisfied customer, nyaa~")
 accent_color = Color(0.7, 0.35, 0.3, 1)
+cat_number = 6

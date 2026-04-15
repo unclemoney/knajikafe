@@ -17,9 +17,7 @@ extends Control
 @onready var decor_btn: Button = $TopBar/DecorBtn
 @onready var logout_btn: Button = $TopBar/LogoutBtn
 
-@onready var cat_display: HBoxContainer = $CatDisplay
-@onready var cat_name_label: Label = $DialogueBox/CatNameLabel
-@onready var dialogue_label: Label = $DialogueBox/DialogueLabel
+@onready var cat_world: Node2D = $CatWorld
 @onready var decoration_layer: Control = $DecorationLayer
 
 @onready var quiz_btn: Button = $Stations/QuizStation/QuizBtn
@@ -33,6 +31,7 @@ extends Control
 # ── Constants ───────────────────────────────────────
 
 const CAT_DIR := "res://Resources/Cats/"
+const CAFE_CAT_SCENE := preload("res://Scenes/CafeHub/Cats/cafe_cat.tscn")
 const DECOR_DIR := "res://Resources/Decorations/"
 const DECOR_SLOTS := {
 	"wall": "WallSlot",
@@ -47,6 +46,7 @@ const DECOR_SLOTS := {
 var _all_cats: Array = []
 var _unlocked_cats: Array = []
 var _active_cat: CatCharacter = null
+var _spawned_cats: Array[CafeCat] = []
 var _all_decorations: Array = []
 
 
@@ -67,7 +67,6 @@ func _ready() -> void:
 	_update_streak()
 	_update_player_info()
 	_update_due_count()
-	_check_cat_unlocks()
 	_display_cafe_cats()
 	_display_decorations()
 	AudioManager.play_cafe_bgm()
@@ -150,45 +149,44 @@ func _is_condition_met(condition: String, profile: PlayerProfile) -> bool:
 	return false
 
 
-## Populates the CatDisplay with buttons for unlocked cats and placeholders for locked ones.
+## Populates the cafe with animated CafeCat instances for each unlocked cat.
 func _display_cafe_cats() -> void:
-	for child in cat_display.get_children():
-		child.queue_free()
-	var show_count := mini(_unlocked_cats.size(), 4)
-	for i in range(show_count):
-		var cat: CatCharacter = _unlocked_cats[i]
-		var btn := Button.new()
-		btn.text = "🐱 " + cat.cat_name
-		btn.custom_minimum_size = Vector2(72, 22)
-		btn.add_theme_font_size_override("font_size", 8)
-		btn.pressed.connect(_on_cat_clicked.bind(cat))
-		cat_display.add_child(btn)
-	var locked_count := _all_cats.size() - _unlocked_cats.size()
-	for i in range(mini(locked_count, 3)):
-		var lbl := Label.new()
-		lbl.text = "❓"
-		lbl.add_theme_font_size_override("font_size", 14)
-		lbl.add_theme_color_override("font_color", Color(0.4, 0.35, 0.3, 1))
-		lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		lbl.custom_minimum_size = Vector2(30, 22)
-		cat_display.add_child(lbl)
+	# Clear any previously spawned cats
+	for cat_node in _spawned_cats:
+		if is_instance_valid(cat_node):
+			cat_node.queue_free()
+	_spawned_cats.clear()
+
+	_check_cat_unlocks()
+
+	# Spawn each unlocked cat at a random floor position
+	var spawn_spacing := 80.0
+	var start_x := 120.0
+	var furniture_targets: Array[Vector2] = [
+		Vector2(320.0, 196.0),  # Counter surface
+		Vector2(90.0, 136.0),   # Shelf left surface
+		Vector2(550.0, 136.0),  # Shelf right surface
+	]
+	for i in range(_unlocked_cats.size()):
+		var cat_data: CatCharacter = _unlocked_cats[i]
+		var cat_node: CafeCat = CAFE_CAT_SCENE.instantiate()
+		cat_node.cat_data = cat_data
+		var spawn_x := start_x + i * spawn_spacing + randf_range(-20.0, 20.0)
+		spawn_x = clampf(spawn_x, 32.0, 608.0)
+		cat_node.position = Vector2(spawn_x, 270.0)
+		cat_node.jump_targets = furniture_targets
+		cat_node.cat_clicked.connect(_on_cafe_cat_clicked)
+		cat_world.add_child(cat_node)
+		_spawned_cats.append(cat_node)
+
 	if _unlocked_cats.size() > 0:
 		_active_cat = _unlocked_cats[randi() % _unlocked_cats.size()]
-		_show_cat_dialogue(_active_cat)
 
 
-## Handles clicking on a cat button — selects that cat and shows dialogue.
-func _on_cat_clicked(cat: CatCharacter) -> void:
-	_active_cat = cat
-	_show_cat_dialogue(cat)
-
-
-## Shows a random dialogue line from the given cat.
-func _show_cat_dialogue(cat: CatCharacter) -> void:
-	cat_name_label.text = "🐱 " + cat.cat_name
-	cat_name_label.add_theme_color_override("font_color", cat.accent_color)
-	var idx := randi() % cat.dialogue_lines.size()
-	dialogue_label.text = "\"" + cat.dialogue_lines[idx] + "\""
+## Handles clicking on an animated CafeCat in the world.
+func _on_cafe_cat_clicked(cat: CafeCat) -> void:
+	if cat.cat_data:
+		_active_cat = cat.cat_data
 
 
 # ── Decoration System ───────────────────────────────
@@ -418,12 +416,3 @@ func _animate_hub_entrance() -> void:
 		tween.tween_interval(0.1 * i)
 		tween.tween_property(btn, "modulate:a", 1.0, 0.2)
 		tween.parallel().tween_property(btn, "scale", Vector2.ONE, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-
-	# Float-bob the cat display
-	if cat_display.get_child_count() > 0:
-		TweenFX.breathe(cat_display)
-
-	# Gentle sway on the dialogue box
-	var dialogue_box := get_node_or_null("DialogueBox")
-	if dialogue_box:
-		TweenFX.fade_in(dialogue_box, 0.6)

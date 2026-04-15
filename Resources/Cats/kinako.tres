@@ -11,3 +11,4 @@ specialty_game = "TypingInput"
 unlock_condition = "level:10"
 dialogue_lines = PackedStringArray("Type it out! Quick, quick!", "My paws are faster than yours, nyaa!", "Spell it right or try again!", "Kinako power! Let's type!", "Hiragana, katakana — I know them all!", "Speed and accuracy, that's the goal!", "Don't look at the keyboard, look at me!", "You can do it! Type, type, type!", "Every keystroke counts, nyaa~", "Romaji works too, but hiragana is cooler!")
 accent_color = Color(0.95, 0.7, 0.3, 1)
+cat_number = 5

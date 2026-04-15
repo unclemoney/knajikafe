@@ -11,3 +11,4 @@ specialty_game = "FillInBlank"
 unlock_condition = "level:7"
 dialogue_lines = PackedStringArray("This sentence needs a word, nyaa~", "Read carefully... the answer is in the context!", "I love a good story. Fill in the blank!", "Books and blanks — my two favorite things!", "Every sentence is a little puzzle.", "The missing word is... hmm, you tell me!", "Sakura season is always reading season~", "Context clues, nyaa! Look around the blank.", "Beautiful sentence, isn't it?", "One word can change everything!")
 accent_color = Color(0.95, 0.6, 0.7, 1)
+cat_number = 4

@@ -11,3 +11,4 @@ specialty_game = "KanjiMatching"
 unlock_condition = "level:3"
 dialogue_lines = PackedStringArray("Can you find the matching pair, nyaa?", "My memory is purrfect!", "Two cards, one match — let's go!", "I hid them all... now find them!", "Sushi roll? No, I'm Sushi the cat!", "Match faster, faster!", "You remembered! Sugoi!", "Let me flip that card for you~", "Memory training is my specialty!", "Keep your eyes on the cards, nyaa~")
 accent_color = Color(0.4, 0.7, 0.9, 1)
+cat_number = 2

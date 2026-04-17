@@ -28,11 +28,11 @@ const ANIM_FPS: Dictionary = {
 }
 
 ## All animation state names that the loader will attempt to find.
-## Note: "jumping" is excluded — it is split into jump sub-animations.
+## Note: "jumping" and "playing" are excluded — they are split into sub-animations.
 const STATE_NAMES: PackedStringArray = [
 	"standing", "idle", "walking", "sitting", "sitting_idle",
 	"laying_down", "laying_down_idle",
-	"playing", "eating", "sleeping",
+	"eating", "sleeping",
 ]
 
 ## Sprite file name suffixes matching the state names.
@@ -63,6 +63,14 @@ const JUMP_ANIMATIONS: Dictionary = {
 	"jump_rise": {"start": 2, "end": 2, "loop": true, "fps": 1.0},
 	"jump_fall": {"start": 3, "end": 3, "loop": true, "fps": 1.0},
 	"jump_land": {"start": 4, "end": 7, "loop": false, "fps": 10.0},
+}
+
+## Playing sub-animation definitions built from the Playing sprite sheet.
+## Frames 0-2: stand up, 3-6: play action (repeated N times), 7-9: sit back down.
+const PLAY_ANIMATIONS: Dictionary = {
+	"play_start": {"start": 0, "end": 2, "loop": false, "fps": 6.0},
+	"play_loop": {"start": 3, "end": 6, "loop": false, "fps": 6.0},
+	"play_end": {"start": 7, "end": 9, "loop": false, "fps": 6.0},
 }
 
 
@@ -109,6 +117,12 @@ static func build_sprite_frames(cat_number: int) -> SpriteFrames:
 	# Add jump sub-animations from the Jumping sprite sheet
 	_add_jump_animations(frames, cat_number, fallback_texture)
 
+	# Add play sub-animations from the Playing sprite sheet
+	_add_play_animations(frames, cat_number, fallback_texture)
+
+	# Add getting_up animation (laying_down in reverse)
+	_add_getting_up_animation(frames, cat_number)
+
 	return frames
 
 
@@ -132,6 +146,47 @@ static func _add_jump_animations(frames: SpriteFrames, cat_number: int, fallback
 			atlas.atlas = texture
 			atlas.region = Rect2(i * FRAME_SIZE, 0, FRAME_SIZE, FRAME_SIZE)
 			frames.add_frame(anim_name, atlas)
+
+
+## _add_play_animations(frames, cat_number, fallback_texture)
+##
+## Loads the Playing sprite sheet and creates three sub-animations
+## (start, loop, end) for phased play playback.
+static func _add_play_animations(frames: SpriteFrames, cat_number: int, fallback_texture: Texture2D) -> void:
+	var texture := _load_sheet(cat_number, "playing")
+	if texture == null:
+		texture = fallback_texture
+	if texture == null:
+		return
+	for anim_name in PLAY_ANIMATIONS:
+		var config: Dictionary = PLAY_ANIMATIONS[anim_name]
+		frames.add_animation(anim_name)
+		frames.set_animation_speed(anim_name, config["fps"])
+		frames.set_animation_loop(anim_name, config["loop"])
+		for i in range(config["start"], config["end"] + 1):
+			var atlas := AtlasTexture.new()
+			atlas.atlas = texture
+			atlas.region = Rect2(i * FRAME_SIZE, 0, FRAME_SIZE, FRAME_SIZE)
+			frames.add_frame(anim_name, atlas)
+
+
+## _add_getting_up_animation(frames, cat_number)
+##
+## Loads the LayingDown sprite sheet and adds frames in reverse order
+## to create a "getting up" animation for waking from sleep.
+static func _add_getting_up_animation(frames: SpriteFrames, cat_number: int) -> void:
+	var texture := _load_sheet(cat_number, "laying_down")
+	if texture == null:
+		return
+	var frame_count := int(texture.get_width()) / FRAME_SIZE
+	frames.add_animation("getting_up")
+	frames.set_animation_speed("getting_up", 6.0)
+	frames.set_animation_loop("getting_up", false)
+	for i in range(frame_count - 1, -1, -1):
+		var atlas := AtlasTexture.new()
+		atlas.atlas = texture
+		atlas.region = Rect2(i * FRAME_SIZE, 0, FRAME_SIZE, FRAME_SIZE)
+		frames.add_frame("getting_up", atlas)
 
 
 ## _load_sheet(cat_number, state_name) -> Texture2D

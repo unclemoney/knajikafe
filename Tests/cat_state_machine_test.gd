@@ -42,15 +42,23 @@ func _process(_delta: float) -> void:
 			phase_name = "FALLING"
 		elif _test_cat._jump_phase == CafeCat.JumpPhase.LANDING:
 			phase_name = "LANDING"
-		state_label.text = "State: %s\nPos: (%d, %d)\nVel: (%d, %d)\nFloor: %s | Furn: %s\nJump: %s" % [
+		var play_name := "NONE"
+		if _test_cat._play_phase == CafeCat.PlayPhase.START:
+			play_name = "START"
+		elif _test_cat._play_phase == CafeCat.PlayPhase.LOOP:
+			play_name = "LOOP(%d)" % _test_cat._play_loops_remaining
+		elif _test_cat._play_phase == CafeCat.PlayPhase.END:
+			play_name = "END"
+		state_label.text = "State: %s\nPos: (%d, %d)\nVel: (%d, %d)\nFloor: %s | Furn: %s\nJump: %s | Play: %s" % [
 			state_name,
 			int(_test_cat.position.x),
 			int(_test_cat.position.y),
 			int(_test_cat.velocity.x),
 			int(_test_cat.velocity.y),
 			str(_test_cat.is_on_floor()),
-			str(_test_cat._is_on_furniture()),
+			str(_test_cat.on_furniture),
 			phase_name,
+			play_name,
 		]
 
 

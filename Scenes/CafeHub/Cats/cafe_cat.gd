@@ -52,6 +52,14 @@ enum JumpPhase {
 	LANDING,  ## Playing landing frames near the surface.
 }
 
+## Playing animation phases.
+enum PlayPhase {
+	NONE,     ## Not in a playing sequence.
+	START,    ## Playing stand-up frames.
+	LOOP,     ## Playing action frames, repeated N times.
+	END,      ## Playing sit-down frames.
+}
+
 ## Direction: -1 = left, 1 = right.
 var _direction: float = 1.0
 
@@ -66,6 +74,15 @@ var _has_jump_target: bool = false
 
 ## Whether the current jump is going down (off furniture).
 var _jumping_down: bool = false
+
+## Whether the cat is currently standing on furniture above floor level.
+var on_furniture: bool = false
+
+## Current playing animation phase.
+var _play_phase: PlayPhase = PlayPhase.NONE
+
+## Number of play_loop repetitions remaining.
+var _play_loops_remaining: int = 0
 
 ## Target position that the cat walks toward before jumping.
 var _jump_target: Vector2 = Vector2.ZERO
@@ -111,14 +128,22 @@ func _physics_process(delta: float) -> void:
 		if _is_jumping:
 			_is_jumping = false
 			_jump_phase = JumpPhase.NONE
+			velocity.x = 0.0
 			if _jumping_down:
 				set_collision_mask_value(PLATFORM_LAYER_BIT, true)
 				_jumping_down = false
+				on_furniture = false
+			else:
+				on_furniture = global_position.y < FLOOR_Y - 20.0
 			_state_machine.force_state(CatStateMachine.State.IDLE)
 
 	# State-specific horizontal movement
 	match _state_machine.current_state:
 		CatStateMachine.State.WALKING:
+			if global_position.x <= LEFT_BOUND and _direction < 0:
+				_direction = 1.0
+			elif global_position.x >= RIGHT_BOUND and _direction > 0:
+				_direction = -1.0
 			velocity.x = _direction * WALK_SPEED
 			_sprite.flip_h = _direction < 0
 		CatStateMachine.State.WALKING_TO_JUMP:
@@ -130,7 +155,7 @@ func _physics_process(delta: float) -> void:
 				velocity.x = _direction * JUMP_FORWARD_SPEED
 			_update_jump_phase()
 		_:
-			velocity.x = move_toward(velocity.x, 0, WALK_SPEED * 2.0 * delta)
+			velocity.x = 0.0
 
 	move_and_slide()
 
@@ -139,10 +164,12 @@ func _physics_process(delta: float) -> void:
 		global_position.x = LEFT_BOUND
 		_direction = 1.0
 		_sprite.flip_h = false
+		velocity.x = 0.0
 	elif global_position.x > RIGHT_BOUND:
 		global_position.x = RIGHT_BOUND
 		_direction = -1.0
 		_sprite.flip_h = true
+		velocity.x = 0.0
 
 
 ## _walk_toward_jump_target()
@@ -183,7 +210,7 @@ func _update_jump_phase() -> void:
 ## For jump-down, gives a small hop upward.
 func _calculate_jump_velocity() -> float:
 	if _jumping_down:
-		return -120.0
+		return -80.0
 	var height := global_position.y - _jump_target.y
 	if height <= 0:
 		return MIN_JUMP_VELOCITY
@@ -217,7 +244,7 @@ func _jump_launch_x() -> float:
 ## If the cat is already on furniture, jumps down to the floor instead.
 ## Falls back to a small hop in place if no targets are available.
 func _pick_jump_target() -> Vector2:
-	if _is_on_furniture():
+	if on_furniture:
 		_jumping_down = true
 		# Drift slightly toward center when jumping down
 		var nudge := 30.0 if global_position.x < 320.0 else -30.0
@@ -241,7 +268,7 @@ func _is_on_furniture() -> bool:
 ## and applying state-specific setup (direction change, jump velocity, etc.).
 ## JUMPING uses phase-based animation so its auto-play is skipped here.
 func _on_state_changed(new_state: int) -> void:
-	if new_state != CatStateMachine.State.JUMPING:
+	if new_state != CatStateMachine.State.JUMPING and new_state != CatStateMachine.State.PLAYING:
 		var anim_name := CatStateMachine.get_state_name(new_state)
 		if _sprite.sprite_frames and _sprite.sprite_frames.has_animation(anim_name):
 			_sprite.play(anim_name)
@@ -272,8 +299,14 @@ func _on_state_changed(new_state: int) -> void:
 				_sprite.play("jump_liftoff")
 		CatStateMachine.State.SLEEPING, CatStateMachine.State.SITTING, \
 		CatStateMachine.State.SITTING_IDLE, CatStateMachine.State.LAYING_DOWN, \
-		CatStateMachine.State.LAYING_DOWN_IDLE, CatStateMachine.State.EATING:
+		CatStateMachine.State.LAYING_DOWN_IDLE, CatStateMachine.State.EATING, \
+		CatStateMachine.State.GETTING_UP:
 			velocity.x = 0.0
+		CatStateMachine.State.PLAYING:
+			velocity.x = 0.0
+			_play_phase = PlayPhase.START
+			_play_loops_remaining = randi_range(2, 7)
+			_sprite.play("play_start")
 
 
 ## _on_animation_finished()
@@ -282,11 +315,30 @@ func _on_state_changed(new_state: int) -> void:
 ## next jump phase. For transition states, notifies the state machine.
 func _on_animation_finished() -> void:
 	var current_anim := _sprite.animation
+	# Jump phase handling
 	if current_anim == &"jump_liftoff":
 		_jump_phase = JumpPhase.RISING
 		_sprite.play("jump_rise")
 		return
 	if current_anim == &"jump_land":
+		return
+	# Playing phase handling
+	if current_anim == &"play_start":
+		_play_phase = PlayPhase.LOOP
+		_play_loops_remaining -= 1
+		_sprite.play("play_loop")
+		return
+	if current_anim == &"play_loop":
+		if _play_loops_remaining > 0:
+			_play_loops_remaining -= 1
+			_sprite.play("play_loop")
+		else:
+			_play_phase = PlayPhase.END
+			_sprite.play("play_end")
+		return
+	if current_anim == &"play_end":
+		_play_phase = PlayPhase.NONE
+		_state_machine.force_state(CatStateMachine.State.IDLE)
 		return
 	_state_machine.notify_transition_animation_done()
 

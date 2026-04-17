@@ -28,12 +28,14 @@ enum State {
 	PLAYING,
 	EATING,
 	SLEEPING,
+	GETTING_UP,   ## Transition: plays once (reverse lay down), then -> IDLE
 }
 
 ## States that are one-shot transitions (play one loop, then auto-advance).
 const TRANSITION_STATES: Dictionary = {
 	State.SITTING: State.SITTING_IDLE,
 	State.LAYING_DOWN: State.SLEEPING,
+	State.GETTING_UP: State.IDLE,
 }
 
 ## The current active state.
@@ -56,9 +58,10 @@ var _state_durations: Dictionary = {
 	State.LAYING_DOWN_IDLE: Vector2(5.0, 12.0),
 	State.WALKING_TO_JUMP: Vector2(0.0, 0.0), ## Timer unused — driven by CafeCat arrival
 	State.JUMPING: Vector2(0.5, 1.0),
-	State.PLAYING: Vector2(3.0, 6.0),
+	State.PLAYING: Vector2(0.0, 0.0),         ## Timer unused — driven by CafeCat animation phases
 	State.EATING: Vector2(4.0, 8.0),
 	State.SLEEPING: Vector2(8.0, 15.0),
+	State.GETTING_UP: Vector2(0.0, 0.0),      ## Timer unused — driven by animation loop
 }
 
 ## Weighted transition table: current_state -> Array of [next_state, weight].
@@ -119,9 +122,7 @@ var _transitions: Dictionary = {
 		[State.SLEEPING, 2],
 	],
 	State.SLEEPING: [
-		[State.IDLE, 5],
-		[State.STANDING, 3],
-		[State.SITTING, 2],
+		[State.GETTING_UP, 1],
 	],
 }
 
@@ -142,6 +143,8 @@ func _process(delta: float) -> void:
 	if current_state == State.JUMPING:
 		return
 	if current_state == State.WALKING_TO_JUMP:
+		return
+	if current_state == State.PLAYING:
 		return
 	if TRANSITION_STATES.has(current_state):
 		if _transition_done:
@@ -250,4 +253,6 @@ static func get_state_name(state: State) -> String:
 			return "eating"
 		State.SLEEPING:
 			return "sleeping"
+		State.GETTING_UP:
+			return "getting_up"
 	return "standing"

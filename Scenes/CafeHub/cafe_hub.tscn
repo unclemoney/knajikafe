@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://chvq1nkc5mqkf"]
 
-[ext_resource type="Script" path="res://Scenes/CafeHub/cafe_hub.gd" id="1"]
+[ext_resource type="Script" uid="uid://cewn35ti6lmcv" path="res://Scenes/CafeHub/cafe_hub.gd" id="1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(640, 8)
@@ -18,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -27,59 +28,60 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.18, 0.12, 0.09, 1)
 
 [node name="WindowFrame" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 216.0
 offset_top = 54.0
 offset_right = 424.0
 offset_bottom = 134.0
-color = Color(0.30, 0.22, 0.15, 1)
+mouse_filter = 2
+color = Color(0.3, 0.22, 0.15, 1)
 
 [node name="CafeWindow" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 222.0
 offset_top = 58.0
 offset_right = 418.0
 offset_bottom = 130.0
-color = Color(0.50, 0.58, 0.68, 1)
+mouse_filter = 2
+color = Color(0.5, 0.58, 0.68, 1)
 
 [node name="ShelfLeft" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 30.0
 offset_top = 138.0
 offset_right = 150.0
 offset_bottom = 148.0
+mouse_filter = 2
 color = Color(0.35, 0.25, 0.15, 1)
 
 [node name="ShelfRight" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 490.0
 offset_top = 138.0
 offset_right = 610.0
 offset_bottom = 148.0
+mouse_filter = 2
 color = Color(0.35, 0.25, 0.15, 1)
 
 [node name="CounterTop" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 0
 offset_top = 198.0
 offset_right = 640.0
 offset_bottom = 206.0
-color = Color(0.40, 0.30, 0.18, 1)
+mouse_filter = 2
+color = Color(0.4, 0.3, 0.18, 1)
 
 [node name="CounterFront" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 0
 offset_top = 206.0
 offset_right = 640.0
 offset_bottom = 250.0
-color = Color(0.28, 0.20, 0.12, 1)
+mouse_filter = 2
+color = Color(0.28, 0.2, 0.12, 1)
 
 [node name="FloorLine" type="ColorRect" parent="."]
 layout_mode = 1
@@ -90,6 +92,7 @@ anchor_bottom = 1.0
 offset_top = -80.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 color = Color(0.25, 0.17, 0.12, 1)
 
 [node name="DecorationLayer" type="Control" parent="."]
@@ -99,60 +102,51 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="WallSlot" type="Label" parent="DecorationLayer"]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 60.0
 offset_top = 85.0
 offset_right = 90.0
 offset_bottom = 110.0
 theme_override_font_sizes/font_size = 14
-text = ""
 horizontal_alignment = 1
 
 [node name="CounterSlot" type="Label" parent="DecorationLayer"]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 280.0
 offset_top = 182.0
 offset_right = 310.0
 offset_bottom = 200.0
 theme_override_font_sizes/font_size = 14
-text = ""
 horizontal_alignment = 1
 
 [node name="TableSlot" type="Label" parent="DecorationLayer"]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 500.0
 offset_top = 160.0
 offset_right = 530.0
 offset_bottom = 180.0
 theme_override_font_sizes/font_size = 14
-text = ""
 horizontal_alignment = 1
 
 [node name="WindowSlot" type="Label" parent="DecorationLayer"]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 430.0
 offset_top = 90.0
 offset_right = 460.0
 offset_bottom = 115.0
 theme_override_font_sizes/font_size = 14
-text = ""
 horizontal_alignment = 1
 
 [node name="FloorSlot" type="Label" parent="DecorationLayer"]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 110.0
 offset_top = 268.0
 offset_right = 140.0
 offset_bottom = 290.0
 theme_override_font_sizes/font_size = 14
-text = ""
 horizontal_alignment = 1
 
 [node name="CatWorld" type="Node2D" parent="."]
@@ -231,10 +225,8 @@ theme_override_font_sizes/font_size = 8
 text = "Lv. 1"
 
 [node name="XPBar" type="ProgressBar" parent="TopBar/PlayerInfo"]
-layout_mode = 2
 custom_minimum_size = Vector2(100, 8)
-max_value = 100.0
-value = 0.0
+layout_mode = 2
 show_percentage = false
 
 [node name="DueLabel" type="Label" parent="TopBar"]
@@ -254,29 +246,29 @@ text = "🔥 0"
 vertical_alignment = 1
 
 [node name="StatsBtn" type="Button" parent="TopBar"]
-layout_mode = 2
 custom_minimum_size = Vector2(32, 24)
+layout_mode = 2
+tooltip_text = "Stats"
 theme_override_font_sizes/font_size = 10
 text = "📊"
-tooltip_text = "Stats"
 
 [node name="CatsBtn" type="Button" parent="TopBar"]
-layout_mode = 2
 custom_minimum_size = Vector2(32, 24)
+layout_mode = 2
+tooltip_text = "Cat Collection"
 theme_override_font_sizes/font_size = 10
 text = "🐱"
-tooltip_text = "Cat Collection"
 
 [node name="DecorBtn" type="Button" parent="TopBar"]
-layout_mode = 2
 custom_minimum_size = Vector2(32, 24)
+layout_mode = 2
+tooltip_text = "Decorations"
 theme_override_font_sizes/font_size = 10
 text = "🎨"
-tooltip_text = "Decorations"
 
 [node name="LogoutBtn" type="Button" parent="TopBar"]
-layout_mode = 2
 custom_minimum_size = Vector2(52, 24)
+layout_mode = 2
 theme_override_font_sizes/font_size = 8
 text = "Logout"
 
@@ -304,8 +296,8 @@ anchor_bottom = 1.0
 offset_top = -68.0
 grow_horizontal = 2
 grow_vertical = 0
-alignment = 1
 theme_override_constants/separation = 8
+alignment = 1
 
 [node name="QuizStation" type="VBoxContainer" parent="Stations"]
 layout_mode = 2
@@ -320,8 +312,8 @@ text = "📋"
 horizontal_alignment = 1
 
 [node name="QuizBtn" type="Button" parent="Stations/QuizStation"]
-layout_mode = 2
 custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
 theme_override_font_sizes/font_size = 7
 text = "Quiz"
 
@@ -345,8 +337,8 @@ text = "📖"
 horizontal_alignment = 1
 
 [node name="FlashcardBtn" type="Button" parent="Stations/FlashcardStation"]
-layout_mode = 2
 custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
 theme_override_font_sizes/font_size = 7
 text = "Flashcards"
 
@@ -370,8 +362,8 @@ text = "🀄"
 horizontal_alignment = 1
 
 [node name="MatchingBtn" type="Button" parent="Stations/MatchingStation"]
-layout_mode = 2
 custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
 theme_override_font_sizes/font_size = 7
 text = "Matching"
 
@@ -395,8 +387,8 @@ text = "📝"
 horizontal_alignment = 1
 
 [node name="FillBlankBtn" type="Button" parent="Stations/FillBlankStation"]
-layout_mode = 2
 custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
 theme_override_font_sizes/font_size = 7
 text = "Fill Blank"
 
@@ -420,8 +412,8 @@ text = "⌨️"
 horizontal_alignment = 1
 
 [node name="TypingBtn" type="Button" parent="Stations/TypingStation"]
-layout_mode = 2
 custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
 theme_override_font_sizes/font_size = 7
 text = "Typing"
 
@@ -445,8 +437,8 @@ text = "🍵"
 horizontal_alignment = 1
 
 [node name="OrdersBtn" type="Button" parent="Stations/OrdersStation"]
-layout_mode = 2
 custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
 theme_override_font_sizes/font_size = 7
 text = "Orders"
 
@@ -470,8 +462,8 @@ text = "⚙️"
 horizontal_alignment = 1
 
 [node name="SettingsBtn" type="Button" parent="Stations/SettingsStation"]
-layout_mode = 2
 custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
 theme_override_font_sizes/font_size = 7
 text = "Settings"
 

@@ -7,6 +7,7 @@
 size = Vector2(48, 56)
 
 [node name="CafeCat" type="CharacterBody2D"]
+collision_layer = 0
 collision_mask = 3
 script = ExtResource("1")
 
@@ -28,13 +29,14 @@ shape = SubResource("RectangleShape2D_click")
 
 [node name="SpeechBubble" type="PanelContainer" parent="."]
 offset_left = -60.0
-offset_top = -80.0
+offset_top = -155.0
 offset_right = 60.0
-offset_bottom = -60.0
+offset_bottom = -135.0
 mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="SpeechBubble"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 4

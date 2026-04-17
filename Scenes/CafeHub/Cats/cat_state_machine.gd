@@ -41,6 +41,9 @@ const TRANSITION_STATES: Dictionary = {
 ## The current active state.
 var current_state: State = State.STANDING
 
+## Whether the cat is currently on furniture (set by CafeCat).
+var on_furniture: bool = false
+
 ## Time remaining in the current state before transitioning.
 var _state_timer: float = 0.0
 
@@ -79,7 +82,6 @@ var _transitions: Dictionary = {
 		[State.SITTING, 3],
 		[State.LAYING_DOWN, 2],
 		[State.EATING, 2],
-		[State.SLEEPING, 1],
 		[State.PLAYING, 1],
 		[State.WALKING_TO_JUMP, 1],
 	],
@@ -94,8 +96,7 @@ var _transitions: Dictionary = {
 		[State.IDLE, 3],
 		[State.STANDING, 2],
 		[State.WALKING, 3],
-		[State.LAYING_DOWN, 1],
-		[State.SLEEPING, 2],
+		[State.LAYING_DOWN, 2],
 	],
 	State.LAYING_DOWN_IDLE: [
 		[State.IDLE, 3],
@@ -119,7 +120,7 @@ var _transitions: Dictionary = {
 		[State.IDLE, 3],
 		[State.SITTING, 3],
 		[State.WALKING, 2],
-		[State.SLEEPING, 2],
+		[State.LAYING_DOWN, 2],
 	],
 	State.SLEEPING: [
 		[State.GETTING_UP, 1],
@@ -182,6 +183,9 @@ func force_state(state: State) -> void:
 ## Picks the next state from the weighted transition table and enters it.
 func _transition_to_next() -> void:
 	var next_state := _pick_weighted_state(current_state)
+	if on_furniture and next_state != State.WALKING_TO_JUMP:
+		if randf() < 0.4:
+			next_state = State.WALKING_TO_JUMP
 	_exit_state(current_state)
 	_enter_state(next_state)
 

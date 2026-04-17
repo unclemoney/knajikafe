@@ -135,6 +135,7 @@ func _physics_process(delta: float) -> void:
 				on_furniture = false
 			else:
 				on_furniture = global_position.y < FLOOR_Y - 20.0
+			_state_machine.on_furniture = on_furniture
 			_state_machine.force_state(CatStateMachine.State.IDLE)
 
 	# State-specific horizontal movement
@@ -348,6 +349,7 @@ func _on_animation_finished() -> void:
 ## Detects mouse clicks on the cat and shows a speech bubble.
 func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
+		print("Cat clicked: %s" % cat_data.cat_name)
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			_show_speech_bubble()
 			cat_clicked.emit(self)

@@ -13,18 +13,36 @@ const SPRITE_BASE_PATH := "res://Art/Cats/"
 ## Frame width and height in pixels.
 const FRAME_SIZE := 64
 
+## Animation speed constants (frames per second). Adjust these to tune playback.
+const FPS_STANDING: float = 4.0
+const FPS_IDLE: float = 4.0
+const FPS_WALKING: float = 16.0
+const FPS_SITTING: float = 10.0
+const FPS_SITTING_IDLE: float = 2.0
+const FPS_LAYING_DOWN: float = 10.0
+const FPS_LAYING_DOWN_IDLE: float = 2.0
+const FPS_EATING: float = 8.0
+const FPS_SLEEPING: float = 2.0
+const FPS_GETTING_UP: float = 6.0
+const FPS_JUMP_LIFTOFF: float = 8.0
+const FPS_JUMP_RISE: float = 1.0
+const FPS_JUMP_FALL: float = 1.0
+const FPS_JUMP_LAND: float = 10.0
+const FPS_PLAY_START: float = 10.0
+const FPS_PLAY_LOOP: float = 14.0
+const FPS_PLAY_END: float = 10.0
+
 ## Map of state names to their animation FPS.
 const ANIM_FPS: Dictionary = {
-	"standing": 4.0,
-	"idle": 4.0,
-	"walking": 8.0,
-	"sitting": 6.0,
-	"sitting_idle": 3.0,
-	"laying_down": 6.0,
-	"laying_down_idle": 2.0,
-	"playing": 6.0,
-	"eating": 4.0,
-	"sleeping": 2.0,
+	"standing": FPS_STANDING,
+	"idle": FPS_IDLE,
+	"walking": FPS_WALKING,
+	"sitting": FPS_SITTING,
+	"sitting_idle": FPS_SITTING_IDLE,
+	"laying_down": FPS_LAYING_DOWN,
+	"laying_down_idle": FPS_LAYING_DOWN_IDLE,
+	"eating": FPS_EATING,
+	"sleeping": FPS_SLEEPING,
 }
 
 ## All animation state names that the loader will attempt to find.
@@ -59,18 +77,18 @@ const NO_LOOP_STATES: PackedStringArray = [
 ## Jump sub-animation definitions built from the Jumping sprite sheet.
 ## Each entry: {start_frame, end_frame, loop, fps}.
 const JUMP_ANIMATIONS: Dictionary = {
-	"jump_liftoff": {"start": 0, "end": 2, "loop": false, "fps": 8.0},
-	"jump_rise": {"start": 2, "end": 2, "loop": true, "fps": 1.0},
-	"jump_fall": {"start": 3, "end": 3, "loop": true, "fps": 1.0},
-	"jump_land": {"start": 4, "end": 7, "loop": false, "fps": 10.0},
+	"jump_liftoff": {"start": 0, "end": 2, "loop": false, "fps": FPS_JUMP_LIFTOFF},
+	"jump_rise": {"start": 2, "end": 2, "loop": true, "fps": FPS_JUMP_RISE},
+	"jump_fall": {"start": 3, "end": 3, "loop": true, "fps": FPS_JUMP_FALL},
+	"jump_land": {"start": 4, "end": 7, "loop": false, "fps": FPS_JUMP_LAND},
 }
 
 ## Playing sub-animation definitions built from the Playing sprite sheet.
 ## Frames 0-2: stand up, 3-6: play action (repeated N times), 7-9: sit back down.
 const PLAY_ANIMATIONS: Dictionary = {
-	"play_start": {"start": 0, "end": 2, "loop": false, "fps": 6.0},
-	"play_loop": {"start": 3, "end": 6, "loop": false, "fps": 6.0},
-	"play_end": {"start": 7, "end": 9, "loop": false, "fps": 6.0},
+	"play_start": {"start": 0, "end": 2, "loop": false, "fps": FPS_PLAY_START},
+	"play_loop": {"start": 3, "end": 6, "loop": false, "fps": FPS_PLAY_LOOP},
+	"play_end": {"start": 7, "end": 9, "loop": false, "fps": FPS_PLAY_END},
 }
 
 
@@ -180,7 +198,7 @@ static func _add_getting_up_animation(frames: SpriteFrames, cat_number: int) -> 
 		return
 	var frame_count := int(texture.get_width()) / FRAME_SIZE
 	frames.add_animation("getting_up")
-	frames.set_animation_speed("getting_up", 6.0)
+	frames.set_animation_speed("getting_up", FPS_GETTING_UP)
 	frames.set_animation_loop("getting_up", false)
 	for i in range(frame_count - 1, -1, -1):
 		var atlas := AtlasTexture.new()

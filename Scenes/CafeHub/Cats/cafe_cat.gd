@@ -12,20 +12,20 @@ signal cat_clicked(cat: CafeCat)
 ## The CatCharacter resource that defines this cat's identity and dialogue.
 @export var cat_data: CatCharacter
 
-## Gravity applied each physics frame (pixels/s²).
-const GRAVITY: float = 600.0
+## Gravity applied each physics frame (pixels/s²). 600
+const GRAVITY: float = 800.0
 
 ## Horizontal walk speed in pixels per second.
-const WALK_SPEED: float = 40.0
+const WALK_SPEED: float = 60.0
 
-## Minimum upward velocity for small hops (negative = upward).
-const MIN_JUMP_VELOCITY: float = -150.0
+## Minimum upward velocity for small hops (negative = upward). -150
+const MIN_JUMP_VELOCITY: float = -250.0
 
-## Extra multiplier on calculated jump velocity for arc clearance.
-const JUMP_VELOCITY_MARGIN: float = 1.3
+## Extra multiplier on calculated jump velocity for arc clearance. 1.3
+const JUMP_VELOCITY_MARGIN: float = 1.01
 
 ## Horizontal boost during jump-to-furniture (pixels/s).
-const JUMP_FORWARD_SPEED: float = 60.0
+const JUMP_FORWARD_SPEED: float = 70.0
 
 ## How close the cat needs to be (x) to the jump point before launching.
 const JUMP_ARRIVE_THRESHOLD: float = 8.0

@@ -35,15 +35,12 @@ func _build_stats() -> void:
 	_add_stat_row("Streak Bonus", "x%.2f" % mult)
 	_add_spacer()
 
-	_add_section_header("📚 Review Stats")
+	_add_section_header("📚 Review Schedule")
 	var total_cards := SRSEngine.get_total_card_count()
 	var due_cards := SRSEngine.get_due_count()
-	_add_stat_row("Total Cards", str(total_cards))
-	_add_stat_row("Cards Due", str(due_cards))
-	if total_cards > 0:
-		var mastered := total_cards - due_cards
-		var mastery_pct := float(mastered) / float(total_cards)
-		_add_progress_bar("Mastery", mastery_pct)
+	_add_stat_row("Introduced Cards", str(total_cards))
+	_add_stat_row("Due Now", str(due_cards))
+	_add_stat_row("Scheduled / Not Due", str(total_cards - due_cards))
 	_add_spacer()
 
 	_add_section_header("🐱 Cat Collection")

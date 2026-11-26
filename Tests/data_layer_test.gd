@@ -28,6 +28,7 @@ func _on_run_all() -> void:
 	_log("[b]===== Running All Data Layer Tests =====[/b]\n")
 
 	_test_vocab_database()
+	_test_production_resources()
 	_test_save_manager()
 	_test_srs_engine()
 	_cleanup()
@@ -103,6 +104,61 @@ func _test_vocab_database() -> void:
 		_assert("get_display_text() returns kanji when present", kanji_word.get_display_text() == "食べる", "got '%s'" % kanji_word.get_display_text())
 
 	_log("")
+
+
+# ── Production Resource Tests ─────────────────────────────────────────
+
+
+func _test_production_resources() -> void:
+	_log("[b]── Production Resources ──[/b]")
+
+	var achievements := AchievementManager.get_all_achievements()
+	_assert("All 18 achievements load", achievements.size() == 18, "got %d" % achievements.size())
+	var achievement_ids: Dictionary = {}
+	for achievement in achievements:
+		achievement_ids[achievement.id] = true
+	_assert("Achievement IDs are unique", achievement_ids.size() == achievements.size(), "")
+
+	_assert("All 6 cats load", _count_resources("res://Resources/Cats/", "CatCharacter") == 6, "")
+	_assert("All 8 decorations load", _count_resources("res://Resources/Decorations/", "CafeDecoration") == 8, "")
+
+	var required_scenes: PackedStringArray = [
+		"res://Scenes/TitleScreen/title_screen.tscn",
+		"res://Scenes/ProfileSelect/profile_select.tscn",
+		"res://Scenes/CafeHub/cafe_hub.tscn",
+		"res://Scenes/MiniGames/MultipleChoice/multiple_choice.tscn",
+		"res://Scenes/MiniGames/FlashcardReview/flashcard_review.tscn",
+		"res://Scenes/MiniGames/KanjiMatching/kanji_matching.tscn",
+		"res://Scenes/MiniGames/FillInBlank/fill_in_blank.tscn",
+		"res://Scenes/MiniGames/TypingInput/typing_input.tscn",
+		"res://Scenes/MiniGames/CafeOrders/cafe_orders.tscn",
+		"res://Scenes/Results/results_screen.tscn",
+		"res://Scenes/Stats/stats_screen.tscn",
+	]
+	var missing_scenes: PackedStringArray = []
+	for scene_path in required_scenes:
+		if not ResourceLoader.exists(scene_path):
+			missing_scenes.append(scene_path)
+	_assert("All required scenes exist", missing_scenes.is_empty(), str(missing_scenes))
+	_log("")
+
+
+func _count_resources(directory_path: String, expected_type: String) -> int:
+	var count := 0
+	var dir := DirAccess.open(directory_path)
+	if dir == null:
+		return count
+	dir.list_dir_begin()
+	var file_name := dir.get_next()
+	while file_name != "":
+		if file_name.ends_with(".tres"):
+			var resource := load(directory_path + file_name)
+			if resource and resource.get_script():
+				if resource.get_script().get_global_name() == expected_type:
+					count += 1
+		file_name = dir.get_next()
+	dir.list_dir_end()
+	return count
 
 
 # ── SaveManager Tests ────────────────────────────────────────────────

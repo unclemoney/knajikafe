@@ -43,6 +43,10 @@ func _add_exit_button() -> void:
 	exit_btn.pressed.connect(_on_exit_pressed)
 	add_child(exit_btn)
 
+	var top_bar := get_node_or_null("TopBar") as Control
+	if top_bar:
+		top_bar.offset_right = -44
+
 
 ## Returns to the cafe hub when the exit button is pressed.
 func _on_exit_pressed() -> void:

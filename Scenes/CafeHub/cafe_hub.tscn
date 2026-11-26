@@ -1,6 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://chvq1nkc5mqkf"]
+[gd_scene load_steps=11 format=3 uid="uid://chvq1nkc5mqkf"]
 
 [ext_resource type="Script" uid="uid://cewn35ti6lmcv" path="res://Scenes/CafeHub/cafe_hub.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/CafeHub/cafe_background_pilot.png" id="2_background"]
+[ext_resource type="Texture2D" path="res://Art/UI/navigation_icons_pilot.png" id="3_icons"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stats"]
+atlas = ExtResource("3_icons")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cats"]
+atlas = ExtResource("3_icons")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_decorations"]
+atlas = ExtResource("3_icons")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_settings"]
+atlas = ExtResource("3_icons")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(640, 8)
@@ -21,7 +39,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,71 +47,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.18, 0.12, 0.09, 1)
-
-[node name="WindowFrame" type="ColorRect" parent="."]
-layout_mode = 1
-offset_left = 216.0
-offset_top = 54.0
-offset_right = 424.0
-offset_bottom = 134.0
-mouse_filter = 2
-color = Color(0.3, 0.22, 0.15, 1)
-
-[node name="CafeWindow" type="ColorRect" parent="."]
-layout_mode = 1
-offset_left = 222.0
-offset_top = 58.0
-offset_right = 418.0
-offset_bottom = 130.0
-mouse_filter = 2
-color = Color(0.5, 0.58, 0.68, 1)
-
-[node name="ShelfLeft" type="ColorRect" parent="."]
-layout_mode = 1
-offset_left = 30.0
-offset_top = 138.0
-offset_right = 150.0
-offset_bottom = 148.0
-mouse_filter = 2
-color = Color(0.35, 0.25, 0.15, 1)
-
-[node name="ShelfRight" type="ColorRect" parent="."]
-layout_mode = 1
-offset_left = 490.0
-offset_top = 138.0
-offset_right = 610.0
-offset_bottom = 148.0
-mouse_filter = 2
-color = Color(0.35, 0.25, 0.15, 1)
-
-[node name="CounterTop" type="ColorRect" parent="."]
-layout_mode = 1
-offset_top = 198.0
-offset_right = 640.0
-offset_bottom = 206.0
-mouse_filter = 2
-color = Color(0.4, 0.3, 0.18, 1)
-
-[node name="CounterFront" type="ColorRect" parent="."]
-layout_mode = 1
-offset_top = 206.0
-offset_right = 640.0
-offset_bottom = 250.0
-mouse_filter = 2
-color = Color(0.28, 0.2, 0.12, 1)
-
-[node name="FloorLine" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -80.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-color = Color(0.25, 0.17, 0.12, 1)
+texture = ExtResource("2_background")
+expand_mode = 1
+stretch_mode = 0
 
 [node name="DecorationLayer" type="Control" parent="."]
 layout_mode = 1
@@ -197,6 +153,15 @@ position = Vector2(642, 180)
 [node name="WallRightCollision" type="CollisionShape2D" parent="CatWorld/WallRight"]
 shape = SubResource("RectangleShape2D_wall")
 
+[node name="TopBarBackdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 48.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0.09, 0.067, 0.059, 0.92)
+
 [node name="TopBar" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 10
@@ -246,25 +211,25 @@ text = "🔥 0"
 vertical_alignment = 1
 
 [node name="StatsBtn" type="Button" parent="TopBar"]
-custom_minimum_size = Vector2(32, 24)
+custom_minimum_size = Vector2(40, 32)
 layout_mode = 2
 tooltip_text = "Stats"
-theme_override_font_sizes/font_size = 10
-text = "📊"
+icon = SubResource("AtlasTexture_stats")
+icon_alignment = 1
 
 [node name="CatsBtn" type="Button" parent="TopBar"]
-custom_minimum_size = Vector2(32, 24)
+custom_minimum_size = Vector2(40, 32)
 layout_mode = 2
 tooltip_text = "Cat Collection"
-theme_override_font_sizes/font_size = 10
-text = "🐱"
+icon = SubResource("AtlasTexture_cats")
+icon_alignment = 1
 
 [node name="DecorBtn" type="Button" parent="TopBar"]
-custom_minimum_size = Vector2(32, 24)
+custom_minimum_size = Vector2(40, 32)
 layout_mode = 2
 tooltip_text = "Decorations"
-theme_override_font_sizes/font_size = 10
-text = "🎨"
+icon = SubResource("AtlasTexture_decorations")
+icon_alignment = 1
 
 [node name="LogoutBtn" type="Button" parent="TopBar"]
 custom_minimum_size = Vector2(52, 24)
@@ -286,6 +251,18 @@ theme_override_colors/font_color = Color(0.96, 0.87, 0.7, 1)
 theme_override_font_sizes/font_size = 12
 text = "☕ KanjiKafe ☕"
 horizontal_alignment = 1
+
+[node name="StationBackdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -76.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.09, 0.067, 0.059, 0.92)
 
 [node name="Stations" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -454,12 +431,12 @@ layout_mode = 2
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="SettingsIcon" type="Label" parent="Stations/SettingsStation"]
+[node name="SettingsIcon" type="TextureRect" parent="Stations/SettingsStation"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.9, 0.8, 0.6, 1)
-theme_override_font_sizes/font_size = 16
-text = "⚙️"
-horizontal_alignment = 1
+texture = SubResource("AtlasTexture_settings")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="SettingsBtn" type="Button" parent="Stations/SettingsStation"]
 custom_minimum_size = Vector2(80, 24)

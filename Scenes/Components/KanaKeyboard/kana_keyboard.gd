@@ -10,6 +10,8 @@ signal key_pressed(character: String)
 signal submit_pressed
 signal backspace_pressed
 
+const JAPANESE_FONT = preload("res://Themes/japanese_font.tres")
+
 ## Base hiragana grid (5 columns × 10 rows + n)
 const KANA_GRID: Array = [
 	["あ", "い", "う", "え", "お"],
@@ -178,6 +180,7 @@ func _rebuild_grid() -> void:
 func _make_kana_btn(kana: String) -> Button:
 	var btn := Button.new()
 	btn.text = kana
+	btn.add_theme_font_override("font", JAPANESE_FONT)
 	btn.custom_minimum_size = Vector2(28, 24)
 	btn.add_theme_font_size_override("font_size", 11)
 	btn.pressed.connect(_on_kana_pressed.bind(kana))

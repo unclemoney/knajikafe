@@ -24,7 +24,7 @@ region = Rect2(96, 0, 32, 32)
 size = Vector2(640, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shelf"]
-size = Vector2(120, 8)
+size = Vector2(90, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
 size = Vector2(4, 400)
@@ -60,50 +60,40 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="WallSlot" type="Label" parent="DecorationLayer"]
+[node name="WallSlot" type="TextureRect" parent="DecorationLayer"]
+visible = false
 layout_mode = 1
-offset_left = 60.0
-offset_top = 85.0
-offset_right = 90.0
-offset_bottom = 110.0
-theme_override_font_sizes/font_size = 14
-horizontal_alignment = 1
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
 
-[node name="CounterSlot" type="Label" parent="DecorationLayer"]
+[node name="CounterSlot" type="TextureRect" parent="DecorationLayer"]
+visible = false
 layout_mode = 1
-offset_left = 280.0
-offset_top = 182.0
-offset_right = 310.0
-offset_bottom = 200.0
-theme_override_font_sizes/font_size = 14
-horizontal_alignment = 1
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
 
-[node name="TableSlot" type="Label" parent="DecorationLayer"]
+[node name="TableSlot" type="TextureRect" parent="DecorationLayer"]
+visible = false
 layout_mode = 1
-offset_left = 500.0
-offset_top = 160.0
-offset_right = 530.0
-offset_bottom = 180.0
-theme_override_font_sizes/font_size = 14
-horizontal_alignment = 1
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
 
-[node name="WindowSlot" type="Label" parent="DecorationLayer"]
+[node name="WindowSlot" type="TextureRect" parent="DecorationLayer"]
+visible = false
 layout_mode = 1
-offset_left = 430.0
-offset_top = 90.0
-offset_right = 460.0
-offset_bottom = 115.0
-theme_override_font_sizes/font_size = 14
-horizontal_alignment = 1
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
 
-[node name="FloorSlot" type="Label" parent="DecorationLayer"]
+[node name="FloorSlot" type="TextureRect" parent="DecorationLayer"]
+visible = false
 layout_mode = 1
-offset_left = 110.0
-offset_top = 268.0
-offset_right = 140.0
-offset_bottom = 290.0
-theme_override_font_sizes/font_size = 14
-horizontal_alignment = 1
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
 
 [node name="CatWorld" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -115,7 +105,7 @@ position = Vector2(320, 284)
 shape = SubResource("RectangleShape2D_floor")
 
 [node name="CounterPlatform" type="StaticBody2D" parent="CatWorld"]
-position = Vector2(320, 202)
+position = Vector2(320, 250)
 collision_layer = 2
 collision_mask = 0
 
@@ -124,7 +114,7 @@ shape = SubResource("RectangleShape2D_floor")
 one_way_collision = true
 
 [node name="ShelfLeftBody" type="StaticBody2D" parent="CatWorld"]
-position = Vector2(90, 142)
+position = Vector2(80, 160)
 collision_layer = 2
 collision_mask = 0
 
@@ -133,7 +123,7 @@ shape = SubResource("RectangleShape2D_shelf")
 one_way_collision = true
 
 [node name="ShelfRightBody" type="StaticBody2D" parent="CatWorld"]
-position = Vector2(550, 142)
+position = Vector2(560, 160)
 collision_layer = 2
 collision_mask = 0
 

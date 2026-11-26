@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CafeDecoration" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Decorations/wall_scroll_sakura.png" id="2_texture"]
 
 [resource]
 script = ExtResource("1")
@@ -8,5 +9,8 @@ id = "wall_scroll_sakura"
 display_name = "Sakura Wall Scroll"
 description = "A beautiful hanging scroll with cherry blossoms."
 slot = "wall"
+texture = ExtResource("2_texture")
+cafe_position = Vector2(6, 156)
+cafe_size = Vector2(56, 64)
 icon_text = "🌸"
 unlock_condition = "level:3"

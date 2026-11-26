@@ -163,9 +163,10 @@ func _display_cafe_cats() -> void:
 	var spawn_spacing := 80.0
 	var start_x := 120.0
 	var furniture_targets: Array[Vector2] = [
-		Vector2(320.0, 196.0),  # Counter surface
-		Vector2(90.0, 136.0),   # Shelf left surface
-		Vector2(550.0, 136.0),  # Shelf right surface
+		Vector2(80.0, 244.0),
+		Vector2(420.0, 244.0),
+		Vector2(80.0, 154.0),
+		Vector2(560.0, 154.0),
 	]
 	for i in range(_unlocked_cats.size()):
 		var cat_data: CatCharacter = _unlocked_cats[i]
@@ -219,15 +220,17 @@ func _display_decorations() -> void:
 			active_by_slot[decor.slot] = decor
 	for slot_name in DECOR_SLOTS:
 		var node_name: String = DECOR_SLOTS[slot_name]
-		var slot_node := decoration_layer.get_node_or_null(node_name) as Label
+		var slot_node := decoration_layer.get_node_or_null(node_name) as TextureRect
 		if slot_node == null:
 			continue
 		if active_by_slot.has(slot_name):
 			var decor: CafeDecoration = active_by_slot[slot_name]
-			slot_node.text = decor.icon_text
-			slot_node.visible = true
+			slot_node.texture = decor.texture
+			slot_node.position = decor.cafe_position
+			slot_node.size = decor.cafe_size
+			slot_node.visible = decor.texture != null
 		else:
-			slot_node.text = ""
+			slot_node.texture = null
 			slot_node.visible = false
 
 

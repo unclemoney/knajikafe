@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://Scenes/MiniGames/FlashcardReview/flashcard_review.gd" id="1"]
 [ext_resource type="PackedScene" path="res://Scenes/Components/VocabDisplay/vocab_display.tscn" id="2"]
+[ext_resource type="Font" path="res://Themes/japanese_font.tres" id="3_japanese"]
 
 [node name="FlashcardReview" type="Control"]
 layout_mode = 3
@@ -66,8 +67,9 @@ alignment = 1
 
 [node name="ReadingLabel" type="Label" parent="GameArea/CardBack"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.7, 0.6, 0.5, 1)
-theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.85, 0.78, 0.66, 1)
+theme_override_fonts/font = ExtResource("3_japanese")
+theme_override_font_sizes/font_size = 14
 horizontal_alignment = 1
 
 [node name="MeaningLabel" type="Label" parent="GameArea/CardBack"]

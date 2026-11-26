@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="CafeDecoration" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Decorations/window_noren.png" id="2_texture"]
 
 [resource]
 script = ExtResource("1")
 id = "window_noren"
 display_name = "Noren Curtain"
-description = "Traditional split curtain with the cafe's name in kanji."
+description = "Traditional split curtain marked with the kanji for KanjiKafe."
 slot = "window"
+texture = ExtResource("2_texture")
+cafe_position = Vector2(280, 106)
+cafe_size = Vector2(80, 64)
 icon_text = "🎏"
 unlock_condition = "level:7"

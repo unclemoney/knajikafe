@@ -121,6 +121,21 @@ func _test_production_resources() -> void:
 
 	_assert("All 6 cats load", _count_resources("res://Resources/Cats/", "CatCharacter") == 6, "")
 	_assert("All 8 decorations load", _count_resources("res://Resources/Decorations/", "CafeDecoration") == 8, "")
+	_assert("Japanese font loads", load("res://Themes/japanese_font.tres") is Font, "")
+
+	var decoration_textures_valid := true
+	var decoration_dir := DirAccess.open("res://Resources/Decorations/")
+	if decoration_dir:
+		decoration_dir.list_dir_begin()
+		var file_name := decoration_dir.get_next()
+		while file_name != "":
+			if file_name.ends_with(".tres"):
+				var decor := load("res://Resources/Decorations/" + file_name) as CafeDecoration
+				if decor == null or decor.texture == null or decor.cafe_size.x <= 0 or decor.cafe_size.y <= 0:
+					decoration_textures_valid = false
+			file_name = decoration_dir.get_next()
+		decoration_dir.list_dir_end()
+	_assert("Decoration textures and placement sizes are valid", decoration_textures_valid, "")
 
 	var required_scenes: PackedStringArray = [
 		"res://Scenes/TitleScreen/title_screen.tscn",

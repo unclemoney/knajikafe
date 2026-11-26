@@ -6,7 +6,7 @@ extends Control
 
 @onready var back_btn: Button = $TopBar/BackBtn
 @onready var decor_grid: GridContainer = $ScrollContainer/DecorGrid
-@onready var preview_label: Label = $PreviewPanel/PreviewVBox/PreviewIcon
+@onready var preview_label: TextureRect = $PreviewPanel/PreviewVBox/PreviewIcon
 @onready var preview_name: Label = $PreviewPanel/PreviewVBox/PreviewName
 @onready var preview_desc: Label = $PreviewPanel/PreviewVBox/PreviewDesc
 @onready var preview_slot: Label = $PreviewPanel/PreviewVBox/PreviewSlot
@@ -76,14 +76,26 @@ func _create_decor_card(decor: CafeDecoration, is_unlocked: bool, is_equipped: b
 	card.custom_minimum_size = Vector2(80, 70)
 	card.add_theme_constant_override("separation", 2)
 
-	var icon := Label.new()
-	icon.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	icon.add_theme_font_size_override("font_size", 20)
-	if is_unlocked:
-		icon.text = decor.icon_text
+	var icon: Control = null
+	if is_unlocked and decor.texture != null:
+		var texture_icon := TextureRect.new()
+		texture_icon.custom_minimum_size = Vector2(48, 48)
+		texture_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		texture_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		texture_icon.texture = decor.texture
+		icon = texture_icon
 	else:
-		icon.text = "🔒"
-		icon.add_theme_color_override("font_color", Color(0.3, 0.3, 0.3, 1))
+		var text_icon := Label.new()
+		text_icon.custom_minimum_size = Vector2(48, 48)
+		text_icon.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		text_icon.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		text_icon.add_theme_font_size_override("font_size", 20)
+		if is_unlocked:
+			text_icon.text = decor.icon_text
+		else:
+			text_icon.text = "🔒"
+			text_icon.add_theme_color_override("font_color", Color(0.3, 0.3, 0.3, 1))
+		icon = text_icon
 	card.add_child(icon)
 
 	var name_lbl := Label.new()
@@ -152,7 +164,7 @@ func _on_select_decor(decor: CafeDecoration) -> void:
 	if profile:
 		is_equipped = profile.cafe_decorations.has(decor.id)
 
-	preview_label.text = decor.icon_text
+	preview_label.texture = decor.texture
 	preview_name.text = decor.display_name
 	preview_desc.text = decor.description
 	preview_slot.text = "Slot: " + decor.slot
@@ -207,7 +219,7 @@ func _on_equip_pressed() -> void:
 
 ## Clears the preview panel.
 func _clear_preview() -> void:
-	preview_label.text = ""
+	preview_label.texture = null
 	preview_name.text = "Select a decoration"
 	preview_desc.text = ""
 	preview_slot.text = ""

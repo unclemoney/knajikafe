@@ -1,4 +1,7 @@
 extends MiniGameBase
+
+const JAPANESE_FONT = preload("res://Themes/japanese_font.tres")
+
 ## kanji_matching.gd
 ##
 ## Memory card matching mini-game.
@@ -74,6 +77,8 @@ func _build_grid() -> void:
 		var btn := Button.new()
 		btn.custom_minimum_size = Vector2(92, 44)
 		btn.add_theme_font_size_override("font_size", 10)
+		if _card_data[i]["is_kanji"]:
+			btn.add_theme_font_override("font", JAPANESE_FONT)
 		btn.text = "?"
 		btn.pressed.connect(_on_card_pressed.bind(i))
 		card_grid.add_child(btn)

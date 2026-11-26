@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CafeDecoration" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Decorations/lantern_paper.png" id="2_texture"]
 
 [resource]
 script = ExtResource("1")
@@ -8,5 +9,8 @@ id = "lantern_paper"
 display_name = "Paper Lantern"
 description = "A warm paper lantern hanging from the ceiling."
 slot = "wall"
+texture = ExtResource("2_texture")
+cafe_position = Vector2(440, 52)
+cafe_size = Vector2(48, 64)
 icon_text = "🏮"
 unlock_condition = "level:5"

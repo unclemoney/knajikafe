@@ -1,4 +1,7 @@
 extends MiniGameBase
+
+const JAPANESE_FONT = preload("res://Themes/japanese_font.tres")
+
 ## fill_in_blank.gd
 ##
 ## Fill in the Blank mini-game.
@@ -28,9 +31,11 @@ var _correct_answer: String = ""
 
 func _ready() -> void:
 	for i in answer_btns.size():
+		answer_btns[i].add_theme_font_override("font", JAPANESE_FONT)
 		answer_btns[i].pressed.connect(_on_answer_pressed.bind(i))
 
 	feedback_label.text = ""
+	feedback_label.add_theme_font_override("font", JAPANESE_FONT)
 	cat_label.text = "🐱"
 	_setup_session()
 
@@ -49,6 +54,7 @@ func _show_question() -> void:
 	cat_label.text = "🐱"
 
 	var word := _session_words[_current_index]
+	sentence_label.remove_theme_font_override("font")
 	progress_label.text = "%d / %d" % [_current_index + 1, _words_per_session]
 	score_label.text = "Score: %d" % _correct_count
 
@@ -63,6 +69,7 @@ func _show_question() -> void:
 			var display_text := word.get_display_text()
 			if display_text in jp_sentence:
 				var blanked := jp_sentence.replace(display_text, "______")
+				sentence_label.add_theme_font_override("font", JAPANESE_FONT)
 				sentence_label.text = blanked
 				hint_label.text = en_sentence
 				hint_label.visible = true

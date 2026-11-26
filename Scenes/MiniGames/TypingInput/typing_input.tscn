@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://Scenes/MiniGames/TypingInput/typing_input.gd" id="1"]
+[ext_resource type="Font" path="res://Themes/japanese_font.tres" id="2_japanese"]
 
 [node name="TypingInput" type="Control"]
 layout_mode = 3
@@ -71,14 +72,16 @@ horizontal_alignment = 1
 [node name="WordHintLabel" type="Label" parent="GameArea"]
 visible = false
 layout_mode = 2
-theme_override_colors/font_color = Color(0.7, 0.6, 0.5, 1)
+theme_override_colors/font_color = Color(0.85, 0.78, 0.66, 1)
+theme_override_fonts/font = ExtResource("2_japanese")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 
 [node name="InputField" type="LineEdit" parent="GameArea"]
 layout_mode = 2
 custom_minimum_size = Vector2(300, 32)
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("2_japanese")
+theme_override_font_sizes/font_size = 14
 placeholder_text = "Type reading..."
 alignment = 1
 
@@ -103,7 +106,8 @@ text = "Skip"
 layout_mode = 2
 custom_minimum_size = Vector2(0, 20)
 theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
-theme_override_font_sizes/font_size = 11
+theme_override_fonts/font = ExtResource("2_japanese")
+theme_override_font_sizes/font_size = 12
 text = ""
 horizontal_alignment = 1
 

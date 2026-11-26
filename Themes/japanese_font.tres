@@ -1,0 +1,6 @@
+[gd_resource type="SystemFont" format=3]
+
+[resource]
+font_names = PackedStringArray("Noto Sans JP", "Yu Gothic", "Meiryo", "MS Gothic")
+font_weight = 400
+allow_system_fallback = true

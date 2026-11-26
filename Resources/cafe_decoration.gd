@@ -17,7 +17,14 @@ class_name CafeDecoration
 ## Which slot this decoration goes in (e.g., "wall", "counter", "table", "window", "floor").
 @export var slot: String = ""
 
-## The visual emoji/text representation (placeholder until we have pixel art).
+## Pixel-art texture displayed in the cafe and decoration shop.
+@export var texture: Texture2D = null
+
+## Top-left position and rendered size in the 640×360 cafe.
+@export var cafe_position: Vector2 = Vector2.ZERO
+@export var cafe_size: Vector2 = Vector2(48, 48)
+
+## Fallback text when no texture is assigned.
 @export var icon_text: String = "🪴"
 
 ## Unlock condition: "default" (always available), "level:5", "xp:1000", etc.

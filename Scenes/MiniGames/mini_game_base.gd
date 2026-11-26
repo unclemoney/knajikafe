@@ -1,34 +1,25 @@
 extends Control
 class_name MiniGameBase
-## MiniGameBase
-##
-## Abstract base class for all mini-games. Provides shared session
-## setup (loading words/cards from SRS), XP calculation with streak
-## bonus, and finish/save/transition logic.
-## Subclasses must override _on_session_ready() and _show_question().
+## Shared session selection, skill evidence, XP, and completion logic.
 
-## Base XP per correct answer.
 const BASE_XP: int = 10
-
-## Bonus XP for answering quickly or easily.
 const EASY_BONUS_XP: int = 5
-
-## Delay after showing feedback before next question (seconds).
 const FEEDBACK_DELAY: float = 1.2
+const MAX_NEW_CARDS_PER_SESSION: int = 5
 
-## Session configuration.
 var _words_per_session: int = 10
-
-## Quiz state.
 var _session_words: Array[VocabWord] = []
 var _session_cards: Array[SRSCard] = []
+var _session_item_count: int = 0
 var _current_index: int = 0
 var _correct_count: int = 0
 var _total_xp: int = 0
+var _game_type: String = ""
+var _skill_results: Dictionary = {}
+var _stage_before: Dictionary = {}
+var _assisted_count: int = 0
 
 
-## Adds an exit button to the top-right corner of the mini-game.
-## Called automatically during _setup_session().
 func _add_exit_button() -> void:
 	var exit_btn := Button.new()
 	exit_btn.text = "✕"
@@ -42,82 +33,117 @@ func _add_exit_button() -> void:
 	exit_btn.grow_horizontal = Control.GROW_DIRECTION_BEGIN
 	exit_btn.pressed.connect(_on_exit_pressed)
 	add_child(exit_btn)
-
 	var top_bar := get_node_or_null("TopBar") as Control
 	if top_bar:
 		top_bar.offset_right = -44
 
 
-## Returns to the cafe hub when the exit button is pressed.
 func _on_exit_pressed() -> void:
+	AudioManager.stop_speech()
 	GameController.change_scene("res://Scenes/CafeHub/cafe_hub.tscn")
 
 
-## Prepares the session: loads due/new cards and resolves to VocabWords.
-## Call this from _ready() after setting up UI references.
 func _setup_session() -> void:
 	_add_exit_button()
 	var config := GameController.session_data
 	_words_per_session = config.get("words_per_session", 10)
-
-	var due := SRSEngine.get_due_cards()
-	var needed := _words_per_session
-
-	for card in due:
-		if _session_cards.size() >= needed:
-			break
-		var word := VocabDatabase.get_word_by_id(card.vocab_id)
-		if word != null:
-			_session_cards.append(card)
-			_session_words.append(word)
-
-	if _session_cards.size() < needed:
-		var remaining := needed - _session_cards.size()
-		var existing_ids: PackedStringArray = []
-		for card in SRSEngine.cards:
-			existing_ids.append(card.vocab_id)
-
-		var new_words := VocabDatabase.get_random_words(remaining, existing_ids)
-		if new_words.size() > 0:
-			var new_ids: PackedStringArray = []
-			for w in new_words:
-				new_ids.append(w.id)
-			var new_cards := SRSEngine.add_new_cards(new_ids)
-			for j in new_cards.size():
-				_session_cards.append(new_cards[j])
-				_session_words.append(new_words[j])
-
-	_words_per_session = _session_words.size()
+	_game_type = config.get("game_type", "")
+	_populate_session(config)
+	_words_per_session = _session_item_count
+	for card in _session_cards:
+		_stage_before[card.vocab_id] = ProgressMetrics.get_card_stage(card)
 	AudioManager.play_quiz_bgm()
 	_on_session_ready()
 
 
-## Called after session setup is complete. Override in subclasses
-## to start the game (e.g., show the first question).
+func _populate_session(_config: Dictionary) -> void:
+	var filters := _get_session_filters()
+	var due := SRSEngine.get_due_cards()
+	for card in due:
+		if _session_cards.size() >= _words_per_session:
+			break
+		var word := VocabDatabase.get_word_by_id(card.vocab_id)
+		if word != null and VocabDatabase.word_matches_filters(word, filters):
+			_session_cards.append(card)
+			_session_words.append(word)
+	if _session_cards.size() < _words_per_session:
+		var remaining := mini(_words_per_session - _session_cards.size(), _get_new_card_limit())
+		var existing_ids: PackedStringArray = []
+		for card in SRSEngine.cards:
+			existing_ids.append(card.vocab_id)
+		var new_filters := filters.duplicate(true)
+		var target_level := 5
+		var profile := GameController.current_profile
+		if profile:
+			target_level = int(profile.settings.get("target_jlpt_level", 5))
+		if target_level > 0:
+			new_filters["jlpt_level"] = target_level
+		else:
+			new_filters.erase("jlpt_level")
+		var new_words := VocabDatabase.get_random_words(remaining, existing_ids, new_filters)
+		if new_words.size() > 0:
+			var new_ids: PackedStringArray = []
+			for word in new_words:
+				new_ids.append(word.id)
+			var new_cards := SRSEngine.add_new_cards(new_ids)
+			for i in new_cards.size():
+				_session_cards.append(new_cards[i])
+				_session_words.append(new_words[i])
+	_session_item_count = _session_words.size()
+
+
+func _get_session_filters() -> Dictionary:
+	return {}
+
+
+func _get_new_card_limit() -> int:
+	return MAX_NEW_CARDS_PER_SESSION
+
+
+func _get_item_label() -> String:
+	return "Words"
+
+
+func _get_card_display_text(card: SRSCard) -> String:
+	var word := VocabDatabase.get_word_by_id(card.vocab_id)
+	return word.get_display_text() if word else card.vocab_id
+
+
 func _on_session_ready() -> void:
 	pass
 
 
-## Override in subclasses to display the current question/card.
 func _show_question() -> void:
 	pass
 
 
-## Reports a correct answer to SRS with the given quality and awards XP.
-func _report_correct(card: SRSCard, quality: int = SRSEngine.Quality.GOOD) -> void:
+func _report_correct(card: SRSCard, quality: int, skill: String) -> void:
 	_correct_count += 1
+	_record_skill_attempt(card, skill, quality)
 	SRSEngine.review_card(card, quality)
 	_total_xp += BASE_XP
 	if quality >= SRSEngine.Quality.EASY:
 		_total_xp += EASY_BONUS_XP
 
 
-## Reports an incorrect answer to SRS.
-func _report_incorrect(card: SRSCard) -> void:
+func _report_incorrect(card: SRSCard, skill: String) -> void:
+	_record_skill_attempt(card, skill, SRSEngine.Quality.WRONG)
 	SRSEngine.review_card(card, SRSEngine.Quality.WRONG)
 
 
-## Advances to the next question, or finishes if done.
+func _record_skill_attempt(card: SRSCard, skill: String, quality: int) -> void:
+	SRSEngine.record_attempt(card, skill, quality, _game_type)
+	if not _skill_results.has(skill):
+		_skill_results[skill] = {"attempts": 0, "correct": 0}
+	_skill_results[skill]["attempts"] += 1
+	if quality >= 3:
+		_skill_results[skill]["correct"] += 1
+
+
+func _register_assist() -> void:
+	_assisted_count += 1
+
+
 func _advance() -> void:
 	_current_index += 1
 	if _current_index >= _words_per_session:
@@ -126,24 +152,35 @@ func _advance() -> void:
 		_show_question()
 
 
-## Ends the session: applies streak bonus, saves, transitions to results.
 func _finish_session() -> void:
 	var profile := GameController.current_profile
 	if profile:
 		var streak_mult := profile.get_streak_multiplier()
 		var final_xp := int(_total_xp * streak_mult)
-
 		var leveled_up := profile.add_xp(final_xp)
+		var next_review_date := ProgressMetrics.get_next_review_date(_session_cards)
+		var stage_changes := _get_stage_changes()
+		var summary := {
+			"timestamp": Time.get_datetime_string_from_system(),
+			"game_type": _game_type,
+			"item_label": _get_item_label(),
+			"words_reviewed": _words_per_session,
+			"correct_count": _correct_count,
+			"xp_earned": final_xp,
+			"skill_results": _skill_results.duplicate(true),
+			"assisted_count": _assisted_count,
+			"next_review_date": next_review_date,
+		}
+		SRSEngine.record_session(summary)
 		SRSEngine.save_cards_for_profile(profile)
 		SaveManager.save_profile(profile)
-
 		if leveled_up:
 			GameController.show_level_up(profile.level)
 			AudioManager.play_level_up()
-
 		AchievementManager.check_achievements()
-
 		GameController.session_data = {
+			"game_type": _game_type,
+			"item_label": _get_item_label(),
 			"words_reviewed": _words_per_session,
 			"correct_count": _correct_count,
 			"base_xp": _total_xp,
@@ -152,6 +189,23 @@ func _finish_session() -> void:
 			"leveled_up": leveled_up,
 			"new_level": profile.level,
 			"streak_days": profile.streak_days,
+			"skill_results": _skill_results.duplicate(true),
+			"assisted_count": _assisted_count,
+			"stage_changes": stage_changes,
+			"next_review_date": next_review_date,
 		}
-
 	GameController.change_scene("res://Scenes/Results/results_screen.tscn")
+
+
+func _get_stage_changes() -> Array:
+	var changes: Array = []
+	for card in _session_cards:
+		var before := int(_stage_before.get(card.vocab_id, ProgressMetrics.CardStage.NEW))
+		var after := int(ProgressMetrics.get_card_stage(card))
+		if after > before and after >= ProgressMetrics.CardStage.FAMILIAR:
+			changes.append({
+				"vocab_id": card.vocab_id,
+				"display_text": _get_card_display_text(card),
+				"stage": ProgressMetrics.get_stage_name(after as ProgressMetrics.CardStage),
+			})
+	return changes

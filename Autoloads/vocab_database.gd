@@ -2,8 +2,8 @@ extends Node
 ## VocabDatabase (Autoload)
 ##
 ## Loads and queries the vocabulary and kanji databases.
-## Vocab data is loaded from JSON files (immune to Godot .tres resave issues).
-## Kanji data is still loaded from .tres Resource files.
+## Vocabulary and kanji data are loaded from JSON files to avoid
+## Godot .tres resave issues with PackedStringArray fields.
 
 ## All loaded VocabWord resources, keyed by id.
 var _words: Dictionary = {}
@@ -11,16 +11,18 @@ var _words: Dictionary = {}
 ## All loaded KanjiEntry resources, keyed by character.
 var _kanji: Dictionary = {}
 
+var reading_passages: Array = []
+var cafe_menu: Array = []
+
 ## Paths to vocabulary JSON files to load on startup.
 var _vocab_json_paths: PackedStringArray = [
 	"res://Resources/Vocabulary/n5_vocab.json",
 	"res://Resources/Vocabulary/n4_vocab.json",
 ]
 
-## Paths to kanji resource files to load on startup.
-var _kanji_paths: PackedStringArray = [
-	"res://Resources/Kanji/n5_kanji.tres",
-	"res://Resources/Kanji/n4_kanji.tres",
+## Paths to kanji JSON files to load on startup.
+var _kanji_json_paths: PackedStringArray = [
+	"res://Resources/Kanji/n5_kanji.json",
 ]
 
 
@@ -51,12 +53,11 @@ func get_words_by_category(category: String) -> Array[VocabWord]:
 	return results
 
 
-## Returns a random selection of words, excluding the given IDs.
-## count: how many words to return. exclude: IDs to skip.
-func get_random_words(count: int, exclude: PackedStringArray = []) -> Array[VocabWord]:
+## Returns a random selection matching optional level/category/content filters.
+func get_random_words(count: int, exclude: PackedStringArray = [], filters: Dictionary = {}) -> Array[VocabWord]:
 	var pool: Array[VocabWord] = []
 	for word in _words.values():
-		if word is VocabWord and word.id not in exclude:
+		if word is VocabWord and word.id not in exclude and word_matches_filters(word, filters):
 			pool.append(word)
 
 	pool.shuffle()
@@ -64,6 +65,30 @@ func get_random_words(count: int, exclude: PackedStringArray = []) -> Array[Voca
 	for i in mini(count, pool.size()):
 		result.append(pool[i])
 	return result
+
+
+## Returns whether a word matches the supplied content filters.
+func word_matches_filters(word: VocabWord, filters: Dictionary) -> bool:
+	var level := int(filters.get("jlpt_level", 0))
+	if level > 0 and word.jlpt_level != level:
+		return false
+	var category: String = filters.get("category", "")
+	if category != "" and category not in word.categories:
+		return false
+	var categories: Array = filters.get("categories", [])
+	if not categories.is_empty():
+		var matches_category := false
+		for candidate in categories:
+			if candidate in word.categories:
+				matches_category = true
+				break
+		if not matches_category:
+			return false
+	if filters.get("require_examples", false) and word.example_sentences.is_empty():
+		return false
+	if filters.get("require_kanji", false) and word.kanji == "":
+		return false
+	return true
 
 
 ## Returns all loaded words as an array.
@@ -103,8 +128,10 @@ func get_kanji_count() -> int:
 func _load_all_data() -> void:
 	for path in _vocab_json_paths:
 		_load_vocab_json(path)
-	for path in _kanji_paths:
-		_load_kanji_file(path)
+	for path in _kanji_json_paths:
+		_load_kanji_json(path)
+	reading_passages = _load_json_array("res://Resources/Reading/n5_reading.json")
+	cafe_menu = _load_json_array("res://Resources/Vocabulary/cafe_menu.json")
 	print("VocabDatabase: Loaded %d words, %d kanji." % [_words.size(), _kanji.size()])
 
 
@@ -153,14 +180,56 @@ func _load_vocab_json(path: String) -> void:
 		_words[word.id] = word
 
 
-## Loads a single kanji .tres file (expects a KanjiList resource).
-func _load_kanji_file(path: String) -> void:
-	if not ResourceLoader.exists(path):
+## Loads a single kanji JSON file and creates KanjiEntry resources.
+func _load_kanji_json(path: String) -> void:
+	if not FileAccess.file_exists(path):
 		return
-	var resource = ResourceLoader.load(path)
-	if resource == null:
+	var file := FileAccess.open(path, FileAccess.READ)
+	if file == null:
+		push_warning("VocabDatabase: Could not open %s" % path)
 		return
-	if resource is KanjiList:
-		for entry in resource.entries:
-			if entry is KanjiEntry and entry.character != "":
-				_kanji[entry.character] = entry
+	var text := file.get_as_text()
+	file.close()
+
+	var parsed = JSON.parse_string(text)
+	if parsed is not Array:
+		push_warning("VocabDatabase: Expected kanji Array in %s" % path)
+		return
+	for data in parsed:
+		if data is not Dictionary:
+			continue
+		var character: String = data.get("character", "")
+		if character == "":
+			continue
+		var entry := KanjiEntry.new()
+		entry.character = character
+		for meaning in data.get("meanings", []):
+			entry.meanings.append(meaning)
+		for reading in data.get("on_readings", []):
+			entry.on_readings.append(reading)
+		for reading in data.get("kun_readings", []):
+			entry.kun_readings.append(reading)
+		entry.stroke_count = data.get("stroke_count", 1)
+		entry.jlpt_level = data.get("jlpt_level", 5)
+		entry.radical = data.get("radical", "")
+		for component in data.get("components", []):
+			entry.components.append(component)
+		_kanji[character] = entry
+
+
+func get_menu_item(vocab_id: String) -> Dictionary:
+	for item in cafe_menu:
+		if item.get("vocab_id", "") == vocab_id:
+			return item
+	return {}
+
+
+func _load_json_array(path: String) -> Array:
+	if not FileAccess.file_exists(path):
+		return []
+	var file := FileAccess.open(path, FileAccess.READ)
+	if file == null:
+		return []
+	var parsed = JSON.parse_string(file.get_as_text())
+	file.close()
+	return parsed if parsed is Array else []

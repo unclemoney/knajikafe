@@ -10,6 +10,9 @@ extends Control
 @onready var xp_label: Label = $Panel/VBox/StatsBox/XPLabel
 @onready var streak_label: Label = $Panel/VBox/StatsBox/StreakLabel
 @onready var level_label: Label = $Panel/VBox/StatsBox/LevelLabel
+@onready var skill_label: Label = $Panel/VBox/StatsBox/SkillLabel
+@onready var stage_changes_label: Label = $Panel/VBox/StatsBox/StageChangesLabel
+@onready var next_review_label: Label = $Panel/VBox/StatsBox/NextReviewLabel
 @onready var level_up_label: Label = $Panel/VBox/LevelUpLabel
 @onready var return_btn: Button = $Panel/VBox/ReturnBtn
 
@@ -37,7 +40,8 @@ func _display_results() -> void:
 	if words_reviewed > 0:
 		accuracy = float(correct_count) / float(words_reviewed) * 100.0
 
-	words_label.text = "Words Reviewed: %d" % words_reviewed
+	var item_label: String = data.get("item_label", "Words")
+	words_label.text = "%s Reviewed: %d" % [item_label, words_reviewed]
 	accuracy_label.text = "Correct: %d / %d  (%d%%)" % [correct_count, words_reviewed, int(accuracy)]
 
 	if streak_mult > 1.0:
@@ -59,6 +63,38 @@ func _display_results() -> void:
 		level_label.text = "Level: %d  |  Total XP: %d" % [profile.level, profile.xp]
 	else:
 		level_label.text = ""
+
+	var skill_results: Dictionary = data.get("skill_results", {})
+	var skill_parts: Array = []
+	for skill in ProgressMetrics.SKILL_IDS:
+		var result: Dictionary = skill_results.get(skill, {})
+		if result.get("attempts", 0) > 0:
+			skill_parts.append("%s %d/%d" % [skill.capitalize(), result["correct"], result["attempts"]])
+	skill_label.visible = not skill_parts.is_empty()
+	if skill_label.visible:
+		skill_label.text = "Learning: " + " | ".join(skill_parts)
+		if data.get("game_type", "") == "flashcard_review":
+			skill_label.text += " (self-rated)"
+		var assisted := int(data.get("assisted_count", 0))
+		if assisted > 0:
+			skill_label.text += " · Assisted %d/%d" % [assisted, words_reviewed]
+
+	var changes: Array = data.get("stage_changes", [])
+	if changes is Array and not changes.is_empty():
+		var change_parts: Array = []
+		for i in mini(3, changes.size()):
+			change_parts.append("%s → %s" % [changes[i].get("display_text", ""), changes[i].get("stage", "")])
+		stage_changes_label.text = "Progress: " + ", ".join(change_parts)
+		if changes.size() > 3:
+			stage_changes_label.text += " +%d more" % (changes.size() - 3)
+		stage_changes_label.visible = true
+	else:
+		stage_changes_label.visible = false
+
+	var next_review: String = data.get("next_review_date", "")
+	next_review_label.visible = next_review != ""
+	if next_review_label.visible:
+		next_review_label.text = "Next scheduled review: " + next_review
 
 	# Set title based on performance
 	if accuracy >= 90.0:

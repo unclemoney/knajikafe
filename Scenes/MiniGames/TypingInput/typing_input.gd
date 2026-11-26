@@ -15,6 +15,15 @@ extends MiniGameBase
 @onready var score_label: Label = $TopBar/ScoreLabel
 @onready var cat_label: Label = $CatReaction/CatLabel
 
+const HALFWIDTH_KANA := {
+	"ｦ": "ヲ", "ｱ": "ア", "ｲ": "イ", "ｳ": "ウ", "ｴ": "エ", "ｵ": "オ",
+	"ｧ": "ァ", "ｨ": "ィ", "ｩ": "ゥ", "ｪ": "ェ", "ｫ": "ォ", "ｬ": "ャ", "ｭ": "ュ", "ｮ": "ョ", "ｯ": "ッ", "ｰ": "ー",
+	"ｶ": "カ", "ｷ": "キ", "ｸ": "ク", "ｹ": "ケ", "ｺ": "コ", "ｻ": "サ", "ｼ": "シ", "ｽ": "ス", "ｾ": "セ", "ｿ": "ソ",
+	"ﾀ": "タ", "ﾁ": "チ", "ﾂ": "ツ", "ﾃ": "テ", "ﾄ": "ト", "ﾅ": "ナ", "ﾆ": "ニ", "ﾇ": "ヌ", "ﾈ": "ネ", "ﾉ": "ノ",
+	"ﾊ": "ハ", "ﾋ": "ヒ", "ﾌ": "フ", "ﾍ": "ヘ", "ﾎ": "ホ", "ﾏ": "マ", "ﾐ": "ミ", "ﾑ": "ム", "ﾒ": "メ", "ﾓ": "モ",
+	"ﾔ": "ヤ", "ﾕ": "ユ", "ﾖ": "ヨ", "ﾗ": "ラ", "ﾘ": "リ", "ﾙ": "ル", "ﾚ": "レ", "ﾛ": "ロ", "ﾜ": "ワ", "ﾝ": "ン",
+}
+
 ## On-screen kana keyboard instance.
 var _kana_keyboard: KanaKeyboard = null
 
@@ -33,7 +42,7 @@ func _ready() -> void:
 	_kana_keyboard.submit_pressed.connect(_on_submit_pressed)
 	_kana_keyboard.backspace_pressed.connect(_on_kana_backspace)
 	_kana_keyboard.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
-	_kana_keyboard.offset_top = -185
+	_kana_keyboard.offset_top = -170
 	_kana_keyboard.offset_left = 8
 	_kana_keyboard.offset_right = -8
 	_kana_keyboard.grow_vertical = Control.GROW_DIRECTION_BEGIN
@@ -100,13 +109,13 @@ func _on_submit_pressed() -> void:
 	var word := _session_words[_current_index]
 	var card := _session_cards[_current_index]
 
-	# Check against hiragana, katakana, and romaji (case-insensitive for romaji)
+	var normalized := _normalize_answer(typed)
 	var is_correct := false
-	if typed == word.hiragana:
+	if normalized == _normalize_answer(word.hiragana):
 		is_correct = true
-	elif typed == word.katakana:
+	elif normalized == _normalize_answer(word.katakana):
 		is_correct = true
-	elif typed.to_lower() == word.romaji.to_lower():
+	elif normalized.to_lower() == _normalize_answer(word.romaji).to_lower():
 		is_correct = true
 
 	if is_correct:
@@ -116,10 +125,7 @@ func _on_submit_pressed() -> void:
 		TweenFX.pop_in(feedback_label, 0.3)
 		TweenFX.hop(cat_label, 0.4)
 
-		var quality := SRSEngine.Quality.GOOD
-		if card.repetitions == 0:
-			quality = SRSEngine.Quality.EASY
-		_report_correct(card, quality)
+		_report_correct(card, SRSEngine.Quality.GOOD, "reading")
 	else:
 		var correct_reading := word.hiragana
 		if correct_reading == "":
@@ -130,7 +136,7 @@ func _on_submit_pressed() -> void:
 		cat_label.text = "🐱 💦"
 		AudioManager.play_wrong()
 		TweenFX.shake(feedback_label, 0.3, 5.0)
-		_report_incorrect(card)
+		_report_incorrect(card, "reading")
 
 	await get_tree().create_timer(FEEDBACK_DELAY * 1.5).timeout
 	_advance()
@@ -155,10 +161,28 @@ func _on_skip_pressed() -> void:
 		correct_reading += "  (%s)" % word.romaji
 	feedback_label.text = "Skipped — %s" % correct_reading
 	cat_label.text = "🐱 💦"
-	_report_incorrect(card)
+	_report_incorrect(card, "reading")
 
 	await get_tree().create_timer(FEEDBACK_DELAY).timeout
 	_advance()
+
+
+func _normalize_answer(value: String) -> String:
+	var text := value.strip_edges()
+	var normalized := ""
+	for i in text.length():
+		var character := text[i]
+		if HALFWIDTH_KANA.has(character):
+			character = HALFWIDTH_KANA[character]
+		var code := character.unicode_at(0)
+		if code >= 0xFF01 and code <= 0xFF5E:
+			code -= 0xFEE0
+			normalized += String.chr(code)
+		elif code >= 0x30A1 and code <= 0x30F6:
+			normalized += String.chr(code - 0x60)
+		else:
+			normalized += character
+	return normalized
 
 
 ## Handles kana keyboard key press — appends character to input field.

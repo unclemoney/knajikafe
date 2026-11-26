@@ -1,0 +1,129 @@
+extends Control
+
+var _passes := 0
+var _failures := 0
+
+
+func _ready() -> void:
+	var saved_cards := SRSEngine.cards
+	var saved_kanji := SRSEngine.kanji_cards
+	var saved_profile := GameController.current_profile
+	var saved_config := GameController.session_data
+	await _test_orders()
+	await _test_reading()
+	await _test_kanji()
+	SRSEngine.cards = saved_cards
+	SRSEngine.kanji_cards = saved_kanji
+	GameController.current_profile = saved_profile
+	GameController.session_data = saved_config
+	AudioManager.stop_speech()
+	AudioManager.stop_bgm(0.0)
+	for player in AudioManager._sfx_players:
+		player.stop()
+	await get_tree().create_timer(0.1).timeout
+	print("v0.5 activity tests: %d passed, %d failed" % [_passes, _failures])
+	get_tree().quit(0 if _failures == 0 else 1)
+
+
+func _profile(name: String) -> PlayerProfile:
+	var profile := PlayerProfile.new()
+	profile.player_name = name
+	profile.settings["target_jlpt_level"] = 5
+	GameController.current_profile = profile
+	return profile
+
+
+func _test_orders() -> void:
+	_profile("OrdersTest")
+	SRSEngine.cards = []
+	GameController.session_data = {"game_type": "cafe_orders", "words_per_session": 10}
+	var orders = load("res://Scenes/MiniGames/CafeOrders/cafe_orders.tscn").instantiate()
+	add_child(orders)
+	_check("Orders use five new menu items", orders._session_menu.size() == 5)
+	_check("Order timer waits for audio", orders._audio_active and not orders._timer_active)
+	AudioManager.stop_speech()
+	orders._on_speech_finished(orders._session_menu[0]["order_clip"])
+	_check("Order timer starts after audio", orders._timer_active)
+	var first_card: SRSCard = orders._session_cards[0]
+	orders._finish_answer(orders._correct_btn_index)
+	_check("Unassisted order records Listening", first_card.skill_evidence.has("listening") and first_card.skill_evidence["listening"].attempts == 1)
+	await get_tree().create_timer(2.0).timeout
+	orders._activate_assist("Test assist")
+	var second_card: SRSCard = orders._session_cards[1]
+	orders._finish_answer(orders._correct_btn_index)
+	_check("Assisted order records Meaning", second_card.skill_evidence.has("meaning") and not second_card.skill_evidence.has("listening"))
+	_check("Assist count recorded", orders._assisted_count == 1)
+	await get_tree().create_timer(2.0).timeout
+	AudioManager.stop_speech()
+	orders.free()
+
+
+func _test_reading() -> void:
+	_profile("ReadingTest")
+	SRSEngine.cards = []
+	GameController.session_data = {"game_type": "reading_shelf", "words_per_session": 5}
+	var reading = load("res://Scenes/MiniGames/ReadingShelf/reading_shelf.tscn").instantiate()
+	add_child(reading)
+	_check("Reading builds five passages", reading._session_passages.size() == 5)
+	reading._on_assist_pressed()
+	var first_card: SRSCard = reading._session_cards[0]
+	var answer := int(reading._session_passages[0]["answer_index"])
+	reading._on_answer_pressed(answer)
+	_check("Translation assist records Meaning", first_card.skill_evidence.has("meaning") and not first_card.skill_evidence.has("context"))
+	await get_tree().create_timer(2.5).timeout
+	var second_card: SRSCard = reading._session_cards[1]
+	answer = int(reading._session_passages[1]["answer_index"])
+	reading._on_answer_pressed(answer)
+	_check("Unassisted reading records Context", second_card.skill_evidence.has("context"))
+	_check("Reading target scheduled once", second_card.total_reviews == 1)
+	await get_tree().create_timer(2.5).timeout
+	reading.free()
+
+
+func _test_kanji() -> void:
+	_profile("KanjiTest")
+	SRSEngine.kanji_cards = []
+	var entries := VocabDatabase.get_kanji_by_jlpt(5)
+	var initial: Array[KanjiCard] = []
+	for i in 5:
+		var card := KanjiCard.new()
+		card.setup(entries[i].character)
+		initial.append(card)
+	SRSEngine.kanji_cards = initial
+	GameController.session_data = {"game_type": "kanji_workshop", "words_per_session": 8}
+	var workshop = load("res://Scenes/MiniGames/KanjiWorkshop/kanji_workshop.tscn").instantiate()
+	workshop._forced_exercise = "meaning"
+	add_child(workshop)
+	_check("Workshop combines due and new kanji", workshop._session_entries.size() == 8)
+	var correct_index := 0
+	for i in 4:
+		if workshop.answer_btns[i].text == workshop._correct_answer:
+			correct_index = i
+	var card: SRSCard = workshop._session_cards[0]
+	workshop._on_answer_pressed(correct_index)
+	_check("Kanji scheduled once", card.total_reviews == 1 and card.skill_evidence["meaning"].attempts == 1)
+	await get_tree().create_timer(2.0).timeout
+	workshop._build_question(entries[0], "reading")
+	var valid_readings := entries[0].get_all_readings()
+	var valid_count := 0
+	for button in workshop.answer_btns:
+		if button.text in valid_readings:
+			valid_count += 1
+	_check("Reading choices are unambiguous", valid_count == 1)
+	var form_entry: KanjiEntry = null
+	for entry in entries:
+		if not entry.components.is_empty():
+			form_entry = entry
+			break
+	workshop._build_question(form_entry, "form")
+	_check("Form question uses authored component", workshop._correct_answer in form_entry.components)
+	workshop.free()
+
+
+func _check(description: String, condition: bool) -> void:
+	if condition:
+		_passes += 1
+		print("PASS: " + description)
+	else:
+		_failures += 1
+		push_error("FAIL: " + description)

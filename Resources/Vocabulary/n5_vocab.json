@@ -13,7 +13,9 @@
     "categories": [
       "greetings"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "こんにちは、田中さん。|Hello, Tanaka."
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -29,7 +31,9 @@
     "categories": [
       "greetings"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "ありがとう、先生。|Thank you, teacher."
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -46,7 +50,9 @@
     "categories": [
       "greetings"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "すみません、駅はどこですか。|Excuse me, where is the station?"
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -62,7 +68,9 @@
     "categories": [
       "greetings"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "おはよう、お母さん。|Good morning, Mom."
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -78,7 +86,9 @@
     "categories": [
       "greetings"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "さようなら、また明日。|Goodbye, see you tomorrow."
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -94,7 +104,9 @@
     "categories": [
       "greetings"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "おやすみなさい、お父さん。|Good night, Dad."
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -112,7 +124,9 @@
       "greetings",
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "ご飯をいただきます。|Thank you for the meal; let's eat."
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -129,7 +143,9 @@
       "greetings",
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "ごちそうさま、お母さん。|Thank you for the meal, Mom."
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -145,7 +161,9 @@
     "categories": [
       "greetings"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "はい、学生です。|Yes, I am a student."
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -161,7 +179,9 @@
     "categories": [
       "greetings"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "いいえ、先生ではありません。|No, I am not a teacher."
+    ],
     "part_of_speech": "expression"
   },
   {
@@ -178,7 +198,9 @@
       "food",
       "cafe"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は水を飲む。|I drink water."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -196,7 +218,9 @@
       "food",
       "cafe"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私はお茶を飲む。|I drink tea."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -213,7 +237,9 @@
     "categories": [
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私はご飯を食べる。|I eat rice."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -230,7 +256,9 @@
       "food",
       "cafe"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私はパンを買う。|I buy bread."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -246,7 +274,9 @@
     "categories": [
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は卵を食べる。|I eat an egg."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -262,7 +292,9 @@
     "categories": [
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は魚を食べる。|I eat fish."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -278,7 +310,9 @@
     "categories": [
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は肉を食べる。|I eat meat."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -294,7 +328,9 @@
     "categories": [
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は野菜を食べる。|I eat vegetables."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -310,7 +346,9 @@
     "categories": [
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は果物を買う。|I buy fruit."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -327,7 +365,9 @@
       "food",
       "cafe"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は牛乳を飲む。|I drink milk."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -343,7 +383,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "一つを買う。|I buy one."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -359,7 +401,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "二つを買う。|I buy two."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -375,7 +419,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "三つを買う。|I buy three."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -391,7 +437,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "四つを買う。|I buy four."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -407,7 +455,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "五つを買う。|I buy five."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -423,7 +473,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "六つを買う。|I buy six."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -439,7 +491,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "七つを買う。|I buy seven."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -455,7 +509,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "八つを買う。|I buy eight."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -471,7 +527,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "九つを買う。|I buy nine."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -487,7 +545,9 @@
     "categories": [
       "numbers"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "十個を買う。|I buy ten."
+    ],
     "part_of_speech": "number"
   },
   {
@@ -504,7 +564,9 @@
     "categories": [
       "people"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "あの人は先生です。|That person is a teacher."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -521,7 +583,9 @@
     "categories": [
       "people"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "あの男の人は学生です。|That man is a student."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -538,7 +602,9 @@
     "categories": [
       "people"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "あの女の人は先生です。|That woman is a teacher."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -555,7 +621,9 @@
     "categories": [
       "people"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "子供は公園にいる。|The child is in the park."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -571,7 +639,9 @@
     "categories": [
       "people"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "友達と話す。|I talk with a friend."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -589,7 +659,9 @@
       "people",
       "school"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "先生は学校にいる。|The teacher is at school."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -606,7 +678,9 @@
       "people",
       "school"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "学生は本を読む。|The student reads a book."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -622,7 +696,9 @@
     "categories": [
       "objects"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は本を読む。|I read a book."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -638,7 +714,9 @@
     "categories": [
       "transport"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "車で駅に行く。|I go to the station by car."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -655,7 +733,9 @@
       "animals",
       "cafe"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "猫は私の友達です。|The cat is my friend."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -671,7 +751,9 @@
     "categories": [
       "animals"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "犬は公園にいる。|The dog is in the park."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -687,7 +769,9 @@
     "categories": [
       "nature"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "花を買う。|I buy a flower."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -703,7 +787,9 @@
     "categories": [
       "nature"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は山を見る。|I look at the mountain."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -719,7 +805,9 @@
     "categories": [
       "nature"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "川は山の前です。|The river is in front of the mountain."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -735,7 +823,9 @@
     "categories": [
       "body"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "目を閉じます。|I close my eyes."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -751,7 +841,9 @@
     "categories": [
       "body"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "手を上げます。|I raise my hand."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -768,7 +860,9 @@
     "categories": [
       "body"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "足が痛いです。|My foot hurts."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -784,7 +878,9 @@
     "categories": [
       "body"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "口を開けます。|I open my mouth."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -800,7 +896,9 @@
     "categories": [
       "body"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "耳が大きい。|My ears are big."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -816,7 +914,9 @@
     "categories": [
       "body"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "頭が痛いです。|My head hurts."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -834,7 +934,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "お父さんは会社員です。|My father is a company employee."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -852,7 +954,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "お母さんは先生です。|My mother is a teacher."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -869,7 +973,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "お兄さんは学生です。|My older brother is a student."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -886,7 +992,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "お姉さんは会社員です。|My older sister is a company employee."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -903,7 +1011,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "弟は学生です。|My younger brother is a student."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -920,7 +1030,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "妹は学生です。|My younger sister is a student."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -937,7 +1049,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私の家族です。|This is my family."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -954,7 +1068,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "彼の奥さんは先生です。|His wife is a teacher."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -971,7 +1087,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "主人は会社員です。|My husband is a company employee."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -988,7 +1106,9 @@
       "people",
       "family"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "赤ちゃんは夜寝ます。|The baby sleeps at night."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1005,7 +1125,9 @@
       "verbs",
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は卵を食べる。|I eat an egg."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1022,7 +1144,9 @@
       "verbs",
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は水を飲む。|I drink water."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1038,7 +1162,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は学校に行く。|I go to school."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1054,7 +1180,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "友達が家に来る。|My friend comes to my house."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1072,7 +1200,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は山を見る。|I look at the mountain."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1090,7 +1220,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は先生に聞く。|I ask the teacher."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1107,7 +1239,9 @@
       "verbs",
       "school"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は本に書く。|I write in the book."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1124,7 +1258,9 @@
       "verbs",
       "school"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は本を読む。|I read a book."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1141,7 +1277,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は友達と話す。|I talk with my friend."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1157,7 +1295,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私はパンを買う。|I buy bread."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1173,7 +1313,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は駅で待つ。|I wait at the station."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1189,7 +1331,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は先生の前に立つ。|I stand in front of the teacher."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1205,7 +1349,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は椅子に座る。|I sit on the chair."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1221,7 +1367,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は公園を走る。|I run through the park."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1237,7 +1385,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は駅まで歩く。|I walk to the station."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1254,7 +1404,9 @@
     "categories": [
       "verbs"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私はご飯を作る。|I make a meal."
+    ],
     "part_of_speech": "verb"
   },
   {
@@ -1271,7 +1423,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "この本は大きい。|This book is big."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1288,7 +1442,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "この猫は小さい。|This cat is small."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1304,7 +1460,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "これは新しい本です。|This is a new book."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1320,7 +1478,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "これは古い車です。|This is an old car."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1338,7 +1498,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "この車は高い。|This car is expensive."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1355,7 +1517,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "このパンは安い。|This bread is cheap."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1371,7 +1535,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "この川は長い。|This river is long."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1387,7 +1553,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "これは短い本です。|This is a short book."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1403,7 +1571,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "この店は良い。|This shop is good."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1419,7 +1589,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "それは悪い本です。|That is a bad book."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1436,7 +1608,9 @@
       "adjectives",
       "weather"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "今日は暑い。|Today is hot."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1453,7 +1627,9 @@
       "adjectives",
       "weather"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "今日は寒い。|Today is cold."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1471,7 +1647,9 @@
       "adjectives",
       "food"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "このご飯はおいしい。|This meal is delicious."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1488,7 +1666,9 @@
     "categories": [
       "adjectives"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "このゲームは楽しい。|This game is fun."
+    ],
     "part_of_speech": "i-adjective"
   },
   {
@@ -1504,7 +1684,9 @@
     "categories": [
       "time"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "今日は暑い。|Today is hot."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1520,7 +1702,9 @@
     "categories": [
       "time"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "明日は学校に行く。|I will go to school tomorrow."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1536,7 +1720,9 @@
     "categories": [
       "time"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "昨日は雨でした。|It rained yesterday."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1552,7 +1738,9 @@
     "categories": [
       "time"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "今は朝です。|It is morning now."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1568,7 +1756,9 @@
     "categories": [
       "time"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "朝は寒い。|Mornings are cold."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1585,7 +1775,9 @@
     "categories": [
       "time"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "夜は静かです。|Nights are quiet."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1602,7 +1794,9 @@
       "places",
       "school"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "学校は大きい。|The school is big."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1619,7 +1813,9 @@
       "places",
       "transport"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "駅はここです。|The station is here."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1635,7 +1831,9 @@
     "categories": [
       "places"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "病院はあそこです。|The hospital is over there."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1651,7 +1849,9 @@
     "categories": [
       "places"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "銀行は駅の前です。|The bank is in front of the station."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1668,7 +1868,9 @@
       "places",
       "school"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "図書館で本を読む。|I read a book at the library."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1684,7 +1886,9 @@
     "categories": [
       "places"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "郵便局は駅の右です。|The post office is to the right of the station."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1701,7 +1905,9 @@
       "places",
       "nature"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "公園は広いです。|The park is spacious."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1718,7 +1924,9 @@
     "categories": [
       "places"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "このお店は大きい。|This shop is big."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1735,7 +1943,9 @@
       "nature",
       "weather"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "今日は天気が良い。|The weather is good today."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1752,7 +1962,9 @@
       "nature",
       "weather"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "今日は雨です。|It is rainy today."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1769,7 +1981,9 @@
       "nature",
       "weather"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "雪は白いです。|Snow is white."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1786,7 +2000,9 @@
       "nature",
       "weather"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "風が強いです。|The wind is strong."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1802,7 +2018,9 @@
     "categories": [
       "nature"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "私は空を見る。|I look at the sky."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1819,7 +2037,9 @@
     "categories": [
       "nature"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "海は大きい。|The sea is big."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1835,7 +2055,9 @@
     "categories": [
       "transport"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "電車で学校に行く。|I go to school by train."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1851,7 +2073,9 @@
     "categories": [
       "transport"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "バスで駅に行く。|I go to the station by bus."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1867,7 +2091,9 @@
     "categories": [
       "transport"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "自転車で公園に行く。|I go to the park by bicycle."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1883,7 +2109,9 @@
     "categories": [
       "directions"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "右に曲がります。|I turn right."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1899,7 +2127,9 @@
     "categories": [
       "directions"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "左に曲がります。|I turn left."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1916,7 +2146,9 @@
     "categories": [
       "directions"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "本は机の上です。|The book is on the desk."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1933,7 +2165,9 @@
     "categories": [
       "directions"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "猫は机の下です。|The cat is under the desk."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1950,7 +2184,9 @@
     "categories": [
       "directions"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "銀行は駅の前です。|The bank is in front of the station."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1967,7 +2203,9 @@
     "categories": [
       "directions"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "公園は学校の後ろです。|The park is behind the school."
+    ],
     "part_of_speech": "noun"
   },
   {
@@ -1984,7 +2222,9 @@
     "categories": [
       "directions"
     ],
-    "example_sentences": [],
+    "example_sentences": [
+      "猫は箱の中です。|The cat is inside the box."
+    ],
     "part_of_speech": "noun"
   }
 ]

@@ -62,7 +62,10 @@ func _show_question() -> void:
 
 	# Get 3 wrong answers from other words
 	var exclude := PackedStringArray([word.id])
-	var distractors := VocabDatabase.get_random_words(10, exclude)
+	var semantic_filters := {"jlpt_level": word.jlpt_level, "category": word.categories[0] if not word.categories.is_empty() else ""}
+	var distractors := VocabDatabase.get_random_words(10, exclude, semantic_filters)
+	if distractors.size() < 3:
+		distractors.append_array(VocabDatabase.get_random_words(10, exclude, {"jlpt_level": word.jlpt_level}))
 	distractors.shuffle()
 
 	for d in distractors:
@@ -112,10 +115,7 @@ func _on_answer_pressed(index: int) -> void:
 		TweenFX.pop_in(feedback_label, 0.3)
 		TweenFX.hop(cat_label, 0.4)
 
-		var quality := SRSEngine.Quality.GOOD
-		if card.repetitions == 0:
-			quality = SRSEngine.Quality.EASY
-		_report_correct(card, quality)
+		_report_correct(card, SRSEngine.Quality.GOOD, "meaning")
 	else:
 		answer_btns[index].modulate = Color(0.9, 0.3, 0.3)
 		for btn in answer_btns:
@@ -123,7 +123,7 @@ func _on_answer_pressed(index: int) -> void:
 				btn.modulate = Color(0.3, 0.9, 0.3)
 		feedback_label.text = "Wrong! It was: %s" % correct_meaning
 		cat_label.text = "🐱 💦"
-		_report_incorrect(card)
+		_report_incorrect(card, "meaning")
 		AudioManager.play_wrong()
 		TweenFX.shake(feedback_label, 0.3, 5.0)
 

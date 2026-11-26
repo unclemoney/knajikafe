@@ -11,6 +11,7 @@ extends MiniGameBase
 @onready var back_reading_label: Label = $GameArea/CardBack/ReadingLabel
 @onready var back_meaning_label: Label = $GameArea/CardBack/MeaningLabel
 @onready var flip_btn: Button = $GameArea/FlipBtn
+@onready var pronounce_btn: Button = $GameArea/PronounceBtn
 @onready var rating_box: HBoxContainer = $GameArea/RatingBox
 @onready var again_btn: Button = $GameArea/RatingBox/AgainBtn
 @onready var hard_btn: Button = $GameArea/RatingBox/HardBtn
@@ -23,6 +24,7 @@ extends MiniGameBase
 
 func _ready() -> void:
 	flip_btn.pressed.connect(_on_flip_pressed)
+	pronounce_btn.pressed.connect(_on_pronounce_pressed)
 	again_btn.pressed.connect(_on_rate_pressed.bind(SRSEngine.Quality.WRONG))
 	hard_btn.pressed.connect(_on_rate_pressed.bind(SRSEngine.Quality.HARD))
 	good_btn.pressed.connect(_on_rate_pressed.bind(SRSEngine.Quality.GOOD))
@@ -45,6 +47,9 @@ func _on_session_ready() -> void:
 ## Shows the front of the current flashcard.
 func _show_question() -> void:
 	var word := _session_words[_current_index]
+	AudioManager.stop_speech()
+	pronounce_btn.disabled = not AudioManager.has_speech("vocab:" + word.id)
+	pronounce_btn.tooltip_text = "Pronunciation unavailable" if pronounce_btn.disabled else "Play Japanese pronunciation"
 
 	# Show front: word display without English (that's the answer)
 	vocab_display.show_word(word, {"show_english": false})
@@ -61,6 +66,11 @@ func _show_question() -> void:
 	cat_label.text = "🐱"
 
 	progress_label.text = "%d / %d" % [_current_index + 1, _words_per_session]
+
+
+func _on_pronounce_pressed() -> void:
+	var word := _session_words[_current_index]
+	AudioManager.play_speech("vocab:" + word.id)
 
 
 ## Flips the card to reveal the back.
@@ -85,6 +95,7 @@ func _on_flip_pressed() -> void:
 
 ## Handles self-rating button press.
 func _on_rate_pressed(quality: int) -> void:
+	AudioManager.stop_speech()
 	var card := _session_cards[_current_index]
 
 	# Disable rating buttons
@@ -94,13 +105,13 @@ func _on_rate_pressed(quality: int) -> void:
 	easy_btn.disabled = true
 
 	if quality >= SRSEngine.Quality.HARD:
-		_report_correct(card, quality)
+		_report_correct(card, quality, "meaning")
 		feedback_label.text = "Nice! 📚"
 		cat_label.text = "🐱 ✨"
 		AudioManager.play_correct()
 		TweenFX.pop_in(feedback_label, 0.3)
 	else:
-		_report_incorrect(card)
+		_report_incorrect(card, "meaning")
 		feedback_label.text = "Keep studying! 💪"
 		cat_label.text = "🐱 💦"
 		AudioManager.play_wrong()

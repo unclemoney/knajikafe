@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://Scenes/Results/results_screen.gd" id="1"]
+[ext_resource type="Font" path="res://Themes/japanese_font.tres" id="2_japanese"]
 
 [node name="ResultsScreen" type="Control"]
 layout_mode = 3
@@ -28,9 +29,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -180.0
-offset_top = -120.0
+offset_top = -160.0
 offset_right = 180.0
-offset_bottom = 120.0
+offset_bottom = 160.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -98,6 +99,29 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.7, 0.6, 0.5, 1)
 theme_override_font_sizes/font_size = 9
 text = "Level: 1  |  Total XP: 100"
+horizontal_alignment = 1
+
+[node name="SkillLabel" type="Label" parent="Panel/VBox/StatsBox"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.8, 0.65, 1)
+theme_override_font_sizes/font_size = 9
+horizontal_alignment = 1
+
+[node name="StageChangesLabel" type="Label" parent="Panel/VBox/StatsBox"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.85, 0.65, 1)
+theme_override_fonts/font = ExtResource("2_japanese")
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="NextReviewLabel" type="Label" parent="Panel/VBox/StatsBox"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.7, 0.6, 1)
+theme_override_font_sizes/font_size = 9
 horizontal_alignment = 1
 
 [node name="LevelUpLabel" type="Label" parent="Panel/VBox"]

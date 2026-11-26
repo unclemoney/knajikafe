@@ -1,14 +1,18 @@
 extends Node
 ## AudioManager (Autoload)
 ##
-## Manages BGM and SFX playback with volume control and crossfading.
-## Registered as an autoload singleton.
+## Manages BGM, SFX, and cached Japanese speech playback.
+
+signal speech_finished(clip_id: String)
 
 ## BGM player for background music.
 var _bgm_player: AudioStreamPlayer = null
 
 ## SFX player pool for overlapping sound effects.
 var _sfx_players: Array[AudioStreamPlayer] = []
+var _speech_player: AudioStreamPlayer = null
+var _audio_manifest: Dictionary = {}
+var _active_speech_id: String = ""
 
 ## Number of concurrent SFX channels.
 const SFX_POOL_SIZE: int = 8
@@ -42,8 +46,22 @@ var _bgm_results: AudioStreamWAV = null
 func _ready() -> void:
 	_setup_bgm_player()
 	_setup_sfx_pool()
+	_setup_speech_player()
+	_load_audio_manifest()
 	_generate_placeholder_sfx()
 	_generate_procedural_bgm()
+
+
+func _exit_tree() -> void:
+	if _speech_player:
+		_speech_player.stop()
+		_speech_player.stream = null
+	for player in _sfx_players:
+		player.stop()
+		player.stream = null
+	if _bgm_player:
+		_bgm_player.stop()
+		_bgm_player.stream = null
 
 
 ## Plays background music, crossfading from any current track.
@@ -90,6 +108,60 @@ func play_sfx(stream: AudioStream, pitch_variation: float = 0.0) -> void:
 				player.pitch_scale = 1.0
 			player.play()
 			return
+
+
+func has_speech(clip_id: String) -> bool:
+	return _audio_manifest.has(clip_id)
+
+
+func play_speech(clip_id: String) -> bool:
+	if not _audio_manifest.has(clip_id):
+		return false
+	var path: String = _audio_manifest[clip_id]
+	if not ResourceLoader.exists(path):
+		return false
+	var stream := ResourceLoader.load(path) as AudioStream
+	if stream == null:
+		return false
+	stop_speech()
+	_active_speech_id = clip_id
+	_speech_player.stream = stream
+	_speech_player.volume_db = linear_to_db(sfx_volume)
+	_speech_player.play()
+	return true
+
+
+func stop_speech() -> void:
+	if _speech_player:
+		_speech_player.stop()
+	_active_speech_id = ""
+
+
+func _setup_speech_player() -> void:
+	_speech_player = AudioStreamPlayer.new()
+	_speech_player.bus = "Master"
+	_speech_player.finished.connect(_on_speech_finished)
+	add_child(_speech_player)
+
+
+func _load_audio_manifest() -> void:
+	var path := "res://Resources/Audio/n5_audio_manifest.json"
+	if not FileAccess.file_exists(path):
+		return
+	var file := FileAccess.open(path, FileAccess.READ)
+	var parsed = JSON.parse_string(file.get_as_text())
+	file.close()
+	if parsed is not Array:
+		return
+	for entry in parsed:
+		if entry is Dictionary and entry.get("status", "") == "ready":
+			_audio_manifest[entry.get("id", "")] = entry.get("file", "")
+
+
+func _on_speech_finished() -> void:
+	var finished_id := _active_speech_id
+	_active_speech_id = ""
+	speech_finished.emit(finished_id)
 
 
 ## Applies volume settings from a player profile.

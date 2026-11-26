@@ -1,0 +1,1867 @@
+[
+  {
+    "character": "一",
+    "meanings": [
+      "one"
+    ],
+    "on_readings": [
+      "イチ",
+      "イツ"
+    ],
+    "kun_readings": [
+      "ひと",
+      "ひとつ"
+    ],
+    "stroke_count": 1,
+    "jlpt_level": 5,
+    "radical": "一",
+    "components": []
+  },
+  {
+    "character": "二",
+    "meanings": [
+      "two"
+    ],
+    "on_readings": [
+      "ニ",
+      "ジ"
+    ],
+    "kun_readings": [
+      "ふた",
+      "ふたつ"
+    ],
+    "stroke_count": 2,
+    "jlpt_level": 5,
+    "radical": "二",
+    "components": []
+  },
+  {
+    "character": "三",
+    "meanings": [
+      "three"
+    ],
+    "on_readings": [
+      "サン"
+    ],
+    "kun_readings": [
+      "み",
+      "みつ"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "一",
+    "components": []
+  },
+  {
+    "character": "四",
+    "meanings": [
+      "four"
+    ],
+    "on_readings": [
+      "シ"
+    ],
+    "kun_readings": [
+      "よ",
+      "よん",
+      "よつ"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "囗",
+    "components": []
+  },
+  {
+    "character": "五",
+    "meanings": [
+      "five"
+    ],
+    "on_readings": [
+      "ゴ"
+    ],
+    "kun_readings": [
+      "いつ",
+      "いつつ"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "二",
+    "components": []
+  },
+  {
+    "character": "六",
+    "meanings": [
+      "six"
+    ],
+    "on_readings": [
+      "ロク",
+      "リク"
+    ],
+    "kun_readings": [
+      "む",
+      "むつ",
+      "むい"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "八",
+    "components": []
+  },
+  {
+    "character": "七",
+    "meanings": [
+      "seven"
+    ],
+    "on_readings": [
+      "シチ"
+    ],
+    "kun_readings": [
+      "なな",
+      "ななつ",
+      "なの"
+    ],
+    "stroke_count": 2,
+    "jlpt_level": 5,
+    "radical": "一",
+    "components": []
+  },
+  {
+    "character": "八",
+    "meanings": [
+      "eight"
+    ],
+    "on_readings": [
+      "ハチ",
+      "ハツ"
+    ],
+    "kun_readings": [
+      "や",
+      "やつ",
+      "よう"
+    ],
+    "stroke_count": 2,
+    "jlpt_level": 5,
+    "radical": "八",
+    "components": []
+  },
+  {
+    "character": "九",
+    "meanings": [
+      "nine"
+    ],
+    "on_readings": [
+      "キュウ",
+      "ク"
+    ],
+    "kun_readings": [
+      "ここの",
+      "ここのつ"
+    ],
+    "stroke_count": 2,
+    "jlpt_level": 5,
+    "radical": "乙",
+    "components": []
+  },
+  {
+    "character": "十",
+    "meanings": [
+      "ten"
+    ],
+    "on_readings": [
+      "ジュウ",
+      "ジッ",
+      "ジュッ"
+    ],
+    "kun_readings": [
+      "とお",
+      "と"
+    ],
+    "stroke_count": 2,
+    "jlpt_level": 5,
+    "radical": "十",
+    "components": []
+  },
+  {
+    "character": "百",
+    "meanings": [
+      "hundred"
+    ],
+    "on_readings": [
+      "ヒャク",
+      "ビャク"
+    ],
+    "kun_readings": [],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "白",
+    "components": [
+      "一",
+      "白"
+    ]
+  },
+  {
+    "character": "千",
+    "meanings": [
+      "thousand"
+    ],
+    "on_readings": [
+      "セン"
+    ],
+    "kun_readings": [
+      "ち"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "十",
+    "components": []
+  },
+  {
+    "character": "万",
+    "meanings": [
+      "ten thousand"
+    ],
+    "on_readings": [
+      "マン",
+      "バン"
+    ],
+    "kun_readings": [],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "一",
+    "components": []
+  },
+  {
+    "character": "円",
+    "meanings": [
+      "yen",
+      "circle"
+    ],
+    "on_readings": [
+      "エン"
+    ],
+    "kun_readings": [
+      "まる"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "冂",
+    "components": []
+  },
+  {
+    "character": "年",
+    "meanings": [
+      "year"
+    ],
+    "on_readings": [
+      "ネン"
+    ],
+    "kun_readings": [
+      "とし"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "干",
+    "components": []
+  },
+  {
+    "character": "月",
+    "meanings": [
+      "month",
+      "moon"
+    ],
+    "on_readings": [
+      "ゲツ",
+      "ガツ"
+    ],
+    "kun_readings": [
+      "つき"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "月",
+    "components": []
+  },
+  {
+    "character": "日",
+    "meanings": [
+      "day",
+      "sun"
+    ],
+    "on_readings": [
+      "ニチ",
+      "ジツ"
+    ],
+    "kun_readings": [
+      "ひ",
+      "か"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "日",
+    "components": []
+  },
+  {
+    "character": "今",
+    "meanings": [
+      "now"
+    ],
+    "on_readings": [
+      "コン",
+      "キン"
+    ],
+    "kun_readings": [
+      "いま"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "人",
+    "components": []
+  },
+  {
+    "character": "週",
+    "meanings": [
+      "week"
+    ],
+    "on_readings": [
+      "シュウ"
+    ],
+    "kun_readings": [],
+    "stroke_count": 11,
+    "jlpt_level": 5,
+    "radical": "辶",
+    "components": [
+      "周",
+      "辶"
+    ]
+  },
+  {
+    "character": "時",
+    "meanings": [
+      "time",
+      "hour"
+    ],
+    "on_readings": [
+      "ジ"
+    ],
+    "kun_readings": [
+      "とき"
+    ],
+    "stroke_count": 10,
+    "jlpt_level": 5,
+    "radical": "日",
+    "components": [
+      "日",
+      "寺"
+    ]
+  },
+  {
+    "character": "分",
+    "meanings": [
+      "minute",
+      "part",
+      "to divide"
+    ],
+    "on_readings": [
+      "ブン",
+      "フン",
+      "ブ"
+    ],
+    "kun_readings": [
+      "わける",
+      "わかれる",
+      "わかる"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "刀",
+    "components": [
+      "八",
+      "刀"
+    ]
+  },
+  {
+    "character": "朝",
+    "meanings": [
+      "morning"
+    ],
+    "on_readings": [
+      "チョウ"
+    ],
+    "kun_readings": [
+      "あさ"
+    ],
+    "stroke_count": 12,
+    "jlpt_level": 5,
+    "radical": "月",
+    "components": []
+  },
+  {
+    "character": "夜",
+    "meanings": [
+      "night",
+      "evening"
+    ],
+    "on_readings": [
+      "ヤ"
+    ],
+    "kun_readings": [
+      "よる",
+      "よ"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "夕",
+    "components": []
+  },
+  {
+    "character": "午",
+    "meanings": [
+      "noon"
+    ],
+    "on_readings": [
+      "ゴ"
+    ],
+    "kun_readings": [],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "十",
+    "components": []
+  },
+  {
+    "character": "毎",
+    "meanings": [
+      "every"
+    ],
+    "on_readings": [
+      "マイ"
+    ],
+    "kun_readings": [
+      "ごと"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "母",
+    "components": []
+  },
+  {
+    "character": "先",
+    "meanings": [
+      "previous",
+      "ahead"
+    ],
+    "on_readings": [
+      "セン"
+    ],
+    "kun_readings": [
+      "さき",
+      "まず"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "儿",
+    "components": []
+  },
+  {
+    "character": "明",
+    "meanings": [
+      "bright",
+      "next"
+    ],
+    "on_readings": [
+      "メイ",
+      "ミョウ",
+      "ミン"
+    ],
+    "kun_readings": [
+      "あかるい",
+      "あける",
+      "あく",
+      "あかり"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "日",
+    "components": [
+      "日",
+      "月"
+    ]
+  },
+  {
+    "character": "昨",
+    "meanings": [
+      "yesterday",
+      "previous"
+    ],
+    "on_readings": [
+      "サク"
+    ],
+    "kun_readings": [],
+    "stroke_count": 9,
+    "jlpt_level": 5,
+    "radical": "日",
+    "components": [
+      "日",
+      "乍"
+    ]
+  },
+  {
+    "character": "上",
+    "meanings": [
+      "up",
+      "above"
+    ],
+    "on_readings": [
+      "ジョウ",
+      "ショウ"
+    ],
+    "kun_readings": [
+      "うえ",
+      "あがる",
+      "あげる",
+      "のぼる"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "一",
+    "components": []
+  },
+  {
+    "character": "下",
+    "meanings": [
+      "down",
+      "below"
+    ],
+    "on_readings": [
+      "カ",
+      "ゲ"
+    ],
+    "kun_readings": [
+      "した",
+      "しも",
+      "もと",
+      "さげる",
+      "さがる",
+      "くだる"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "一",
+    "components": []
+  },
+  {
+    "character": "左",
+    "meanings": [
+      "left"
+    ],
+    "on_readings": [
+      "サ",
+      "シャ"
+    ],
+    "kun_readings": [
+      "ひだり"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "工",
+    "components": []
+  },
+  {
+    "character": "右",
+    "meanings": [
+      "right"
+    ],
+    "on_readings": [
+      "ウ",
+      "ユウ"
+    ],
+    "kun_readings": [
+      "みぎ"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "口",
+    "components": []
+  },
+  {
+    "character": "中",
+    "meanings": [
+      "inside",
+      "middle"
+    ],
+    "on_readings": [
+      "チュウ"
+    ],
+    "kun_readings": [
+      "なか",
+      "うち"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "丨",
+    "components": []
+  },
+  {
+    "character": "前",
+    "meanings": [
+      "front",
+      "before"
+    ],
+    "on_readings": [
+      "ゼン"
+    ],
+    "kun_readings": [
+      "まえ"
+    ],
+    "stroke_count": 9,
+    "jlpt_level": 5,
+    "radical": "刀",
+    "components": []
+  },
+  {
+    "character": "後",
+    "meanings": [
+      "behind",
+      "after"
+    ],
+    "on_readings": [
+      "ゴ",
+      "コウ"
+    ],
+    "kun_readings": [
+      "うしろ",
+      "あと",
+      "のち"
+    ],
+    "stroke_count": 9,
+    "jlpt_level": 5,
+    "radical": "彳",
+    "components": []
+  },
+  {
+    "character": "内",
+    "meanings": [
+      "inside"
+    ],
+    "on_readings": [
+      "ナイ",
+      "ダイ"
+    ],
+    "kun_readings": [
+      "うち"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "冂",
+    "components": []
+  },
+  {
+    "character": "外",
+    "meanings": [
+      "outside"
+    ],
+    "on_readings": [
+      "ガイ",
+      "ゲ"
+    ],
+    "kun_readings": [
+      "そと",
+      "ほか",
+      "はずす",
+      "はずれる"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "夕",
+    "components": [
+      "夕",
+      "卜"
+    ]
+  },
+  {
+    "character": "東",
+    "meanings": [
+      "east"
+    ],
+    "on_readings": [
+      "トウ"
+    ],
+    "kun_readings": [
+      "ひがし"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "木",
+    "components": []
+  },
+  {
+    "character": "西",
+    "meanings": [
+      "west"
+    ],
+    "on_readings": [
+      "セイ",
+      "サイ",
+      "ス"
+    ],
+    "kun_readings": [
+      "にし"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "覀",
+    "components": []
+  },
+  {
+    "character": "南",
+    "meanings": [
+      "south"
+    ],
+    "on_readings": [
+      "ナン",
+      "ナ"
+    ],
+    "kun_readings": [
+      "みなみ"
+    ],
+    "stroke_count": 9,
+    "jlpt_level": 5,
+    "radical": "十",
+    "components": []
+  },
+  {
+    "character": "北",
+    "meanings": [
+      "north"
+    ],
+    "on_readings": [
+      "ホク"
+    ],
+    "kun_readings": [
+      "きた"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "匕",
+    "components": []
+  },
+  {
+    "character": "山",
+    "meanings": [
+      "mountain"
+    ],
+    "on_readings": [
+      "サン",
+      "ザン"
+    ],
+    "kun_readings": [
+      "やま"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "山",
+    "components": []
+  },
+  {
+    "character": "川",
+    "meanings": [
+      "river"
+    ],
+    "on_readings": [
+      "セン"
+    ],
+    "kun_readings": [
+      "かわ"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "巛",
+    "components": []
+  },
+  {
+    "character": "水",
+    "meanings": [
+      "water"
+    ],
+    "on_readings": [
+      "スイ"
+    ],
+    "kun_readings": [
+      "みず"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "水",
+    "components": []
+  },
+  {
+    "character": "天",
+    "meanings": [
+      "heaven",
+      "sky"
+    ],
+    "on_readings": [
+      "テン"
+    ],
+    "kun_readings": [
+      "あま",
+      "あめ"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "大",
+    "components": [
+      "一",
+      "大"
+    ]
+  },
+  {
+    "character": "気",
+    "meanings": [
+      "spirit",
+      "air",
+      "feeling"
+    ],
+    "on_readings": [
+      "キ",
+      "ケ"
+    ],
+    "kun_readings": [],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "气",
+    "components": []
+  },
+  {
+    "character": "雨",
+    "meanings": [
+      "rain"
+    ],
+    "on_readings": [
+      "ウ"
+    ],
+    "kun_readings": [
+      "あめ",
+      "あま"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "雨",
+    "components": []
+  },
+  {
+    "character": "雪",
+    "meanings": [
+      "snow"
+    ],
+    "on_readings": [
+      "セツ"
+    ],
+    "kun_readings": [
+      "ゆき"
+    ],
+    "stroke_count": 11,
+    "jlpt_level": 5,
+    "radical": "雨",
+    "components": [
+      "雨",
+      "彐"
+    ]
+  },
+  {
+    "character": "風",
+    "meanings": [
+      "wind",
+      "style"
+    ],
+    "on_readings": [
+      "フウ",
+      "フ"
+    ],
+    "kun_readings": [
+      "かぜ",
+      "かざ"
+    ],
+    "stroke_count": 9,
+    "jlpt_level": 5,
+    "radical": "風",
+    "components": []
+  },
+  {
+    "character": "空",
+    "meanings": [
+      "sky",
+      "empty"
+    ],
+    "on_readings": [
+      "クウ"
+    ],
+    "kun_readings": [
+      "そら",
+      "あく",
+      "あき",
+      "から"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "穴",
+    "components": [
+      "穴",
+      "工"
+    ]
+  },
+  {
+    "character": "海",
+    "meanings": [
+      "sea",
+      "ocean"
+    ],
+    "on_readings": [
+      "カイ"
+    ],
+    "kun_readings": [
+      "うみ"
+    ],
+    "stroke_count": 9,
+    "jlpt_level": 5,
+    "radical": "水",
+    "components": [
+      "氵",
+      "毎"
+    ]
+  },
+  {
+    "character": "花",
+    "meanings": [
+      "flower"
+    ],
+    "on_readings": [
+      "カ",
+      "ケ"
+    ],
+    "kun_readings": [
+      "はな"
+    ],
+    "stroke_count": 7,
+    "jlpt_level": 5,
+    "radical": "艹",
+    "components": [
+      "艹",
+      "化"
+    ]
+  },
+  {
+    "character": "火",
+    "meanings": [
+      "fire"
+    ],
+    "on_readings": [
+      "カ"
+    ],
+    "kun_readings": [
+      "ひ",
+      "ほ"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "火",
+    "components": []
+  },
+  {
+    "character": "木",
+    "meanings": [
+      "tree",
+      "wood"
+    ],
+    "on_readings": [
+      "ボク",
+      "モク"
+    ],
+    "kun_readings": [
+      "き",
+      "こ"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "木",
+    "components": []
+  },
+  {
+    "character": "土",
+    "meanings": [
+      "earth",
+      "ground"
+    ],
+    "on_readings": [
+      "ド",
+      "ト"
+    ],
+    "kun_readings": [
+      "つち"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "土",
+    "components": []
+  },
+  {
+    "character": "金",
+    "meanings": [
+      "gold",
+      "money"
+    ],
+    "on_readings": [
+      "キン",
+      "コン",
+      "ゴン"
+    ],
+    "kun_readings": [
+      "かね",
+      "かな"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "金",
+    "components": []
+  },
+  {
+    "character": "人",
+    "meanings": [
+      "person"
+    ],
+    "on_readings": [
+      "ジン",
+      "ニン"
+    ],
+    "kun_readings": [
+      "ひと"
+    ],
+    "stroke_count": 2,
+    "jlpt_level": 5,
+    "radical": "人",
+    "components": []
+  },
+  {
+    "character": "男",
+    "meanings": [
+      "man",
+      "male"
+    ],
+    "on_readings": [
+      "ダン",
+      "ナン"
+    ],
+    "kun_readings": [
+      "おとこ"
+    ],
+    "stroke_count": 7,
+    "jlpt_level": 5,
+    "radical": "田",
+    "components": [
+      "田",
+      "力"
+    ]
+  },
+  {
+    "character": "女",
+    "meanings": [
+      "woman",
+      "female"
+    ],
+    "on_readings": [
+      "ジョ",
+      "ニョ",
+      "ニョウ"
+    ],
+    "kun_readings": [
+      "おんな",
+      "め"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "女",
+    "components": []
+  },
+  {
+    "character": "父",
+    "meanings": [
+      "father"
+    ],
+    "on_readings": [
+      "フ"
+    ],
+    "kun_readings": [
+      "ちち"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "父",
+    "components": []
+  },
+  {
+    "character": "母",
+    "meanings": [
+      "mother"
+    ],
+    "on_readings": [
+      "ボ"
+    ],
+    "kun_readings": [
+      "はは"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "母",
+    "components": []
+  },
+  {
+    "character": "子",
+    "meanings": [
+      "child"
+    ],
+    "on_readings": [
+      "シ",
+      "ス",
+      "ツ"
+    ],
+    "kun_readings": [
+      "こ"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "子",
+    "components": []
+  },
+  {
+    "character": "家",
+    "meanings": [
+      "house",
+      "home"
+    ],
+    "on_readings": [
+      "カ",
+      "ケ"
+    ],
+    "kun_readings": [
+      "いえ",
+      "や",
+      "うち"
+    ],
+    "stroke_count": 10,
+    "jlpt_level": 5,
+    "radical": "宀",
+    "components": [
+      "宀",
+      "豕"
+    ]
+  },
+  {
+    "character": "族",
+    "meanings": [
+      "family",
+      "tribe"
+    ],
+    "on_readings": [
+      "ゾク"
+    ],
+    "kun_readings": [],
+    "stroke_count": 11,
+    "jlpt_level": 5,
+    "radical": "方",
+    "components": []
+  },
+  {
+    "character": "友",
+    "meanings": [
+      "friend"
+    ],
+    "on_readings": [
+      "ユウ"
+    ],
+    "kun_readings": [
+      "とも"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "又",
+    "components": []
+  },
+  {
+    "character": "生",
+    "meanings": [
+      "life",
+      "birth",
+      "student"
+    ],
+    "on_readings": [
+      "セイ",
+      "ショウ"
+    ],
+    "kun_readings": [
+      "うまれる",
+      "うむ",
+      "いきる",
+      "はえる",
+      "なま"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "生",
+    "components": []
+  },
+  {
+    "character": "学",
+    "meanings": [
+      "study",
+      "learning"
+    ],
+    "on_readings": [
+      "ガク"
+    ],
+    "kun_readings": [
+      "まなぶ"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "子",
+    "components": []
+  },
+  {
+    "character": "名",
+    "meanings": [
+      "name",
+      "famous"
+    ],
+    "on_readings": [
+      "メイ",
+      "ミョウ"
+    ],
+    "kun_readings": [
+      "な"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "口",
+    "components": [
+      "夕",
+      "口"
+    ]
+  },
+  {
+    "character": "私",
+    "meanings": [
+      "I",
+      "private"
+    ],
+    "on_readings": [
+      "シ"
+    ],
+    "kun_readings": [
+      "わたし",
+      "わたくし"
+    ],
+    "stroke_count": 7,
+    "jlpt_level": 5,
+    "radical": "禾",
+    "components": [
+      "禾",
+      "厶"
+    ]
+  },
+  {
+    "character": "自",
+    "meanings": [
+      "self"
+    ],
+    "on_readings": [
+      "ジ",
+      "シ"
+    ],
+    "kun_readings": [
+      "みずから"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "自",
+    "components": []
+  },
+  {
+    "character": "行",
+    "meanings": [
+      "to go",
+      "to carry out"
+    ],
+    "on_readings": [
+      "コウ",
+      "ギョウ",
+      "アン"
+    ],
+    "kun_readings": [
+      "いく",
+      "ゆく",
+      "おこなう"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "彳",
+    "components": []
+  },
+  {
+    "character": "来",
+    "meanings": [
+      "to come"
+    ],
+    "on_readings": [
+      "ライ",
+      "タイ"
+    ],
+    "kun_readings": [
+      "くる",
+      "きたる"
+    ],
+    "stroke_count": 7,
+    "jlpt_level": 5,
+    "radical": "木",
+    "components": []
+  },
+  {
+    "character": "帰",
+    "meanings": [
+      "to return"
+    ],
+    "on_readings": [
+      "キ"
+    ],
+    "kun_readings": [
+      "かえる"
+    ],
+    "stroke_count": 10,
+    "jlpt_level": 5,
+    "radical": "巾",
+    "components": []
+  },
+  {
+    "character": "食",
+    "meanings": [
+      "food",
+      "to eat"
+    ],
+    "on_readings": [
+      "ショク",
+      "ジキ"
+    ],
+    "kun_readings": [
+      "くう",
+      "くらう",
+      "たべる"
+    ],
+    "stroke_count": 9,
+    "jlpt_level": 5,
+    "radical": "食",
+    "components": []
+  },
+  {
+    "character": "飲",
+    "meanings": [
+      "to drink"
+    ],
+    "on_readings": [
+      "イン",
+      "オン"
+    ],
+    "kun_readings": [
+      "のむ"
+    ],
+    "stroke_count": 12,
+    "jlpt_level": 5,
+    "radical": "食",
+    "components": [
+      "食",
+      "欠"
+    ]
+  },
+  {
+    "character": "見",
+    "meanings": [
+      "to see",
+      "to look"
+    ],
+    "on_readings": [
+      "ケン"
+    ],
+    "kun_readings": [
+      "みる",
+      "みえる",
+      "みせる"
+    ],
+    "stroke_count": 7,
+    "jlpt_level": 5,
+    "radical": "見",
+    "components": []
+  },
+  {
+    "character": "聞",
+    "meanings": [
+      "to hear",
+      "to ask"
+    ],
+    "on_readings": [
+      "ブン",
+      "モン"
+    ],
+    "kun_readings": [
+      "きく",
+      "きこえる"
+    ],
+    "stroke_count": 14,
+    "jlpt_level": 5,
+    "radical": "耳",
+    "components": [
+      "門",
+      "耳"
+    ]
+  },
+  {
+    "character": "話",
+    "meanings": [
+      "to talk",
+      "story"
+    ],
+    "on_readings": [
+      "ワ"
+    ],
+    "kun_readings": [
+      "はなす",
+      "はなし"
+    ],
+    "stroke_count": 13,
+    "jlpt_level": 5,
+    "radical": "言",
+    "components": [
+      "言",
+      "舌"
+    ]
+  },
+  {
+    "character": "読",
+    "meanings": [
+      "to read"
+    ],
+    "on_readings": [
+      "ドク",
+      "トク",
+      "トウ"
+    ],
+    "kun_readings": [
+      "よむ"
+    ],
+    "stroke_count": 14,
+    "jlpt_level": 5,
+    "radical": "言",
+    "components": [
+      "言",
+      "売"
+    ]
+  },
+  {
+    "character": "書",
+    "meanings": [
+      "to write"
+    ],
+    "on_readings": [
+      "ショ"
+    ],
+    "kun_readings": [
+      "かく"
+    ],
+    "stroke_count": 10,
+    "jlpt_level": 5,
+    "radical": "曰",
+    "components": []
+  },
+  {
+    "character": "買",
+    "meanings": [
+      "to buy"
+    ],
+    "on_readings": [
+      "バイ"
+    ],
+    "kun_readings": [
+      "かう"
+    ],
+    "stroke_count": 12,
+    "jlpt_level": 5,
+    "radical": "貝",
+    "components": [
+      "罒",
+      "貝"
+    ]
+  },
+  {
+    "character": "休",
+    "meanings": [
+      "rest",
+      "to rest"
+    ],
+    "on_readings": [
+      "キュウ"
+    ],
+    "kun_readings": [
+      "やすむ",
+      "やすまる",
+      "やすめる"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "人",
+    "components": [
+      "亻",
+      "木"
+    ]
+  },
+  {
+    "character": "起",
+    "meanings": [
+      "to wake up",
+      "to occur"
+    ],
+    "on_readings": [
+      "キ"
+    ],
+    "kun_readings": [
+      "おきる",
+      "おこる",
+      "おこす"
+    ],
+    "stroke_count": 10,
+    "jlpt_level": 5,
+    "radical": "走",
+    "components": [
+      "走",
+      "己"
+    ]
+  },
+  {
+    "character": "立",
+    "meanings": [
+      "to stand"
+    ],
+    "on_readings": [
+      "リツ",
+      "リュウ"
+    ],
+    "kun_readings": [
+      "たつ",
+      "たてる"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "立",
+    "components": []
+  },
+  {
+    "character": "大",
+    "meanings": [
+      "big",
+      "large"
+    ],
+    "on_readings": [
+      "ダイ",
+      "タイ"
+    ],
+    "kun_readings": [
+      "おお",
+      "おおきい",
+      "おおいに"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "大",
+    "components": []
+  },
+  {
+    "character": "小",
+    "meanings": [
+      "small",
+      "little"
+    ],
+    "on_readings": [
+      "ショウ"
+    ],
+    "kun_readings": [
+      "ちいさい",
+      "こ",
+      "お",
+      "さ"
+    ],
+    "stroke_count": 3,
+    "jlpt_level": 5,
+    "radical": "小",
+    "components": []
+  },
+  {
+    "character": "高",
+    "meanings": [
+      "tall",
+      "high",
+      "expensive"
+    ],
+    "on_readings": [
+      "コウ"
+    ],
+    "kun_readings": [
+      "たかい",
+      "たか",
+      "たかまる",
+      "たかめる"
+    ],
+    "stroke_count": 10,
+    "jlpt_level": 5,
+    "radical": "高",
+    "components": []
+  },
+  {
+    "character": "安",
+    "meanings": [
+      "cheap",
+      "peaceful"
+    ],
+    "on_readings": [
+      "アン"
+    ],
+    "kun_readings": [
+      "やすい",
+      "やすまる",
+      "やすめる"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "宀",
+    "components": [
+      "宀",
+      "女"
+    ]
+  },
+  {
+    "character": "新",
+    "meanings": [
+      "new"
+    ],
+    "on_readings": [
+      "シン"
+    ],
+    "kun_readings": [
+      "あたらしい",
+      "あらた",
+      "にい"
+    ],
+    "stroke_count": 13,
+    "jlpt_level": 5,
+    "radical": "斤",
+    "components": []
+  },
+  {
+    "character": "古",
+    "meanings": [
+      "old"
+    ],
+    "on_readings": [
+      "コ"
+    ],
+    "kun_readings": [
+      "ふるい",
+      "ふる"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "口",
+    "components": [
+      "十",
+      "口"
+    ]
+  },
+  {
+    "character": "長",
+    "meanings": [
+      "long",
+      "leader"
+    ],
+    "on_readings": [
+      "チョウ"
+    ],
+    "kun_readings": [
+      "ながい"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "長",
+    "components": []
+  },
+  {
+    "character": "短",
+    "meanings": [
+      "short"
+    ],
+    "on_readings": [
+      "タン"
+    ],
+    "kun_readings": [
+      "みじかい"
+    ],
+    "stroke_count": 12,
+    "jlpt_level": 5,
+    "radical": "矢",
+    "components": [
+      "矢",
+      "豆"
+    ]
+  },
+  {
+    "character": "多",
+    "meanings": [
+      "many"
+    ],
+    "on_readings": [
+      "タ"
+    ],
+    "kun_readings": [
+      "おおい"
+    ],
+    "stroke_count": 6,
+    "jlpt_level": 5,
+    "radical": "夕",
+    "components": [
+      "夕",
+      "夕"
+    ]
+  },
+  {
+    "character": "少",
+    "meanings": [
+      "few",
+      "little"
+    ],
+    "on_readings": [
+      "ショウ"
+    ],
+    "kun_readings": [
+      "すくない",
+      "すこし"
+    ],
+    "stroke_count": 4,
+    "jlpt_level": 5,
+    "radical": "小",
+    "components": []
+  },
+  {
+    "character": "校",
+    "meanings": [
+      "school"
+    ],
+    "on_readings": [
+      "コウ",
+      "キョウ"
+    ],
+    "kun_readings": [],
+    "stroke_count": 10,
+    "jlpt_level": 5,
+    "radical": "木",
+    "components": [
+      "木",
+      "交"
+    ]
+  },
+  {
+    "character": "車",
+    "meanings": [
+      "car",
+      "vehicle"
+    ],
+    "on_readings": [
+      "シャ"
+    ],
+    "kun_readings": [
+      "くるま"
+    ],
+    "stroke_count": 7,
+    "jlpt_level": 5,
+    "radical": "車",
+    "components": []
+  },
+  {
+    "character": "本",
+    "meanings": [
+      "book",
+      "origin"
+    ],
+    "on_readings": [
+      "ホン"
+    ],
+    "kun_readings": [
+      "もと"
+    ],
+    "stroke_count": 5,
+    "jlpt_level": 5,
+    "radical": "木",
+    "components": []
+  },
+  {
+    "character": "店",
+    "meanings": [
+      "shop",
+      "store"
+    ],
+    "on_readings": [
+      "テン"
+    ],
+    "kun_readings": [
+      "みせ"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "广",
+    "components": [
+      "广",
+      "占"
+    ]
+  },
+  {
+    "character": "国",
+    "meanings": [
+      "country"
+    ],
+    "on_readings": [
+      "コク"
+    ],
+    "kun_readings": [
+      "くに"
+    ],
+    "stroke_count": 8,
+    "jlpt_level": 5,
+    "radical": "囗",
+    "components": [
+      "囗",
+      "玉"
+    ]
+  },
+  {
+    "character": "語",
+    "meanings": [
+      "language",
+      "word"
+    ],
+    "on_readings": [
+      "ゴ"
+    ],
+    "kun_readings": [
+      "かたる",
+      "かたらう"
+    ],
+    "stroke_count": 14,
+    "jlpt_level": 5,
+    "radical": "言",
+    "components": [
+      "言",
+      "吾"
+    ]
+  }
+]

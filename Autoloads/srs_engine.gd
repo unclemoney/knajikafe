@@ -15,15 +15,28 @@ const MIN_EASE_FACTOR: float = 1.3
 ## The currently loaded SRS cards for the active profile.
 var cards: Array[SRSCard] = []
 
+## Kanji cards for the active profile.
+var kanji_cards: Array[KanjiCard] = []
 
-## Loads SRS cards for the given profile from disk.
+## Completed session summaries for the active profile.
+var sessions: Array = []
+var learning_data_writable: bool = true
+
+
+## Loads cards and session history for the given profile.
 func load_cards_for_profile(profile: PlayerProfile) -> void:
-	cards = SaveManager.load_srs_cards(profile.player_name)
+	var data := SaveManager.load_learning_data(profile.player_name)
+	cards = data["cards"]
+	kanji_cards = data["kanji_cards"]
+	sessions = data["sessions"]
+	learning_data_writable = data["load_ok"]
 
 
-## Saves the current SRS cards for the given profile to disk.
-func save_cards_for_profile(profile: PlayerProfile) -> void:
-	SaveManager.save_srs_data(profile.player_name, cards)
+## Saves cards and session history for the given profile.
+func save_cards_for_profile(profile: PlayerProfile) -> bool:
+	if not learning_data_writable:
+		return false
+	return SaveManager.save_learning_data(profile.player_name, cards, sessions, kanji_cards)
 
 
 ## Reviews a card with the given quality rating (0–5).
@@ -59,6 +72,23 @@ func review_card(card: SRSCard, quality: int) -> void:
 
 	card.last_review_date = today
 	card.next_review_date = _add_days_to_date(today, int(card.interval))
+
+
+## Records skill evidence without changing the SM-2 schedule.
+func record_attempt(card: SRSCard, skill: String, quality: int, source: String) -> void:
+	if skill not in ProgressMetrics.SKILL_IDS:
+		return
+	if not card.skill_evidence.has(skill):
+		card.skill_evidence[skill] = SkillEvidence.new()
+	var evidence := card.skill_evidence[skill] as SkillEvidence
+	evidence.record(quality, GameController.get_current_date(), source)
+
+
+## Appends a completed session and bounds local history.
+func record_session(summary: Dictionary) -> void:
+	sessions.append(summary.duplicate(true))
+	if sessions.size() > SaveManager.MAX_SESSION_HISTORY:
+		sessions = sessions.slice(sessions.size() - SaveManager.MAX_SESSION_HISTORY)
 
 
 ## Returns all cards that are due for review on or before the current date.
@@ -103,6 +133,48 @@ func get_card_for_vocab(vocab_id: String) -> SRSCard:
 		if card.vocab_id == vocab_id:
 			return card
 	return null
+
+
+## Returns due kanji cards in the same priority order as vocabulary.
+func get_due_kanji_cards() -> Array[KanjiCard]:
+	var today := GameController.get_current_date()
+	var due: Array[KanjiCard] = []
+	for card in kanji_cards:
+		if card.is_due(today):
+			due.append(card)
+	due.sort_custom(_sort_by_priority)
+	return due
+
+
+## Creates kanji cards not already present in the deck.
+func add_new_kanji_cards(characters: PackedStringArray) -> Array[KanjiCard]:
+	var existing: Dictionary = {}
+	for card in kanji_cards:
+		existing[card.character] = true
+	var new_cards: Array[KanjiCard] = []
+	for character in characters:
+		if existing.has(character):
+			continue
+		var card := KanjiCard.new()
+		card.setup(character)
+		card.ease_factor = 2.5
+		card.interval = 0.0
+		card.repetitions = 0
+		card.next_review_date = ""
+		kanji_cards.append(card)
+		new_cards.append(card)
+	return new_cards
+
+
+func get_kanji_card(character: String) -> KanjiCard:
+	for card in kanji_cards:
+		if card.character == character:
+			return card
+	return null
+
+
+func get_due_kanji_count() -> int:
+	return get_due_kanji_cards().size()
 
 
 ## Returns the total number of cards in the deck.

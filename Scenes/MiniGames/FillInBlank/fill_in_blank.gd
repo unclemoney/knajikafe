@@ -27,6 +27,7 @@ var _is_answering: bool = false
 
 ## The correct answer text for the current question.
 var _correct_answer: String = ""
+var _current_skill: String = "meaning"
 
 
 func _ready() -> void:
@@ -38,6 +39,10 @@ func _ready() -> void:
 	feedback_label.add_theme_font_override("font", JAPANESE_FONT)
 	cat_label.text = "🐱"
 	_setup_session()
+
+
+func _get_session_filters() -> Dictionary:
+	return {"require_examples": true}
 
 
 func _on_session_ready() -> void:
@@ -60,6 +65,7 @@ func _show_question() -> void:
 
 	# Try to use an example sentence
 	var used_sentence := false
+	_current_skill = "meaning"
 	if word.example_sentences.size() > 0:
 		var sentence_pair: String = word.example_sentences[randi() % word.example_sentences.size()]
 		var parts := sentence_pair.split("|")
@@ -74,6 +80,7 @@ func _show_question() -> void:
 				hint_label.text = en_sentence
 				hint_label.visible = true
 				_correct_answer = display_text
+				_current_skill = "context"
 				used_sentence = true
 
 	# Fallback: "Which word means [English]?"
@@ -86,7 +93,7 @@ func _show_question() -> void:
 	var choices: Array[String] = [_correct_answer]
 
 	var exclude := PackedStringArray([word.id])
-	var distractors := VocabDatabase.get_random_words(10, exclude)
+	var distractors := VocabDatabase.get_random_words(10, exclude, {"jlpt_level": word.jlpt_level})
 	distractors.shuffle()
 
 	for d in distractors:
@@ -131,10 +138,7 @@ func _on_answer_pressed(index: int) -> void:
 		TweenFX.pop_in(feedback_label, 0.3)
 		TweenFX.hop(cat_label, 0.4)
 
-		var quality := SRSEngine.Quality.GOOD
-		if card.repetitions == 0:
-			quality = SRSEngine.Quality.EASY
-		_report_correct(card, quality)
+		_report_correct(card, SRSEngine.Quality.GOOD, _current_skill)
 	else:
 		answer_btns[index].modulate = Color(0.9, 0.3, 0.3)
 		for btn in answer_btns:
@@ -142,7 +146,7 @@ func _on_answer_pressed(index: int) -> void:
 				btn.modulate = Color(0.3, 0.9, 0.3)
 		feedback_label.text = "It was: %s" % _correct_answer
 		cat_label.text = "🐱 💦"
-		_report_incorrect(card)
+		_report_incorrect(card, _current_skill)
 		AudioManager.play_wrong()
 		TweenFX.shake(feedback_label, 0.3, 5.0)
 

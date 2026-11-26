@@ -78,7 +78,7 @@ var _minimize_btn: Button = null
 
 
 func _ready() -> void:
-	custom_minimum_size = Vector2(320, 180)
+	custom_minimum_size = Vector2(320, 160)
 
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color(0.12, 0.09, 0.07, 0.95)
@@ -142,7 +142,8 @@ func _ready() -> void:
 
 	# Kana grid
 	_grid = GridContainer.new()
-	_grid.columns = 5
+	_grid.columns = 10
+	_grid.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	_grid.add_theme_constant_override("h_separation", 2)
 	_grid.add_theme_constant_override("v_separation", 2)
 	_content_vbox.add_child(_grid)
@@ -170,7 +171,7 @@ func _rebuild_grid() -> void:
 		for kana in row:
 			if kana == "":
 				var spacer := Control.new()
-				spacer.custom_minimum_size = Vector2(28, 24)
+				spacer.custom_minimum_size = Vector2(28, 22)
 				_grid.add_child(spacer)
 			else:
 				_grid.add_child(_make_kana_btn(kana))
@@ -181,7 +182,7 @@ func _make_kana_btn(kana: String) -> Button:
 	var btn := Button.new()
 	btn.text = kana
 	btn.add_theme_font_override("font", JAPANESE_FONT)
-	btn.custom_minimum_size = Vector2(28, 24)
+	btn.custom_minimum_size = Vector2(28, 22)
 	btn.add_theme_font_size_override("font_size", 11)
 	btn.pressed.connect(_on_kana_pressed.bind(kana))
 
@@ -236,8 +237,8 @@ func _on_minimize_toggled() -> void:
 		offset_top = -32
 	else:
 		_minimize_btn.text = "▼ Hide Keyboard"
-		custom_minimum_size = Vector2(320, 180)
-		offset_top = -185
+		custom_minimum_size = Vector2(320, 160)
+		offset_top = -170
 
 
 func _on_dakuten_toggled() -> void:

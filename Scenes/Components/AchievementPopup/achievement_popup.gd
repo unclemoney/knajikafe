@@ -54,11 +54,14 @@ func _build_ui() -> void:
 	_panel = PanelContainer.new()
 	_panel.visible = false
 	_panel.set_anchors_preset(Control.PRESET_CENTER_TOP)
+	_panel.anchor_bottom = 0.0
 	_panel.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	_panel.grow_vertical = Control.GROW_DIRECTION_BEGIN
 	_panel.offset_top = 8.0
 	_panel.offset_left = -140.0
 	_panel.offset_right = 140.0
-	_panel.offset_bottom = 60.0
+	_panel.offset_bottom = 80.0
+	_panel.custom_minimum_size = Vector2(280, 72)
 
 	var stylebox := StyleBoxFlat.new()
 	stylebox.bg_color = Color(0.15, 0.12, 0.08, 0.95)
@@ -81,8 +84,10 @@ func _build_ui() -> void:
 	_desc_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_desc_label.add_theme_color_override("font_color", Color(0.9, 0.85, 0.7, 1.0))
 	_desc_label.add_theme_font_size_override("font_size", 9)
+	_desc_label.custom_minimum_size = Vector2(250, 18)
 	_desc_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	vbox.add_child(_desc_label)
 
 	_panel.add_child(vbox)
 	add_child(_panel)
+	_panel.size = Vector2(280, 72)

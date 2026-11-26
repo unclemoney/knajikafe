@@ -99,8 +99,8 @@ func _load_cats() -> void:
 	dir.list_dir_begin()
 	var file_name := dir.get_next()
 	while file_name != "":
-		if file_name.ends_with(".tres"):
-			var cat := load(CAT_DIR + file_name) as CatCharacter
+		if file_name.ends_with(".tres") or file_name.ends_with(".tres.remap"):
+			var cat := load(CAT_DIR + file_name.trim_suffix(".remap")) as CatCharacter
 			if cat != null:
 				_all_cats.append(cat)
 		file_name = dir.get_next()
@@ -201,8 +201,8 @@ func _load_decorations() -> void:
 	dir.list_dir_begin()
 	var file_name := dir.get_next()
 	while file_name != "":
-		if file_name.ends_with(".tres"):
-			var decor := load(DECOR_DIR + file_name) as CafeDecoration
+		if file_name.ends_with(".tres") or file_name.ends_with(".tres.remap"):
+			var decor := load(DECOR_DIR + file_name.trim_suffix(".remap")) as CafeDecoration
 			if decor != null:
 				_all_decorations.append(decor)
 		file_name = dir.get_next()
@@ -297,35 +297,36 @@ func _on_flashcard_pressed() -> void:
 	GameController.change_scene("res://Scenes/MiniGames/FlashcardReview/flashcard_review.tscn")
 
 
-## Starts the Kanji Matching game.
+## Opens Table activity selection.
 func _on_matching_pressed() -> void:
-	var profile := GameController.current_profile
-	if profile == null:
-		return
-
-	GameController.session_data = {
-		"game_type": "kanji_matching",
-		"words_per_session": 6,
-	}
-
-	matching_btn.disabled = true
-	GameController.change_scene("res://Scenes/MiniGames/KanjiMatching/kanji_matching.tscn")
+	_show_mode_picker("Table Activities", [
+		{"name": "Kanji Matching", "description": "Match vocabulary and meanings", "config": {"game_type": "kanji_matching", "words_per_session": 6, "scene_path": "res://Scenes/MiniGames/KanjiMatching/kanji_matching.tscn"}},
+		{"name": "Kanji Workshop", "description": "Practice kanji meaning, readings, and form", "config": {"game_type": "kanji_workshop", "words_per_session": 8, "scene_path": "res://Scenes/MiniGames/KanjiWorkshop/kanji_workshop.tscn"}},
+	])
 
 
-## Starts the Fill in the Blank game.
+## Opens Bookshelf activity selection.
 func _on_fill_blank_pressed() -> void:
 	var profile := GameController.current_profile
 	if profile == null:
 		return
-
 	var words_per_session: int = profile.settings.get("words_per_session", 10)
-	GameController.session_data = {
-		"game_type": "fill_in_blank",
-		"words_per_session": words_per_session,
-	}
+	_show_mode_picker("Bookshelf Activities", [
+		{"name": "Fill in the Blank", "description": "Complete Japanese sentences", "config": {"game_type": "fill_in_blank", "words_per_session": words_per_session, "scene_path": "res://Scenes/MiniGames/FillInBlank/fill_in_blank.tscn"}},
+		{"name": "Reading Shelf", "description": "Read short passages and answer questions", "config": {"game_type": "reading_shelf", "words_per_session": 5, "scene_path": "res://Scenes/MiniGames/ReadingShelf/reading_shelf.tscn"}},
+	])
 
-	fill_blank_btn.disabled = true
-	GameController.change_scene("res://Scenes/MiniGames/FillInBlank/fill_in_blank.tscn")
+
+func _show_mode_picker(title: String, options: Array) -> void:
+	var picker := StationModePicker.new()
+	add_child(picker)
+	picker.mode_selected.connect(_on_station_mode_selected)
+	picker.open(title, options)
+
+
+func _on_station_mode_selected(config: Dictionary) -> void:
+	GameController.session_data = config.duplicate(true)
+	GameController.change_scene(config["scene_path"])
 
 
 ## Starts the Typing Input game.

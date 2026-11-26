@@ -15,6 +15,7 @@ extends Control
 @onready var sfx_value_label: Label = $Panel/VBox/AudioSection/SFXRow/SFXValue
 
 @onready var words_spin: SpinBox = $Panel/VBox/SessionSection/WordsRow/WordsSpinBox
+@onready var target_option: OptionButton = $Panel/VBox/SessionSection/WordsRow/TargetOption
 
 @onready var preview_display: VocabDisplay = $Panel/VBox/PreviewSection/VocabDisplay
 
@@ -27,6 +28,9 @@ var _preview_word: VocabWord = null
 
 
 func _ready() -> void:
+	target_option.add_item("N5", 5)
+	target_option.add_item("N4", 4)
+	target_option.add_item("Mixed", 0)
 	save_btn.pressed.connect(_on_save_pressed)
 	back_btn.pressed.connect(_on_back_pressed)
 
@@ -59,6 +63,8 @@ func _load_settings() -> void:
 	_update_volume_labels()
 
 	words_spin.value = s.get("words_per_session", 10)
+	var target_level := int(s.get("target_jlpt_level", 5))
+	target_option.select(target_option.get_item_index(target_level))
 
 	status_label.text = ""
 
@@ -104,6 +110,7 @@ func _on_save_pressed() -> void:
 	profile.settings["bgm_volume"] = bgm_slider.value / 100.0
 	profile.settings["sfx_volume"] = sfx_slider.value / 100.0
 	profile.settings["words_per_session"] = int(words_spin.value)
+	profile.settings["target_jlpt_level"] = target_option.get_selected_id()
 
 	AudioManager.apply_profile_settings(profile)
 	SaveManager.save_profile(profile)

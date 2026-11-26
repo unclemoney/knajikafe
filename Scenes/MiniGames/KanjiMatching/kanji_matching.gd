@@ -31,6 +31,7 @@ var _first_flip: int = -1
 var _second_flip: int = -1
 var _is_checking: bool = false
 var _matches_found: int = 0
+var _pair_mistakes: Dictionary = {}
 
 
 func _ready() -> void:
@@ -42,6 +43,10 @@ func _ready() -> void:
 	config["words_per_session"] = PAIR_COUNT
 	GameController.session_data = config
 	_setup_session()
+
+
+func _get_new_card_limit() -> int:
+	return PAIR_COUNT
 
 
 func _on_session_ready() -> void:
@@ -126,7 +131,10 @@ func _check_match() -> void:
 		_matches_found += 1
 		var word_idx: int = data_a["word_index"]
 		var card := _session_cards[word_idx]
-		_report_correct(card)
+		var quality := SRSEngine.Quality.GOOD
+		if _pair_mistakes.get(word_idx, 0) > 0:
+			quality = SRSEngine.Quality.HARD
+		_report_correct(card, quality, "meaning")
 		AudioManager.play_correct()
 		TweenFX.pop_in(feedback_label, 0.3)
 
@@ -149,6 +157,9 @@ func _check_match() -> void:
 			await get_tree().create_timer(0.8).timeout
 			_finish_session()
 	else:
+		for data in [data_a, data_b]:
+			var word_idx: int = data["word_index"]
+			_pair_mistakes[word_idx] = _pair_mistakes.get(word_idx, 0) + 1
 		feedback_label.text = "Not a match!"
 		cat_label.text = "🐱 💦"
 		AudioManager.play_wrong()

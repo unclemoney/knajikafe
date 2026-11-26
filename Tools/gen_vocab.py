@@ -261,6 +261,149 @@ N4_WORDS = [
 ]
 
 
+N5_EXAMPLES = {
+    "n5_001": ["こんにちは、田中さん。|Hello, Tanaka."],
+    "n5_002": ["ありがとう、先生。|Thank you, teacher."],
+    "n5_003": ["すみません、駅はどこですか。|Excuse me, where is the station?"],
+    "n5_004": ["おはよう、お母さん。|Good morning, Mom."],
+    "n5_005": ["さようなら、また明日。|Goodbye, see you tomorrow."],
+    "n5_006": ["おやすみなさい、お父さん。|Good night, Dad."],
+    "n5_007": ["ご飯をいただきます。|Thank you for the meal; let's eat."],
+    "n5_008": ["ごちそうさま、お母さん。|Thank you for the meal, Mom."],
+    "n5_009": ["はい、学生です。|Yes, I am a student."],
+    "n5_010": ["いいえ、先生ではありません。|No, I am not a teacher."],
+    "n5_011": ["私は水を飲む。|I drink water."],
+    "n5_012": ["私はお茶を飲む。|I drink tea."],
+    "n5_013": ["私はご飯を食べる。|I eat rice."],
+    "n5_014": ["私はパンを買う。|I buy bread."],
+    "n5_015": ["私は卵を食べる。|I eat an egg."],
+    "n5_016": ["私は魚を食べる。|I eat fish."],
+    "n5_017": ["私は肉を食べる。|I eat meat."],
+    "n5_018": ["私は野菜を食べる。|I eat vegetables."],
+    "n5_019": ["私は果物を買う。|I buy fruit."],
+    "n5_020": ["私は牛乳を飲む。|I drink milk."],
+    "n5_021": ["一つを買う。|I buy one."],
+    "n5_022": ["二つを買う。|I buy two."],
+    "n5_023": ["三つを買う。|I buy three."],
+    "n5_024": ["四つを買う。|I buy four."],
+    "n5_025": ["五つを買う。|I buy five."],
+    "n5_026": ["六つを買う。|I buy six."],
+    "n5_027": ["七つを買う。|I buy seven."],
+    "n5_028": ["八つを買う。|I buy eight."],
+    "n5_029": ["九つを買う。|I buy nine."],
+    "n5_030": ["十個を買う。|I buy ten."],
+    "n5_031": ["あの人は先生です。|That person is a teacher."],
+    "n5_032": ["あの男の人は学生です。|That man is a student."],
+    "n5_033": ["あの女の人は先生です。|That woman is a teacher."],
+    "n5_034": ["子供は公園にいる。|The child is in the park."],
+    "n5_035": ["友達と話す。|I talk with a friend."],
+    "n5_036": ["先生は学校にいる。|The teacher is at school."],
+    "n5_037": ["学生は本を読む。|The student reads a book."],
+    "n5_038": ["私は本を読む。|I read a book."],
+    "n5_039": ["車で駅に行く。|I go to the station by car."],
+    "n5_040": ["猫は私の友達です。|The cat is my friend."],
+    "n5_041": ["犬は公園にいる。|The dog is in the park."],
+    "n5_042": ["花を買う。|I buy a flower."],
+    "n5_043": ["私は山を見る。|I look at the mountain."],
+    "n5_044": ["川は山の前です。|The river is in front of the mountain."],
+    "n5_045": ["目を閉じます。|I close my eyes."],
+    "n5_046": ["手を上げます。|I raise my hand."],
+    "n5_047": ["足が痛いです。|My foot hurts."],
+    "n5_048": ["口を開けます。|I open my mouth."],
+    "n5_049": ["耳が大きい。|My ears are big."],
+    "n5_050": ["頭が痛いです。|My head hurts."],
+    "n5_051": ["お父さんは会社員です。|My father is a company employee."],
+    "n5_052": ["お母さんは先生です。|My mother is a teacher."],
+    "n5_053": ["お兄さんは学生です。|My older brother is a student."],
+    "n5_054": ["お姉さんは会社員です。|My older sister is a company employee."],
+    "n5_055": ["弟は学生です。|My younger brother is a student."],
+    "n5_056": ["妹は学生です。|My younger sister is a student."],
+    "n5_057": ["私の家族です。|This is my family."],
+    "n5_058": ["彼の奥さんは先生です。|His wife is a teacher."],
+    "n5_059": ["主人は会社員です。|My husband is a company employee."],
+    "n5_060": ["赤ちゃんは夜寝ます。|The baby sleeps at night."],
+    "n5_061": ["私は卵を食べる。|I eat an egg."],
+    "n5_062": ["私は水を飲む。|I drink water."],
+    "n5_063": ["私は学校に行く。|I go to school."],
+    "n5_064": ["友達が家に来る。|My friend comes to my house."],
+    "n5_065": ["私は山を見る。|I look at the mountain."],
+    "n5_066": ["私は先生に聞く。|I ask the teacher."],
+    "n5_067": ["私は本に書く。|I write in the book."],
+    "n5_068": ["私は本を読む。|I read a book."],
+    "n5_069": ["私は友達と話す。|I talk with my friend."],
+    "n5_070": ["私はパンを買う。|I buy bread."],
+    "n5_071": ["私は駅で待つ。|I wait at the station."],
+    "n5_072": ["私は先生の前に立つ。|I stand in front of the teacher."],
+    "n5_073": ["私は椅子に座る。|I sit on the chair."],
+    "n5_074": ["私は公園を走る。|I run through the park."],
+    "n5_075": ["私は駅まで歩く。|I walk to the station."],
+    "n5_076": ["私はご飯を作る。|I make a meal."],
+    "n5_077": ["この本は大きい。|This book is big."],
+    "n5_078": ["この猫は小さい。|This cat is small."],
+    "n5_079": ["これは新しい本です。|This is a new book."],
+    "n5_080": ["これは古い車です。|This is an old car."],
+    "n5_081": ["この車は高い。|This car is expensive."],
+    "n5_082": ["このパンは安い。|This bread is cheap."],
+    "n5_083": ["この川は長い。|This river is long."],
+    "n5_084": ["これは短い本です。|This is a short book."],
+    "n5_085": ["この店は良い。|This shop is good."],
+    "n5_086": ["それは悪い本です。|That is a bad book."],
+    "n5_087": ["今日は暑い。|Today is hot."],
+    "n5_088": ["今日は寒い。|Today is cold."],
+    "n5_089": ["このご飯はおいしい。|This meal is delicious."],
+    "n5_090": ["このゲームは楽しい。|This game is fun."],
+    "n5_091": ["今日は暑い。|Today is hot."],
+    "n5_092": ["明日は学校に行く。|I will go to school tomorrow."],
+    "n5_093": ["昨日は雨でした。|It rained yesterday."],
+    "n5_094": ["今は朝です。|It is morning now."],
+    "n5_095": ["朝は寒い。|Mornings are cold."],
+    "n5_096": ["夜は静かです。|Nights are quiet."],
+    "n5_097": ["学校は大きい。|The school is big."],
+    "n5_098": ["駅はここです。|The station is here."],
+    "n5_099": ["病院はあそこです。|The hospital is over there."],
+    "n5_100": ["銀行は駅の前です。|The bank is in front of the station."],
+    "n5_101": ["図書館で本を読む。|I read a book at the library."],
+    "n5_102": ["郵便局は駅の右です。|The post office is to the right of the station."],
+    "n5_103": ["公園は広いです。|The park is spacious."],
+    "n5_104": ["このお店は大きい。|This shop is big."],
+    "n5_105": ["今日は天気が良い。|The weather is good today."],
+    "n5_106": ["今日は雨です。|It is rainy today."],
+    "n5_107": ["雪は白いです。|Snow is white."],
+    "n5_108": ["風が強いです。|The wind is strong."],
+    "n5_109": ["私は空を見る。|I look at the sky."],
+    "n5_110": ["海は大きい。|The sea is big."],
+    "n5_111": ["電車で学校に行く。|I go to school by train."],
+    "n5_112": ["バスで駅に行く。|I go to the station by bus."],
+    "n5_113": ["自転車で公園に行く。|I go to the park by bicycle."],
+    "n5_114": ["右に曲がります。|I turn right."],
+    "n5_115": ["左に曲がります。|I turn left."],
+    "n5_116": ["本は机の上です。|The book is on the desk."],
+    "n5_117": ["猫は机の下です。|The cat is under the desk."],
+    "n5_118": ["銀行は駅の前です。|The bank is in front of the station."],
+    "n5_119": ["公園は学校の後ろです。|The park is behind the school."],
+    "n5_120": ["猫は箱の中です。|The cat is inside the box."],
+}
+
+
+def validate_n5_examples(words):
+    expected_ids = {word[0] for word in words}
+    if set(N5_EXAMPLES) != expected_ids:
+        missing = sorted(expected_ids - set(N5_EXAMPLES))
+        extra = sorted(set(N5_EXAMPLES) - expected_ids)
+        raise ValueError(f"N5 example ID mismatch; missing={missing}, extra={extra}")
+    for word in words:
+        examples = N5_EXAMPLES[word[0]]
+        display = word[1] or word[2] or word[3]
+        if not examples:
+            raise ValueError(f"Missing N5 example for {word[0]}")
+        for example in examples:
+            parts = example.split("|")
+            if len(parts) != 2 or not parts[0].strip() or not parts[1].strip():
+                raise ValueError(f"Malformed example for {word[0]}: {example}")
+            if display not in parts[0]:
+                raise ValueError(f"Example for {word[0]} does not contain {display}")
+
+
 def generate_json(words, jlpt_level):
     """Generate a JSON-serializable list of word dictionaries."""
     result = []
@@ -275,7 +418,7 @@ def generate_json(words, jlpt_level):
             "english_meanings": meanings,
             "jlpt_level": jlpt_level,
             "categories": categories,
-            "example_sentences": [],
+            "example_sentences": N5_EXAMPLES.get(wid, []) if jlpt_level == 5 else [],
             "part_of_speech": pos,
         })
     return result
@@ -283,6 +426,7 @@ def generate_json(words, jlpt_level):
 
 def main():
     os.makedirs(VOCAB_DIR, exist_ok=True)
+    validate_n5_examples(N5_WORDS)
 
     # Generate N5
     n5_data = generate_json(N5_WORDS, 5)

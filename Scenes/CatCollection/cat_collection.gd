@@ -33,8 +33,8 @@ func _load_cats() -> void:
 	dir.list_dir_begin()
 	var file_name := dir.get_next()
 	while file_name != "":
-		if file_name.ends_with(".tres"):
-			var cat := load(CAT_DIR + file_name) as CatCharacter
+		if file_name.ends_with(".tres") or file_name.ends_with(".tres.remap"):
+			var cat := load(CAT_DIR + file_name.trim_suffix(".remap")) as CatCharacter
 			if cat != null:
 				_all_cats.append(cat)
 		file_name = dir.get_next()

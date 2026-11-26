@@ -1,16 +1,12 @@
 extends MiniGameBase
-## cafe_orders.gd
-##
-## Cat Cafe Orders mini-game.
-## A customer cat appears with a Japanese food/drink order in a speech bubble.
-## Player selects the correct item from a shelf of 4 choices.
-## Timed rounds — countdown per order. Faster correct answers earn bonus XP.
+## Audio-first café listening with explicit assisted fallbacks.
 
-## Time in seconds per order.
-const ORDER_TIME: float = 10.0
+const ORDER_TIME := 12.0
 
 @onready var cat_speech_label: Label = $GameArea/SpeechBubble/SpeechLabel
 @onready var order_meaning_label: Label = $GameArea/SpeechBubble/MeaningLabel
+@onready var replay_btn: Button = $GameArea/ControlRow/ReplayBtn
+@onready var assist_btn: Button = $GameArea/ControlRow/AssistBtn
 @onready var timer_bar: ProgressBar = $GameArea/TimerBar
 @onready var item_btns: Array[Button] = [
 	$GameArea/ShelfGrid/Item1,
@@ -21,158 +17,215 @@ const ORDER_TIME: float = 10.0
 @onready var feedback_label: Label = $GameArea/FeedbackLabel
 @onready var progress_label: Label = $TopBar/ProgressLabel
 @onready var score_label: Label = $TopBar/ScoreLabel
-@onready var cat_label: Label = $CatReaction/CatLabel
 
-## Timer state.
-var _time_remaining: float = 0.0
-var _timer_active: bool = false
-var _is_answering: bool = false
-
-## Correct answer index in item_btns.
-var _correct_btn_index: int = 0
+var _session_menu: Array = []
+var _choices: Array = []
+var _correct_btn_index := 0
+var _time_remaining := 0.0
+var _timer_active := false
+var _audio_active := false
+var _is_answering := false
+var _assisted := false
+var _replay_count := 0
 
 
 func _ready() -> void:
 	for i in item_btns.size():
 		item_btns[i].pressed.connect(_on_item_pressed.bind(i))
-
-	feedback_label.text = ""
-	cat_label.text = "🐱"
-	timer_bar.max_value = ORDER_TIME
-	timer_bar.value = ORDER_TIME
+	replay_btn.pressed.connect(_on_replay_pressed)
+	assist_btn.pressed.connect(_on_assist_pressed)
+	AudioManager.speech_finished.connect(_on_speech_finished)
 	_setup_session()
 
 
+func _get_item_label() -> String:
+	return "Orders"
+
+
+func _populate_session(_config: Dictionary) -> void:
+	var desired := mini(10, _words_per_session)
+	var used: Dictionary = {}
+	for card in SRSEngine.get_due_cards():
+		if _session_menu.size() >= desired:
+			break
+		var item := VocabDatabase.get_menu_item(card.vocab_id)
+		if not item.is_empty():
+			_add_menu_item(item, card)
+			used[card.vocab_id] = true
+	var candidates := VocabDatabase.cafe_menu.duplicate(true)
+	candidates.shuffle()
+	var new_count := 0
+	for item in candidates:
+		if _session_menu.size() >= desired or new_count >= MAX_NEW_CARDS_PER_SESSION:
+			break
+		var vocab_id: String = item["vocab_id"]
+		if used.has(vocab_id) or SRSEngine.get_card_for_vocab(vocab_id):
+			continue
+		var created := SRSEngine.add_new_cards(PackedStringArray([vocab_id]))
+		if not created.is_empty():
+			_add_menu_item(item, created[0])
+			used[vocab_id] = true
+			new_count += 1
+	_session_item_count = _session_menu.size()
+
+
+func _add_menu_item(item: Dictionary, card: SRSCard) -> void:
+	var word := VocabDatabase.get_word_by_id(item["vocab_id"])
+	if word:
+		_session_menu.append(item)
+		_session_words.append(word)
+		_session_cards.append(card)
+
+
 func _on_session_ready() -> void:
-	if _words_per_session == 0:
-		feedback_label.text = "No words available!"
+	if _session_menu.is_empty():
+		feedback_label.text = "No café menu items available."
 		return
 	_show_question()
 
 
 func _process(delta: float) -> void:
-	if not _timer_active:
+	if not _timer_active or _audio_active:
 		return
 	_time_remaining -= delta
 	timer_bar.value = _time_remaining
 	if _time_remaining <= 0.0:
-		_timer_active = false
-		_on_time_up()
+		_finish_answer(-1)
 
 
-## Displays the current order.
 func _show_question() -> void:
 	_is_answering = true
+	_assisted = false
+	_audio_active = false
+	_timer_active = false
+	_replay_count = 0
+	_time_remaining = ORDER_TIME
 	feedback_label.text = ""
-	cat_label.text = "🐱 💬"
+	cat_speech_label.text = "Listen to the order"
 	order_meaning_label.visible = false
-
-	var word := _session_words[_current_index]
-	progress_label.text = "Order %d / %d" % [_current_index + 1, _words_per_session]
+	assist_btn.disabled = false
+	replay_btn.disabled = false
+	progress_label.text = "Order %d / %d" % [_current_index + 1, _session_menu.size()]
 	score_label.text = "Score: %d" % _correct_count
+	_build_choices()
+	_play_order()
 
-	# Cat says the word in Japanese
-	cat_speech_label.text = word.get_display_text()
 
-	# Build choices
-	var correct_text := word.get_primary_meaning()
-	var choices: Array[String] = [correct_text]
-
-	var exclude := PackedStringArray([word.id])
-	var distractors := VocabDatabase.get_random_words(10, exclude)
-	distractors.shuffle()
-
-	for d in distractors:
-		if choices.size() >= 4:
-			break
-		var m := d.get_primary_meaning()
-		if m != "" and m != correct_text and m not in choices:
-			choices.append(m)
-
-	# Pad if needed
-	var fallbacks: Array[String] = ["???", "...", "---"]
-	var fi := 0
-	while choices.size() < 4:
-		choices.append(fallbacks[fi % fallbacks.size()])
-		fi += 1
-
-	choices.shuffle()
-	_correct_btn_index = choices.find(correct_text)
-
+func _build_choices() -> void:
+	var correct: Dictionary = _session_menu[_current_index]
+	_choices = [correct]
+	var candidates := VocabDatabase.cafe_menu.duplicate(true)
+	candidates.shuffle()
+	for item in candidates:
+		if item["vocab_id"] != correct["vocab_id"] and _choices.size() < 4:
+			_choices.append(item)
+	_choices.shuffle()
+	_correct_btn_index = _choices.find(correct)
 	for i in 4:
-		item_btns[i].text = choices[i]
+		item_btns[i].text = ""
+		item_btns[i].icon = load(_choices[i]["texture"])
+		item_btns[i].icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		item_btns[i].disabled = false
 		item_btns[i].modulate = Color.WHITE
+		item_btns[i].tooltip_text = ""
 
-	# Start timer
-	_time_remaining = ORDER_TIME
-	timer_bar.value = ORDER_TIME
+
+func _play_order() -> void:
+	if not _is_answering:
+		return
+	var item: Dictionary = _session_menu[_current_index]
+	if AudioManager.play_speech(item["order_clip"]):
+		_audio_active = true
+		_timer_active = false
+		cat_speech_label.text = "Listen…" if not _assisted else item.get("order_text", "")
+	else:
+		_activate_assist("Audio unavailable — assisted Meaning practice.")
+
+
+func _on_speech_finished(clip_id: String) -> void:
+	if not _is_answering:
+		return
+	var item: Dictionary = _session_menu[_current_index]
+	if clip_id == item["order_clip"]:
+		_audio_active = false
+		_start_timer()
+
+
+func _start_timer() -> void:
+	if not _is_answering or _audio_active:
+		return
+	if _time_remaining <= 0.0:
+		_time_remaining = ORDER_TIME
+	timer_bar.value = _time_remaining
 	_timer_active = true
 
 
-## Called when a shelf item is pressed.
+func _on_replay_pressed() -> void:
+	if _is_answering:
+		_replay_count += 1
+		_play_order()
+
+
+func _on_assist_pressed() -> void:
+	if _is_answering:
+		_activate_assist("Assisted: this attempt records Meaning, not Listening.")
+
+
+func _activate_assist(message: String) -> void:
+	if _assisted:
+		return
+	_assisted = true
+	AudioManager.stop_speech()
+	_audio_active = false
+	var word := _session_words[_current_index]
+	cat_speech_label.text = word.get_display_text()
+	order_meaning_label.text = word.get_primary_meaning()
+	order_meaning_label.visible = true
+	feedback_label.text = message
+	assist_btn.disabled = true
+	_start_timer()
+
+
 func _on_item_pressed(index: int) -> void:
+	if _is_answering:
+		_finish_answer(index)
+
+
+func _finish_answer(index: int) -> void:
 	if not _is_answering:
 		return
 	_is_answering = false
 	_timer_active = false
-
+	_audio_active = false
+	AudioManager.stop_speech()
 	var card := _session_cards[_current_index]
 	var word := _session_words[_current_index]
-
-	for btn in item_btns:
-		btn.disabled = true
-
-	if index == _correct_btn_index:
-		item_btns[index].modulate = Color(0.3, 0.9, 0.3)
-		feedback_label.text = "Correct order! 🍵"
-		cat_label.text = "🐱 ✨"
-		AudioManager.play_correct()
-		TweenFX.pop_in(feedback_label, 0.3)
-		TweenFX.hop(cat_label, 0.4)
-
-		# Faster answers = better quality
-		var quality := SRSEngine.Quality.GOOD
-		if _time_remaining > ORDER_TIME * 0.7:
-			quality = SRSEngine.Quality.EASY
-		_report_correct(card, quality)
+	var correct := index == _correct_btn_index
+	for button in item_btns:
+		button.disabled = true
+	for i in 4:
+		item_btns[i].text = _choices[i]["label"]
+		item_btns[i].tooltip_text = _choices[i]["label"]
+	item_btns[_correct_btn_index].modulate = Color(0.35, 0.85, 0.4)
+	var skill := "meaning" if _assisted else "listening"
+	if _assisted:
+		_register_assist()
+	if correct:
+		_report_correct(card, SRSEngine.Quality.GOOD, skill)
+		feedback_label.text = "Correct order!"
 	else:
-		item_btns[index].modulate = Color(0.9, 0.3, 0.3)
-		item_btns[_correct_btn_index].modulate = Color(0.3, 0.9, 0.3)
-		feedback_label.text = "Wrong! It was: %s" % word.get_primary_meaning()
-		cat_label.text = "🐱 💢"
-		AudioManager.play_wrong()
-		TweenFX.shake(feedback_label, 0.3, 5.0)
-		_report_incorrect(card)
-
-	order_meaning_label.text = "(%s)" % word.get_primary_meaning()
+		if index >= 0:
+			item_btns[index].modulate = Color(0.9, 0.3, 0.3)
+		_report_incorrect(card, skill)
+		feedback_label.text = "Time's up." if index < 0 else "Wrong item."
+	cat_speech_label.text = word.get_display_text()
+	order_meaning_label.text = word.get_primary_meaning()
 	order_meaning_label.visible = true
-
-	await get_tree().create_timer(FEEDBACK_DELAY).timeout
+	replay_btn.disabled = true
+	assist_btn.disabled = true
+	await get_tree().create_timer(1.8).timeout
 	_advance()
 
 
-## Called when the timer runs out.
-func _on_time_up() -> void:
-	if not _is_answering:
-		return
-	_is_answering = false
-
-	var card := _session_cards[_current_index]
-	var word := _session_words[_current_index]
-
-	for btn in item_btns:
-		btn.disabled = true
-
-	item_btns[_correct_btn_index].modulate = Color(0.3, 0.9, 0.3)
-	feedback_label.text = "Time's up! It was: %s" % word.get_primary_meaning()
-	cat_label.text = "🐱 💤"
-	AudioManager.play_wrong()
-	TweenFX.shake(feedback_label, 0.3, 5.0)
-	_report_incorrect(card)
-
-	order_meaning_label.text = "(%s)" % word.get_primary_meaning()
-	order_meaning_label.visible = true
-
-	await get_tree().create_timer(FEEDBACK_DELAY).timeout
-	_advance()
+func _exit_tree() -> void:
+	AudioManager.stop_speech()

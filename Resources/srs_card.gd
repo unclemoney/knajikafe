@@ -29,6 +29,9 @@ class_name SRSCard
 ## Total number of correct answers (quality >= 3).
 @export var correct_reviews: int = 0
 
+## SkillEvidence objects keyed by meaning, reading, or context.
+@export var skill_evidence: Dictionary = {}
+
 
 ## Returns true if this card is due for review (on or before the given date).
 func is_due(current_date: String) -> bool:

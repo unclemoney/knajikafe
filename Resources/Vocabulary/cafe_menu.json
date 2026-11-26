@@ -1,0 +1,12 @@
+[
+  {"vocab_id":"n5_011","label":"Water","order_text":"水をください。","order_clip":"order:n5_011","texture":"res://Art/MiniGames/CafeOrders/n5_011.png"},
+  {"vocab_id":"n5_012","label":"Tea","order_text":"お茶をください。","order_clip":"order:n5_012","texture":"res://Art/MiniGames/CafeOrders/n5_012.png"},
+  {"vocab_id":"n5_013","label":"Rice","order_text":"ご飯をください。","order_clip":"order:n5_013","texture":"res://Art/MiniGames/CafeOrders/n5_013.png"},
+  {"vocab_id":"n5_014","label":"Bread","order_text":"パンをください。","order_clip":"order:n5_014","texture":"res://Art/MiniGames/CafeOrders/n5_014.png"},
+  {"vocab_id":"n5_015","label":"Egg","order_text":"卵をください。","order_clip":"order:n5_015","texture":"res://Art/MiniGames/CafeOrders/n5_015.png"},
+  {"vocab_id":"n5_016","label":"Fish","order_text":"魚をください。","order_clip":"order:n5_016","texture":"res://Art/MiniGames/CafeOrders/n5_016.png"},
+  {"vocab_id":"n5_017","label":"Meat","order_text":"肉をください。","order_clip":"order:n5_017","texture":"res://Art/MiniGames/CafeOrders/n5_017.png"},
+  {"vocab_id":"n5_018","label":"Vegetables","order_text":"野菜をください。","order_clip":"order:n5_018","texture":"res://Art/MiniGames/CafeOrders/n5_018.png"},
+  {"vocab_id":"n5_019","label":"Fruit","order_text":"果物をください。","order_clip":"order:n5_019","texture":"res://Art/MiniGames/CafeOrders/n5_019.png"},
+  {"vocab_id":"n5_020","label":"Milk","order_text":"牛乳をください。","order_clip":"order:n5_020","texture":"res://Art/MiniGames/CafeOrders/n5_020.png"}
+]

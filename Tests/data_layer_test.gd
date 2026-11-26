@@ -30,6 +30,7 @@ func _on_run_all() -> void:
 	_test_vocab_database()
 	_test_production_resources()
 	_test_save_manager()
+	_test_learning_data_migration()
 	_test_srs_engine()
 	_cleanup()
 
@@ -62,7 +63,28 @@ func _test_vocab_database() -> void:
 
 	# Test: get_words_by_jlpt
 	var n5_words := VocabDatabase.get_words_by_jlpt(5)
-	_assert("get_words_by_jlpt(5) returns words", n5_words.size() > 0, "got %d" % n5_words.size())
+	_assert("N5 has 120 words", n5_words.size() == 120, "got %d" % n5_words.size())
+	var examples_valid := true
+	for n5_word in n5_words:
+		if n5_word.example_sentences.is_empty():
+			examples_valid = false
+		for example in n5_word.example_sentences:
+			var parts := example.split("|")
+			if parts.size() != 2 or n5_word.get_display_text() not in parts[0] or parts[1].strip_edges() == "":
+				examples_valid = false
+	_assert("All N5 examples are valid", examples_valid, "")
+	_assert("N5 has 100 kanji", VocabDatabase.get_kanji_count() == 100, "got %d" % VocabDatabase.get_kanji_count())
+	var kanji_entry := VocabDatabase.get_kanji("一")
+	_assert("Kanji fields load", kanji_entry != null and not kanji_entry.meanings.is_empty() and not kanji_entry.get_all_readings().is_empty(), "")
+	_assert("Reading passages load", VocabDatabase.reading_passages.size() == 30, "")
+	_assert("Cafe menu loads", VocabDatabase.cafe_menu.size() == 10, "")
+	_assert("Vocabulary speech available", AudioManager.has_speech("vocab:n5_001"), "")
+	_assert("Order speech available", AudioManager.has_speech("order:n5_011"), "")
+	var menu_resources_valid := true
+	for item in VocabDatabase.cafe_menu:
+		if not ResourceLoader.exists(item["texture"]):
+			menu_resources_valid = false
+	_assert("Menu textures load", menu_resources_valid, "")
 
 	# Test: get_words_by_category
 	var cafe_words := VocabDatabase.get_words_by_category("cafe")
@@ -88,11 +110,11 @@ func _test_vocab_database() -> void:
 	var all := VocabDatabase.get_all_words()
 	_assert("get_all_words() == get_word_count()", all.size() == count, "got %d vs %d" % [all.size(), count])
 
-	# Test: katakana word (coffee)
-	var coffee := VocabDatabase.get_word_by_id("n5_011")
-	if coffee:
-		_assert("Katakana word has katakana", coffee.katakana == "コーヒー", "got '%s'" % coffee.katakana)
-		_assert("Katakana word get_display_text()", coffee.get_display_text() == "コーヒー", "got '%s'" % coffee.get_display_text())
+	# Test: katakana word (bread)
+	var bread := VocabDatabase.get_word_by_id("n5_014")
+	if bread:
+		_assert("Katakana word has katakana", bread.katakana == "パン", "got '%s'" % bread.katakana)
+		_assert("Katakana word get_display_text()", bread.get_display_text() == "パン", "got '%s'" % bread.get_display_text())
 
 	# Test: word helper methods
 	if word:
@@ -101,7 +123,7 @@ func _test_vocab_database() -> void:
 
 	var kanji_word := VocabDatabase.get_word_by_id("n5_025")
 	if kanji_word:
-		_assert("get_display_text() returns kanji when present", kanji_word.get_display_text() == "食べる", "got '%s'" % kanji_word.get_display_text())
+		_assert("get_display_text() returns kanji when present", kanji_word.get_display_text() == "五", "got '%s'" % kanji_word.get_display_text())
 
 	_log("")
 
@@ -147,6 +169,8 @@ func _test_production_resources() -> void:
 		"res://Scenes/MiniGames/FillInBlank/fill_in_blank.tscn",
 		"res://Scenes/MiniGames/TypingInput/typing_input.tscn",
 		"res://Scenes/MiniGames/CafeOrders/cafe_orders.tscn",
+		"res://Scenes/MiniGames/ReadingShelf/reading_shelf.tscn",
+		"res://Scenes/MiniGames/KanjiWorkshop/kanji_workshop.tscn",
 		"res://Scenes/Results/results_screen.tscn",
 		"res://Scenes/Stats/stats_screen.tscn",
 	]
@@ -217,7 +241,7 @@ func _test_save_manager() -> void:
 	_assert("load_profile() returns non-null", loaded != null, "")
 	if loaded:
 		_assert("  loaded.xp == 250", loaded.xp == 250, "got %d" % loaded.xp)
-		_assert("  loaded.level == 3", loaded.level == 3, "got %d (expected 3 for xp=250)" % loaded.level)
+		_assert("  loaded.level == 2", loaded.level == 2, "got %d (expected 2 for xp=250)" % loaded.level)
 
 	# Test: SRS card save/load round-trip
 	var test_cards: Array = []
@@ -260,6 +284,102 @@ func _test_save_manager() -> void:
 	var after_delete := SaveManager.load_profile(TEST_PROFILE_NAME)
 	_assert("profile gone after delete", after_delete == null, "")
 
+	_log("")
+
+
+# ── Learning Data Migration Tests ─────────────────────────────────────
+
+
+func _test_learning_data_migration() -> void:
+	_log("[b]── Learning Data Migration ──[/b]")
+	SaveManager.delete_profile(TEST_PROFILE_NAME)
+	var profile := SaveManager.create_profile(TEST_PROFILE_NAME)
+	_assert("Create migration test profile", profile != null, "")
+	if profile == null:
+		return
+
+	profile.settings.erase("target_jlpt_level")
+	ResourceSaver.save(profile, "user://profiles/__test_profile__/profile.tres")
+	var defaulted_profile := SaveManager.load_profile(TEST_PROFILE_NAME)
+	_assert("Profile curriculum default", defaulted_profile.settings.get("target_jlpt_level", -1) == 5, "")
+
+	var legacy: Array = [{
+		"vocab_id": "n5_001",
+		"ease_factor": 2.3,
+		"interval": 6.0,
+		"repetitions": 2,
+		"next_review_date": "2026-01-08",
+		"last_review_date": "2026-01-02",
+		"total_reviews": 4,
+		"correct_reviews": 3,
+	}]
+	var path := "user://profiles/__test_profile__/srs_data.json"
+	var file := FileAccess.open(path, FileAccess.WRITE)
+	file.store_string(JSON.stringify(legacy))
+	file.close()
+
+	var migrated := SaveManager.load_learning_data(TEST_PROFILE_NAME)
+	_assert("Legacy migration succeeds", migrated["load_ok"] and migrated["migrated"], "")
+	var migrated_cards: Array[SRSCard] = migrated["cards"]
+	_assert("Legacy card count", migrated_cards.size() == 1, "")
+	if migrated_cards.size() == 1:
+		var card := migrated_cards[0]
+		_assert("Legacy SM-2 fields preserved", card.ease_factor == 2.3 and card.interval == 6.0 and card.repetitions == 2, "")
+		_assert("Legacy totals preserved", card.total_reviews == 4 and card.correct_reviews == 3, "")
+		_assert("Legacy skills remain empty", card.skill_evidence.is_empty(), "")
+	_assert("Legacy backup created", FileAccess.file_exists("user://profiles/__test_profile__/srs_data_v1_backup.json"), "")
+
+	var reloaded := SaveManager.load_learning_data(TEST_PROFILE_NAME)
+	_assert("Migration is idempotent", reloaded["load_ok"] and not reloaded["migrated"], "")
+	var roundtrip_cards: Array[SRSCard] = reloaded["cards"]
+	var evidence := SkillEvidence.new()
+	evidence.record(SRSEngine.Quality.GOOD, "2026-01-03", "multiple_choice")
+	roundtrip_cards[0].skill_evidence["meaning"] = evidence
+	var sessions: Array = []
+	for i in 105:
+		sessions.append({"timestamp": "session_%d" % i, "game_type": "multiple_choice"})
+	_assert("Learning data save succeeds", SaveManager.save_learning_data(TEST_PROFILE_NAME, roundtrip_cards, sessions), "")
+	var roundtrip := SaveManager.load_learning_data(TEST_PROFILE_NAME)
+	_assert("Session history capped", roundtrip["sessions"].size() == 100, "got %d" % roundtrip["sessions"].size())
+	var saved_cards: Array[SRSCard] = roundtrip["cards"]
+	_assert("Skill evidence round trip", saved_cards[0].skill_evidence["meaning"].attempts == 1, "")
+
+	var v2_envelope := {
+		"schema_version": 2,
+		"cards": [SaveManager._serialize_card(saved_cards[0])],
+		"sessions": [{"game_type": "v2_session"}],
+	}
+	file = FileAccess.open(path, FileAccess.WRITE)
+	file.store_string(JSON.stringify(v2_envelope))
+	file.close()
+	var v2_migration := SaveManager.load_learning_data(TEST_PROFILE_NAME)
+	_assert("V2 migration succeeds", v2_migration["load_ok"] and v2_migration["migrated"], "")
+	_assert("V2 history preserved", v2_migration["sessions"].size() == 1, "")
+	_assert("V2 kanji initialized empty", v2_migration["kanji_cards"].is_empty(), "")
+	_assert("V2 backup created", FileAccess.file_exists("user://profiles/__test_profile__/srs_data_v2_backup.json"), "")
+
+	var kanji_card := KanjiCard.new()
+	kanji_card.setup("一")
+	var kanji_evidence := SkillEvidence.new()
+	kanji_evidence.record(SRSEngine.Quality.GOOD, "2026-01-04", "kanji_workshop")
+	kanji_card.skill_evidence["kanji_form"] = kanji_evidence
+	var kanji_cards: Array[KanjiCard] = [kanji_card]
+	_assert("Schema 3 kanji save", SaveManager.save_learning_data(TEST_PROFILE_NAME, saved_cards, sessions, kanji_cards), "")
+	var v3_reload := SaveManager.load_learning_data(TEST_PROFILE_NAME)
+	_assert("Kanji card round trip", v3_reload["kanji_cards"].size() == 1 and v3_reload["kanji_cards"][0].character == "一", "")
+	_assert("Kanji evidence round trip", v3_reload["kanji_cards"][0].skill_evidence["kanji_form"].attempts == 1, "")
+
+	file = FileAccess.open(path, FileAccess.WRITE)
+	file.store_string("{broken")
+	file.close()
+	var corrupt := SaveManager.load_learning_data(TEST_PROFILE_NAME)
+	_assert("Corrupt data rejected", not corrupt["load_ok"], "")
+	_assert("Corrupt data write blocked", not SaveManager.save_learning_data(TEST_PROFILE_NAME, [], []), "")
+	file = FileAccess.open(path, FileAccess.READ)
+	var remaining := file.get_as_text()
+	file.close()
+	_assert("Corrupt source remains intact", remaining == "{broken", "got '%s' (%d chars)" % [remaining, remaining.length()])
+	SaveManager.delete_profile(TEST_PROFILE_NAME)
 	_log("")
 
 

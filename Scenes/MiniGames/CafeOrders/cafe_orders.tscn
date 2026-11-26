@@ -1,14 +1,10 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://Scenes/MiniGames/CafeOrders/cafe_orders.gd" id="1"]
 [ext_resource type="Font" path="res://Themes/japanese_font.tres" id="2_japanese"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_speech"]
 bg_color = Color(0.95, 0.92, 0.85, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_left = 8
-corner_radius_bottom_right = 8
 content_margin_left = 12.0
 content_margin_top = 8.0
 content_margin_right = 12.0
@@ -38,23 +34,19 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_left = 12.0
 offset_top = 8.0
-offset_right = -12.0
+offset_right = -44.0
 offset_bottom = 28.0
 grow_horizontal = 2
 
 [node name="ProgressLabel" type="Label" parent="TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.76, 0.65, 0.52, 1)
 theme_override_font_sizes/font_size = 10
-text = "Order 1 / 10"
 
 [node name="ScoreLabel" type="Label" parent="TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
 theme_override_font_sizes/font_size = 10
-text = "Score: 0"
 horizontal_alignment = 2
 
 [node name="GameArea" type="VBoxContainer" parent="."]
@@ -65,12 +57,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -220.0
-offset_top = -120.0
+offset_top = -150.0
 offset_right = 220.0
-offset_bottom = 120.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 6
 alignment = 1
 
 [node name="SpeechBubble" type="PanelContainer" parent="GameArea"]
@@ -79,14 +71,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_speech")
 
 [node name="SpeechVBox" type="VBoxContainer" parent="GameArea/SpeechBubble"]
 layout_mode = 2
-theme_override_constants/separation = 2
 
 [node name="SpeechLabel" type="Label" parent="GameArea/SpeechBubble"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.15, 0.1, 0.08, 1)
 theme_override_fonts/font = ExtResource("2_japanese")
-theme_override_font_sizes/font_size = 20
-text = "おちゃ"
+theme_override_font_sizes/font_size = 18
+text = "Listen to the order"
 horizontal_alignment = 1
 
 [node name="MeaningLabel" type="Label" parent="GameArea/SpeechBubble"]
@@ -94,14 +85,30 @@ visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.4, 0.35, 0.3, 1)
 theme_override_font_sizes/font_size = 9
-text = "(green tea)"
 horizontal_alignment = 1
 
-[node name="TimerBar" type="ProgressBar" parent="GameArea"]
+[node name="ControlRow" type="HBoxContainer" parent="GameArea"]
 layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="ReplayBtn" type="Button" parent="GameArea/ControlRow"]
+custom_minimum_size = Vector2(130, 26)
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Replay Order"
+
+[node name="AssistBtn" type="Button" parent="GameArea/ControlRow"]
+custom_minimum_size = Vector2(160, 26)
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Show Text (assisted)"
+
+[node name="TimerBar" type="ProgressBar" parent="GameArea"]
 custom_minimum_size = Vector2(0, 10)
-max_value = 10.0
-value = 10.0
+layout_mode = 2
+max_value = 12.0
+value = 12.0
 show_percentage = false
 
 [node name="ShelfGrid" type="GridContainer" parent="GameArea"]
@@ -111,52 +118,25 @@ theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 8
 
 [node name="Item1" type="Button" parent="GameArea/ShelfGrid"]
+custom_minimum_size = Vector2(200, 64)
 layout_mode = 2
-custom_minimum_size = Vector2(200, 40)
-theme_override_font_sizes/font_size = 12
-text = "Green Tea"
 
 [node name="Item2" type="Button" parent="GameArea/ShelfGrid"]
+custom_minimum_size = Vector2(200, 64)
 layout_mode = 2
-custom_minimum_size = Vector2(200, 40)
-theme_override_font_sizes/font_size = 12
-text = "Coffee"
 
 [node name="Item3" type="Button" parent="GameArea/ShelfGrid"]
+custom_minimum_size = Vector2(200, 64)
 layout_mode = 2
-custom_minimum_size = Vector2(200, 40)
-theme_override_font_sizes/font_size = 12
-text = "Rice"
 
 [node name="Item4" type="Button" parent="GameArea/ShelfGrid"]
+custom_minimum_size = Vector2(200, 64)
 layout_mode = 2
-custom_minimum_size = Vector2(200, 40)
-theme_override_font_sizes/font_size = 12
-text = "Water"
 
 [node name="FeedbackLabel" type="Label" parent="GameArea"]
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
-custom_minimum_size = Vector2(0, 20)
 theme_override_colors/font_color = Color(0.9, 0.8, 0.5, 1)
-theme_override_font_sizes/font_size = 11
-text = ""
+theme_override_font_sizes/font_size = 9
 horizontal_alignment = 1
-
-[node name="CatReaction" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = -40.0
-offset_right = -8.0
-grow_horizontal = 2
-grow_vertical = 0
-alignment = 2
-
-[node name="CatLabel" type="Label" parent="CatReaction"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "🐱"
-horizontal_alignment = 1
+autowrap_mode = 2

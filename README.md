@@ -10,7 +10,7 @@ KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who
 
 ## Features
 
-### Mini-Games (6 total)
+### Activities (8 total)
 | Game | Description | Station |
 |------|-------------|---------|
 | **Multiple Choice Quiz** | Pick the correct English meaning from 4 cards | Menu Board |
@@ -18,19 +18,30 @@ KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who
 | **Kanji Matching** | Memory card game — match kanji to meanings | Table |
 | **Typing Input** | Type readings using on-screen Hiragana/Katakana keyboard | Register |
 | **Fill in the Blank** | Complete Japanese sentences with the correct word | Bookshelf |
-| **Cat Cafe Orders** | Serve customers by matching Japanese orders to items | Kitchen |
+| **Cat Cafe Orders** | Listen to Japanese orders and choose picture items | Kitchen |
+| **Reading Shelf** | Read short N5 passages and answer comprehension questions | Bookshelf |
+| **Kanji Workshop** | Practice tracked N5 kanji meanings, readings, and components | Table |
 
-### Vocabulary Database
-- **JLPT N5** (~100 kanji, ~800 vocabulary words)
-- **JLPT N4** (~200 kanji, ~700 vocabulary words)
-- **Custom curated list** of high-frequency useful words
-- Organized by both JLPT level and topic categories (food, greetings, cafe, verbs, etc.)
+### Learning Content
+- **N5 starter set:** 120 vocabulary words, 120 example sentences, 100 kanji, and 30 reading passages
+- **Synthetic Japanese audio:** 120 word pronunciations and 10 café orders using Microsoft Haruka
+- **N4 starter set:** 100 vocabulary words; examples and kanji are not yet included
+- Organized by JLPT level and topic categories (food, greetings, cafe, verbs, etc.)
+- New-card sessions can target N5, N4, or Mixed; due cards from every introduced level remain reviewable
 
 ### Spaced Repetition (SM-2)
 - Anki-style SM-2 algorithm tracks ease factor, interval, and repetitions per word
 - Cards scheduled for review based on performance quality (0–5 scale)
 - Due cards sorted by priority: overdue first, hardest first
 - Persistent across sessions via per-profile save data
+
+### Learning Progress
+- Separate Meaning, Reading, Context, Listening, and Kanji Form evidence with attempts and success rates
+- Independent tracked kanji cards; text-assisted orders/reading never count as Listening/Context
+- New, Learning, Familiar, and Retained vocabulary stages derived from SM-2 outcomes
+- N5 coverage, retention, and encountered-kanji exposure are reported separately
+- Needs Practice and recent-session summaries use local evidence; no online analytics
+- Legacy reviews retain their SM-2 values but are not relabeled as skill-specific evidence
 
 ### Progression System
 - **XP & Levels** — earn XP per correct answer, scale with difficulty, 15 level tiers
@@ -166,7 +177,8 @@ res://
 │   ├── Vocabulary/
 │   │   ├── n5_vocab.json         # 120 N5 vocabulary words (JSON)
 │   │   └── n4_vocab.json         # 100 N4 vocabulary words (JSON)
-│   ├── Kanji/                    # .tres kanji lists (n5, n4)
+│   ├── Kanji/
+│   │   └── n5_kanji.json         # 100 N5 kanji entries (JSON)
 │   ├── Cats/                     # Per-cat .tres definitions
 │   │   └── mochi.tres            # Mascot cat companion
 │   └── Achievements/             # Achievement .tres definitions
@@ -192,11 +204,14 @@ res://
 user://profiles/
 ├── player_name/
 │   ├── profile.tres              # PlayerProfile resource
-│   └── srs_data.json             # SRS card data (JSON for flexibility)
+│   ├── srs_data.json             # Schema v3 vocabulary/kanji cards and sessions
+│   └── srs_data_v1_backup.json   # Original legacy data, created during migration
 └── another_player/
 	├── profile.tres
 	└── srs_data.json
 ```
+
+Learning data uses `schema_version: 3` with `cards`, `kanji_cards`, and a maximum of 100 `sessions`. Legacy v1 arrays and v2 envelopes migrate automatically only after their original contents are backed up. Malformed or unsupported data blocks learning-data writes rather than being replaced by an empty deck.
 
 ## Setup
 
@@ -303,15 +318,36 @@ Test scenes are located in `Tests/`. To run a specific test:
 - [x] Speech bubble on click with random dialogue from CatCharacter data
 - [x] Test scene (`Tests/cat_state_machine_test.tscn`) with state force buttons for each state
 
-## Vocabulary Data Best Practices
+### Phase 8: Visual Foundation ✅
+- [x] Pixel-art cafe, navigation icons, shared PixelMplus theme, and legible Japanese font
+- [x] Eight textured decorations with save-compatible placement data
+- [x] Furniture-aligned cat surfaces and repaired achievement resources/popups
 
-### Why JSON — Not .tres — For Vocab
+### Phase 9: Learning Progress & N5 Content ✅
+- [x] Versioned, backed-up learning-data migration and bounded session history
+- [x] Meaning, Reading, and Context evidence with normalized mini-game reporting
+- [x] Evidence-based Stats and Results, N5 curriculum filtering, and Needs Practice
+- [x] 120 N5 examples and 100 JSON-based N5 kanji entries
+
+### Phase 10: Differentiated Activities & Listening ✅
+- [x] Audio-first Café Orders with picture answers, replay, timer pausing, and assist classification
+- [x] Reading Shelf with 30 passages and tracked Kanji Workshop with independent kanji SRS
+- [x] Listening and Kanji Form evidence, schema-v3 migration, and station mode pickers
+- [x] Cached word pronunciation, compact typing keyboard, and semantic distractors
+
+## Japanese Audio Workflow
+
+Run `powershell -ExecutionPolicy Bypass -File Tools/gen_n5_audio.ps1` on Windows with Microsoft Haruka and FFmpeg installed. The script generates 120 word clips and ten café order clips, writes `Resources/Audio/n5_audio_manifest.json`, and reuses clips whose source-text hash is unchanged. Audio is synthetic and not educator-reviewed; replace it with reviewed recordings when available. Reading passages are generated and validated with `python Tools/gen_reading.py`.
+
+## Learning Content Data Best Practices
+
+### Why JSON — Not .tres — For Vocabulary and Kanji
 
 Godot 4.4 **automatically re-saves `.tres` resource files** when the project is opened in the editor. During this resave, the engine resets any `PackedStringArray` field that holds non-default data back to `[]` (the empty default). This silently destroys `english_meanings`, `categories`, and `example_sentences` on every `VocabWord` sub-resource, causing mini-games to display `???`, `""`, or `---` instead of actual content.
 
 This issue was reproduced multiple times: `gen_vocab.py` would write valid `.tres` files, Godot would open the project, and within seconds all `PackedStringArray` values were gone. The `.tres` format is therefore **not safe for any vocabulary data that uses array-type fields**.
 
-Vocabulary data is stored as **JSON files** in `Resources/Vocabulary/`. Godot does not import, resave, or modify `.json` files. The `VocabDatabase` autoload reads JSON at runtime via `FileAccess` and instantiates `VocabWord` objects in GDScript.
+Vocabulary and kanji data are stored as **JSON files** in `Resources/Vocabulary/` and `Resources/Kanji/`. Godot does not import, resave, or modify `.json` files. `VocabDatabase` reads them at runtime and instantiates typed `VocabWord` and `KanjiEntry` objects. `KanjiEntry` also uses `PackedStringArray` fields, so it has the same `.tres` stripping risk.
 
 ### Vocabulary Update Workflow
 
@@ -345,7 +381,7 @@ Each JSON entry must contain these keys (all strings unless noted):
 | `english_meanings` | array of strings | `["hello", "good afternoon"]` |
 | `jlpt_level` | integer | `5` |
 | `categories` | array of strings | `["greetings"]` |
-| `example_sentences` | array of strings | `[]` (may be empty) |
+| `example_sentences` | array of strings | N5 requires `"Japanese|English"`; N4 may be empty |
 | `part_of_speech` | string | `"expression"` |
 
 ### JSON Encoding Rules
@@ -362,9 +398,18 @@ Each JSON entry must contain these keys (all strings unless noted):
 - **Do not add `@export var` arrays of VocabWord to any `.tres` sub_resource** — same stripping bug applies to any `PackedStringArray` or `Array[String]` field in a sub_resource exported to `.tres`.
 - **Do not regenerate vocab by duplicating JSON entries by hand** — always use `gen_vocab.py` as the single source of truth.
 
-### Kanji Data (Still Uses .tres)
+### Kanji Update Workflow
 
-Kanji data (`Resources/Kanji/n5_kanji.tres`, `n4_kanji.tres`) uses `.tres` format and loads fine because `KanjiEntry` resources use `String` fields, not `PackedStringArray`. This is safe. Do not change kanji to JSON unless a `PackedStringArray` field is added to `KanjiEntry`.
+Edit `Tools/gen_kanji.py` only, then run `python Tools/gen_kanji.py`. The generator validates exactly 100 unique N5 characters and writes `Resources/Kanji/n5_kanji.json` with meanings, readings, stroke counts, radicals, and components. Do not hand-edit the JSON or convert these entries to `.tres`.
+
+### Learning Stage Definitions
+
+- **New:** no reviews.
+- **Learning:** introduced but below the Familiar/Retained thresholds, including a recent lapse.
+- **Familiar:** at least two SM-2 repetitions, a six-day interval, and 60% overall success.
+- **Retained:** at least three SM-2 repetitions, a fourteen-day interval, and 80% overall success.
+
+These are vocabulary-retention estimates, not certification or general Japanese proficiency. Kanji encountered measures exposure in introduced vocabulary, not kanji mastery.
 
 ---
 

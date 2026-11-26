@@ -113,8 +113,8 @@ func _load_achievements() -> void:
 	dir.list_dir_begin()
 	var file_name := dir.get_next()
 	while file_name != "":
-		if file_name.ends_with(".tres"):
-			var ach := load(ACHIEVEMENT_DIR + file_name) as AchievementDef
+		if file_name.ends_with(".tres") or file_name.ends_with(".tres.remap"):
+			var ach := load(ACHIEVEMENT_DIR + file_name.trim_suffix(".remap")) as AchievementDef
 			if ach != null and ach.id != "":
 				_achievements[ach.id] = ach
 		file_name = dir.get_next()

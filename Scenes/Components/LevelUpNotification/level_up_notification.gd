@@ -32,7 +32,9 @@ func _build_ui() -> void:
 	_panel = PanelContainer.new()
 	_panel.visible = false
 	_panel.set_anchors_preset(Control.PRESET_CENTER_TOP)
+	_panel.anchor_bottom = 0.0
 	_panel.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	_panel.grow_vertical = Control.GROW_DIRECTION_BEGIN
 	_panel.offset_top = 16.0
 	_panel.offset_left = -120.0
 	_panel.offset_right = 120.0

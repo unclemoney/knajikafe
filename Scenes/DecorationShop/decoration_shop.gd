@@ -34,8 +34,8 @@ func _load_decorations() -> void:
 	dir.list_dir_begin()
 	var file_name := dir.get_next()
 	while file_name != "":
-		if file_name.ends_with(".tres"):
-			var decor := load(DECOR_DIR + file_name) as CafeDecoration
+		if file_name.ends_with(".tres") or file_name.ends_with(".tres.remap"):
+			var decor := load(DECOR_DIR + file_name.trim_suffix(".remap")) as CafeDecoration
 			if decor != null:
 				_all_decorations.append(decor)
 		file_name = dir.get_next()

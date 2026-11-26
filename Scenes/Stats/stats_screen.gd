@@ -26,6 +26,13 @@ func _build_stats() -> void:
 	_add_stat_row("XP to Next Level", str(profile.xp_to_next_level()))
 	_add_progress_bar("Level Progress", profile.level_progress())
 	_add_spacer()
+	_add_section_header("Café Rewards")
+	_add_stat_row("Coffee Beans", str(profile.coffee_beans))
+	_add_stat_row("Lifetime Beans Earned", str(profile.total_beans_earned))
+	_add_stat_row("Decorations Owned", str(profile.owned_decorations.size()))
+	for quest in CafeProgressManager.get_daily_quests():
+		_add_stat_row(quest["title"], "%d/%d%s" % [quest["progress"], quest["target"], " · Claimed" if quest["claimed"] else ""])
+	_add_spacer()
 
 	var level_summary := ProgressMetrics.get_level_summary(
 		SRSEngine.cards,
@@ -111,6 +118,15 @@ func _build_stats() -> void:
 	_add_stat_row("Cats Unlocked", str(unlocked) + " / " + str(total_cats))
 	if total_cats > 0:
 		_add_progress_bar("Collection", float(unlocked) / float(total_cats))
+	for cat_id in profile.unlocked_cats:
+		var bond := int(profile.cat_bonds.get(cat_id, 0))
+		var next_threshold := CafeProgressManager.get_next_bond_threshold(cat_id)
+		var bond_text := "Bond %d" % bond
+		if next_threshold > 0:
+			bond_text += " · Next at %d" % next_threshold
+		else:
+			bond_text += " · All dialogue unlocked"
+		_add_stat_row(cat_id.capitalize(), bond_text)
 	_add_spacer()
 	_add_section_header("Decorations & Account")
 	_add_stat_row("Active Decorations", str(profile.cafe_decorations.size()))

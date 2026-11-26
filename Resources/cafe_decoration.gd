@@ -30,5 +30,8 @@ class_name CafeDecoration
 ## Unlock condition: "default" (always available), "level:5", "xp:1000", etc.
 @export var unlock_condition: String = "default"
 
+## Coffee Bean price once the level requirement is met.
+@export var cost: int = 0
+
 ## Whether this decoration is available to the player (derived at runtime, not saved).
 var is_unlocked: bool = false

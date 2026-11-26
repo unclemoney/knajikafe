@@ -135,14 +135,14 @@ func _test_production_resources() -> void:
 	_log("[b]── Production Resources ──[/b]")
 
 	var achievements := AchievementManager.get_all_achievements()
-	_assert("All 18 achievements load", achievements.size() == 18, "got %d" % achievements.size())
+	_assert("All 26 achievements load", achievements.size() == 26, "got %d" % achievements.size())
 	var achievement_ids: Dictionary = {}
 	for achievement in achievements:
 		achievement_ids[achievement.id] = true
 	_assert("Achievement IDs are unique", achievement_ids.size() == achievements.size(), "")
 
 	_assert("All 6 cats load", _count_resources("res://Resources/Cats/", "CatCharacter") == 6, "")
-	_assert("All 8 decorations load", _count_resources("res://Resources/Decorations/", "CafeDecoration") == 8, "")
+	_assert("All 16 decorations load", _count_resources("res://Resources/Decorations/", "CafeDecoration") == 16, "")
 	_assert("Japanese font loads", load("res://Themes/japanese_font.tres") is Font, "")
 
 	var decoration_textures_valid := true

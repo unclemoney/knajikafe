@@ -35,9 +35,18 @@ class_name PlayerProfile
 ## Whether the player has completed the tutorial.
 @export var has_completed_tutorial: bool = false
 
+@export var coffee_beans: int = 0
+@export var total_beans_earned: int = 0
+@export var owned_decorations: Dictionary = {}
+@export var quest_date: String = ""
+@export var quest_progress: Dictionary = {}
+@export var quest_claimed: Dictionary = {}
+@export var cat_bonds: Dictionary = {}
+@export var cat_bond_dates: Dictionary = {}
+
 ## Player settings stored as a flat dictionary.
 ## Keys: "show_kanji", "show_furigana", "show_romaji", "show_english",
-##        "bgm_volume", "sfx_volume", "words_per_session", "target_jlpt_level"
+##        "bgm_volume", "sfx_volume", "speech_volume", "words_per_session", "target_jlpt_level"
 @export var settings: Dictionary = {
 	"show_kanji": true,
 	"show_furigana": true,
@@ -47,6 +56,7 @@ class_name PlayerProfile
 	"sfx_volume": 0.8,
 	"words_per_session": 10,
 	"target_jlpt_level": 5,
+	"speech_volume": 0.85,
 }
 
 

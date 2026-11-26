@@ -325,10 +325,13 @@ func _apply_profile_defaults(profile: PlayerProfile) -> void:
 		"sfx_volume": 0.8,
 		"words_per_session": 10,
 		"target_jlpt_level": 5,
+		"speech_volume": 0.85,
 	}
 	for key in defaults:
 		if not profile.settings.has(key):
 			profile.settings[key] = defaults[key]
+	for decoration_id in profile.cafe_decorations:
+		profile.owned_decorations[decoration_id] = true
 
 
 func _ensure_profiles_dir() -> void:

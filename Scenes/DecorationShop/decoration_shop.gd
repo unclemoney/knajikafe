@@ -1,10 +1,8 @@
 extends Control
-## decoration_shop.gd
-##
-## Lets the player browse, unlock, and equip cafe decorations.
-## Decorations are cosmetic items placed in slots on the cafe hub background.
+## Purchase, own, and equip cafe decorations.
 
 @onready var back_btn: Button = $TopBar/BackBtn
+@onready var beans_label: Label = $TopBar/BeansLabel
 @onready var decor_grid: GridContainer = $ScrollContainer/DecorGrid
 @onready var preview_label: TextureRect = $PreviewPanel/PreviewVBox/PreviewIcon
 @onready var preview_name: Label = $PreviewPanel/PreviewVBox/PreviewName
@@ -26,7 +24,6 @@ func _ready() -> void:
 	_clear_preview()
 
 
-## Loads all decoration resources.
 func _load_decorations() -> void:
 	var dir := DirAccess.open(DECOR_DIR)
 	if dir == null:
@@ -41,14 +38,15 @@ func _load_decorations() -> void:
 		file_name = dir.get_next()
 	dir.list_dir_end()
 	_all_decorations.sort_custom(_compare_decor)
+	var profile := GameController.current_profile
+	if profile:
+		beans_label.text = "Beans: %d" % profile.coffee_beans
 
 
-## Sort by unlock condition level.
 func _compare_decor(a: CafeDecoration, b: CafeDecoration) -> bool:
 	return _sort_key(a.unlock_condition) < _sort_key(b.unlock_condition)
 
 
-## Numeric sort key from unlock condition.
 func _sort_key(condition: String) -> int:
 	if condition == "default":
 		return 0
@@ -57,27 +55,25 @@ func _sort_key(condition: String) -> int:
 	return 999
 
 
-## Builds the decoration grid with cards.
 func _build_grid() -> void:
 	var profile := GameController.current_profile
 	if profile == null:
 		return
-
+	for child in decor_grid.get_children():
+		child.queue_free()
 	for decor in _all_decorations:
-		var is_unlocked := _is_unlocked(decor, profile)
-		var is_equipped := profile.cafe_decorations.has(decor.id)
-		var card := _create_decor_card(decor, is_unlocked, is_equipped)
-		decor_grid.add_child(card)
+		var level_unlocked := CafeProgressManager.is_level_unlocked(decor, profile)
+		var owned := CafeProgressManager.owns_decoration(decor.id)
+		var equipped := profile.cafe_decorations.has(decor.id)
+		decor_grid.add_child(_create_decor_card(decor, level_unlocked, owned, equipped))
 
 
-## Creates a single decoration card.
-func _create_decor_card(decor: CafeDecoration, is_unlocked: bool, is_equipped: bool) -> VBoxContainer:
+func _create_decor_card(decor: CafeDecoration, level_unlocked: bool, owned: bool, equipped: bool) -> VBoxContainer:
 	var card := VBoxContainer.new()
 	card.custom_minimum_size = Vector2(80, 70)
 	card.add_theme_constant_override("separation", 2)
-
 	var icon: Control = null
-	if is_unlocked and decor.texture != null:
+	if level_unlocked and decor.texture != null:
 		var texture_icon := TextureRect.new()
 		texture_icon.custom_minimum_size = Vector2(48, 48)
 		texture_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
@@ -90,54 +86,46 @@ func _create_decor_card(decor: CafeDecoration, is_unlocked: bool, is_equipped: b
 		text_icon.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		text_icon.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		text_icon.add_theme_font_size_override("font_size", 20)
-		if is_unlocked:
-			text_icon.text = decor.icon_text
-		else:
-			text_icon.text = "🔒"
-			text_icon.add_theme_color_override("font_color", Color(0.3, 0.3, 0.3, 1))
+		text_icon.text = decor.icon_text if level_unlocked else "🔒"
 		icon = text_icon
 	card.add_child(icon)
 
-	var name_lbl := Label.new()
-	name_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	name_lbl.add_theme_font_size_override("font_size", 7)
-	if is_unlocked:
-		name_lbl.text = decor.display_name
-		if is_equipped:
-			name_lbl.text += " ✓"
-			name_lbl.add_theme_color_override("font_color", Color(0.5, 0.9, 0.5, 1))
-		else:
-			name_lbl.add_theme_color_override("font_color", Color(0.85, 0.75, 0.6, 1))
-	else:
-		name_lbl.text = "???"
-		name_lbl.add_theme_color_override("font_color", Color(0.4, 0.4, 0.4, 1))
-	card.add_child(name_lbl)
+	var name_label := Label.new()
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	name_label.add_theme_font_size_override("font_size", 7)
+	name_label.text = decor.display_name if level_unlocked else "???"
+	if equipped:
+		name_label.text += " ✓"
+	card.add_child(name_label)
 
-	var slot_lbl := Label.new()
-	slot_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	slot_lbl.add_theme_font_size_override("font_size", 6)
-	slot_lbl.add_theme_color_override("font_color", Color(0.5, 0.5, 0.5, 1))
-	if is_unlocked:
-		slot_lbl.text = decor.slot
+	var status := Label.new()
+	status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	status.add_theme_font_size_override("font_size", 6)
+	if not level_unlocked:
+		status.text = _get_unlock_hint(decor.unlock_condition)
+	elif equipped:
+		status.text = "Equipped"
+	elif owned:
+		status.text = "Owned"
 	else:
-		slot_lbl.text = _get_unlock_hint(decor.unlock_condition)
-	card.add_child(slot_lbl)
+		status.text = decor.slot
+	card.add_child(status)
 
-	var btn := Button.new()
-	btn.custom_minimum_size = Vector2(70, 18)
-	btn.add_theme_font_size_override("font_size", 7)
-	if is_unlocked:
-		btn.text = "Select"
-		btn.pressed.connect(_on_select_decor.bind(decor))
+	var button := Button.new()
+	button.custom_minimum_size = Vector2(70, 18)
+	button.add_theme_font_size_override("font_size", 7)
+	if not level_unlocked:
+		button.text = "Locked"
+		button.disabled = true
+	elif owned:
+		button.text = "Select"
 	else:
-		btn.text = "Locked"
-		btn.disabled = true
-	card.add_child(btn)
-
+		button.text = "%d Beans" % decor.cost
+	button.pressed.connect(_on_select_decor.bind(decor))
+	card.add_child(button)
 	return card
 
 
-## Returns a hint string for a lock condition.
 func _get_unlock_hint(condition: String) -> String:
 	if condition == "default":
 		return "Available"
@@ -146,78 +134,71 @@ func _get_unlock_hint(condition: String) -> String:
 	return "Special"
 
 
-## Checks if a decoration is unlocked.
-func _is_unlocked(decor: CafeDecoration, profile: PlayerProfile) -> bool:
-	if decor.unlock_condition == "default":
-		return true
-	if decor.unlock_condition.begins_with("level:"):
-		var req := int(decor.unlock_condition.split(":")[1])
-		return profile.level >= req
-	return false
-
-
-## Selects a decoration and shows its preview.
 func _on_select_decor(decor: CafeDecoration) -> void:
 	_selected_decor = decor
 	var profile := GameController.current_profile
-	var is_equipped := false
-	if profile:
-		is_equipped = profile.cafe_decorations.has(decor.id)
-
+	if profile == null:
+		return
+	var owned := CafeProgressManager.owns_decoration(decor.id)
+	var equipped := profile.cafe_decorations.has(decor.id)
 	preview_label.texture = decor.texture
 	preview_name.text = decor.display_name
 	preview_desc.text = decor.description
-	preview_slot.text = "Slot: " + decor.slot
-
-	if is_equipped:
-		equip_btn.text = "Unequip"
-	else:
-		equip_btn.text = "Equip"
-	equip_btn.disabled = false
+	preview_slot.text = "Slot: %s · Cost: %d Beans" % [decor.slot, decor.cost]
 	equip_btn.visible = true
+	if equipped:
+		equip_btn.text = "Unequip"
+		equip_btn.disabled = false
+	elif owned:
+		equip_btn.text = "Equip"
+		equip_btn.disabled = false
+	else:
+		equip_btn.text = "Buy %d Beans" % decor.cost
+		var check := CafeProgressManager.can_purchase(decor)
+		equip_btn.disabled = not check["allowed"]
+		if not check["allowed"]:
+			preview_slot.text += " · " + check["reason"]
 
 
-## Equips or unequips the selected decoration.
 func _on_equip_pressed() -> void:
 	if _selected_decor == null:
 		return
 	var profile := GameController.current_profile
 	if profile == null:
 		return
-
 	var decor_id := _selected_decor.id
 	if profile.cafe_decorations.has(decor_id):
-		# Unequip: remove from active decorations
 		var new_list := PackedStringArray()
-		for d in profile.cafe_decorations:
-			if d != decor_id:
-				new_list.append(d)
+		for id in profile.cafe_decorations:
+			if id != decor_id:
+				new_list.append(id)
 		profile.cafe_decorations = new_list
-		equip_btn.text = "Equip"
 	else:
-		# Unequip any existing decoration in the same slot first
+		if not CafeProgressManager.owns_decoration(decor_id):
+			var result := CafeProgressManager.purchase_decoration(_selected_decor)
+			if not result["success"]:
+				preview_slot.text = result["reason"]
+				return
 		var new_list := PackedStringArray()
-		for d_id in profile.cafe_decorations:
-			var is_same_slot := false
-			for other_decor in _all_decorations:
-				if other_decor.id == d_id:
-					if other_decor.slot == _selected_decor.slot:
-						is_same_slot = true
-					break
-			if not is_same_slot:
-				new_list.append(d_id)
+		for owned_id in profile.cafe_decorations:
+			var other := _find_decoration(owned_id)
+			if other == null or other.slot != _selected_decor.slot:
+				new_list.append(owned_id)
 		new_list.append(decor_id)
 		profile.cafe_decorations = new_list
-		equip_btn.text = "Unequip"
-
 	SaveManager.save_profile(profile)
-	# Rebuild grid to reflect changes
-	for child in decor_grid.get_children():
-		child.queue_free()
+	beans_label.text = "Beans: %d" % profile.coffee_beans
 	_build_grid()
+	_on_select_decor(_selected_decor)
 
 
-## Clears the preview panel.
+func _find_decoration(decoration_id: String) -> CafeDecoration:
+	for decor in _all_decorations:
+		if decor.id == decoration_id:
+			return decor
+	return null
+
+
 func _clear_preview() -> void:
 	preview_label.texture = null
 	preview_name.text = "Select a decoration"
@@ -226,6 +207,5 @@ func _clear_preview() -> void:
 	equip_btn.visible = false
 
 
-## Returns to the cafe hub.
 func _on_back_pressed() -> void:
 	GameController.change_scene("res://Scenes/CafeHub/cafe_hub.tscn")

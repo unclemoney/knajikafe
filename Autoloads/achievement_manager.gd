@@ -102,6 +102,17 @@ func _is_condition_met(condition: String, profile: PlayerProfile) -> bool:
 		return profile.unlocked_achievements.size() >= cond_value
 	elif cond_type == "xp":
 		return profile.xp >= cond_value
+	elif cond_type == "beans_earned":
+		return profile.total_beans_earned >= cond_value
+	elif cond_type == "decorations_owned":
+		return profile.owned_decorations.size() >= cond_value
+	elif cond_type == "daily_complete":
+		return profile.quest_claimed.size() >= cond_value
+	elif cond_type == "cat_bond":
+		for cat_id in profile.cat_bonds:
+			if int(profile.cat_bonds[cat_id]) >= cond_value:
+				return true
+		return false
 	return false
 
 

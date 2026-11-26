@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Decorations/window_curtain.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1")
+id = "window_curtain"
+display_name = "Cream Curtains"
+description = "Soft cream curtains with teal tiebacks for the cafe window."
+slot = "window"
+texture = ExtResource("2_texture")
+cafe_position = Vector2(230, 90)
+cafe_size = Vector2(180, 100)
+icon_text = "🪟"
+unlock_condition = "level:5"
+cost = 100

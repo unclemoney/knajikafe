@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Decorations/floor_rug.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1")
+id = "floor_rug"
+display_name = "Woven Rug"
+description = "A warm woven rug for the cafe floor."
+slot = "floor"
+texture = ExtResource("2_texture")
+cafe_position = Vector2(320, 220)
+cafe_size = Vector2(96, 64)
+icon_text = "🟫"
+unlock_condition = "level:4"
+cost = 90

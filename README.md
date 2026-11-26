@@ -329,15 +329,32 @@ Test scenes are located in `Tests/`. To run a specific test:
 - [x] Evidence-based Stats and Results, N5 curriculum filtering, and Needs Practice
 - [x] 120 N5 examples and 100 JSON-based N5 kanji entries
 
+### Café Progression
+- Completed sessions award Coffee Beans for correct answers and session completion
+- Three automatic daily goals: reviewed items, rotating skill focus, and activity variety
+- Decoration ownership is separate from equipped state; purchases use level requirements plus Beans
+- Cat bonds unlock dialogue at 10, 25, and 50 without affecting learning outcomes
+- File-backed BGM/SFX with procedural fallback, true crossfades, and independent Speech volume
+
 ### Phase 10: Differentiated Activities & Listening ✅
 - [x] Audio-first Café Orders with picture answers, replay, timer pausing, and assist classification
 - [x] Reading Shelf with 30 passages and tracked Kanji Workshop with independent kanji SRS
 - [x] Listening and Kanji Form evidence, schema-v3 migration, and station mode pickers
 - [x] Cached word pronunciation, compact typing keyboard, and semantic distractors
 
+### Phase 11: Café Progression & Rewards ✅
+- [x] Coffee Beans, daily goals, purchase/equip separation, and eight new decorations
+- [x] Bounded cat bonds and threshold dialogue with no gameplay-stat bonuses
+- [x] File-backed audio with crossfade and independent BGM/SFX/Speech settings
+- [x] Café-focused achievements and comprehensive reward/purchase tests
+
 ## Japanese Audio Workflow
 
 Run `powershell -ExecutionPolicy Bypass -File Tools/gen_n5_audio.ps1` on Windows with Microsoft Haruka and FFmpeg installed. The script generates 120 word clips and ten café order clips, writes `Resources/Audio/n5_audio_manifest.json`, and reuses clips whose source-text hash is unchanged. Audio is synthetic and not educator-reviewed; replace it with reviewed recordings when available. Reading passages are generated and validated with `python Tools/gen_reading.py`.
+
+## File-backed Audio
+
+`AudioManager` loads `Audio/BGM/cafe.ogg`, `study.ogg`, and `results.ogg`, plus `correct.ogg`, `wrong.ogg`, `click.ogg`, `level_up.ogg`, `card_flip.ogg`, `achievement.ogg`, `streak.ogg`, and `cat_interact.ogg` under `Audio/SFX/`. Procedural audio remains the fallback for missing files. These media paths can be replaced by licensed recordings without code changes.
 
 ## Learning Content Data Best Practices
 

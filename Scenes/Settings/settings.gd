@@ -13,6 +13,8 @@ extends Control
 @onready var bgm_value_label: Label = $Panel/VBox/AudioSection/BGMRow/BGMValue
 @onready var sfx_slider: HSlider = $Panel/VBox/AudioSection/SFXRow/SFXSlider
 @onready var sfx_value_label: Label = $Panel/VBox/AudioSection/SFXRow/SFXValue
+@onready var speech_slider: HSlider = $Panel/VBox/AudioSection/SpeechRow/SpeechSlider
+@onready var speech_value_label: Label = $Panel/VBox/AudioSection/SpeechRow/SpeechValue
 
 @onready var words_spin: SpinBox = $Panel/VBox/SessionSection/WordsRow/WordsSpinBox
 @onready var target_option: OptionButton = $Panel/VBox/SessionSection/WordsRow/TargetOption
@@ -36,6 +38,7 @@ func _ready() -> void:
 
 	bgm_slider.value_changed.connect(_on_bgm_changed)
 	sfx_slider.value_changed.connect(_on_sfx_changed)
+	speech_slider.value_changed.connect(_on_speech_changed)
 
 	kanji_toggle.toggled.connect(_on_display_toggled)
 	furigana_toggle.toggled.connect(_on_display_toggled)
@@ -60,6 +63,7 @@ func _load_settings() -> void:
 
 	bgm_slider.value = s.get("bgm_volume", 0.8) * 100.0
 	sfx_slider.value = s.get("sfx_volume", 0.8) * 100.0
+	speech_slider.value = s.get("speech_volume", 0.85) * 100.0
 	_update_volume_labels()
 
 	words_spin.value = s.get("words_per_session", 10)
@@ -109,6 +113,7 @@ func _on_save_pressed() -> void:
 	profile.settings["show_english"] = english_toggle.button_pressed
 	profile.settings["bgm_volume"] = bgm_slider.value / 100.0
 	profile.settings["sfx_volume"] = sfx_slider.value / 100.0
+	profile.settings["speech_volume"] = speech_slider.value / 100.0
 	profile.settings["words_per_session"] = int(words_spin.value)
 	profile.settings["target_jlpt_level"] = target_option.get_selected_id()
 
@@ -135,10 +140,17 @@ func _on_sfx_changed(_value: float) -> void:
 	AudioManager.sfx_volume = sfx_slider.value / 100.0
 
 
+## Called when Speech slider changes.
+func _on_speech_changed(_value: float) -> void:
+	_update_volume_labels()
+	AudioManager.speech_volume = speech_slider.value / 100.0
+
+
 ## Updates volume percentage labels.
 func _update_volume_labels() -> void:
 	bgm_value_label.text = "%d%%" % int(bgm_slider.value)
 	sfx_value_label.text = "%d%%" % int(sfx_slider.value)
+	speech_value_label.text = "%d%%" % int(speech_slider.value)
 
 
 ## Called when any display toggle changes — updates preview.

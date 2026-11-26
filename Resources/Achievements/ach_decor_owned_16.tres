@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/achievement_def.gd" id="script"]
+
+[resource]
+script = ExtResource("script")
+id = "ach_decor_owned_16"
+title = "Full Collection"
+description = "Own all 16 cafe decorations."
+unlock_condition = "decorations_owned:16"
+is_hidden = false

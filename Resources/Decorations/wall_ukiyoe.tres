@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Decorations/wall_ukiyoe.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1")
+id = "wall_ukiyoe"
+display_name = "Mountain Print"
+description = "A framed landscape print with mountain and cherry blossoms."
+slot = "wall"
+texture = ExtResource("2_texture")
+cafe_position = Vector2(6, 156)
+cafe_size = Vector2(56, 64)
+icon_text = "🖼️"
+unlock_condition = "level:7"
+cost = 160

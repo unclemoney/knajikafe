@@ -11,6 +11,8 @@ extends Control
 @onready var xp_bar: ProgressBar = $TopBar/PlayerInfo/XPBar
 @onready var due_label: Label = $TopBar/DueLabel
 @onready var streak_label: Label = $TopBar/StreakLabel
+@onready var beans_label: Label = $TopBar/BeansLabel
+@onready var daily_btn: Button = $TopBar/DailyBtn
 
 @onready var stats_btn: Button = $TopBar/StatsBtn
 @onready var cats_btn: Button = $TopBar/CatsBtn
@@ -62,6 +64,7 @@ func _ready() -> void:
 	cats_btn.pressed.connect(_on_cats_pressed)
 	decor_btn.pressed.connect(_on_decor_pressed)
 	logout_btn.pressed.connect(_on_logout_pressed)
+	daily_btn.pressed.connect(_on_daily_pressed)
 	_load_cats()
 	_load_decorations()
 	_update_streak()
@@ -188,6 +191,9 @@ func _display_cafe_cats() -> void:
 func _on_cafe_cat_clicked(cat: CafeCat) -> void:
 	if cat.cat_data:
 		_active_cat = cat.cat_data
+		if CafeProgressManager.pet_cat(cat.cat_data.cat_id) > 0:
+			AudioManager.play_meow()
+			SaveManager.save_profile(GameController.current_profile)
 
 
 # ── Decoration System ───────────────────────────────
@@ -245,6 +251,7 @@ func _update_player_info() -> void:
 	player_name_label.text = profile.player_name
 	level_label.text = "Lv. %d" % profile.level
 	xp_bar.value = profile.level_progress() * 100.0
+	beans_label.text = "Beans: %d" % profile.coffee_beans
 	if profile.streak_days > 1:
 		streak_label.text = "🔥 %d" % profile.streak_days
 	elif profile.streak_days == 1:
@@ -359,6 +366,11 @@ func _on_orders_pressed() -> void:
 
 	orders_btn.disabled = true
 	GameController.change_scene("res://Scenes/MiniGames/CafeOrders/cafe_orders.tscn")
+
+
+func _on_daily_pressed() -> void:
+	var panel := DailyGoalsPanel.new()
+	add_child(panel)
 
 
 ## Returns to profile select (logout).

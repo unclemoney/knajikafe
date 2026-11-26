@@ -363,7 +363,10 @@ func _show_speech_bubble() -> void:
 	if not cat_data or cat_data.dialogue_lines.size() == 0:
 		return
 
-	var line := cat_data.dialogue_lines[randi() % cat_data.dialogue_lines.size()]
+	var lines := CafeProgressManager.get_dialogue_lines(cat_data.cat_id)
+	if lines.is_empty():
+		return
+	var line: String = lines[randi() % lines.size()]
 	_speech_label.text = line
 	_speech_bubble.visible = true
 

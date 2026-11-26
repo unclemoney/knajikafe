@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Decorations/floor_cat_tree.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1")
+id = "floor_cat_tree"
+display_name = "Cat Tree"
+description = "A small climbing tree with a cozy cushion for cafe cats."
+slot = "floor"
+texture = ExtResource("2_texture")
+cafe_position = Vector2(450, 184)
+cafe_size = Vector2(80, 96)
+icon_text = "🐈"
+unlock_condition = "level:6"
+cost = 140

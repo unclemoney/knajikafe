@@ -1,0 +1,38 @@
+{
+  "mochi": {
+    "0": ["Welcome to KanjiKafe!", "Ready to learn some kanji?", "Coffee and kanji go great together!"],
+    "10": ["I saved you a warm seat, nya.", "You make this cafe feel like home."],
+    "25": ["I always look forward to our study time.", "Your daily effort makes me so proud."],
+    "50": ["You're part of the KanjiKafe family now.", "I'll always have a fresh cup ready for you."]
+  },
+  "sushi": {
+    "0": ["Want to test your memory?", "I can remember where every toy is!"],
+    "10": ["Your memory is getting really sharp!", "I bet you can match faster than me now."],
+    "25": ["You're my favorite study partner.", "Those tricky kanji don't stand a chance."],
+    "50": ["Best friends remember the best things!", "Our cafe memories are the best memories."]
+  },
+  "matcha": {
+    "0": ["Let's take this one card at a time.", "A calm mind learns well."],
+    "10": ["You return with such patience.", "I notice how carefully you practice."],
+    "25": ["Our quiet study sessions mean a lot to me.", "You have learned to trust the process."],
+    "50": ["I feel completely at peace studying with you.", "Your dedication is a beautiful thing."]
+  },
+  "sakura": {
+    "0": ["Every sentence tells a little story.", "Let's read together when you're ready."],
+    "10": ["You notice so much more in every sentence.", "Reading with you is always pleasant."],
+    "25": ["The stories seem brighter when you're here.", "You have a thoughtful reader's heart."],
+    "50": ["You'll always have a place beside my bookshelf.", "Our shared stories are my favorites."]
+  },
+  "kinako": {
+    "0": ["Typing takes practice, but you've got this!", "Speed comes after accuracy!"],
+    "10": ["Your fingers know those readings now!", "Nice rhythm on the keyboard!"],
+    "25": ["I'm proud of how precise you've become.", "You're typing like a true regular!"],
+    "50": ["You're the real typing champion now!", "I'll always be cheering from the register!"]
+  },
+  "azuki": {
+    "0": ["Every order is a chance to learn!", "What can I get for you?"],
+    "10": ["You're getting good at hearing each order!", "Your ears are as sharp as my whiskers!"],
+    "25": ["You listen so carefully. I'm impressed!", "Our customers love your friendly service."],
+    "50": ["You belong in our kitchen family!", "I'll always save you the tastiest treat!"]
+  }
+}

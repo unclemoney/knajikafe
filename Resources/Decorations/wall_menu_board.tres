@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Decorations/wall_menu_board.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1")
+id = "wall_menu_board"
+display_name = "Cafe Menu Board"
+description = "A wooden-framed board for the cafe's daily specials."
+slot = "wall"
+texture = ExtResource("2_texture")
+cafe_position = Vector2(6, 156)
+cafe_size = Vector2(56, 64)
+icon_text = "📋"
+unlock_condition = "level:3"
+cost = 75

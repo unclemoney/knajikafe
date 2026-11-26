@@ -143,9 +143,14 @@ func _on_view_cat(cat: CatCharacter) -> void:
 	detail_name.text = "🐱 " + cat.cat_name
 	detail_name.add_theme_color_override("font_color", cat.accent_color)
 	detail_personality.text = cat.personality
-	detail_specialty.text = "Specialty: " + cat.specialty_game
-	var idx := randi() % cat.dialogue_lines.size()
-	detail_dialogue.text = "\"" + cat.dialogue_lines[idx] + "\""
+	var bond := int(GameController.current_profile.cat_bonds.get(cat.cat_id, 0))
+	var next_threshold := CafeProgressManager.get_next_bond_threshold(cat.cat_id)
+	detail_specialty.text = "Specialty: %s · Bond: %d" % [cat.specialty_game, bond]
+	if next_threshold > 0:
+		detail_specialty.text += " · Next at %d" % next_threshold
+	var lines := CafeProgressManager.get_dialogue_lines(cat.cat_id)
+	if not lines.is_empty():
+		detail_dialogue.text = "\"" + lines[randi() % lines.size()] + "\""
 
 
 ## Returns to the cafe hub.

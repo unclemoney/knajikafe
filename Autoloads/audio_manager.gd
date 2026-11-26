@@ -7,6 +7,8 @@ signal speech_finished(clip_id: String)
 
 ## BGM player for background music.
 var _bgm_player: AudioStreamPlayer = null
+var _bgm_players: Array[AudioStreamPlayer] = []
+var _bgm_active_index := 0
 
 ## SFX player pool for overlapping sound effects.
 var _sfx_players: Array[AudioStreamPlayer] = []
@@ -26,21 +28,22 @@ var bgm_volume: float = 0.8:
 
 ## Current SFX volume (0.0–1.0).
 var sfx_volume: float = 0.8
+var speech_volume: float = 0.85
 
 ## Placeholder procedural SFX (generated at startup).
-var _sfx_correct: AudioStreamWAV = null
-var _sfx_wrong: AudioStreamWAV = null
-var _sfx_click: AudioStreamWAV = null
-var _sfx_level_up: AudioStreamWAV = null
-var _sfx_card_flip: AudioStreamWAV = null
-var _sfx_meow: AudioStreamWAV = null
-var _sfx_achievement: AudioStreamWAV = null
-var _sfx_streak: AudioStreamWAV = null
+var _sfx_correct: AudioStream = null
+var _sfx_wrong: AudioStream = null
+var _sfx_click: AudioStream = null
+var _sfx_level_up: AudioStream = null
+var _sfx_card_flip: AudioStream = null
+var _sfx_meow: AudioStream = null
+var _sfx_achievement: AudioStream = null
+var _sfx_streak: AudioStream = null
 
-## Procedural BGM streams (generated at startup).
-var _bgm_cafe: AudioStreamWAV = null
-var _bgm_quiz: AudioStreamWAV = null
-var _bgm_results: AudioStreamWAV = null
+## File-backed BGM with procedural fallback.
+var _bgm_cafe: AudioStream = null
+var _bgm_quiz: AudioStream = null
+var _bgm_results: AudioStream = null
 
 
 func _ready() -> void:
@@ -50,6 +53,7 @@ func _ready() -> void:
 	_load_audio_manifest()
 	_generate_placeholder_sfx()
 	_generate_procedural_bgm()
+	_load_audio_assets()
 
 
 func _exit_tree() -> void:
@@ -59,9 +63,9 @@ func _exit_tree() -> void:
 	for player in _sfx_players:
 		player.stop()
 		player.stream = null
-	if _bgm_player:
-		_bgm_player.stop()
-		_bgm_player.stream = null
+	for player in _bgm_players:
+		player.stop()
+		player.stream = null
 
 
 ## Plays background music, crossfading from any current track.
@@ -71,25 +75,38 @@ func play_bgm(stream: AudioStream, fade_duration: float = 0.5) -> void:
 	if stream == null:
 		stop_bgm(fade_duration)
 		return
+	if not _bgm_player.playing:
+		_bgm_player.stream = stream
+		_bgm_player.volume_db = linear_to_db(bgm_volume)
+		_bgm_player.play()
+		return
 
-	if _bgm_player.playing:
-		var tween := create_tween()
-		tween.tween_property(_bgm_player, "volume_db", -80.0, fade_duration)
-		await tween.finished
-
+	var previous := _bgm_player
+	_bgm_active_index = 1 - _bgm_active_index
+	_bgm_player = _bgm_players[_bgm_active_index]
 	_bgm_player.stream = stream
-	_bgm_player.volume_db = linear_to_db(bgm_volume)
+	_bgm_player.volume_db = -80.0
 	_bgm_player.play()
+	var tween := create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(previous, "volume_db", -80.0, fade_duration)
+	tween.tween_property(_bgm_player, "volume_db", linear_to_db(bgm_volume), fade_duration)
+	await tween.finished
+	previous.stop()
 
 
 ## Stops the current BGM with a fade-out.
 func stop_bgm(fade_duration: float = 0.5) -> void:
-	if not _bgm_player.playing:
+	if fade_duration <= 0.0:
+		for player in _bgm_players:
+			player.stop()
 		return
-	var tween := create_tween()
-	tween.tween_property(_bgm_player, "volume_db", -80.0, fade_duration)
-	await tween.finished
-	_bgm_player.stop()
+	for player in _bgm_players:
+		if player.playing:
+			var tween := create_tween()
+			tween.tween_property(player, "volume_db", -80.0, fade_duration)
+			await tween.finished
+			player.stop()
 
 
 ## Plays a one-shot sound effect.
@@ -126,7 +143,7 @@ func play_speech(clip_id: String) -> bool:
 	stop_speech()
 	_active_speech_id = clip_id
 	_speech_player.stream = stream
-	_speech_player.volume_db = linear_to_db(sfx_volume)
+	_speech_player.volume_db = linear_to_db(speech_volume)
 	_speech_player.play()
 	return true
 
@@ -168,12 +185,16 @@ func _on_speech_finished() -> void:
 func apply_profile_settings(profile: PlayerProfile) -> void:
 	bgm_volume = profile.settings.get("bgm_volume", 0.8)
 	sfx_volume = profile.settings.get("sfx_volume", 0.8)
+	speech_volume = profile.settings.get("speech_volume", 0.85)
 
 
 func _setup_bgm_player() -> void:
-	_bgm_player = AudioStreamPlayer.new()
-	_bgm_player.bus = "Master"
-	add_child(_bgm_player)
+	for i in 2:
+		var player := AudioStreamPlayer.new()
+		player.bus = "Master"
+		add_child(player)
+		_bgm_players.append(player)
+	_bgm_player = _bgm_players[0]
 
 
 func _setup_sfx_pool() -> void:
@@ -182,6 +203,26 @@ func _setup_sfx_pool() -> void:
 		player.bus = "Master"
 		add_child(player)
 		_sfx_players.append(player)
+
+
+func _load_audio_assets() -> void:
+	_bgm_cafe = _load_optional_audio("res://Audio/BGM/cafe.ogg", _bgm_cafe)
+	_bgm_quiz = _load_optional_audio("res://Audio/BGM/study.ogg", _bgm_quiz)
+	_bgm_results = _load_optional_audio("res://Audio/BGM/results.ogg", _bgm_results)
+	_sfx_correct = _load_optional_audio("res://Audio/SFX/correct.ogg", _sfx_correct)
+	_sfx_wrong = _load_optional_audio("res://Audio/SFX/wrong.ogg", _sfx_wrong)
+	_sfx_click = _load_optional_audio("res://Audio/SFX/click.ogg", _sfx_click)
+	_sfx_level_up = _load_optional_audio("res://Audio/SFX/level_up.ogg", _sfx_level_up)
+	_sfx_card_flip = _load_optional_audio("res://Audio/SFX/card_flip.ogg", _sfx_card_flip)
+	_sfx_meow = _load_optional_audio("res://Audio/SFX/cat_interact.ogg", _sfx_meow)
+	_sfx_achievement = _load_optional_audio("res://Audio/SFX/achievement.ogg", _sfx_achievement)
+	_sfx_streak = _load_optional_audio("res://Audio/SFX/streak.ogg", _sfx_streak)
+
+
+func _load_optional_audio(path: String, fallback: AudioStream) -> AudioStream:
+	if not ResourceLoader.exists(path):
+		return fallback
+	return ResourceLoader.load(path) as AudioStream
 
 
 ## Plays the correct-answer SFX.

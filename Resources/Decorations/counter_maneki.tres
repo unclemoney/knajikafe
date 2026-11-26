@@ -14,3 +14,4 @@ cafe_position = Vector2(470, 196)
 cafe_size = Vector2(56, 56)
 icon_text = "🐱"
 unlock_condition = "level:8"
+cost = 130

@@ -8,11 +8,14 @@ extends Control
 @onready var words_label: Label = $Panel/VBox/StatsBox/WordsLabel
 @onready var accuracy_label: Label = $Panel/VBox/StatsBox/AccuracyLabel
 @onready var xp_label: Label = $Panel/VBox/StatsBox/XPLabel
+@onready var beans_label: Label = $Panel/VBox/StatsBox/BeansLabel
+@onready var goals_label: Label = $Panel/VBox/StatsBox/GoalsLabel
 @onready var streak_label: Label = $Panel/VBox/StatsBox/StreakLabel
 @onready var level_label: Label = $Panel/VBox/StatsBox/LevelLabel
 @onready var skill_label: Label = $Panel/VBox/StatsBox/SkillLabel
 @onready var stage_changes_label: Label = $Panel/VBox/StatsBox/StageChangesLabel
 @onready var next_review_label: Label = $Panel/VBox/StatsBox/NextReviewLabel
+@onready var companion_label: Label = $Panel/VBox/StatsBox/CompanionLabel
 @onready var level_up_label: Label = $Panel/VBox/LevelUpLabel
 @onready var return_btn: Button = $Panel/VBox/ReturnBtn
 
@@ -48,6 +51,19 @@ func _display_results() -> void:
 		xp_label.text = "XP Earned: +%d  (base %d × %.1f streak)" % [xp_earned, base_xp, streak_mult]
 	else:
 		xp_label.text = "XP Earned: +%d" % xp_earned
+
+	var rewards: Dictionary = data.get("cafe_rewards", {})
+	var beans := int(rewards.get("total_beans", 0))
+	beans_label.visible = beans > 0
+	if beans_label.visible:
+		beans_label.text = "Coffee Beans: +%d" % beans
+		var quest_beans := int(rewards.get("quest_beans", 0))
+		if quest_beans > 0:
+			beans_label.text += " (includes +%d goal bonus)" % quest_beans
+	var completed_goals: Array = rewards.get("completed_goals", [])
+	goals_label.visible = not completed_goals.is_empty()
+	if goals_label.visible:
+		goals_label.text = "Goals complete: " + ", ".join(completed_goals)
 
 	if streak_days > 1:
 		streak_label.text = "🔥 %d day streak!" % streak_days
@@ -95,6 +111,10 @@ func _display_results() -> void:
 	next_review_label.visible = next_review != ""
 	if next_review_label.visible:
 		next_review_label.text = "Next scheduled review: " + next_review
+	var companion_text := CafeProgressManager.get_specialty_dialogue(data.get("game_type", ""))
+	companion_label.visible = companion_text != ""
+	if companion_label.visible:
+		companion_label.text = companion_text
 
 	# Set title based on performance
 	if accuracy >= 90.0:

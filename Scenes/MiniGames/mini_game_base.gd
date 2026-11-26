@@ -171,6 +171,8 @@ func _finish_session() -> void:
 			"assisted_count": _assisted_count,
 			"next_review_date": next_review_date,
 		}
+		var cafe_rewards := CafeProgressManager.apply_session(summary)
+		summary["cafe_rewards"] = cafe_rewards
 		SRSEngine.record_session(summary)
 		SRSEngine.save_cards_for_profile(profile)
 		SaveManager.save_profile(profile)
@@ -193,6 +195,7 @@ func _finish_session() -> void:
 			"assisted_count": _assisted_count,
 			"stage_changes": stage_changes,
 			"next_review_date": next_review_date,
+			"cafe_rewards": cafe_rewards,
 		}
 	GameController.change_scene("res://Scenes/Results/results_screen.tscn")
 

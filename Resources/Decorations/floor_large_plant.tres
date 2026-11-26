@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CafeDecoration" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Resources/cafe_decoration.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Art/Decorations/floor_large_plant.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1")
+id = "floor_large_plant"
+display_name = "Large Houseplant"
+description = "A leafy houseplant that makes the cafe feel alive."
+slot = "floor"
+texture = ExtResource("2_texture")
+cafe_position = Vector2(40, 188)
+cafe_size = Vector2(72, 96)
+icon_text = "🪴"
+unlock_condition = "level:8"
+cost = 180

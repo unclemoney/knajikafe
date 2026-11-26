@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://d1vc7qo5gdabo"
+
+[deps]
+
+files=["res://Tools/content/source/supplement_n4.reading.translation", "res://Tools/content/source/supplement_n4.meaning.translation", "res://Tools/content/source/supplement_n4.tags.translation"]
+
+source_file="res://Tools/content/source/supplement_n4.csv"
+dest_files=["res://Tools/content/source/supplement_n4.reading.translation", "res://Tools/content/source/supplement_n4.meaning.translation", "res://Tools/content/source/supplement_n4.tags.translation"]
+
+[params]
+
+compress=true
+delimiter=0

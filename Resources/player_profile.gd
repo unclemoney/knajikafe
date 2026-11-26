@@ -57,6 +57,9 @@ class_name PlayerProfile
 	"words_per_session": 10,
 	"target_jlpt_level": 5,
 	"speech_volume": 0.85,
+	"target_topic": "all",
+	"new_cards_per_session": 5,
+	"difficulty": "standard",
 }
 
 

@@ -6,7 +6,7 @@ A pixel-art educational game set in a Japanese Cat Cafe where players learn Kanj
 
 KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who help you learn Japanese. Walk up to different stations in the cafe to play mini-games that quiz you on vocabulary and kanji. An SM-2 spaced repetition system tracks what you know and schedules reviews for maximum retention. Earn XP, level up, unlock new cats, and decorate your cafe as you progress.
 
-**Target Audience:** Intermediate Japanese learners with some existing Kanji knowledge.
+**Target Audience:** Beginner and early-intermediate Japanese learners.
 
 ## Features
 
@@ -19,15 +19,19 @@ KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who
 | **Typing Input** | Type readings using on-screen Hiragana/Katakana keyboard | Register |
 | **Fill in the Blank** | Complete Japanese sentences with the correct word | Bookshelf |
 | **Cat Cafe Orders** | Listen to Japanese orders and choose picture items | Kitchen |
-| **Reading Shelf** | Read short N5 passages and answer comprehension questions | Bookshelf |
-| **Kanji Workshop** | Practice tracked N5 kanji meanings, readings, and components | Table |
+| **Reading Shelf** | Read short N5/N4 passages and answer comprehension questions | Bookshelf |
+| **Kanji Workshop** | Practice tracked N5/N4 kanji meanings, readings, and components | Table |
 
 ### Learning Content
-- **N5 starter set:** 120 vocabulary words, 120 example sentences, 100 kanji, and 30 reading passages
-- **Synthetic Japanese audio:** 120 word pronunciations and 10 café orders using Microsoft Haruka
-- **N4 starter set:** 100 vocabulary words; examples and kanji are not yet included
+- **N5 curriculum:** 800 vocabulary words with examples, 100 kanji, and 30 reading passages
+- **N4 curriculum:** 700 vocabulary words with examples, 200 kanji, and 30 reading passages
+- **Synthetic Japanese audio:** 1,500 word pronunciations and 20 café orders using Microsoft Haruka
 - Organized by JLPT level and topic categories (food, greetings, cafe, verbs, etc.)
 - New-card sessions can target N5, N4, or Mixed; due cards from every introduced level remain reviewable
+- Topic selection, 0–10 new cards per session (zero means due-only), and Relaxed/Standard/Challenge presentation modes
+- Difficulty changes distractors and the Orders timer only; it does not change SRS quality, XP, Beans, or assisted-attempt classification
+
+These are curated JLPT-aligned study sets, not official or exhaustive JLPT coverage. Newly imported vocabulary and N4 kanji remain `draft_pending_human_review`. The N4 set includes explicitly marked N3-source bridge characters (`source_level: 3`) as curriculum extensions; this is not a claim that they are official N4-only characters. Qualified Japanese content and pronunciation review is required before the v0.7 final release.
 
 ### Spaced Repetition (SM-2)
 - Anki-style SM-2 algorithm tracks ease factor, interval, and repetitions per word
@@ -39,16 +43,16 @@ KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who
 - Separate Meaning, Reading, Context, Listening, and Kanji Form evidence with attempts and success rates
 - Independent tracked kanji cards; text-assisted orders/reading never count as Listening/Context
 - New, Learning, Familiar, and Retained vocabulary stages derived from SM-2 outcomes
-- N5 coverage, retention, and encountered-kanji exposure are reported separately
+- N5, N4, and Mixed coverage, retention, topic breakdowns, and encountered-kanji exposure are reported separately
 - Needs Practice and recent-session summaries use local evidence; no online analytics
 - Legacy reviews retain their SM-2 values but are not relabeled as skill-specific evidence
 
 ### Progression System
-- **XP & Levels** — earn XP per correct answer, scale with difficulty, 15 level tiers
+- **XP & Levels** — earn XP per correct answer, with 15 level tiers
 - **Daily Streaks** — consecutive day tracking with bonus XP multiplier
-- **Achievements** — 15-20 badges for milestones (first quiz, 100 words, 7-day streak, etc.)
-- **Cafe Decorations** — unlock visual customizations for the hub scene
-- **Cat Collection** — 5-8 unique cats unlocked through progress
+- **Achievements** — 26 badges for learning and café milestones
+- **Cafe Decorations** — 16 visual customizations for the hub scene
+- **Cat Collection** — 6 unique cats unlocked through progress
 
 ### Cat Companions
 - Each cat has a unique name, personality, and specialty mini-game
@@ -59,8 +63,8 @@ KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who
 ### Configurable Display
 - Toggle independently: Kanji, Furigana, Romaji, English
 - Per-profile settings that persist across sessions
-- Audio volume controls (BGM and SFX)
-- Configurable words-per-session count
+- Independent BGM, SFX, and Speech volume controls
+- Configurable words-per-session count, curriculum level/topic, new-card limit, and difficulty
 
 ## Technical Details
 
@@ -175,10 +179,14 @@ res://
 │   ├── vocab_list.gd             # VocabList container Resource class
 │   ├── kanji_list.gd             # KanjiList container Resource class
 │   ├── Vocabulary/
-│   │   ├── n5_vocab.json         # 120 N5 vocabulary words (JSON)
-│   │   └── n4_vocab.json         # 100 N4 vocabulary words (JSON)
+│   │   ├── n5_vocab.json         # 800 N5 vocabulary words (JSON)
+│   │   ├── n4_vocab.json         # 700 N4 vocabulary words (JSON)
+│   │   └── cafe_menu.json        # 20 illustrated café orders
 │   ├── Kanji/
-│   │   └── n5_kanji.json         # 100 N5 kanji entries (JSON)
+│   │   ├── n5_kanji.json         # 100 N5 kanji entries (JSON)
+│   │   └── n4_kanji.json         # 200 N4 kanji/bridge entries (JSON)
+│   ├── Reading/                  # 30 N5 + 30 N4 passages (JSON)
+│   └── Audio/                    # 1,520-entry Japanese audio manifest
 │   ├── Cats/                     # Per-cat .tres definitions
 │   │   └── mochi.tres            # Mascot cat companion
 │   └── Achievements/             # Achievement .tres definitions
@@ -228,10 +236,16 @@ Learning data uses `schema_version: 3` with `cards`, `kanji_cards`, and a maximu
 4. Run the project (F5) — it will launch the Title Screen
 
 ### Running Tests
-Test scenes are located in `Tests/`. To run a specific test:
+Test scenes are located in `Tests/`. Run content validation and the headless suites from the project root:
 ```
-& "C:\Users\danie\OneDrive\Documents\GODOT\Godot_v4.4.1-stable_win64.exe" --path "c:\Users\danie\Documents\kanjikafe" Tests/MainTest.tscn
+python Tools/validate_content.py
+godot --headless --path . res://Tests/data_layer_test.tscn -- --run-all
+godot --headless --path . res://Tests/progress_metrics_test.tscn
+godot --headless --path . res://Tests/v05_activities_test.tscn
+godot --headless --path . res://Tests/cafe_progress_test.tscn
+godot --headless --path . res://Tests/cat_state_machine_test.tscn
 ```
+Replace `godot` with the installed Godot 4.4.1 executable path when it is not on `PATH`.
 
 ## Development Roadmap
 
@@ -348,9 +362,21 @@ Test scenes are located in `Tests/`. To run a specific test:
 - [x] File-backed audio with crossfade and independent BGM/SFX/Speech settings
 - [x] Café-focused achievements and comprehensive reward/purchase tests
 
+### Phase 12: Expanded N5/N4 Curriculum — Draft
+- [x] 800 N5 and 700 N4 vocabulary entries with examples
+- [x] 100 N5 and 200 N4 kanji entries, including marked bridge characters
+- [x] 1,500 synthetic pronunciations, 20 café orders, and 30 N4 passages
+- [x] Topic/level selection, due-only sessions, difficulty modes, and N5/N4/Mixed Stats
+- [ ] Qualified Japanese content and pronunciation review
+- [ ] Final v0.7 release labeling after review findings are resolved
+
+## Curriculum Sources and Licenses
+
+The import uses [OpenJLPT](https://github.com/evanclan/OpenJLPT), [Bluskyo/JLPT_Vocabulary](https://github.com/Bluskyo/JLPT_Vocabulary), [elzup/jlpt-word-list](https://github.com/elzup/jlpt-word-list), and [AnchorI/jlpt-kanji-dictionary](https://github.com/AnchorI/jlpt-kanji-dictionary). Dictionary data comes from [JMdict/KANJIDIC2 by the EDRDG](https://www.edrdg.org/), with example sentences sourced through the imported data from [Tatoeba](https://tatoeba.org/). Review each linked source's license before redistribution. Imported source snapshots are under `Tools/content/source/`.
+
 ## Japanese Audio Workflow
 
-Run `powershell -ExecutionPolicy Bypass -File Tools/gen_n5_audio.ps1` on Windows with Microsoft Haruka and FFmpeg installed. The script generates 120 word clips and ten café order clips, writes `Resources/Audio/n5_audio_manifest.json`, and reuses clips whose source-text hash is unchanged. Audio is synthetic and not educator-reviewed; replace it with reviewed recordings when available. Reading passages are generated and validated with `python Tools/gen_reading.py`.
+Run `powershell -ExecutionPolicy Bypass -File Tools/gen_japanese_audio.ps1` on Windows with Microsoft Haruka and FFmpeg installed. The script generates 1,500 word clips and 20 café order clips, writes `Resources/Audio/japanese_audio_manifest.json`, and reuses clips whose source-text hash is unchanged. `Tools/gen_n5_audio.ps1` remains a compatibility wrapper. Audio is synthetic and has not received qualified pronunciation review; replace it with reviewed recordings when available. Reading passages are generated with `python Tools/gen_reading.py` and `python Tools/gen_n4_reading.py`. Run `python Tools/validate_content.py` after any content, menu, art, or audio change.
 
 ## File-backed Audio
 
@@ -370,12 +396,13 @@ Vocabulary and kanji data are stored as **JSON files** in `Resources/Vocabulary/
 
 Follow this exact workflow any time vocabulary words are added or changed:
 
-1. **Edit `Tools/gen_vocab.py` only** — all vocabulary data lives in the word tuples in that file. Do not hand-edit the `.json` files directly.
-2. **Run the generator** from the project root:
+1. **Update the source importer or manual supplements** — `Tools/import_openjlpt.py` builds the authoritative `Tools/content/*_words.py` modules. Preserve original IDs and draft-review markers; do not hand-edit generated JSON.
+2. **Run the importer and generator** from the project root:
    ```
+   python Tools/import_openjlpt.py
    python Tools/gen_vocab.py
    ```
-   This writes `Resources/Vocabulary/n5_vocab.json` and `Resources/Vocabulary/n4_vocab.json`.
+   This writes `Resources/Vocabulary/n5_vocab.json` and `Resources/Vocabulary/n4_vocab.json`. The importer is idempotent and retains the original first 120 N5 and 100 N4 records.
 3. **Verify the output** — check that `english_meanings` is populated in the first few entries:
    ```powershell
    python -c "import json; d=json.load(open('Resources/Vocabulary/n5_vocab.json',encoding='utf-8')); print(d[0]['id'], d[0]['english_meanings'])"
@@ -398,8 +425,10 @@ Each JSON entry must contain these keys (all strings unless noted):
 | `english_meanings` | array of strings | `["hello", "good afternoon"]` |
 | `jlpt_level` | integer | `5` |
 | `categories` | array of strings | `["greetings"]` |
-| `example_sentences` | array of strings | N5 requires `"Japanese|English"`; N4 may be empty |
+| `example_sentences` | array of strings | `"Japanese|English"`; required for every word |
 | `part_of_speech` | string | `"expression"` |
+| `review_status` | string | `"draft_pending_human_review"` on newly imported entries |
+| `source_pos` | array of strings | Source dictionary part-of-speech tags, when available |
 
 ### JSON Encoding Rules
 
@@ -417,7 +446,7 @@ Each JSON entry must contain these keys (all strings unless noted):
 
 ### Kanji Update Workflow
 
-Edit `Tools/gen_kanji.py` only, then run `python Tools/gen_kanji.py`. The generator validates exactly 100 unique N5 characters and writes `Resources/Kanji/n5_kanji.json` with meanings, readings, stroke counts, radicals, and components. Do not hand-edit the JSON or convert these entries to `.tres`.
+Edit the authored N5 data in `Tools/gen_kanji.py` or the N4 importer in `Tools/import_openjlpt.py`, then run the importer as needed followed by `python Tools/gen_kanji.py`. The generator validates exactly 100 N5 and 200 N4 characters. N4 excludes N5 duplicates and marks bridge entries with `source_level: 3`; all N4 entries remain drafts pending human review. Do not hand-edit the JSON or convert these entries to `.tres`.
 
 ### Learning Stage Definitions
 

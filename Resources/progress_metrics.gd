@@ -70,11 +70,11 @@ static func get_level_summary(cards: Array[SRSCard], words: Array[VocabWord], ka
 	var level_word_ids: Dictionary = {}
 	for word in words:
 		words_by_id[word.id] = word
-		if word.jlpt_level == level:
+		if level == 0 or word.jlpt_level == level:
 			level_word_ids[word.id] = true
 	var authored_kanji: Dictionary = {}
 	for entry in kanji:
-		if entry.jlpt_level == level:
+		if level == 0 or entry.jlpt_level == level:
 			authored_kanji[entry.character] = true
 
 	var stage_counts := {
@@ -114,10 +114,37 @@ static func get_level_summary(cards: Array[SRSCard], words: Array[VocabWord], ka
 	}
 
 
+static func get_topic_summary(cards: Array[SRSCard], words: Array[VocabWord], level: int = 0) -> Dictionary:
+	var summary: Dictionary = {}
+	var words_by_id: Dictionary = {}
+	for word in words:
+		if level > 0 and word.jlpt_level != level:
+			continue
+		words_by_id[word.id] = word
+		for category in word.categories:
+			if not summary.has(category):
+				summary[category] = {"total": 0, "introduced": 0, "retained": 0, "coverage": 0.0}
+			summary[category]["total"] += 1
+	for card in cards:
+		var word := words_by_id.get(card.vocab_id) as VocabWord
+		if word == null:
+			continue
+		var retained := get_card_stage(card) == CardStage.RETAINED
+		for category in word.categories:
+			summary[category]["introduced"] += 1
+			if retained:
+				summary[category]["retained"] += 1
+	for category in summary:
+		var total: int = summary[category]["total"]
+		if total > 0:
+			summary[category]["coverage"] = float(summary[category]["introduced"]) / float(total)
+	return summary
+
+
 static func get_kanji_summary(cards: Array[KanjiCard], entries: Array[KanjiEntry], current_date: String, level: int = 5) -> Dictionary:
 	var authored: Dictionary = {}
 	for entry in entries:
-		if entry.jlpt_level == level:
+		if level == 0 or entry.jlpt_level == level:
 			authored[entry.character] = true
 	var stages := {"New": 0, "Learning": 0, "Familiar": 0, "Retained": 0}
 	var introduced := 0

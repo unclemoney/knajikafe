@@ -36,7 +36,7 @@ func _ready() -> void:
 ## Called when session setup completes — show the first question.
 func _on_session_ready() -> void:
 	if _words_per_session == 0:
-		feedback_label.text = "No words available!"
+		feedback_label.text = _get_empty_session_message("words")
 		return
 	_show_question()
 
@@ -60,10 +60,13 @@ func _show_question() -> void:
 	var correct_meaning := word.get_primary_meaning()
 	var choices: Array[String] = [correct_meaning]
 
-	# Get 3 wrong answers from other words
+	# Difficulty changes distractor breadth only, never SRS or rewards.
 	var exclude := PackedStringArray([word.id])
-	var semantic_filters := {"jlpt_level": word.jlpt_level, "category": word.categories[0] if not word.categories.is_empty() else ""}
+	var semantic_filters := _get_distractor_filters(word)
 	var distractors := VocabDatabase.get_random_words(10, exclude, semantic_filters)
+	if distractors.size() < 3 and _get_difficulty() == "relaxed":
+		semantic_filters.erase("part_of_speech")
+		distractors.append_array(VocabDatabase.get_random_words(10, exclude, semantic_filters))
 	if distractors.size() < 3:
 		distractors.append_array(VocabDatabase.get_random_words(10, exclude, {"jlpt_level": word.jlpt_level}))
 	distractors.shuffle()
@@ -88,6 +91,17 @@ func _show_question() -> void:
 		answer_btns[i].text = choices[i]
 		answer_btns[i].disabled = false
 		answer_btns[i].modulate = Color.WHITE
+
+
+func _get_distractor_filters(word: VocabWord) -> Dictionary:
+	var filters := {"jlpt_level": word.jlpt_level}
+	if _get_difficulty() == "challenge":
+		return filters
+	if not word.categories.is_empty():
+		filters["category"] = word.categories[0]
+	if _get_difficulty() == "relaxed" and word.part_of_speech != "":
+		filters["part_of_speech"] = word.part_of_speech
+	return filters
 
 
 ## Called when an answer button is pressed.

@@ -77,6 +77,24 @@ func _test_level_summary() -> void:
 	_check("Level retained", summary["retained"] == 1 and summary["retained_ratio"] == 0.5)
 	_check("Encountered kanji", summary["kanji_encountered"] == 2)
 	_check("Stage counts", summary["stage_counts"]["New"] == 1 and summary["stage_counts"]["Retained"] == 1)
+	var word_c := _word("c", "三")
+	word_c.jlpt_level = 4
+	var card_c := SRSCard.new()
+	card_c.vocab_id = "c"
+	var mixed_cards: Array[SRSCard] = [card_a, card_b, card_c]
+	var mixed_words: Array[VocabWord] = [word_a, word_b, word_c]
+	var mixed_kanji: Array[KanjiEntry] = [_kanji("一"), _kanji("二"), _kanji("三")]
+	mixed_kanji[2].jlpt_level = 4
+	var mixed := ProgressMetrics.get_level_summary(mixed_cards, mixed_words, mixed_kanji, 0)
+	_check("Mixed coverage includes N5 and N4", mixed["total_words"] == 3 and mixed["introduced"] == 3)
+	var n4 := ProgressMetrics.get_level_summary(mixed_cards, mixed_words, mixed_kanji, 4)
+	_check("N4 coverage excludes N5", n4["total_words"] == 1 and n4["introduced"] == 1)
+	word_a.categories = ["food"]
+	word_b.categories = ["food"]
+	word_c.categories = ["school"]
+	var topics := ProgressMetrics.get_topic_summary(mixed_cards, mixed_words, 0)
+	_check("Topic coverage and retention", topics["food"]["total"] == 2 and topics["food"]["introduced"] == 2 and topics["food"]["retained"] == 1)
+	_check("Mixed topics include both levels", topics.has("school") and topics["school"]["introduced"] == 1)
 
 
 func _test_kanji_summary() -> void:

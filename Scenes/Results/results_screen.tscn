@@ -65,6 +65,13 @@ size_flags_vertical = 3
 theme_override_constants/separation = 6
 alignment = 1
 
+[node name="CurriculumLabel" type="Label" parent="Panel/VBox/StatsBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.75, 0.7, 1)
+theme_override_font_sizes/font_size = 9
+text = "N5 · All topics · Standard"
+horizontal_alignment = 1
+
 [node name="WordsLabel" type="Label" parent="Panel/VBox/StatsBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8, 0.7, 0.6, 1)

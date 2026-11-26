@@ -1,8 +1,6 @@
 extends MiniGameBase
 ## Audio-first café listening with explicit assisted fallbacks.
 
-const ORDER_TIME := 12.0
-
 @onready var cat_speech_label: Label = $GameArea/SpeechBubble/SpeechLabel
 @onready var order_meaning_label: Label = $GameArea/SpeechBubble/MeaningLabel
 @onready var replay_btn: Button = $GameArea/ControlRow/ReplayBtn
@@ -45,21 +43,29 @@ func _get_item_label() -> String:
 func _populate_session(_config: Dictionary) -> void:
 	var desired := mini(10, _words_per_session)
 	var used: Dictionary = {}
+	var filters := _get_curriculum_filters()
+	var due_filters := filters.duplicate(true)
+	due_filters.erase("jlpt_level")
 	for card in SRSEngine.get_due_cards():
 		if _session_menu.size() >= desired:
 			break
 		var item := VocabDatabase.get_menu_item(card.vocab_id)
-		if not item.is_empty():
+		var word := VocabDatabase.get_word_by_id(card.vocab_id)
+		if not item.is_empty() and word != null and VocabDatabase.word_matches_filters(word, due_filters):
 			_add_menu_item(item, card)
 			used[card.vocab_id] = true
 	var candidates := VocabDatabase.cafe_menu.duplicate(true)
 	candidates.shuffle()
 	var new_count := 0
+	var new_card_limit := _get_new_card_limit()
 	for item in candidates:
-		if _session_menu.size() >= desired or new_count >= MAX_NEW_CARDS_PER_SESSION:
+		if _session_menu.size() >= desired or new_count >= new_card_limit:
 			break
 		var vocab_id: String = item["vocab_id"]
+		var word := VocabDatabase.get_word_by_id(vocab_id)
 		if used.has(vocab_id) or SRSEngine.get_card_for_vocab(vocab_id):
+			continue
+		if word == null or not VocabDatabase.word_matches_filters(word, filters):
 			continue
 		var created := SRSEngine.add_new_cards(PackedStringArray([vocab_id]))
 		if not created.is_empty():
@@ -79,7 +85,7 @@ func _add_menu_item(item: Dictionary, card: SRSCard) -> void:
 
 func _on_session_ready() -> void:
 	if _session_menu.is_empty():
-		feedback_label.text = "No café menu items available."
+		feedback_label.text = _get_empty_session_message("café orders")
 		return
 	_show_question()
 
@@ -99,7 +105,8 @@ func _show_question() -> void:
 	_audio_active = false
 	_timer_active = false
 	_replay_count = 0
-	_time_remaining = ORDER_TIME
+	_time_remaining = _get_order_time()
+	timer_bar.max_value = _time_remaining
 	feedback_label.text = ""
 	cat_speech_label.text = "Listen to the order"
 	order_meaning_label.visible = false
@@ -155,9 +162,19 @@ func _start_timer() -> void:
 	if not _is_answering or _audio_active:
 		return
 	if _time_remaining <= 0.0:
-		_time_remaining = ORDER_TIME
+		_time_remaining = _get_order_time()
 	timer_bar.value = _time_remaining
 	_timer_active = true
+
+
+func _get_order_time() -> float:
+	match _get_difficulty():
+		"relaxed":
+			return 15.0
+		"challenge":
+			return 8.0
+		_:
+			return 12.0
 
 
 func _on_replay_pressed() -> void:

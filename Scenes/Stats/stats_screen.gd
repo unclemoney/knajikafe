@@ -5,11 +5,22 @@ const CAT_DIR := "res://Resources/Cats/"
 const JAPANESE_FONT = preload("res://Themes/japanese_font.tres")
 
 @onready var back_btn: Button = $TopBar/BackBtn
+@onready var level_option: OptionButton = $TopBar/LevelOption
 @onready var stats_container: VBoxContainer = $ScrollContainer/StatsVBox
+
+var _selected_level := 5
 
 
 func _ready() -> void:
 	back_btn.pressed.connect(_on_back_pressed)
+	level_option.add_item("N5", 5)
+	level_option.add_item("N4", 4)
+	level_option.add_item("Mixed", 0)
+	var profile := GameController.current_profile
+	if profile:
+		_selected_level = int(profile.settings.get("target_jlpt_level", 5))
+	level_option.select(level_option.get_item_index(_selected_level))
+	level_option.item_selected.connect(_on_level_changed)
 	_build_stats()
 
 
@@ -34,15 +45,19 @@ func _build_stats() -> void:
 		_add_stat_row(quest["title"], "%d/%d%s" % [quest["progress"], quest["target"], " · Claimed" if quest["claimed"] else ""])
 	_add_spacer()
 
+	var level_name := "Mixed" if _selected_level == 0 else "N%d" % _selected_level
+	var kanji_entries: Array[KanjiEntry] = []
+	kanji_entries.append_array(VocabDatabase.get_kanji_by_jlpt(5))
+	kanji_entries.append_array(VocabDatabase.get_kanji_by_jlpt(4))
 	var level_summary := ProgressMetrics.get_level_summary(
 		SRSEngine.cards,
 		VocabDatabase.get_all_words(),
-		VocabDatabase.get_kanji_by_jlpt(5),
-		5
+		kanji_entries,
+		_selected_level
 	)
-	_add_section_header("N5 Vocabulary")
-	_add_progress_bar("Coverage %d/120" % level_summary["introduced"], level_summary["coverage"])
-	_add_progress_bar("Retained %d/120" % level_summary["retained"], level_summary["retained_ratio"])
+	_add_section_header(level_name + " Vocabulary")
+	_add_progress_bar("Coverage %d/%d" % [level_summary["introduced"], level_summary["total_words"]], level_summary["coverage"])
+	_add_progress_bar("Retained %d/%d" % [level_summary["retained"], level_summary["total_words"]], level_summary["retained_ratio"])
 	var stages: Dictionary = level_summary["stage_counts"]
 	_add_stat_row("Learning Stages", "New %d  |  Learning %d  |  Familiar %d  |  Retained %d" % [stages["New"], stages["Learning"], stages["Familiar"], stages["Retained"]])
 	_add_note("Familiar: 2 successes, 6-day interval, 60% success. Retained: 3 successes, 14-day interval, 80% success.")
@@ -66,25 +81,46 @@ func _build_stats() -> void:
 	_add_note("Flashcard ratings are self-reported; other activities use answered results.")
 	_add_spacer()
 
-	_add_section_header("N5 Kanji")
-	var kanji_ratio := float(level_summary["kanji_encountered"]) / float(level_summary["total_kanji"])
-	_add_progress_bar("Exposure %d/100" % level_summary["kanji_encountered"], kanji_ratio)
-	var kanji_summary := ProgressMetrics.get_kanji_summary(SRSEngine.kanji_cards, VocabDatabase.get_kanji_by_jlpt(5), GameController.get_current_date())
-	_add_progress_bar("Practiced %d/100" % kanji_summary["introduced"], kanji_summary["coverage"])
-	_add_progress_bar("Retained %d/100" % kanji_summary["retained"], kanji_summary["retained_ratio"])
+	_add_section_header(level_name + " Kanji")
+	var total_kanji := int(level_summary["total_kanji"])
+	var kanji_ratio := float(level_summary["kanji_encountered"]) / float(total_kanji) if total_kanji > 0 else 0.0
+	_add_progress_bar("Exposure %d/%d" % [level_summary["kanji_encountered"], total_kanji], kanji_ratio)
+	var kanji_summary := ProgressMetrics.get_kanji_summary(SRSEngine.kanji_cards, kanji_entries, GameController.get_current_date(), _selected_level)
+	_add_progress_bar("Practiced %d/%d" % [kanji_summary["introduced"], total_kanji], kanji_summary["coverage"])
+	_add_progress_bar("Retained %d/%d" % [kanji_summary["retained"], total_kanji], kanji_summary["retained_ratio"])
 	_add_stat_row("Kanji Due", str(kanji_summary["due"]))
 	_add_note("Exposure comes from vocabulary. Practiced and Retained come from Kanji Workshop.")
 	_add_spacer()
 
+	_add_section_header(level_name + " Topics")
+	var topic_summary := ProgressMetrics.get_topic_summary(SRSEngine.cards, VocabDatabase.get_all_words(), _selected_level)
+	for category in VocabDatabase.get_categories():
+		if not topic_summary.has(category):
+			continue
+		var topic: Dictionary = topic_summary[category]
+		_add_progress_bar("%s %d/%d" % [category.capitalize(), topic["introduced"], topic["total"]], topic["coverage"])
+	_add_note("Topic totals count authored words; progress counts introduced cards. Draft categories await human review.")
+	_add_spacer()
+
 	_add_section_header("Needs Practice")
-	var practice_cards := ProgressMetrics.get_needs_practice(SRSEngine.cards, GameController.get_current_date())
+	var level_cards: Array[SRSCard] = []
+	for card in SRSEngine.cards:
+		var word := VocabDatabase.get_word_by_id(card.vocab_id)
+		if word != null and (_selected_level == 0 or word.jlpt_level == _selected_level):
+			level_cards.append(card)
+	var practice_cards := ProgressMetrics.get_needs_practice(level_cards, GameController.get_current_date())
 	if practice_cards.is_empty():
 		_add_note("Complete a review to reveal words that need practice.")
 	for card in practice_cards:
 		_add_practice_row(card)
 	_add_spacer()
 	_add_section_header("Kanji to Review")
-	var kanji_practice := ProgressMetrics.get_kanji_needs_practice(SRSEngine.kanji_cards, GameController.get_current_date())
+	var level_kanji_cards: Array[KanjiCard] = []
+	for card in SRSEngine.kanji_cards:
+		var entry := VocabDatabase.get_kanji(card.character)
+		if entry != null and (_selected_level == 0 or entry.jlpt_level == _selected_level):
+			level_kanji_cards.append(card)
+	var kanji_practice := ProgressMetrics.get_kanji_needs_practice(level_kanji_cards, GameController.get_current_date())
 	if kanji_practice.is_empty():
 		_add_note("Complete Kanji Workshop to reveal characters that need practice.")
 	for card in kanji_practice:
@@ -260,6 +296,14 @@ func _add_spacer() -> void:
 	var spacer := Control.new()
 	spacer.custom_minimum_size = Vector2(0, 8)
 	stats_container.add_child(spacer)
+
+
+func _on_level_changed(index: int) -> void:
+	_selected_level = level_option.get_item_id(index)
+	for child in stats_container.get_children():
+		stats_container.remove_child(child)
+		child.queue_free()
+	_build_stats()
 
 
 func _on_back_pressed() -> void:

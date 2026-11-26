@@ -46,7 +46,8 @@ func _ready() -> void:
 
 
 func _get_new_card_limit() -> int:
-	return PAIR_COUNT
+	var profile_limit := super._get_new_card_limit()
+	return 0 if profile_limit == 0 else PAIR_COUNT
 
 
 func _on_session_ready() -> void:

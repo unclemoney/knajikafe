@@ -2,6 +2,10 @@
 """Generate the curated N5 kanji starter set as UTF-8 JSON."""
 import json
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from content.n4_kanji import KANJI as N4_KANJI
 
 KANJI_DIR = os.path.join(os.path.dirname(__file__), "..", "Resources", "Kanji")
 
@@ -110,25 +114,39 @@ N5_KANJI = [
 ]
 
 
-def validate_kanji(entries):
-    if len(entries) != 100:
-        raise ValueError(f"Expected 100 N5 kanji, got {len(entries)}")
-    characters = [entry[0] for entry in entries]
+def validate_kanji(entries, expected_count):
+    if len(entries) != expected_count:
+        raise ValueError(f"Expected {expected_count} kanji, got {len(entries)}")
+    characters = [entry["character"] if isinstance(entry, dict) else entry[0] for entry in entries]
     if len(set(characters)) != len(characters):
         raise ValueError("Duplicate kanji characters")
-    for character, meanings, on_readings, kun_readings, strokes, radical, _components in entries:
-        if len(character) != 1 or not meanings or not (on_readings or kun_readings):
-            raise ValueError(f"Missing required kanji data: {character}")
-        if not 1 <= strokes <= 30 or not radical:
-            raise ValueError(f"Invalid stroke/radical data: {character}")
+    for entry in entries:
+        if isinstance(entry, dict):
+            if len(entry["character"]) != 1 or not entry["meanings"] or not (entry["on_readings"] or entry["kun_readings"]):
+                raise ValueError(f"Missing required kanji data: {entry['character']}")
+            if not 1 <= entry["stroke_count"] <= 30 or not entry["radical"]:
+                raise ValueError(f"Invalid stroke/radical data: {entry['character']}")
+        else:
+            character, meanings, on_readings, kun_readings, strokes, radical, _components = entry
+            if len(character) != 1 or not meanings or not (on_readings or kun_readings):
+                raise ValueError(f"Missing required kanji data: {character}")
+            if not 1 <= strokes <= 30 or not radical:
+                raise ValueError(f"Invalid stroke/radical data: {character}")
+
+
+def write_kanji(entries, path):
+    with open(path, "w", encoding="utf-8", newline="\n") as file:
+        json.dump(entries, file, ensure_ascii=False, indent=2)
+        file.write("\n")
+    print(f"Written {path} ({len(entries)} kanji)")
 
 
 def main():
-    validate_kanji(N5_KANJI)
     os.makedirs(KANJI_DIR, exist_ok=True)
-    result = []
+    validate_kanji(N5_KANJI, 100)
+    n5_result = []
     for character, meanings, on_readings, kun_readings, strokes, radical, components in N5_KANJI:
-        result.append({
+        n5_result.append({
             "character": character,
             "meanings": meanings,
             "on_readings": on_readings,
@@ -138,11 +156,9 @@ def main():
             "radical": radical,
             "components": components,
         })
-    path = os.path.join(KANJI_DIR, "n5_kanji.json")
-    with open(path, "w", encoding="utf-8", newline="\n") as file:
-        json.dump(result, file, ensure_ascii=False, indent=2)
-        file.write("\n")
-    print(f"Written {path} ({len(result)} kanji)")
+    write_kanji(n5_result, os.path.join(KANJI_DIR, "n5_kanji.json"))
+    validate_kanji(N4_KANJI, 200)
+    write_kanji(N4_KANJI, os.path.join(KANJI_DIR, "n4_kanji.json"))
 
 
 if __name__ == "__main__":

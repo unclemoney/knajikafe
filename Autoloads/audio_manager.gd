@@ -162,17 +162,21 @@ func _setup_speech_player() -> void:
 
 
 func _load_audio_manifest() -> void:
-	var path := "res://Resources/Audio/n5_audio_manifest.json"
-	if not FileAccess.file_exists(path):
-		return
-	var file := FileAccess.open(path, FileAccess.READ)
-	var parsed = JSON.parse_string(file.get_as_text())
-	file.close()
-	if parsed is not Array:
-		return
-	for entry in parsed:
-		if entry is Dictionary and entry.get("status", "") == "ready":
-			_audio_manifest[entry.get("id", "")] = entry.get("file", "")
+	var manifest_paths := [
+		"res://Resources/Audio/japanese_audio_manifest.json",
+		"res://Resources/Audio/n5_audio_manifest.json",
+	]
+	for path in manifest_paths:
+		if not FileAccess.file_exists(path):
+			continue
+		var file := FileAccess.open(path, FileAccess.READ)
+		var parsed = JSON.parse_string(file.get_as_text())
+		file.close()
+		if parsed is not Array:
+			continue
+		for entry in parsed:
+			if entry is Dictionary and entry.get("status", "") == "ready":
+				_audio_manifest[entry.get("id", "")] = entry.get("file", "")
 
 
 func _on_speech_finished() -> void:

@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://do17uariseokh"
+valid=false
+
+[deps]
+
+source_file="res://Tools/content/source/supplement_kanji.csv"
+
+[params]
+
+compress=true
+delimiter=0

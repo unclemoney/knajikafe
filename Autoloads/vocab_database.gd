@@ -23,6 +23,7 @@ var _vocab_json_paths: PackedStringArray = [
 ## Paths to kanji JSON files to load on startup.
 var _kanji_json_paths: PackedStringArray = [
 	"res://Resources/Kanji/n5_kanji.json",
+	"res://Resources/Kanji/n4_kanji.json",
 ]
 
 
@@ -50,6 +51,18 @@ func get_words_by_category(category: String) -> Array[VocabWord]:
 	for word in _words.values():
 		if word is VocabWord and category in word.categories:
 			results.append(word)
+	return results
+
+
+## Returns all authored topic categories in alphabetical order.
+func get_categories() -> PackedStringArray:
+	var categories: Dictionary = {}
+	for word in _words.values():
+		if word is VocabWord:
+			for category in word.categories:
+				categories[category] = true
+	var results := PackedStringArray(categories.keys())
+	results.sort()
 	return results
 
 
@@ -87,6 +100,9 @@ func word_matches_filters(word: VocabWord, filters: Dictionary) -> bool:
 	if filters.get("require_examples", false) and word.example_sentences.is_empty():
 		return false
 	if filters.get("require_kanji", false) and word.kanji == "":
+		return false
+	var part_of_speech: String = filters.get("part_of_speech", "")
+	if part_of_speech != "" and word.part_of_speech != part_of_speech:
 		return false
 	return true
 
@@ -131,6 +147,7 @@ func _load_all_data() -> void:
 	for path in _kanji_json_paths:
 		_load_kanji_json(path)
 	reading_passages = _load_json_array("res://Resources/Reading/n5_reading.json")
+	reading_passages.append_array(_load_json_array("res://Resources/Reading/n4_reading.json"))
 	cafe_menu = _load_json_array("res://Resources/Vocabulary/cafe_menu.json")
 	print("VocabDatabase: Loaded %d words, %d kanji." % [_words.size(), _kanji.size()])
 

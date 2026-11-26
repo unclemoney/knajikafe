@@ -8,5 +8,15 @@
   {"vocab_id":"n5_017","label":"Meat","order_text":"肉をください。","order_clip":"order:n5_017","texture":"res://Art/MiniGames/CafeOrders/n5_017.png"},
   {"vocab_id":"n5_018","label":"Vegetables","order_text":"野菜をください。","order_clip":"order:n5_018","texture":"res://Art/MiniGames/CafeOrders/n5_018.png"},
   {"vocab_id":"n5_019","label":"Fruit","order_text":"果物をください。","order_clip":"order:n5_019","texture":"res://Art/MiniGames/CafeOrders/n5_019.png"},
-  {"vocab_id":"n5_020","label":"Milk","order_text":"牛乳をください。","order_clip":"order:n5_020","texture":"res://Art/MiniGames/CafeOrders/n5_020.png"}
+  {"vocab_id":"n5_020","label":"Milk","order_text":"牛乳をください。","order_clip":"order:n5_020","texture":"res://Art/MiniGames/CafeOrders/n5_020.png"},
+  {"vocab_id":"n4_691","label":"Coffee","order_text":"コーヒーをください。","order_clip":"order:n4_691","texture":"res://Art/MiniGames/CafeOrders/n4_691.png"},
+  {"vocab_id":"n4_692","label":"Black tea","order_text":"紅茶をください。","order_clip":"order:n4_692","texture":"res://Art/MiniGames/CafeOrders/n4_692.png"},
+  {"vocab_id":"n4_693","label":"Green tea","order_text":"緑茶をください。","order_clip":"order:n4_693","texture":"res://Art/MiniGames/CafeOrders/n4_693.png"},
+  {"vocab_id":"n4_694","label":"Curry","order_text":"カレーをください。","order_clip":"order:n4_694","texture":"res://Art/MiniGames/CafeOrders/n4_694.png"},
+  {"vocab_id":"n4_695","label":"Ramen","order_text":"ラーメンをください。","order_clip":"order:n4_695","texture":"res://Art/MiniGames/CafeOrders/n4_695.png"},
+  {"vocab_id":"n4_696","label":"Sushi","order_text":"寿司をください。","order_clip":"order:n4_696","texture":"res://Art/MiniGames/CafeOrders/n4_696.png"},
+  {"vocab_id":"n4_697","label":"Miso soup","order_text":"味噌汁をください。","order_clip":"order:n4_697","texture":"res://Art/MiniGames/CafeOrders/n4_697.png"},
+  {"vocab_id":"n4_698","label":"Juice","order_text":"ジュースをください。","order_clip":"order:n4_698","texture":"res://Art/MiniGames/CafeOrders/n4_698.png"},
+  {"vocab_id":"n4_699","label":"Dessert","order_text":"デザートをください。","order_clip":"order:n4_699","texture":"res://Art/MiniGames/CafeOrders/n4_699.png"},
+  {"vocab_id":"n4_700","label":"Beer","order_text":"ビールをください。","order_clip":"order:n4_700","texture":"res://Art/MiniGames/CafeOrders/n4_700.png"}
 ]

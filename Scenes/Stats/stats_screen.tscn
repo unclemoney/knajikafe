@@ -45,6 +45,11 @@ text = "📊 Stats & Progress"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="LevelOption" type="OptionButton" parent="TopBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 24)
+theme_override_font_sizes/font_size = 8
+
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = 0

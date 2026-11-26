@@ -5,6 +5,7 @@ extends Control
 ## Reads data from GameController.session_data.
 
 @onready var title_label: Label = $Panel/VBox/TitleLabel
+@onready var curriculum_label: Label = $Panel/VBox/StatsBox/CurriculumLabel
 @onready var words_label: Label = $Panel/VBox/StatsBox/WordsLabel
 @onready var accuracy_label: Label = $Panel/VBox/StatsBox/AccuracyLabel
 @onready var xp_label: Label = $Panel/VBox/StatsBox/XPLabel
@@ -77,8 +78,15 @@ func _display_results() -> void:
 	var profile := GameController.current_profile
 	if profile:
 		level_label.text = "Level: %d  |  Total XP: %d" % [profile.level, profile.xp]
+		var target_level := int(profile.settings.get("target_jlpt_level", 5))
+		var level_name := "Mixed" if target_level == 0 else "N%d" % target_level
+		var topic := str(profile.settings.get("target_topic", "all"))
+		var topic_name := "All topics" if topic == "all" else topic.capitalize()
+		var difficulty := str(profile.settings.get("difficulty", "standard")).capitalize()
+		curriculum_label.text = "%s · %s · %s" % [level_name, topic_name, difficulty]
 	else:
 		level_label.text = ""
+		curriculum_label.text = ""
 
 	var skill_results: Dictionary = data.get("skill_results", {})
 	var skill_parts: Array = []

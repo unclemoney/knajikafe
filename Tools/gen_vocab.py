@@ -5,6 +5,11 @@ JSON format avoids Godot's .tres reimport/resave behavior which strips
 PackedStringArray values back to empty defaults."""
 import os
 import json
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from content.n5_words import WORDS as N5_WORDS
+from content.n4_words import WORDS as N4_WORDS
 
 VOCAB_DIR = os.path.join(os.path.dirname(__file__), "..", "Resources", "Vocabulary")
 
@@ -385,48 +390,33 @@ N5_EXAMPLES = {
 }
 
 
-def validate_n5_examples(words):
-    expected_ids = {word[0] for word in words}
-    if set(N5_EXAMPLES) != expected_ids:
-        missing = sorted(expected_ids - set(N5_EXAMPLES))
-        extra = sorted(set(N5_EXAMPLES) - expected_ids)
-        raise ValueError(f"N5 example ID mismatch; missing={missing}, extra={extra}")
+from content.n5_words import WORDS as N5_WORDS
+from content.n4_words import WORDS as N4_WORDS
+
+
+def validate_examples(words):
     for word in words:
-        examples = N5_EXAMPLES[word[0]]
-        display = word[1] or word[2] or word[3]
+        examples = word["example_sentences"]
+        display = word["kanji"] or word["hiragana"] or word["katakana"]
         if not examples:
-            raise ValueError(f"Missing N5 example for {word[0]}")
+            raise ValueError(f"Missing example for {word['id']}")
         for example in examples:
             parts = example.split("|")
             if len(parts) != 2 or not parts[0].strip() or not parts[1].strip():
-                raise ValueError(f"Malformed example for {word[0]}: {example}")
+                raise ValueError(f"Malformed example for {word['id']}: {example}")
             if display not in parts[0]:
-                raise ValueError(f"Example for {word[0]} does not contain {display}")
+                raise ValueError(f"Example for {word['id']} does not contain {display}")
 
 
 def generate_json(words, jlpt_level):
-    """Generate a JSON-serializable list of word dictionaries."""
-    result = []
-    for w in words:
-        wid, kanji, hiragana, katakana, romaji, meanings, categories, pos = w
-        result.append({
-            "id": wid,
-            "kanji": kanji,
-            "hiragana": hiragana,
-            "katakana": katakana,
-            "romaji": romaji,
-            "english_meanings": meanings,
-            "jlpt_level": jlpt_level,
-            "categories": categories,
-            "example_sentences": N5_EXAMPLES.get(wid, []) if jlpt_level == 5 else [],
-            "part_of_speech": pos,
-        })
-    return result
+    """Return validated source records for runtime JSON."""
+    return words
 
 
 def main():
     os.makedirs(VOCAB_DIR, exist_ok=True)
-    validate_n5_examples(N5_WORDS)
+    validate_examples(N5_WORDS)
+    validate_examples(N4_WORDS)
 
     # Generate N5
     n5_data = generate_json(N5_WORDS, 5)

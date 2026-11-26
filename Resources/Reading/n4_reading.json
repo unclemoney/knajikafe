@@ -1,0 +1,752 @@
+[
+  {
+    "id": "read_n4_001",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_001",
+    "related_vocab_ids": [
+      "n4_009"
+    ],
+    "japanese_lines": [
+      "来月、会社で新しい仕事を始めます。",
+      "今の仕事も大切ですが、新しい経験を楽しみにしています。"
+    ],
+    "english_lines": [
+      "Next month, I will start a new job at my company.",
+      "My current job is important too, but I am looking forward to the new experience."
+    ],
+    "question": "What is the speaker looking forward to?",
+    "choices": [
+      "A new experience",
+      "A long vacation",
+      "Leaving the company",
+      "A cheaper apartment"
+    ],
+    "answer_index": 0,
+    "explanation": "新しい経験を楽しみにしています means looking forward to the new experience."
+  },
+  {
+    "id": "read_n4_002",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_002",
+    "related_vocab_ids": [
+      "n4_003"
+    ],
+    "japanese_lines": [
+      "この本は日本の文化と関係があります。",
+      "その本を読んで、日本の歴史にも興味を持ちました。"
+    ],
+    "english_lines": [
+      "This book is related to Japanese culture.",
+      "After reading it, I also became interested in Japanese history."
+    ],
+    "question": "What did the speaker become interested in?",
+    "choices": [
+      "Japanese history",
+      "Japanese food",
+      "Japanese trains",
+      "Japanese schools"
+    ],
+    "answer_index": 0,
+    "explanation": "日本の歴史にも興味を持ちました means became interested in Japanese history."
+  },
+  {
+    "id": "read_n4_003",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_003",
+    "related_vocab_ids": [
+      "n4_002"
+    ],
+    "japanese_lines": [
+      "遅れた理由は、電車が止まっていたことです。",
+      "駅の人に聞いて、次の電車を待ちました。"
+    ],
+    "english_lines": [
+      "The reason I was late is that the train had stopped.",
+      "I asked a station worker and waited for the next train."
+    ],
+    "question": "Why was the speaker late?",
+    "choices": [
+      "The weather",
+      "The train stopped",
+      "They forgot the time",
+      "They missed the bus"
+    ],
+    "answer_index": 1,
+    "explanation": "電車が止まっていたことです says the train had stopped."
+  },
+  {
+    "id": "read_n4_004",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_004",
+    "related_vocab_ids": [
+      "n4_002"
+    ],
+    "japanese_lines": [
+      "「漢字」は中国から来た文字です。",
+      "その意味を知って、漢字を勉強する人が増えています。"
+    ],
+    "english_lines": [
+      "The word 漢字 comes from Chinese characters.",
+      "More people are learning kanji after understanding its meaning."
+    ],
+    "question": "What is mentioned about 漢字?",
+    "choices": [
+      "Its meaning",
+      "Its price",
+      "Its color",
+      "Its location"
+    ],
+    "answer_index": 0,
+    "explanation": "その意味を知って means after understanding its meaning."
+  },
+  {
+    "id": "read_n4_005",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_005",
+    "related_vocab_ids": [
+      "n4_002"
+    ],
+    "japanese_lines": [
+      "私は写真に興味があります。",
+      "週末は山や川の写真を撮ります。"
+    ],
+    "english_lines": [
+      "I am interested in photography.",
+      "On weekends, I take photos of mountains and rivers."
+    ],
+    "question": "What does the speaker photograph?",
+    "choices": [
+      "Cafes",
+      "Mountains and rivers",
+      "Trains",
+      "Cats"
+    ],
+    "answer_index": 1,
+    "explanation": "山や川の写真を撮ります says photos of mountains and rivers."
+  },
+  {
+    "id": "read_n4_006",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_006",
+    "related_vocab_ids": [
+      "n4_009"
+    ],
+    "japanese_lines": [
+      "今日は寒いので、コートを着ました。",
+      "家の中は暖かく、気持ちがいいです。"
+    ],
+    "english_lines": [
+      "Because it is cold today, I wore a coat.",
+      "Inside the house is warm and comfortable."
+    ],
+    "question": "How is the inside of the house?",
+    "choices": [
+      "Cold",
+      "Warm and comfortable",
+      "Noisy",
+      "Dark"
+    ],
+    "answer_index": 1,
+    "explanation": "家の中は暖かく、気持ちがいいです describes a warm comfortable home."
+  },
+  {
+    "id": "read_n4_007",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_007",
+    "related_vocab_ids": [
+      "n4_009"
+    ],
+    "japanese_lines": [
+      "友達と来週の日曜日に会う約束をしました。",
+      "駅の前の喫茶店で話す予定です。"
+    ],
+    "english_lines": [
+      "I promised to meet my friend next Sunday.",
+      "We plan to talk at the café in front of the station."
+    ],
+    "question": "Where will they meet?",
+    "choices": [
+      "At school",
+      "At the station café",
+      "At the library",
+      "At home"
+    ],
+    "answer_index": 1,
+    "explanation": "駅の前の喫茶店 is the café in front of the station."
+  },
+  {
+    "id": "read_n4_008",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_008",
+    "related_vocab_ids": [
+      "n4_009"
+    ],
+    "japanese_lines": [
+      "明日は雨かもしれません。",
+      "傘と長靴を準備しておきます。"
+    ],
+    "english_lines": [
+      "It may rain tomorrow.",
+      "I will prepare an umbrella and rain boots."
+    ],
+    "question": "What will the speaker prepare?",
+    "choices": [
+      "A ticket",
+      "An umbrella and boots",
+      "A meal",
+      "A camera"
+    ],
+    "answer_index": 1,
+    "explanation": "傘と長靴を準備しておきます means prepare an umbrella and rain boots."
+  },
+  {
+    "id": "read_n4_009",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_009",
+    "related_vocab_ids": [
+      "n4_007"
+    ],
+    "japanese_lines": [
+      "旅行の予定は、来月の三日です。",
+      "姉と京都へ行きます。"
+    ],
+    "english_lines": [
+      "The trip is planned for the third of next month.",
+      "I will go to Kyoto with my older sister."
+    ],
+    "question": "When is the trip?",
+    "choices": [
+      "Next Sunday",
+      "Next month on the third",
+      "Tomorrow",
+      "Last month"
+    ],
+    "answer_index": 1,
+    "explanation": "来月の三日です means the third of next month."
+  },
+  {
+    "id": "read_n4_010",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_010",
+    "related_vocab_ids": [
+      "n4_095"
+    ],
+    "japanese_lines": [
+      "朝、コーヒーを飲むのが私の習慣です。",
+      "そのあと、ニュースを読みます。"
+    ],
+    "english_lines": [
+      "Drinking coffee in the morning is my habit.",
+      "After that, I read the news."
+    ],
+    "question": "What does the speaker do after coffee?",
+    "choices": [
+      "Reads the news",
+      "Goes running",
+      "Calls a friend",
+      "Makes breakfast"
+    ],
+    "answer_index": 0,
+    "explanation": "そのあと、ニュースを読みます says they read the news afterward."
+  },
+  {
+    "id": "read_n4_011",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_011",
+    "related_vocab_ids": [
+      "n4_012"
+    ],
+    "japanese_lines": [
+      "秋の文化祭で、学生たちは日本の歌を歌います。",
+      "その歌は、日本の四季を表しています。"
+    ],
+    "english_lines": [
+      "At the autumn culture festival, students sing a Japanese song.",
+      "The song expresses Japan's four seasons."
+    ],
+    "question": "What does the song express?",
+    "choices": [
+      "The four seasons",
+      "School history",
+      "Family memories",
+      "City traffic"
+    ],
+    "answer_index": 0,
+    "explanation": "日本の四季を表しています means it expresses Japan's four seasons."
+  },
+  {
+    "id": "read_n4_012",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_012",
+    "related_vocab_ids": [
+      "n4_011"
+    ],
+    "japanese_lines": [
+      "この古い建物は、百年前にできました。",
+      "町の歴史を知るために、毎年学生が見学に来ます。"
+    ],
+    "english_lines": [
+      "This old building was built one hundred years ago.",
+      "Students come every year to learn about the town's history."
+    ],
+    "question": "Why do students visit the building?",
+    "choices": [
+      "To study history",
+      "To buy books",
+      "To eat lunch",
+      "To take exams"
+    ],
+    "answer_index": 0,
+    "explanation": "町の歴史を知るために means to learn about the town's history."
+  },
+  {
+    "id": "read_n4_013",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_013",
+    "related_vocab_ids": [
+      "n4_006"
+    ],
+    "japanese_lines": [
+      "将来、日本語の先生になりたいです。",
+      "そのために、毎日勉強を続けています。"
+    ],
+    "english_lines": [
+      "In the future, I want to become a Japanese teacher.",
+      "For that reason, I keep studying every day."
+    ],
+    "question": "What is the speaker's goal?",
+    "choices": [
+      "To become a teacher",
+      "To become a doctor",
+      "To become a driver",
+      "To become a chef"
+    ],
+    "answer_index": 0,
+    "explanation": "日本語の先生になりたいです says the speaker wants to become a Japanese teacher."
+  },
+  {
+    "id": "read_n4_014",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_014",
+    "related_vocab_ids": [
+      "n4_009"
+    ],
+    "japanese_lines": [
+      "最近、弟はよく料理をします。",
+      "昨日は、家族にカレーを作ってくれました。"
+    ],
+    "english_lines": [
+      "Recently, my younger brother often cooks.",
+      "Yesterday, he made curry for our family."
+    ],
+    "question": "What did the brother make?",
+    "choices": [
+      "Ramen",
+      "Curry",
+      "Sushi",
+      "Cake"
+    ],
+    "answer_index": 1,
+    "explanation": "家族にカレーを作ってくれました means he made curry for the family."
+  },
+  {
+    "id": "read_n4_015",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_015",
+    "related_vocab_ids": [
+      "n4_016"
+    ],
+    "japanese_lines": [
+      "このアプリは地図を見るのに便利です。",
+      "電車の時間もすぐにわかります。"
+    ],
+    "english_lines": [
+      "This app is convenient for looking at maps.",
+      "It also shows train times right away."
+    ],
+    "question": "What can the app show quickly?",
+    "choices": [
+      "Train times",
+      "Weather forecasts",
+      "Restaurant menus",
+      "News articles"
+    ],
+    "answer_index": 0,
+    "explanation": "電車の時間もすぐにわかります means train times are shown right away."
+  },
+  {
+    "id": "read_n4_016",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_016",
+    "related_vocab_ids": [
+      "n4_015"
+    ],
+    "japanese_lines": [
+      "自転車がないと、駅まで不便です。",
+      "そのため、明日はバスを使います。"
+    ],
+    "english_lines": [
+      "Without a bicycle, getting to the station is inconvenient.",
+      "So tomorrow I will use the bus."
+    ],
+    "question": "How will the speaker travel tomorrow?",
+    "choices": [
+      "By bicycle",
+      "By bus",
+      "By train",
+      "On foot"
+    ],
+    "answer_index": 1,
+    "explanation": "そのため、明日はバスを使います says the speaker will use the bus tomorrow."
+  },
+  {
+    "id": "read_n4_017",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_017",
+    "related_vocab_ids": [
+      "n4_008"
+    ],
+    "japanese_lines": [
+      "来週の発表のために、資料が必要です。",
+      "先生にもらって、夜に読みます。"
+    ],
+    "english_lines": [
+      "I need the documents for next week's presentation.",
+      "I will get them from the teacher and read them at night."
+    ],
+    "question": "Why does the speaker need the documents?",
+    "choices": [
+      "For a presentation",
+      "For a trip",
+      "For a meal",
+      "For a game"
+    ],
+    "answer_index": 0,
+    "explanation": "来週の発表のために means for next week's presentation."
+  },
+  {
+    "id": "read_n4_018",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_018",
+    "related_vocab_ids": [
+      "n4_007"
+    ],
+    "japanese_lines": [
+      "今日は特別な日です。",
+      "家族と初めてのレストランへ行きます。"
+    ],
+    "english_lines": [
+      "Today is a special day.",
+      "I am going to a new restaurant with my family."
+    ],
+    "question": "What is special about today?",
+    "choices": [
+      "It is a family celebration",
+      "It is a normal workday",
+      "It is a rainy day",
+      "It is a school holiday"
+    ],
+    "answer_index": 0,
+    "explanation": "今日は特別な日です says it is a special day for the family."
+  },
+  {
+    "id": "read_n4_019",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_019",
+    "related_vocab_ids": [
+      "n4_017"
+    ],
+    "japanese_lines": [
+      "この問題は簡単に見えますが、答えは難しいです。",
+      "もう一度考えてみましょう。"
+    ],
+    "english_lines": [
+      "This problem looks easy, but the answer is difficult.",
+      "I'll think about it once more."
+    ],
+    "question": "What is difficult?",
+    "choices": [
+      "The answer",
+      "The question",
+      "The class",
+      "The book"
+    ],
+    "answer_index": 0,
+    "explanation": "答えは難しいです says the answer is difficult."
+  },
+  {
+    "id": "read_n4_020",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_020",
+    "related_vocab_ids": [
+      "n4_019"
+    ],
+    "japanese_lines": [
+      "この計画は複雑で、説明に時間がかかります。",
+      "先生に聞いてから、決めます。"
+    ],
+    "english_lines": [
+      "This plan is complicated and takes time to explain.",
+      "I will decide after asking the teacher."
+    ],
+    "question": "What will the speaker do before deciding?",
+    "choices": [
+      "Ask the teacher",
+      "Go home",
+      "Buy a book",
+      "Call a friend"
+    ],
+    "answer_index": 0,
+    "explanation": "先生に聞いてから、決めます says decide after asking the teacher."
+  },
+  {
+    "id": "read_n4_021",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_021",
+    "related_vocab_ids": [
+      "n4_007"
+    ],
+    "japanese_lines": [
+      "先生はいつも丁寧に説明してくれます。",
+      "私たちは質問しやすいです。"
+    ],
+    "english_lines": [
+      "The teacher always explains things politely.",
+      "It is easy for us to ask questions."
+    ],
+    "question": "Why is it easy to ask questions?",
+    "choices": [
+      "The teacher explains politely",
+      "The questions are short",
+      "The class is small",
+      "The answers are easy"
+    ],
+    "answer_index": 0,
+    "explanation": "丁寧に説明してくれます means the teacher explains politely."
+  },
+  {
+    "id": "read_n4_022",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_022",
+    "related_vocab_ids": [
+      "n4_021"
+    ],
+    "japanese_lines": [
+      "今日の映画は残念ながら、あまり面白くありませんでした。",
+      "次の映画には期待しています。"
+    ],
+    "english_lines": [
+      "Unfortunately, today's movie was not very interesting.",
+      "I am looking forward to the next movie."
+    ],
+    "question": "How does the speaker feel about the next movie?",
+    "choices": [
+      "Hopeful",
+      "Bored",
+      "Angry",
+      "Worried"
+    ],
+    "answer_index": 0,
+    "explanation": "次の映画には期待しています means looking forward to the next movie."
+  },
+  {
+    "id": "read_n4_023",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_023",
+    "related_vocab_ids": [
+      "n4_022"
+    ],
+    "japanese_lines": [
+      "週末の公園は、花がたくさんあって素晴らしいです。",
+      "写真をたくさん撮りたいです。"
+    ],
+    "english_lines": [
+      "The park on the weekend has many flowers and is wonderful.",
+      "I want to take many photos."
+    ],
+    "question": "What does the speaker want to do?",
+    "choices": [
+      "Take photos",
+      "Go swimming",
+      "Buy flowers",
+      "Read a book"
+    ],
+    "answer_index": 0,
+    "explanation": "写真をたくさん撮りたいです means wants to take many photos."
+  },
+  {
+    "id": "read_n4_024",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_024",
+    "related_vocab_ids": [
+      "n4_009"
+    ],
+    "japanese_lines": [
+      "友達に本を届けました。",
+      "駅の近くにある本屋さんで買った本です。"
+    ],
+    "english_lines": [
+      "I delivered a book to my friend.",
+      "It is a book I bought at the bookstore near the station."
+    ],
+    "question": "What did the speaker deliver?",
+    "choices": [
+      "A letter",
+      "A book",
+      "A meal",
+      "A ticket"
+    ],
+    "answer_index": 1,
+    "explanation": "友達に本を届けました means delivered a book to a friend."
+  },
+  {
+    "id": "read_n4_025",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_025",
+    "related_vocab_ids": [
+      "n4_024"
+    ],
+    "japanese_lines": [
+      "荷物が届く日は、金曜日です。",
+      "木曜日には家にいるつもりです。"
+    ],
+    "english_lines": [
+      "The package will arrive on Friday.",
+      "I plan to be home on Thursday."
+    ],
+    "question": "When will the package arrive?",
+    "choices": [
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Monday"
+    ],
+    "answer_index": 1,
+    "explanation": "荷物が届く日は、金曜日です says the package arrives Friday."
+  },
+  {
+    "id": "read_n4_026",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_026",
+    "related_vocab_ids": [
+      "n4_027"
+    ],
+    "japanese_lines": [
+      "勉強を続けるのは難しいですが、毎日少しずつやっています。",
+      "最近は漢字も覚えられてきました。"
+    ],
+    "english_lines": [
+      "Continuing to study is difficult, but I do a little every day.",
+      "Recently, I have started remembering more kanji."
+    ],
+    "question": "What is improving?",
+    "choices": [
+      "Kanji knowledge",
+      "Cooking skill",
+      "Driving skill",
+      "Typing speed"
+    ],
+    "answer_index": 0,
+    "explanation": "最近は漢字も覚えられてきました means remembering more kanji."
+  },
+  {
+    "id": "read_n4_027",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_026",
+    "related_vocab_ids": [
+      "n4_028"
+    ],
+    "japanese_lines": [
+      "来週から仕事のやり方を変えます。",
+      "もっと効率が良くなると思います。"
+    ],
+    "english_lines": [
+      "Starting next week, I will change how I work.",
+      "I think it will become more efficient."
+    ],
+    "question": "What does the speaker expect to improve?",
+    "choices": [
+      "Efficiency",
+      "Salary",
+      "Travel time",
+      "Weather"
+    ],
+    "answer_index": 0,
+    "explanation": "もっと効率が良くなると思います means expects better efficiency."
+  },
+  {
+    "id": "read_n4_028",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_027",
+    "related_vocab_ids": [
+      "n4_029"
+    ],
+    "japanese_lines": [
+      "日本語と英語を比べると、文の順番が違います。",
+      "その違いを学ぶのは面白いです。"
+    ],
+    "english_lines": [
+      "Comparing Japanese and English, the sentence order is different.",
+      "Learning that difference is interesting."
+    ],
+    "question": "What does the speaker compare?",
+    "choices": [
+      "Two languages",
+      "Two cities",
+      "Two books",
+      "Two jobs"
+    ],
+    "answer_index": 0,
+    "explanation": "日本語と英語を比べると means comparing Japanese and English."
+  },
+  {
+    "id": "read_n4_029",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_028",
+    "related_vocab_ids": [
+      "n4_030"
+    ],
+    "japanese_lines": [
+      "明日のクラスで、好きな日本の歌を選びます。",
+      "その歌をみんなで歌います。"
+    ],
+    "english_lines": [
+      "In tomorrow's class, I will choose a Japanese song I like.",
+      "We will sing that song together."
+    ],
+    "question": "What will the class do with the song?",
+    "choices": [
+      "Sing it",
+      "Translate it",
+      "Write it",
+      "Draw it"
+    ],
+    "answer_index": 0,
+    "explanation": "その歌をみんなで歌います means sing the song together."
+  },
+  {
+    "id": "read_n4_030",
+    "jlpt_level": 4,
+    "target_vocab_id": "n4_029",
+    "related_vocab_ids": [
+      "n4_031"
+    ],
+    "japanese_lines": [
+      "来週の試験の日時を、先生と確認して決めます。",
+      "その後、友達にも知らせます。"
+    ],
+    "english_lines": [
+      "I will confirm the exam date with the teacher and decide.",
+      "After that, I will tell my friends."
+    ],
+    "question": "Who will be told afterward?",
+    "choices": [
+      "The teacher",
+      "The friends",
+      "The family",
+      "The station staff"
+    ],
+    "answer_index": 1,
+    "explanation": "その後、友達にも知らせます means telling friends afterward."
+  }
+]

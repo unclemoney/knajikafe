@@ -19,6 +19,13 @@ func _ready() -> void:
 	clear_btn.pressed.connect(_on_clear)
 	_log("[b]KanjiKafe Data Layer Test[/b]")
 	_log("Press 'Run All Tests' to begin.\n")
+	if OS.get_cmdline_user_args().has("--run-all"):
+		call_deferred("_run_all_headless")
+
+
+func _run_all_headless() -> void:
+	_on_run_all()
+	get_tree().quit(0 if _fail_count == 0 else 1)
 
 
 func _on_run_all() -> void:
@@ -32,6 +39,7 @@ func _on_run_all() -> void:
 	_test_save_manager()
 	_test_learning_data_migration()
 	_test_srs_engine()
+	_test_curriculum_settings()
 	_cleanup()
 
 	_log("\n[b]===== Results =====[/b]")
@@ -63,7 +71,10 @@ func _test_vocab_database() -> void:
 
 	# Test: get_words_by_jlpt
 	var n5_words := VocabDatabase.get_words_by_jlpt(5)
-	_assert("N5 has 120 words", n5_words.size() == 120, "got %d" % n5_words.size())
+	_assert("N5 has 800 words", n5_words.size() == 800, "got %d" % n5_words.size())
+	var n4_words := VocabDatabase.get_words_by_jlpt(4)
+	_assert("N4 has 700 words", n4_words.size() == 700, "got %d" % n4_words.size())
+	_assert("Combined curriculum has 1500 words", count == 1500, "got %d" % count)
 	var examples_valid := true
 	for n5_word in n5_words:
 		if n5_word.example_sentences.is_empty():
@@ -73,11 +84,13 @@ func _test_vocab_database() -> void:
 			if parts.size() != 2 or n5_word.get_display_text() not in parts[0] or parts[1].strip_edges() == "":
 				examples_valid = false
 	_assert("All N5 examples are valid", examples_valid, "")
-	_assert("N5 has 100 kanji", VocabDatabase.get_kanji_count() == 100, "got %d" % VocabDatabase.get_kanji_count())
+	_assert("N5 has 100 kanji", VocabDatabase.get_kanji_by_jlpt(5).size() == 100, "")
+	_assert("N4 has 200 kanji", VocabDatabase.get_kanji_by_jlpt(4).size() == 200, "")
+	_assert("Curriculum has 300 unique kanji", VocabDatabase.get_kanji_count() == 300, "got %d" % VocabDatabase.get_kanji_count())
 	var kanji_entry := VocabDatabase.get_kanji("一")
 	_assert("Kanji fields load", kanji_entry != null and not kanji_entry.meanings.is_empty() and not kanji_entry.get_all_readings().is_empty(), "")
-	_assert("Reading passages load", VocabDatabase.reading_passages.size() == 30, "")
-	_assert("Cafe menu loads", VocabDatabase.cafe_menu.size() == 10, "")
+	_assert("All 60 reading passages load", VocabDatabase.reading_passages.size() == 60, "")
+	_assert("All 20 cafe menu entries load", VocabDatabase.cafe_menu.size() == 20, "")
 	_assert("Vocabulary speech available", AudioManager.has_speech("vocab:n5_001"), "")
 	_assert("Order speech available", AudioManager.has_speech("order:n5_011"), "")
 	var menu_resources_valid := true
@@ -85,6 +98,29 @@ func _test_vocab_database() -> void:
 		if not ResourceLoader.exists(item["texture"]):
 			menu_resources_valid = false
 	_assert("Menu textures load", menu_resources_valid, "")
+	var manifest_file := FileAccess.open("res://Resources/Audio/japanese_audio_manifest.json", FileAccess.READ)
+	var manifest: Array = JSON.parse_string(manifest_file.get_as_text()) if manifest_file else []
+	if manifest_file:
+		manifest_file.close()
+	var audio_ready := manifest.size() == 1520
+	for clip in manifest:
+		if clip.get("status", "") != "ready" or not FileAccess.file_exists(clip.get("file", "")):
+			audio_ready = false
+	_assert("All 1520 Japanese audio clips are ready", audio_ready, "got %d" % manifest.size())
+	var source_words_by_id: Dictionary = {}
+	for level in [5, 4]:
+		var source_file := FileAccess.open("res://Resources/Vocabulary/n%d_vocab.json" % level, FileAccess.READ)
+		var source_words: Array = JSON.parse_string(source_file.get_as_text())
+		source_file.close()
+		for source_word in source_words:
+			source_words_by_id[source_word["id"]] = source_word
+	var drafts_valid := true
+	for source_vocab_word in VocabDatabase.get_all_words():
+		var number := int(source_vocab_word.id.right(3))
+		if (source_vocab_word.jlpt_level == 5 and number > 120) or (source_vocab_word.jlpt_level == 4 and number > 100):
+			if source_words_by_id[source_vocab_word.id].get("review_status", "") != "draft_pending_human_review":
+				drafts_valid = false
+	_assert("Imported vocabulary remains marked for human review", drafts_valid, "")
 
 	# Test: get_words_by_category
 	var cafe_words := VocabDatabase.get_words_by_category("cafe")
@@ -490,6 +526,70 @@ func _test_srs_engine() -> void:
 	progress = xp_profile.level_progress()
 	_assert("Level progress at 450 XP == 0.5", absf(progress - 0.5) < 0.01, "got %f" % progress)
 
+	_log("")
+
+
+func _test_curriculum_settings() -> void:
+	_log("[b]── Curriculum Settings ──[/b]")
+	var saved_cards := SRSEngine.cards
+	var saved_profile := GameController.current_profile
+	var profile := PlayerProfile.new()
+	profile.player_name = "curriculum_test"
+	profile.settings["new_cards_per_session"] = 0
+	profile.settings["target_jlpt_level"] = 5
+	profile.settings["target_topic"] = "all"
+	GameController.current_profile = profile
+	SRSEngine.cards = []
+	var base := MiniGameBase.new()
+	base._words_per_session = 10
+	base._populate_session({})
+	_assert("Zero new cards creates a due-only empty session", base._session_words.is_empty() and SRSEngine.cards.is_empty(), "")
+	base.free()
+
+	profile.settings["new_cards_per_session"] = 10
+	profile.settings["target_topic"] = "greetings"
+	base = MiniGameBase.new()
+	base._words_per_session = 10
+	base._populate_session({})
+	var topic_matches := not base._session_words.is_empty()
+	for word in base._session_words:
+		if "greetings" not in word.categories or word.jlpt_level != 5:
+			topic_matches = false
+	_assert("Topic and level filters isolate new cards", topic_matches, "")
+	base.free()
+
+	var empty_topic := ""
+	for category in VocabDatabase.get_categories():
+		if VocabDatabase.get_random_words(1, PackedStringArray(), {"jlpt_level": 4, "category": category}).is_empty():
+			empty_topic = category
+			break
+	_assert("At least one empty N4 topic is disabled by Settings", empty_topic != "", "")
+	profile.settings["target_jlpt_level"] = 4
+	profile.settings["target_topic"] = empty_topic
+	SRSEngine.cards = []
+	base = MiniGameBase.new()
+	base._words_per_session = 10
+	base._populate_session({})
+	_assert("Empty topics never substitute another topic", base._session_words.is_empty() and SRSEngine.cards.is_empty(), "")
+	base.free()
+
+	profile.settings["target_topic"] = "all"
+	profile.settings["new_cards_per_session"] = 0
+	SRSEngine.add_new_cards(PackedStringArray(["n5_001", "n4_001"]))
+	base = MiniGameBase.new()
+	base._words_per_session = 10
+	base._populate_session({})
+	var due_ids: PackedStringArray = []
+	for word in base._session_words:
+		due_ids.append(word.id)
+	_assert("Due cards span introduced levels", "n5_001" in due_ids and "n4_001" in due_ids, str(due_ids))
+	base.free()
+	profile.settings["target_jlpt_level"] = 0
+	base = MiniGameBase.new()
+	_assert("Mixed selection does not restrict new cards to one level", not base._get_curriculum_filters().has("jlpt_level"), "")
+	base.free()
+	SRSEngine.cards = saved_cards
+	GameController.current_profile = saved_profile
 	_log("")
 
 

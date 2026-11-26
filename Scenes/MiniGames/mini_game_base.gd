@@ -58,12 +58,15 @@ func _setup_session() -> void:
 
 func _populate_session(_config: Dictionary) -> void:
 	var filters := _get_session_filters()
+	filters.merge(_get_curriculum_filters(), true)
+	var due_filters := filters.duplicate(true)
+	due_filters.erase("jlpt_level")
 	var due := SRSEngine.get_due_cards()
 	for card in due:
 		if _session_cards.size() >= _words_per_session:
 			break
 		var word := VocabDatabase.get_word_by_id(card.vocab_id)
-		if word != null and VocabDatabase.word_matches_filters(word, filters):
+		if word != null and VocabDatabase.word_matches_filters(word, due_filters):
 			_session_cards.append(card)
 			_session_words.append(word)
 	if _session_cards.size() < _words_per_session:
@@ -71,16 +74,7 @@ func _populate_session(_config: Dictionary) -> void:
 		var existing_ids: PackedStringArray = []
 		for card in SRSEngine.cards:
 			existing_ids.append(card.vocab_id)
-		var new_filters := filters.duplicate(true)
-		var target_level := 5
-		var profile := GameController.current_profile
-		if profile:
-			target_level = int(profile.settings.get("target_jlpt_level", 5))
-		if target_level > 0:
-			new_filters["jlpt_level"] = target_level
-		else:
-			new_filters.erase("jlpt_level")
-		var new_words := VocabDatabase.get_random_words(remaining, existing_ids, new_filters)
+		var new_words := VocabDatabase.get_random_words(remaining, existing_ids, filters)
 		if new_words.size() > 0:
 			var new_ids: PackedStringArray = []
 			for word in new_words:
@@ -96,8 +90,43 @@ func _get_session_filters() -> Dictionary:
 	return {}
 
 
+func _get_curriculum_filters() -> Dictionary:
+	var filters: Dictionary = {}
+	var target_level := _get_target_jlpt_level()
+	if target_level > 0:
+		filters["jlpt_level"] = target_level
+	var topic := _get_target_topic()
+	if topic != "all":
+		filters["category"] = topic
+	return filters
+
+
+func _get_target_jlpt_level() -> int:
+	var profile := GameController.current_profile
+	return int(profile.settings.get("target_jlpt_level", 5)) if profile else 5
+
+
+func _get_target_topic() -> String:
+	var profile := GameController.current_profile
+	return str(profile.settings.get("target_topic", "all")) if profile else "all"
+
+
+func _get_difficulty() -> String:
+	var profile := GameController.current_profile
+	return str(profile.settings.get("difficulty", "standard")) if profile else "standard"
+
+
 func _get_new_card_limit() -> int:
-	return MAX_NEW_CARDS_PER_SESSION
+	var profile := GameController.current_profile
+	if profile == null:
+		return MAX_NEW_CARDS_PER_SESSION
+	return clampi(int(profile.settings.get("new_cards_per_session", MAX_NEW_CARDS_PER_SESSION)), 0, 10)
+
+
+func _get_empty_session_message(item_label: String) -> String:
+	var level_name := "Mixed" if _get_target_jlpt_level() == 0 else "N%d" % _get_target_jlpt_level()
+	var topic := "All topics" if _get_target_topic() == "all" else _get_target_topic().capitalize()
+	return "No %s for %s · %s. Change level/topic or New cards in Settings." % [item_label.to_lower(), level_name, topic]
 
 
 func _get_item_label() -> String:

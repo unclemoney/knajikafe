@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://myjahx7m5l67"
+
+[deps]
+
+files=["res://Tools/content/source/supplement_vocab_all.Reading.translation", "res://Tools/content/source/supplement_vocab_all.Level.translation"]
+
+source_file="res://Tools/content/source/supplement_vocab_all.csv"
+dest_files=["res://Tools/content/source/supplement_vocab_all.Reading.translation", "res://Tools/content/source/supplement_vocab_all.Level.translation"]
+
+[params]
+
+compress=true
+delimiter=0

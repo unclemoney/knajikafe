@@ -34,29 +34,38 @@ func _get_item_label() -> String:
 func _populate_session(_config: Dictionary) -> void:
 	var used: Dictionary = {}
 	var desired := mini(5, _words_per_session)
+	var filters := _get_curriculum_filters()
+	var due_filters := filters.duplicate(true)
+	due_filters.erase("jlpt_level")
 	var due := SRSEngine.get_due_cards()
 	for card in due:
 		for passage in VocabDatabase.reading_passages:
 			if _session_passages.size() >= desired:
 				break
-			if passage.get("target_vocab_id", "") == card.vocab_id and not used.has(passage["id"]):
+			if passage.get("target_vocab_id", "") != card.vocab_id or used.has(passage["id"]):
+				continue
+			var word := VocabDatabase.get_word_by_id(card.vocab_id)
+			if word != null and VocabDatabase.word_matches_filters(word, due_filters):
 				_add_passage(passage, card)
 				used[passage["id"]] = true
 	var remaining := VocabDatabase.reading_passages.duplicate(true)
 	remaining.shuffle()
 	var new_count := 0
+	var new_card_limit := _get_new_card_limit()
 	for passage in remaining:
 		if _session_passages.size() >= desired:
 			break
 		if used.has(passage["id"]):
 			continue
 		var vocab_id: String = passage["target_vocab_id"]
+		var word := VocabDatabase.get_word_by_id(vocab_id)
+		if word == null or not VocabDatabase.word_matches_filters(word, filters):
+			continue
 		var card := SRSEngine.get_card_for_vocab(vocab_id)
-		if card == null:
-			if new_count >= MAX_NEW_CARDS_PER_SESSION:
-				continue
-			new_count += 1
-		_add_passage(passage, card)
+		if card != null or new_count >= new_card_limit:
+			continue
+		new_count += 1
+		_add_passage(passage, null)
 		used[passage["id"]] = true
 	_session_item_count = _session_passages.size()
 
@@ -79,7 +88,7 @@ func _add_passage(passage: Dictionary, existing_card: SRSCard) -> void:
 
 func _on_session_ready() -> void:
 	if _session_passages.is_empty():
-		question_label.text = "No N5 passages available."
+		question_label.text = _get_empty_session_message("passages")
 		assist_btn.disabled = true
 		return
 	_show_question()

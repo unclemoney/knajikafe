@@ -18,6 +18,9 @@ extends Control
 
 @onready var words_spin: SpinBox = $Panel/VBox/SessionSection/WordsRow/WordsSpinBox
 @onready var target_option: OptionButton = $Panel/VBox/SessionSection/WordsRow/TargetOption
+@onready var topic_option: OptionButton = $Panel/VBox/SessionSection/TopicRow/TopicOption
+@onready var new_cards_spin: SpinBox = $Panel/VBox/SessionSection/NewCardsRow/NewCardsSpinBox
+@onready var difficulty_option: OptionButton = $Panel/VBox/SessionSection/DifficultyRow/DifficultyOption
 
 @onready var preview_display: VocabDisplay = $Panel/VBox/PreviewSection/VocabDisplay
 
@@ -33,6 +36,13 @@ func _ready() -> void:
 	target_option.add_item("N5", 5)
 	target_option.add_item("N4", 4)
 	target_option.add_item("Mixed", 0)
+	difficulty_option.add_item("Relaxed")
+	difficulty_option.set_item_metadata(0, "relaxed")
+	difficulty_option.add_item("Standard")
+	difficulty_option.set_item_metadata(1, "standard")
+	difficulty_option.add_item("Challenge")
+	difficulty_option.set_item_metadata(2, "challenge")
+	target_option.item_selected.connect(_on_target_level_changed)
 	save_btn.pressed.connect(_on_save_pressed)
 	back_btn.pressed.connect(_on_back_pressed)
 
@@ -69,8 +79,48 @@ func _load_settings() -> void:
 	words_spin.value = s.get("words_per_session", 10)
 	var target_level := int(s.get("target_jlpt_level", 5))
 	target_option.select(target_option.get_item_index(target_level))
+	_populate_topics()
+	new_cards_spin.value = s.get("new_cards_per_session", 5)
+	var difficulty := str(s.get("difficulty", "standard"))
+	for i in difficulty_option.item_count:
+		if difficulty_option.get_item_metadata(i) == difficulty:
+			difficulty_option.select(i)
+			break
 
 	status_label.text = ""
+
+
+func _on_target_level_changed(_index: int) -> void:
+	_populate_topics()
+
+
+func _populate_topics() -> void:
+	var selected_topic := "all"
+	if topic_option.item_count > 0 and topic_option.selected >= 0:
+		selected_topic = str(topic_option.get_item_metadata(topic_option.selected))
+	else:
+		var profile := GameController.current_profile
+		if profile:
+			selected_topic = str(profile.settings.get("target_topic", "all"))
+	var target_level := target_option.get_selected_id()
+	var available: Dictionary = {}
+	for word in VocabDatabase.get_all_words():
+		if target_level > 0 and word.jlpt_level != target_level:
+			continue
+		for category in word.categories:
+			available[category] = true
+	topic_option.clear()
+	topic_option.add_item("All topics")
+	topic_option.set_item_metadata(0, "all")
+	var selected_index := 0
+	for category in VocabDatabase.get_categories():
+		var index := topic_option.item_count
+		topic_option.add_item(category.capitalize())
+		topic_option.set_item_metadata(index, category)
+		topic_option.set_item_disabled(index, not available.has(category))
+		if category == selected_topic and available.has(category):
+			selected_index = index
+	topic_option.select(selected_index)
 
 
 ## Sets up a preview word to demonstrate display settings.
@@ -116,6 +166,9 @@ func _on_save_pressed() -> void:
 	profile.settings["speech_volume"] = speech_slider.value / 100.0
 	profile.settings["words_per_session"] = int(words_spin.value)
 	profile.settings["target_jlpt_level"] = target_option.get_selected_id()
+	profile.settings["target_topic"] = str(topic_option.get_item_metadata(topic_option.selected))
+	profile.settings["new_cards_per_session"] = int(new_cards_spin.value)
+	profile.settings["difficulty"] = str(difficulty_option.get_item_metadata(difficulty_option.selected))
 
 	AudioManager.apply_profile_settings(profile)
 	SaveManager.save_profile(profile)

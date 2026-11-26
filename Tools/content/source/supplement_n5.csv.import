@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://du6mskkq6ordr"
+
+[deps]
+
+files=["res://Tools/content/source/supplement_n5.reading.translation", "res://Tools/content/source/supplement_n5.meaning.translation", "res://Tools/content/source/supplement_n5.tags.translation"]
+
+source_file="res://Tools/content/source/supplement_n5.csv"
+dest_files=["res://Tools/content/source/supplement_n5.reading.translation", "res://Tools/content/source/supplement_n5.meaning.translation", "res://Tools/content/source/supplement_n5.tags.translation"]
+
+[params]
+
+compress=true
+delimiter=0

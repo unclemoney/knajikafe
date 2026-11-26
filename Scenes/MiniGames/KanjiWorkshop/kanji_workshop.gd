@@ -1,5 +1,5 @@
 extends MiniGameBase
-## N5 kanji meaning, reading, and form practice with independent SRS cards.
+## N5/N4 kanji meaning, reading, and form practice with independent SRS cards.
 
 const JAPANESE_FONT = preload("res://Themes/japanese_font.tres")
 
@@ -48,11 +48,18 @@ func _populate_session(_config: Dictionary) -> void:
 		if entry:
 			_add_entry(entry, card)
 			used[entry.character] = true
-	var candidates := VocabDatabase.get_kanji_by_jlpt(5)
+	var candidates: Array[KanjiEntry] = []
+	var target_level := _get_target_jlpt_level()
+	if target_level == 0:
+		candidates.append_array(VocabDatabase.get_kanji_by_jlpt(5))
+		candidates.append_array(VocabDatabase.get_kanji_by_jlpt(4))
+	else:
+		candidates.append_array(VocabDatabase.get_kanji_by_jlpt(target_level))
 	candidates.shuffle()
 	var new_count := 0
+	var new_card_limit := mini(3, _get_new_card_limit())
 	for entry in candidates:
-		if _session_entries.size() >= desired or new_count >= 3:
+		if _session_entries.size() >= desired or new_count >= new_card_limit:
 			break
 		if used.has(entry.character) or SRSEngine.get_kanji_card(entry.character):
 			continue
@@ -71,7 +78,7 @@ func _add_entry(entry: KanjiEntry, card: KanjiCard) -> void:
 
 func _on_session_ready() -> void:
 	if _session_entries.is_empty():
-		prompt_label.text = "No N5 kanji available."
+		prompt_label.text = _get_empty_session_message("kanji")
 		return
 	_show_question()
 
@@ -103,7 +110,7 @@ func _build_question(entry: KanjiEntry, kind: String) -> void:
 			prompt_label.text = "Choose the meaning of this kanji."
 			_correct_answer = entry.get_primary_meaning()
 			choices.append(_correct_answer)
-			for other in VocabDatabase.get_kanji_by_jlpt(5):
+			for other in VocabDatabase.get_kanji_by_jlpt(entry.jlpt_level):
 				var meaning := other.get_primary_meaning()
 				if meaning != _correct_answer and meaning not in choices:
 					choices.append(meaning)
@@ -116,7 +123,7 @@ func _build_question(entry: KanjiEntry, kind: String) -> void:
 			var valid := entry.get_all_readings()
 			_correct_answer = valid[randi() % valid.size()]
 			choices.append(_correct_answer)
-			for other in VocabDatabase.get_kanji_by_jlpt(5):
+			for other in VocabDatabase.get_kanji_by_jlpt(entry.jlpt_level):
 				for reading in other.get_all_readings():
 					if reading not in valid and reading not in choices:
 						choices.append(reading)
@@ -130,7 +137,7 @@ func _build_question(entry: KanjiEntry, kind: String) -> void:
 			prompt_label.text = "Which component appears in this kanji?"
 			_correct_answer = entry.components[0]
 			choices.append(_correct_answer)
-			for other in VocabDatabase.get_kanji_by_jlpt(5):
+			for other in VocabDatabase.get_kanji_by_jlpt(entry.jlpt_level):
 				var candidates: Array = other.components.duplicate()
 				candidates.append(other.radical)
 				for component in candidates:

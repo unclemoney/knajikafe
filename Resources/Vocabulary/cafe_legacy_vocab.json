@@ -1,0 +1,488 @@
+[
+  {
+    "id": "n4_691",
+    "kanji": "コーヒー",
+    "hiragana": "コーヒー",
+    "katakana": "コーヒー",
+    "romaji": "koohii",
+    "english_meanings": [
+      "coffee"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "コーヒーをください。|I would like a coffee."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n4_692",
+    "kanji": "紅茶",
+    "hiragana": "こうちゃ",
+    "katakana": "",
+    "romaji": "koucha",
+    "english_meanings": [
+      "black tea"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "紅茶をください。|I would like black tea."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n4_693",
+    "kanji": "緑茶",
+    "hiragana": "りょくちゃ",
+    "katakana": "",
+    "romaji": "ryokucha",
+    "english_meanings": [
+      "green tea"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "緑茶をください。|I would like green tea."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n4_694",
+    "kanji": "カレー",
+    "hiragana": "カレー",
+    "katakana": "カレー",
+    "romaji": "karee",
+    "english_meanings": [
+      "curry"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "カレーをください。|I would like curry."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n4_695",
+    "kanji": "ラーメン",
+    "hiragana": "ラーメン",
+    "katakana": "ラーメン",
+    "romaji": "raamen",
+    "english_meanings": [
+      "ramen"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "ラーメンをください。|I would like ramen."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n4_696",
+    "kanji": "寿司",
+    "hiragana": "すし",
+    "katakana": "",
+    "romaji": "sushi",
+    "english_meanings": [
+      "sushi"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "寿司をください。|I would like sushi."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n4_697",
+    "kanji": "味噌汁",
+    "hiragana": "みそしる",
+    "katakana": "",
+    "romaji": "misoshiru",
+    "english_meanings": [
+      "miso soup"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "味噌汁をください。|I would like miso soup."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n4_698",
+    "kanji": "ジュース",
+    "hiragana": "ジュース",
+    "katakana": "ジュース",
+    "romaji": "juusu",
+    "english_meanings": [
+      "juice"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "ジュースをください。|I would like juice."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n4_699",
+    "kanji": "デザート",
+    "hiragana": "デザート",
+    "katakana": "デザート",
+    "romaji": "dezaato",
+    "english_meanings": [
+      "dessert"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "デザートをください。|I would like dessert."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n4_700",
+    "kanji": "ビール",
+    "hiragana": "ビール",
+    "katakana": "ビール",
+    "romaji": "biiru",
+    "english_meanings": [
+      "beer"
+    ],
+    "jlpt_level": 4,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "ビールをください。|I would like a beer."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "source_pos": [],
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_011",
+    "kanji": "水",
+    "hiragana": "みず",
+    "katakana": "",
+    "romaji": "mizu",
+    "english_meanings": [
+      "water"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "私は水を飲む。|I drink water."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_012",
+    "kanji": "お茶",
+    "hiragana": "おちゃ",
+    "katakana": "",
+    "romaji": "ocha",
+    "english_meanings": [
+      "tea",
+      "green tea"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "私はお茶を飲む。|I drink tea."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_013",
+    "kanji": "ご飯",
+    "hiragana": "ごはん",
+    "katakana": "",
+    "romaji": "gohan",
+    "english_meanings": [
+      "rice",
+      "meal"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [
+      "私はご飯を食べる。|I eat rice."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_014",
+    "kanji": "パン",
+    "hiragana": "",
+    "katakana": "パン",
+    "romaji": "pan",
+    "english_meanings": [
+      "bread"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "私はパンを買う。|I buy bread."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_015",
+    "kanji": "卵",
+    "hiragana": "たまご",
+    "katakana": "",
+    "romaji": "tamago",
+    "english_meanings": [
+      "egg"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [
+      "私は卵を食べる。|I eat an egg."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_016",
+    "kanji": "魚",
+    "hiragana": "さかな",
+    "katakana": "",
+    "romaji": "sakana",
+    "english_meanings": [
+      "fish"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [
+      "私は魚を食べる。|I eat fish."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_017",
+    "kanji": "肉",
+    "hiragana": "にく",
+    "katakana": "",
+    "romaji": "niku",
+    "english_meanings": [
+      "meat"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [
+      "私は肉を食べる。|I eat meat."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_018",
+    "kanji": "野菜",
+    "hiragana": "やさい",
+    "katakana": "",
+    "romaji": "yasai",
+    "english_meanings": [
+      "vegetables"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [
+      "私は野菜を食べる。|I eat vegetables."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_019",
+    "kanji": "果物",
+    "hiragana": "くだもの",
+    "katakana": "",
+    "romaji": "kudamono",
+    "english_meanings": [
+      "fruit"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food"
+    ],
+    "example_sentences": [
+      "私は果物を買う。|I buy fruit."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  },
+  {
+    "id": "n5_020",
+    "kanji": "牛乳",
+    "hiragana": "ぎゅうにゅう",
+    "katakana": "",
+    "romaji": "gyuunyuu",
+    "english_meanings": [
+      "milk"
+    ],
+    "jlpt_level": 5,
+    "categories": [
+      "food",
+      "cafe"
+    ],
+    "example_sentences": [
+      "私は牛乳を飲む。|I drink milk."
+    ],
+    "part_of_speech": "noun",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": "",
+    "content_source": "legacy_cafe"
+  }
+]

@@ -85,7 +85,10 @@ func _populate_session(_config: Dictionary) -> void:
 	var filters := _get_session_filters()
 	filters.merge(_get_curriculum_filters(), true)
 	var due_filters := filters.duplicate(true)
+	due_filters.erase("lesson")
+	due_filters.erase("first_lesson")
 	due_filters.erase("jlpt_level")
+	due_filters.erase("source_section")
 	var due := SRSEngine.get_due_cards()
 	for card in due:
 		if _session_cards.size() >= _words_per_session:
@@ -116,24 +119,24 @@ func _get_session_filters() -> Dictionary:
 
 
 func _get_curriculum_filters() -> Dictionary:
-	var filters: Dictionary = {}
+	var filters: Dictionary = {"require_meaning": true}
+	var target_lesson := _get_target_lesson()
+	if target_lesson > 0:
+		filters["lesson"] = target_lesson
 	var target_level := _get_target_jlpt_level()
 	if target_level > 0:
 		filters["jlpt_level"] = target_level
-	var topic := _get_target_topic()
-	if topic != "all":
-		filters["category"] = topic
 	return filters
+
+
+func _get_target_lesson() -> int:
+	var profile := GameController.current_profile
+	return int(profile.settings.get("target_lesson", 1)) if profile else 1
 
 
 func _get_target_jlpt_level() -> int:
 	var profile := GameController.current_profile
-	return int(profile.settings.get("target_jlpt_level", 5)) if profile else 5
-
-
-func _get_target_topic() -> String:
-	var profile := GameController.current_profile
-	return str(profile.settings.get("target_topic", "all")) if profile else "all"
+	return int(profile.settings.get("target_jlpt_level", 0)) if profile else 0
 
 
 func _get_difficulty() -> String:
@@ -149,9 +152,11 @@ func _get_new_card_limit() -> int:
 
 
 func _get_empty_session_message(item_label: String) -> String:
-	var level_name := "Mixed" if _get_target_jlpt_level() == 0 else "N%d" % _get_target_jlpt_level()
-	var topic := "All topics" if _get_target_topic() == "all" else _get_target_topic().capitalize()
-	return "No %s for %s · %s. Change level/topic or New cards in Settings." % [item_label.to_lower(), level_name, topic]
+	var lesson := _get_target_lesson()
+	var lesson_name := "All lessons" if lesson == 0 else "Lesson %d" % lesson
+	var level := _get_target_jlpt_level()
+	var level_name := "all JLPT tags" if level == 0 else "N%d" % level
+	return "No %s for %s · %s. Change lesson/level or New cards in Settings." % [item_label.to_lower(), lesson_name, level_name]
 
 
 func _get_item_label() -> String:

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dbapreu482w5y"
+
+[deps]
+
+files=["res://index/grammar.lesson.translation", "res://index/grammar.number.translation", "res://index/grammar.title.translation", "res://index/grammar.title.translation", "res://index/grammar.category.translation", "res://index/grammar.category.translation", "res://index/grammar.kind.translation", "res://index/grammar.source.translation"]
+
+source_file="res://index/grammar.csv"
+dest_files=["res://index/grammar.lesson.translation", "res://index/grammar.number.translation", "res://index/grammar.title.translation", "res://index/grammar.title.translation", "res://index/grammar.category.translation", "res://index/grammar.category.translation", "res://index/grammar.kind.translation", "res://index/grammar.source.translation"]
+
+[params]
+
+compress=true
+delimiter=0

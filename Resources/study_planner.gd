@@ -10,12 +10,12 @@ static func get_recommendation() -> Dictionary:
 
 
 static func recommend(profile: PlayerProfile, cards: Array[SRSCard], kanji_cards: Array[KanjiCard], sessions: Array) -> Dictionary:
-	var level := int(profile.settings.get("target_jlpt_level", 5))
-	var topic := str(profile.settings.get("target_topic", "all"))
+	var level := int(profile.settings.get("target_jlpt_level", 0))
+	var lesson := int(profile.settings.get("target_lesson", 1))
 	var new_limit := int(profile.settings.get("new_cards_per_session", 5))
-	if cards.is_empty() and kanji_cards.is_empty() and level == 5 and topic == "all" and new_limit > 0:
-		return _recommendation("multiple_choice", profile, "Start with N5 meanings to build your first study evidence.", {"size": 5, "due": 0}, {})
-	var summary := ProgressMetrics.get_skill_summary(cards, kanji_cards, level)
+	if cards.is_empty() and kanji_cards.is_empty() and lesson == 1 and level == 0 and new_limit > 0:
+		return _recommendation("multiple_choice", profile, "Start with Lesson 1 meanings from the professional curriculum.", {"size": 5, "due": 0}, {})
+	var summary := ProgressMetrics.get_skill_summary(cards, kanji_cards, level, lesson)
 	var last_game := ""
 	if not sessions.is_empty():
 		last_game = str(sessions.back().get("game_type", ""))
@@ -49,7 +49,7 @@ static func recommend(profile: PlayerProfile, cards: Array[SRSCard], kanji_cards
 	)
 	if candidates.is_empty():
 		var fallback := ActivityCatalog.get_notebook_option()
-		fallback["reason"] = "No scored activity matches the current filters. Browse the Notebook or adjust Settings."
+		fallback["reason"] = "No scored activity matches the current professional lesson filters. Browse the Notebook or adjust Settings."
 		fallback["game_type"] = "study_notebook"
 		return fallback
 	var best: Dictionary = candidates[0]
@@ -61,7 +61,7 @@ static func recommend(profile: PlayerProfile, cards: Array[SRSCard], kanji_cards
 	elif int(evidence["attempts"]) == 0:
 		reason = "Build %s evidence; no attempts have been recorded yet." % activity["skill"].capitalize()
 	else:
-		reason = "%s evidence: %d attempts, %d%% correct." % [activity["skill"].capitalize(), evidence["attempts"], int(float(evidence["success_rate"]) * 100.0)]
+		reason = "%s evidence: %d attempts, %d%% correct." % [activity["skill"].capitalize(), int(evidence["attempts"]), int(float(evidence["success_rate"]) * 100.0)]
 	return _recommendation(activity["game_type"], profile, reason, best["pool"], evidence)
 
 
@@ -75,8 +75,12 @@ static func _recommendation(game_type: String, profile: PlayerProfile, reason: S
 static func _activity_pool(activity: Dictionary, profile: PlayerProfile, cards: Array[SRSCard], kanji_cards: Array[KanjiCard]) -> Dictionary:
 	if activity["game_type"] == "kanji_workshop":
 		return _kanji_pool(profile, kanji_cards)
-	var level := int(profile.settings.get("target_jlpt_level", 5))
-	var topic := str(profile.settings.get("target_topic", "all"))
+	if activity.get("require_menu", false):
+		return _cafe_pool(cards, int(profile.settings.get("new_cards_per_session", 5)))
+	if activity["game_type"] == "reading_shelf":
+		return _reading_pool(profile)
+	var level := int(profile.settings.get("target_jlpt_level", 0))
+	var lesson := int(profile.settings.get("target_lesson", 1))
 	var new_limit := int(profile.settings.get("new_cards_per_session", 5))
 	var today := GameController.get_current_date()
 	var existing: Dictionary = {}
@@ -87,38 +91,70 @@ static func _activity_pool(activity: Dictionary, profile: PlayerProfile, cards: 
 		if not card.is_due(today):
 			continue
 		var word := VocabDatabase.get_word_by_id(card.vocab_id)
-		if word and _word_matches(word, activity, 0, topic):
+		if word and _word_matches(word, activity, 0, 0):
 			eligible[word.id] = true
 			due += 1
 	if new_limit > 0:
 		for word in VocabDatabase.get_all_words():
-			if not existing.has(word.id) and _word_matches(word, activity, level, topic):
+			if not existing.has(word.id) and _word_matches(word, activity, level, lesson):
 				eligible[word.id] = true
 	return {"size": eligible.size(), "due": due}
 
 
-static func _word_matches(word: VocabWord, activity: Dictionary, level: int, topic: String) -> bool:
+static func _cafe_pool(cards: Array[SRSCard], new_limit: int) -> Dictionary:
+	var existing: Dictionary = {}
+	var eligible: Dictionary = {}
+	var due := 0
+	var today := GameController.get_current_date()
+	for card in cards:
+		existing[card.vocab_id] = true
+		if card.is_due(today) and VocabDatabase.is_legacy_cafe_id(card.vocab_id):
+			if not VocabDatabase.get_menu_item(card.vocab_id).is_empty() and AudioManager.has_speech("order:" + card.vocab_id):
+				eligible[card.vocab_id] = true
+				due += 1
+	if new_limit > 0:
+		for item in VocabDatabase.cafe_menu:
+			var word_id := str(item["vocab_id"])
+			if not existing.has(word_id) and AudioManager.has_speech("order:" + word_id):
+				eligible[word_id] = true
+	return {"size": eligible.size(), "due": due}
+
+
+static func _reading_pool(profile: PlayerProfile) -> Dictionary:
+	var lesson := int(profile.settings.get("target_lesson", 1))
+	var level := int(profile.settings.get("target_jlpt_level", 0))
+	var count := 0
+	for passage in VocabDatabase.reading_passages:
+		if str(passage.get("question", "")) == "":
+			continue
+		if lesson > 0 and int(passage.get("lesson", 0)) != lesson:
+			continue
+		var word := VocabDatabase.get_word_by_id(str(passage.get("target_vocab_id", "")))
+		if word != null and (level == 0 or word.jlpt_level == level):
+			count += 1
+	return {"size": count, "due": 0}
+
+
+static func _word_matches(word: VocabWord, activity: Dictionary, level: int, lesson: int) -> bool:
 	if level > 0 and word.jlpt_level != level:
 		return false
-	if topic != "all" and topic not in word.categories:
+	if lesson > 0 and lesson not in word.lesson_ids:
 		return false
-	if activity.get("require_examples", false) and word.example_sentences.is_empty():
+	if not word.has_meaning():
 		return false
-	if activity.get("require_menu", false):
-		if VocabDatabase.get_menu_item(word.id).is_empty() or not AudioManager.has_speech("order:" + word.id):
+	if activity.get("require_cloze", false):
+		if word.example_sentences.is_empty() and VocabDatabase.get_exercises_for_word(word.id).is_empty():
 			return false
-	elif activity.get("require_audio", false) and not AudioManager.has_speech("vocab:" + word.id):
+	elif activity.get("require_examples", false) and word.example_sentences.is_empty():
 		return false
-	if activity.get("require_reading", false):
-		for passage in VocabDatabase.reading_passages:
-			if passage.get("target_vocab_id", "") == word.id:
-				return true
-		return false
+	if activity.get("require_audio", false):
+		if word.get_reading() == "" or not AudioManager.has_speech("vocab:" + word.id):
+			return false
 	return true
 
 
 static func _kanji_pool(profile: PlayerProfile, cards: Array[KanjiCard]) -> Dictionary:
-	var level := int(profile.settings.get("target_jlpt_level", 5))
+	var level := int(profile.settings.get("target_jlpt_level", 0))
 	var new_limit := mini(3, int(profile.settings.get("new_cards_per_session", 5)))
 	var today := GameController.get_current_date()
 	var existing: Dictionary = {}

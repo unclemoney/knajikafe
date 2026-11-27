@@ -85,22 +85,23 @@ func _display_results() -> void:
 		streak_label.visible = false
 
 	var profile := GameController.current_profile
-	var target_level := 5
+	var target_level := 0
+	var target_lesson := 1
 	if profile:
 		level_label.text = "Level: %d  |  Total XP: %d" % [profile.level, profile.xp]
-		target_level = int(profile.settings.get("target_jlpt_level", 5))
-		var level_name := "Mixed" if target_level == 0 else "N%d" % target_level
-		var topic := str(profile.settings.get("target_topic", "all"))
-		var topic_name := "All topics" if topic == "all" else topic.capitalize()
+		target_level = int(profile.settings.get("target_jlpt_level", 0))
+		target_lesson = int(profile.settings.get("target_lesson", 1))
+		var level_name := "All JLPT" if target_level == 0 else "N%d" % target_level
+		var lesson_name := "All lessons" if target_lesson == 0 else "Lesson %d" % target_lesson
 		var difficulty := str(profile.settings.get("difficulty", "standard")).capitalize()
-		curriculum_label.text = "%s · %s · %s" % [level_name, topic_name, difficulty]
+		curriculum_label.text = "%s · %s · %s" % [lesson_name, level_name, difficulty]
 	else:
 		level_label.text = ""
 		curriculum_label.text = ""
 
 	var skill_results: Dictionary = data.get("skill_results", {})
 	var skill_parts: Array = []
-	var overall_skills := ProgressMetrics.get_skill_summary(SRSEngine.cards, SRSEngine.kanji_cards, target_level)
+	var overall_skills := ProgressMetrics.get_skill_summary(SRSEngine.cards, SRSEngine.kanji_cards, target_level, target_lesson)
 	for skill in ProgressMetrics.SKILL_IDS:
 		var result: Dictionary = skill_results.get(skill, {})
 		if result.get("attempts", 0) > 0:

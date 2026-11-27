@@ -1,0 +1,392 @@
+{"id": 0, "en": "Ｎ はＮ です。 <noun predicate sentence>"}
+{"id": 1, "en": "noun predicate sentence"}
+{"id": 2, "en": "the subject in Japanese"}
+{"id": 3, "en": "Ｎ はＮ ではありません。 <negative form of the noun predicate sentence>"}
+{"id": 4, "en": "negative form of the noun predicate sentence"}
+{"id": 5, "en": "expressions commonly used when meeting for the first time, as seen in this lesson"}
+{"id": 6, "en": "sentence + か。 <question>"}
+{"id": 7, "en": "question"}
+{"id": 8, "en": "Ｎ で、Ｎ です。 <noun continuation (te-form of です)>"}
+{"id": 9, "en": "noun continuation (te-form of です)"}
+{"id": 10, "en": "Ｎ のＮ <possession>"}
+{"id": 11, "en": "possession"}
+{"id": 12, "en": "sentence + ね。 <confirmation (sentence-final particle ね-I)>"}
+{"id": 13, "en": "confirmation (sentence-final particle ね-I)"}
+{"id": 14, "en": "ko-so-a-do series demonstrative pronouns"}
+{"id": 15, "en": "reading rules for common numbers (up to 100) and phone numbers"}
+{"id": 16, "en": "Ｎも <also>"}
+{"id": 17, "en": "also; too"}
+{"id": 18, "en": "ways to end a topic/conversation"}
+{"id": 19, "en": "N と <and>"}
+{"id": 20, "en": "and; with"}
+{"id": 21, "en": "expressions commonly used when giving a small gift"}
+{"id": 22, "en": "N (place) に N があります／います。 <existence sentence-I>"}
+{"id": 23, "en": "existence sentence-I"}
+{"id": 24, "en": "N (place) には N があります／います。<existence sentence-II>"}
+{"id": 25, "en": "existence sentence-II"}
+{"id": 26, "en": "N は N (place) にあります／います。<existence sentence-III>"}
+{"id": 27, "en": "existence sentence-III"}
+{"id": 28, "en": "past tense of noun sentences (polite form)"}
+{"id": 29, "en": "Japanese family terms and introducing family members"}
+{"id": 30, "en": "tense of verb sentences (polite form)"}
+{"id": 31, "en": "how to express age in Japanese"}
+{"id": 32, "en": "question word + が <marking the subject>"}
+{"id": 33, "en": "marking the subject"}
+{"id": 34, "en": "other common colloquial expressions appearing in this lesson"}
+{"id": 35, "en": "'pre-noun adjectivals' (rentaishi) in Japanese"}
+{"id": 36, "en": "だけ <limitation>"}
+{"id": 37, "en": "limitation; only"}
+{"id": 38, "en": "Ｎ のＮ <apposition>"}
+{"id": 39, "en": "apposition"}
+{"id": 40, "en": "sentence + よ。 <assertion; calling attention>"}
+{"id": 41, "en": "assertion; calling attention"}
+{"id": 42, "en": "N を <marking the object>"}
+{"id": 43, "en": "marking the object"}
+{"id": 44, "en": "how to say numbers above 100 and counter expressions"}
+{"id": 45, "en": "N を（counter）ください。"}
+{"id": 46, "en": "common expressions for shopping, ordering, and paying"}
+{"id": 47, "en": "N でお願いします。"}
+{"id": 48, "en": "common ways to respond to requests and favors, as seen in this lesson"}
+{"id": 49, "en": "adjective predicate sentence"}
+{"id": 50, "en": "the sentence-final particles 'よ' and 'ね'"}
+{"id": 51, "en": "how to express dates"}
+{"id": 52, "en": "あまり／そんなに + adjective (negative)"}
+{"id": 53, "en": "common colloquial expressions appearing in this lesson"}
+{"id": 54, "en": "sentence + から。 <cause/reason>"}
+{"id": 55, "en": "cause; reason"}
+{"id": 56, "en": "N はどうですか。<I. asking about the nature of something>"}
+{"id": 57, "en": "I. asking about the nature of something"}
+{"id": 58, "en": "sentence + ね。 <mild exclamation (sentence-final particle ね-II)>"}
+{"id": 59, "en": "mild exclamation (sentence-final particle ね-II)"}
+{"id": 60, "en": "past tense of adjective predicate sentences (polite form)"}
+{"id": 61, "en": "how to express time (o'clock)"}
+{"id": 62, "en": "'ない' expressing negation"}
+{"id": 63, "en": "making suggestions/invitations"}
+{"id": 64, "en": "adjective continuation <adjective continuative form>"}
+{"id": 65, "en": "adjective continuative form"}
+{"id": 66, "en": "ways to respond to suggestions/invitations"}
+{"id": 67, "en": "N まで <end point>"}
+{"id": 68, "en": "end point; until"}
+{"id": 69, "en": "common colloquial response patterns appearing in this lesson"}
+{"id": 70, "en": "全然 + adjective (negative)"}
+{"id": 71, "en": "N とか <giving examples>"}
+{"id": 72, "en": "giving examples"}
+{"id": 73, "en": "adjectives modifying nouns <adjective attributive form>"}
+{"id": 74, "en": "adjective attributive form"}
+{"id": 75, "en": "N が <subject>"}
+{"id": 76, "en": "subject"}
+{"id": 77, "en": "colloquial expressions in polite speech appearing in this lesson"}
+{"id": 78, "en": "N と同じ"}
+{"id": 79, "en": "sentence が、sentence。 <adversative/contrast>"}
+{"id": 80, "en": "adversative; contrast"}
+{"id": 81, "en": "N も N も <both>"}
+{"id": 82, "en": "both (of two)"}
+{"id": 83, "en": "comparison patterns in Japanese"}
+{"id": 84, "en": "N が〜 <object (case particle が-III)>"}
+{"id": 85, "en": "object (case particle が-III)"}
+{"id": 86, "en": "degree adverbs modifying adjectives"}
+{"id": 87, "en": "（N の中で）N がいちばん〜 <particle で: scope/range>"}
+{"id": 88, "en": "particle で: scope/range"}
+{"id": 89, "en": "N なので、〜 <cause/reason-II>"}
+{"id": 90, "en": "cause/reason-II"}
+{"id": 91, "en": "〜は〜が、〜は〜。 <contrast (particle は-II)>"}
+{"id": 92, "en": "contrast (particle は-II)"}
+{"id": 93, "en": "N に〜 <target of a state or quality>"}
+{"id": 94, "en": "target of a state or quality"}
+{"id": 95, "en": "〜の（／ん）です。 <explanation-I (adjectives, nouns)>"}
+{"id": 96, "en": "explanation-I (adjectives, nouns)"}
+{"id": 97, "en": "N (place) ＋へ（／に）＋ movement V <movement>"}
+{"id": 98, "en": "movement"}
+{"id": 99, "en": "plain forms of nouns and adjectives and their use in plain-style conversation"}
+{"id": 100, "en": "question word + も <total negation>"}
+{"id": 101, "en": "total negation"}
+{"id": 102, "en": "question word + か <indefiniteness>"}
+{"id": 103, "en": "indefiniteness; uncertainty"}
+{"id": 104, "en": "Ｎから <starting point>"}
+{"id": 105, "en": "starting point; from"}
+{"id": 106, "en": "けど <softened contrast; gentle tone>"}
+{"id": 107, "en": "softened contrast; gentle tone"}
+{"id": 108, "en": "classification of verb conjugations"}
+{"id": 109, "en": "how to express durations of time"}
+{"id": 110, "en": "polite form of verbs and the ます stem <V ます stem>"}
+{"id": 111, "en": "V ます stem"}
+{"id": 112, "en": "N (time) に <point in time>"}
+{"id": 113, "en": "point in time"}
+{"id": 114, "en": "time + ごろ"}
+{"id": 115, "en": "なる <change>"}
+{"id": 116, "en": "change"}
+{"id": 117, "en": "V ましょう。／V ましょうか。 <invitation (V ましょう-I)>"}
+{"id": 118, "en": "invitation (V ましょう-I)"}
+{"id": 119, "en": "〜ほうがいい <advice-I (nouns, adjectives)>"}
+{"id": 120, "en": "advice-I (nouns, adjectives)"}
+{"id": 121, "en": "transitive/intransitive verbs in Japanese and the particle を <を: marking the object>"}
+{"id": 122, "en": "を: marking the object"}
+{"id": 123, "en": "offering help"}
+{"id": 124, "en": "ways to respond when someone offers help"}
+{"id": 125, "en": "N に <target of an action>"}
+{"id": 126, "en": "target of an action"}
+{"id": 127, "en": "describing the sequence of actions or situations"}
+{"id": 128, "en": "V ます stem ＋に＋行く/来る/帰る <movement with a purpose>"}
+{"id": 129, "en": "movement with a purpose"}
+{"id": 130, "en": "V ます stem ＋ながら、〜"}
+{"id": 131, "en": "counter + も <subjectively considered many>"}
+{"id": 132, "en": "subjectively considered many"}
+{"id": 133, "en": "〜でしょ（う） <confirmation; rhetorical question-I>"}
+{"id": 134, "en": "confirmation; rhetorical question-I"}
+{"id": 135, "en": "ため <purpose>"}
+{"id": 136, "en": "purpose"}
+{"id": 137, "en": "〜の（／ん）です。 <explanation-II (verbs)>"}
+{"id": 138, "en": "explanation-II (verbs)"}
+{"id": 139, "en": "V ませんか。 <invitation>"}
+{"id": 140, "en": "invitation"}
+{"id": 141, "en": "plain forms of verbs"}
+{"id": 142, "en": "お/ご N <honorific prefix>"}
+{"id": 143, "en": "honorific prefix"}
+{"id": 144, "en": "V る (dictionary form of verbs)"}
+{"id": 145, "en": "V ない (negative/plain non-past form of verbs)"}
+{"id": 146, "en": "attributive form of verbs"}
+{"id": 147, "en": "N (period) に N (quantity) V <frequency>"}
+{"id": 148, "en": "frequency"}
+{"id": 149, "en": "N についての N <about; concerning>"}
+{"id": 150, "en": "about; concerning"}
+{"id": 151, "en": "N + particle + の N"}
+{"id": 152, "en": "N や N など <listing>"}
+{"id": 153, "en": "listing; enumeration"}
+{"id": 154, "en": "あげる/くれる/もらう <giving and receiving verbs>"}
+{"id": 155, "en": "giving and receiving verbs"}
+{"id": 156, "en": "V ます stem ＋たい"}
+{"id": 157, "en": "お誕生日、おめでとうございます。"}
+{"id": 158, "en": "〜か分かりません。"}
+{"id": 159, "en": "N にする <choice>"}
+{"id": 160, "en": "choice; decision"}
+{"id": 161, "en": "〜ので、〜 <cause/reason-II>"}
+{"id": 162, "en": "V て (te-form of verbs)"}
+{"id": 163, "en": "V ている <continuation of an action (V ている-I)>"}
+{"id": 164, "en": "continuation of an action (V ている-I)"}
+{"id": 165, "en": "お久しぶりです。"}
+{"id": 166, "en": "V て、V て、V ます。 <verb continuation>"}
+{"id": 167, "en": "verb continuation"}
+{"id": 168, "en": "博物館の見学、楽しんでくださいね。"}
+{"id": 169, "en": "V てください。 <request>"}
+{"id": 170, "en": "request"}
+{"id": 171, "en": "〜つもりだ。 <intention>"}
+{"id": 172, "en": "intention; plan"}
+{"id": 173, "en": "〜予定だ。 <plan; schedule>"}
+{"id": 174, "en": "plan; schedule"}
+{"id": 175, "en": "〜中"}
+{"id": 176, "en": "aspect of Japanese verbs and their polite/plain forms"}
+{"id": 177, "en": "V ている <continuation of a resulting state (V ている-II)>"}
+{"id": 178, "en": "continuation of a resulting state (V ている-II)"}
+{"id": 179, "en": "V ている <habitual action (V ている-III)>"}
+{"id": 180, "en": "habitual action (V ている-III)"}
+{"id": 181, "en": "V る前（に） <before...>"}
+{"id": 182, "en": "before..."}
+{"id": 183, "en": "V てから <after...>"}
+{"id": 184, "en": "after..."}
+{"id": 185, "en": "(third person) V たがる / N をほしがる"}
+{"id": 186, "en": "N が見える"}
+{"id": 187, "en": "V ないでください。 <negative request (prohibition)>"}
+{"id": 188, "en": "negative request (prohibition)"}
+{"id": 189, "en": "V てもいい <permission>"}
+{"id": 190, "en": "permission"}
+{"id": 191, "en": "V なくてもいい <lack of necessity>"}
+{"id": 192, "en": "lack of necessity"}
+{"id": 193, "en": "V てはいけない <prohibition>"}
+{"id": 194, "en": "prohibition"}
+{"id": 195, "en": "V なければならない <must; obligation>"}
+{"id": 196, "en": "must; obligation"}
+{"id": 197, "en": "V ることができる <ability; can>"}
+{"id": 198, "en": "ability; can"}
+{"id": 199, "en": "N だけ + particle <limitation>"}
+{"id": 200, "en": "V る/V た時（に）"}
+{"id": 201, "en": "V たことがある <experience>"}
+{"id": 202, "en": "experience"}
+{"id": 203, "en": "上がってください。"}
+{"id": 204, "en": "V る/V ないことがある <sometimes; occasionally>"}
+{"id": 205, "en": "sometimes; occasionally"}
+{"id": 206, "en": "お邪魔します。"}
+{"id": 207, "en": "V ます stem ＋方"}
+{"id": 208, "en": "当たり"}
+{"id": 209, "en": "N (place) を <point of departure; passing through>"}
+{"id": 210, "en": "point of departure; passing through"}
+{"id": 211, "en": "〜でしょう <conjecture>"}
+{"id": 212, "en": "conjecture; probably"}
+{"id": 213, "en": "〜間、〜 <during...; while...>"}
+{"id": 214, "en": "during...; while..."}
+{"id": 215, "en": "かな <sentence-final particle>"}
+{"id": 216, "en": "sentence-final particle"}
+{"id": 217, "en": "N (point in time) までに <deadline>"}
+{"id": 218, "en": "deadline; by (a time)"}
+{"id": 219, "en": "〜と言う <quotation>"}
+{"id": 220, "en": "quotation"}
+{"id": 221, "en": "〜と思う"}
+{"id": 222, "en": "〜後（で）、〜"}
+{"id": 223, "en": "N しか V ない <limitation>"}
+{"id": 224, "en": "potential form of verbs"}
+{"id": 225, "en": "N でも <example; tentative suggestion>"}
+{"id": 226, "en": "example; tentative suggestion"}
+{"id": 227, "en": "N で <limitation (quantity)>"}
+{"id": 228, "en": "limitation (quantity)"}
+{"id": 229, "en": "〜みたいだ <conjecture>"}
+{"id": 230, "en": "conjecture"}
+{"id": 231, "en": "言っていた <reporting what someone said>"}
+{"id": 232, "en": "reporting what someone said"}
+{"id": 233, "en": "〜からだ。 <cause; reason>"}
+{"id": 234, "en": "cause; reason"}
+{"id": 235, "en": "question word + でも"}
+{"id": 236, "en": "〜ようだ。 <conjecture>"}
+{"id": 237, "en": "N のようだ。 <simile; metaphor>"}
+{"id": 238, "en": "simile; metaphor"}
+{"id": 239, "en": "こと <formal noun>"}
+{"id": 240, "en": "formal noun"}
+{"id": 241, "en": "〜すぎる <excess>"}
+{"id": 242, "en": "excess; too much"}
+{"id": 243, "en": "-ば form <conditional form of verbs and adjectives>"}
+{"id": 244, "en": "conditional form of verbs and adjectives"}
+{"id": 245, "en": "〜たり〜たりする <alternation; listing: たり-1>"}
+{"id": 246, "en": "alternation; listing: たり-1"}
+{"id": 247, "en": "〜たり〜たりする <examples: たり-2>"}
+{"id": 248, "en": "examples: たり-2"}
+{"id": 249, "en": "V てある <resulting state of an object>"}
+{"id": 250, "en": "resulting state of an object"}
+{"id": 251, "en": "V るように <purpose>"}
+{"id": 252, "en": "〜そうだ <appearance>"}
+{"id": 253, "en": "appearance; looks like"}
+{"id": 254, "en": "—切る"}
+{"id": 255, "en": "V るようになる <change>"}
+{"id": 256, "en": "〜し、〜 <listing; coordination>"}
+{"id": 257, "en": "listing; coordination"}
+{"id": 258, "en": "〜に対する・〜に対して"}
+{"id": 259, "en": "ために <purpose>"}
+{"id": 260, "en": "わ <sentence-final particle>"}
+{"id": 261, "en": "sentence-final particle"}
+{"id": 262, "en": "〜と、〜 <condition>"}
+{"id": 263, "en": "condition"}
+{"id": 264, "en": "〜ことになる <outcome; it has been decided/arranged>"}
+{"id": 265, "en": "outcome; arrangement"}
+{"id": 266, "en": "N まで <extent; degree>"}
+{"id": 267, "en": "extent; degree"}
+{"id": 268, "en": "〜のに <adversative>"}
+{"id": 269, "en": "〜らしい <hearsay>"}
+{"id": 270, "en": "hearsay"}
+{"id": 271, "en": "〜途中（に／で）、〜"}
+{"id": 272, "en": "〜ような気がする"}
+{"id": 273, "en": "V た/V ないほうがいい <advice>"}
+{"id": 274, "en": "advice"}
+{"id": 275, "en": "〜につれて <as; along with>"}
+{"id": 276, "en": "as; along with"}
+{"id": 277, "en": "V ていく/くる <movement; change>"}
+{"id": 278, "en": "movement; change"}
+{"id": 279, "en": "〜そうだ <hearsay; quotation>"}
+{"id": 280, "en": "hearsay; quotation"}
+{"id": 281, "en": "N として <as; in the capacity of>"}
+{"id": 282, "en": "as; in the capacity of"}
+{"id": 283, "en": "〜ことだ <advice; recommendation>"}
+{"id": 284, "en": "advice; recommendation"}
+{"id": 285, "en": "〜て、〜 <cause; reason>"}
+{"id": 286, "en": "cause; reason"}
+{"id": 287, "en": "〜たら、〜 <condition>"}
+{"id": 288, "en": "〜か <choice>"}
+{"id": 289, "en": "〜場合（は）、〜"}
+{"id": 290, "en": "V ることにする/V ないことにする <personal decision>"}
+{"id": 291, "en": "personal decision"}
+{"id": 292, "en": "〜のじゃないか（と思う）"}
+{"id": 293, "en": "V てみせる <demonstration>"}
+{"id": 294, "en": "demonstration"}
+{"id": 295, "en": "V ていただけますか。 <request>"}
+{"id": 296, "en": "V てもらってもいいですか。 <request>"}
+{"id": 297, "en": "V るべきだ <should; ought to>"}
+{"id": 298, "en": "should; ought to"}
+{"id": 299, "en": "N に加えて"}
+{"id": 300, "en": "〜おかげだ。<cause of a positive result>・〜せいだ。<cause of a negative result>"}
+{"id": 301, "en": "cause of a positive result"}
+{"id": 302, "en": "V（よ）う <volitional form of verbs>"}
+{"id": 303, "en": "volitional form of verbs"}
+{"id": 304, "en": "V（よ）うと思う"}
+{"id": 305, "en": "〜たら、〜た。 <discovery>"}
+{"id": 306, "en": "discovery; realization"}
+{"id": 307, "en": "〜のに。 <dissatisfaction; regret>"}
+{"id": 308, "en": "dissatisfaction; regret"}
+{"id": 309, "en": "って <quotation>"}
+{"id": 310, "en": "〜ため（に） <cause; reason>"}
+{"id": 311, "en": "〜を V <through; via>"}
+{"id": 312, "en": "through; via"}
+{"id": 313, "en": "written-style continuation form of verbs"}
+{"id": 314, "en": "N みたいだ <example; simile>"}
+{"id": 315, "en": "example; simile"}
+{"id": 316, "en": "N のような・N のように <example>"}
+{"id": 317, "en": "〜かぎり、〜 <limitation; as long as>"}
+{"id": 318, "en": "passive form of verbs"}
+{"id": 319, "en": "Japanese passive sentences-I: direct passive <basic passive A, B>"}
+{"id": 320, "en": "basic passive A, B"}
+{"id": 321, "en": "Japanese passive sentences-II: possessor passive"}
+{"id": 322, "en": "Japanese passive sentences-III: indirect (adversative) passive"}
+{"id": 323, "en": "Japanese passive sentences-IV: non-emotive passive"}
+{"id": 324, "en": "N らしい <typical characteristics>"}
+{"id": 325, "en": "typical characteristics"}
+{"id": 326, "en": "V るものではない <advice; shouldn't>"}
+{"id": 327, "en": "V るには <purpose>"}
+{"id": 328, "en": "causative form of verbs"}
+{"id": 329, "en": "Japanese causative sentences-I: causative with transitive verbs"}
+{"id": 330, "en": "Japanese causative sentences-II: causative with intransitive verbs"}
+{"id": 331, "en": "N 次第だ"}
+{"id": 332, "en": "わけではない <partial negation>"}
+{"id": 333, "en": "partial negation"}
+{"id": 334, "en": "〜上で"}
+{"id": 335, "en": "N（+ particle）さえ"}
+{"id": 336, "en": "の <subordinate-clause subject>"}
+{"id": 337, "en": "subordinate-clause subject"}
+{"id": 338, "en": "N に向かって"}
+{"id": 339, "en": "–出す"}
+{"id": 340, "en": "causative-passive form of verbs"}
+{"id": 341, "en": "causative-passive sentences"}
+{"id": 342, "en": "って <topic>"}
+{"id": 343, "en": "topic"}
+{"id": 344, "en": "上（に） <in addition; moreover>"}
+{"id": 345, "en": "in addition; moreover"}
+{"id": 346, "en": "V たらどうですか <suggestion>"}
+{"id": 347, "en": "imperative form of verbs"}
+{"id": 348, "en": "prohibitive form"}
+{"id": 349, "en": "〜くらい <extent; degree>"}
+{"id": 350, "en": "〜通り（に）"}
+{"id": 351, "en": "に <agent; doer>"}
+{"id": 352, "en": "agent; doer"}
+{"id": 353, "en": "〜と思われる <spontaneous form of verbs>"}
+{"id": 354, "en": "spontaneous form of verbs"}
+{"id": 355, "en": "honorific language and special honorific verbs"}
+{"id": 356, "en": "お/ご〜する <humble>"}
+{"id": 357, "en": "humble (kenjougo)"}
+{"id": 358, "en": "〜に伴い・〜に伴って"}
+{"id": 359, "en": "〜一方だ"}
+{"id": 360, "en": "V る/V ないよう（に） <wish; hope>"}
+{"id": 361, "en": "wish; hope"}
+{"id": 362, "en": "〜に従って"}
+{"id": 363, "en": "N 向け"}
+{"id": 364, "en": "〜とは限らない"}
+{"id": 365, "en": "次第"}
+{"id": 366, "en": "N の下で・N の下に"}
+{"id": 367, "en": "general honorific verbs"}
+{"id": 368, "en": "お/ご〜になる <honorific>"}
+{"id": 369, "en": "honorific (sonkeigo)"}
+{"id": 370, "en": "お/ご〜ください/願う"}
+{"id": 371, "en": "〜させていただく <humble>"}
+{"id": 372, "en": "〜つつある <ongoing change>"}
+{"id": 373, "en": "ongoing change"}
+{"id": 374, "en": "N に沿う・N に沿って"}
+{"id": 375, "en": "N に関する・N に関して"}
+{"id": 376, "en": "〜に基づく・〜に基づいて"}
+{"id": 377, "en": "N 抜きで"}
+{"id": 378, "en": "〜を通じて・〜を通して"}
+{"id": 379, "en": "〜と言われている"}
+{"id": 380, "en": "〜に即した・〜に即して"}
+{"id": 381, "en": "〜に応えて・〜に応える"}
+{"id": 382, "en": "〜折（に）"}
+{"id": 383, "en": "〜限り"}
+{"id": 384, "en": "〜一方（で）"}
+{"id": 385, "en": "〜を余儀なくされる・〜を余儀なくさせる"}
+{"id": 386, "en": "～を皮切りに／～を皮切りにして／～を皮切りとして"}
+{"id": 387, "en": "～に至るまで"}
+{"id": 388, "en": "～かたわら（～傍ら）"}
+{"id": 389, "en": "～以来"}
+{"id": 390, "en": "～や否や"}
+{"id": 391, "en": "〜と相まって／～が相まって／～も相まって"}

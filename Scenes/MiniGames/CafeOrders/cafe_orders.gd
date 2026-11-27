@@ -43,15 +43,12 @@ func _get_item_label() -> String:
 func _populate_session(_config: Dictionary) -> void:
 	var desired := mini(10, _words_per_session)
 	var used: Dictionary = {}
-	var filters := _get_curriculum_filters()
-	var due_filters := filters.duplicate(true)
-	due_filters.erase("jlpt_level")
 	for card in SRSEngine.get_due_cards():
 		if _session_menu.size() >= desired:
 			break
 		var item := VocabDatabase.get_menu_item(card.vocab_id)
-		var word := VocabDatabase.get_word_by_id(card.vocab_id)
-		if not item.is_empty() and word != null and VocabDatabase.word_matches_filters(word, due_filters):
+		var word := VocabDatabase.get_cafe_word_by_id(card.vocab_id)
+		if not item.is_empty() and word != null:
 			_add_menu_item(item, card)
 			used[card.vocab_id] = true
 	var candidates := VocabDatabase.cafe_menu.duplicate(true)
@@ -62,10 +59,10 @@ func _populate_session(_config: Dictionary) -> void:
 		if _session_menu.size() >= desired or new_count >= new_card_limit:
 			break
 		var vocab_id: String = item["vocab_id"]
-		var word := VocabDatabase.get_word_by_id(vocab_id)
+		var word := VocabDatabase.get_cafe_word_by_id(vocab_id)
 		if used.has(vocab_id) or SRSEngine.get_card_for_vocab(vocab_id):
 			continue
-		if word == null or not VocabDatabase.word_matches_filters(word, filters):
+		if word == null:
 			continue
 		var created := SRSEngine.add_new_cards(PackedStringArray([vocab_id]))
 		if not created.is_empty():
@@ -76,7 +73,7 @@ func _populate_session(_config: Dictionary) -> void:
 
 
 func _add_menu_item(item: Dictionary, card: SRSCard) -> void:
-	var word := VocabDatabase.get_word_by_id(item["vocab_id"])
+	var word := VocabDatabase.get_cafe_word_by_id(item["vocab_id"])
 	if word:
 		_session_menu.append(item)
 		_session_words.append(word)

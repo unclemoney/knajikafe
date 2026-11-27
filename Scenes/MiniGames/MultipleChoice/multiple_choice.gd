@@ -56,36 +56,27 @@ func _show_question() -> void:
 	progress_label.text = "%d / %d" % [_current_index + 1, _words_per_session]
 	score_label.text = "Score: %d" % _correct_count
 
-	# Generate answer choices
+	# Generate only real professional meanings as answer choices.
 	var correct_meaning := word.get_primary_meaning()
 	var choices: Array[String] = [correct_meaning]
-
-	# Difficulty changes distractor breadth only, never SRS or rewards.
 	var exclude := PackedStringArray([word.id])
-	var semantic_filters := _get_distractor_filters(word)
-	var distractors := VocabDatabase.get_random_words(10, exclude, semantic_filters)
-	if distractors.size() < 3 and _get_difficulty() == "relaxed":
-		semantic_filters.erase("part_of_speech")
-		distractors.append_array(VocabDatabase.get_random_words(10, exclude, semantic_filters))
-	if distractors.size() < 3:
-		distractors.append_array(VocabDatabase.get_random_words(10, exclude, {"jlpt_level": word.jlpt_level}))
+	var distractors := VocabDatabase.get_random_words(40, exclude, _get_distractor_filters(word))
+	if distractors.size() < 8:
+		distractors.append_array(VocabDatabase.get_random_words(40, exclude, {"require_meaning": true}))
 	distractors.shuffle()
-
-	for d in distractors:
+	for distractor in distractors:
 		if choices.size() >= 4:
 			break
-		var meaning := d.get_primary_meaning()
+		var meaning := distractor.get_primary_meaning()
 		if meaning != "" and meaning != correct_meaning and meaning not in choices:
 			choices.append(meaning)
+	if choices.size() < 4:
+		_is_answering = false
+		feedback_label.text = "Not enough unique professional meanings for this question."
+		for button in answer_btns:
+			button.disabled = true
+		return
 
-	# Pad with fallback if not enough distractors
-	var fallbacks: Array[String] = ["???", "...", "---"]
-	var fi := 0
-	while choices.size() < 4:
-		choices.append(fallbacks[fi % fallbacks.size()])
-		fi += 1
-
-	# Shuffle choices and assign to buttons
 	choices.shuffle()
 	for i in 4:
 		answer_btns[i].text = choices[i]
@@ -94,11 +85,17 @@ func _show_question() -> void:
 
 
 func _get_distractor_filters(word: VocabWord) -> Dictionary:
-	var filters := {"jlpt_level": word.jlpt_level}
+	var lesson := _get_target_lesson()
+	if lesson == 0 or lesson not in word.lesson_ids:
+		lesson = word.first_lesson
+	var filters := {"lesson": lesson, "require_meaning": true}
+	if word.jlpt_level > 0:
+		filters["jlpt_level"] = word.jlpt_level
+	else:
+		filters["untagged_only"] = true
 	if _get_difficulty() == "challenge":
-		return filters
-	if not word.categories.is_empty():
-		filters["category"] = word.categories[0]
+		filters.erase("lesson")
+		filters.erase("untagged_only")
 	if _get_difficulty() == "relaxed" and word.part_of_speech != "":
 		filters["part_of_speech"] = word.part_of_speech
 	return filters

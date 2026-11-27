@@ -20,6 +20,9 @@ var kanji_cards: Array[KanjiCard] = []
 
 ## Completed session summaries for the active profile.
 var sessions: Array = []
+
+## Full snapshots of legacy vocabulary cards removed from the active deck.
+var archived_cards: Array = []
 var learning_data_writable: bool = true
 
 
@@ -29,6 +32,7 @@ func load_cards_for_profile(profile: PlayerProfile) -> void:
 	cards = data["cards"]
 	kanji_cards = data["kanji_cards"]
 	sessions = data["sessions"]
+	archived_cards = data["archived_cards"]
 	learning_data_writable = data["load_ok"]
 
 
@@ -36,7 +40,7 @@ func load_cards_for_profile(profile: PlayerProfile) -> void:
 func save_cards_for_profile(profile: PlayerProfile) -> bool:
 	if not learning_data_writable:
 		return false
-	return SaveManager.save_learning_data(profile.player_name, cards, sessions, kanji_cards)
+	return SaveManager.save_learning_data(profile.player_name, cards, sessions, kanji_cards, archived_cards)
 
 
 ## Reviews a card with the given quality rating (0–5).

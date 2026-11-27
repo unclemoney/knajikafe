@@ -38,10 +38,21 @@ func _ready() -> void:
 
 
 func _on_session_ready() -> void:
-	if _words_per_session == 0:
-		feedback_label.text = "No words available!"
+	if _session_words.is_empty():
+		feedback_label.text = _get_empty_session_message("flashcards")
+		progress_label.text = "0 / 0"
+		vocab_display.clear()
+		back_panel.visible = false
+		rating_box.visible = false
+		flip_btn.disabled = true
+		pronounce_btn.disabled = true
+		pronounce_btn.tooltip_text = "No professional flashcards match the current filters"
 		return
 	_show_question()
+
+
+func _has_current_word() -> bool:
+	return _current_index >= 0 and _current_index < _session_words.size() and _session_cards.size() == _session_words.size()
 
 
 ## Shows the front of the current flashcard.
@@ -69,12 +80,16 @@ func _show_question() -> void:
 
 
 func _on_pronounce_pressed() -> void:
+	if not _has_current_word():
+		return
 	var word := _session_words[_current_index]
 	AudioManager.play_speech("vocab:" + word.id)
 
 
 ## Flips the card to reveal the back.
 func _on_flip_pressed() -> void:
+	if not _has_current_word():
+		return
 	var word := _session_words[_current_index]
 
 	flip_btn.visible = false
@@ -95,6 +110,8 @@ func _on_flip_pressed() -> void:
 
 ## Handles self-rating button press.
 func _on_rate_pressed(quality: int) -> void:
+	if not _has_current_word():
+		return
 	AudioManager.stop_speech()
 	var card := _session_cards[_current_index]
 

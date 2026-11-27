@@ -33,7 +33,7 @@ func _profile(name: String) -> PlayerProfile:
 	var profile := PlayerProfile.new()
 	profile.player_name = name
 	profile.settings["target_jlpt_level"] = 5
-	profile.settings["target_topic"] = "all"
+	profile.settings["target_lesson"] = 5
 	profile.settings["new_cards_per_session"] = 5
 	profile.settings["difficulty"] = "standard"
 	GameController.current_profile = profile
@@ -66,24 +66,17 @@ func _test_orders() -> void:
 
 
 func _test_reading() -> void:
-	_profile("ReadingTest")
+	var profile := _profile("ReadingTest")
+	profile.settings["target_jlpt_level"] = 0
+	profile.settings["target_lesson"] = 5
 	SRSEngine.cards = []
 	GameController.session_data = {"game_type": "reading_shelf", "words_per_session": 5}
 	var reading = load("res://Scenes/MiniGames/ReadingShelf/reading_shelf.tscn").instantiate()
 	add_child(reading)
-	_check("Reading builds five passages", reading._session_passages.size() == 5)
-	reading._on_assist_pressed()
-	var first_card: SRSCard = reading._session_cards[0]
-	var answer := int(reading._session_passages[0]["answer_index"])
-	reading._on_answer_pressed(answer)
-	_check("Translation assist records Meaning", first_card.skill_evidence.has("meaning") and not first_card.skill_evidence.has("context"))
-	await get_tree().create_timer(2.5).timeout
-	var second_card: SRSCard = reading._session_cards[1]
-	answer = int(reading._session_passages[1]["answer_index"])
-	reading._on_answer_pressed(answer)
-	_check("Unassisted reading records Context", second_card.skill_evidence.has("context"))
-	_check("Reading target scheduled once", second_card.total_reviews == 1)
-	await get_tree().create_timer(2.5).timeout
+	_check("Professional reading builds Lesson 5 source text", reading._session_passages.size() == 1)
+	_check("Reading uses professional Japanese lines", not reading._session_passages[0]["japanese_lines"].is_empty() and reading._session_passages[0]["source_file"].contains("第5课"))
+	_check("Passage-only reading has no fabricated question", reading._session_passages[0]["question"] == "" and reading.answer_btns[0].text == "Finish Reading")
+	_check("Passage-only reading creates no SRS cards", reading._session_cards.is_empty() and SRSEngine.cards.is_empty() and reading._correct_count == 0)
 	reading.free()
 
 
@@ -133,23 +126,27 @@ func _test_difficulty() -> void:
 	var expected_times := {"relaxed": 15.0, "standard": 12.0, "challenge": 8.0}
 	var quiz_script = load("res://Scenes/MiniGames/MultipleChoice/multiple_choice.gd")
 	var quiz = quiz_script.new()
-	var word := VocabDatabase.get_word_by_id("n4_691")
+	var word: VocabWord = null
+	for candidate in VocabDatabase.get_words_by_jlpt(4):
+		if candidate.has_meaning():
+			word = candidate
+			break
 	for mode in expected_times:
 		profile.settings["difficulty"] = mode
 		SRSEngine.cards = []
 		GameController.session_data = {"game_type": "cafe_orders", "words_per_session": 10}
 		var orders = load("res://Scenes/MiniGames/CafeOrders/cafe_orders.tscn").instantiate()
 		add_child(orders)
-		_check("%s Orders use N4 items" % mode.capitalize(), orders._session_menu.size() == 5 and orders._session_words.all(func(item: VocabWord) -> bool: return item.jlpt_level == 4))
+		_check("%s Orders keep the independent legacy supplement" % mode.capitalize(), orders._session_menu.size() == 5 and orders._session_words.all(func(item: VocabWord) -> bool: return item.content_source == "legacy_cafe"))
 		_check("%s Orders timer is %.0f seconds" % [mode.capitalize(), expected_times[mode]], orders._get_order_time() == expected_times[mode])
 		orders.free()
 		var filters: Dictionary = quiz._get_distractor_filters(word)
 		if mode == "relaxed":
-			_check("Relaxed uses closer semantic distractors", filters.has("category") and filters.has("part_of_speech"))
+			_check("Relaxed uses closer professional distractors", filters.has("lesson") and filters.has("part_of_speech"))
 		elif mode == "standard":
-			_check("Standard retains semantic distractors", filters.has("category") and not filters.has("part_of_speech"))
+			_check("Standard retains lesson distractors", filters.has("lesson") and not filters.has("part_of_speech"))
 		else:
-			_check("Challenge broadens distractors within level", not filters.has("category") and filters.get("jlpt_level") == 4)
+			_check("Challenge broadens distractors within JLPT level", not filters.has("lesson") and filters.get("jlpt_level") == 4)
 		var base := MiniGameBase.new()
 		base._game_type = "difficulty_test"
 		var card := SRSCard.new()
@@ -162,7 +159,8 @@ func _test_difficulty() -> void:
 
 func _test_mixed_orders() -> void:
 	var profile := _profile("MixedOrdersTest")
-	profile.settings["target_jlpt_level"] = 0
+	profile.settings["target_jlpt_level"] = 1
+	profile.settings["target_lesson"] = 1
 	profile.settings["new_cards_per_session"] = 0
 	SRSEngine.cards = []
 	SRSEngine.add_new_cards(PackedStringArray(["n5_011", "n4_691"]))
@@ -177,20 +175,19 @@ func _test_mixed_orders() -> void:
 
 
 func _test_n4_reading() -> void:
-	var profile := _profile("N4ReadingTest")
-	profile.settings["target_jlpt_level"] = 4
+	var profile := _profile("ProfessionalReadingTest")
+	profile.settings["target_jlpt_level"] = 0
+	profile.settings["target_lesson"] = 26
 	SRSEngine.cards = []
 	GameController.session_data = {"game_type": "reading_shelf", "words_per_session": 5}
 	var reading = load("res://Scenes/MiniGames/ReadingShelf/reading_shelf.tscn").instantiate()
 	add_child(reading)
-	var valid: bool = reading._session_passages.size() == 5
+	var valid: bool = reading._session_passages.size() == 1
 	for passage in reading._session_passages:
-		if passage.get("jlpt_level") != 4:
+		if int(passage.get("lesson", 0)) != 26 or not passage.get("source_file", "").contains("第26课"):
 			valid = false
-	for word in reading._session_words:
-		if word.jlpt_level != 4:
-			valid = false
-	_check("N4 Reading Shelf builds five N4 passages", valid)
+	_check("Reading Shelf builds professional Lesson 26 text", valid)
+	_check("Advanced reading remains unscored without authored comprehension", reading._session_cards.is_empty() and reading._session_passages[0]["question"] == "")
 	reading.free()
 
 

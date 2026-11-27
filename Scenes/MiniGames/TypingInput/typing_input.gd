@@ -44,6 +44,10 @@ func _ready() -> void:
 	_setup_session()
 
 
+func _get_session_filters() -> Dictionary:
+	return {"require_reading": true}
+
+
 func _on_session_ready() -> void:
 	if _words_per_session == 0:
 		feedback_label.text = "No words available!"

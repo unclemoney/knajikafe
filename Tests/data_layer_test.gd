@@ -38,6 +38,7 @@ func _on_run_all() -> void:
 	_test_production_resources()
 	_test_save_manager()
 	_test_learning_data_migration()
+	_test_backup_failure_migration()
 	_test_srs_engine()
 	_test_curriculum_settings()
 	_cleanup()
@@ -57,41 +58,54 @@ func _on_clear() -> void:
 
 func _test_vocab_database() -> void:
 	_log("[b]── VocabDatabase ──[/b]")
-
-	# Test: words loaded
 	var count := VocabDatabase.get_word_count()
-	_assert("Words loaded > 0", count > 0, "got %d" % count)
-
-	# Test: get_word_by_id
-	var word := VocabDatabase.get_word_by_id("n5_001")
-	_assert("get_word_by_id('n5_001') found", word != null, "")
+	_assert("Professional vocabulary has 3503 words", count == 3503, "got %d" % count)
+	_assert("All 45 professional lessons load", VocabDatabase.get_lessons().size() == 45, "")
+	_assert("All 401 professional grammar points load", VocabDatabase.get_grammar_points().size() == 401, "")
+	var lesson_one := VocabDatabase.get_words_by_lesson(1)
+	_assert("Lesson 1 vocabulary is available", not lesson_one.is_empty(), "")
+	var word: VocabWord = null
+	for candidate in lesson_one:
+		if candidate.has_meaning():
+			word = candidate
+			break
+	_assert("Professional word loads by stable ID", word != null and VocabDatabase.get_word_by_id(word.id) == word if word else false, "")
 	if word:
-		_assert("  word.romaji == 'konnichiwa'", word.romaji == "konnichiwa", "got '%s'" % word.romaji)
-		_assert("  word.jlpt_level == 5", word.jlpt_level == 5, "got %d" % word.jlpt_level)
-
-	# Test: get_words_by_jlpt
-	var n5_words := VocabDatabase.get_words_by_jlpt(5)
-	_assert("N5 has 800 words", n5_words.size() == 800, "got %d" % n5_words.size())
-	var n4_words := VocabDatabase.get_words_by_jlpt(4)
-	_assert("N4 has 700 words", n4_words.size() == 700, "got %d" % n4_words.size())
-	_assert("Combined curriculum has 1500 words", count == 1500, "got %d" % count)
+		_assert("Professional provenance loads", word.content_source == "professional_lesson" and word.source_file != "", "")
+		_assert("Professional lesson references load", 1 in word.lesson_ids and word.first_lesson == 1, "")
+	for level in [5, 4, 3, 2, 1]:
+		_assert("Supplied N%d tags remain queryable" % level, not VocabDatabase.get_words_by_jlpt(level).is_empty(), "")
+	var untagged := 0
 	var examples_valid := true
-	for n5_word in n5_words:
-		if n5_word.example_sentences.is_empty():
-			examples_valid = false
-		for example in n5_word.example_sentences:
+	var katakana_word: VocabWord = null
+	var kanji_word: VocabWord = null
+	for professional_word in VocabDatabase.get_all_words():
+		if professional_word.jlpt_level == 0:
+			untagged += 1
+		if katakana_word == null and professional_word.katakana != "":
+			katakana_word = professional_word
+		if kanji_word == null and professional_word.kanji != "":
+			kanji_word = professional_word
+		for example in professional_word.example_sentences:
 			var parts := example.split("|")
-			if parts.size() != 2 or n5_word.get_display_text() not in parts[0] or parts[1].strip_edges() == "":
+			if parts.size() != 2 or professional_word.source_word not in parts[0] or parts[1].strip_edges() == "":
 				examples_valid = false
-	_assert("All N5 examples are valid", examples_valid, "")
+	_assert("Untagged professional words remain in the curriculum", untagged == 1635, "got %d" % untagged)
+	_assert("All professional examples are valid", examples_valid, "")
 	_assert("N5 has 100 kanji", VocabDatabase.get_kanji_by_jlpt(5).size() == 100, "")
 	_assert("N4 has 200 kanji", VocabDatabase.get_kanji_by_jlpt(4).size() == 200, "")
-	_assert("Curriculum has 300 unique kanji", VocabDatabase.get_kanji_count() == 300, "got %d" % VocabDatabase.get_kanji_count())
+	_assert("Curriculum has 300 unique kanji", VocabDatabase.get_kanji_count() == 300, "")
 	var kanji_entry := VocabDatabase.get_kanji("一")
 	_assert("Kanji fields load", kanji_entry != null and not kanji_entry.meanings.is_empty() and not kanji_entry.get_all_readings().is_empty(), "")
-	_assert("All 60 reading passages load", VocabDatabase.reading_passages.size() == 60, "")
+	_assert("Professional reading passages load", VocabDatabase.reading_passages.size() == 35, "")
 	_assert("All 20 cafe menu entries load", VocabDatabase.cafe_menu.size() == 20, "")
-	_assert("Vocabulary speech available", AudioManager.has_speech("vocab:n5_001"), "")
+	_assert("Café legacy words are isolated", VocabDatabase.get_word_by_id("n5_011") == null and VocabDatabase.get_cafe_word_by_id("n5_011") != null, "")
+	var audio_word: VocabWord = null
+	for candidate in VocabDatabase.get_all_words():
+		if candidate.get_reading() != "" and AudioManager.has_speech("vocab:" + candidate.id):
+			audio_word = candidate
+			break
+	_assert("Professional vocabulary speech available", audio_word != null, "")
 	_assert("Order speech available", AudioManager.has_speech("order:n5_011"), "")
 	var menu_resources_valid := true
 	for item in VocabDatabase.cafe_menu:
@@ -102,65 +116,29 @@ func _test_vocab_database() -> void:
 	var manifest: Array = JSON.parse_string(manifest_file.get_as_text()) if manifest_file else []
 	if manifest_file:
 		manifest_file.close()
-	var audio_ready := manifest.size() == 1520
+	var expected_audio := 20
+	for professional_word in VocabDatabase.get_all_words():
+		if professional_word.get_reading() != "":
+			expected_audio += 1
+	var audio_ready := manifest.size() == expected_audio
 	for clip in manifest:
 		if clip.get("status", "") != "ready" or not FileAccess.file_exists(clip.get("file", "")):
 			audio_ready = false
-	_assert("All 1520 Japanese audio clips are ready", audio_ready, "got %d" % manifest.size())
-	var source_words_by_id: Dictionary = {}
-	for level in [5, 4]:
-		var source_file := FileAccess.open("res://Resources/Vocabulary/n%d_vocab.json" % level, FileAccess.READ)
-		var source_words: Array = JSON.parse_string(source_file.get_as_text())
-		source_file.close()
-		for source_word in source_words:
-			source_words_by_id[source_word["id"]] = source_word
-	var drafts_valid := true
-	for source_vocab_word in VocabDatabase.get_all_words():
-		var number := int(source_vocab_word.id.right(3))
-		if (source_vocab_word.jlpt_level == 5 and number > 120) or (source_vocab_word.jlpt_level == 4 and number > 100):
-			if source_words_by_id[source_vocab_word.id].get("review_status", "") not in ["draft_pending_human_review", "needs_correction", "human_reviewed"]:
-				drafts_valid = false
-	_assert("Imported vocabulary has valid review states", drafts_valid, "")
-
-	# Test: get_words_by_category
-	var cafe_words := VocabDatabase.get_words_by_category("cafe")
-	_assert("get_words_by_category('cafe') > 0", cafe_words.size() > 0, "got %d" % cafe_words.size())
-
-	var verb_words := VocabDatabase.get_words_by_category("verbs")
-	_assert("get_words_by_category('verbs') > 0", verb_words.size() > 0, "got %d" % verb_words.size())
-
-	# Test: get_random_words
-	var random := VocabDatabase.get_random_words(5)
-	_assert("get_random_words(5) returns 5", random.size() == 5, "got %d" % random.size())
-
-	# Test: get_random_words with exclusion
-	var exclude := PackedStringArray(["n5_001", "n5_002", "n5_003"])
-	var random_excl := VocabDatabase.get_random_words(3, exclude)
+	_assert("Current professional and café audio clips are ready", audio_ready, "got %d expected %d" % [manifest.size(), expected_audio])
+	var random := VocabDatabase.get_random_words(5, PackedStringArray(), {"lesson": 1, "require_meaning": true})
+	_assert("Lesson random words returns 5", random.size() == 5, "got %d" % random.size())
+	var excluded := PackedStringArray([random[0].id]) if not random.is_empty() else PackedStringArray()
+	var random_excl := VocabDatabase.get_random_words(3, excluded, {"lesson": 1})
 	var has_excluded := false
-	for w in random_excl:
-		if w.id in exclude:
+	for item in random_excl:
+		if item.id in excluded:
 			has_excluded = true
-	_assert("get_random_words excludes IDs", not has_excluded, "")
-
-	# Test: get_all_words
-	var all := VocabDatabase.get_all_words()
-	_assert("get_all_words() == get_word_count()", all.size() == count, "got %d vs %d" % [all.size(), count])
-
-	# Test: katakana word (bread)
-	var bread := VocabDatabase.get_word_by_id("n5_014")
-	if bread:
-		_assert("Katakana word has katakana", bread.katakana == "パン", "got '%s'" % bread.katakana)
-		_assert("Katakana word get_display_text()", bread.get_display_text() == "パン", "got '%s'" % bread.get_display_text())
-
-	# Test: word helper methods
-	if word:
-		_assert("get_display_text() returns hiragana for kana-only", word.get_display_text() == "こんにちは", "got '%s'" % word.get_display_text())
-		_assert("get_primary_meaning() returns first meaning", word.get_primary_meaning() == "hello", "got '%s'" % word.get_primary_meaning())
-
-	var kanji_word := VocabDatabase.get_word_by_id("n5_025")
+	_assert("Random words excludes IDs", not has_excluded, "")
+	_assert("get_all_words matches official count", VocabDatabase.get_all_words().size() == count, "")
+	if katakana_word:
+		_assert("Katakana display loads", katakana_word.get_display_text() != "", katakana_word.get_display_text())
 	if kanji_word:
-		_assert("get_display_text() returns kanji when present", kanji_word.get_display_text() == "五", "got '%s'" % kanji_word.get_display_text())
-
+		_assert("Kanji display loads", kanji_word.get_display_text() == kanji_word.kanji, kanji_word.get_display_text())
 	_log("")
 
 
@@ -335,37 +313,63 @@ func _test_learning_data_migration() -> void:
 	_assert("Create migration test profile", profile != null, "")
 	if profile == null:
 		return
-
-	profile.settings.erase("target_jlpt_level")
+	profile.settings["target_jlpt_level"] = 5
+	profile.settings["target_topic"] = "greetings"
+	profile.settings.erase("target_lesson")
+	profile.settings.erase("professional_curriculum_migrated")
 	ResourceSaver.save(profile, "user://profiles/__test_profile__/profile.tres")
 	var defaulted_profile := SaveManager.load_profile(TEST_PROFILE_NAME)
-	_assert("Profile curriculum default", defaulted_profile.settings.get("target_jlpt_level", -1) == 5, "")
+	_assert("Profile migrates to Lesson 1 and all JLPT", defaulted_profile.settings.get("target_lesson", -1) == 1 and defaulted_profile.settings.get("target_jlpt_level", -1) == 0, "")
+	_assert("Legacy topic is cleared", not defaulted_profile.settings.has("target_topic"), "")
 	_assert("Reduced Motion defaults off", defaulted_profile.settings.get("reduced_motion", true) == false, "")
 
-	var legacy: Array = [{
-		"vocab_id": "n5_001",
-		"ease_factor": 2.3,
-		"interval": 6.0,
-		"repetitions": 2,
-		"next_review_date": "2026-01-08",
-		"last_review_date": "2026-01-02",
-		"total_reviews": 4,
-		"correct_reviews": 3,
-	}]
+	var map_file := FileAccess.open("res://Resources/Curriculum/legacy_id_map.json", FileAccess.READ)
+	var id_map: Dictionary = JSON.parse_string(map_file.get_as_text())
+	map_file.close()
+	var target_counts: Dictionary = {}
+	for old_id in id_map:
+		if id_map[old_id].get("match_type", "") == "exact":
+			var target := str(id_map[old_id]["target_id"])
+			target_counts[target] = int(target_counts.get(target, 0)) + 1
+	var exact_old := ""
+	for old_id in id_map:
+		if id_map[old_id].get("match_type", "") == "exact" and int(target_counts[id_map[old_id]["target_id"]]) == 1:
+			exact_old = old_id
+			break
+	_assert("Unique exact migration fixture exists", exact_old != "", "")
+	var exact_target := str(id_map.get(exact_old, {}).get("target_id", ""))
+	var duplicate_target := str(id_map["n5_172"]["target_id"])
+	var legacy: Array = [
+		{"vocab_id": exact_old, "ease_factor": 2.3, "interval": 6.0, "repetitions": 2, "next_review_date": "2026-01-08", "last_review_date": "2026-01-02", "total_reviews": 4, "correct_reviews": 3},
+		{"vocab_id": "n5_001", "ease_factor": 2.1, "interval": 1.0, "repetitions": 1, "last_review_date": "2026-01-01", "total_reviews": 2, "correct_reviews": 1},
+		{"vocab_id": "n5_017", "ease_factor": 2.2, "interval": 3.0, "repetitions": 1, "last_review_date": "2026-01-03", "total_reviews": 3, "correct_reviews": 2},
+		{"vocab_id": "n5_172", "ease_factor": 2.4, "interval": 8.0, "repetitions": 3, "last_review_date": "2026-01-05", "total_reviews": 6, "correct_reviews": 5},
+		{"vocab_id": "n4_004", "ease_factor": 2.0, "interval": 2.0, "repetitions": 1, "last_review_date": "2026-01-04", "total_reviews": 2, "correct_reviews": 1},
+	]
 	var path := "user://profiles/__test_profile__/srs_data.json"
 	var file := FileAccess.open(path, FileAccess.WRITE)
 	file.store_string(JSON.stringify(legacy))
 	file.close()
-
 	var migrated := SaveManager.load_learning_data(TEST_PROFILE_NAME)
 	_assert("Legacy migration succeeds", migrated["load_ok"] and migrated["migrated"], "")
 	var migrated_cards: Array[SRSCard] = migrated["cards"]
-	_assert("Legacy card count", migrated_cards.size() == 1, "")
-	if migrated_cards.size() == 1:
-		var card := migrated_cards[0]
-		_assert("Legacy SM-2 fields preserved", card.ease_factor == 2.3 and card.interval == 6.0 and card.repetitions == 2, "")
-		_assert("Legacy totals preserved", card.total_reviews == 4 and card.correct_reviews == 3, "")
-		_assert("Legacy skills remain empty", card.skill_evidence.is_empty(), "")
+	var archives: Array = migrated["archived_cards"]
+	_assert("Exact, café, and selected duplicate remain active", migrated_cards.size() == 3, "got %d" % migrated_cards.size())
+	_assert("Unmatched and losing duplicate are archived", archives.size() == 2, "got %d" % archives.size())
+	var exact_card := SRSEngine.get_card_for_vocab(exact_target)
+	SRSEngine.cards = migrated_cards
+	exact_card = SRSEngine.get_card_for_vocab(exact_target)
+	_assert("Exact card remaps and preserves SM-2", exact_card != null and exact_card.ease_factor == 2.3 and exact_card.interval == 6.0 and exact_card.total_reviews == 4, "")
+	_assert("Café legacy ID remains active", SRSEngine.get_card_for_vocab("n5_017") != null, "")
+	_assert("Newest duplicate remains active", SRSEngine.get_card_for_vocab(duplicate_target) != null and SRSEngine.get_card_for_vocab(duplicate_target).last_review_date == "2026-01-05", "")
+	var reasons := PackedStringArray()
+	var original_ids := PackedStringArray()
+	for archive in archives:
+		reasons.append(archive["reason"])
+		original_ids.append(archive["original_id"])
+		_assert("Archive retains full card snapshot", archive.get("card", {}).has("skill_evidence"), "")
+	_assert("Archive reasons cover unmatched and duplicate", "no_professional_match" in reasons and "duplicate_content" in reasons, str(reasons))
+	_assert("Archive originals are traceable", "n5_001" in original_ids and "n4_004" in original_ids, str(original_ids))
 	_assert("Legacy backup created", FileAccess.file_exists("user://profiles/__test_profile__/srs_data_v1_backup.json"), "")
 
 	var reloaded := SaveManager.load_learning_data(TEST_PROFILE_NAME)
@@ -377,17 +381,14 @@ func _test_learning_data_migration() -> void:
 	var sessions: Array = []
 	for i in 105:
 		sessions.append({"timestamp": "session_%d" % i, "game_type": "multiple_choice"})
-	_assert("Learning data save succeeds", SaveManager.save_learning_data(TEST_PROFILE_NAME, roundtrip_cards, sessions), "")
+	_assert("Learning data save preserves archives", SaveManager.save_learning_data(TEST_PROFILE_NAME, roundtrip_cards, sessions, reloaded["kanji_cards"], reloaded["archived_cards"]), "")
 	var roundtrip := SaveManager.load_learning_data(TEST_PROFILE_NAME)
 	_assert("Session history capped", roundtrip["sessions"].size() == 100, "got %d" % roundtrip["sessions"].size())
+	_assert("Archive count survives save/load", roundtrip["archived_cards"].size() == 2, "")
 	var saved_cards: Array[SRSCard] = roundtrip["cards"]
 	_assert("Skill evidence round trip", saved_cards[0].skill_evidence["meaning"].attempts == 1, "")
 
-	var v2_envelope := {
-		"schema_version": 2,
-		"cards": [SaveManager._serialize_card(saved_cards[0])],
-		"sessions": [{"game_type": "v2_session"}],
-	}
+	var v2_envelope := {"schema_version": 2, "cards": [SaveManager._serialize_card(saved_cards[0])], "sessions": [{"game_type": "v2_session"}]}
 	file = FileAccess.open(path, FileAccess.WRITE)
 	file.store_string(JSON.stringify(v2_envelope))
 	file.close()
@@ -403,10 +404,16 @@ func _test_learning_data_migration() -> void:
 	kanji_evidence.record(SRSEngine.Quality.GOOD, "2026-01-04", "kanji_workshop")
 	kanji_card.skill_evidence["kanji_form"] = kanji_evidence
 	var kanji_cards: Array[KanjiCard] = [kanji_card]
-	_assert("Schema 3 kanji save", SaveManager.save_learning_data(TEST_PROFILE_NAME, saved_cards, sessions, kanji_cards), "")
-	var v3_reload := SaveManager.load_learning_data(TEST_PROFILE_NAME)
-	_assert("Kanji card round trip", v3_reload["kanji_cards"].size() == 1 and v3_reload["kanji_cards"][0].character == "一", "")
-	_assert("Kanji evidence round trip", v3_reload["kanji_cards"][0].skill_evidence["kanji_form"].attempts == 1, "")
+	var v3_envelope := {"schema_version": 3, "cards": [legacy[0]], "kanji_cards": [SaveManager._serialize_card(kanji_card)], "sessions": [{"game_type": "v3_session"}]}
+	file = FileAccess.open(path, FileAccess.WRITE)
+	file.store_string(JSON.stringify(v3_envelope))
+	file.close()
+	var v3_migration := SaveManager.load_learning_data(TEST_PROFILE_NAME)
+	_assert("V3 migration preserves kanji and sessions", v3_migration["load_ok"] and v3_migration["migrated"] and v3_migration["kanji_cards"].size() == 1 and v3_migration["sessions"].size() == 1, "")
+	_assert("Kanji evidence round trip", v3_migration["kanji_cards"][0].skill_evidence["kanji_form"].attempts == 1, "")
+	_assert("Schema 4 kanji save", SaveManager.save_learning_data(TEST_PROFILE_NAME, v3_migration["cards"], sessions, kanji_cards, v3_migration["archived_cards"]), "")
+	var current := SaveManager.load_learning_data(TEST_PROFILE_NAME)
+	_assert("Current kanji card round trip", current["kanji_cards"].size() == 1 and current["kanji_cards"][0].character == "一", "")
 
 	file = FileAccess.open(path, FileAccess.WRITE)
 	file.store_string("{broken")
@@ -418,7 +425,33 @@ func _test_learning_data_migration() -> void:
 	var remaining := file.get_as_text()
 	file.close()
 	_assert("Corrupt source remains intact", remaining == "{broken", "got '%s' (%d chars)" % [remaining, remaining.length()])
+	SRSEngine.cards = []
 	SaveManager.delete_profile(TEST_PROFILE_NAME)
+	_log("")
+
+
+func _test_backup_failure_migration() -> void:
+	_log("[b]── Backup Failure Migration ──[/b]")
+	var profile_name := "__test_backup__"
+	SaveManager.delete_profile(profile_name)
+	var profile := SaveManager.create_profile(profile_name)
+	_assert("Create backup-failure profile", profile != null, "")
+	var path := "user://profiles/__test_backup__/srs_data.json"
+	var source := JSON.stringify([{"vocab_id": "n5_001", "total_reviews": 2, "correct_reviews": 1}])
+	var file := FileAccess.open(path, FileAccess.WRITE)
+	file.store_string(source)
+	file.close()
+	var backup_path := "user://profiles/__test_backup__/srs_data_v1_backup.json"
+	_assert("Force backup path to be unwritable", DirAccess.make_dir_absolute(backup_path) == OK, "")
+	var result := SaveManager.load_learning_data(profile_name)
+	_assert("Backup failure blocks migration", not result["load_ok"] and not result["migrated"], "")
+	_assert("Backup failure blocks later writes", not SaveManager.save_learning_data(profile_name, [], []), "")
+	file = FileAccess.open(path, FileAccess.READ)
+	var remaining := file.get_as_text()
+	file.close()
+	_assert("Backup failure preserves original source", remaining == source, "")
+	DirAccess.remove_absolute(backup_path)
+	SaveManager.delete_profile(profile_name)
 	_log("")
 
 
@@ -539,8 +572,8 @@ func _test_curriculum_settings() -> void:
 	var profile := PlayerProfile.new()
 	profile.player_name = "curriculum_test"
 	profile.settings["new_cards_per_session"] = 0
-	profile.settings["target_jlpt_level"] = 5
-	profile.settings["target_topic"] = "all"
+	profile.settings["target_jlpt_level"] = 0
+	profile.settings["target_lesson"] = 1
 	GameController.current_profile = profile
 	SRSEngine.cards = []
 	var base := MiniGameBase.new()
@@ -550,46 +583,60 @@ func _test_curriculum_settings() -> void:
 	base.free()
 
 	profile.settings["new_cards_per_session"] = 10
-	profile.settings["target_topic"] = "greetings"
 	base = MiniGameBase.new()
 	base._words_per_session = 10
 	base._populate_session({})
-	var topic_matches := not base._session_words.is_empty()
+	var lesson_matches := not base._session_words.is_empty()
 	for word in base._session_words:
-		if "greetings" not in word.categories or word.jlpt_level != 5:
-			topic_matches = false
-	_assert("Topic and level filters isolate new cards", topic_matches, "")
+		if 1 not in word.lesson_ids or not word.has_meaning():
+			lesson_matches = false
+	_assert("New cards use the selected professional lesson", lesson_matches, "")
 	base.free()
 
-	var empty_topic := ""
-	for category in VocabDatabase.get_categories():
-		if VocabDatabase.get_random_words(1, PackedStringArray(), {"jlpt_level": 4, "category": category}).is_empty():
-			empty_topic = category
+	var empty_level := 0
+	for level in [1, 2, 3, 4, 5]:
+		if VocabDatabase.get_random_words(1, PackedStringArray(), {"lesson": 1, "jlpt_level": level}).is_empty():
+			empty_level = level
 			break
-	_assert("At least one empty N4 topic is disabled by Settings", empty_topic != "", "")
-	profile.settings["target_jlpt_level"] = 4
-	profile.settings["target_topic"] = empty_topic
+	_assert("An empty Lesson 1 JLPT combination exists", empty_level > 0, "")
+	profile.settings["target_jlpt_level"] = empty_level
 	SRSEngine.cards = []
 	base = MiniGameBase.new()
 	base._words_per_session = 10
 	base._populate_session({})
-	_assert("Empty topics never substitute another topic", base._session_words.is_empty() and SRSEngine.cards.is_empty(), "")
+	_assert("Empty lesson filters never substitute other content", base._session_words.is_empty() and SRSEngine.cards.is_empty(), "")
 	base.free()
 
-	profile.settings["target_topic"] = "all"
+	profile.settings["target_jlpt_level"] = 0
+	profile.settings["target_lesson"] = 1
 	profile.settings["new_cards_per_session"] = 0
-	SRSEngine.add_new_cards(PackedStringArray(["n5_001", "n4_001"]))
+	var lesson_five_word: VocabWord = null
+	for candidate in VocabDatabase.get_words_by_lesson(5):
+		if candidate.has_meaning():
+			lesson_five_word = candidate
+			break
+	var lesson_one_word: VocabWord = null
+	for candidate in VocabDatabase.get_words_by_lesson(1):
+		if candidate.has_meaning():
+			lesson_one_word = candidate
+			break
+	SRSEngine.add_new_cards(PackedStringArray([lesson_one_word.id, lesson_five_word.id, "n5_017"]))
 	base = MiniGameBase.new()
 	base._words_per_session = 10
 	base._populate_session({})
 	var due_ids: PackedStringArray = []
 	for word in base._session_words:
 		due_ids.append(word.id)
-	_assert("Due cards span introduced levels", "n5_001" in due_ids and "n4_001" in due_ids, str(due_ids))
+	_assert("Due cards span introduced professional lessons", lesson_one_word.id in due_ids and lesson_five_word.id in due_ids, str(due_ids))
+	_assert("Café legacy cards stay out of official sessions", "n5_017" not in due_ids and due_ids.size() == 2, str(due_ids))
 	base.free()
-	profile.settings["target_jlpt_level"] = 0
+	profile.settings["target_lesson"] = 0
 	base = MiniGameBase.new()
-	_assert("Mixed selection does not restrict new cards to one level", not base._get_curriculum_filters().has("jlpt_level"), "")
+	_assert("All-lesson selection has no lesson restriction", not base._get_curriculum_filters().has("lesson"), "")
+	base.free()
+	profile.settings["target_jlpt_level"] = 5
+	base = MiniGameBase.new()
+	_assert("Optional JLPT filter is preserved", base._get_curriculum_filters().get("jlpt_level", 0) == 5, "")
 	base.free()
 	SRSEngine.cards = saved_cards
 	GameController.current_profile = saved_profile

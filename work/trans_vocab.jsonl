@@ -1,0 +1,3409 @@
+{"id": 0, "en": "here; this place"}
+{"id": 1, "en": "there; that place"}
+{"id": 2, "en": "nanotechnology"}
+{"id": 3, "en": "above; on top"}
+{"id": 4, "en": "below; under"}
+{"id": 5, "en": "fossil"}
+{"id": 6, "en": "land"}
+{"id": 7, "en": "subway; metro"}
+{"id": 8, "en": "older sister"}
+{"id": 9, "en": "cloth"}
+{"id": 10, "en": "benefit; a good deal"}
+{"id": 11, "en": "dawn; daybreak"}
+{"id": 12, "en": "persimmon"}
+{"id": 13, "en": "shelf; rack; partition"}
+{"id": 14, "en": "nephew"}
+{"id": 15, "en": "hollyhock (flower)"}
+{"id": 16, "en": "to go"}
+{"id": 17, "en": "west; the west"}
+{"id": 18, "en": "watermelon"}
+{"id": 19, "en": "to say; to tell"}
+{"id": 20, "en": "red; the color red"}
+{"id": 21, "en": "to chase; to pursue"}
+{"id": 22, "en": "bad at; clumsy; unskilled"}
+{"id": 23, "en": "forecast; prediction"}
+{"id": 24, "en": "conversation"}
+{"id": 25, "en": "eight"}
+{"id": 26, "en": "one thousand yen"}
+{"id": 27, "en": "name; full name"}
+{"id": 28, "en": "midnight; late at night"}
+{"id": 29, "en": "hard; tough; very; extremely"}
+{"id": 30, "en": "Tianjin"}
+{"id": 31, "en": "relief; peace of mind"}
+{"id": 32, "en": "résumé; CV"}
+{"id": 33, "en": "behind; back"}
+{"id": 34, "en": "bookstore"}
+{"id": 35, "en": "cherry blossom"}
+{"id": 36, "en": "history"}
+{"id": 37, "en": "comparison"}
+{"id": 38, "en": "feeling; mood"}
+{"id": 39, "en": "thing; stuff"}
+{"id": 40, "en": "I; me"}
+{"id": 41, "en": "simple; easy"}
+{"id": 42, "en": "end; finish"}
+{"id": 43, "en": "young person; young people"}
+{"id": 44, "en": "sample"}
+{"id": 45, "en": "wallet"}
+{"id": 46, "en": "car; automobile"}
+{"id": 47, "en": "driving"}
+{"id": 48, "en": "vegetables"}
+{"id": 49, "en": "-chan (affectionate suffix for girls)"}
+{"id": 50, "en": "guest; customer; visitor"}
+{"id": 51, "en": "\"Okaerinasai.\" — \"Welcome home.\" Said in response to \"tadaima\" (\"I'm home\"), which the returning person says when entering the house."}
+{"id": 52, "en": "\"Okagesama de, genki desu.\" — \"Thanks to you, I'm doing well.\" (\"Okagesama de\" means \"thanks to you.\")"}
+{"id": 53, "en": "where"}
+{"id": 54, "en": "website"}
+{"id": 55, "en": "curriculum; teaching plan"}
+{"id": 56, "en": "size; fit"}
+{"id": 57, "en": "personal computer; PC"}
+{"id": 58, "en": "business; enterprise"}
+{"id": 59, "en": "piano"}
+{"id": 60, "en": "Special yōon in pure loanwords: besides the yōon learned earlier, Japanese loanwords sometimes use special yōon combinations to approximate the original pronunciation in the source language. Let's practice reading these loanwords."}
+{"id": 61, "en": "fan; enthusiast; ...-lover"}
+{"id": 62, "en": "novel"}
+{"id": 63, "en": "gift; present"}
+{"id": 64, "en": "instruction manual"}
+{"id": 65, "en": "three hundred"}
+{"id": 66, "en": "personal connections; network"}
+{"id": 67, "en": "convenient; handy"}
+{"id": 68, "en": "I; me (masculine)"}
+{"id": 69, "en": "everyone; all members"}
+{"id": 70, "en": "photo; photograph"}
+{"id": 71, "en": "very thick; quite thick"}
+{"id": 72, "en": "Beijing"}
+{"id": 73, "en": "library"}
+{"id": 74, "en": "university; college"}
+{"id": 75, "en": "family; household"}
+{"id": 76, "en": "homework; assignment"}
+{"id": 77, "en": "giant"}
+{"id": 78, "en": "she; her; girlfriend"}
+{"id": 79, "en": "Japanese (language)"}
+{"id": 80, "en": "singer"}
+{"id": 81, "en": "chef; head cook"}
+{"id": 82, "en": "cash"}
+{"id": 83, "en": "abbreviation; acronym"}
+{"id": 84, "en": "one hundred"}
+{"id": 85, "en": "serious; earnest"}
+{"id": 86, "en": "Shinto shrine"}
+{"id": 87, "en": "reduction; shrinking"}
+{"id": 88, "en": "duty; obligation"}
+{"id": 89, "en": "foreign language; foreign language study"}
+{"id": 90, "en": "savings; deposit"}
+{"id": 91, "en": "hindrance; disturbance; interruption"}
+{"id": 92, "en": "telephone; phone call"}
+{"id": 93, "en": "school bag; bag; briefcase"}
+{"id": 94, "en": "mother; mom"}
+{"id": 95, "en": "りょこう → かぞくりょこう (family + travel = family trip)"}
+{"id": 96, "en": "かいしゃ → かぶしきがいしゃ (company + stock-style = joint-stock company)"}
+{"id": 97, "en": "がくぶ → けいざいがくぶ (economics + faculty = faculty of economics)"}
+{"id": 98, "en": "かつどう → しゅうしょくかつどう (job-hunting + activity = job-hunting activities)"}
+{"id": 99, "en": "a little; a bit; slightly"}
+{"id": 100, "en": "slowly; leisurely"}
+{"id": 101, "en": "coffee"}
+{"id": 102, "en": "shopping"}
+{"id": 103, "en": "gesture; hand movement"}
+{"id": 104, "en": "schedule; itinerary"}
+{"id": 105, "en": "cheeseburger"}
+{"id": 106, "en": "designer"}
+{"id": 107, "en": "news"}
+{"id": 108, "en": "basket"}
+{"id": 109, "en": "だいがく → ペキンだいがく (Beijing + university = Beijing University)"}
+{"id": 110, "en": "pet"}
+{"id": 111, "en": "robot"}
+{"id": 112, "en": "together"}
+{"id": 113, "en": "China"}
+{"id": 114, "en": "six hundred"}
+{"id": 115, "en": "departure; setting out"}
+{"id": 116, "en": "café; coffee shop"}
+{"id": 117, "en": "rude; impolite; rudeness"}
+{"id": 118, "en": "school"}
+{"id": 119, "en": "small; tiny. (The small yōon long vowel is the long-vowel form of yōon; it follows the same long-vowel rules, and the kana used to write the long vowel is determined by the small vowel letter in the preceding yōon.)"}
+{"id": 120, "en": "boxed lunch; bento"}
+{"id": 121, "en": "the day after tomorrow"}
+{"id": 122, "en": "fun; enjoyable; pleasant"}
+{"id": 123, "en": "international student; exchange student"}
+{"id": 124, "en": "company president"}
+{"id": 125, "en": "air"}
+{"id": 126, "en": "impressive; splendid; stylish"}
+{"id": 127, "en": "introduction"}
+{"id": 128, "en": "economy; economics"}
+{"id": 129, "en": "English (language)"}
+{"id": 130, "en": "cup; glass; tumbler"}
+{"id": 131, "en": "beer"}
+{"id": 132, "en": "symbol"}
+{"id": 133, "en": "correspondence; communication"}
+{"id": 134, "en": "magazine"}
+{"id": 135, "en": "scenery; landscape"}
+{"id": 136, "en": "Mr./Ms. ...; ...-san"}
+{"id": 137, "en": "... person; ...-er"}
+{"id": 138, "en": "that"}
+{"id": 139, "en": "that one; that thing"}
+{"id": 140, "en": "that person"}
+{"id": 141, "en": "No. (Used for teachers, doctors, lawyers, etc.)"}
+{"id": 142, "en": "good morning"}
+{"id": 143, "en": "older brother (-san)"}
+{"id": 144, "en": "mother; mom (-san)"}
+{"id": 145, "en": "please (a request); I ask of you"}
+{"id": 146, "en": "came (\"-mashita\" is the polite past form of a verb)"}
+{"id": 147, "en": "well then; in that case"}
+{"id": 148, "en": "like that; that way"}
+{"id": 149, "en": "please; go ahead"}
+{"id": 150, "en": "who (polite)"}
+{"id": 151, "en": "yes; that's right"}
+{"id": 152, "en": "please treat me well; nice to meet you"}
+{"id": 153, "en": "America; the United States"}
+{"id": 154, "en": "American (person)"}
+{"id": 155, "en": "British person (イギリス = the UK)"}
+{"id": 156, "en": "Italian person (イタリア = Italy)"}
+{"id": 157, "en": "Italian (language)"}
+{"id": 158, "en": "George"}
+{"id": 159, "en": "first-year student"}
+{"id": 160, "en": "third-year student"}
+{"id": 161, "en": "Chinese person"}
+{"id": 162, "en": "Nakamura Eri (name)"}
+{"id": 163, "en": "second-year student"}
+{"id": 164, "en": "hello; good day"}
+{"id": 165, "en": "company employee; office worker"}
+{"id": 166, "en": "Sato (surname)"}
+{"id": 167, "en": "what"}
+{"id": 168, "en": "what year (of study); which grade"}
+{"id": 169, "en": "honorific title for a specialist (e.g. teacher, doctor)"}
+{"id": 170, "en": "senior; upperclassman"}
+{"id": 171, "en": "civil servant; government employee"}
+{"id": 172, "en": "nice to meet you (first meeting)"}
+{"id": 173, "en": "friend"}
+{"id": 174, "en": "university student"}
+{"id": 175, "en": "graduate school"}
+{"id": 176, "en": "graduate student"}
+{"id": 177, "en": "student"}
+{"id": 178, "en": "faculty; department"}
+{"id": 179, "en": "Yamada (surname)"}
+{"id": 180, "en": "he; him; boyfriend"}
+{"id": 181, "en": "boyfriend"}
+{"id": 182, "en": "junior; underclassman"}
+{"id": 183, "en": "teacher; instructor"}
+{"id": 184, "en": "new student; freshman"}
+{"id": 185, "en": "person (respectful); ... (honorific for people)"}
+{"id": 186, "en": "Japan"}
+{"id": 187, "en": "Japanese person"}
+{"id": 188, "en": "Li Yuka (name)"}
+{"id": 189, "en": "the polite past form of a verb"}
+{"id": 190, "en": "Tokyo"}
+{"id": 191, "en": "The University of Tokyo"}
+{"id": 192, "en": "joint-stock company; corporation"}
+{"id": 193, "en": "faculty of law"}
+{"id": 194, "en": "science and engineering faculty"}
+{"id": 195, "en": "boy"}
+{"id": 196, "en": "everyone; all"}
+{"id": 197, "en": "company employee; staff member"}
+{"id": 198, "en": "economics department"}
+{"id": 199, "en": "bank clerk; bank employee"}
+{"id": 200, "en": "South Korea"}
+{"id": 201, "en": "Korean person"}
+{"id": 202, "en": "high school student"}
+{"id": 203, "en": "Wi-Fi; wireless network"}
+{"id": 204, "en": "floor; story"}
+{"id": 205, "en": "to be; to exist; to have"}
+{"id": 206, "en": "thank you for your hard work (greeting)"}
+{"id": 207, "en": "congratulations"}
+{"id": 208, "en": "souvenir; local specialty gift"}
+{"id": 209, "en": "toilet; restroom"}
+{"id": 210, "en": "tea"}
+{"id": 211, "en": "sweets; candy; snacks"}
+{"id": 212, "en": "sorry; excuse me"}
+{"id": 213, "en": "and then; moreover"}
+{"id": 214, "en": "very; extremely"}
+{"id": 215, "en": "a tiny bit; a little"}
+{"id": 216, "en": "Please rest."}
+{"id": 217, "en": "Understood.; I see."}
+{"id": 218, "en": "apartment (abbreviation of \"apartment house\")"}
+{"id": 219, "en": "earphones; headphones"}
+{"id": 220, "en": "WeChat"}
+{"id": 221, "en": "office"}
+{"id": 222, "en": "convenience store (abbreviation)"}
+{"id": 223, "en": "passport"}
+{"id": 224, "en": "password"}
+{"id": 225, "en": "bread; -ya (suffix for shops selling ...)"}
+{"id": 226, "en": "pamphlet; brochure"}
+{"id": 227, "en": "bakery; bread shop"}
+{"id": 228, "en": "username"}
+{"id": 229, "en": "restaurant; dining hall"}
+{"id": 230, "en": "inside; interior; middle"}
+{"id": 231, "en": "now; nowadays; at present"}
+{"id": 232, "en": "today (お疲れ様でした = thank you for your hard work)"}
+{"id": 233, "en": "meeting room; conference room"}
+{"id": 234, "en": "front; ahead"}
+{"id": 235, "en": "Peking University"}
+{"id": 236, "en": "right side"}
+{"id": 237, "en": "business card"}
+{"id": 238, "en": "late-night snack"}
+{"id": 239, "en": "dormitory"}
+{"id": 240, "en": "Kobayashi (surname)"}
+{"id": 241, "en": "shop; store"}
+{"id": 242, "en": "carrying; portable; to carry"}
+{"id": 243, "en": "mobile phone number"}
+{"id": 244, "en": "classroom"}
+{"id": 245, "en": "new employee"}
+{"id": 246, "en": "washing machine"}
+{"id": 247, "en": "Tsinghua University"}
+{"id": 248, "en": "number"}
+{"id": 249, "en": "research lab; seminar room"}
+{"id": 250, "en": "employee dormitory"}
+{"id": 251, "en": "vending machine"}
+{"id": 252, "en": "nearby; vicinity"}
+{"id": 253, "en": "room"}
+{"id": 254, "en": "bank"}
+{"id": 255, "en": "next door; beside"}
+{"id": 256, "en": "cafeteria; canteen (conbini = convenience store)"}
+{"id": 257, "en": "station"}
+{"id": 258, "en": "...-kun (suffix for boys/young men)"}
+{"id": 259, "en": "... months (duration)"}
+{"id": 260, "en": "... people (counter)"}
+{"id": 261, "en": "... years old"}
+{"id": 262, "en": "how old; how many (items)"}
+{"id": 263, "en": "when; what time"}
+{"id": 264, "en": "uncle (respectful, parent's brother)"}
+{"id": 265, "en": "aunt (respectful, parent's sister)"}
+{"id": 266, "en": "older brother"}
+{"id": 267, "en": "young lady; someone's daughter (-san)"}
+{"id": 268, "en": "also used for men younger than oneself"}
+{"id": 269, "en": "exactly alike; identical"}
+{"id": 270, "en": "oh!; ah! (surprise)"}
+{"id": 271, "en": "still; yet; as before"}
+{"id": 272, "en": "Asia"}
+{"id": 273, "en": "Asian person"}
+{"id": 274, "en": "classmate"}
+{"id": 275, "en": "sandwich"}
+{"id": 276, "en": "smartphone"}
+{"id": 277, "en": "once; one time"}
+{"id": 278, "en": "the year before last"}
+{"id": 279, "en": "Shanghai"}
+{"id": 280, "en": "parents"}
+{"id": 281, "en": "junior high school; middle school"}
+{"id": 282, "en": "middle school student"}
+{"id": 283, "en": "head of the household; husband"}
+{"id": 284, "en": "person"}
+{"id": 285, "en": "before; previously"}
+{"id": 286, "en": "how many people"}
+{"id": 287, "en": "siblings; brothers"}
+{"id": 288, "en": "doctor; physician"}
+{"id": 289, "en": "last year"}
+{"id": 290, "en": "cute; lovely"}
+{"id": 291, "en": "husband"}
+{"id": 292, "en": "wife; madam; Mrs."}
+{"id": 293, "en": "younger sister"}
+{"id": 294, "en": "wife"}
+{"id": 295, "en": "daughter"}
+{"id": 296, "en": "hometown; parents' home"}
+{"id": 297, "en": "my wife (humble)"}
+{"id": 298, "en": "elementary school student"}
+{"id": 299, "en": "building"}
+{"id": 300, "en": "younger brother"}
+{"id": 301, "en": "son"}
+{"id": 302, "en": "yesterday"}
+{"id": 303, "en": "breakfast"}
+{"id": 304, "en": "trainee; research student"}
+{"id": 305, "en": "grandmother"}
+{"id": 306, "en": "grandfather"}
+{"id": 307, "en": "employee; staff"}
+{"id": 308, "en": "to remember; to memorize; to learn"}
+{"id": 309, "en": "exam; test"}
+{"id": 310, "en": "who"}
+{"id": 311, "en": "section chief"}
+{"id": 312, "en": "no; not so; different"}
+{"id": 313, "en": "department head; manager"}
+{"id": 314, "en": "rain; to rain"}
+{"id": 315, "en": "email"}
+{"id": 316, "en": "honorific suffix after a person's name"}
+{"id": 317, "en": "how much (price)"}
+{"id": 318, "en": "welcome (to a shop)"}
+{"id": 319, "en": "plate; dish"}
+{"id": 320, "en": "change (money)"}
+{"id": 321, "en": "certainly; right away (compliance)"}
+{"id": 322, "en": "how; in what way"}
+{"id": 323, "en": "to do"}
+{"id": 324, "en": "apple pie"}
+{"id": 325, "en": "Alipay"}
+{"id": 326, "en": "escalator"}
+{"id": 327, "en": "elevator"}
+{"id": 328, "en": "card"}
+{"id": 329, "en": "cake"}
+{"id": 330, "en": "gold"}
+{"id": 331, "en": "shirt"}
+{"id": 332, "en": "stove; heater"}
+{"id": 333, "en": "set; suite"}
+{"id": 334, "en": "sweater"}
+{"id": 335, "en": "cheese"}
+{"id": 336, "en": "cheeseburger"}
+{"id": 337, "en": "hand soap"}
+{"id": 338, "en": "hamburger"}
+{"id": 339, "en": "fast food"}
+{"id": 340, "en": "fast food restaurant"}
+{"id": 341, "en": "fried chicken"}
+{"id": 342, "en": "food court"}
+{"id": 343, "en": "hot (temperature)"}
+{"id": 344, "en": "hot coffee"}
+{"id": 345, "en": "loyalty card; points card"}
+{"id": 346, "en": "ribbon; decorative tape"}
+{"id": 347, "en": "receipt"}
+{"id": 348, "en": "one (item)"}
+{"id": 349, "en": "ten thousand"}
+{"id": 350, "en": "two people"}
+{"id": 351, "en": "rest; break"}
+{"id": 352, "en": "checkout; payment"}
+{"id": 353, "en": "one hundred million"}
+{"id": 354, "en": "admission ticket"}
+{"id": 355, "en": "yen"}
+{"id": 356, "en": "ten"}
+{"id": 357, "en": "thousand; one thousand"}
+{"id": 358, "en": "counter for vehicles/machines"}
+{"id": 359, "en": "karaage; Japanese fried chicken"}
+{"id": 360, "en": "underground; basement"}
+{"id": 361, "en": "no problem; it's all right"}
+{"id": 362, "en": "tempura (deep-fried shrimp, vegetables, etc.)"}
+{"id": 363, "en": "inside; depths; back (of a place)"}
+{"id": 364, "en": "guest; customer"}
+{"id": 365, "en": "left side"}
+{"id": 366, "en": "shop clerk; salesperson"}
+{"id": 367, "en": "yogurt"}
+{"id": 368, "en": "cappuccino"}
+{"id": 369, "en": "notebook; planner"}
+{"id": 370, "en": "person in charge"}
+{"id": 371, "en": "recently; lately"}
+{"id": 372, "en": "counter for flat objects (sheets, cards)"}
+{"id": 373, "en": "next; the next one"}
+{"id": 374, "en": "aquarium"}
+{"id": 375, "en": "bicycle"}
+{"id": 376, "en": "flower"}
+{"id": 377, "en": "dictionary"}
+{"id": 378, "en": "chicken (meat)"}
+{"id": 379, "en": "T-shirt"}
+{"id": 380, "en": "blood type A"}
+{"id": 381, "en": "an affectionate title attached after a name"}
+{"id": 382, "en": "good; fine"}
+{"id": 383, "en": "various; all kinds of"}
+{"id": 384, "en": "(used during a brief pause or while thinking)"}
+{"id": 385, "en": "thing; matter; affair"}
+{"id": 386, "en": "let's ...; shall we ..."}
+{"id": 387, "en": "amazing; remarkable"}
+{"id": 388, "en": "that kind of; such"}
+{"id": 389, "en": "but; however"}
+{"id": 390, "en": "not at all; don't mention it; you're welcome"}
+{"id": 391, "en": "why"}
+{"id": 392, "en": "all; both; entirely"}
+{"id": 393, "en": "perhaps; maybe; possibly"}
+{"id": 394, "en": "ice cream"}
+{"id": 395, "en": "engineer"}
+{"id": 396, "en": "color; hue"}
+{"id": 397, "en": "Christmas"}
+{"id": 398, "en": "system"}
+{"id": 399, "en": "systems engineer"}
+{"id": 400, "en": "phone case"}
+{"id": 401, "en": "party; gathering"}
+{"id": 402, "en": "luck; good fortune"}
+{"id": 403, "en": "lucky color"}
+{"id": 404, "en": "good at; skilled"}
+{"id": 405, "en": "this year"}
+{"id": 406, "en": "gentle; kind"}
+{"id": 407, "en": "winter"}
+{"id": 408, "en": "meticulous; methodical"}
+{"id": 409, "en": "passing (an exam); qualification"}
+{"id": 410, "en": "Saturday"}
+{"id": 411, "en": "weather"}
+{"id": 412, "en": "to like; fondness"}
+{"id": 413, "en": "happy; glad"}
+{"id": 414, "en": "Mount Fuji"}
+{"id": 415, "en": "cold (weather)"}
+{"id": 416, "en": "job-hunting activities (for graduates)"}
+{"id": 417, "en": "Capricorn (zodiac)"}
+{"id": 418, "en": "shape; form; appearance"}
+{"id": 419, "en": "after ...; later"}
+{"id": 420, "en": "thanks to; owing to"}
+{"id": 421, "en": "personality; character"}
+{"id": 422, "en": "new"}
+{"id": 423, "en": "bright; cheerful"}
+{"id": 424, "en": "movie; film"}
+{"id": 425, "en": "warm"}
+{"id": 426, "en": "real; true; genuine"}
+{"id": 427, "en": "next month"}
+{"id": 428, "en": "next week"}
+{"id": 429, "en": "life; living"}
+{"id": 430, "en": "studying abroad"}
+{"id": 431, "en": "life as an international student"}
+{"id": 432, "en": "everyone; everybody"}
+{"id": 433, "en": "pretty; beautiful; clean"}
+{"id": 434, "en": "delicious; tasty"}
+{"id": 435, "en": "ability; capability"}
+{"id": 436, "en": "crab"}
+{"id": 437, "en": "Cancer (zodiac)"}
+{"id": 438, "en": "kind; kind-hearted; thoughtful"}
+{"id": 439, "en": "birthday"}
+{"id": 440, "en": "condition; state; situation"}
+{"id": 441, "en": "elephant"}
+{"id": 442, "en": "slow; late"}
+{"id": 443, "en": "long"}
+{"id": 444, "en": "difficult; hard"}
+{"id": 445, "en": "snow"}
+{"id": 446, "en": "interesting; amusing"}
+{"id": 447, "en": "smooth; favorable"}
+{"id": 448, "en": "high; tall; expensive"}
+{"id": 449, "en": "nose"}
+{"id": 450, "en": "... minutes"}
+{"id": 451, "en": "half past ..."}
+{"id": 452, "en": "... o'clock"}
+{"id": 453, "en": "oh!; oops; dear me"}
+{"id": 454, "en": "stylish; fashionable"}
+{"id": 455, "en": "cool; handsome; stylish"}
+{"id": 456, "en": "what kind of; what ... like"}
+{"id": 457, "en": "so-so; passable"}
+{"id": 458, "en": "scattered; messy; untidy"}
+{"id": 459, "en": "barely acceptable; more or less"}
+{"id": 460, "en": "app; application"}
+{"id": 461, "en": "OK"}
+{"id": 462, "en": "cola"}
+{"id": 463, "en": "(broadcasting) tower"}
+{"id": 464, "en": "milk tea"}
+{"id": 465, "en": "concert tour; live tour"}
+{"id": 466, "en": "protagonist; main character"}
+{"id": 467, "en": "the next time; this time"}
+{"id": 468, "en": "work; job"}
+{"id": 469, "en": "after; afterwards; from now on"}
+{"id": 470, "en": "meeting; conference"}
+{"id": 471, "en": "last week"}
+{"id": 472, "en": "(not) at all; entirely (with negative)"}
+{"id": 473, "en": "morning; a.m."}
+{"id": 474, "en": "afternoon; p.m."}
+{"id": 475, "en": "shopping street; shopping district"}
+{"id": 476, "en": "question; problem"}
+{"id": 477, "en": "evening; dusk"}
+{"id": 478, "en": "many; much"}
+{"id": 479, "en": "child; kid"}
+{"id": 480, "en": "cheap; inexpensive"}
+{"id": 481, "en": "rent (housing)"}
+{"id": 482, "en": "weekday; working day"}
+{"id": 483, "en": "lesson; class"}
+{"id": 484, "en": "cooking; cuisine; dish"}
+{"id": 485, "en": "travel; trip"}
+{"id": 486, "en": "early"}
+{"id": 487, "en": "movie theater; cinema"}
+{"id": 488, "en": "surely; certainly"}
+{"id": 489, "en": "daytime; noon"}
+{"id": 490, "en": "daytime; during the day"}
+{"id": 491, "en": "time; when; occasion"}
+{"id": 492, "en": "dark; dim"}
+{"id": 493, "en": "perfect score; flawless"}
+{"id": 494, "en": "narrow; small; cramped"}
+{"id": 495, "en": "promise; appointment"}
+{"id": 496, "en": "enough; sufficient; fine"}
+{"id": 497, "en": "enviable"}
+{"id": 498, "en": "height; stature; back"}
+{"id": 499, "en": "color; coloring"}
+{"id": 500, "en": "complex; complicated"}
+{"id": 501, "en": "lively; bustling; noisy"}
+{"id": 502, "en": "very late"}
+{"id": 503, "en": "sports; exercise"}
+{"id": 504, "en": "meal; dining (also: Tokyo Skytree, the freestanding broadcasting tower)"}
+{"id": 505, "en": "drink; beverage"}
+{"id": 506, "en": "attractive; charming"}
+{"id": 507, "en": "how; in what way; how about"}
+{"id": 508, "en": "the most; -est"}
+{"id": 509, "en": "money"}
+{"id": 510, "en": "about; approximately; around"}
+{"id": 511, "en": "just now; a moment ago"}
+{"id": 512, "en": "much (more); all the way; by far"}
+{"id": 513, "en": "how much; how many"}
+{"id": 514, "en": "there is not; to not have"}
+{"id": 515, "en": "look; see; here (you are)"}
+{"id": 516, "en": "more; even more"}
+{"id": 517, "en": "thing; object"}
+{"id": 518, "en": "Windows (operating system)"}
+{"id": 519, "en": "camera"}
+{"id": 520, "en": "kilo- (kilogram; kilometer)"}
+{"id": 521, "en": "gray"}
+{"id": 522, "en": "box; case"}
+{"id": 523, "en": "storage; memory (computer)"}
+{"id": 524, "en": "suit"}
+{"id": 525, "en": "suitcase; trunk"}
+{"id": 526, "en": "Sony (Japanese manufacturer)"}
+{"id": 527, "en": "bus"}
+{"id": 528, "en": "battery"}
+{"id": 529, "en": "frying pan"}
+{"id": 530, "en": "Apple (US tech company)"}
+{"id": 531, "en": "memory; RAM"}
+{"id": 532, "en": "monitor; display"}
+{"id": 533, "en": "sturdy; solid; durable"}
+{"id": 534, "en": "Chinese food; Chinese cuisine"}
+{"id": 535, "en": "what number; which one in order"}
+{"id": 536, "en": "price"}
+{"id": 537, "en": "same; identical"}
+{"id": 538, "en": "outside; outdoors"}
+{"id": 539, "en": "big; large; huge"}
+{"id": 540, "en": "size"}
+{"id": 541, "en": "important; precious; valuable"}
+{"id": 542, "en": "capacity; load"}
+{"id": 543, "en": "elementary school"}
+{"id": 544, "en": "a little; slightly"}
+{"id": 545, "en": "few; little (also: working adult, as opposed to a student)"}
+{"id": 546, "en": "spacious; wide"}
+{"id": 547, "en": "busy"}
+{"id": 548, "en": "performance; specs"}
+{"id": 549, "en": "spring (season)"}
+{"id": 550, "en": "free time; leisure"}
+{"id": 551, "en": "latest model (model = 型号)"}
+{"id": 552, "en": "the latest model"}
+{"id": 553, "en": "to want"}
+{"id": 554, "en": "meter"}
+{"id": 555, "en": "centimeter"}
+{"id": 556, "en": "environment; surroundings"}
+{"id": 557, "en": "town; city; street"}
+{"id": 558, "en": "white"}
+{"id": 559, "en": "(a person who has entered society and started working)"}
+{"id": 560, "en": "commemoration; souvenir; memory"}
+{"id": 561, "en": "commemorative photo; group photo"}
+{"id": 562, "en": "light (weight)"}
+{"id": 563, "en": "weekend"}
+{"id": 564, "en": "heavy"}
+{"id": 565, "en": "weight"}
+{"id": 566, "en": "length"}
+{"id": 567, "en": "electronics store"}
+{"id": 568, "en": "quiet; calm; peaceful"}
+{"id": 569, "en": "as expected of; true to one's reputation"}
+{"id": 570, "en": "to be able to; can"}
+{"id": 571, "en": "often; frequently"}
+{"id": 572, "en": "to understand; understood"}
+{"id": 573, "en": "Captain Tsubasa (anime title)"}
+{"id": 574, "en": "class (school)"}
+{"id": 575, "en": "soccer; football"}
+{"id": 576, "en": "sports; athletics"}
+{"id": 577, "en": "slam dunk; Slam Dunk (anime title)"}
+{"id": 578, "en": "tennis"}
+{"id": 579, "en": "television; TV"}
+{"id": 580, "en": "basketball"}
+{"id": 581, "en": "three stars; Samsung"}
+{"id": 582, "en": "cancellation; suspension"}
+{"id": 583, "en": "one's hometown; place of origin"}
+{"id": 584, "en": "going out; outing"}
+{"id": 585, "en": "favorite; most-loved"}
+{"id": 586, "en": "to dislike; to hate"}
+{"id": 587, "en": "study; learning"}
+{"id": 588, "en": "actually; to tell the truth"}
+{"id": 589, "en": "sushi"}
+{"id": 590, "en": "good at; one's forte"}
+{"id": 591, "en": "year-end party; bōnenkai"}
+{"id": 592, "en": "nearby; beside; close to"}
+{"id": 593, "en": "a place name in southern Kanagawa Prefecture"}
+{"id": 594, "en": "manga; comics"}
+{"id": 595, "en": "prince"}
+{"id": 596, "en": "prefecture"}
+{"id": 597, "en": "Kanagawa Prefecture"}
+{"id": 598, "en": "stage (theater)"}
+{"id": 599, "en": "bad at; not good at"}
+{"id": 600, "en": "translation; interpreting"}
+{"id": 601, "en": "speech; speaking; talking"}
+{"id": 602, "en": "spicy; hot"}
+{"id": 603, "en": "fast; quick; early"}
+{"id": 604, "en": "sports day; athletic meet"}
+{"id": 605, "en": "sound; voice"}
+{"id": 606, "en": "strange; odd; funny-looking"}
+{"id": 607, "en": "I'll borrow it (humble)"}
+{"id": 608, "en": "rice; meal"}
+{"id": 609, "en": "soon; almost; gradually"}
+{"id": 610, "en": "takoyaki (octopus balls)"}
+{"id": 611, "en": "still; yet; already"}
+{"id": 612, "en": "dangerous; bad (situation)"}
+{"id": 613, "en": "part-time job; arubaito"}
+{"id": 614, "en": "orange (fruit)"}
+{"id": 615, "en": "orange (color)"}
+{"id": 616, "en": "coat; overcoat"}
+{"id": 617, "en": "test; quiz"}
+{"id": 618, "en": "table; desk"}
+{"id": 619, "en": "department store"}
+{"id": 620, "en": "toilet; restroom"}
+{"id": 621, "en": "training; drill"}
+{"id": 622, "en": "necktie"}
+{"id": 623, "en": "pizza"}
+{"id": 624, "en": "mailbox; postbox"}
+{"id": 625, "en": "one (set/item); a set"}
+{"id": 626, "en": "this month"}
+{"id": 627, "en": "this morning"}
+{"id": 628, "en": "how many times; how often"}
+{"id": 629, "en": "umbrella"}
+{"id": 630, "en": "museum"}
+{"id": 631, "en": "opposite side; across"}
+{"id": 632, "en": "summer vacation"}
+{"id": 633, "en": "evening; night"}
+{"id": 634, "en": "Osaka"}
+{"id": 635, "en": "return; going back"}
+{"id": 636, "en": "strong; powerful"}
+{"id": 637, "en": "lost item; lost property"}
+{"id": 638, "en": "place; location"}
+{"id": 639, "en": "to search; to look for"}
+{"id": 640, "en": "time; hour; o'clock"}
+{"id": 641, "en": "famous"}
+{"id": 642, "en": "morning"}
+{"id": 643, "en": "chair; seat"}
+{"id": 644, "en": "every morning"}
+{"id": 645, "en": "fire; conflagration (also: slowly; gradually)"}
+{"id": 646, "en": "entrance; entryway (genkan)"}
+{"id": 647, "en": "reason; cause"}
+{"id": 648, "en": "announcement; presentation; release"}
+{"id": 649, "en": "right away; at once; immediately"}
+{"id": 650, "en": "research institute"}
+{"id": 651, "en": "box"}
+{"id": 652, "en": "long and narrow; slender"}
+{"id": 653, "en": "I'm off; I'll go now (said when leaving home)"}
+{"id": 654, "en": "have a good day; take care (reply to いってきます)"}
+{"id": 655, "en": "to buy; to purchase"}
+{"id": 656, "en": "question; inquiry"}
+{"id": 657, "en": "far; distant"}
+{"id": 658, "en": "club activities"}
+{"id": 659, "en": "wind"}
+{"id": 660, "en": "about; around (time)"}
+{"id": 661, "en": "half past (the hour)"}
+{"id": 662, "en": "... hours (duration)"}
+{"id": 663, "en": "often; always; usually"}
+{"id": 664, "en": "considerable; quite; fairly"}
+{"id": 665, "en": "a lot; many; much"}
+{"id": 666, "en": "no good; not allowed; impossible"}
+{"id": 667, "en": "must not; cannot; not permitted"}
+{"id": 668, "en": "for now; for the time being"}
+{"id": 669, "en": "to become; to turn into"}
+{"id": 670, "en": "how to make; recipe; way of doing"}
+{"id": 671, "en": "to give; to do (for someone)"}
+{"id": 672, "en": "to understand; to know"}
+{"id": 673, "en": "incident; event; affair"}
+{"id": 674, "en": "online"}
+{"id": 675, "en": "game"}
+{"id": 676, "en": "page"}
+{"id": 677, "en": "this weekend"}
+{"id": 678, "en": "to meet (up); meeting"}
+{"id": 679, "en": "physical condition; health"}
+{"id": 680, "en": "great; grand"}
+{"id": 681, "en": "work; labor"}
+{"id": 682, "en": "all; everything"}
+{"id": 683, "en": "winter vacation"}
+{"id": 684, "en": "going out; leaving home"}
+{"id": 685, "en": "efficiency"}
+{"id": 686, "en": "efficient; not wasteful"}
+{"id": 687, "en": "to study; study"}
+{"id": 688, "en": "diligence; hard work"}
+{"id": 689, "en": "old; ancient (also: forcibly; despite difficulty)"}
+{"id": 690, "en": "to bloom; to open (flowers)"}
+{"id": 691, "en": "considerably; very; quite"}
+{"id": 692, "en": "safety; secure"}
+{"id": 693, "en": "to sleep; sleeping"}
+{"id": 694, "en": "lack of sleep; sleep deprivation"}
+{"id": 695, "en": "to forget"}
+{"id": 696, "en": "promotion; advancement"}
+{"id": 697, "en": "lunch break"}
+{"id": 698, "en": "to come"}
+{"id": 699, "en": "every day"}
+{"id": 700, "en": "every month; monthly"}
+{"id": 701, "en": "sleepy; drowsy"}
+{"id": 702, "en": "green; the color green"}
+{"id": 703, "en": "beauty; beauty care"}
+{"id": 704, "en": "plan; project"}
+{"id": 705, "en": "match; game; competition"}
+{"id": 706, "en": "lecture; course"}
+{"id": 707, "en": "shopping"}
+{"id": 708, "en": "to get up; getting out of bed"}
+{"id": 709, "en": "near; close; intimate"}
+{"id": 710, "en": "to play; to have fun"}
+{"id": 711, "en": "different; difference"}
+{"id": 712, "en": "ingredients; foodstuffs"}
+{"id": 713, "en": "food expenses; cost of meals"}
+{"id": 714, "en": "in front of the station; near the station"}
+{"id": 715, "en": "to cost (time, money, effort)"}
+{"id": 716, "en": "to make (a phone call); on (something)"}
+{"id": 717, "en": "first of all; to begin with"}
+{"id": 718, "en": "iced coffee"}
+{"id": 719, "en": "anime; animation (abbrev.)"}
+{"id": 720, "en": "internet"}
+{"id": 721, "en": "globalization"}
+{"id": 722, "en": "summer school"}
+{"id": 723, "en": "Starbucks (abbrev.)"}
+{"id": 724, "en": "data"}
+{"id": 725, "en": "email; mail"}
+{"id": 726, "en": "Ito (surname)"}
+{"id": 727, "en": "to make; to create"}
+{"id": 728, "en": "to be saved; to be relieved"}
+{"id": 729, "en": "cooperation; collaboration"}
+{"id": 730, "en": "word; vocabulary"}
+{"id": 731, "en": "manuscript; draft"}
+{"id": 732, "en": "to take; to pick up"}
+{"id": 733, "en": "oral exam"}
+{"id": 734, "en": "foreign language"}
+{"id": 735, "en": "housework; chores"}
+{"id": 736, "en": "theme; topic; title"}
+{"id": 737, "en": "class discussion; seminar"}
+{"id": 738, "en": "letter (mail)"}
+{"id": 739, "en": "to hold; to carry"}
+{"id": 740, "en": "to photograph; to shoot (video)"}
+{"id": 741, "en": "culture"}
+{"id": 742, "en": "day; sun"}
+{"id": 743, "en": "to write; to compose"}
+{"id": 744, "en": "last; final; in the end"}
+{"id": 745, "en": "book; counter for long objects"}
+{"id": 746, "en": "public performance; official show"}
+{"id": 747, "en": "competition; tournament"}
+{"id": 748, "en": "to wash"}
+{"id": 749, "en": "preparation; getting ready"}
+{"id": 750, "en": "kanji; Chinese characters"}
+{"id": 751, "en": "to get sick; illness"}
+{"id": 752, "en": "research; study"}
+{"id": 753, "en": "written exam"}
+{"id": 754, "en": "chopsticks"}
+{"id": 755, "en": "to think"}
+{"id": 756, "en": "to listen; to hear; to ask"}
+{"id": 757, "en": "luggage; baggage; freight"}
+{"id": 758, "en": "to see; to watch"}
+{"id": 759, "en": "answer; solution"}
+{"id": 760, "en": "exam preparation"}
+{"id": 761, "en": "to say; to speak"}
+{"id": 762, "en": "reading (pronunciation); way of reading"}
+{"id": 763, "en": "survey; investigation"}
+{"id": 764, "en": "paper; thesis"}
+{"id": 765, "en": "materials; documents; data"}
+{"id": 766, "en": "to send; to mail"}
+{"id": 767, "en": "selection exam; entrance screening"}
+{"id": 768, "en": "to be in time; to make it"}
+{"id": 769, "en": "to gather; to convene"}
+{"id": 770, "en": "train; electric train"}
+{"id": 771, "en": "to eat"}
+{"id": 772, "en": "to drink"}
+{"id": 773, "en": "plural suffix for people; ...-tachi"}
+{"id": 774, "en": "... (company); house of ..."}
+{"id": 775, "en": "(the ...-th) lesson/class period"}
+{"id": 776, "en": "well now; by the way (changing the topic)"}
+{"id": 777, "en": "as expected; after all; sure enough"}
+{"id": 778, "en": "ice; ice cream (abbrev. of アイスクリーム)"}
+{"id": 779, "en": "goods; merchandise; merch"}
+{"id": 780, "en": "concert; live music"}
+{"id": 781, "en": "signature; autograph"}
+{"id": 782, "en": "summer sale"}
+{"id": 783, "en": "club; circle (school)"}
+{"id": 784, "en": "juice"}
+{"id": 785, "en": "Spider-Man"}
+{"id": 786, "en": "supermarket (abbrev. of スーパーマーケット)"}
+{"id": 787, "en": "discount; sale"}
+{"id": 788, "en": "towel"}
+{"id": 789, "en": "cigarette; tobacco"}
+{"id": 790, "en": "slides; slide deck"}
+{"id": 791, "en": "Ueno (place name)"}
+{"id": 792, "en": "Ueno Park"}
+{"id": 793, "en": "companion; friend; buddy"}
+{"id": 794, "en": "company; enterprise"}
+{"id": 795, "en": "body"}
+{"id": 796, "en": "gymnasium; gym"}
+{"id": 797, "en": "how many volumes/books"}
+{"id": 798, "en": "park"}
+{"id": 799, "en": "to win; victory"}
+{"id": 800, "en": "to participate; to join"}
+{"id": 801, "en": "to begin; to start"}
+{"id": 802, "en": "home; house; my place"}
+{"id": 803, "en": "delivery; to be delivered"}
+{"id": 804, "en": "to be elected; to win (a prize/lottery)"}
+{"id": 805, "en": "patient"}
+{"id": 806, "en": "meaning; sense"}
+{"id": 807, "en": "walk; stroll"}
+{"id": 808, "en": "Shinkansen; bullet train"}
+{"id": 809, "en": "Japanese company"}
+{"id": 810, "en": "end of term; final (exam period)"}
+{"id": 811, "en": "apple"}
+{"id": 812, "en": "to stop; to quit; to give up"}
+{"id": 813, "en": "to walk; walking"}
+{"id": 814, "en": "overtime work (also: laundry to wash)"}
+{"id": 815, "en": "overseas; abroad"}
+{"id": 816, "en": "application; to apply"}
+{"id": 817, "en": "hospital"}
+{"id": 818, "en": "painful; sore"}
+{"id": 819, "en": "cherry-blossom viewing; hanami"}
+{"id": 820, "en": "visit; to visit"}
+{"id": 821, "en": "presentation meeting; talk; seminar"}
+{"id": 822, "en": "argument; debate; contention"}
+{"id": 823, "en": "music"}
+{"id": 824, "en": "head; mind (atama ga ii = smart)"}
+{"id": 825, "en": "... countries"}
+{"id": 826, "en": "inside; within"}
+{"id": 827, "en": "how much; to what extent"}
+{"id": 828, "en": "other; another"}
+{"id": 829, "en": "almost; nearly"}
+{"id": 830, "en": "Australia"}
+{"id": 831, "en": "flip phone; feature phone (garakei)"}
+{"id": 832, "en": "Golden Week"}
+{"id": 833, "en": "Taobao"}
+{"id": 834, "en": "flight"}
+{"id": 835, "en": "Uniqlo"}
+{"id": 836, "en": "lifestyle; way of life"}
+{"id": 837, "en": "preview (of lessons); preparation"}
+{"id": 838, "en": "use; utilization; to use"}
+{"id": 839, "en": "flight; scheduled flight"}
+{"id": 840, "en": "attendance; to attend"}
+{"id": 841, "en": "arrival; to arrive"}
+{"id": 842, "en": "southern part; the south"}
+{"id": 843, "en": "possibility; likelihood"}
+{"id": 844, "en": "typhoon"}
+{"id": 845, "en": "country; nation"}
+{"id": 846, "en": "foreign country"}
+{"id": 847, "en": "season"}
+{"id": 848, "en": "studies; schoolwork"}
+{"id": 849, "en": "influence; effect; impact"}
+{"id": 850, "en": "review (of lessons); revision"}
+{"id": 851, "en": "all night; staying up all night"}
+{"id": 852, "en": "information"}
+{"id": 853, "en": "sometimes; occasionally"}
+{"id": 854, "en": "to clear up; to become sunny"}
+{"id": 855, "en": "cloudy; overcast"}
+{"id": 856, "en": "clothes; clothing"}
+{"id": 857, "en": "cup; glass; counter for cups"}
+{"id": 858, "en": "questionnaire; survey form"}
+{"id": 859, "en": "late at night; midnight"}
+{"id": 860, "en": "decrease; reduction"}
+{"id": 861, "en": "notice; notification"}
+{"id": 862, "en": "network service (SNS)"}
+{"id": 863, "en": "society"}
+{"id": 864, "en": "terminal; device"}
+{"id": 865, "en": "management; administration; jurisdiction"}
+{"id": 866, "en": "about; approximately"}
+{"id": 867, "en": "the next day; the following day"}
+{"id": 868, "en": "tourist; visitor"}
+{"id": 869, "en": "consumption; expenditure"}
+{"id": 870, "en": "hobby; interest"}
+{"id": 871, "en": "lateness; delay; to be late"}
+{"id": 872, "en": "central area (of Tokyo); city center"}
+{"id": 873, "en": "Kantō region"}
+{"id": 874, "en": "browsing; viewing; SNS (social networking service)"}
+{"id": 875, "en": "group meal; dining together"}
+{"id": 876, "en": "Hong Kong"}
+{"id": 877, "en": "to receive (humble); to accept"}
+{"id": 878, "en": "going well; delicious (dialect)"}
+{"id": 879, "en": "the day before yesterday"}
+{"id": 880, "en": "congratulations; auspicious"}
+{"id": 881, "en": "New Year's money gift; otoshidama"}
+{"id": 882, "en": "thanks; gratitude; return gift"}
+{"id": 883, "en": "to give (to me/us)"}
+{"id": 884, "en": "sorry; excuse me"}
+{"id": 885, "en": "to treat (someone); to host; hospitality"}
+{"id": 886, "en": "by the way; speaking of which; that reminds me"}
+{"id": 887, "en": "exactly; just right; precisely"}
+{"id": 888, "en": "not at all; don't mention it"}
+{"id": 889, "en": "to receive; to get"}
+{"id": 890, "en": "advice; suggestion"}
+{"id": 891, "en": "keychain; key ring"}
+{"id": 892, "en": "chocolate"}
+{"id": 893, "en": "necklace"}
+{"id": 894, "en": "handkerchief"}
+{"id": 895, "en": "Valentine's Day"}
+{"id": 896, "en": "choosing a gift; gift selection"}
+{"id": 897, "en": "pen"}
+{"id": 898, "en": "ramen"}
+{"id": 899, "en": "roughly; generally; first of all; for now"}
+{"id": 900, "en": "one day"}
+{"id": 901, "en": "one color; single color"}
+{"id": 902, "en": "to give"}
+{"id": 903, "en": "coat; outerwear"}
+{"id": 904, "en": "reservation; prior arrangement; schedule"}
+{"id": 905, "en": "ticket; admission ticket"}
+{"id": 906, "en": "reference; consultation"}
+{"id": 907, "en": "colleague; coworker"}
+{"id": 908, "en": "many people; a crowd"}
+{"id": 909, "en": "woman; female"}
+{"id": 910, "en": "house; home"}
+{"id": 911, "en": "counter for songs"}
+{"id": 912, "en": "New Year; January"}
+{"id": 913, "en": "water"}
+{"id": 914, "en": "man; male"}
+{"id": 915, "en": "statement; remark; speech"}
+{"id": 916, "en": "short"}
+{"id": 917, "en": "superb; exquisite; wonderful"}
+{"id": 918, "en": "to listen"}
+{"id": 919, "en": "wristwatch"}
+{"id": 920, "en": "mandarin orange"}
+{"id": 921, "en": "to show; to let someone see"}
+{"id": 922, "en": "counter for stories"}
+{"id": 923, "en": "period; time; season"}
+{"id": 924, "en": "to fall; to come down (rain/snow)"}
+{"id": 925, "en": "decoration; ornament"}
+{"id": 926, "en": "going to ...; bound for ..."}
+{"id": 927, "en": "here and there; all over"}
+{"id": 928, "en": "alcohol; sake"}
+{"id": 929, "en": "here; this way"}
+{"id": 930, "en": "therefore; so; that's why"}
+{"id": 931, "en": "plan to; intend to"}
+{"id": 932, "en": "again; also; still more"}
+{"id": 933, "en": "hey; hello (calling out)"}
+{"id": 934, "en": "internship; practical training"}
+{"id": 935, "en": "summer camp"}
+{"id": 936, "en": "shower"}
+{"id": 937, "en": "studio"}
+{"id": 938, "en": "dance; dancing"}
+{"id": 939, "en": "Nobel Prize"}
+{"id": 940, "en": "project"}
+{"id": 941, "en": "pool; swimming pool"}
+{"id": 942, "en": "boss; superior"}
+{"id": 943, "en": "during; while; among; in ..."}
+{"id": 944, "en": "social gathering; networking event"}
+{"id": 945, "en": "this week"}
+{"id": 946, "en": "address"}
+{"id": 947, "en": "work (of art); piece; production"}
+{"id": 948, "en": "fulfillment; richness; to be fulfilling"}
+{"id": 949, "en": "winning a prize; award-winning"}
+{"id": 950, "en": "to call; to name; to address as"}
+{"id": 951, "en": "business; sales; operation"}
+{"id": 952, "en": "to sell; sales"}
+{"id": 953, "en": "foreigner"}
+{"id": 954, "en": "the British Museum"}
+{"id": 955, "en": "returning to one's home country"}
+{"id": 956, "en": "to play (an instrument)"}
+{"id": 957, "en": "to teach; to tell"}
+{"id": 958, "en": "dinner; supper"}
+{"id": 959, "en": "relaxed; easy; comfortable"}
+{"id": 960, "en": "to enjoy"}
+{"id": 961, "en": "tooth; teeth"}
+{"id": 962, "en": "death; to die"}
+{"id": 963, "en": "decision; to decide"}
+{"id": 964, "en": "to pour over; to shower (bathe)"}
+{"id": 965, "en": "preparation; to prepare"}
+{"id": 966, "en": "to polish; to brush (teeth)"}
+{"id": 967, "en": "we; us"}
+{"id": 968, "en": "subject; course"}
+{"id": 969, "en": "to drop; to let fall"}
+{"id": 970, "en": "postcard"}
+{"id": 971, "en": "to be found; to be visible"}
+{"id": 972, "en": "study visit; field trip; observation"}
+{"id": 973, "en": "answer; reply; response"}
+{"id": 974, "en": "way of spending (time)"}
+{"id": 975, "en": "to make a mistake; to get wrong"}
+{"id": 976, "en": "face (kao o miseru = to show up; to make an appearance)"}
+{"id": 977, "en": "bathwater; bath"}
+{"id": 978, "en": "\"Yes, I'm married.\" (Example 2: お兄さん・結婚する (×) → A: Is your brother married? B: No, he isn't married yet. Practice items: (1) Tanaka - live in Tokyo (◯); (2) Li - borrow a pen from the teacher (×); (3) Mother - usually use a PC (○); (4) Outside - clear up (×). Example 3: homework - do (◯))"}
+{"id": 979, "en": "\"Have you done your homework yet? B: Yes, I have.\" / Example 2 (×): \"Have you done your homework yet? B: No, not yet.\" (1) choose a present for my little brother (×); (2) receive chocolate (○); (3) wash the socks (×); (4) wear a suit (○). Oral practice."}
+{"id": 980, "en": "to want; to desire; to wish for"}
+{"id": 981, "en": "A: Is your brother studying abroad now too? B: No. He works at an American IT company. He used to live in New York, but he got married and moved to San Francisco. A: Oh, is that so? (Practice: (1) live in Tokyo / study at Kyoto University / graduate / become a grad student at the University of Tokyo; (2) stay at my home / work in China / change jobs / go back to my parents' home; (3) do job hunting / want to become an English teacher / think about many things / now look for a job at a bank)"}
+{"id": 982, "en": "glass (material)"}
+{"id": 983, "en": "siren; horn; alarm"}
+{"id": 984, "en": "San Francisco"}
+{"id": 985, "en": "chef (Western cuisine)"}
+{"id": 986, "en": "journalist; reporter; correspondent"}
+{"id": 987, "en": "New York"}
+{"id": 988, "en": "net; network"}
+{"id": 989, "en": "Paris"}
+{"id": 990, "en": "French cuisine (フランス = France)"}
+{"id": 991, "en": "marathon"}
+{"id": 992, "en": "desperately; with all one's might"}
+{"id": 993, "en": "to arrange; to line up; to display"}
+{"id": 994, "en": "Kyoto"}
+{"id": 995, "en": "to live; to reside; residence"}
+{"id": 996, "en": "training; apprenticeship; study"}
+{"id": 997, "en": "to break; to shatter; broken"}
+{"id": 998, "en": "to work (at); to be employed"}
+{"id": 999, "en": "cosmetics; makeup"}
+{"id": 1000, "en": "cosmetics company"}
+{"id": 1001, "en": "enough; sufficient"}
+{"id": 1002, "en": "graduation; to graduate"}
+{"id": 1003, "en": "word of mouth; reputation"}
+{"id": 1004, "en": "Nagoya"}
+{"id": 1005, "en": "report; to report"}
+{"id": 1006, "en": "sound; noise"}
+{"id": 1007, "en": "the actual item; goods in stock"}
+{"id": 1008, "en": "storefront; shop front"}
+{"id": 1009, "en": "moving (house); relocation"}
+{"id": 1010, "en": "hand (te ga denai = can't compete with; out of one's league)"}
+{"id": 1011, "en": "cleaning; sweeping"}
+{"id": 1012, "en": "era; period; age"}
+{"id": 1013, "en": "cloudy; gloomy; depressed"}
+{"id": 1014, "en": "every week; weekly"}
+{"id": 1015, "en": "to wash; washing"}
+{"id": 1016, "en": "fire truck; fire engine"}
+{"id": 1017, "en": "countryside; hometown"}
+{"id": 1018, "en": "signboard; billboard; sign"}
+{"id": 1019, "en": "to wear; to put on"}
+{"id": 1020, "en": "window"}
+{"id": 1021, "en": "marriage; to get married"}
+{"id": 1022, "en": "visible; can be seen"}
+{"id": 1023, "en": "Ginza"}
+{"id": 1024, "en": "limited; restriction; limitation"}
+{"id": 1025, "en": "socks; stockings"}
+{"id": 1026, "en": "bird; chicken"}
+{"id": 1027, "en": "used for ...; for the use of ..."}
+{"id": 1028, "en": "to put away; to tidy up"}
+{"id": 1029, "en": "whisky; whiskey"}
+{"id": 1030, "en": "cashier; service counter; reception"}
+{"id": 1031, "en": "lid; cover"}
+{"id": 1032, "en": "corner; nook"}
+{"id": 1033, "en": "seatbelt"}
+{"id": 1034, "en": "German (language)"}
+{"id": 1035, "en": "printing press; printer"}
+{"id": 1036, "en": "beauty salon; hair salon"}
+{"id": 1037, "en": "plastic bottle; PET bottle"}
+{"id": 1038, "en": "homepage; website"}
+{"id": 1039, "en": "entrance; entry"}
+{"id": 1040, "en": "input; to input"}
+{"id": 1041, "en": "fruit and vegetable shop; greengrocer"}
+{"id": 1042, "en": "printing; print"}
+{"id": 1043, "en": "right hand; right side"}
+{"id": 1044, "en": "each floor; all floors"}
+{"id": 1045, "en": "to suck; to smoke; to inhale"}
+{"id": 1046, "en": "map"}
+{"id": 1047, "en": "embassy"}
+{"id": 1048, "en": "little girl"}
+{"id": 1049, "en": "hiragana"}
+{"id": 1050, "en": "certainly; inevitably; without fail"}
+{"id": 1051, "en": "to take out; to bring out"}
+{"id": 1052, "en": "to bring in; to take into"}
+{"id": 1053, "en": "to bring (here)"}
+{"id": 1054, "en": "textbook"}
+{"id": 1055, "en": "newspaper"}
+{"id": 1056, "en": "search; retrieval; lookup"}
+{"id": 1057, "en": "used for searching"}
+{"id": 1058, "en": "to stop; to come to a halt"}
+{"id": 1059, "en": "mother"}
+{"id": 1060, "en": "dirty"}
+{"id": 1061, "en": "to turn off; to erase; to close"}
+{"id": 1062, "en": "safe and sound; without incident"}
+{"id": 1063, "en": "to climb; to go up; to board"}
+{"id": 1064, "en": "black tea"}
+{"id": 1065, "en": "to tighten; to fasten"}
+{"id": 1066, "en": "deadline; closing date"}
+{"id": 1067, "en": "to place; to put down"}
+{"id": 1068, "en": "to take off (clothes/shoes)"}
+{"id": 1069, "en": "freedom; free"}
+{"id": 1070, "en": "Germany"}
+{"id": 1071, "en": "invitation; to invite"}
+{"id": 1072, "en": "to lend; to loan out"}
+{"id": 1073, "en": "lending; loan"}
+{"id": 1074, "en": "to return; to give back"}
+{"id": 1075, "en": "to bring"}
+{"id": 1076, "en": "to distribute; to hand out"}
+{"id": 1077, "en": "to close; to shut"}
+{"id": 1078, "en": "to open; to leave open"}
+{"id": 1079, "en": "people concerned; those involved"}
+{"id": 1080, "en": "shoes"}
+{"id": 1081, "en": "food; meal"}
+{"id": 1082, "en": "inside the building/facility"}
+{"id": 1083, "en": "(bicycle) parking area"}
+{"id": 1084, "en": "welcome"}
+{"id": 1085, "en": "hey; come on (urging/inviting)"}
+{"id": 1086, "en": "omurice (omelet rice)"}
+{"id": 1087, "en": "latte"}
+{"id": 1088, "en": "kitchen"}
+{"id": 1089, "en": "guitar"}
+{"id": 1090, "en": "ticket; coupon"}
+{"id": 1091, "en": "teamwork"}
+{"id": 1092, "en": "hotel"}
+{"id": 1093, "en": "lemon"}
+{"id": 1094, "en": "polite; courteous; formal"}
+{"id": 1095, "en": "to line up; queue; row"}
+{"id": 1096, "en": "now; at this moment"}
+{"id": 1097, "en": "relationship; connection (between people)"}
+{"id": 1098, "en": "to start making; to begin writing"}
+{"id": 1099, "en": "filling; stuffing"}
+{"id": 1100, "en": "to go out; to leave; to come out"}
+{"id": 1101, "en": "to cut"}
+{"id": 1102, "en": "beginning; start"}
+{"id": 1103, "en": "to chop; to carve; to engrave"}
+{"id": 1104, "en": "smell; scent; odor"}
+{"id": 1105, "en": "package; parcel; wrapping"}
+{"id": 1106, "en": "half a year; six months"}
+{"id": 1107, "en": "to break; to collapse; bad"}
+{"id": 1108, "en": "left hand; left side"}
+{"id": 1109, "en": "to pull; to drag"}
+{"id": 1110, "en": "to hit (the mark); to win"}
+{"id": 1111, "en": "worry; concern; to worry about"}
+{"id": 1112, "en": "to sign up; to apply; registration"}
+{"id": 1113, "en": "injury; wound; to get hurt"}
+{"id": 1114, "en": "clock; watch"}
+{"id": 1115, "en": "today"}
+{"id": 1116, "en": "bridge"}
+{"id": 1117, "en": "to remain; to be left over"}
+{"id": 1118, "en": "to stir; to mix"}
+{"id": 1119, "en": "tired; fatigue"}
+{"id": 1120, "en": "skin; peel; rind"}
+{"id": 1121, "en": "kimono"}
+{"id": 1122, "en": "small; fine; minute"}
+{"id": 1123, "en": "line; queue; procession"}
+{"id": 1124, "en": "to place on; to serve; to set out"}
+{"id": 1125, "en": "sour; acidic"}
+{"id": 1126, "en": "fishing"}
+{"id": 1127, "en": "one meal"}
+{"id": 1128, "en": "office lady; female office worker"}
+{"id": 1129, "en": "police officer; policeman"}
+{"id": 1130, "en": "young lady; miss"}
+{"id": 1131, "en": "rich person; the wealthy"}
+{"id": 1132, "en": "George is in the classroom. (3) Li heard this story. (4) I usually watch comedy movies. Example 6: Chinese / Japanese / use kanji → Not only Chinese people but also Japanese people use kanji. (1) weekday / holiday / open (the facility); (2) office lady / student / wear makeup; (3) children / adults / play games."}
+{"id": 1133, "en": "\"Understood.\" → I had Suzuki look up economic data on environmental issues for me. / Suzuki looked up the economic data for me. (1) Me: Please take a photo of me together with Tokyo Skytree with this camera. Aunt: Of course. (2) Me: Excuse me, please look over my English paper. George: Got it. (3) Me: Excuse me, please lend me a pen. Li: Sure, here you go. (4) Me: Excuse me, please tell me how to get to Tokyo Station. Officer: Please walk straight down this road. Oral practice."}
+{"id": 1134, "en": "well then; in that case; if so"}
+{"id": 1135, "en": "Example A: Um, could I ask you to look up the economic data? I think that would be more efficient. B: Sure, that's fine. (1) carry that bag / it is light; (2) teach a math problem / quick to understand; (3) guide around Beijing / it is safe. Example A: Why did you go out of your way to buy a camera? B: Actually, my little brother wants one. He works as a journalist in a university club. (1) buy a dictionary / my friend wants one / study Japanese; (2) go to Nagoya / my sister lives there / work in Nagoya; (3) cleaning the room / my boss wants to come to my house / the department manager of the company."}
+{"id": 1136, "en": "Example A: I'd like to write my research report on environmental issues — what do you think? B: Sounds good. But we don't have much time, so shall we ask C to help? A: Let's do that. (1) want to go to the cinema together the day after tomorrow / it will rain / go by taxi; (2) want to talk with a Chinese company / none of us understands Chinese / bring Zhang along; (3) the report theme — Japanese culture is interesting / there are few books in the library / first search on the internet. Example A: I moved to Roppongi last month. B: Oh, nice! Can you see Mt. Fuji? A: I can see it on clear days, but not on rainy days. (1) my parents' home in the countryside / can hear birds / morning / daytime; (2) near the university / can make it to class / second period / first period; (3) Yokohama / run in the park / once a week / usually."}
+{"id": 1137, "en": "Example: Me: Please research economic data on environmental issues."}
+{"id": 1138, "en": "karaoke"}
+{"id": 1139, "en": "group; team; organization"}
+{"id": 1140, "en": "grouping; dividing into groups"}
+{"id": 1141, "en": "comedy"}
+{"id": 1142, "en": "trash; dust; garbage"}
+{"id": 1143, "en": "salad"}
+{"id": 1144, "en": "Studio Ghibli"}
+{"id": 1145, "en": "taxi"}
+{"id": 1146, "en": "ballpoint pen"}
+{"id": 1147, "en": "One Piece (manga/anime)"}
+{"id": 1148, "en": "day off; rest day; holiday"}
+{"id": 1149, "en": "to convey; to pass on (a message)"}
+{"id": 1150, "en": "work; operation; to operate"}
+{"id": 1151, "en": "for example; such as"}
+{"id": 1152, "en": "originally; formerly; before"}
+{"id": 1153, "en": "before; earlier; previously; first"}
+{"id": 1154, "en": "reuse; recycling; second use"}
+{"id": 1155, "en": "processing plant (also: economic aspects; the economics page of a newspaper)"}
+{"id": 1156, "en": "makeup; cosmetics"}
+{"id": 1157, "en": "joy; delight; happiness"}
+{"id": 1158, "en": "workplace; place of employment"}
+{"id": 1159, "en": "to think; to believe; to consider"}
+{"id": 1160, "en": "to return; to send back; to take back"}
+{"id": 1161, "en": "mathematics; math"}
+{"id": 1162, "en": "immediately; at once; right away"}
+{"id": 1163, "en": "best; supreme; the highest"}
+{"id": 1164, "en": "Tokyo Station"}
+{"id": 1165, "en": "to show around; to guide"}
+{"id": 1166, "en": "to mind; to care; to look after"}
+{"id": 1167, "en": "appearance; state; situation"}
+{"id": 1168, "en": "katakana"}
+{"id": 1169, "en": "development; expansion; to develop"}
+{"id": 1170, "en": "of course; naturally; needless to say"}
+{"id": 1171, "en": "salary; wages"}
+{"id": 1172, "en": "practice; exercise; training"}
+{"id": 1173, "en": "to raise; to nurture; to cultivate"}
+{"id": 1174, "en": "interest; pleasure; enjoyment"}
+{"id": 1175, "en": "baseball"}
+{"id": 1176, "en": "opening (of a facility); open to the public"}
+{"id": 1177, "en": "relevance; relatedness"}
+{"id": 1178, "en": "high-class item; luxury goods"}
+{"id": 1179, "en": "three languages; trilingual"}
+{"id": 1180, "en": "meal; counter for meals"}
+{"id": 1181, "en": "steak"}
+{"id": 1182, "en": "yoga"}
+{"id": 1183, "en": "lunch"}
+{"id": 1184, "en": "roast beef"}
+{"id": 1185, "en": "number of people"}
+{"id": 1186, "en": "venue; meeting place"}
+{"id": 1187, "en": "parting; separation; breakup"}
+{"id": 1188, "en": "famous thing (or person)"}
+{"id": 1189, "en": "just now; a little while ago"}
+{"id": 1190, "en": "domestically raised (Japanese) cattle"}
+{"id": 1191, "en": "sold out; out of stock"}
+{"id": 1192, "en": "mostly; for the most part; largely"}
+{"id": 1193, "en": "kitten"}
+{"id": 1194, "en": "completely; entirely; wholly"}
+{"id": 1195, "en": "market"}
+{"id": 1196, "en": "store manager; shop manager"}
+{"id": 1197, "en": "fresh; freshness"}
+{"id": 1198, "en": "lunch; midday meal"}
+{"id": 1199, "en": "to finish; to manage; to handle"}
+{"id": 1200, "en": "fever; heat; thermal energy"}
+{"id": 1201, "en": "special"}
+{"id": 1202, "en": "rare; uncommon"}
+{"id": 1203, "en": "birth; to be born; to come into being"}
+{"id": 1204, "en": "payday"}
+{"id": 1205, "en": "to reconsider; to review; to rethink"}
+{"id": 1206, "en": "sale; selling; to sell"}
+{"id": 1207, "en": "vicinity; neighborhood; nearby"}
+{"id": 1208, "en": "discharge from hospital"}
+{"id": 1209, "en": "distribution; allocation; to hand out"}
+{"id": 1210, "en": "limited edition"}
+{"id": 1211, "en": "concentration; focus; centralization"}
+{"id": 1212, "en": "interview"}
+{"id": 1213, "en": "airplane"}
+{"id": 1214, "en": "fish"}
+{"id": 1215, "en": "all ...; the whole ..."}
+{"id": 1216, "en": "age range; age bracket"}
+{"id": 1217, "en": "plush toy; stuffed animal (also: relationship; connection)"}
+{"id": 1218, "en": "surprise; to be surprised"}
+{"id": 1219, "en": "artist"}
+{"id": 1220, "en": "character bento; kyaraben"}
+{"id": 1221, "en": "simple; plain; uncomplicated"}
+{"id": 1222, "en": "balance"}
+{"id": 1223, "en": "professional; expert (person)"}
+{"id": 1224, "en": "Poland"}
+{"id": 1225, "en": "unique; distinctive"}
+{"id": 1226, "en": "lunch box; bento box"}
+{"id": 1227, "en": "one part; a portion"}
+{"id": 1228, "en": "world"}
+{"id": 1229, "en": "worldwide; global"}
+{"id": 1230, "en": "leave of absence from school"}
+{"id": 1231, "en": "trust; reliance; confidence"}
+{"id": 1232, "en": "whole; entirety; all"}
+{"id": 1233, "en": "lingua franca; common language"}
+{"id": 1234, "en": "tourist attraction; scenic spot"}
+{"id": 1235, "en": "seasoning; flavoring"}
+{"id": 1236, "en": "Japanese cuisine; Japanese food"}
+{"id": 1237, "en": "likes and dislikes; taste"}
+{"id": 1238, "en": "annual traditional festivals and events"}
+{"id": 1239, "en": "to get angry; anger"}
+{"id": 1240, "en": "lover; sweetheart; partner"}
+{"id": 1241, "en": "to let go; to release one's hand"}
+{"id": 1242, "en": "long ago; already; since before"}
+{"id": 1243, "en": "nutrition"}
+{"id": 1244, "en": "undoubtedly; certainly; indeed"}
+{"id": 1245, "en": "clothes; laundry items"}
+{"id": 1246, "en": "backlog; accumulation; to pile up"}
+{"id": 1247, "en": "(not) ... (negation marker)"}
+{"id": 1248, "en": "unique to; characteristic of; peculiar to"}
+{"id": 1249, "en": "modern people; contemporary people"}
+{"id": 1250, "en": "(TV/radio) program; show"}
+{"id": 1251, "en": "plating; presentation (of food)"}
+{"id": 1252, "en": "kind; type; variety"}
+{"id": 1253, "en": "picture book"}
+{"id": 1254, "en": "continuation; to continue; to last"}
+{"id": 1255, "en": "earthquake-resistant design"}
+{"id": 1256, "en": "growth; to grow"}
+{"id": 1257, "en": "keen interest; strong curiosity"}
+{"id": 1258, "en": "work of art; artwork"}
+{"id": 1259, "en": "to fall; to drop; to lower"}
+{"id": 1260, "en": "Katsushika Hokusai"}
+{"id": 1261, "en": "crowded; bustling; lively"}
+{"id": 1262, "en": "to occur; to happen"}
+{"id": 1263, "en": "to encounter; to suffer (a disaster)"}
+{"id": 1264, "en": "to eat for comparison; to taste and compare"}
+{"id": 1265, "en": "capital city"}
+{"id": 1266, "en": "station bento; ekiben"}
+{"id": 1267, "en": "nakanaka: not easily ...; by no means ..."}
+{"id": 1268, "en": "Grammar exercise set (multiple choice): (1) I always choose and buy fruit that looks fresh (a. looks good); (2) if the weather is good, I go jogging (b. yokereba); (3) over there it says no photography, but people take pictures (b. written); (4) A: I spent all my money on the trip. What should I do? B: In that case, my friend's company is recruiting part-timers — shall I introduce you? (d. soko de); (5) I haven't told anyone this yet (d. haven't told). / Conjunctions (a. wari ni wa, b. beki da, c. koto wa nai, d. kara ni wa, e. sei de, f. ni kuwaete): (1) having spent this much money, I absolutely refuse to fail; (2) because he was seriously ill as a child, he is still weak; (3) despite spending time on practice, no good results came; (4) besides new words every day, I also study new grammar; (5) I told her everything I should say; (6) there are 30 minutes until the Shinkansen departs, so no need to hurry. / Particles (a. no ni, b. sei de, c. tara, d. ni taishite, e. kurai): (1) those with questions about the current presentation, please raise your hand; (2) after three days off in a row, the roads are very crowded today; (3) you can't tell what kind of person someone is after just a brief acquaintance; (4) Manager: You should have come to yesterday's meeting — I said important things. Employee: I'm sorry; (5) though I thought my talk was boring, I received applause. / (a. tokoro ni, b. ni taishite, c. you ni, d. tame ni, e. to itte mo): (1) my writing will appear in a magazine — though it's just a school magazine; (2) those with opinions on the current remark, please raise your hand; (3) just as the closing greeting ended, Nakamura walked in; (4) because neighbors often don't take out the trash late, I put up a poster; (5) to study design, I attend a vocational school. / (a. te, b. darake, c. shi, d. kara, e. ga, f. nante, g. made, h. no ni): (1) failed the exam again? That's because you don't study seriously; (2) although it is raining, the match has begun; (3) there's no need to discuss this anymore; (4) this apartment is far from the station and inconvenient; (5) not just stories — economics and history have also been made into manga; (6) late again? Even though you live close; (7) this car has good design and good performance, so I want to buy it; (8) I was too busy to clean for days, so the room is covered in dust. / (a. ni tsurete, b. to iu koto, c. ni kakete, d. ni oite, e. koto desu, f. ni yotte, g. naranai, h. darou, i. ni okeru): (1) it says \"be quiet in the library\" — you must not chat; (2) I think this illness will probably heal soon; (3) even for the same dish, the taste differs by restaurant; (4) in work, communication skills are very important; (5) from April to August I traveled all over the country; (6) after leaving the hospital, my strength recovered as days passed; (7) in my parents' generation, it was an era when you could earn a lot; (8) Publisher: I'd like to publish this book in early autumn. Author: So you want the manuscript by June, right? / Change expressions (a. you ni narimashita, b. kita, c. narimashita, d. kimashita, e. iku deshou): (1) I became a working adult this April. I used to sleep in, but now I can get up early. I've gotten used to work. From now on my work will gradually increase; (2) A: How's your Japanese study? B: I feel it's getting gradually harder. But I can understand anime and TV programs a little now. And for easy books, I use the dictionary less when reading. A: You've worked hard. You'll keep getting better. / Intention (a. tsumori da, b. tsumori desu, c. koto ni narimasu). / Te-forms (a. te aru, b. te oku, c. ga suru, d. te iru, e. o suru) — meeting prep dialogue: A: I made tomorrow's materials, please check. B: This is OK. Please make 13 copies. A: Got it. B: And have you bought the drinks yet? A: Yes, I've rearranged the chairs and tables, and decorated with flowers. B: Oh, pretty. What flower is that? It smells nice. A: Yes, those flowers are shaped like stars. I don't remember the name, but they smell good so I bought them. B: Hey, the window is open. Shall I close it? A: No, it's hot, so I've left it open. You don't have to close it. / (a. doori, b. omoidasareru, c. gachi, d. hazukashigatte iru, e. toori): (1) she blushes as soon as she appears in front of people; (2) I tried the experiment as written in the textbook, but it didn't go well; (3) hearing this song brings back memories of my student days; (4) if you perform at your practiced level, you'll surely win; (5) when I'm short on time before going out, I tend to carelessly forget things. / Indirect commands example: teacher ⇒ children (be quiet) → The teacher told the children \"Be quiet.\" (1) PE teacher ⇒ students (move forward); (2) cooking class instructor ⇒ students (be careful with knives); (3) bus driver ⇒ passengers (sit in your seats). / Negative commands: teacher ⇒ children (don't speak loudly in the library) → \"Don't speak loudly in the library.\" (1) IT teacher ⇒ students (don't tell others your password); (2) home economics teacher ⇒ students (be careful of burns when cooking); (3) parents ⇒ children (don't cry over small injuries). / Emotion verbs: the kids are too noisy / (teacher ⇒ children / be quiet) get angry → The teacher angrily said \"Be quiet.\" (1) many cars, dangerous / (mother ⇒ child / watch out for cars) warn; (2) mealtime is near / (mother ⇒ child / don't just eat snacks, help prepare dinner) say; (3) the room is messy / (father ⇒ child / tidy up) scold. / Following instructions: the doctor said / take medicine → I take the medicine as the doctor said. (1) it's written in the recipe / make a cake; (2) the announcer's pronunciation / please pronounce accordingly; (3) the instruction manual / assemble the bookshelf. / Degree: I feel dizzy / I'm hungry → I'm so hungry I feel dizzy. (1) want to watch many times / it's a wonderful movie; (2) can use for decades / it's a sturdy chair; (3) can't sleep all night / I'm worried. / Emotion: the neighbor boy / scared of dogs → The neighbor boy is afraid of dogs. (1) Tanaka / wants kabuki tickets; (2) Nakamura / wants to study abroad; (3) Li / feels lonely. / Potential negative: such an expensive condo / no one can buy → No one can buy such an expensive condo. (1) that person's feelings / I can't understand; (2) literary matters / I don't understand; (3) this secret / can't tell even close friends. / Opinion: independent learning is important / very important → A: Is independent learning important? B: Yes, I think it's very important. (1) many people preserve old traditions / quite a lot; (2) today's youth are interested in society / not very interested. / (a. ippou, b. muke ni, c. muke no, d. wake, e. tsutsu, f. ni tomonai, g. shidai, h. ni watatte, i. moto): (1) my father is a math researcher and my brother an astronomy researcher, so I also became interested in physics; (2) with the relocation of the bus stop, the timetable has also changed; (3) at this inn you can enjoy the view of Mt. Fuji while bathing in the hot spring; (4) due to the recession, stock prices keep falling; (5) these clothes are designed for young people, but they suit grandma very well too; (6) talks among the participating countries' leaders were held a total of five times; (7) as soon as the situation is confirmed, we will notify you; (8) the election was held under the observation of the election monitoring team. / Honorifics example: suru → nasaru → nasaimasu (1) say; (2) go; (3) drink; (4) be; (5) eat; (6) see; (7) give (kureru). / Humble example: kuru → mairu → mairimasu (1) go; (2) say; (3) see; (4) be; (5) ask; (6) meet; (7) do. / Necessity: you can get a job after graduating → It's not necessarily the case that you can get a job after graduating. (1) all Japanese people can use keigo correctly; (2) all women like brand-name bags; (3) in sumo, the bigger body has the advantage. / (a. kagiri, b. bakari de naku, c. ka dou ka, d. mono de wa nai): (1) you shouldn't bully younger or weaker people; (2) Nakamura has a bright personality and is kind to everyone, so she's popular; (3) as long as you're enrolled in this school, you can use its facilities; (4) before buying shoes, try them on to see if the size fits. / (a. wake ga nai, b. shidai da, c. rashii desu, d. te hajimete, e. mitai desu): (1) since I started spending time with foreign friends, I've come to want to know more about my own country; (2) it takes three hours from Kyoto, so we should arrive at 2; (3) which solution to choose depends on your way of thinking; (4) George is always positive and loves fun — very American of him; (5) look, that cloud looks like a big loaf of bread! / (a. wake de wa nai, b. hazu da, c. sae, d. mama, e. ue de, f. wake ga nai): (1) an American who only started learning Japanese last year can't possibly read classical literature full of kanji; (2) it's not that I want to attend that dinner, but I was asked, so I have to go; (3) this is a famous hotel, so the food must be delicious — looking forward to it; (4) if I don't find a job soon, I won't even be able to pay the rent; (5) you must not enter a tatami room wearing slippers; (6) in advancing the investigation, it is necessary to hear opinions from everyone involved. / (a. te kara de nai to, b. ageku, c. uchi ni, d. te hajimete, e. ue ni, f. wa mochiron): (1) the student council president has a good personality and is enthusiastic, so the council is well organized; (2) write the ingredients in your notebook so you don't forget them; (3) the town of Asakusa is lively not only on Sundays but on weekdays too; (4) when this fruit's flesh gets bigger, it's not tasty; (5) big jobs succeed only after careful preparation; (6) after much hesitation about whether to quit the company, I decided to quit after all. / (A: a. tsutsu aru, b. ni sotte, c. nara de wa, d. sae, e. ni yori, f. ni kansuru, g. nuki de, h. ni shite wa, i. mama): (1) for detailed information such as the schedule and voting, please see the homepage; (2) construction was suspended due to budget shortage, and it's unknown whether it will resume; (3) today's daytime high only reached 10 degrees, so it looks to be a cold day for late March; (4) with technological progress, people's awareness is changing; (5) how about thinking about the uniqueness that small and medium enterprises have, which big companies lack; (6) joking aside, please think more seriously; (7) customer service should be conducted according to the manual. / (B: a. kanenai, b. kanemasu, c. ue de, d. to tomo ni, e. ni yotte, f. ni atatte, g. dake atte): (1) as the sunlight strengthens and temperatures rise, flowers begin to bloom one after another; (2) after confirming the contract contents, please sign and seal here; (3) this region suffered great damage from the tsunami; (4) if you tell that guy a secret, he'll end up telling the whole class; (5) for hosting the Olympics, securing construction sites for venues is also an important issue; (6) as expected of a graduate of a prestigious school — the quality of the assigned work is high; (7) I cannot agree with actions that only consider one's own profit. / Choose the best option: (a. ni hikikae, b. o oite hoka ni nai, c. mo saru koto nagara, d. to wa ienai made mo, e. o tsuujite, f. to mo naru to): (1) having achieved 100% of the sales target, it can be called a satisfactory result; (2) I'll be 35 next year and my workplace isn't fun, so if I'm changing jobs, now is the time; (3) as the Prime Minister, every single word and action has great influence; (4) the charm of Tanaka's book, who worked as a journalist for many years, is not only the content but also the sharp, easy-to-read, interesting writing; (5) while the bride is a devoted and elegant woman, the groom is a lazy and self-centered man — truly casting pearls before swine; (6) I wondered if it was an illusion, but around noon the military's report announced over the radio that Hiroshima had been bombed. / Choose one from a-d: (1) Kyoto's landscape ordinance, established to protect its outstanding nature and historic scenery — the exterior is designed to harmonize with the traditional townscape (b. in accordance with); (2) whatever the country, a country that doesn't value its young people has no future (d. de arou to); (3) despite the lack of evidence, he continued to maintain his innocence (c. regardless of); (4) even young people indifferent to religion often go to temples or shrines at New Year (a. when it comes to); (5) the manzai duo's A's retorts are funny, while B's are crude (d. in contrast to); (6) whether this attempt succeeds depends on the residents' cooperation (c. depends on). / (a. o mochimashite, b. beku, c. ni kotaete, d. ni atte, e. ni saishi, f. o hajime to suru, g. ni todomarazu, h. atte, i. nagara): (1) please be careful of choking on foods such as hard beans and nuts; (2) I work day and night to support my family; (3) selfish as it may be, we will be temporarily closed during the above period; (4) upon starting construction, I compiled a report summarizing the progress so far; (5) my father said that while freedom is important, it must be freedom within rules; (6) our shop will close on December 31; (7) today, when nature conservation is advocated throughout Japan, the administration is struggling to justify permitting golf course construction against public opinion; (8) the trend of emphasizing academic credentials not only robs children of their childhood but also distorts society as a whole; (9) the financial education program for elementary students nationwide had 2,000 participants last year, but in response to feedback from teachers, the quota was expanded fivefold to 10,000. / Choose one from a-d: (1) the meal the criminals left unfinished was still warm — from that, it seemed they hadn't gone far (b. judging from); (2) the organization as a whole is concealing the truth (c. gurumi); (3) this company leads the communications industry and is also actively addressing climate change (d. not only ... but also); (4) rents are soaring, so I have no choice but to move (b. sasezaru o enai); (5) in American politics, Congress cannot hold the President accountable, while the President cannot dissolve Congress (a. on the other hand); (6) in ancient Egypt, preserving the body after death was valued, and mummification was widely practiced — perhaps because they feared the \"second death,\" after which one cannot be reborn (b. perhaps for that reason); (7) no matter how harsh the circumstances, I want to avoid losing myself (c. even in)."}
+{"id": 1269, "en": "Oxford"}
+{"id": 1270, "en": "travel guide; guidebook"}
+{"id": 1271, "en": "discussion"}
+{"id": 1272, "en": "Harry Potter"}
+{"id": 1273, "en": "poster"}
+{"id": 1274, "en": "note; memo; record"}
+{"id": 1275, "en": "member"}
+{"id": 1276, "en": "reservation; appointment"}
+{"id": 1277, "en": "doll; puppet; figure"}
+{"id": 1278, "en": "incident; affair; event"}
+{"id": 1279, "en": "going to work; attendance at work"}
+{"id": 1280, "en": "recruitment; solicitation; to recruit"}
+{"id": 1281, "en": "dangerous"}
+{"id": 1282, "en": "to blow (wind)"}
+{"id": 1283, "en": "earth; the globe"}
+{"id": 1284, "en": "wall"}
+{"id": 1285, "en": "change; variation"}
+{"id": 1286, "en": "loyal fan; devoted fan"}
+{"id": 1287, "en": "thick; coarse; bold"}
+{"id": 1288, "en": "character; letter; handwriting"}
+{"id": 1289, "en": "actual feeling; real sense; firsthand experience"}
+{"id": 1290, "en": "lodging; accommodation; stay"}
+{"id": 1291, "en": "lonely; lonesome"}
+{"id": 1292, "en": "sleeping in; late rising"}
+{"id": 1293, "en": "to deliver; to send; to forward"}
+{"id": 1294, "en": "seat; one's place"}
+{"id": 1295, "en": "drawer"}
+{"id": 1296, "en": "useful; beneficial; helpful"}
+{"id": 1297, "en": "necessary; necessity"}
+{"id": 1298, "en": "photography; filming; to photograph"}
+{"id": 1299, "en": "again; re-; anew; once more"}
+{"id": 1300, "en": "facility; institution"}
+{"id": 1301, "en": "journey; trip; itinerary"}
+{"id": 1302, "en": "travel destination"}
+{"id": 1303, "en": "day trip; same-day return"}
+{"id": 1304, "en": "nap; afternoon nap"}
+{"id": 1305, "en": "bookshelf; bookcase"}
+{"id": 1306, "en": "fruit"}
+{"id": 1307, "en": "invitation letter; invitation"}
+{"id": 1308, "en": "recovery; cure; to heal"}
+{"id": 1309, "en": "swimming; to swim"}
+{"id": 1310, "en": "sea; ocean"}
+{"id": 1311, "en": "local; the local area"}
+{"id": 1312, "en": "training; workshop; study program"}
+{"id": 1313, "en": "movement; transfer; to move"}
+{"id": 1314, "en": "(time) to pass; to elapse"}
+{"id": 1315, "en": "continuation; succession; to continue"}
+{"id": 1316, "en": "art museum; art gallery"}
+{"id": 1317, "en": "action; behavior; conduct"}
+{"id": 1318, "en": "cover (of a book/magazine)"}
+{"id": 1319, "en": "to paste; to stick; to affix"}
+{"id": 1320, "en": "foot; leg"}
+{"id": 1321, "en": "to hesitate; to get lost; to wander"}
+{"id": 1322, "en": "boring; dull"}
+{"id": 1323, "en": "leaving work; getting off work"}
+{"id": 1324, "en": "hiking; excursion; outing"}
+{"id": 1325, "en": "choice; selection; to choose"}
+{"id": 1326, "en": "training; exercise; to train"}
+{"id": 1327, "en": "full-length (novel/film); long-form"}
+{"id": 1328, "en": "battery; cell"}
+{"id": 1329, "en": "time; period; occasion"}
+{"id": 1330, "en": "freshness"}
+{"id": 1331, "en": "an instant; a blink of an eye"}
+{"id": 1332, "en": "packed full; crammed"}
+{"id": 1333, "en": "properly; carefully; neatly"}
+{"id": 1334, "en": "unobstructed; clear; smooth"}
+{"id": 1335, "en": "finally; at last; gradually"}
+{"id": 1336, "en": "Africa"}
+{"id": 1337, "en": "cancellation; revocation; to cancel"}
+{"id": 1338, "en": "date; appointment; romantic date"}
+{"id": 1339, "en": "drama; play"}
+{"id": 1340, "en": "bonus"}
+{"id": 1341, "en": "media; mass media"}
+{"id": 1342, "en": "central area; downtown"}
+{"id": 1343, "en": "traditional culture"}
+{"id": 1344, "en": "completely; entirely; really; indeed"}
+{"id": 1345, "en": "each contributing (bringing) something"}
+{"id": 1346, "en": "to accept; to receive"}
+{"id": 1347, "en": "throat"}
+{"id": 1348, "en": "scholarship"}
+{"id": 1349, "en": "tuition; school fees"}
+{"id": 1350, "en": "vocational school; technical college"}
+{"id": 1351, "en": "respect; honor; reverence"}
+{"id": 1352, "en": "small; little"}
+{"id": 1353, "en": "outstanding; one of the few best; countable on one hand"}
+{"id": 1354, "en": "construction; engineering work"}
+{"id": 1355, "en": "courtyard; garden; yard"}
+{"id": 1356, "en": "to cause; to bring about; to provoke"}
+{"id": 1357, "en": "comfort; coziness"}
+{"id": 1358, "en": "feeling; sensation; sense"}
+{"id": 1359, "en": "payment; to pay"}
+{"id": 1360, "en": "honorific language; keigo"}
+{"id": 1361, "en": "sentence; writing; composition"}
+{"id": 1362, "en": "sunny; facing the sun"}
+{"id": 1363, "en": "to live; to spend (time); daily life"}
+{"id": 1364, "en": "first; first of all; at the beginning"}
+{"id": 1365, "en": "meaningful; significant"}
+{"id": 1366, "en": "correct; right"}
+{"id": 1367, "en": "raw food; uncooked food"}
+{"id": 1368, "en": "positive; active; continuous; going smoothly"}
+{"id": 1369, "en": "experience"}
+{"id": 1370, "en": "tension; nervousness; to be nervous"}
+{"id": 1371, "en": "repetition; to repeat"}
+{"id": 1372, "en": "child-rearing; raising children"}
+{"id": 1373, "en": "one's own country; home country"}
+{"id": 1374, "en": "tea ceremony; sadō"}
+{"id": 1375, "en": "to memorize; to master"}
+{"id": 1376, "en": "parents"}
+{"id": 1377, "en": "sightseeing; tourism"}
+{"id": 1378, "en": "relief; release; refreshment"}
+{"id": 1379, "en": "to be blocked; to be packed; congestion"}
+{"id": 1380, "en": "explanation; description"}
+{"id": 1381, "en": "valuable; precious"}
+{"id": 1382, "en": "job change; changing jobs/career"}
+{"id": 1383, "en": "lost child; to get lost; to be separated"}
+{"id": 1384, "en": "coming and going; commuting (to school/work)"}
+{"id": 1385, "en": "to get through (a period of time); to spend"}
+{"id": 1386, "en": "evacuation; refuge"}
+{"id": 1387, "en": "finance; banking"}
+{"id": 1388, "en": "closing (of an event); closing ceremony"}
+{"id": 1389, "en": "atmosphere; ambiance"}
+{"id": 1390, "en": "appetite"}
+{"id": 1391, "en": "laborious; demanding; strenuous"}
+{"id": 1392, "en": "finally; at last; with much effort"}
+{"id": 1393, "en": "trivial; trifling; insignificant"}
+{"id": 1394, "en": "why; for what reason"}
+{"id": 1395, "en": "straight; honest; frank"}
+{"id": 1396, "en": "switch; power switch"}
+{"id": 1397, "en": "story; plot; storyline"}
+{"id": 1398, "en": "tissue; tissue paper"}
+{"id": 1399, "en": "mask; face mask"}
+{"id": 1400, "en": "itchy; crawling sensation"}
+{"id": 1401, "en": "anxiety; unease; worry"}
+{"id": 1402, "en": "intersection; crossroads"}
+{"id": 1403, "en": "method; way; how to do"}
+{"id": 1404, "en": "low"}
+{"id": 1405, "en": "to believe; to trust"}
+{"id": 1406, "en": "to collapse; to go bankrupt; to fall ill"}
+{"id": 1407, "en": "wound; scratch; defect"}
+{"id": 1408, "en": "charging; to charge"}
+{"id": 1409, "en": "front; ahead; tip; destination; before"}
+{"id": 1410, "en": "to enter; to get into"}
+{"id": 1411, "en": "informal job offer; unofficial decision"}
+{"id": 1412, "en": "to be cut off; to expire; discontinuation"}
+{"id": 1413, "en": "half price"}
+{"id": 1414, "en": "right; right side"}
+{"id": 1415, "en": "surroundings; vicinity; around"}
+{"id": 1416, "en": "sneeze"}
+{"id": 1417, "en": "dust; dirt"}
+{"id": 1418, "en": "heavy snow"}
+{"id": 1419, "en": "lottery ticket (also: rarely, with negative)"}
+{"id": 1420, "en": "to feel cold; chill"}
+{"id": 1421, "en": "to win (a lottery); winning"}
+{"id": 1422, "en": "urgent; sudden; pressing"}
+{"id": 1423, "en": "to throw; to discard; to abandon"}
+{"id": 1424, "en": "to turn (a corner); to bend"}
+{"id": 1425, "en": "the same industry; one's industry"}
+{"id": 1426, "en": "absence; to be absent"}
+{"id": 1427, "en": "to stop; to halt (also: Starbucks abbrev.)"}
+{"id": 1428, "en": "state of mind; physical condition"}
+{"id": 1429, "en": "temperature; air temperature"}
+{"id": 1430, "en": "mud"}
+{"id": 1431, "en": "to hand over; to deliver"}
+{"id": 1432, "en": "thick; dense; strong (flavor)"}
+{"id": 1433, "en": "paper designated for a specific purpose; form"}
+{"id": 1434, "en": "itchy; itch"}
+{"id": 1435, "en": "eye; eyes"}
+{"id": 1436, "en": "consultation; to consult; to discuss"}
+{"id": 1437, "en": "to know; to be acquainted with"}
+{"id": 1438, "en": "it seems; probably; certainly; indeed; surely"}
+{"id": 1439, "en": "infection; contagion; to infect"}
+{"id": 1440, "en": "translation; to translate"}
+{"id": 1441, "en": "audible; can be heard"}
+{"id": 1442, "en": "pollen"}
+{"id": 1443, "en": "hay fever; pollen allergy"}
+{"id": 1444, "en": "medicine; drug"}
+{"id": 1445, "en": "consultation. Basic training: (1) I don't (only) eat vegetables; (2) I think that person is American; (3) I asked what time to go; (4) I think katakana is harder than hiragana; (5) before asking the teacher, I first look it up myself; (6) even though I memorized the words hard, I forget them right away; (7) Sato knows the rules of baseball very well; (8) after putting the book back in its original place, I go home. / Multiple choice: (1) this is a book Nakamura lent me (a. kashite kureta); (2) since I've been drinking — could you drive? (b. unten shite moratte mo ii desu); (3) I can only make curry (b. shika); (4) not just German — Tanaka can speak three languages (a. mo); (5) I want to return home by next Monday (b. made ni). / Example 3: when do you submit the research report? · on the 19th → I'd like to submit it by the 19th. (1) tidy the room · tomorrow; (2) marry Tanaka · next June; (3) buy a new ballpoint pen · next Tuesday; (4) fix the PC · this month. / Example 4: it rains tomorrow / we go on the excursion → Even if it rains tomorrow, we will go on the excursion. (1) I don't understand foreign languages / I can travel abroad; (2) I have no money / I can live happily; (3) I'm an adult / I think this manga is interesting; (4) work is busy / I cook for myself. / Example 5: I slept one hour last night → A: About how many hours did you sleep last night? B: I only slept one hour. (1) I eat one meal a day."}
+{"id": 1446, "en": "poverty; poor"}
+{"id": 1447, "en": "resignation; to quit (a job)"}
+{"id": 1448, "en": "recently; lately; these days"}
+{"id": 1449, "en": "on the way; midway"}
+{"id": 1450, "en": "going to school; attending school"}
+{"id": 1451, "en": "contact; communication; to get in touch"}
+{"id": 1452, "en": "to get off (a vehicle)"}
+{"id": 1453, "en": "power supply; power button"}
+{"id": 1454, "en": "cold; to catch a cold"}
+{"id": 1455, "en": "to fly; to flutter; to scatter"}
+{"id": 1456, "en": "parking lot"}
+{"id": 1457, "en": "runny nose; nasal mucus"}
+{"id": 1458, "en": "finally; at last; more and more"}
+{"id": 1459, "en": "gradually; little by little"}
+{"id": 1460, "en": "to come; to arrive; to approach"}
+{"id": 1461, "en": "absence without notice; skipping work/school"}
+{"id": 1462, "en": "tunnel"}
+{"id": 1463, "en": "percent; %"}
+{"id": 1464, "en": "peak; summit"}
+{"id": 1465, "en": "first ten days of the month; early month"}
+{"id": 1466, "en": "landing; making landfall"}
+{"id": 1467, "en": "generation; era"}
+{"id": 1468, "en": "prevention; to prevent"}
+{"id": 1469, "en": "incident; case; affair"}
+{"id": 1470, "en": "attachment; adhesion; to stick to"}
+{"id": 1471, "en": "physical strength; stamina"}
+{"id": 1472, "en": "what kind of thing; everything; anything"}
+{"id": 1473, "en": "tendency; inclination; trend"}
+{"id": 1474, "en": "full aspect; the whole; entirely"}
+{"id": 1475, "en": "publication; publishing"}
+{"id": 1476, "en": "publisher; publishing company"}
+{"id": 1477, "en": "first half (of a period/part)"}
+{"id": 1478, "en": "ratio; proportion; percentage"}
+{"id": 1479, "en": "status; position; standing"}
+{"id": 1480, "en": "increase; to increase"}
+{"id": 1481, "en": "increase; gain; to add"}
+{"id": 1482, "en": "weather forecast"}
+{"id": 1483, "en": "actress"}
+{"id": 1484, "en": "preference; liking; taste"}
+{"id": 1485, "en": "implementation; to carry out"}
+{"id": 1486, "en": "countermeasure; measure"}
+{"id": 1487, "en": "declining birthrate"}
+{"id": 1488, "en": "average year; normal year"}
+{"id": 1489, "en": "year by year; annually"}
+{"id": 1490, "en": "lawyer; attorney"}
+{"id": 1491, "en": "second half (of a period/part)"}
+{"id": 1492, "en": "worry; distress; to agonize"}
+{"id": 1493, "en": "infection; contagion"}
+{"id": 1494, "en": "to get used to; habit; familiarity"}
+{"id": 1495, "en": "contact; touch; connection"}
+{"id": 1496, "en": "daily; everyday; daily life"}
+{"id": 1497, "en": "early morning"}
+{"id": 1498, "en": "Spring Festival; Chinese New Year"}
+{"id": 1499, "en": "season; time; period"}
+{"id": 1500, "en": "hourly wage"}
+{"id": 1501, "en": "effective; valid"}
+{"id": 1502, "en": "reading aloud; recitation"}
+{"id": 1503, "en": "late riser; someone who sleeps in"}
+{"id": 1504, "en": "comparison; compared to; ratio"}
+{"id": 1505, "en": "disinfection; sterilization"}
+{"id": 1506, "en": "now; at present; current"}
+{"id": 1507, "en": "producer; manufacturer; grower"}
+{"id": 1508, "en": "symptom"}
+{"id": 1509, "en": "itchiness; itchy feeling"}
+{"id": 1510, "en": "alarm clock"}
+{"id": 1511, "en": "to wear; to put on"}
+{"id": 1512, "en": "to earn money; to make money"}
+{"id": 1513, "en": "continuous; sustained; ongoing"}
+{"id": 1514, "en": "author; writer"}
+{"id": 1515, "en": "visit (to the sick); to check on someone"}
+{"id": 1516, "en": "installation; setting; to set up"}
+{"id": 1517, "en": "to welcome; to meet; to greet"}
+{"id": 1518, "en": "to approach; to draw near; approaching"}
+{"id": 1519, "en": "(time) to pass; to elapse"}
+{"id": 1520, "en": "to avoid; to evade"}
+{"id": 1521, "en": "within Tokyo (metropolis)"}
+{"id": 1522, "en": "amount of (pollen) dispersal; scattering quantity"}
+{"id": 1523, "en": "restaurant; dining establishment"}
+{"id": 1524, "en": "to ring; to sound; to echo"}
+{"id": 1525, "en": "regarding ...; concerning ...; in terms of ..."}
+{"id": 1526, "en": "(e. koto ni shimasu) Nakamura: This winter vacation, I'm going to my relatives' house in Osaka. George: Oh, I'm going to Hokkaido for fun. Sato: I have to write my paper, so I'm not going anywhere. Yuka: I can do a homestay at a Japanese family's house. Nakamura: Do you know Suzuki's plans? Sato: Suzuki said he will continue his research in the lab."}
+{"id": 1527, "en": "Italian cuisine; Italian food"}
+{"id": 1528, "en": "click; to click; to press (a button)"}
+{"id": 1529, "en": "Singapore"}
+{"id": 1530, "en": "seminar; workshop"}
+{"id": 1531, "en": "Thailand"}
+{"id": 1532, "en": "check; verification; cheque; to check"}
+{"id": 1533, "en": "technology; tech"}
+{"id": 1534, "en": "dinner (formal); full-course meal"}
+{"id": 1535, "en": "form; table; chart"}
+{"id": 1536, "en": "preview"}
+{"id": 1537, "en": "homesickness; to be homesick"}
+{"id": 1538, "en": "homestay; living with a host family abroad"}
+{"id": 1539, "en": "to go up; to rise; to enter; ascent"}
+{"id": 1540, "en": "last ten days of the month; late month"}
+{"id": 1541, "en": "originally; inherently; from the start"}
+{"id": 1542, "en": "hospitalization; to be hospitalized"}
+{"id": 1543, "en": "completion; to complete"}
+{"id": 1544, "en": "Hokkaido"}
+{"id": 1545, "en": "answer; response"}
+{"id": 1546, "en": "answer rate; response rate"}
+{"id": 1547, "en": "to be troubled; to be bothered; trouble"}
+{"id": 1548, "en": "difficulty; difficult; hardship"}
+{"id": 1549, "en": "case; occasion; situation"}
+{"id": 1550, "en": "strange; odd; weird"}
+{"id": 1551, "en": "actual; real; practice"}
+{"id": 1552, "en": "laboratory; lab"}
+{"id": 1553, "en": "factory; plant"}
+{"id": 1554, "en": "opinion; view"}
+{"id": 1555, "en": "I see; indeed; that's right"}
+{"id": 1556, "en": "what is used; the thing used"}
+{"id": 1557, "en": "time and effort; labor"}
+{"id": 1558, "en": "letter of recommendation"}
+{"id": 1559, "en": "to finish writing; completion of writing"}
+{"id": 1560, "en": "charge; fee; toll"}
+{"id": 1561, "en": "function; feature"}
+{"id": 1562, "en": "pollution; contamination"}
+{"id": 1563, "en": "congestion; crowding; mixture"}
+{"id": 1564, "en": "fire; flame"}
+{"id": 1565, "en": "score; point; mark"}
+{"id": 1566, "en": "free of charge; free"}
+{"id": 1567, "en": "to spoil; to pamper; indulgence"}
+{"id": 1568, "en": "screen; display"}
+{"id": 1569, "en": "pronunciation; to pronounce"}
+{"id": 1570, "en": "goal; target; standard"}
+{"id": 1571, "en": "saving; economizing; to save"}
+{"id": 1572, "en": "knowledge"}
+{"id": 1573, "en": "confirmation; to confirm; to check"}
+{"id": 1574, "en": "bad smell; stench; odor"}
+{"id": 1575, "en": "restlessness; fidgetiness; impatience"}
+{"id": 1576, "en": "relatives; kin"}
+{"id": 1577, "en": "to fill in; to fill out (a form)"}
+{"id": 1578, "en": "detailed; familiar with; well-informed"}
+{"id": 1579, "en": "to charge (a fee); to levy"}
+{"id": 1580, "en": "to lend out; to loan"}
+{"id": 1581, "en": "option; choice"}
+{"id": 1582, "en": "suburbs; outskirts"}
+{"id": 1583, "en": "stairs; stage; step"}
+{"id": 1584, "en": "considerable; significant; substantial"}
+{"id": 1585, "en": "so-so; passable; more or less"}
+{"id": 1586, "en": "a little; slightly; somewhat"}
+{"id": 1587, "en": "service"}
+{"id": 1588, "en": "rational; reasonable"}
+{"id": 1589, "en": "rule; rules"}
+{"id": 1590, "en": "dissatisfaction; complaint"}
+{"id": 1591, "en": "either-or format; two-choice format"}
+{"id": 1592, "en": "representative; delegation"}
+{"id": 1593, "en": "experience; to experience"}
+{"id": 1594, "en": "revision; correction; to revise"}
+{"id": 1595, "en": "victory; championship; winning"}
+{"id": 1596, "en": "overall; general; as a whole"}
+{"id": 1597, "en": "nationwide; the whole country"}
+{"id": 1598, "en": "analysis; to analyze"}
+{"id": 1599, "en": "addition; to add; to append"}
+{"id": 1600, "en": "selfishness; willfulness; whim"}
+{"id": 1601, "en": "opposition; objection; to oppose"}
+{"id": 1602, "en": "you"}
+{"id": 1603, "en": "only; merely; just"}
+{"id": 1604, "en": "respondent; answerer"}
+{"id": 1605, "en": "region; area; district"}
+{"id": 1606, "en": "convention; tournament; big event"}
+{"id": 1607, "en": "failure; to fail"}
+{"id": 1608, "en": "existence; to exist"}
+{"id": 1609, "en": "to observe; to obey; to protect"}
+{"id": 1610, "en": "elderly person; old person"}
+{"id": 1611, "en": "weak; fragile; feeble"}
+{"id": 1612, "en": "form; format; style"}
+{"id": 1613, "en": "to obtain; to get; to gain"}
+{"id": 1614, "en": "to hurry; to hasten; to speed up"}
+{"id": 1615, "en": "bad; wrong; no good"}
+{"id": 1616, "en": "feeling; to feel; to sense"}
+{"id": 1617, "en": "grades; results; academic performance"}
+{"id": 1618, "en": "improvement; to improve"}
+{"id": 1619, "en": "to dare; to venture; to force"}
+{"id": 1620, "en": "grammar"}
+{"id": 1621, "en": "clear; definite; to clarify"}
+{"id": 1622, "en": "time; hour; moment"}
+{"id": 1623, "en": "ordinary; common; general"}
+{"id": 1624, "en": "historic; historical; time-honored"}
+{"id": 1625, "en": "stage; phase; step"}
+{"id": 1626, "en": "Western clothing; Western-style dress"}
+{"id": 1627, "en": "satisfaction; contentment"}
+{"id": 1628, "en": "severe; intense; violent"}
+{"id": 1629, "en": "life; living; to live"}
+{"id": 1630, "en": "to aim at; to target; with the goal of ..."}
+{"id": 1631, "en": "repair; mending; to fix; to correct"}
+{"id": 1632, "en": "intuitively; by intuition"}
+{"id": 1633, "en": "direct; directly"}
+{"id": 1634, "en": "to break; to tear; to violate; to destroy"}
+{"id": 1635, "en": "response; to respond; to answer"}
+{"id": 1636, "en": "absolute; absolutely; without fail"}
+{"id": 1637, "en": "to consider; to think over; consideration"}
+{"id": 1638, "en": "nature; natural"}
+{"id": 1639, "en": "indication; expression; representation"}
+{"id": 1640, "en": "word; language; expression; wording"}
+{"id": 1641, "en": "wording; choice of words; phrasing"}
+{"id": 1642, "en": "to pose a question; to set a problem"}
+{"id": 1643, "en": "evaluation; assessment; to evaluate"}
+{"id": 1644, "en": "to give up; abandonment"}
+{"id": 1645, "en": "wealthy; rich; affluent"}
+{"id": 1646, "en": "as is; unchanged; the same"}
+{"id": 1647, "en": "soy sauce"}
+{"id": 1648, "en": "to gather; to assemble; gathering"}
+{"id": 1649, "en": "thereupon; accordingly; and so"}
+{"id": 1650, "en": "boring; tedious; dull"}
+{"id": 1651, "en": "to lose; to misplace"}
+{"id": 1652, "en": "alarm (device); alert"}
+{"id": 1653, "en": "credit card"}
+{"id": 1654, "en": "to hold a meeting; to have a conference"}
+{"id": 1655, "en": "running; run; to run"}
+{"id": 1656, "en": "after a long time; long time no see"}
+{"id": 1657, "en": "to ride; to get on (a vehicle)"}
+{"id": 1658, "en": "accident"}
+{"id": 1659, "en": "association; friendship; to socialize; dating"}
+{"id": 1660, "en": "several times; how many times"}
+{"id": 1661, "en": "to borrow; to rent; to lease"}
+{"id": 1662, "en": "by chance; accidental; coincidence"}
+{"id": 1663, "en": "content; contents"}
+{"id": 1664, "en": "cold; icy; chilled"}
+{"id": 1665, "en": "attendee; participant; person present"}
+{"id": 1666, "en": "famous work; masterpiece"}
+{"id": 1667, "en": "recovery; restoration; to recover"}
+{"id": 1668, "en": "answer sheet"}
+{"id": 1669, "en": "books; publications"}
+{"id": 1670, "en": "National Day"}
+{"id": 1671, "en": "dream; aspiration"}
+{"id": 1672, "en": "importance; significant; serious"}
+{"id": 1673, "en": "adult; grown-up"}
+{"id": 1674, "en": "learning; to learn; to experience"}
+{"id": 1675, "en": "Miyazawa Kenji (author)"}
+{"id": 1676, "en": "to fit into; to be absorbed in; to fall into; to be addicted"}
+{"id": 1677, "en": "extension; prolongation; to extend"}
+{"id": 1678, "en": "help; assistance; to help"}
+{"id": 1679, "en": "procedure; formalities; paperwork"}
+{"id": 1680, "en": "applause; to applaud"}
+{"id": 1681, "en": "to raise one's hand"}
+{"id": 1682, "en": "greeting; salutation"}
+{"id": 1683, "en": "submission; presentation; to submit"}
+{"id": 1684, "en": "deadline; time limit; term"}
+{"id": 1685, "en": "crosswalk; pedestrian crossing"}
+{"id": 1686, "en": "depth"}
+{"id": 1687, "en": "to deepen; to intensify"}
+{"id": 1688, "en": "traffic jam; congestion"}
+{"id": 1689, "en": "to cross; to go across; to travel far"}
+{"id": 1690, "en": "understanding; comprehension"}
+{"id": 1691, "en": "to pile up; to accumulate"}
+{"id": 1692, "en": "last train of the day"}
+{"id": 1693, "en": "via; by way of"}
+{"id": 1694, "en": "choice of words; wording"}
+{"id": 1695, "en": "to start reading"}
+{"id": 1696, "en": "to reread; to read again"}
+{"id": 1697, "en": "to read back; to look back over; to reread repeatedly"}
+{"id": 1698, "en": "reading circle; book club"}
+{"id": 1699, "en": "task; assignment; problem"}
+{"id": 1700, "en": "to save up; to accumulate"}
+{"id": 1701, "en": "to run"}
+{"id": 1702, "en": "to grasp; to master"}
+{"id": 1703, "en": "crowding; congestion"}
+{"id": 1704, "en": "to return; to give back"}
+{"id": 1705, "en": "road; path; way"}
+{"id": 1706, "en": "mailbox"}
+{"id": 1707, "en": "railway; railroad"}
+{"id": 1708, "en": "the Milky Way; galaxy"}
+{"id": 1709, "en": "key"}
+{"id": 1710, "en": "to close; to shut"}
+{"id": 1711, "en": "affirmation; that's right"}
+{"id": 1712, "en": "stomach; belly"}
+{"id": 1713, "en": "that kind of; such"}
+{"id": 1714, "en": "beside; next to; one's side"}
+{"id": 1715, "en": "but; however"}
+{"id": 1716, "en": "(adverbial particle) -ly; so that"}
+{"id": 1717, "en": "fluent; talkative; garrulous"}
+{"id": 1718, "en": "selfishness; willfulness"}
+{"id": 1719, "en": "good; all right; fine"}
+{"id": 1720, "en": "candle"}
+{"id": 1721, "en": "campus"}
+{"id": 1722, "en": "scene; one act"}
+{"id": 1723, "en": "jasmine (flower)"}
+{"id": 1724, "en": "star; celebrity"}
+{"id": 1725, "en": "speech; presentation"}
+{"id": 1726, "en": "design"}
+{"id": 1727, "en": "bus stop"}
+{"id": 1728, "en": "panda"}
+{"id": 1729, "en": "front desk (of a hotel, etc.); front"}
+{"id": 1730, "en": "(counter for) shots; scenes"}
+{"id": 1731, "en": "wholeheartedly; single-mindedly"}
+{"id": 1732, "en": "to withdraw (money); to take down; to remove"}
+{"id": 1733, "en": "inconceivable; mysterious"}
+{"id": 1734, "en": "to rearrange; to reposition"}
+{"id": 1735, "en": "round; circular"}
+{"id": 1736, "en": "situation; circumstances"}
+{"id": 1737, "en": "clerk; office worker"}
+{"id": 1738, "en": "children's literature"}
+{"id": 1739, "en": "all; everything"}
+{"id": 1740, "en": "different; another"}
+{"id": 1741, "en": "to move (emotionally); to shift; to shake"}
+{"id": 1742, "en": "impression; a scene (of a film)"}
+{"id": 1743, "en": "earthquake"}
+{"id": 1744, "en": "treasure; valuables"}
+{"id": 1745, "en": "Spirited Away (Japanese animated film directed by Hayao Miyazaki)"}
+{"id": 1746, "en": "introduction; bringing in; import"}
+{"id": 1747, "en": "heart; mind"}
+{"id": 1748, "en": "thoughts; feelings; memories; heartfelt wish"}
+{"id": 1749, "en": "memories; recollection"}
+{"id": 1750, "en": "love"}
+{"id": 1751, "en": "feelings; emotion"}
+{"id": 1752, "en": "to panic; to be flustered; to hurry"}
+{"id": 1753, "en": "to draw; to depict; to portray"}
+{"id": 1754, "en": "teaching materials; textbook"}
+{"id": 1755, "en": "the past; former times"}
+{"id": 1756, "en": "star"}
+{"id": 1757, "en": "figure; appearance; posture"}
+{"id": 1758, "en": "inspection; check"}
+{"id": 1759, "en": "pattern; design"}
+{"id": 1760, "en": "to notice; to become aware of"}
+{"id": 1761, "en": "fashion; trend; to be popular"}
+{"id": 1762, "en": "to come to mind; to surface; to emerge"}
+{"id": 1763, "en": "to disappear; to vanish"}
+{"id": 1764, "en": "tears"}
+{"id": 1765, "en": "deep; profound"}
+{"id": 1766, "en": "yakitori; grilled chicken skewers"}
+{"id": 1767, "en": "tale; story"}
+{"id": 1768, "en": "raccoon dog (tanuki)"}
+{"id": 1769, "en": "to appear; to emerge; to show"}
+{"id": 1770, "en": "pain; suffering"}
+{"id": 1771, "en": "discovery"}
+{"id": 1772, "en": "(film) director"}
+{"id": 1773, "en": "midsummer"}
+{"id": 1774, "en": "sky"}
+{"id": 1775, "en": "to finish; to bring to an end"}
+{"id": 1776, "en": "wedding; wedding ceremony"}
+{"id": 1777, "en": "blood"}
+{"id": 1778, "en": "to hold (an event); to carry out"}
+{"id": 1779, "en": "facial expression"}
+{"id": 1780, "en": "to exceed; to go beyond"}
+{"id": 1781, "en": "just at that moment; the very instant when..."}
+{"id": 1782, "en": "(counter for) volumes; copies; parts"}
+{"id": 1783, "en": "electricity; electric light"}
+{"id": 1784, "en": "wish; request"}
+{"id": 1785, "en": "charm; appeal"}
+{"id": 1786, "en": "(fragment) ...Japanese animated film"}
+{"id": 1787, "en": "(fragment) ...work of children's literature"}
+{"id": 1788, "en": "thief; pickpocket"}
+{"id": 1789, "en": "soaked; drenched"}
+{"id": 1790, "en": "communication; exchange"}
+{"id": 1791, "en": "match; competition; contest"}
+{"id": 1792, "en": "(fragment of 話会) ...talk session"}
+{"id": 1793, "en": "tension; stress"}
+{"id": 1794, "en": "volunteer"}
+{"id": 1795, "en": "Portugal"}
+{"id": 1796, "en": "Portuguese person"}
+{"id": 1797, "en": "ten thousand ri; a great distance"}
+{"id": 1798, "en": "progress; improvement"}
+{"id": 1799, "en": "the world; society"}
+{"id": 1800, "en": "human relations; interpersonal relationships"}
+{"id": 1801, "en": "others; other people"}
+{"id": 1802, "en": "since; from that time until now"}
+{"id": 1803, "en": "composer"}
+{"id": 1804, "en": "value; worth"}
+{"id": 1805, "en": "sympathy; agreement; same feeling"}
+{"id": 1806, "en": "to take out; to put forward; to submit"}
+{"id": 1807, "en": "to divide; to share; to split"}
+{"id": 1808, "en": "help; assistance"}
+{"id": 1809, "en": "courage"}
+{"id": 1810, "en": "violation; breach"}
+{"id": 1811, "en": "to be suitable; to fit"}
+{"id": 1812, "en": "I (literary, as in 吾輩); we"}
+{"id": 1813, "en": "destruction"}
+{"id": 1814, "en": "to change; to alter; to replace"}
+{"id": 1815, "en": "Suzume (Suzume no Tojimari, Japanese animated film)"}
+{"id": 1816, "en": "experience of failure"}
+{"id": 1817, "en": "Qin Shi Huang (First Emperor of Qin)"}
+{"id": 1818, "en": "to hate; to detest"}
+{"id": 1819, "en": "practice; putting into practice"}
+{"id": 1820, "en": "house; building"}
+{"id": 1821, "en": "to put on (shoes); to wear (footwear)"}
+{"id": 1822, "en": "citizen"}
+{"id": 1823, "en": "young; of tender age"}
+{"id": 1824, "en": "to build; to construct"}
+{"id": 1825, "en": "at that time; in those days"}
+{"id": 1826, "en": "they; those people"}
+{"id": 1827, "en": "sad; sorrowful"}
+{"id": 1828, "en": "passion; enthusiasm"}
+{"id": 1829, "en": "imagination"}
+{"id": 1830, "en": "gratitude; thanks"}
+{"id": 1831, "en": "success"}
+{"id": 1832, "en": "person in charge; homeroom teacher"}
+{"id": 1833, "en": "hospitality; entertaining (guests); invitation and reception"}
+{"id": 1834, "en": "government"}
+{"id": 1835, "en": "teaching; instruction; lesson"}
+{"id": 1836, "en": "church"}
+{"id": 1837, "en": "refusal; rejection"}
+{"id": 1838, "en": "(fragment) ...director"}
+{"id": 1839, "en": "refreshed; relieved; at ease"}
+{"id": 1840, "en": "to seek; to long for; to crave"}
+{"id": 1841, "en": "Horyu-ji (temple)"}
+{"id": 1842, "en": "to cry; to weep"}
+{"id": 1843, "en": "activity; activities"}
+{"id": 1844, "en": "theft; stealing"}
+{"id": 1845, "en": "sleepiness; drowsiness"}
+{"id": 1846, "en": "Qin (dynasty)"}
+{"id": 1847, "en": "(family) register; (school) registration"}
+{"id": 1848, "en": "maintenance; to maintain"}
+{"id": 1849, "en": "bustling shopping district; busy street"}
+{"id": 1850, "en": "Prince Shotoku"}
+{"id": 1851, "en": "self-confidence"}
+{"id": 1852, "en": "oneself; self"}
+{"id": 1853, "en": "oneself; itself"}
+{"id": 1854, "en": "bullying; to bully"}
+{"id": 1855, "en": "to praise; to commend"}
+{"id": 1856, "en": "approval; agreement"}
+{"id": 1857, "en": "to wake (someone) up; to stir up"}
+{"id": 1858, "en": "to step on; to tread"}
+{"id": 1859, "en": "road; path"}
+{"id": 1860, "en": "the Great Wall"}
+{"id": 1861, "en": "to open"}
+{"id": 1862, "en": "to implore; to beg; to request earnestly"}
+{"id": 1863, "en": "request; commission; to ask a favor"}
+{"id": 1864, "en": "yellow sand; dust storm"}
+{"id": 1865, "en": "various; all kinds of"}
+{"id": 1866, "en": "after all; in the end; what on earth"}
+{"id": 1867, "en": "how could...; how on earth"}
+{"id": 1868, "en": "bad-tasting; unpalatable"}
+{"id": 1869, "en": "deliberately; intentionally; going out of one's way"}
+{"id": 1870, "en": "warm-up"}
+{"id": 1871, "en": "guest; visitor"}
+{"id": 1872, "en": "coach"}
+{"id": 1873, "en": "potato"}
+{"id": 1874, "en": "solution"}
+{"id": 1875, "en": "chance; opportunity"}
+{"id": 1876, "en": "positive; proactive"}
+{"id": 1877, "en": "mansion; luxury apartment"}
+{"id": 1878, "en": "killing two birds with one stone"}
+{"id": 1879, "en": "budget"}
+{"id": 1880, "en": "life; one's life"}
+{"id": 1881, "en": "health"}
+{"id": 1882, "en": "careful; attentive; meticulous"}
+{"id": 1883, "en": "introverted; shy"}
+{"id": 1884, "en": "encounter; chance meeting"}
+{"id": 1885, "en": "field; domain; area"}
+{"id": 1886, "en": "remarkable; notable; (with negative) particularly"}
+{"id": 1887, "en": "thick"}
+{"id": 1888, "en": "to tell (a lie)"}
+{"id": 1889, "en": "lie; falsehood"}
+{"id": 1890, "en": "dinner; evening meal"}
+{"id": 1891, "en": "dislike; to hate"}
+{"id": 1892, "en": "kindergarten"}
+{"id": 1893, "en": "expansion; enlargement"}
+{"id": 1894, "en": "floor; flooring"}
+{"id": 1895, "en": "to fiddle with; to play with; to toy with"}
+{"id": 1896, "en": "heart (organ)"}
+{"id": 1897, "en": "will; willingness; intent"}
+{"id": 1898, "en": "successful experience; track record of success"}
+{"id": 1899, "en": "strategy"}
+{"id": 1900, "en": "flyer; leaflet; handbill"}
+{"id": 1901, "en": "usually; ordinarily; everyday"}
+{"id": 1902, "en": "to memorize; to learn by heart"}
+{"id": 1903, "en": "rare; precious; appreciated"}
+{"id": 1904, "en": "the person him/herself; the said person"}
+{"id": 1905, "en": "rainy season (tsuyu/baiu)"}
+{"id": 1906, "en": "honest; upright; straightforward"}
+{"id": 1907, "en": "feeling; mood; state of mind"}
+{"id": 1908, "en": "score; points; number of items/cases"}
+{"id": 1909, "en": "profit; benefit; advantage"}
+{"id": 1910, "en": "to force; to compel; to push oneself"}
+{"id": 1911, "en": "enthusiastic; eager; ardent"}
+{"id": 1912, "en": "thing; matter"}
+{"id": 1913, "en": "goal; objective; aim"}
+{"id": 1914, "en": "application; to apply"}
+{"id": 1915, "en": "strange; unusual; abnormal"}
+{"id": 1916, "en": "management; running (a business)"}
+{"id": 1917, "en": "after all; in the end; finally; the final outcome"}
+{"id": 1918, "en": "painting; picture; drawing"}
+{"id": 1919, "en": "field of vision; outlook; perspective"}
+{"id": 1920, "en": "angle; point of view"}
+{"id": 1921, "en": "quality"}
+{"id": 1922, "en": "starting a business; founding a company"}
+{"id": 1923, "en": "direction to move forward; course"}
+{"id": 1924, "en": "lateness; to be late"}
+{"id": 1925, "en": "athlete; player"}
+{"id": 1926, "en": "circumstances; convenience; situation"}
+{"id": 1927, "en": "to be limited to; to restrict"}
+{"id": 1928, "en": "cloud"}
+{"id": 1929, "en": "tableware; dishes"}
+{"id": 1930, "en": "fed up; tired of; enough"}
+{"id": 1931, "en": "high-class; high-grade; advanced"}
+{"id": 1932, "en": "persistently; single-mindedly; intently"}
+{"id": 1933, "en": "career; professional experience"}
+{"id": 1934, "en": "smooth; going well; favorable"}
+{"id": 1935, "en": "slippers"}
+{"id": 1936, "en": "diet; dieting"}
+{"id": 1937, "en": "to list; to enumerate"}
+{"id": 1938, "en": "Washington"}
+{"id": 1939, "en": "two countries; both countries"}
+{"id": 1940, "en": "personnel; human resources"}
+{"id": 1941, "en": "consulting about life problems; life advice"}
+{"id": 1942, "en": "classical literature"}
+{"id": 1943, "en": "to face; to head toward"}
+{"id": 1944, "en": "quarrel; fight; brawl"}
+{"id": 1945, "en": "standard; criterion; basis"}
+{"id": 1946, "en": "staying up late; pulling an all-nighter"}
+{"id": 1947, "en": "big; large"}
+{"id": 1948, "en": "amazing; remarkable; extraordinary"}
+{"id": 1949, "en": "loud voice"}
+{"id": 1950, "en": "employment; getting a job; to inquire (into someone's thoughts and attitude)"}
+{"id": 1951, "en": "to hold up; to open (an umbrella)"}
+{"id": 1952, "en": "to undertake; to accept; to take on"}
+{"id": 1953, "en": "will; volition"}
+{"id": 1954, "en": "longing; yearning; admiration"}
+{"id": 1955, "en": "(fragment) ...degree; extent"}
+{"id": 1956, "en": "designation; nomination; appointing by name"}
+{"id": 1957, "en": "aspect; field; direction"}
+{"id": 1958, "en": "study; den (room)"}
+{"id": 1959, "en": "formal; official"}
+{"id": 1960, "en": "worry; concern; to be anxious about"}
+{"id": 1961, "en": "attention; care; caution; warning"}
+{"id": 1962, "en": "reality"}
+{"id": 1963, "en": "ideal"}
+{"id": 1964, "en": "tatami mat"}
+{"id": 1965, "en": "target; goal"}
+{"id": 1966, "en": "sewing; stitching; embroidery"}
+{"id": 1967, "en": "workplace"}
+{"id": 1968, "en": "mushroom"}
+{"id": 1969, "en": "language"}
+{"id": 1970, "en": "police officer"}
+{"id": 1971, "en": "rich; abundant; plentiful"}
+{"id": 1972, "en": "dance; dancing"}
+{"id": 1973, "en": "body; oneself"}
+{"id": 1974, "en": "to lead; to take along; to be accompanied by"}
+{"id": 1975, "en": "amusement park"}
+{"id": 1976, "en": "development; opening up; reclamation"}
+{"id": 1977, "en": "relationship; connection"}
+{"id": 1978, "en": "recommendation; something recommended; anime"}
+{"id": 1979, "en": "fragrance; aroma"}
+{"id": 1980, "en": "severely; harshly; in a terrible state"}
+{"id": 1981, "en": "just now; a moment ago; unintentionally; absentmindedly"}
+{"id": 1982, "en": "after all; in the end; ultimately"}
+{"id": 1983, "en": "by chance; accidentally; unintentionally"}
+{"id": 1984, "en": "still; as expected; sure enough"}
+{"id": 1985, "en": "idea; thought; notion"}
+{"id": 1986, "en": "installation; to install"}
+{"id": 1987, "en": "collaboration"}
+{"id": 1988, "en": "bag; to wrap; to include"}
+{"id": 1989, "en": "fan; follower"}
+{"id": 1990, "en": "blogger"}
+{"id": 1991, "en": "blog"}
+{"id": 1992, "en": "plan; project; scheme"}
+{"id": 1993, "en": "main point; gist; key point"}
+{"id": 1994, "en": "living alone; solitary life"}
+{"id": 1995, "en": "skillful; clever; ingenious"}
+{"id": 1996, "en": "decline; downturn (of figures, etc.)"}
+{"id": 1997, "en": "death; passing away"}
+{"id": 1998, "en": "talent; capable person; human resources"}
+{"id": 1999, "en": "character; personality (moral quality)"}
+{"id": 2000, "en": "corporate strategy; business strategy"}
+{"id": 2001, "en": "proposal; planning document"}
+{"id": 2002, "en": "to create a proposal/planning document"}
+{"id": 2003, "en": "proposal; project plan"}
+{"id": 2004, "en": "gathering; group; assembly"}
+{"id": 2005, "en": "president; chairman (of a group)"}
+{"id": 2006, "en": "anyway; in any case; whichever"}
+{"id": 2007, "en": "custom; precedent; example"}
+{"id": 2008, "en": "adventure"}
+{"id": 2009, "en": "disposal; handling; punishment; measure"}
+{"id": 2010, "en": "creativity"}
+{"id": 2011, "en": "friend"}
+{"id": 2012, "en": "succession; inheritance; to succeed to"}
+{"id": 2013, "en": "quarrel; argument"}
+{"id": 2014, "en": "pitiful; poor"}
+{"id": 2015, "en": "sold out; out of stock"}
+{"id": 2016, "en": "disorder; malfunction; out of order"}
+{"id": 2017, "en": "student council; student union"}
+{"id": 2018, "en": "fruit; nut; berry"}
+{"id": 2019, "en": "running away from home"}
+{"id": 2020, "en": "postponement; delay"}
+{"id": 2021, "en": "war"}
+{"id": 2022, "en": "to hit; to strike; to fight"}
+{"id": 2023, "en": "in the final analysis; after all; when all is said and done"}
+{"id": 2024, "en": "(unfortunate) end result; in the end"}
+{"id": 2025, "en": "adoption; hiring; acceptance"}
+{"id": 2026, "en": "to be complete; to be all in place"}
+{"id": 2027, "en": "to provide; to offer"}
+{"id": 2028, "en": "freedom; without restrictions"}
+{"id": 2029, "en": "newcomer; new member"}
+{"id": 2030, "en": "newly released (product)"}
+{"id": 2031, "en": "husband; master; lord"}
+{"id": 2032, "en": "business conditions; market conditions"}
+{"id": 2033, "en": "update; renewal"}
+{"id": 2034, "en": "document; file"}
+{"id": 2035, "en": "expectation; anticipation"}
+{"id": 2036, "en": "material; ingredients"}
+{"id": 2037, "en": "outcome; (bad) end; fate"}
+{"id": 2038, "en": "flexibility"}
+{"id": 2039, "en": "unexpected; unforeseen"}
+{"id": 2040, "en": "murder; killing"}
+{"id": 2041, "en": "Asakusa (district of Tokyo)"}
+{"id": 2042, "en": "condition; state of affairs"}
+{"id": 2043, "en": "one's own; unique; original"}
+{"id": 2044, "en": "single; unmarried"}
+{"id": 2045, "en": "worksite; workshop; scene"}
+{"id": 2046, "en": "theft; burglary"}
+{"id": 2047, "en": "inside the company; in-house"}
+{"id": 2048, "en": "congratulation; celebratory gift"}
+{"id": 2049, "en": "establishment; formulation; to draw up"}
+{"id": 2050, "en": "unification; agreement; settlement"}
+{"id": 2051, "en": "long-established shop; old and reputable store"}
+{"id": 2052, "en": "viewpoint; perspective; angle"}
+{"id": 2053, "en": "news; report; information"}
+{"id": 2054, "en": "proverb; saying"}
+{"id": 2055, "en": "nearby; neighborhood; neighbor"}
+{"id": 2056, "en": "power to move people; emotional impact"}
+{"id": 2057, "en": "dropping out of school; withdrawal from school"}
+{"id": 2058, "en": "to pass through; to go through"}
+{"id": 2059, "en": "iron"}
+{"id": 2060, "en": "long time; for hours"}
+{"id": 2061, "en": "opening a shop; starting a business"}
+{"id": 2062, "en": "to start raining; to begin to fall (rain)"}
+{"id": 2063, "en": "complexion; look on one's face"}
+{"id": 2064, "en": "drinking party; banquet; dinner gathering"}
+{"id": 2065, "en": "high price; expensive"}
+{"id": 2066, "en": "microphone"}
+{"id": 2067, "en": "careless; absent-minded; blundering"}
+{"id": 2068, "en": "to find interesting; to feel amused"}
+{"id": 2069, "en": "snack; sweets; confectionery"}
+{"id": 2070, "en": "to shine; to sparkle; to glitter"}
+{"id": 2071, "en": "boring; worthless; trivial"}
+{"id": 2072, "en": "this kind of; such; like this"}
+{"id": 2073, "en": "firm; solid; steady; thorough"}
+{"id": 2074, "en": "roughly; generally; mostly"}
+{"id": 2075, "en": "University students have many / quite a few opportunities to take part in internships."}
+{"id": 2076, "en": "announcer"}
+{"id": 2077, "en": "allergy"}
+{"id": 2078, "en": "soccer field; football ground"}
+{"id": 2079, "en": "speed"}
+{"id": 2080, "en": "demonstration; presentation"}
+{"id": 2081, "en": "recipe"}
+{"id": 2082, "en": "one by one; in detail; all; everything"}
+{"id": 2083, "en": "everything; (with negative) at all"}
+{"id": 2084, "en": "one night; one evening"}
+{"id": 2085, "en": "independent; autonomous; self-directed"}
+{"id": 2086, "en": "passenger"}
+{"id": 2087, "en": "transportation; traffic"}
+{"id": 2088, "en": "in public; in front of others"}
+{"id": 2089, "en": "from now on; in the future"}
+{"id": 2090, "en": "tradition"}
+{"id": 2091, "en": "to spread out; to extend; to stretch"}
+{"id": 2092, "en": "sports; physical education"}
+{"id": 2093, "en": "surplus; extra; all the more"}
+{"id": 2094, "en": "to urge; to press; to demand"}
+{"id": 2095, "en": "recollection; reminiscence; association (of ideas)"}
+{"id": 2096, "en": "anyway; in any case; at any rate"}
+{"id": 2097, "en": "beginner"}
+{"id": 2098, "en": "(with negative) ...at all; no matter how..."}
+{"id": 2099, "en": "strength; power; force"}
+{"id": 2100, "en": "kitchen knife; cleaver"}
+{"id": 2101, "en": "South America"}
+{"id": 2102, "en": "danger"}
+{"id": 2103, "en": "egg"}
+{"id": 2104, "en": "auditor; person attending a lecture"}
+{"id": 2105, "en": "to interrupt; to cut in (on a conversation)"}
+{"id": 2106, "en": "to scold; to reprimand; to rebuke"}
+{"id": 2107, "en": "order; command"}
+{"id": 2108, "en": "to dislike; to detest; to shun"}
+{"id": 2109, "en": "learning; study; scholarship"}
+{"id": 2110, "en": "experiment"}
+{"id": 2111, "en": "home economics (school subject)"}
+{"id": 2112, "en": "future; the future ahead"}
+{"id": 2113, "en": "to exert (one's efforts); to serve; to devote oneself"}
+{"id": 2114, "en": "to do one's best; to make an effort"}
+{"id": 2115, "en": "ingenuity; device; contrivance"}
+{"id": 2116, "en": "seat; one's place"}
+{"id": 2117, "en": "to set off; to enhance; to promote; to look after"}
+{"id": 2118, "en": "compulsory; coercive; forced"}
+{"id": 2119, "en": "to recall; to remember"}
+{"id": 2120, "en": "intention; plan; idea"}
+{"id": 2121, "en": "nostalgic; fondly remembered"}
+{"id": 2122, "en": "guidance; instruction; leadership"}
+{"id": 2123, "en": "to be caught; to be captured; to be arrested"}
+{"id": 2124, "en": "to support; to sustain; to back"}
+{"id": 2125, "en": "education"}
+{"id": 2126, "en": "scattered; in disarray; messy"}
+{"id": 2127, "en": "sentence; writing; composition"}
+{"id": 2128, "en": "character; letter; writing"}
+{"id": 2129, "en": "cheerful; bright; sunny"}
+{"id": 2130, "en": "worry; anxiety; concern"}
+{"id": 2131, "en": "examination; study; discussion"}
+{"id": 2132, "en": "mark; sign; logo"}
+{"id": 2133, "en": "Yokohama"}
+{"id": 2134, "en": "kabuki (traditional Japanese theater)"}
+{"id": 2135, "en": "regrettable; frustrating; vexing"}
+{"id": 2136, "en": "burn; scald"}
+{"id": 2137, "en": "to ignore; to disregard"}
+{"id": 2138, "en": "noisy; boisterous"}
+{"id": 2139, "en": "tidying up; putting in order; settlement"}
+{"id": 2140, "en": "loose; lax; lenient; sweet"}
+{"id": 2141, "en": "childbirth; delivery; to produce"}
+{"id": 2142, "en": "to differ; to be different"}
+{"id": 2143, "en": "dizziness; vertigo"}
+{"id": 2144, "en": "to stand out; to attract attention"}
+{"id": 2145, "en": "complete opposite"}
+{"id": 2146, "en": "secret"}
+{"id": 2147, "en": "assembly; to assemble"}
+{"id": 2148, "en": "result; outcome"}
+{"id": 2149, "en": "fine; penalty"}
+{"id": 2150, "en": "steamed meat bun (nikuman)"}
+{"id": 2151, "en": "crucial; extremely important"}
+{"id": 2152, "en": "knee"}
+{"id": 2153, "en": "pride; self-satisfaction; conceit"}
+{"id": 2154, "en": "to show off; to boast; to flaunt"}
+{"id": 2155, "en": "care; watching over; watching with concern"}
+{"id": 2156, "en": "instruction manual; directions"}
+{"id": 2157, "en": "humility; modesty"}
+{"id": 2158, "en": "lack of exercise"}
+{"id": 2159, "en": "driver"}
+{"id": 2160, "en": "too small; underestimate"}
+{"id": 2161, "en": "underestimation; undervaluing"}
+{"id": 2162, "en": "violation; breach; infringement"}
+{"id": 2163, "en": "important"}
+{"id": 2164, "en": "to be interested (in)"}
+{"id": 2165, "en": "divorce"}
+{"id": 2166, "en": "neck; head; (one's) job/position"}
+{"id": 2167, "en": "to be fired; to be dismissed"}
+{"id": 2168, "en": "silence; to remain silent"}
+{"id": 2169, "en": "how; in what way"}
+{"id": 2170, "en": "honorific form of 行く・来る・いる"}
+{"id": 2171, "en": "honorific form of 行く・来る"}
+{"id": 2172, "en": "a moment; a short while"}
+{"id": 2173, "en": "to meet at an appointed time"}
+{"id": 2174, "en": "intern"}
+{"id": 2175, "en": "cup noodles; instant ramen in a cup"}
+{"id": 2176, "en": "big data"}
+{"id": 2177, "en": "to follow; to accompany; to go along with"}
+{"id": 2178, "en": "brand; trademark"}
+{"id": 2179, "en": "briefing; brief report"}
+{"id": 2180, "en": "a moment; an instant"}
+{"id": 2181, "en": "as soon as possible; at the earliest"}
+{"id": 2182, "en": "everyone; everybody; all"}
+{"id": 2183, "en": "more and more; on the other hand"}
+{"id": 2184, "en": "general; ordinary; common"}
+{"id": 2185, "en": "decline; fall; descent"}
+{"id": 2186, "en": "honorific form of くれる"}
+{"id": 2187, "en": "recession; business slump; depression"}
+{"id": 2188, "en": "negotiation; bargaining"}
+{"id": 2189, "en": "people; everyone"}
+{"id": 2190, "en": "before the Buddha; in front of a Buddhist image"}
+{"id": 2191, "en": "generation; lineage"}
+{"id": 2192, "en": "more than; exceeding; since; now that"}
+{"id": 2193, "en": "honorific form of 言う; honorific form of 食べる・飲む"}
+{"id": 2194, "en": "to entrust; to leave (to someone); to leave as is"}
+{"id": 2195, "en": "planning; plan; project"}
+{"id": 2196, "en": "to accompany; to go along with; as...; with..."}
+{"id": 2197, "en": "humble form of 聞く (and similar verbs)"}
+{"id": 2198, "en": "to suit; to match; to be worthy of"}
+{"id": 2199, "en": "low price"}
+{"id": 2200, "en": "to master; to become proficient in"}
+{"id": 2201, "en": "disposable; single-use (item)"}
+{"id": 2202, "en": "guardian"}
+{"id": 2203, "en": "signal; traffic light"}
+{"id": 2204, "en": "the other party; the opponent"}
+{"id": 2205, "en": "line; queue; row"}
+{"id": 2206, "en": "first-time participation"}
+{"id": 2207, "en": "to found; to start (a business); to launch"}
+{"id": 2208, "en": "doctor; PhD; expert"}
+{"id": 2209, "en": "humble form of 行く・来る"}
+{"id": 2210, "en": "participating country"}
+{"id": 2211, "en": "collection; to gather"}
+{"id": 2212, "en": "to pick up; to accept; to take up"}
+{"id": 2213, "en": "introduction; adoption; bringing in"}
+{"id": 2214, "en": "word; language"}
+{"id": 2215, "en": "possibility"}
+{"id": 2216, "en": "aimed at...; geared toward..."}
+{"id": 2217, "en": "to taste; to sample"}
+{"id": 2218, "en": "Japanese style"}
+{"id": 2219, "en": "article; goods; ...product"}
+{"id": 2220, "en": "change; variation"}
+{"id": 2221, "en": "change; alteration; modification"}
+{"id": 2222, "en": "reform; transformation"}
+{"id": 2223, "en": "divergence; many branches; ranging over many aspects"}
+{"id": 2224, "en": "night owl"}
+{"id": 2225, "en": "astronomy"}
+{"id": 2226, "en": "natural; nature"}
+{"id": 2227, "en": "to think; to believe; to know"}
+{"id": 2228, "en": "grandchild"}
+{"id": 2229, "en": "actual business; practical work"}
+{"id": 2230, "en": "actual results; achievements; track record"}
+{"id": 2231, "en": "temple"}
+{"id": 2232, "en": "declining birthrate and aging population"}
+{"id": 2233, "en": "job-hunting (abbreviation of 就職活動)"}
+{"id": 2234, "en": "equality"}
+{"id": 2235, "en": "age group; age bracket"}
+{"id": 2236, "en": "expansion; spread; extension"}
+{"id": 2237, "en": "publicity; coverage; reporting"}
+{"id": 2238, "en": "strong point; merit; advantage"}
+{"id": 2239, "en": "to follow; to obey; in accordance with; as..."}
+{"id": 2240, "en": "to be granted; to be blessed with; to receive"}
+{"id": 2241, "en": "we; us"}
+{"id": 2242, "en": "my; our"}
+{"id": 2243, "en": "to join forces; to team up"}
+{"id": 2244, "en": "technology; skill; technique"}
+{"id": 2245, "en": "person in charge; to be in charge of"}
+{"id": 2246, "en": "humble form of 見る"}
+{"id": 2247, "en": "humble form of 読む"}
+{"id": 2248, "en": "mystery novel; detective fiction"}
+{"id": 2249, "en": "number; count; amount"}
+{"id": 2250, "en": "to be complete; to be achieved; to be fulfilled"}
+{"id": 2251, "en": "brand-new; completely new"}
+{"id": 2252, "en": "Japanese inn (ryokan)"}
+{"id": 2253, "en": "timetable; schedule"}
+{"id": 2254, "en": "spread; popularization; diffusion"}
+{"id": 2255, "en": "scenery; view"}
+{"id": 2256, "en": "life; living; livelihood"}
+{"id": 2257, "en": "to finish writing; to complete writing"}
+{"id": 2258, "en": "advantageous; profitable; favorable"}
+{"id": 2259, "en": "main topic; main issue"}
+{"id": 2260, "en": "stock price; share price"}
+{"id": 2261, "en": "matter; case; proposal (for discussion)"}
+{"id": 2262, "en": "plum (tree); deciduous tree of the rose family"}
+{"id": 2263, "en": "standard (abbreviation-related fragment: 就職活動, job hunting)"}
+{"id": 2264, "en": "model; type (of machine)"}
+{"id": 2265, "en": "yawn"}
+{"id": 2266, "en": "comparatively; relatively"}
+{"id": 2267, "en": "to be pleased with; to be to one's liking"}
+{"id": 2268, "en": "Edo period"}
+{"id": 2269, "en": "law; legislation"}
+{"id": 2270, "en": "utilization; application; use"}
+{"id": 2271, "en": "activity; playing an active role; active participation"}
+{"id": 2272, "en": "trend; current; flow"}
+{"id": 2273, "en": "becoming more serious; aggravation; intensification"}
+{"id": 2274, "en": "hot spring; onsen"}
+{"id": 2275, "en": "hot water; hot spring"}
+{"id": 2276, "en": "honorific form of する"}
+{"id": 2277, "en": "physics"}
+{"id": 2278, "en": "especially; particularly; above all"}
+{"id": 2279, "en": "humble form of 言う"}
+{"id": 2280, "en": "departure (of a train); starting (a vehicle)"}
+{"id": 2281, "en": "development; growth"}
+{"id": 2282, "en": "gray/white hair"}
+{"id": 2283, "en": "wrinkle"}
+{"id": 2284, "en": "monitoring; surveillance; watching"}
+{"id": 2285, "en": "monitoring group; watchdog organization"}
+{"id": 2286, "en": "target; aim; objective"}
+{"id": 2287, "en": "opponent; rival; the other party"}
+{"id": 2288, "en": "sumo wrestling"}
+{"id": 2289, "en": "view; lookout; gazing into the distance"}
+{"id": 2290, "en": "to show; to present; to display"}
+{"id": 2291, "en": "prayer; wish; to pray"}
+{"id": 2292, "en": "to face; to deal with; to cope with"}
+{"id": 2293, "en": "competition"}
+{"id": 2294, "en": "understanding; consent; acceptance; acknowledgment"}
+{"id": 2295, "en": "material; ingredient; subject matter"}
+{"id": 2296, "en": "to intersect; to be intertwined"}
+{"id": 2297, "en": "incense stick"}
+{"id": 2298, "en": "reduction; downsizing; cutback"}
+{"id": 2299, "en": "humble form of する"}
+{"id": 2300, "en": "product; manufactured goods"}
+{"id": 2301, "en": "knack; trick; essentials; know-how"}
+{"id": 2302, "en": "counting; total; tally"}
+{"id": 2303, "en": "visit; access; to call on"}
+{"id": 2304, "en": "trial; attempt; to try out"}
+{"id": 2305, "en": "consultation; discussion; negotiation"}
+{"id": 2306, "en": "pride; to boast of; outstanding; to excel"}
+{"id": 2307, "en": "contribution"}
+{"id": 2308, "en": "advance; progress; moving forward"}
+{"id": 2309, "en": "promotion; advancement; to push forward"}
+{"id": 2310, "en": "progress; advancement"}
+{"id": 2311, "en": "election"}
+{"id": 2312, "en": "assignment; posting; allocation (to a department)"}
+{"id": 2313, "en": "long-term; long period"}
+{"id": 2314, "en": "long snake; something snake-like"}
+{"id": 2315, "en": "to open; to unlock"}
+{"id": 2316, "en": "demand; needs"}
+{"id": 2317, "en": "hope; request; prayer; earnest wish"}
+{"id": 2318, "en": "leader; head (of state); chief"}
+{"id": 2319, "en": "fragrance; aroma; scent"}
+{"id": 2320, "en": "to deceive; to cheat; to trick"}
+{"id": 2321, "en": "rise; height; upsurge"}
+{"id": 2322, "en": "high quality"}
+{"id": 2323, "en": "suddenly; abruptly; without warning"}
+{"id": 2324, "en": "even; (not) even; up to"}
+{"id": 2325, "en": "now; at once; immediately"}
+{"id": 2326, "en": "however; but; only"}
+{"id": 2327, "en": "occasionally; sometimes"}
+{"id": 2328, "en": "finally; at last"}
+{"id": 2329, "en": "(humble plural suffix) we; ...and others (humble)"}
+{"id": 2330, "en": "image; impression"}
+{"id": 2331, "en": "eco-bag; reusable shopping bag"}
+{"id": 2332, "en": "energy"}
+{"id": 2333, "en": "area; region; district"}
+{"id": 2334, "en": "Olympic Games"}
+{"id": 2335, "en": "cost; price"}
+{"id": 2336, "en": "copy; duplication"}
+{"id": 2337, "en": "control"}
+{"id": 2338, "en": "support; assistance; backing"}
+{"id": 2339, "en": "(TV) drama series; serial drama"}
+{"id": 2340, "en": "platform"}
+{"id": 2341, "en": "presentation; announcement; display"}
+{"id": 2342, "en": "merit; advantage; good point; achievement"}
+{"id": 2343, "en": "rival; competitor"}
+{"id": 2344, "en": "rebranding"}
+{"id": 2345, "en": "relaxation; to relax"}
+{"id": 2346, "en": "first-class; top-notch; first-rate"}
+{"id": 2347, "en": "a word; a single remark; a few words"}
+{"id": 2348, "en": "to go up; to climb; to rise"}
+{"id": 2349, "en": "to make; to issue; to hand down; to embark on"}
+{"id": 2350, "en": "house; home; family"}
+{"id": 2351, "en": "small and medium-sized (enterprises)"}
+{"id": 2352, "en": "interruption; suspension; discontinuation"}
+{"id": 2353, "en": "understanding; consent; agreement"}
+{"id": 2354, "en": "business; enterprise; undertaking"}
+{"id": 2355, "en": "structure; construction"}
+{"id": 2356, "en": "subject line (of an email); title of a message"}
+{"id": 2357, "en": "to entrust; to leave in someone's care"}
+{"id": 2358, "en": "please; by all means"}
+{"id": 2359, "en": "production; making; creation"}
+{"id": 2360, "en": "to combine; to add together; to merge"}
+{"id": 2361, "en": "use; to use"}
+{"id": 2362, "en": "safekeeping; custody; storage"}
+{"id": 2363, "en": "repair; fixing"}
+{"id": 2364, "en": "personal information"}
+{"id": 2365, "en": "stagnation; standstill"}
+{"id": 2366, "en": "just now; a moment ago"}
+{"id": 2367, "en": "to resume; to start again; resumption"}
+{"id": 2368, "en": "joke"}
+{"id": 2369, "en": "judgment; decision"}
+{"id": 2370, "en": "profit; benefit; interest"}
+{"id": 2371, "en": "forward-looking; positive"}
+{"id": 2372, "en": "effect; effectiveness"}
+{"id": 2373, "en": "graduate; alumnus"}
+{"id": 2374, "en": "the Antarctic; South Pole"}
+{"id": 2375, "en": "seal; stamp"}
+{"id": 2376, "en": "various countries; each country"}
+{"id": 2377, "en": "various places; everywhere"}
+{"id": 2378, "en": "to adapt; to suit; to conform to"}
+{"id": 2379, "en": "prestigious school; famous school"}
+{"id": 2380, "en": "consultation; inquiry"}
+{"id": 2381, "en": "citizen; the people; national"}
+{"id": 2382, "en": "region; locality; district"}
+{"id": 2383, "en": "to be buried; to be hidden"}
+{"id": 2384, "en": "based on; in accordance with"}
+{"id": 2385, "en": "news report; coverage"}
+{"id": 2386, "en": "large enterprise; big company"}
+{"id": 2387, "en": "to lose; to be deprived of"}
+{"id": 2388, "en": "contract"}
+{"id": 2389, "en": "space; the universe"}
+{"id": 2390, "en": "delivery address; recipient's address"}
+{"id": 2391, "en": "practice; implementation; to carry out"}
+{"id": 2392, "en": "suspect"}
+{"id": 2393, "en": "response; handling; dealing with; correspondence"}
+{"id": 2394, "en": "outlook; prospect; view"}
+{"id": 2395, "en": "(fragment) ...road"}
+{"id": 2396, "en": "sender (of mail)"}
+{"id": 2397, "en": "building site; land for construction"}
+{"id": 2398, "en": "our company (humble, prefixed with お)"}
+{"id": 2399, "en": "to become strong; to intensify"}
+{"id": 2400, "en": "emphasis; stress"}
+{"id": 2401, "en": "natural; matter-of-course; taken for granted"}
+{"id": 2402, "en": "afterwards; later; at a later date"}
+{"id": 2403, "en": "up to now; all along; in the past"}
+{"id": 2404, "en": "to be careful; to pay attention; to keep in mind"}
+{"id": 2405, "en": "abuse; misuse; use for a bad purpose"}
+{"id": 2406, "en": "information management"}
+{"id": 2407, "en": "consciousness; awareness; to be aware of"}
+{"id": 2408, "en": "handmade; homemade; to make by oneself"}
+{"id": 2409, "en": "to know; to understand; to be aware of"}
+{"id": 2410, "en": "vote; voting; ballot"}
+{"id": 2411, "en": "expansion; enlargement"}
+{"id": 2412, "en": "proposal; suggestion"}
+{"id": 2413, "en": "written proposal; proposal document"}
+{"id": 2414, "en": "breakdown; failure; accident; trouble"}
+{"id": 2415, "en": "policy; guideline; course"}
+{"id": 2416, "en": "sunlight; sunshine"}
+{"id": 2417, "en": "schedule; itinerary"}
+{"id": 2418, "en": "leaving early; leaving before time"}
+{"id": 2419, "en": "clear; obvious; evident"}
+{"id": 2420, "en": "for a while; for a moment; temporarily"}
+{"id": 2421, "en": "already (at this point); (by) now"}
+{"id": 2422, "en": "place of origin; authentic; genuine"}
+{"id": 2423, "en": "head office; headquarters"}
+{"id": 2424, "en": "business; operations; work duties"}
+{"id": 2425, "en": "outline; summary; overview"}
+{"id": 2426, "en": "composition; structure; organization"}
+{"id": 2427, "en": "one after another; in succession"}
+{"id": 2428, "en": "care; caution; attention"}
+{"id": 2429, "en": "along; in accordance with; following"}
+{"id": 2430, "en": "lodging; staying overnight; anchoring"}
+{"id": 2431, "en": "order; request; placing an order"}
+{"id": 2432, "en": "tsunami"}
+{"id": 2433, "en": "effective use; utilization"}
+{"id": 2434, "en": "consumer"}
+{"id": 2435, "en": "to attach; to add; to append"}
+{"id": 2436, "en": "mountain stream; brook"}
+{"id": 2437, "en": "warmth"}
+{"id": 2438, "en": "greenhouse effect; global warming"}
+{"id": 2439, "en": "lake"}
+{"id": 2440, "en": "stay; sojourn; temporary residence"}
+{"id": 2441, "en": "disaster; calamity"}
+{"id": 2442, "en": "current situation; present state"}
+{"id": 2443, "en": "survival; surviving; remaining"}
+{"id": 2444, "en": "humble form of 言う"}
+{"id": 2445, "en": "excuse; explanation; justification"}
+{"id": 2446, "en": "application form; written application"}
+{"id": 2447, "en": "purpose; objective"}
+{"id": 2448, "en": "securing; ensuring; guarantee"}
+{"id": 2449, "en": "no smoking; giving up smoking"}
+{"id": 2450, "en": "first-person pronoun more formal than わたし"}
+{"id": 2451, "en": "science and technology"}
+{"id": 2452, "en": "arena; stadium"}
+{"id": 2453, "en": "saving; economizing; conservation"}
+{"id": 2454, "en": "to build; to construct; to complete"}
+{"id": 2455, "en": "superb; splendid; excellent"}
+{"id": 2456, "en": "economic strength; economic power"}
+{"id": 2457, "en": "crime; sin; guilt"}
+{"id": 2458, "en": "signature"}
+{"id": 2459, "en": "stiff shoulders; shoulder ache"}
+{"id": 2460, "en": "background"}
+{"id": 2461, "en": "conceit; pride; overconfidence"}
+{"id": 2462, "en": "calmness; composure; stability"}
+{"id": 2463, "en": "damage; harm; loss"}
+{"id": 2464, "en": "record; description; entry (in writing)"}
+{"id": 2465, "en": "equipment; facilities"}
+{"id": 2466, "en": "fraud; scam; swindle"}
+{"id": 2467, "en": "details; detailed circumstances; detailed"}
+{"id": 2468, "en": "recognition; acknowledgment; approval"}
+{"id": 2469, "en": "fragrance blending; perfumery"}
+{"id": 2470, "en": "riddle; puzzle"}
+{"id": 2471, "en": "(fragment) honorific form of (...る)"}
+{"id": 2472, "en": "arrest; capture"}
+{"id": 2473, "en": "excess; surplus"}
+{"id": 2474, "en": "appropriate; proper; suitable"}
+{"id": 2475, "en": "ruins; historic site; remains"}
+{"id": 2476, "en": "part; portion; section"}
+{"id": 2477, "en": "department; division; section"}
+{"id": 2478, "en": "illusion; misconception; misperception"}
+{"id": 2479, "en": "many years; for years"}
+{"id": 2480, "en": "to hold (an event); to convene; holding"}
+{"id": 2481, "en": "soon; before long; in a little while"}
+{"id": 2482, "en": "related to; concerning; regarding"}
+{"id": 2483, "en": "order; sequence; procedure"}
+{"id": 2484, "en": "headache"}
+{"id": 2485, "en": "height; altitude; degree"}
+{"id": 2486, "en": "(fragment) ...etc."}
+{"id": 2487, "en": "opposite to...; facing...; as opposed to"}
+{"id": 2488, "en": "what kind of; how"}
+{"id": 2489, "en": "mutually; each other"}
+{"id": 2490, "en": "therefore; consequently; so"}
+{"id": 2491, "en": "each; respective"}
+{"id": 2492, "en": "even if; even though; supposing"}
+{"id": 2493, "en": "to hit; to bump into; to collide"}
+{"id": 2494, "en": "(colloquial) real; genuine; serious"}
+{"id": 2495, "en": "increasingly; more and more; all the more"}
+{"id": 2496, "en": "enthusiasm; motivation; drive"}
+{"id": 2497, "en": "assertive; positive; declarative"}
+{"id": 2498, "en": "care; nursing; looking after"}
+{"id": 2499, "en": "partner; pairing; teamwork"}
+{"id": 2500, "en": "skill; technique; nonverbal (expressions, gestures, etc.)"}
+{"id": 2501, "en": "Leonardo da Vinci"}
+{"id": 2502, "en": "part-time worker; temporary worker"}
+{"id": 2503, "en": "huge popularity; big hit"}
+{"id": 2504, "en": "Florence"}
+{"id": 2505, "en": "mangrove"}
+{"id": 2506, "en": "manpower; human labor"}
+{"id": 2507, "en": "mistake; error; miss"}
+{"id": 2508, "en": "Milan"}
+{"id": 2509, "en": "radio; radio broadcast"}
+{"id": 2510, "en": "risk; danger"}
+{"id": 2511, "en": "leader; lead (line); guide"}
+{"id": 2512, "en": "logical"}
+{"id": 2513, "en": "Verrocchio"}
+{"id": 2514, "en": "one by one; individually; in detail"}
+{"id": 2515, "en": "fixed rule; stipulation; regularity"}
+{"id": 2516, "en": "single layer; one story"}
+{"id": 2517, "en": "refined; elegant; tasteful"}
+{"id": 2518, "en": "to exceed; to surpass"}
+{"id": 2519, "en": "rise; ascent; increase"}
+{"id": 2520, "en": "the above; aforementioned"}
+{"id": 2521, "en": "indispensable; essential"}
+{"id": 2522, "en": "and; moreover; furthermore"}
+{"id": 2523, "en": "central; main"}
+{"id": 2524, "en": "claim; assertion; opinion; view"}
+{"id": 2525, "en": "double; dual; twofold"}
+{"id": 2526, "en": "each other; mutually"}
+{"id": 2527, "en": "exchange; interaction; communication"}
+{"id": 2528, "en": "personality; character"}
+{"id": 2529, "en": "human being; mankind"}
+{"id": 2530, "en": "goods; article; ...product"}
+{"id": 2531, "en": "membership fee; dues"}
+{"id": 2532, "en": "positioning; establishing one's position"}
+{"id": 2533, "en": "resident; inhabitant"}
+{"id": 2534, "en": "each; every; respective"}
+{"id": 2535, "en": "excellent; outstanding; superior"}
+{"id": 2536, "en": "sharing; common possession"}
+{"id": 2537, "en": "to combine (qualities); to possess both"}
+{"id": 2538, "en": "smooth; harmonious; going well"}
+{"id": 2539, "en": "calm; cool-headed; composed"}
+{"id": 2540, "en": "sharpness; cutting edge (of a blade)"}
+{"id": 2541, "en": "mutual improvement; polishing one's skills together; friendly rivalry"}
+{"id": 2542, "en": "in accordance with; based on; following"}
+{"id": 2543, "en": "earlier work; previous work"}
+{"id": 2544, "en": "effective; valid"}
+{"id": 2545, "en": "animal"}
+{"id": 2546, "en": "continuous work; consecutive service"}
+{"id": 2547, "en": "years of service; length of employment"}
+{"id": 2548, "en": "medicine; pharmaceutical products"}
+{"id": 2549, "en": "half; one half"}
+{"id": 2550, "en": "ping-pong; table tennis"}
+{"id": 2551, "en": "adaptation; adjustment; fitting together"}
+{"id": 2552, "en": "cause; reason"}
+{"id": 2553, "en": "both sides; both parties"}
+{"id": 2554, "en": "gathering material; interviewing; coverage"}
+{"id": 2555, "en": "whether or not; right or wrong; propriety"}
+{"id": 2556, "en": "mutual agreement; consent"}
+{"id": 2557, "en": "same kind of relationship"}
+{"id": 2558, "en": "alumni reunion; class reunion"}
+{"id": 2559, "en": "no; nay; negation"}
+{"id": 2560, "en": "denial; negation"}
+{"id": 2561, "en": "inclusion; to include; to contain"}
+{"id": 2562, "en": "loss; forfeiture"}
+{"id": 2563, "en": "resilience; restorative power"}
+{"id": 2564, "en": "group; organization; association"}
+{"id": 2565, "en": "to devise; to contrive; to plan"}
+{"id": 2566, "en": "international"}
+{"id": 2567, "en": "land price"}
+{"id": 2568, "en": "to fill up; to fill in; to occupy completely"}
+{"id": 2569, "en": "basic; fundamental"}
+{"id": 2570, "en": "tax increase"}
+{"id": 2571, "en": "sales; sales amount; turnover"}
+{"id": 2572, "en": "appearance; exterior; outward look"}
+{"id": 2573, "en": "diversity"}
+{"id": 2574, "en": "being absorbed in; addiction; craze"}
+{"id": 2575, "en": "great popularity; wild enthusiasm"}
+{"id": 2576, "en": "minister (of state)"}
+{"id": 2577, "en": "hope; wish; preference; to desire"}
+{"id": 2578, "en": "how; in what way; what...like"}
+{"id": 2579, "en": "religion"}
+{"id": 2580, "en": "to decide; to establish; to settle; determination"}
+{"id": 2581, "en": "actual state; real conditions"}
+{"id": 2582, "en": "wealthy class; affluent segment"}
+{"id": 2583, "en": "deliberation; consideration"}
+{"id": 2584, "en": "temple"}
+{"id": 2585, "en": "respect; esteem"}
+{"id": 2586, "en": "to control; to influence; to sway; left and right"}
+{"id": 2587, "en": "teacher; master"}
+{"id": 2588, "en": "calm; indifferent; unconcerned; composed"}
+{"id": 2589, "en": "number of years; years"}
+{"id": 2590, "en": "one year; whole year"}
+{"id": 2591, "en": "Hiroshima"}
+{"id": 2592, "en": "exchange; conversion; to exchange"}
+{"id": 2593, "en": "retirement; withdrawal (from work/public life)"}
+{"id": 2594, "en": "to become an apprentice; to study under a master"}
+{"id": 2595, "en": "hospitality; treatment; reception"}
+{"id": 2596, "en": "microorganism; microbe"}
+{"id": 2597, "en": "psychology"}
+{"id": 2598, "en": "mind and body"}
+{"id": 2599, "en": "applied ability; practical skills"}
+{"id": 2600, "en": "laziness; idleness; sloth"}
+{"id": 2601, "en": "intention; aim"}
+{"id": 2602, "en": "getting emotional; being swayed by emotions"}
+{"id": 2603, "en": "prudence; caution; carefulness"}
+{"id": 2604, "en": "ingredient; component; constituent"}
+{"id": 2605, "en": "method; procedure; way of doing"}
+{"id": 2606, "en": "suppression; repression; oppression"}
+{"id": 2607, "en": "investment"}
+{"id": 2608, "en": "investment trust; mutual fund"}
+{"id": 2609, "en": "spur; をかける: to spur on; to accelerate; to give impetus"}
+{"id": 2610, "en": "direction; aim; fellow; mutual (indicates a shared relationship)"}
+{"id": 2611, "en": "presentation; showing; producing (a document)"}
+{"id": 2612, "en": "exploitation; squeezing"}
+{"id": 2613, "en": "support; backing; upholding"}
+{"id": 2614, "en": "obstacle; hindrance; が出る: an obstacle arises"}
+{"id": 2615, "en": "reform"}
+{"id": 2616, "en": "help; rescue; aid"}
+{"id": 2617, "en": "educational expenses"}
+{"id": 2618, "en": "clarity; lucidity; refreshing"}
+{"id": 2619, "en": "exposure; to expose; to be exposed to"}
+{"id": 2620, "en": "trend toward late marriage"}
+{"id": 2621, "en": "landscape; scenery"}
+{"id": 2622, "en": "again; once more; even more"}
+{"id": 2623, "en": "ordinance; regulation; bylaw"}
+{"id": 2624, "en": "judo"}
+{"id": 2625, "en": "stock; share; market price"}
+{"id": 2626, "en": "plant; vegetation"}
+{"id": 2627, "en": "functional; efficient"}
+{"id": 2628, "en": "to lack; to be missing; shortage"}
+{"id": 2629, "en": "lack; shortage; deficiency"}
+{"id": 2630, "en": "next term; second half (of a period)"}
+{"id": 2631, "en": "noon; midday; 12 o'clock"}
+{"id": 2632, "en": "full-time regular employee"}
+{"id": 2633, "en": "private sector; civil; non-governmental"}
+{"id": 2634, "en": "discordant; unpleasant; strained (relations)"}
+{"id": 2635, "en": "cowardice; timidity; weak spirit"}
+{"id": 2636, "en": "aquatic; water-dwelling"}
+{"id": 2637, "en": "dirty; unclean; filthy"}
+{"id": 2638, "en": "corruption; embezzlement; malfeasance"}
+{"id": 2639, "en": "treatment; medical care; cure"}
+{"id": 2640, "en": "bill; draft law; legislative bill"}
+{"id": 2641, "en": "seawater temperature"}
+{"id": 2642, "en": "ocean; sea"}
+{"id": 2643, "en": "seaweed; marine algae"}
+{"id": 2644, "en": "sea surface; sea level"}
+{"id": 2645, "en": "passive; negative; inactive"}
+{"id": 2646, "en": "expenditure; consumption; spending"}
+{"id": 2647, "en": "humidity"}
+{"id": 2648, "en": "manzai (Japanese comic dialogue/stand-up duo)"}
+{"id": 2649, "en": "at the time of a disaster"}
+{"id": 2650, "en": "innocence; not guilty"}
+{"id": 2651, "en": "uninterested; indifferent"}
+{"id": 2652, "en": "bombing; bombardment"}
+{"id": 2653, "en": "devoted; self-sacrificing; dedicated"}
+{"id": 2654, "en": "coral"}
+{"id": 2655, "en": "coral reef"}
+{"id": 2656, "en": "current; existing; in force"}
+{"id": 2657, "en": "mutual understanding"}
+{"id": 2658, "en": "survival; existence"}
+{"id": 2659, "en": "to inhabit; to live; habitat"}
+{"id": 2660, "en": "living creature; organism"}
+{"id": 2661, "en": "productivity; productive capacity"}
+{"id": 2662, "en": "use; employment; appointment (of personnel)"}
+{"id": 2663, "en": "origin; source; originally; by nature"}
+{"id": 2664, "en": "streetscape; townscape"}
+{"id": 2665, "en": "vicinity; surrounding area; neighborhood"}
+{"id": 2666, "en": "bleaching (e.g. coral bleaching)"}
+{"id": 2667, "en": "heyday; golden age; peak period"}
+{"id": 2668, "en": "mutual; reciprocal; alternately"}
+{"id": 2669, "en": "pearl"}
+{"id": 2670, "en": "to embark on; to start (doing something)"}
+{"id": 2671, "en": "researcher"}
+{"id": 2672, "en": "entering society; starting one's career"}
+{"id": 2673, "en": "private life"}
+{"id": 2674, "en": "straight man / funny man (in manzai comedy)"}
+{"id": 2675, "en": "to build; to form; to establish; construction"}
+{"id": 2676, "en": "simplicity; conciseness; brevity"}
+{"id": 2677, "en": "narrowed eyes; squint"}
+{"id": 2678, "en": "economics"}
+{"id": 2679, "en": "sequel; continuation"}
+{"id": 2680, "en": "prime minister; premier"}
+{"id": 2681, "en": "prime minister"}
+{"id": 2682, "en": "idea; way of thinking"}
+{"id": 2683, "en": "title; status; capacity"}
+{"id": 2684, "en": "behind; back; rear"}
+{"id": 2685, "en": "threat; invasion; menace"}
+{"id": 2686, "en": "lower back; hips; が低い: humble and approachable; down-to-earth"}
+{"id": 2687, "en": "clinical (medicine)"}
+{"id": 2688, "en": "self; oneself; ego"}
+{"id": 2689, "en": "groom; bridegroom"}
+{"id": 2690, "en": "bride"}
+{"id": 2691, "en": "art"}
+{"id": 2692, "en": "ceremony; event; ritual"}
+{"id": 2693, "en": "expression; to express; to convey"}
+{"id": 2694, "en": "confirmation; verification; proof"}
+{"id": 2695, "en": "majority; plural; multiple"}
+{"id": 2696, "en": "element; factor"}
+{"id": 2697, "en": "to regard as; to deem; to rule"}
+{"id": 2698, "en": "scale; scope"}
+{"id": 2699, "en": "solution; way of solving"}
+{"id": 2700, "en": "reporter; journalist"}
+{"id": 2701, "en": "design; planning; formulation"}
+{"id": 2702, "en": "to permit; to allow; to forgive"}
+{"id": 2703, "en": "evidence; proof"}
+{"id": 2704, "en": "attempt; trial; try"}
+{"id": 2705, "en": "poet"}
+{"id": 2706, "en": "harmony; accord; balance"}
+{"id": 2707, "en": "logical; rational"}
+{"id": 2708, "en": "parliament; assembly; diet"}
+{"id": 2709, "en": "pig; に真珠: casting pearls before swine"}
+{"id": 2710, "en": "burden; to bear; to shoulder"}
+{"id": 2711, "en": "poverty"}
+{"id": 2712, "en": "the poor; poverty-stricken class"}
+{"id": 2713, "en": "supply; provision; makeshift support"}
+{"id": 2714, "en": "bribe; bribery"}
+{"id": 2715, "en": "resources"}
+{"id": 2716, "en": "to step on; to be based on; to follow (a precedent)"}
+{"id": 2717, "en": "army; military; troops"}
+{"id": 2718, "en": "swift; rapid; prompt"}
+{"id": 2719, "en": "recent years"}
+{"id": 2720, "en": "to let through; to pass (a bill, etc.)"}
+{"id": 2721, "en": "delay; lag; falling behind"}
+{"id": 2722, "en": "majority; more than half"}
+{"id": 2723, "en": "reason; logic; route; course"}
+{"id": 2724, "en": "arrival; attainment; completion"}
+{"id": 2725, "en": "achievement; attainment; accomplishment"}
+{"id": 2726, "en": "oxygen"}
+{"id": 2727, "en": "importance; emphasis; to attach weight to"}
+{"id": 2728, "en": "sharp; keen; pointed"}
+{"id": 2729, "en": "eldest daughter"}
+{"id": 2730, "en": "mistake; error; incorrect"}
+{"id": 2731, "en": "to hide; to conceal oneself"}
+{"id": 2732, "en": "to be open (traffic/communication); to understand; to be well versed in"}
+{"id": 2733, "en": "rise; improvement; enhancement"}
+{"id": 2734, "en": "higher; advanced; high-class"}
+{"id": 2735, "en": "(fragment) ...and older/above"}
+{"id": 2736, "en": "to bite into; to cling to; to hold on tenaciously"}
+{"id": 2737, "en": "limit; at the very edge; with no room to spare"}
+{"id": 2738, "en": "dark circles under the eyes"}
+{"id": 2739, "en": "auspicious; happy; congratulatory"}
+{"id": 2740, "en": "Egypt"}
+{"id": 2741, "en": "gardening; horticulture"}
+{"id": 2742, "en": "core; center; nucleus"}
+{"id": 2743, "en": "cost reduction; cost cutting"}
+{"id": 2744, "en": "golf course"}
+{"id": 2745, "en": "series (of books, etc.)"}
+{"id": 2746, "en": "start; departure; beginning"}
+{"id": 2747, "en": "zero"}
+{"id": 2748, "en": "download"}
+{"id": 2749, "en": "team; corps; party"}
+{"id": 2750, "en": "digital; numerical"}
+{"id": 2751, "en": "nuts"}
+{"id": 2752, "en": "demand; needs"}
+{"id": 2753, "en": "ballet"}
+{"id": 2754, "en": "ballet company; ballet troupe"}
+{"id": 2755, "en": "match; event; game"}
+{"id": 2756, "en": "plan; program; scheme"}
+{"id": 2757, "en": "Europe"}
+{"id": 2758, "en": "rugby"}
+{"id": 2759, "en": "recycling; recovery"}
+{"id": 2760, "en": "household; family"}
+{"id": 2761, "en": "one part; one link; one step"}
+{"id": 2762, "en": "opaque; unpredictable; uncertain"}
+{"id": 2763, "en": "to grant; to give; to bestow"}
+{"id": 2764, "en": "public opinion; the voice of the people"}
+{"id": 2765, "en": "to overcome; to surmount; to get over"}
+{"id": 2766, "en": "dairy products"}
+{"id": 2767, "en": "prediction; forecast; expectation"}
+{"id": 2768, "en": "situation; state of affairs"}
+{"id": 2769, "en": "distribution; issuance; handing out"}
+{"id": 2770, "en": "today; nowadays; these days"}
+{"id": 2771, "en": "association; interaction; dealings"}
+{"id": 2772, "en": "replacement; substitution; renewal"}
+{"id": 2773, "en": "suspension of business; temporary closure"}
+{"id": 2774, "en": "unavoidable; inevitable; having no choice"}
+{"id": 2775, "en": "mission; calling"}
+{"id": 2776, "en": "customs; manners; ordinary; common"}
+{"id": 2777, "en": "preservation; storage; safekeeping"}
+{"id": 2778, "en": "protection; preservation"}
+{"id": 2779, "en": "double; times; -fold"}
+{"id": 2780, "en": "outlook; prospects; future direction"}
+{"id": 2781, "en": "shining brightly; radiant; brilliant"}
+{"id": 2782, "en": "to overcome; to conquer; to surmount"}
+{"id": 2783, "en": "entering school; admission; enrollment"}
+{"id": 2784, "en": "joining a company; starting employment"}
+{"id": 2785, "en": "full effort; all one's strength"}
+{"id": 2786, "en": "announcement; public release; publication"}
+{"id": 2787, "en": "together; jointly; in common"}
+{"id": 2788, "en": "dual-income household; double-income couple"}
+{"id": 2789, "en": "inland; interior"}
+{"id": 2790, "en": "rebuilding; reconstruction"}
+{"id": 2791, "en": "revival; restoration; regeneration"}
+{"id": 2792, "en": "reorganization; restructuring; realignment"}
+{"id": 2793, "en": "childbirth; delivery; giving birth"}
+{"id": 2794, "en": "development; opening up; pioneering"}
+{"id": 2795, "en": "detective; criminal (police); criminal case"}
+{"id": 2796, "en": "reduction; cut; curtailment"}
+{"id": 2797, "en": "creation; to create; to bring about"}
+{"id": 2798, "en": "founding; establishment"}
+{"id": 2799, "en": "dramatic; thrilling"}
+{"id": 2800, "en": "processing; manufacture"}
+{"id": 2801, "en": "worker; laborer"}
+{"id": 2802, "en": "northern part; the north"}
+{"id": 2803, "en": "medical care; medical treatment"}
+{"id": 2804, "en": "only; merely; just"}
+{"id": 2805, "en": "crisis; emergency"}
+{"id": 2806, "en": "severe; strict; harsh"}
+{"id": 2807, "en": "on the other hand; conversely"}
+{"id": 2808, "en": "echo; reverberation; repercussion"}
+{"id": 2809, "en": "to devote oneself to; to work on (a solution)"}
+{"id": 2810, "en": "to immerse oneself in; to be absorbed in"}
+{"id": 2811, "en": "attending a lecture; taking a course; receiving training"}
+{"id": 2812, "en": "taking an exam; sitting for an examination"}
+{"id": 2813, "en": "ancient times; antiquity"}
+{"id": 2814, "en": "passing mark; passing score"}
+{"id": 2815, "en": "agreement; consent; approval"}
+{"id": 2816, "en": "naming; to name"}
+{"id": 2817, "en": "headwind; adversity; resistance"}
+{"id": 2818, "en": "alleviation; mitigation; easing"}
+{"id": 2819, "en": "assertion; claim; to advocate"}
+{"id": 2820, "en": "the National Diet Building"}
+{"id": 2821, "en": "domestic; within the country"}
+{"id": 2822, "en": "Mediterranean Sea"}
+{"id": 2823, "en": "simple; plain; modest; unadorned"}
+{"id": 2824, "en": "cultivation; training; development (of ability)"}
+{"id": 2825, "en": "foundation; base; footing"}
+{"id": 2826, "en": "increase; growth; strengthening"}
+{"id": 2827, "en": "selling well; good sales"}
+{"id": 2828, "en": "fluctuation; change; variation"}
+{"id": 2829, "en": "large margin; significant extent; substantially"}
+{"id": 2830, "en": "warm welcome; most welcome"}
+{"id": 2831, "en": "president (of a country)"}
+{"id": 2832, "en": "Osaka Prefecture"}
+{"id": 2833, "en": "to seize; to snatch; to take away"}
+{"id": 2834, "en": "descendants; posterity; offspring"}
+{"id": 2835, "en": "academic background; educational history"}
+{"id": 2836, "en": "stability; stabilization"}
+{"id": 2837, "en": "real ability; actual strength; capability"}
+{"id": 2838, "en": "realization; achievement; fulfillment"}
+{"id": 2839, "en": "target; object; intended audience"}
+{"id": 2840, "en": "taking office; assuming a post; inauguration"}
+{"id": 2841, "en": "development; unfolding; carrying out"}
+{"id": 2842, "en": "beautiful natural scenery; picturesque landscape"}
+{"id": 2843, "en": "market; economic market"}
+{"id": 2844, "en": "municipal administration; city government"}
+{"id": 2845, "en": "mayor"}
+{"id": 2846, "en": "peace"}
+{"id": 2847, "en": "continuation; to continue; to follow"}
+{"id": 2848, "en": "to be tense; to be firm (market); taut"}
+{"id": 2849, "en": "strengthening; reinforcement; enhancement"}
+{"id": 2850, "en": "main store; head shop; this shop"}
+{"id": 2851, "en": "winner; prizewinner"}
+{"id": 2852, "en": "expectation; hope; anticipation"}
+{"id": 2853, "en": "fortune slip (omikuji)"}
+{"id": 2854, "en": "thoroughness; thoroughgoing; being thorough"}
+{"id": 2855, "en": "inevitable trend; necessity"}
+{"id": 2856, "en": "to respond; to meet (expectations); to repay; response"}
+{"id": 2857, "en": "pleasant; comfortable; enjoyable"}
+{"id": 2858, "en": "fear; dread; to be afraid"}
+{"id": 2859, "en": "kindness; favor; grace; blessing"}
+{"id": 2860, "en": "situation; circumstances; state of affairs"}
+{"id": 2861, "en": "affection; tender love; appreciation"}
+{"id": 2862, "en": "concern; fear; apprehension"}
+{"id": 2863, "en": "handicraft; manual industry"}
+{"id": 2864, "en": "technique; method; approach"}
+{"id": 2865, "en": "proposal; submission; putting forward"}
+{"id": 2866, "en": "question; inquiry; raising an issue"}
+{"id": 2867, "en": "moment; time; occasion; timing"}
+{"id": 2868, "en": "to pile up; to stack; to fold up"}
+{"id": 2869, "en": "to hold in one's arms; to take on; to shoulder"}
+{"id": 2870, "en": "to carry on the shoulder; to shoulder; to take on"}
+{"id": 2871, "en": "continuation; maintenance; to keep up"}
+{"id": 2872, "en": "promotion; revitalization; encouragement"}
+{"id": 2873, "en": "promotion; advancement; propulsion"}
+{"id": 2874, "en": "damage; loss; harm"}
+{"id": 2875, "en": "support; aid; assistance"}
+{"id": 2876, "en": "policy; measure"}
+{"id": 2877, "en": "teacher; teaching staff; faculty"}
+{"id": 2878, "en": "policy measure; measure taken"}
+{"id": 2879, "en": "Bank of Japan"}
+{"id": 2880, "en": "as before; unchanged; as always"}
+{"id": 2881, "en": "further; additional; more"}
+{"id": 2882, "en": "document; written form; in writing"}
+{"id": 2883, "en": "inexperienced; without experience"}
+{"id": 2884, "en": "main occupation; one's regular job"}
+{"id": 2885, "en": "village"}
+{"id": 2886, "en": "condition; terms; requirements"}
+{"id": 2887, "en": "frame; framework; limit; scope"}
+{"id": 2888, "en": "stock; share; equity"}
+{"id": 2889, "en": "extremely; exceedingly; very"}
+{"id": 2890, "en": "organization; institution; agency"}
+{"id": 2891, "en": "distortion; warping; to distort"}
+{"id": 2892, "en": "death"}
+{"id": 2893, "en": "after death; posthumous"}
+{"id": 2894, "en": "to leave behind; to bequeath; to remain"}
+{"id": 2895, "en": "climate; seasons and weather"}
+{"id": 2896, "en": "atmosphere; prevailing custom; ethos"}
+{"id": 2897, "en": "level; standard"}
+{"id": 2898, "en": "Nagatacho (Japan's political center in Tokyo)"}
+{"id": 2899, "en": "rule; regulation"}
+{"id": 2900, "en": "resolution; determination; decision"}
+{"id": 2901, "en": "healing; cure; to heal"}
+{"id": 2902, "en": "coast; coastal area; coastal waters"}
+{"id": 2903, "en": "legal; statutory; lawful"}
+{"id": 2904, "en": "Luoyang (city in China)"}
+{"id": 2905, "en": "revitalization; activation; invigoration"}
+{"id": 2906, "en": "pirated edition; piracy"}
+{"id": 2907, "en": "to satisfy; to fill; to meet (requirements)"}
+{"id": 2908, "en": "to drift; to float; to hang in the air (smell, atmosphere)"}
+{"id": 2909, "en": "concentration; density"}
+{"id": 2910, "en": "to wet; to moisten; to soak"}
+{"id": 2911, "en": "foreign exchange; remittance; exchange"}
+{"id": 2912, "en": "squid"}
+{"id": 2913, "en": "oyster"}
+{"id": 2914, "en": "traction; towing; pulling"}
+{"id": 2915, "en": "criminal; culprit; offender"}
+{"id": 2916, "en": "generation; production; creation"}
+{"id": 2917, "en": "industry"}
+{"id": 2918, "en": "business world; industrial circles"}
+{"id": 2919, "en": "city planning; urban development; community building"}
+{"id": 2920, "en": "to stop; to stay; to come to a halt"}
+{"id": 2921, "en": "disease; illness"}
+{"id": 2922, "en": "thin; lean; skinny; to lose weight"}
+{"id": 2923, "en": "exposure; discovery; coming to light"}
+{"id": 2924, "en": "shipment; dispatch; sending out"}
+{"id": 2925, "en": "prosperity; flourishing; thriving"}
+{"id": 2926, "en": "market price; market conditions"}
+{"id": 2927, "en": "truth; fact; reality"}
+{"id": 2928, "en": "wisdom"}
+{"id": 2929, "en": "shortening; reduction; curtailment"}
+{"id": 2930, "en": "manners; etiquette; courtesy"}
+{"id": 2931, "en": "welfare; well-being"}
+{"id": 2932, "en": "suffocation; choking"}
+{"id": 2933, "en": "poverty; destitution; hardship"}
+{"id": 2934, "en": "smile; smiling face"}
+{"id": 2935, "en": "planning; devising; working out"}
+{"id": 2936, "en": "precision; accuracy"}
+{"id": 2937, "en": "spirit; mind; soul"}
+{"id": 2938, "en": "end; conclusion; termination"}
+{"id": 2939, "en": "organization"}
+{"id": 2940, "en": "expenses; funds; cost"}
+{"id": 2941, "en": "course; process; progress; lapse"}
+{"id": 2942, "en": "experienced person; veteran"}
+{"id": 2943, "en": "unity; solidarity; to bind together"}
+{"id": 2944, "en": "constantly; continually; without ceasing"}
+{"id": 2945, "en": "reduction; curtailment; downsizing"}
+{"id": 2946, "en": "summary; compilation; putting together"}
+{"id": 2947, "en": "body; flesh; the physical body"}
+{"id": 2948, "en": "fragile; weak; vulnerable"}
+{"id": 2949, "en": "tax evasion"}
+{"id": 2950, "en": "decay; rot; corruption"}
+{"id": 2951, "en": "to face; to confront; to be present at"}
+{"id": 2952, "en": "temporary; provisional; extra"}
+{"id": 2953, "en": "oneself; personally; in person"}
+{"id": 2954, "en": "automation"}
+{"id": 2955, "en": "performer; entertainer; artist"}
+{"id": 2956, "en": "some; a few; a little; several"}
+{"id": 2957, "en": "pains; effort; hard thinking; labor"}
+{"id": 2958, "en": "wisdom; sagacity"}
+{"id": 2959, "en": "strawberry"}
+{"id": 2960, "en": "remarkable; notable; conspicuous; marked"}
+{"id": 2961, "en": "mummy"}
+{"id": 2962, "en": "octopus"}
+{"id": 2963, "en": "wish; desire; hope"}
+{"id": 2964, "en": "to lose sight of; to be lost; to stray"}
+{"id": 2965, "en": "to look out over; to survey; as far as the eye can see"}
+{"id": 2966, "en": "dissolution; breakup; adjournment"}
+{"id": 2967, "en": "cancellation; lifting; release; rescinding"}
+{"id": 2968, "en": "permission; approval; license"}
+{"id": 2969, "en": "reader"}
+{"id": 2970, "en": "reading comprehension"}
+{"id": 2971, "en": "taxation; levying (a tax)"}
+{"id": 2972, "en": "various countries; many nations"}
+{"id": 2973, "en": "beans; peas"}
+{"id": 2974, "en": "public finance; financial affairs"}
+{"id": 2975, "en": "property; assets; fortune"}
+{"id": 2976, "en": "responsibility; duty"}
+{"id": 2977, "en": "wages; salary; pay"}
+{"id": 2978, "en": "to receive; humble form of もらう"}
+{"id": 2979, "en": "prize; award"}
+{"id": 2980, "en": "to learn; to master; to acquire (a skill)"}
+{"id": 2981, "en": "to investigate; to pursue; to hold accountable"}
+{"id": 2982, "en": "pursuit; seeking"}
+{"id": 2983, "en": "general use; application; being commonly accepted"}
+{"id": 2984, "en": "enterprising spirit; ambition; drive"}
+{"id": 2985, "en": "going on to higher education; advancing to a higher school"}
+{"id": 2986, "en": "realization; attainment; to come true"}
+{"id": 2987, "en": "operation; management; running"}
+{"id": 2988, "en": "the past; bygone days"}
+{"id": 2989, "en": "too harsh; too severe; excessive"}
+{"id": 2990, "en": "Dotonbori (district in Osaka)"}
+{"id": 2991, "en": "illegal; unlawful; violation of law"}
+{"id": 2992, "en": "adaptation; adjustment; accommodation"}
+{"id": 2993, "en": "city; urban area"}
+{"id": 2994, "en": "interest rate"}
+{"id": 2995, "en": "eldest son"}
+{"id": 2996, "en": "closure; going out of business; closing down"}
+{"id": 2997, "en": "to fall into; to be trapped; to fall for (a trick)"}
+{"id": 2998, "en": "concealment; hiding; cover-up"}
+{"id": 2999, "en": "difficult situation; predicament; tight spot"}
+{"id": 3000, "en": "scattered; small-scale; sporadic"}
+{"id": 3001, "en": "to face; to turn toward; to head for"}
+{"id": 3002, "en": "care; trouble; を見る: to look after; to take care of"}
+{"id": 3003, "en": "to receive; to be given; to be granted"}
+{"id": 3004, "en": "to nod; to bow one's head"}
+{"id": 3005, "en": "kind; type; category"}
+{"id": 3006, "en": "trend; prevailing tendency; current of the times"}
+{"id": 3007, "en": "to be ruined by extravagance in food; to eat oneself out of house and home"}
+{"id": 3008, "en": "leftover food; leaving food uneaten"}
+{"id": 3009, "en": "food; foodstuff; provisions"}
+{"id": 3010, "en": "to raise; to bring up; to nurture; upbringing"}
+{"id": 3011, "en": "aquaculture; farming (fish, etc.); breeding"}
+{"id": 3012, "en": "surprise; astonishment"}
+{"id": 3013, "en": "main point; key point; gist"}
+{"id": 3014, "en": "rise; upsurge; increase"}
+{"id": 3015, "en": "surge; rise; (price) increase"}
+{"id": 3016, "en": "to attract; to fascinate; to captivate"}
+{"id": 3017, "en": "seafood; marine products"}
+{"id": 3018, "en": "hard to...; not easy to..."}
+{"id": 3019, "en": "incidentally; taking the opportunity of..."}
+{"id": 3020, "en": "indicates appearance, sign, feeling, etc."}
+{"id": 3021, "en": "set; pair; suit"}
+{"id": 3022, "en": "long time no see; sorry for not writing; neglecting to keep in touch"}
+{"id": 3023, "en": "appropriate; corresponding; accordingly"}
+{"id": 3024, "en": "and so on; etc. (listing examples)"}
+{"id": 3025, "en": "to feel deeply; to be keenly aware"}
+{"id": 3026, "en": "idea; thought"}
+{"id": 3027, "en": "club"}
+{"id": 3028, "en": "shopping center; mall"}
+{"id": 3029, "en": "Switzerland"}
+{"id": 3030, "en": "bubble; bubble economy"}
+{"id": 3031, "en": "platform (train station)"}
+{"id": 3032, "en": "money game"}
+{"id": 3033, "en": "a bite; a sip; a mouthful"}
+{"id": 3034, "en": "once; one time; on one occasion"}
+{"id": 3035, "en": "especially; particularly"}
+{"id": 3036, "en": "means of transportation; vehicle"}
+{"id": 3037, "en": "strife; conflict; competition"}
+{"id": 3038, "en": "conversation; exchange; alternation"}
+{"id": 3039, "en": "dormancy; stagnation; standstill"}
+{"id": 3040, "en": "nonchalant; unconcerned; casual"}
+{"id": 3041, "en": "way of doing; custom; manners; courtesy"}
+{"id": 3042, "en": "belief; conviction"}
+{"id": 3043, "en": "individual; private person"}
+{"id": 3044, "en": "power outage; blackout"}
+{"id": 3045, "en": "health; robustness"}
+{"id": 3046, "en": "beside; at one's side; while...; at the same time as"}
+{"id": 3047, "en": "before...; in front of...; ahead of"}
+{"id": 3048, "en": "scene; sight; spectacle"}
+{"id": 3049, "en": "yatsuhashi (Kyoto cinnamon sweet); plank bridge"}
+{"id": 3050, "en": "pollution; public nuisance"}
+{"id": 3051, "en": "to harden; to solidify; to devote oneself to; to specialize in"}
+{"id": 3052, "en": "compared with; ratio; proportion"}
+{"id": 3053, "en": "labor; work"}
+{"id": 3054, "en": "work; employment; duties; job"}
+{"id": 3055, "en": "to occupy; to account for; to take up"}
+{"id": 3056, "en": "model; prototype; original form"}
+{"id": 3057, "en": "ancient capital"}
+{"id": 3058, "en": "hometown; birthplace"}
+{"id": 3059, "en": "direction; facing; toward"}
+{"id": 3060, "en": "to blow hard (wind); to rage"}
+{"id": 3061, "en": "Japanese sweets; wagashi"}
+{"id": 3062, "en": "chili pepper"}
+{"id": 3063, "en": "issue; problem; point of dispute"}
+{"id": 3064, "en": "joy; celebration; to rejoice"}
+{"id": 3065, "en": "Sichuan cuisine"}
+{"id": 3066, "en": "soil; earth; land"}
+{"id": 3067, "en": "ideal state; the way things should be"}
+{"id": 3068, "en": "Jizo (bodhisattva; guardian deity statue)"}
+{"id": 3069, "en": "great achievement; heroic feat"}
+{"id": 3070, "en": "varied; diverse; all kinds of"}
+{"id": 3071, "en": "very; greatly; quite"}
+{"id": 3072, "en": "big; great; very much"}
+{"id": 3073, "en": "continent; mainland"}
+{"id": 3074, "en": "fixed time; on time; regular time"}
+{"id": 3075, "en": "storm; tempest; disturbance; uproar"}
+{"id": 3076, "en": "craft; craftsmanship"}
+{"id": 3077, "en": "to pass by; to approach; to draw near; to cover"}
+{"id": 3078, "en": "often; frequently"}
+{"id": 3079, "en": "hat; cap"}
+{"id": 3080, "en": "advertisement; advertising"}
+{"id": 3081, "en": "to become useless; to go out of fashion"}
+{"id": 3082, "en": "strong; intense; severe"}
+{"id": 3083, "en": "authorities; the authorities concerned"}
+{"id": 3084, "en": "formation; composition; to form"}
+{"id": 3085, "en": "slight movement; stirring"}
+{"id": 3086, "en": "smile; to smile"}
+{"id": 3087, "en": "pleasant; refreshing; comfortable"}
+{"id": 3088, "en": "drawing room; reception room; living room"}
+{"id": 3089, "en": "in an instant; in no time; immediately"}
+{"id": 3090, "en": "decisively; resolutely; boldly"}
+{"id": 3091, "en": "involuntarily; can't help but; unconsciously"}
+{"id": 3092, "en": "rapid; drastic; sharp"}
+{"id": 3093, "en": "suffocating; painful; distressing"}
+{"id": 3094, "en": "painful; heartbreaking; vexing; regrettable"}
+{"id": 3095, "en": "deterioration; worsening"}
+{"id": 3096, "en": "to grasp; to grip; to hold; (fragment: espresso...)"}
+{"id": 3097, "en": "establishment; conclusion; coming into being; to be reached"}
+{"id": 3098, "en": "battle; fight; war"}
+{"id": 3099, "en": "to drive in; to plunge into; to be absorbed in; to say (fragment)"}
+{"id": 3100, "en": "calligraphy practice; learning; study"}
+{"id": 3101, "en": "(fragment) ...into; to attack; to charge into"}
+{"id": 3102, "en": "criticism; critique"}
+{"id": 3103, "en": "technique; skill; art"}
+{"id": 3104, "en": "to look back; to turn around; to reflect"}
+{"id": 3105, "en": "exploration; expedition"}
+{"id": 3106, "en": "to throw out; to cast out"}
+{"id": 3107, "en": "politician"}
+{"id": 3108, "en": "reason; cause; circumstances"}
+{"id": 3109, "en": "to learn from; to study under; to be taught"}
+{"id": 3110, "en": "'tiger mom'; pushy mother (obsessed with her child's success)"}
+{"id": 3111, "en": "a few minutes"}
+{"id": 3112, "en": "like this; in this way; such"}
+{"id": 3113, "en": "silence"}
+{"id": 3114, "en": "replacement; exchange; to replace; to swap"}
+{"id": 3115, "en": "highest rank; top position"}
+{"id": 3116, "en": "expectation; view; to look out over; to hope for"}
+{"id": 3117, "en": "coming to Japan"}
+{"id": 3118, "en": "business; work; studies; accomplishments"}
+{"id": 3119, "en": "flat; stable; leveling off; crawling sideways"}
+{"id": 3120, "en": "gradually; slowly; little by little"}
+{"id": 3121, "en": "Europe and America; the West"}
+{"id": 3122, "en": "desire; appetite; craving"}
+{"id": 3123, "en": "to hit; to beat; to strike"}
+{"id": 3124, "en": "moisture; water content"}
+{"id": 3125, "en": "to start crying; to burst into tears"}
+{"id": 3126, "en": "to watch; to gaze at; to attach importance to"}
+{"id": 3127, "en": "Western-style sweets; confectionery"}
+{"id": 3128, "en": "to float; to surface; to come to mind"}
+{"id": 3129, "en": "full house; sold out; full to capacity"}
+{"id": 3130, "en": "to overflow; to be full of; to brim over"}
+{"id": 3131, "en": "to go upstream; to trace back; to go against the current"}
+{"id": 3132, "en": "runway"}
+{"id": 3133, "en": "director; organizer; producer"}
+{"id": 3134, "en": "of course; needless to say; naturally"}
+{"id": 3135, "en": "sacrifice"}
+{"id": 3136, "en": "unique; distinctive; characteristic"}
+{"id": 3137, "en": "sweetness; sweet taste; sweets"}
+{"id": 3138, "en": "flower arrangement; ikebana"}
+{"id": 3139, "en": "seizure; fit; attack (of illness)"}
+{"id": 3140, "en": "sending (a message); transmission; dispatch"}
+{"id": 3141, "en": "first; beginning; outset"}
+{"id": 3142, "en": "swelling; rising; uplift; bulge"}
+{"id": 3143, "en": "infatuation; being crazy about; lacking discernment"}
+{"id": 3144, "en": "to look around carefully; to be watchful of one's surroundings"}
+{"id": 3145, "en": "to look away for a moment; to let one's guard down"}
+{"id": 3146, "en": "right after...; just after..."}
+{"id": 3147, "en": "reflection; self-examination; repentance"}
+{"id": 3148, "en": "truly; really; genuinely"}
+{"id": 3149, "en": "landing; touchdown"}
+{"id": 3150, "en": "tax affairs; taxation"}
+{"id": 3151, "en": "amount of tax; tax amount"}
+{"id": 3152, "en": "suddenly; abruptly"}
+{"id": 3153, "en": "passage; passing through; course"}
+{"id": 3154, "en": "manager; business operator; entrepreneur"}
+{"id": 3155, "en": "continuation; continuance"}
+{"id": 3156, "en": "general affairs"}
+{"id": 3157, "en": "Japanese sweet made by kneading and simmering (nerikiri)"}
+{"id": 3158, "en": "delicate; fine; subtle; sensitive"}
+{"id": 3159, "en": "connection; linking; getting through (phone)"}
+{"id": 3160, "en": "development; unfolding; carrying out; progress"}
+{"id": 3161, "en": "aesthetic sense; sense of beauty"}
+{"id": 3162, "en": "design; study; device"}
+{"id": 3163, "en": "endurance; patience; perseverance"}
+{"id": 3164, "en": "listening; hearing; comprehension (by ear)"}
+{"id": 3165, "en": "work experience; work history"}
+{"id": 3166, "en": "to; until; as far as"}
+{"id": 3167, "en": "youth; being young"}
+{"id": 3168, "en": "bitterness; bitter taste"}
+{"id": 3169, "en": "tea gathering; matters related to the tea ceremony"}
+{"id": 3170, "en": "revival; resuscitation; coming back to life"}
+{"id": 3171, "en": "behavior; movements; bearing; gesture"}
+{"id": 3172, "en": "to wear (on the head); to receive; to incur; to be covered with"}
+{"id": 3173, "en": "attack; assault; raid"}
+{"id": 3174, "en": "appearance; exterior; look"}
+{"id": 3175, "en": "to see through; to perceive; to discern"}
+{"id": 3176, "en": "to touch; to mention; to refer to"}
+{"id": 3177, "en": "anniversary; memorial day"}
+{"id": 3178, "en": "birth"}
+{"id": 3179, "en": "persuasion; to persuade"}
+{"id": 3180, "en": "insight; discernment; good judgment"}
+{"id": 3181, "en": "valley; hollow; trough (of a wave); low point"}
+{"id": 3182, "en": "buyout; acquisition; buying up"}
+{"id": 3183, "en": "baby; infant"}
+{"id": 3184, "en": "design; device; plan; feature"}
+{"id": 3185, "en": "footsteps; sound of footsteps"}
+{"id": 3186, "en": "to step forward; to step out; to embark"}
+{"id": 3187, "en": "to step into; to break into; to venture into"}
+{"id": 3188, "en": "Karuizawa (resort town)"}
+{"id": 3189, "en": "to chase; to pursue; to run after"}
+{"id": 3190, "en": "route to school; school commuting road"}
+{"id": 3191, "en": "tool; implement; instrument"}
+{"id": 3192, "en": "escaping the heat; summer retreat"}
+{"id": 3193, "en": "to shut in; to lock up; to confine"}
+{"id": 3194, "en": "blooming; flowering; to bloom"}
+{"id": 3195, "en": "defense; protection; precaution"}
+{"id": 3196, "en": "infinite; boundless; unparalleled"}
+{"id": 3197, "en": "limit; boundary; bounds"}
+{"id": 3198, "en": "gap; opening; unguarded moment; opportunity"}
+{"id": 3199, "en": "interview; face-to-face meeting; consultation"}
+{"id": 3200, "en": "manifest; apparent; obvious (existence)"}
+{"id": 3201, "en": "to frown; to knit one's brows; frown"}
+{"id": 3202, "en": "to dash out; to rush out; to fly out"}
+{"id": 3203, "en": "to fly up; to fly off; to take off"}
+{"id": 3204, "en": "to jump into; to dive into; to throw oneself into"}
+{"id": 3205, "en": "nutrient; nourishment"}
+{"id": 3206, "en": "vivid; bright; distinct; clear"}
+{"id": 3207, "en": "sense of...; feeling of...; -ness"}
+{"id": 3208, "en": "state; condition; appearance"}
+{"id": 3209, "en": "accompanying; attendance; company"}
+{"id": 3210, "en": "ghosts and demons; evil spirits; monsters"}
+{"id": 3211, "en": "only; just; merely"}
+{"id": 3212, "en": "dorayaki (red-bean pancake sandwich)"}
+{"id": 3213, "en": "interview; coverage; reporting"}
+{"id": 3214, "en": "even more; all the more; increasingly"}
+{"id": 3215, "en": "eerie; creepy; frightening"}
+{"id": 3216, "en": "society; the times; one's lifetime; the world"}
+{"id": 3217, "en": "to pass away; to die"}
+{"id": 3218, "en": "World Heritage (site)"}
+{"id": 3219, "en": "person; figure; character"}
+{"id": 3220, "en": "view of life; outlook on life"}
+{"id": 3221, "en": "representative; typical"}
+{"id": 3222, "en": "embodiment; manifestation; to embody"}
+{"id": 3223, "en": "side; aspect; profile"}
+{"id": 3224, "en": "gathering; meeting; event; assembly"}
+{"id": 3225, "en": "transient; fleeting; uncertain; unreliable"}
+{"id": 3226, "en": "rabbit; hare"}
+{"id": 3227, "en": "entering nirvana; passing away (of a monk)"}
+{"id": 3228, "en": "the eighth generation"}
+{"id": 3229, "en": "to freeze; to be chilled to the bone"}
+{"id": 3230, "en": "becoming a monk; monk; priest; renouncing the world"}
+{"id": 3231, "en": "to divide; to separate; to classify; division"}
+{"id": 3232, "en": "opportunity; turning point; catalyst"}
+{"id": 3233, "en": "departure; leaving; removal; to leave"}
+{"id": 3234, "en": "famous; renowned; celebrated"}
+{"id": 3235, "en": "Mukojima (district in Tokyo)"}
+{"id": 3236, "en": "only; sole; unique"}
+{"id": 3237, "en": "the four seasons; all year round"}
+{"id": 3238, "en": "to have a connection with; to be linked by fate to"}
+{"id": 3239, "en": "to hang; to dangle; to drip; to trail"}
+{"id": 3240, "en": "to repay; to reward; to requite; recompense"}
+{"id": 3241, "en": "salting; salted/pickled product"}
+{"id": 3242, "en": "boundary; border; edge"}
+{"id": 3243, "en": "marital relationship; husband-and-wife relationship"}
+{"id": 3244, "en": "indeed; truly; admittedly"}
+{"id": 3245, "en": "second month of the lunar calendar (Kisaragi)"}
+{"id": 3246, "en": "child-rearing; raising children"}
+{"id": 3247, "en": "sense of the season; seasonal feeling"}
+{"id": 3248, "en": "shogun; generalissimo"}
+{"id": 3249, "en": "residential land; residence; mansion"}
+{"id": 3250, "en": "volume (of a book); scroll; to roll up; to wind"}
+{"id": 3251, "en": "Heian period"}
+{"id": 3252, "en": "The Tale of the Heike"}
+{"id": 3253, "en": "world; realm; (fragment) Higan-e (equinox Buddhist service)"}
+{"id": 3254, "en": "Tokugawa Yoshimune"}
+{"id": 3255, "en": "rapid; swift; quick"}
+{"id": 3256, "en": "love; affection; fondness"}
+{"id": 3257, "en": "sorrow; grief; anxiety; melancholy"}
+{"id": 3258, "en": "skill; technique; artistry"}
+{"id": 3259, "en": "designation; appointment; specification"}
+{"id": 3260, "en": "example; illustration; giving an example"}
+{"id": 3261, "en": "to scratch; to rake"}
+{"id": 3262, "en": "personification; anthropomorphism"}
+{"id": 3263, "en": "to wither; to scatter; to disperse; to fall (petals)"}
+{"id": 3264, "en": "cultural heritage; cultural property"}
+{"id": 3265, "en": "to reflect; to project; to show; to come out (in a photo)"}
+{"id": 3266, "en": "oldest; earliest"}
+{"id": 3267, "en": "moon viewing; moon-gazing"}
+{"id": 3268, "en": "moon of the 15th night of the lunar month; harvest moon"}
+{"id": 3269, "en": "last years; final period; closing stage"}
+{"id": 3270, "en": "eastern bank; east shore"}
+{"id": 3271, "en": "sakura-mochi (cherry-blossom rice cake)"}
+{"id": 3272, "en": "planting; cultivation; to plant"}
+{"id": 3273, "en": "imitation; copying; to imitate"}
+{"id": 3274, "en": "samurai; warrior"}
+{"id": 3275, "en": "saijiki (almanac of seasonal words/events)"}
+{"id": 3276, "en": "monk; priest; traveling ascetic"}
+{"id": 3277, "en": "saliva; drool"}
+{"id": 3278, "en": "full moon"}
+{"id": 3279, "en": "comical; funny; humorous"}
+{"id": 3280, "en": "clear-cut; frank; noble-minded; unsullied"}
+{"id": 3281, "en": "unparalleled; unique; second to none"}
+{"id": 3282, "en": "indifference; complete unconcern"}
+{"id": 3283, "en": "branding; brand mark; stigma"}
+{"id": 3284, "en": "explosive; sensational"}
+{"id": 3285, "en": "way of life; how to live; lifestyle"}
+{"id": 3286, "en": "appearance; entrance (on stage); debut; (fragment: Saigyo, late-Heian/early-Kamakura poet-monk)"}
+{"id": 3287, "en": "blessing; celebration; congratulation"}
+{"id": 3288, "en": "Tango (Boys' Festival, 5th day of 5th lunar month)"}
+{"id": 3289, "en": "Setsubun (bean-throwing festival marking the start of spring)"}
+{"id": 3290, "en": "important folk festival; (Buddhism) state beyond life and death (fragment)"}
+{"id": 3291, "en": "essence; quintessence; best part"}
+{"id": 3292, "en": "autumn leaves; crimson foliage"}
+{"id": 3293, "en": "connection; union; to be related; to be linked"}
+{"id": 3294, "en": "picture scroll; handscroll"}
+{"id": 3295, "en": "painting; drawing; picture"}
+{"id": 3296, "en": "superb view; breathtaking scenery"}
+{"id": 3297, "en": "to throw out one's chest; to hold oneself proudly"}
+{"id": 3298, "en": "young grass; new shoots; fresh greenery"}
+{"id": 3299, "en": "pain; suffering; anguish; distress"}
+{"id": 3300, "en": "hardship; trouble; difficulty"}
+{"id": 3301, "en": "leaf; leaves"}
+{"id": 3302, "en": "surface; outside; exterior"}
+{"id": 3303, "en": "(fragment) ...poet-monk of the period"}
+{"id": 3304, "en": "to gaze at; to stare at; to fix one's eyes on"}
+{"id": 3305, "en": "to compose (a poem); to recite; to sing of"}
+{"id": 3306, "en": "leaping; lively movement; dynamism"}
+{"id": 3307, "en": "military novel; war story"}
+{"id": 3308, "en": "to put into; to pour into; to devote (one's heart)"}
+{"id": 3309, "en": "(fragment) ...Fujiidera, Osaka Prefecture"}
+{"id": 3310, "en": "sense of achievement; sense of accomplishment"}
+{"id": 3311, "en": "Shakyamuni; the Buddha"}
+{"id": 3312, "en": "to pile up; to stack; to repeat; to accumulate"}
+{"id": 3313, "en": "Kamakura (city)"}
+{"id": 3314, "en": "Kansai region; domyoji (a kind of Japanese sweet; temple in Fujiidera, Osaka)"}
+{"id": 3315, "en": "Sumida River"}
+{"id": 3316, "en": "grandeur; magnificence; grand; majestic"}
+{"id": 3317, "en": "hina dolls; Girls' Festival dolls"}
+{"id": 3318, "en": "Girls' Festival; Doll Festival (Hinamatsuri)"}
+{"id": 3319, "en": "snow scene; snowy landscape"}
+{"id": 3320, "en": "fog; mist"}
+{"id": 3321, "en": "subject matter; theme; material"}
+{"id": 3322, "en": "hope; wish; request; please"}
+{"id": 3323, "en": "rice cake; mochi"}
+{"id": 3324, "en": "Choju-giga (Scrolls of Frolicking Animals)"}
+{"id": 3325, "en": "how...!; what...!; ah; oh"}
+{"id": 3326, "en": "the world; society; people"}
+{"id": 3327, "en": "the five senses"}
+{"id": 3328, "en": "faintly; slightly; dimly; vaguely"}
+{"id": 3329, "en": "almost; nearly; on the verge of"}
+{"id": 3330, "en": "elsewhere; somewhere else; unrelated; no concern of mine"}
+{"id": 3331, "en": "conviction; confidence; trust; belief"}
+{"id": 3332, "en": "condensation; concentration; distillation"}
+{"id": 3333, "en": "system; institution"}
+{"id": 3334, "en": "sashimi; sliced raw fish"}
+{"id": 3335, "en": "to peel off; to strip off; to tear off"}
+{"id": 3336, "en": "winners; the winning group; successful people"}
+{"id": 3337, "en": "packaging; wrapping"}
+{"id": 3338, "en": "thousand years; millennium"}
+{"id": 3339, "en": "only; merely; solely; just"}
+{"id": 3340, "en": "antipathy; resentment; backlash"}
+{"id": 3341, "en": "exchange; swapping; interchange"}
+{"id": 3342, "en": "to be possessed (by a spirit); to be obsessed (with an idea)"}
+{"id": 3343, "en": "treatment; handling; dealing with"}
+{"id": 3344, "en": "verbal promise; oral agreement"}
+{"id": 3345, "en": "absorption; to absorb; to soak up"}
+{"id": 3346, "en": "sense of taste; taste"}
+{"id": 3347, "en": "breathing; breath; respiration"}
+{"id": 3348, "en": "occupation; trade; livelihood; act; deed"}
+{"id": 3349, "en": "sense of smell; smell"}
+{"id": 3350, "en": "rumor; hearsay; talk"}
+{"id": 3351, "en": "dango (dumpling); dumplings"}
+{"id": 3352, "en": "dignified; stately; open-hearted; grand"}
+{"id": 3353, "en": "academic society; learned society; academic conference"}
+{"id": 3354, "en": "happiness; good fortune; catch (of fish/game); harvest"}
+{"id": 3355, "en": "Guangdong; Canton"}
+{"id": 3356, "en": "counselor; psychological counselor"}
+{"id": 3357, "en": "laziness; idleness"}
+{"id": 3358, "en": "romantic love; love"}
+{"id": 3359, "en": "breathing; living; alive"}
+{"id": 3360, "en": "to cherish; to treasure; regrettable; too good to waste"}
+{"id": 3361, "en": "enjoyable; pleasant; to look forward to"}
+{"id": 3362, "en": "idiom; idiomatic phrase; set phrase"}
+{"id": 3363, "en": "to be established; to consist of; to hold good; to be viable"}
+{"id": 3364, "en": "to receive; to obtain; to come into possession of"}
+{"id": 3365, "en": "feel (to the touch); texture; hand feel"}
+{"id": 3366, "en": "skill; technique; trick; move"}
+{"id": 3367, "en": "to hold; to harbor; to have (a feeling, ambition)"}
+{"id": 3368, "en": "adherence; obsession; to be particular about"}
+{"id": 3369, "en": "to grasp; to seize; to comprehend; grasp; understanding"}
+{"id": 3370, "en": "essence; true nature; substance"}
+{"id": 3371, "en": "windfall; unexpected piece of luck; bolt from the blue"}
+{"id": 3372, "en": "year-end; end of the year"}
+{"id": 3373, "en": "to notice; to realize; to become aware of"}
+{"id": 3374, "en": "carelessness; negligence; slip-up"}
+{"id": 3375, "en": "activity; vitality; active nature"}
+{"id": 3376, "en": "disorder; chaos; disarray; jumbled"}
+{"id": 3377, "en": "futility; wasted effort; in vain"}
+{"id": 3378, "en": "botamochi (sweet rice ball covered with red-bean paste); peony cake"}
+{"id": 3379, "en": "to aim at; to target; to watch for an opportunity"}
+{"id": 3380, "en": "sweetness; degree of sweetness; sweet things"}
+{"id": 3381, "en": "to produce; to generate; to bring forth"}
+{"id": 3382, "en": "to put in; to add; to mix in"}
+{"id": 3383, "en": "lingering fragrance; lingering scent"}
+{"id": 3384, "en": "cell"}
+{"id": 3385, "en": "exquisite; superb; splendid"}
+{"id": 3386, "en": "old age; one's later years"}
+{"id": 3387, "en": "sense of hearing; hearing"}
+{"id": 3388, "en": "artisan; craftsman; master workman"}
+{"id": 3389, "en": "to hatch; to raise; to nurture; to foster"}
+{"id": 3390, "en": "self-support; earning one's own living; independence"}
+{"id": 3391, "en": "independence; self-reliance; standing on one's own"}
+{"id": 3392, "en": "simplicity and fortitude; preferring substance over show"}
+{"id": 3393, "en": "English (language/writing); English sentence"}
+{"id": 3394, "en": "spread; diffusion; prevalence; permeation"}
+{"id": 3395, "en": "decline; decay; waning; fall"}
+{"id": 3396, "en": "vision; sense of sight; visual"}
+{"id": 3397, "en": "sense of touch; touch; tactile sense"}
+{"id": 3398, "en": "wording; phrasing; expression; way of putting things"}
+{"id": 3399, "en": "to sue; to appeal; to resort to; accusation; complaint"}
+{"id": 3400, "en": "recognition; acknowledgment; certification; approval"}
+{"id": 3401, "en": "losers; the losing group; those left behind"}
+{"id": 3402, "en": "qualification; status; capacity"}
+{"id": 3403, "en": "fall; drop; tumble; decline"}
+{"id": 3404, "en": "sweets; snacks; confectionery"}
+{"id": 3405, "en": "every corner; every aspect; all parts"}
+{"id": 3406, "en": "charm; elegance; refinement; tasteful atmosphere"}
+{"id": 3407, "en": "filling; bean jam; (red-bean) paste"}
+{"id": 3408, "en": "busy; bustling; on the go; restlessly active"}

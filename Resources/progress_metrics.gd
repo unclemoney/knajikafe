@@ -30,7 +30,7 @@ static func get_stage_name(stage: CardStage) -> String:
 	return "Learning"
 
 
-static func get_skill_summary(cards: Array[SRSCard], kanji_cards: Array[KanjiCard] = [], level: int = 0) -> Dictionary:
+static func get_skill_summary(cards: Array[SRSCard], kanji_cards: Array[KanjiCard] = [], level: int = 0, lesson: int = 0) -> Dictionary:
 	var summary: Dictionary = {}
 	for skill in SKILL_IDS:
 		summary[skill] = {
@@ -43,9 +43,13 @@ static func get_skill_summary(cards: Array[SRSCard], kanji_cards: Array[KanjiCar
 			"evidence_label": "No Evidence",
 		}
 	for card in cards:
-		if level > 0:
+		if level > 0 or lesson > 0:
 			var word := VocabDatabase.get_word_by_id(card.vocab_id)
-			if word == null or word.jlpt_level != level:
+			if word == null:
+				continue
+			if level > 0 and word.jlpt_level != level:
+				continue
+			if lesson > 0 and lesson not in word.lesson_ids:
 				continue
 		for skill in SKILL_IDS:
 			if not card.skill_evidence.has(skill):
@@ -93,12 +97,12 @@ static func get_evidence_label(attempts: int, success_rate: float) -> String:
 	return "Developing"
 
 
-static func get_level_summary(cards: Array[SRSCard], words: Array[VocabWord], kanji: Array[KanjiEntry], level: int) -> Dictionary:
+static func get_level_summary(cards: Array[SRSCard], words: Array[VocabWord], kanji: Array[KanjiEntry], level: int, lesson: int = 0) -> Dictionary:
 	var words_by_id: Dictionary = {}
 	var level_word_ids: Dictionary = {}
 	for word in words:
 		words_by_id[word.id] = word
-		if level == 0 or word.jlpt_level == level:
+		if (level == 0 or word.jlpt_level == level) and (lesson == 0 or lesson in word.lesson_ids):
 			level_word_ids[word.id] = true
 	var authored_kanji: Dictionary = {}
 	for entry in kanji:
@@ -140,33 +144,6 @@ static func get_level_summary(cards: Array[SRSCard], words: Array[VocabWord], ka
 		"kanji_encountered": encountered.size(),
 		"total_kanji": authored_kanji.size(),
 	}
-
-
-static func get_topic_summary(cards: Array[SRSCard], words: Array[VocabWord], level: int = 0) -> Dictionary:
-	var summary: Dictionary = {}
-	var words_by_id: Dictionary = {}
-	for word in words:
-		if level > 0 and word.jlpt_level != level:
-			continue
-		words_by_id[word.id] = word
-		for category in word.categories:
-			if not summary.has(category):
-				summary[category] = {"total": 0, "introduced": 0, "retained": 0, "coverage": 0.0}
-			summary[category]["total"] += 1
-	for card in cards:
-		var word := words_by_id.get(card.vocab_id) as VocabWord
-		if word == null:
-			continue
-		var retained := get_card_stage(card) == CardStage.RETAINED
-		for category in word.categories:
-			summary[category]["introduced"] += 1
-			if retained:
-				summary[category]["retained"] += 1
-	for category in summary:
-		var total: int = summary[category]["total"]
-		if total > 0:
-			summary[category]["coverage"] = float(summary[category]["introduced"]) / float(total)
-	return summary
 
 
 static func get_kanji_summary(cards: Array[KanjiCard], entries: Array[KanjiEntry], current_date: String, level: int = 5) -> Dictionary:

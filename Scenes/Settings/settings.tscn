@@ -192,7 +192,7 @@ value = 10.0
 [node name="TargetLabel" type="Label" parent="Panel/VBox/SessionSection/WordsRow"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 9
-text = "  Level:"
+text = "  JLPT:"
 
 [node name="TargetOption" type="OptionButton" parent="Panel/VBox/SessionSection/WordsRow"]
 custom_minimum_size = Vector2(90, 0)
@@ -205,7 +205,7 @@ layout_mode = 2
 layout_mode = 2
 custom_minimum_size = Vector2(110, 0)
 theme_override_font_sizes/font_size = 9
-text = "Topic:"
+text = "Professional lesson:"
 
 [node name="TopicOption" type="OptionButton" parent="Panel/VBox/SessionSection/TopicRow"]
 layout_mode = 2

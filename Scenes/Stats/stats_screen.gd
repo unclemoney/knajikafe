@@ -8,19 +8,31 @@ const JAPANESE_FONT = preload("res://Themes/japanese_font.tres")
 @onready var level_option: OptionButton = $TopBar/LevelOption
 @onready var stats_container: VBoxContainer = $ScrollContainer/StatsVBox
 
-var _selected_level := 5
+var _selected_level := 0
+var _selected_lesson := 1
+var _lesson_option: OptionButton
 
 
 func _ready() -> void:
 	back_btn.pressed.connect(_on_back_pressed)
-	level_option.add_item("N5", 5)
-	level_option.add_item("N4", 4)
-	level_option.add_item("Mixed", 0)
+	level_option.add_item("All JLPT", 0)
+	for level in [5, 4, 3, 2, 1]:
+		level_option.add_item("N%d" % level, level)
+	_lesson_option = OptionButton.new()
+	_lesson_option.custom_minimum_size = Vector2(95, 0)
+	_lesson_option.add_theme_font_size_override("font_size", 8)
+	_lesson_option.add_item("All lessons", 0)
+	for lesson in VocabDatabase.get_lessons():
+		_lesson_option.add_item("Lesson %02d" % lesson["number"], lesson["number"])
+	$TopBar.add_child(_lesson_option)
 	var profile := GameController.current_profile
 	if profile:
-		_selected_level = int(profile.settings.get("target_jlpt_level", 5))
+		_selected_level = int(profile.settings.get("target_jlpt_level", 0))
+		_selected_lesson = int(profile.settings.get("target_lesson", 1))
 	level_option.select(level_option.get_item_index(_selected_level))
+	_lesson_option.select(_lesson_option.get_item_index(_selected_lesson))
 	level_option.item_selected.connect(_on_level_changed)
+	_lesson_option.item_selected.connect(_on_lesson_changed)
 	_build_stats()
 	level_option.grab_focus()
 
@@ -46,7 +58,8 @@ func _build_stats() -> void:
 		_add_stat_row(quest["title"], "%d/%d%s" % [quest["progress"], quest["target"], " · Claimed" if quest["claimed"] else ""])
 	_add_spacer()
 
-	var level_name := "Mixed" if _selected_level == 0 else "N%d" % _selected_level
+	var level_name := "All JLPT" if _selected_level == 0 else "N%d" % _selected_level
+	var lesson_name := "All lessons" if _selected_lesson == 0 else "Lesson %d" % _selected_lesson
 	var kanji_entries: Array[KanjiEntry] = []
 	kanji_entries.append_array(VocabDatabase.get_kanji_by_jlpt(5))
 	kanji_entries.append_array(VocabDatabase.get_kanji_by_jlpt(4))
@@ -54,9 +67,10 @@ func _build_stats() -> void:
 		SRSEngine.cards,
 		VocabDatabase.get_all_words(),
 		kanji_entries,
-		_selected_level
+		_selected_level,
+		_selected_lesson
 	)
-	_add_section_header(level_name + " Vocabulary")
+	_add_section_header(lesson_name + " · " + level_name + " Vocabulary")
 	_add_progress_bar("Coverage %d/%d" % [level_summary["introduced"], level_summary["total_words"]], level_summary["coverage"])
 	_add_progress_bar("Retained %d/%d" % [level_summary["retained"], level_summary["total_words"]], level_summary["retained_ratio"])
 	var stages: Dictionary = level_summary["stage_counts"]
@@ -65,7 +79,7 @@ func _build_stats() -> void:
 	_add_spacer()
 
 	_add_section_header("Learning Skills")
-	var skill_summary := ProgressMetrics.get_skill_summary(SRSEngine.cards, SRSEngine.kanji_cards, _selected_level)
+	var skill_summary := ProgressMetrics.get_skill_summary(SRSEngine.cards, SRSEngine.kanji_cards, _selected_level, _selected_lesson)
 	var empty_hints := {
 		"meaning": "No data yet — play Quiz or Flashcards.",
 		"reading": "No data yet — play Typing.",
@@ -95,21 +109,22 @@ func _build_stats() -> void:
 	_add_note("Exposure comes from vocabulary. Practiced and Retained come from Kanji Workshop.")
 	_add_spacer()
 
-	_add_section_header(level_name + " Topics")
-	var topic_summary := ProgressMetrics.get_topic_summary(SRSEngine.cards, VocabDatabase.get_all_words(), _selected_level)
-	for category in VocabDatabase.get_categories():
-		if not topic_summary.has(category):
-			continue
-		var topic: Dictionary = topic_summary[category]
-		_add_progress_bar("%s %d/%d" % [category.capitalize(), topic["introduced"], topic["total"]], topic["coverage"])
-	_add_note("Topic totals count authored words; progress counts introduced cards. Draft categories await human review.")
+	_add_section_header("Professional Curriculum")
+	_add_stat_row("Lessons", str(VocabDatabase.get_lessons().size()))
+	_add_stat_row("Vocabulary", str(VocabDatabase.get_word_count()))
+	_add_stat_row("Grammar Points", str(VocabDatabase.get_grammar_points().size()))
+	if _selected_lesson > 0:
+		var lesson := VocabDatabase.get_lesson(_selected_lesson)
+		_add_stat_row("Selected Stage", lesson.get("stage", ""))
+		_add_note("Source: markdown/" + lesson.get("source_file", ""))
+	_add_note("Professional lesson content is separate from the legacy Café Orders supplement.")
 	_add_spacer()
 
 	_add_section_header("Needs Practice")
 	var level_cards: Array[SRSCard] = []
 	for card in SRSEngine.cards:
 		var word := VocabDatabase.get_word_by_id(card.vocab_id)
-		if word != null and (_selected_level == 0 or word.jlpt_level == _selected_level):
+		if word != null and (_selected_level == 0 or word.jlpt_level == _selected_level) and (_selected_lesson == 0 or _selected_lesson in word.lesson_ids):
 			level_cards.append(card)
 	var practice_cards := ProgressMetrics.get_needs_practice(level_cards, GameController.get_current_date())
 	if practice_cards.is_empty():
@@ -146,7 +161,8 @@ func _build_stats() -> void:
 	_add_section_header("Review Schedule")
 	var total_cards := SRSEngine.get_total_card_count()
 	var due_cards := SRSEngine.get_due_count()
-	_add_stat_row("Introduced Cards", str(total_cards))
+	_add_stat_row("Active Cards (incl. Café)", str(total_cards))
+	_add_stat_row("Archived Legacy Cards", str(SRSEngine.archived_cards.size()))
 	_add_stat_row("Due Now", str(due_cards))
 	_add_stat_row("Scheduled / Not Due", str(total_cards - due_cards))
 	_add_spacer()
@@ -303,6 +319,15 @@ func _add_spacer() -> void:
 
 func _on_level_changed(index: int) -> void:
 	_selected_level = level_option.get_item_id(index)
+	_rebuild_stats()
+
+
+func _on_lesson_changed(index: int) -> void:
+	_selected_lesson = _lesson_option.get_item_id(index)
+	_rebuild_stats()
+
+
+func _rebuild_stats() -> void:
 	for child in stats_container.get_children():
 		stats_container.remove_child(child)
 		child.queue_free()

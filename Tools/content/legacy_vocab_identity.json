@@ -1,0 +1,9002 @@
+[
+  {
+    "id": "n4_001",
+    "word": "経験",
+    "reading": "けいけん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_002",
+    "word": "関係",
+    "reading": "かんけい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_003",
+    "word": "理由",
+    "reading": "りゆう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_004",
+    "word": "意味",
+    "reading": "いみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_005",
+    "word": "興味",
+    "reading": "きょうみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_006",
+    "word": "気持ち",
+    "reading": "きもち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_007",
+    "word": "約束",
+    "reading": "やくそく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_008",
+    "word": "準備",
+    "reading": "じゅんび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_009",
+    "word": "予定",
+    "reading": "よてい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_010",
+    "word": "習慣",
+    "reading": "しゅうかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_011",
+    "word": "文化",
+    "reading": "ぶんか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_012",
+    "word": "歴史",
+    "reading": "れきし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_013",
+    "word": "将来",
+    "reading": "しょうらい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_014",
+    "word": "最近",
+    "reading": "さいきん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_015",
+    "word": "便利",
+    "reading": "べんり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_016",
+    "word": "不便",
+    "reading": "ふべん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_017",
+    "word": "必要",
+    "reading": "ひつよう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_018",
+    "word": "特別",
+    "reading": "とくべつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_019",
+    "word": "簡単",
+    "reading": "かんたん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_020",
+    "word": "複雑",
+    "reading": "ふくざつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_021",
+    "word": "丁寧",
+    "reading": "ていねい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_022",
+    "word": "残念",
+    "reading": "ざんねん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_023",
+    "word": "素晴らしい",
+    "reading": "すばらしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_024",
+    "word": "届ける",
+    "reading": "とどける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_025",
+    "word": "届く",
+    "reading": "とどく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_026",
+    "word": "伝える",
+    "reading": "つたえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_027",
+    "word": "集める",
+    "reading": "あつめる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_028",
+    "word": "集まる",
+    "reading": "あつまる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_029",
+    "word": "変える",
+    "reading": "かえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_030",
+    "word": "変わる",
+    "reading": "かわる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_031",
+    "word": "決める",
+    "reading": "きめる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_032",
+    "word": "決まる",
+    "reading": "きまる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_033",
+    "word": "比べる",
+    "reading": "くらべる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_034",
+    "word": "続ける",
+    "reading": "つづける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_035",
+    "word": "続く",
+    "reading": "つづく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_036",
+    "word": "調べる",
+    "reading": "しらべる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_037",
+    "word": "見つける",
+    "reading": "みつける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_038",
+    "word": "見つかる",
+    "reading": "みつかる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_039",
+    "word": "間に合う",
+    "reading": "まにあう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_040",
+    "word": "足りる",
+    "reading": "たりる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_041",
+    "word": "努力",
+    "reading": "どりょく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_042",
+    "word": "成功",
+    "reading": "せいこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_043",
+    "word": "失敗",
+    "reading": "しっぱい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_044",
+    "word": "注意",
+    "reading": "ちゅうい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_045",
+    "word": "説明",
+    "reading": "せつめい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_046",
+    "word": "連絡",
+    "reading": "れんらく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_047",
+    "word": "紹介",
+    "reading": "しょうかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_048",
+    "word": "挨拶",
+    "reading": "あいさつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_049",
+    "word": "相談",
+    "reading": "そうだん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_050",
+    "word": "計画",
+    "reading": "けいかく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_051",
+    "word": "季節",
+    "reading": "きせつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_052",
+    "word": "景色",
+    "reading": "けしき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_053",
+    "word": "地震",
+    "reading": "じしん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_054",
+    "word": "台風",
+    "reading": "たいふう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_055",
+    "word": "島",
+    "reading": "しま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_056",
+    "word": "教室",
+    "reading": "きょうしつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_057",
+    "word": "試験",
+    "reading": "しけん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_058",
+    "word": "授業",
+    "reading": "じゅぎょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_059",
+    "word": "宿題",
+    "reading": "しゅくだい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_060",
+    "word": "卒業",
+    "reading": "そつぎょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_061",
+    "word": "交通",
+    "reading": "こうつう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_062",
+    "word": "飛行機",
+    "reading": "ひこうき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_063",
+    "word": "空港",
+    "reading": "くうこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_064",
+    "word": "道",
+    "reading": "みち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_065",
+    "word": "信号",
+    "reading": "しんごう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_066",
+    "word": "社会",
+    "reading": "しゃかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_067",
+    "word": "政治",
+    "reading": "せいじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_068",
+    "word": "経済",
+    "reading": "けいざい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_069",
+    "word": "技術",
+    "reading": "ぎじゅつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_070",
+    "word": "産業",
+    "reading": "さんぎょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_071",
+    "word": "環境",
+    "reading": "かんきょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_072",
+    "word": "安全",
+    "reading": "あんぜん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_073",
+    "word": "危険",
+    "reading": "きけん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_074",
+    "word": "自由",
+    "reading": "じゆう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_075",
+    "word": "平和",
+    "reading": "へいわ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_076",
+    "word": "問題",
+    "reading": "もんだい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_077",
+    "word": "答え",
+    "reading": "こたえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_078",
+    "word": "意見",
+    "reading": "いけん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_079",
+    "word": "賛成",
+    "reading": "さんせい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_080",
+    "word": "反対",
+    "reading": "はんたい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_081",
+    "word": "正確",
+    "reading": "せいかく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_082",
+    "word": "適当",
+    "reading": "てきとう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_083",
+    "word": "珍しい",
+    "reading": "めずらしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_084",
+    "word": "厳しい",
+    "reading": "きびしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_085",
+    "word": "優しい",
+    "reading": "やさしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_086",
+    "word": "恥ずかしい",
+    "reading": "はずかしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_087",
+    "word": "懐かしい",
+    "reading": "なつかしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_088",
+    "word": "悔しい",
+    "reading": "くやしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_089",
+    "word": "嬉しい",
+    "reading": "うれしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_090",
+    "word": "悲しい",
+    "reading": "かなしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_091",
+    "word": "寂しい",
+    "reading": "さびしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_092",
+    "word": "会議",
+    "reading": "かいぎ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_093",
+    "word": "受付",
+    "reading": "うけつけ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_094",
+    "word": "席",
+    "reading": "せき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_095",
+    "word": "お祭り",
+    "reading": "おまつり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_096",
+    "word": "神社",
+    "reading": "じんじゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_097",
+    "word": "お寺",
+    "reading": "おてら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_098",
+    "word": "文法",
+    "reading": "ぶんぽう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_099",
+    "word": "漢字",
+    "reading": "かんじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_100",
+    "word": "発音",
+    "reading": "はつおん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_101",
+    "word": "あ",
+    "reading": "あ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_102",
+    "word": "ああ",
+    "reading": "ああ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_103",
+    "word": "あいさつする",
+    "reading": "あいさつする",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_104",
+    "word": "間",
+    "reading": "あいだ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_105",
+    "word": "合う",
+    "reading": "あう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_106",
+    "word": "あかちゃん",
+    "reading": "あかちゃん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_107",
+    "word": "上がる",
+    "reading": "あがる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_108",
+    "word": "赤ん坊",
+    "reading": "あかんぼう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_109",
+    "word": "空く",
+    "reading": "あく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_110",
+    "word": "アクセサリー",
+    "reading": "アクセサリー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_111",
+    "word": "浅い",
+    "reading": "あさい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_112",
+    "word": "味",
+    "reading": "あじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_113",
+    "word": "アジア",
+    "reading": "アジア",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_114",
+    "word": "明日",
+    "reading": "あす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_115",
+    "word": "遊び",
+    "reading": "あそび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_116",
+    "word": "アナウンサー",
+    "reading": "アナウンサー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_117",
+    "word": "アフリカ",
+    "reading": "アフリカ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_118",
+    "word": "アメリカ",
+    "reading": "アメリカ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_119",
+    "word": "謝る",
+    "reading": "あやまる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_120",
+    "word": "アルコール",
+    "reading": "アルコール",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_121",
+    "word": "アルバイト",
+    "reading": "アルバイト",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_122",
+    "word": "安心",
+    "reading": "あんしん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_123",
+    "word": "あんな",
+    "reading": "あんな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_124",
+    "word": "案内",
+    "reading": "あんない",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_125",
+    "word": "以下",
+    "reading": "いか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_126",
+    "word": "以外",
+    "reading": "いがい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_127",
+    "word": "医学",
+    "reading": "いがく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_128",
+    "word": "生きる",
+    "reading": "いきる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_129",
+    "word": "石",
+    "reading": "いし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_130",
+    "word": "いじめる",
+    "reading": "いじめる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_131",
+    "word": "以上",
+    "reading": "いじょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_132",
+    "word": "急ぐ",
+    "reading": "いそぐ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_133",
+    "word": "致す",
+    "reading": "いたす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_134",
+    "word": "いただく",
+    "reading": "いただく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_135",
+    "word": "一度",
+    "reading": "いちど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_136",
+    "word": "一生懸命",
+    "reading": "いっしょうけんめい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_137",
+    "word": "いっぱい",
+    "reading": "いっぱい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_138",
+    "word": "糸",
+    "reading": "いと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_139",
+    "word": "以内",
+    "reading": "いない",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_140",
+    "word": "田舎",
+    "reading": "いなか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_141",
+    "word": "祈る",
+    "reading": "いのる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_142",
+    "word": "いらっしゃる",
+    "reading": "いらっしゃる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_143",
+    "word": "植える",
+    "reading": "うえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_144",
+    "word": "うかがう",
+    "reading": "うかがう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_145",
+    "word": "受ける",
+    "reading": "うける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_146",
+    "word": "動く",
+    "reading": "うごく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_147",
+    "word": "うそ",
+    "reading": "うそ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_148",
+    "word": "うち",
+    "reading": "うち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_149",
+    "word": "打つ",
+    "reading": "うつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_150",
+    "word": "美しい",
+    "reading": "うつくしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_151",
+    "word": "写す",
+    "reading": "うつす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_152",
+    "word": "移る",
+    "reading": "うつる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_153",
+    "word": "腕",
+    "reading": "うで",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_154",
+    "word": "うまい",
+    "reading": "うまい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_155",
+    "word": "裏",
+    "reading": "うら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_156",
+    "word": "売り場",
+    "reading": "うりば",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_157",
+    "word": "うれしい",
+    "reading": "うれしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_158",
+    "word": "うん",
+    "reading": "うん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_159",
+    "word": "運転",
+    "reading": "うんてん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_160",
+    "word": "運転手",
+    "reading": "うんてんしゅ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_161",
+    "word": "運動",
+    "reading": "うんどう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_162",
+    "word": "エスカレーター",
+    "reading": "エスカレーター",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_163",
+    "word": "枝",
+    "reading": "えだ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_164",
+    "word": "選ぶ",
+    "reading": "えらぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_165",
+    "word": "遠慮",
+    "reading": "えんりょ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_166",
+    "word": "おいでになる",
+    "reading": "おいでになる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_167",
+    "word": "お祝い",
+    "reading": "おいわい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_168",
+    "word": "オートバイ",
+    "reading": "オートバイ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_169",
+    "word": "おかげ",
+    "reading": "おかげ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_170",
+    "word": "おかしい",
+    "reading": "おかしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_171",
+    "word": "お金持ち",
+    "reading": "おかねもち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_172",
+    "word": "億",
+    "reading": "おく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_173",
+    "word": "屋上",
+    "reading": "おくじょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_174",
+    "word": "贈り物",
+    "reading": "おくりもの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_175",
+    "word": "送る",
+    "reading": "おくる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_176",
+    "word": "遅れる",
+    "reading": "おくれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_177",
+    "word": "起す",
+    "reading": "おこす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_178",
+    "word": "行う",
+    "reading": "おこなう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_179",
+    "word": "怒る",
+    "reading": "おこる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_180",
+    "word": "押し入れ",
+    "reading": "おしいれ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_181",
+    "word": "お嬢さん",
+    "reading": "おじょうさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_182",
+    "word": "お宅",
+    "reading": "おたく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_183",
+    "word": "落ちる",
+    "reading": "おちる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_184",
+    "word": "おっしゃる",
+    "reading": "おっしゃる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_185",
+    "word": "夫",
+    "reading": "おっと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_186",
+    "word": "おつり",
+    "reading": "おつり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_187",
+    "word": "音",
+    "reading": "おと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_188",
+    "word": "落す",
+    "reading": "おとす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_189",
+    "word": "踊り",
+    "reading": "おどり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_190",
+    "word": "踊る",
+    "reading": "おどる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_191",
+    "word": "驚く",
+    "reading": "おどろく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_192",
+    "word": "お見舞い",
+    "reading": "おみまい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_193",
+    "word": "お土産",
+    "reading": "おみやげ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_194",
+    "word": "思い出す",
+    "reading": "おもいだす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_195",
+    "word": "思う",
+    "reading": "おもう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_196",
+    "word": "おもちゃ",
+    "reading": "おもちゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_197",
+    "word": "表",
+    "reading": "おもて",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_198",
+    "word": "親",
+    "reading": "おや",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_199",
+    "word": "泳ぎ方",
+    "reading": "およぎかた",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_200",
+    "word": "下りる",
+    "reading": "おりる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_201",
+    "word": "折る",
+    "reading": "おる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_202",
+    "word": "お礼",
+    "reading": "おれい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_203",
+    "word": "折れる",
+    "reading": "おれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_204",
+    "word": "終わり",
+    "reading": "おわり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_205",
+    "word": "カーテン",
+    "reading": "カーテン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_206",
+    "word": "海岸",
+    "reading": "かいがん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_207",
+    "word": "会議室",
+    "reading": "かいぎしつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_208",
+    "word": "会場",
+    "reading": "かいじょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_209",
+    "word": "会話",
+    "reading": "かいわ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_210",
+    "word": "帰り",
+    "reading": "かえり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_211",
+    "word": "科学",
+    "reading": "かがく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_212",
+    "word": "鏡",
+    "reading": "かがみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_213",
+    "word": "飾る",
+    "reading": "かざる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_214",
+    "word": "火事",
+    "reading": "かじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_215",
+    "word": "ガス",
+    "reading": "ガス",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_216",
+    "word": "ガソリン",
+    "reading": "ガソリン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_217",
+    "word": "ガソリンスタンド",
+    "reading": "ガソリンスタンド",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_218",
+    "word": "堅い",
+    "reading": "かたい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_219",
+    "word": "形",
+    "reading": "かたち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_220",
+    "word": "片付ける",
+    "reading": "かたづける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_221",
+    "word": "課長",
+    "reading": "かちょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_222",
+    "word": "勝つ",
+    "reading": "かつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_223",
+    "word": "かっこう",
+    "reading": "かっこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_224",
+    "word": "家内",
+    "reading": "かない",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_225",
+    "word": "必ず",
+    "reading": "かならず",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_226",
+    "word": "彼女",
+    "reading": "かのじょ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_227",
+    "word": "壁",
+    "reading": "かべ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_228",
+    "word": "かまう",
+    "reading": "かまう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_229",
+    "word": "髪",
+    "reading": "かみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_230",
+    "word": "噛む",
+    "reading": "かむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_231",
+    "word": "通う",
+    "reading": "かよう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_232",
+    "word": "ガラス",
+    "reading": "ガラス",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_233",
+    "word": "彼",
+    "reading": "かれ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_234",
+    "word": "彼ら",
+    "reading": "かれら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_235",
+    "word": "乾く",
+    "reading": "かわく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_236",
+    "word": "代わり",
+    "reading": "かわり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_237",
+    "word": "考える",
+    "reading": "かんがえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_238",
+    "word": "看護婦",
+    "reading": "かんごふ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_239",
+    "word": "気",
+    "reading": "き",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_240",
+    "word": "機会",
+    "reading": "きかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_241",
+    "word": "聞こえる",
+    "reading": "きこえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_242",
+    "word": "汽車",
+    "reading": "きしゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_243",
+    "word": "規則",
+    "reading": "きそく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_244",
+    "word": "きっと",
+    "reading": "きっと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_245",
+    "word": "絹",
+    "reading": "きぬ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_246",
+    "word": "気分",
+    "reading": "きぶん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_247",
+    "word": "君",
+    "reading": "きみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_248",
+    "word": "着物",
+    "reading": "きもの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_249",
+    "word": "客",
+    "reading": "きゃく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_250",
+    "word": "急",
+    "reading": "きゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_251",
+    "word": "急行",
+    "reading": "きゅうこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_252",
+    "word": "教育",
+    "reading": "きょういく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_253",
+    "word": "教会",
+    "reading": "きょうかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_254",
+    "word": "競争",
+    "reading": "きょうそう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_255",
+    "word": "近所",
+    "reading": "きんじょ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_256",
+    "word": "具合",
+    "reading": "ぐあい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_257",
+    "word": "空気",
+    "reading": "くうき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_258",
+    "word": "草",
+    "reading": "くさ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_259",
+    "word": "くださる",
+    "reading": "くださる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_260",
+    "word": "首",
+    "reading": "くび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_261",
+    "word": "雲",
+    "reading": "くも",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_262",
+    "word": "くれる",
+    "reading": "くれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_263",
+    "word": "暮れる",
+    "reading": "くれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_264",
+    "word": "毛",
+    "reading": "け",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_265",
+    "word": "警察",
+    "reading": "けいさつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_266",
+    "word": "ケーキ",
+    "reading": "ケーキ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_267",
+    "word": "けがする",
+    "reading": "けがする",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_268",
+    "word": "消しゴム",
+    "reading": "けしゴム",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_269",
+    "word": "下宿",
+    "reading": "げしゅく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_270",
+    "word": "決して",
+    "reading": "けっして",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_271",
+    "word": "けれど",
+    "reading": "けれど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_272",
+    "word": "原因",
+    "reading": "げんいん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_273",
+    "word": "けんかする",
+    "reading": "けんかする",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_274",
+    "word": "研究",
+    "reading": "けんきゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_275",
+    "word": "研究室",
+    "reading": "けんきゅうしつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_276",
+    "word": "見物",
+    "reading": "けんぶつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_277",
+    "word": "子",
+    "reading": "こ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_278",
+    "word": "こう",
+    "reading": "こう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_279",
+    "word": "郊外",
+    "reading": "こうがい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_280",
+    "word": "講義",
+    "reading": "こうぎ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_281",
+    "word": "工業",
+    "reading": "こうぎょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_282",
+    "word": "高校",
+    "reading": "こうこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_283",
+    "word": "高校生",
+    "reading": "こうこうせい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_284",
+    "word": "工場",
+    "reading": "こうじょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_285",
+    "word": "校長",
+    "reading": "こうちょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_286",
+    "word": "講堂",
+    "reading": "こうどう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_287",
+    "word": "高等学校",
+    "reading": "こうとうがっこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_288",
+    "word": "公務員",
+    "reading": "こうむいん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_289",
+    "word": "国際",
+    "reading": "こくさい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_290",
+    "word": "心",
+    "reading": "こころ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_291",
+    "word": "御主人",
+    "reading": "ごしゅじん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_292",
+    "word": "故障",
+    "reading": "こしょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_293",
+    "word": "ご存じ",
+    "reading": "ごぞんじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_294",
+    "word": "答",
+    "reading": "こたえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_295",
+    "word": "ごちそう",
+    "reading": "ごちそう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_296",
+    "word": "こと",
+    "reading": "こと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_297",
+    "word": "小鳥",
+    "reading": "ことり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_298",
+    "word": "このあいだ",
+    "reading": "このあいだ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_299",
+    "word": "このごろ",
+    "reading": "このごろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_300",
+    "word": "細かい",
+    "reading": "こまかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_301",
+    "word": "ごみ",
+    "reading": "ごみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_302",
+    "word": "込む",
+    "reading": "こむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_303",
+    "word": "米",
+    "reading": "こめ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_304",
+    "word": "ごらんになる",
+    "reading": "ごらんになる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_305",
+    "word": "これから",
+    "reading": "これから",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_306",
+    "word": "怖い",
+    "reading": "こわい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_307",
+    "word": "壊す",
+    "reading": "こわす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_308",
+    "word": "壊れる",
+    "reading": "こわれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_309",
+    "word": "コンサート",
+    "reading": "コンサート",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_310",
+    "word": "今度",
+    "reading": "こんど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_311",
+    "word": "コンピュータ",
+    "reading": "コンピュータ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_312",
+    "word": "今夜",
+    "reading": "こんや",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_313",
+    "word": "最後",
+    "reading": "さいご",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_314",
+    "word": "最初",
+    "reading": "さいしょ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_315",
+    "word": "坂",
+    "reading": "さか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_316",
+    "word": "探す",
+    "reading": "さがす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_317",
+    "word": "下がる",
+    "reading": "さがる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_318",
+    "word": "盛ん",
+    "reading": "さかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_319",
+    "word": "下げる",
+    "reading": "さげる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_320",
+    "word": "差し上げる",
+    "reading": "さしあげる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_321",
+    "word": "さっき",
+    "reading": "さっき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_322",
+    "word": "再来月",
+    "reading": "さらいげつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_323",
+    "word": "再来週",
+    "reading": "さらいしゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_324",
+    "word": "サラダ",
+    "reading": "サラダ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_325",
+    "word": "騒ぐ",
+    "reading": "さわぐ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_326",
+    "word": "触る",
+    "reading": "さわる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_327",
+    "word": "サンダル",
+    "reading": "サンダル",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_328",
+    "word": "サンドイッチ",
+    "reading": "サンドイッチ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_329",
+    "word": "市",
+    "reading": "し",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_330",
+    "word": "字",
+    "reading": "じ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_331",
+    "word": "試合",
+    "reading": "しあい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_332",
+    "word": "仕方",
+    "reading": "しかた",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_333",
+    "word": "しかる",
+    "reading": "しかる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_334",
+    "word": "事故",
+    "reading": "じこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_335",
+    "word": "時代",
+    "reading": "じだい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_336",
+    "word": "下着",
+    "reading": "したぎ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_337",
+    "word": "支度",
+    "reading": "したく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_338",
+    "word": "しっかり",
+    "reading": "しっかり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_339",
+    "word": "辞典",
+    "reading": "じてん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_340",
+    "word": "品物",
+    "reading": "しなもの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_341",
+    "word": "しばらく",
+    "reading": "しばらく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_342",
+    "word": "市民",
+    "reading": "しみん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_343",
+    "word": "事務所",
+    "reading": "じむしょ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_344",
+    "word": "社長",
+    "reading": "しゃちょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_345",
+    "word": "じゃま",
+    "reading": "じゃま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_346",
+    "word": "ジャム",
+    "reading": "ジャム",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_347",
+    "word": "住所",
+    "reading": "じゅうしょ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_348",
+    "word": "柔道",
+    "reading": "じゅうどう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_349",
+    "word": "十分",
+    "reading": "じゅうぶん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_350",
+    "word": "出席",
+    "reading": "しゅっせき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_351",
+    "word": "出発",
+    "reading": "しゅっぱつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_352",
+    "word": "趣味",
+    "reading": "しゅみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_353",
+    "word": "小学校",
+    "reading": "しょうがっこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_354",
+    "word": "小説",
+    "reading": "しょうせつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_355",
+    "word": "招待",
+    "reading": "しょうたい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_356",
+    "word": "承知",
+    "reading": "しょうち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_357",
+    "word": "食事",
+    "reading": "しょくじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_358",
+    "word": "食料品",
+    "reading": "しょくりょうひん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_359",
+    "word": "女性",
+    "reading": "じょせい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_360",
+    "word": "知らせる",
+    "reading": "しらせる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_361",
+    "word": "人口",
+    "reading": "じんこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_362",
+    "word": "親切",
+    "reading": "しんせつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_363",
+    "word": "心配",
+    "reading": "しんぱい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_364",
+    "word": "新聞社",
+    "reading": "しんぶんしゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_365",
+    "word": "水泳",
+    "reading": "すいえい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_366",
+    "word": "水道",
+    "reading": "すいどう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_367",
+    "word": "ずいぶん",
+    "reading": "ずいぶん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_368",
+    "word": "数学",
+    "reading": "すうがく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_369",
+    "word": "スーツ",
+    "reading": "スーツ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_370",
+    "word": "スーツケース",
+    "reading": "スーツケース",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_371",
+    "word": "過ぎる",
+    "reading": "すぎる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_372",
+    "word": "すく",
+    "reading": "すく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_373",
+    "word": "スクリーン",
+    "reading": "スクリーン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_374",
+    "word": "凄い",
+    "reading": "すごい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_375",
+    "word": "進む",
+    "reading": "すすむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_376",
+    "word": "すっかり",
+    "reading": "すっかり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_377",
+    "word": "すっと",
+    "reading": "すっと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_378",
+    "word": "ステーキ",
+    "reading": "ステーキ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_379",
+    "word": "捨てる",
+    "reading": "すてる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_380",
+    "word": "ステレオ",
+    "reading": "ステレオ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_381",
+    "word": "砂",
+    "reading": "すな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_382",
+    "word": "すばらしい",
+    "reading": "すばらしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_383",
+    "word": "滑る",
+    "reading": "すべる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_384",
+    "word": "隅",
+    "reading": "すみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_385",
+    "word": "済む",
+    "reading": "すむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_386",
+    "word": "すり",
+    "reading": "すり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_387",
+    "word": "すると",
+    "reading": "すると",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_388",
+    "word": "生活",
+    "reading": "せいかつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_389",
+    "word": "生産",
+    "reading": "せいさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_390",
+    "word": "西洋",
+    "reading": "せいよう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_391",
+    "word": "世界",
+    "reading": "せかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_392",
+    "word": "背中",
+    "reading": "せなか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_393",
+    "word": "ぜひ",
+    "reading": "ぜひ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_394",
+    "word": "世話",
+    "reading": "せわ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_395",
+    "word": "線",
+    "reading": "せん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_396",
+    "word": "ぜんぜん",
+    "reading": "ぜんぜん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_397",
+    "word": "戦争",
+    "reading": "せんそう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_398",
+    "word": "先輩",
+    "reading": "せんぱい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_399",
+    "word": "そう",
+    "reading": "そう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_400",
+    "word": "育てる",
+    "reading": "そだてる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_401",
+    "word": "祖父",
+    "reading": "そふ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_402",
+    "word": "ソフト",
+    "reading": "ソフト",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_403",
+    "word": "祖母",
+    "reading": "そぼ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_404",
+    "word": "それで",
+    "reading": "それで",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_405",
+    "word": "それに",
+    "reading": "それに",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_406",
+    "word": "それほど",
+    "reading": "それほど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_407",
+    "word": "そろそろ",
+    "reading": "そろそろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_408",
+    "word": "そんな",
+    "reading": "そんな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_409",
+    "word": "そんなに",
+    "reading": "そんなに",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_410",
+    "word": "退院",
+    "reading": "たいいん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_411",
+    "word": "大学生",
+    "reading": "だいがくせい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_412",
+    "word": "大事",
+    "reading": "だいじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_413",
+    "word": "大体",
+    "reading": "だいたい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_414",
+    "word": "たいてい",
+    "reading": "たいてい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_415",
+    "word": "タイプ",
+    "reading": "タイプ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_416",
+    "word": "大分",
+    "reading": "だいぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_417",
+    "word": "倒れる",
+    "reading": "たおれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_418",
+    "word": "だから",
+    "reading": "だから",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_419",
+    "word": "確か",
+    "reading": "たしか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_420",
+    "word": "足す",
+    "reading": "たす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_421",
+    "word": "尋ねる",
+    "reading": "たずねる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_422",
+    "word": "訪ねる",
+    "reading": "たずねる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_423",
+    "word": "正しい",
+    "reading": "ただしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_424",
+    "word": "畳",
+    "reading": "たたみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_425",
+    "word": "建てる",
+    "reading": "たてる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_426",
+    "word": "立てる",
+    "reading": "たてる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_427",
+    "word": "例えば",
+    "reading": "たとえば",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_428",
+    "word": "棚",
+    "reading": "たな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_429",
+    "word": "楽しみ",
+    "reading": "たのしみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_430",
+    "word": "楽しむ",
+    "reading": "たのしむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_431",
+    "word": "たまに",
+    "reading": "たまに",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_432",
+    "word": "為",
+    "reading": "ため",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_433",
+    "word": "だめ",
+    "reading": "だめ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_434",
+    "word": "男性",
+    "reading": "だんせい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_435",
+    "word": "暖房",
+    "reading": "だんぼう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_436",
+    "word": "血",
+    "reading": "ち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_437",
+    "word": "チェックする",
+    "reading": "チェックする",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_438",
+    "word": "力",
+    "reading": "ちから",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_439",
+    "word": "ちっとも",
+    "reading": "ちっとも",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_440",
+    "word": "ちゃん",
+    "reading": "ちゃん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_441",
+    "word": "中学校",
+    "reading": "ちゅうがっこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_442",
+    "word": "注射",
+    "reading": "ちゅうしゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_443",
+    "word": "駐車場",
+    "reading": "ちゅうしゃじょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_444",
+    "word": "地理",
+    "reading": "ちり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_445",
+    "word": "捕まえる",
+    "reading": "つかまえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_446",
+    "word": "つき",
+    "reading": "つき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_447",
+    "word": "付く",
+    "reading": "つく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_448",
+    "word": "漬ける",
+    "reading": "つける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_449",
+    "word": "都合",
+    "reading": "つごう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_450",
+    "word": "包む",
+    "reading": "つつむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_451",
+    "word": "妻",
+    "reading": "つま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_452",
+    "word": "つもり",
+    "reading": "つもり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_453",
+    "word": "釣る",
+    "reading": "つる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_454",
+    "word": "連れる",
+    "reading": "つれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_455",
+    "word": "テキスト",
+    "reading": "テキスト",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_456",
+    "word": "できるだけ",
+    "reading": "できるだけ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_457",
+    "word": "手伝う",
+    "reading": "てつだう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_458",
+    "word": "テニス",
+    "reading": "テニス",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_459",
+    "word": "手袋",
+    "reading": "てぶくろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_460",
+    "word": "寺",
+    "reading": "てら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_461",
+    "word": "点",
+    "reading": "てん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_462",
+    "word": "店員",
+    "reading": "てんいん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_463",
+    "word": "天気予報",
+    "reading": "てんきよほう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_464",
+    "word": "電灯",
+    "reading": "でんとう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_465",
+    "word": "電報",
+    "reading": "でんぽう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_466",
+    "word": "展覧会",
+    "reading": "てんらんかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_467",
+    "word": "都",
+    "reading": "と",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_468",
+    "word": "道具",
+    "reading": "どうぐ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_469",
+    "word": "とうとう",
+    "reading": "とうとう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_470",
+    "word": "動物園",
+    "reading": "どうぶつえん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_471",
+    "word": "遠く",
+    "reading": "とおく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_472",
+    "word": "通る",
+    "reading": "とおる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_473",
+    "word": "特に",
+    "reading": "とくに",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_474",
+    "word": "とこや",
+    "reading": "とこや",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_475",
+    "word": "途中",
+    "reading": "とちゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_476",
+    "word": "特急",
+    "reading": "とっきゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_477",
+    "word": "泊まる",
+    "reading": "とまる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_478",
+    "word": "止める",
+    "reading": "とめる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_479",
+    "word": "取り替える",
+    "reading": "とりかえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_480",
+    "word": "泥棒",
+    "reading": "どろぼう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_481",
+    "word": "どんどん",
+    "reading": "どんどん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_482",
+    "word": "直す",
+    "reading": "なおす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_483",
+    "word": "治る",
+    "reading": "なおる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_484",
+    "word": "直る",
+    "reading": "なおる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_485",
+    "word": "中々",
+    "reading": "なかなか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_486",
+    "word": "泣く",
+    "reading": "なく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_487",
+    "word": "亡くなる",
+    "reading": "なくなる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_488",
+    "word": "無くなる",
+    "reading": "なくなる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_489",
+    "word": "投げる",
+    "reading": "なげる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_490",
+    "word": "なさる",
+    "reading": "なさる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_491",
+    "word": "鳴る",
+    "reading": "なる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_492",
+    "word": "なるべく",
+    "reading": "なるべく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_493",
+    "word": "なるほど",
+    "reading": "なるほど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_494",
+    "word": "慣れる",
+    "reading": "なれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_495",
+    "word": "におい",
+    "reading": "におい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_496",
+    "word": "苦い",
+    "reading": "にがい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_497",
+    "word": "二階建て",
+    "reading": "にかいだて",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_498",
+    "word": "逃げる",
+    "reading": "にげる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_499",
+    "word": "日記",
+    "reading": "にっき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_500",
+    "word": "入院",
+    "reading": "にゅういん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_501",
+    "word": "入学",
+    "reading": "にゅうがく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_502",
+    "word": "似る",
+    "reading": "にる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_503",
+    "word": "人形",
+    "reading": "にんぎょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_504",
+    "word": "盗む",
+    "reading": "ぬすむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_505",
+    "word": "塗る",
+    "reading": "ぬる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_506",
+    "word": "ぬれる",
+    "reading": "ぬれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_507",
+    "word": "ねだん",
+    "reading": "ねだん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_508",
+    "word": "熱",
+    "reading": "ねつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_509",
+    "word": "ねっしん",
+    "reading": "ねっしん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_510",
+    "word": "寝坊",
+    "reading": "ねぼう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_511",
+    "word": "眠い",
+    "reading": "ねむい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_512",
+    "word": "眠る",
+    "reading": "ねむる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_513",
+    "word": "残る",
+    "reading": "のこる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_514",
+    "word": "のど",
+    "reading": "のど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_515",
+    "word": "乗り換える",
+    "reading": "のりかえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_516",
+    "word": "乗り物",
+    "reading": "のりもの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_517",
+    "word": "葉",
+    "reading": "は",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_518",
+    "word": "場合",
+    "reading": "ばあい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_519",
+    "word": "パート",
+    "reading": "パート",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_520",
+    "word": "倍",
+    "reading": "ばい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_521",
+    "word": "拝見",
+    "reading": "はいけん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_522",
+    "word": "歯医者",
+    "reading": "はいしゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_523",
+    "word": "運ぶ",
+    "reading": "はこぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_524",
+    "word": "始める",
+    "reading": "はじめる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_525",
+    "word": "場所",
+    "reading": "ばしょ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_526",
+    "word": "はず",
+    "reading": "はず",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_527",
+    "word": "パソコン",
+    "reading": "パソコン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_528",
+    "word": "はっきり",
+    "reading": "はっきり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_529",
+    "word": "花見",
+    "reading": "はなみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_530",
+    "word": "林",
+    "reading": "はやし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_531",
+    "word": "払う",
+    "reading": "はらう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_532",
+    "word": "番組",
+    "reading": "ばんぐみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_533",
+    "word": "ハンドバッグ",
+    "reading": "ハンドバッグ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_534",
+    "word": "火",
+    "reading": "ひ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_535",
+    "word": "日",
+    "reading": "ひ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_536",
+    "word": "ピアノ",
+    "reading": "ピアノ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_537",
+    "word": "冷える",
+    "reading": "ひえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_538",
+    "word": "光",
+    "reading": "ひかり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_539",
+    "word": "光る",
+    "reading": "ひかる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_540",
+    "word": "引き出し",
+    "reading": "ひきだし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_541",
+    "word": "引き出す",
+    "reading": "ひきだす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_542",
+    "word": "ひげ",
+    "reading": "ひげ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_543",
+    "word": "飛行場",
+    "reading": "ひこうじょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_544",
+    "word": "久しぶり",
+    "reading": "ひさしぶり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_545",
+    "word": "美術館",
+    "reading": "びじゅつかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_546",
+    "word": "非常に",
+    "reading": "ひじょうに",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_547",
+    "word": "びっくりする",
+    "reading": "びっくりする",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_548",
+    "word": "引っ越す",
+    "reading": "ひっこす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_549",
+    "word": "ひどい",
+    "reading": "ひどい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_550",
+    "word": "開く",
+    "reading": "ひらく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_551",
+    "word": "ビル",
+    "reading": "ビル",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_552",
+    "word": "昼間",
+    "reading": "ひるま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_553",
+    "word": "昼休み",
+    "reading": "ひるやすみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_554",
+    "word": "拾う",
+    "reading": "ひろう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_555",
+    "word": "ファックス",
+    "reading": "ファックス",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_556",
+    "word": "増える",
+    "reading": "ふえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_557",
+    "word": "深い",
+    "reading": "ふかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_558",
+    "word": "復習",
+    "reading": "ふくしゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_559",
+    "word": "部長",
+    "reading": "ぶちょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_560",
+    "word": "普通",
+    "reading": "ふつう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_561",
+    "word": "ぶどう",
+    "reading": "ぶどう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_562",
+    "word": "太る",
+    "reading": "ふとる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_563",
+    "word": "布団",
+    "reading": "ふとん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_564",
+    "word": "舟",
+    "reading": "ふね",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_565",
+    "word": "踏む",
+    "reading": "ふむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_566",
+    "word": "降り出す",
+    "reading": "ふりだす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_567",
+    "word": "プレゼント",
+    "reading": "プレゼント",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_568",
+    "word": "文学",
+    "reading": "ぶんがく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_569",
+    "word": "別",
+    "reading": "べつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_570",
+    "word": "ベル",
+    "reading": "ベル",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_571",
+    "word": "変",
+    "reading": "へん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_572",
+    "word": "返事",
+    "reading": "へんじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_573",
+    "word": "貿易",
+    "reading": "ぼうえき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_574",
+    "word": "放送",
+    "reading": "ほうそう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_575",
+    "word": "法律",
+    "reading": "ほうりつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_576",
+    "word": "僕",
+    "reading": "ぼく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_577",
+    "word": "星",
+    "reading": "ほし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_578",
+    "word": "ほど",
+    "reading": "ほど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_579",
+    "word": "ほとんど",
+    "reading": "ほとんど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_580",
+    "word": "ほめる",
+    "reading": "ほめる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_581",
+    "word": "翻訳",
+    "reading": "ほんやく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_582",
+    "word": "参る",
+    "reading": "まいる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_583",
+    "word": "負ける",
+    "reading": "まける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_584",
+    "word": "まじめ",
+    "reading": "まじめ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_585",
+    "word": "まず",
+    "reading": "まず",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_586",
+    "word": "または",
+    "reading": "または",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_587",
+    "word": "間違える",
+    "reading": "まちがえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_588",
+    "word": "周り",
+    "reading": "まわり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_589",
+    "word": "回る",
+    "reading": "まわる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_590",
+    "word": "漫画",
+    "reading": "まんが",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_591",
+    "word": "真ん中",
+    "reading": "まんなか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_592",
+    "word": "見える",
+    "reading": "みえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_593",
+    "word": "湖",
+    "reading": "みずうみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_594",
+    "word": "味噌",
+    "reading": "みそ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_595",
+    "word": "皆",
+    "reading": "みな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_596",
+    "word": "港",
+    "reading": "みなと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_597",
+    "word": "向かう",
+    "reading": "むかう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_598",
+    "word": "迎える",
+    "reading": "むかえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_599",
+    "word": "昔",
+    "reading": "むかし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_600",
+    "word": "虫",
+    "reading": "むし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_601",
+    "word": "息子",
+    "reading": "むすこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_602",
+    "word": "娘",
+    "reading": "むすめ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_603",
+    "word": "無理",
+    "reading": "むり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_604",
+    "word": "召し上がる",
+    "reading": "めしあがる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_605",
+    "word": "申し上げる",
+    "reading": "もうしあげる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_606",
+    "word": "申す",
+    "reading": "もうす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_607",
+    "word": "もうすぐ",
+    "reading": "もうすぐ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_608",
+    "word": "もし",
+    "reading": "もし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_609",
+    "word": "もちろん",
+    "reading": "もちろん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_610",
+    "word": "もっとも",
+    "reading": "もっとも",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_611",
+    "word": "戻る",
+    "reading": "もどる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_612",
+    "word": "木綿",
+    "reading": "もめん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_613",
+    "word": "もらう",
+    "reading": "もらう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_614",
+    "word": "森",
+    "reading": "もり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_615",
+    "word": "焼く",
+    "reading": "やく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_616",
+    "word": "役に立つ",
+    "reading": "やくにたつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_617",
+    "word": "焼ける",
+    "reading": "やける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_618",
+    "word": "痩せる",
+    "reading": "やせる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_619",
+    "word": "やっと",
+    "reading": "やっと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_620",
+    "word": "やはり",
+    "reading": "やはり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_621",
+    "word": "止む",
+    "reading": "やむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_622",
+    "word": "柔らかい",
+    "reading": "やわらかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_623",
+    "word": "湯",
+    "reading": "ゆ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_624",
+    "word": "輸出",
+    "reading": "ゆしゅつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_625",
+    "word": "輸入",
+    "reading": "ゆにゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_626",
+    "word": "指",
+    "reading": "ゆび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_627",
+    "word": "指輪",
+    "reading": "ゆびわ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_628",
+    "word": "夢",
+    "reading": "ゆめ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_629",
+    "word": "揺れる",
+    "reading": "ゆれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_630",
+    "word": "用",
+    "reading": "よう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_631",
+    "word": "用意",
+    "reading": "ようい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_632",
+    "word": "用事",
+    "reading": "ようじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_633",
+    "word": "汚れる",
+    "reading": "よごれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_634",
+    "word": "予習",
+    "reading": "よしゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_635",
+    "word": "予約",
+    "reading": "よやく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_636",
+    "word": "寄る",
+    "reading": "よる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_637",
+    "word": "喜ぶ",
+    "reading": "よろこぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_638",
+    "word": "よろしい",
+    "reading": "よろしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_639",
+    "word": "利用",
+    "reading": "りよう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_640",
+    "word": "両方",
+    "reading": "りょうほう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_641",
+    "word": "旅館",
+    "reading": "りょかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_642",
+    "word": "留守",
+    "reading": "るす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_643",
+    "word": "冷房",
+    "reading": "れいぼう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_644",
+    "word": "レジ",
+    "reading": "レジ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_645",
+    "word": "レポート",
+    "reading": "レポート",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_646",
+    "word": "ワープロ",
+    "reading": "ワープロ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_647",
+    "word": "沸かす",
+    "reading": "わかす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_648",
+    "word": "別れる",
+    "reading": "わかれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_649",
+    "word": "沸く",
+    "reading": "わく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_650",
+    "word": "訳",
+    "reading": "わけ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_651",
+    "word": "忘れ物",
+    "reading": "わすれもの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_652",
+    "word": "笑う",
+    "reading": "わらう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_653",
+    "word": "割合",
+    "reading": "わりあい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_654",
+    "word": "割れる",
+    "reading": "われる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_655",
+    "word": "～区",
+    "reading": "～く",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_656",
+    "word": "大抵",
+    "reading": "たいてい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_657",
+    "word": "やはり; やっぱり",
+    "reading": "やはり; やっぱり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_658",
+    "word": "～月",
+    "reading": "～つき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_659",
+    "word": "～会",
+    "reading": "～かい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_660",
+    "word": "床屋",
+    "reading": "とこや",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_661",
+    "word": "～ございます",
+    "reading": "～ございます",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_662",
+    "word": "正月",
+    "reading": "しょうがつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_663",
+    "word": "失礼",
+    "reading": "しつれい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_664",
+    "word": "～製",
+    "reading": "～せい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_665",
+    "word": "～軒",
+    "reading": "～けん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_666",
+    "word": "レポート; リポート",
+    "reading": "レポート; リポート",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_667",
+    "word": "～学部",
+    "reading": "～がくぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_668",
+    "word": "月",
+    "reading": "つき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_669",
+    "word": "落る",
+    "reading": "おちる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_670",
+    "word": "起こす",
+    "reading": "おこす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_671",
+    "word": "赤ちゃん",
+    "reading": "あかちゃん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_672",
+    "word": "パート (タイム)",
+    "reading": "パート (タイム)",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_673",
+    "word": "～式",
+    "reading": "～しき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_674",
+    "word": "～家",
+    "reading": "～か",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_675",
+    "word": "建て",
+    "reading": "～だて",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_676",
+    "word": "いくら～ても",
+    "reading": "いくら～ても",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_677",
+    "word": "頑張る",
+    "reading": "がんばる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_678",
+    "word": "パパ",
+    "reading": "パパ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_679",
+    "word": "～(て) しまう",
+    "reading": "～(て) しまう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_680",
+    "word": "事",
+    "reading": "こと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_681",
+    "word": "熱心",
+    "reading": "ねっしん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_682",
+    "word": "匂い",
+    "reading": "におい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_683",
+    "word": "～員",
+    "reading": "～いん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_684",
+    "word": "内",
+    "reading": "うち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_685",
+    "word": "～ばかり",
+    "reading": "～ばかり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_686",
+    "word": "～だす",
+    "reading": "～だす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_687",
+    "word": "オーバー",
+    "reading": "オーバー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_688",
+    "word": "ご主人",
+    "reading": "ごしゅじん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_689",
+    "word": "楽む",
+    "reading": "たのしむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_690",
+    "word": "おる",
+    "reading": "おる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n4_691",
+    "word": "コーヒー",
+    "reading": "コーヒー",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n4_692",
+    "word": "紅茶",
+    "reading": "こうちゃ",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n4_693",
+    "word": "緑茶",
+    "reading": "りょくちゃ",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n4_694",
+    "word": "カレー",
+    "reading": "カレー",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n4_695",
+    "word": "ラーメン",
+    "reading": "ラーメン",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n4_696",
+    "word": "寿司",
+    "reading": "すし",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n4_697",
+    "word": "味噌汁",
+    "reading": "みそしる",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n4_698",
+    "word": "ジュース",
+    "reading": "ジュース",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n4_699",
+    "word": "デザート",
+    "reading": "デザート",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n4_700",
+    "word": "ビール",
+    "reading": "ビール",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_001",
+    "word": "こんにちは",
+    "reading": "こんにちは",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_002",
+    "word": "ありがとう",
+    "reading": "ありがとう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_003",
+    "word": "すみません",
+    "reading": "すみません",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_004",
+    "word": "おはよう",
+    "reading": "おはよう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_005",
+    "word": "さようなら",
+    "reading": "さようなら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_006",
+    "word": "おやすみなさい",
+    "reading": "おやすみなさい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_007",
+    "word": "いただきます",
+    "reading": "いただきます",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_008",
+    "word": "ごちそうさま",
+    "reading": "ごちそうさま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_009",
+    "word": "はい",
+    "reading": "はい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_010",
+    "word": "いいえ",
+    "reading": "いいえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_011",
+    "word": "水",
+    "reading": "みず",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_012",
+    "word": "お茶",
+    "reading": "おちゃ",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_013",
+    "word": "ご飯",
+    "reading": "ごはん",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_014",
+    "word": "パン",
+    "reading": "パン",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_015",
+    "word": "卵",
+    "reading": "たまご",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_016",
+    "word": "魚",
+    "reading": "さかな",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_017",
+    "word": "肉",
+    "reading": "にく",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_018",
+    "word": "野菜",
+    "reading": "やさい",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_019",
+    "word": "果物",
+    "reading": "くだもの",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_020",
+    "word": "牛乳",
+    "reading": "ぎゅうにゅう",
+    "cafe_legacy": true
+  },
+  {
+    "id": "n5_021",
+    "word": "一",
+    "reading": "いち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_022",
+    "word": "二",
+    "reading": "に",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_023",
+    "word": "三",
+    "reading": "さん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_024",
+    "word": "四",
+    "reading": "よん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_025",
+    "word": "五",
+    "reading": "ご",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_026",
+    "word": "六",
+    "reading": "ろく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_027",
+    "word": "七",
+    "reading": "なな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_028",
+    "word": "八",
+    "reading": "はち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_029",
+    "word": "九",
+    "reading": "きゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_030",
+    "word": "十",
+    "reading": "じゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_031",
+    "word": "人",
+    "reading": "ひと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_032",
+    "word": "男",
+    "reading": "おとこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_033",
+    "word": "女",
+    "reading": "おんな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_034",
+    "word": "子供",
+    "reading": "こども",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_035",
+    "word": "友達",
+    "reading": "ともだち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_036",
+    "word": "先生",
+    "reading": "せんせい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_037",
+    "word": "学生",
+    "reading": "がくせい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_038",
+    "word": "本",
+    "reading": "ほん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_039",
+    "word": "車",
+    "reading": "くるま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_040",
+    "word": "猫",
+    "reading": "ねこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_041",
+    "word": "犬",
+    "reading": "いぬ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_042",
+    "word": "花",
+    "reading": "はな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_043",
+    "word": "山",
+    "reading": "やま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_044",
+    "word": "川",
+    "reading": "かわ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_045",
+    "word": "目",
+    "reading": "め",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_046",
+    "word": "手",
+    "reading": "て",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_047",
+    "word": "足",
+    "reading": "あし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_048",
+    "word": "口",
+    "reading": "くち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_049",
+    "word": "耳",
+    "reading": "みみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_050",
+    "word": "頭",
+    "reading": "あたま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_051",
+    "word": "お父さん",
+    "reading": "おとうさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_052",
+    "word": "お母さん",
+    "reading": "おかあさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_053",
+    "word": "お兄さん",
+    "reading": "おにいさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_054",
+    "word": "お姉さん",
+    "reading": "おねえさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_055",
+    "word": "弟",
+    "reading": "おとうと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_056",
+    "word": "妹",
+    "reading": "いもうと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_057",
+    "word": "家族",
+    "reading": "かぞく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_058",
+    "word": "奥さん",
+    "reading": "おくさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_059",
+    "word": "主人",
+    "reading": "しゅじん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_060",
+    "word": "赤ちゃん",
+    "reading": "あかちゃん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_061",
+    "word": "食べる",
+    "reading": "たべる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_062",
+    "word": "飲む",
+    "reading": "のむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_063",
+    "word": "行く",
+    "reading": "いく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_064",
+    "word": "来る",
+    "reading": "くる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_065",
+    "word": "見る",
+    "reading": "みる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_066",
+    "word": "聞く",
+    "reading": "きく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_067",
+    "word": "書く",
+    "reading": "かく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_068",
+    "word": "読む",
+    "reading": "よむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_069",
+    "word": "話す",
+    "reading": "はなす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_070",
+    "word": "買う",
+    "reading": "かう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_071",
+    "word": "待つ",
+    "reading": "まつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_072",
+    "word": "立つ",
+    "reading": "たつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_073",
+    "word": "座る",
+    "reading": "すわる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_074",
+    "word": "走る",
+    "reading": "はしる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_075",
+    "word": "歩く",
+    "reading": "あるく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_076",
+    "word": "作る",
+    "reading": "つくる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_077",
+    "word": "大きい",
+    "reading": "おおきい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_078",
+    "word": "小さい",
+    "reading": "ちいさい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_079",
+    "word": "新しい",
+    "reading": "あたらしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_080",
+    "word": "古い",
+    "reading": "ふるい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_081",
+    "word": "高い",
+    "reading": "たかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_082",
+    "word": "安い",
+    "reading": "やすい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_083",
+    "word": "長い",
+    "reading": "ながい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_084",
+    "word": "短い",
+    "reading": "みじかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_085",
+    "word": "良い",
+    "reading": "いい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_086",
+    "word": "悪い",
+    "reading": "わるい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_087",
+    "word": "暑い",
+    "reading": "あつい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_088",
+    "word": "寒い",
+    "reading": "さむい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_089",
+    "word": "おいしい",
+    "reading": "おいしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_090",
+    "word": "楽しい",
+    "reading": "たのしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_091",
+    "word": "今日",
+    "reading": "きょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_092",
+    "word": "明日",
+    "reading": "あした",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_093",
+    "word": "昨日",
+    "reading": "きのう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_094",
+    "word": "今",
+    "reading": "いま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_095",
+    "word": "朝",
+    "reading": "あさ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_096",
+    "word": "夜",
+    "reading": "よる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_097",
+    "word": "学校",
+    "reading": "がっこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_098",
+    "word": "駅",
+    "reading": "えき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_099",
+    "word": "病院",
+    "reading": "びょういん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_100",
+    "word": "銀行",
+    "reading": "ぎんこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_101",
+    "word": "図書館",
+    "reading": "としょかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_102",
+    "word": "郵便局",
+    "reading": "ゆうびんきょく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_103",
+    "word": "公園",
+    "reading": "こうえん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_104",
+    "word": "お店",
+    "reading": "おみせ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_105",
+    "word": "天気",
+    "reading": "てんき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_106",
+    "word": "雨",
+    "reading": "あめ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_107",
+    "word": "雪",
+    "reading": "ゆき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_108",
+    "word": "風",
+    "reading": "かぜ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_109",
+    "word": "空",
+    "reading": "そら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_110",
+    "word": "海",
+    "reading": "うみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_111",
+    "word": "電車",
+    "reading": "でんしゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_112",
+    "word": "バス",
+    "reading": "バス",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_113",
+    "word": "自転車",
+    "reading": "じてんしゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_114",
+    "word": "右",
+    "reading": "みぎ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_115",
+    "word": "左",
+    "reading": "ひだり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_116",
+    "word": "上",
+    "reading": "うえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_117",
+    "word": "下",
+    "reading": "した",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_118",
+    "word": "前",
+    "reading": "まえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_119",
+    "word": "後ろ",
+    "reading": "うしろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_120",
+    "word": "中",
+    "reading": "なか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_121",
+    "word": "会う",
+    "reading": "あう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_122",
+    "word": "青",
+    "reading": "あお",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_123",
+    "word": "青い",
+    "reading": "あおい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_124",
+    "word": "赤",
+    "reading": "あか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_125",
+    "word": "赤い",
+    "reading": "あかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_126",
+    "word": "明るい",
+    "reading": "あかるい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_127",
+    "word": "秋",
+    "reading": "あき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_128",
+    "word": "開く",
+    "reading": "あく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_129",
+    "word": "開ける",
+    "reading": "あける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_130",
+    "word": "上げる",
+    "reading": "あげる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_131",
+    "word": "朝ごはん",
+    "reading": "あさごはん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_132",
+    "word": "あさって",
+    "reading": "あさって",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_133",
+    "word": "あそこ",
+    "reading": "あそこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_134",
+    "word": "遊ぶ",
+    "reading": "あそぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_135",
+    "word": "暖かい",
+    "reading": "あたたかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_136",
+    "word": "あちら",
+    "reading": "あちら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_137",
+    "word": "厚い",
+    "reading": "あつい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_138",
+    "word": "熱い",
+    "reading": "あつい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_139",
+    "word": "あっち",
+    "reading": "あっち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_140",
+    "word": "後",
+    "reading": "あと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_141",
+    "word": "あなた",
+    "reading": "あなた",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_142",
+    "word": "兄",
+    "reading": "あに",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_143",
+    "word": "姉",
+    "reading": "あね",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_144",
+    "word": "あの",
+    "reading": "あの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_145",
+    "word": "アパート",
+    "reading": "アパート",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_146",
+    "word": "あびる",
+    "reading": "あびる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_147",
+    "word": "危ない",
+    "reading": "あぶない",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_148",
+    "word": "甘い",
+    "reading": "あまい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_149",
+    "word": "あまり",
+    "reading": "あまり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_150",
+    "word": "飴",
+    "reading": "あめ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_151",
+    "word": "洗う",
+    "reading": "あらう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_152",
+    "word": "ある",
+    "reading": "ある",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_153",
+    "word": "あれ",
+    "reading": "あれ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_154",
+    "word": "いい",
+    "reading": "いい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_155",
+    "word": "言う",
+    "reading": "いう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_156",
+    "word": "家",
+    "reading": "いえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_157",
+    "word": "いかが",
+    "reading": "いかが",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_158",
+    "word": "いくつ",
+    "reading": "いくつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_159",
+    "word": "いくら",
+    "reading": "いくら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_160",
+    "word": "池",
+    "reading": "いけ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_161",
+    "word": "医者",
+    "reading": "いしゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_162",
+    "word": "いす",
+    "reading": "いす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_163",
+    "word": "忙しい",
+    "reading": "いそがしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_164",
+    "word": "痛い",
+    "reading": "いたい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_165",
+    "word": "一日",
+    "reading": "いちにち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_166",
+    "word": "いちばん",
+    "reading": "いちばん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_167",
+    "word": "いつ",
+    "reading": "いつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_168",
+    "word": "五日",
+    "reading": "いつか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_169",
+    "word": "一緒",
+    "reading": "いっしょ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_170",
+    "word": "五つ",
+    "reading": "いつつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_171",
+    "word": "いつも",
+    "reading": "いつも",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_172",
+    "word": "意味",
+    "reading": "いみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_173",
+    "word": "嫌",
+    "reading": "いや",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_174",
+    "word": "入口",
+    "reading": "いりぐち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_175",
+    "word": "いる",
+    "reading": "いる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_176",
+    "word": "要る",
+    "reading": "いる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_177",
+    "word": "入れる",
+    "reading": "いれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_178",
+    "word": "色",
+    "reading": "いろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_179",
+    "word": "いろいろ",
+    "reading": "いろいろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_180",
+    "word": "薄い",
+    "reading": "うすい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_181",
+    "word": "歌",
+    "reading": "うた",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_182",
+    "word": "歌う",
+    "reading": "うたう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_183",
+    "word": "生まれる",
+    "reading": "うまれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_184",
+    "word": "売る",
+    "reading": "うる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_185",
+    "word": "煩い",
+    "reading": "うるさい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_186",
+    "word": "上着",
+    "reading": "うわぎ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_187",
+    "word": "絵",
+    "reading": "え",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_188",
+    "word": "映画",
+    "reading": "えいが",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_189",
+    "word": "映画館",
+    "reading": "えいがかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_190",
+    "word": "英語",
+    "reading": "えいご",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_191",
+    "word": "ええ",
+    "reading": "ええ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_192",
+    "word": "エレベーター",
+    "reading": "エレベーター",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_193",
+    "word": "鉛筆",
+    "reading": "えんぴつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_194",
+    "word": "多い",
+    "reading": "おおい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_195",
+    "word": "大きな",
+    "reading": "おおきな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_196",
+    "word": "大勢",
+    "reading": "おおぜい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_197",
+    "word": "お菓子",
+    "reading": "おかし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_198",
+    "word": "お金",
+    "reading": "おかね",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_199",
+    "word": "起きる",
+    "reading": "おきる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_200",
+    "word": "置く",
+    "reading": "おく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_201",
+    "word": "お酒",
+    "reading": "おさけ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_202",
+    "word": "お皿",
+    "reading": "おさら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_203",
+    "word": "お祖父さん",
+    "reading": "おじいさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_204",
+    "word": "教える",
+    "reading": "おしえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_205",
+    "word": "押す",
+    "reading": "おす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_206",
+    "word": "遅い",
+    "reading": "おそい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_207",
+    "word": "お手洗い",
+    "reading": "おてあらい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_208",
+    "word": "男の子",
+    "reading": "おとこのこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_209",
+    "word": "一昨日",
+    "reading": "おととい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_210",
+    "word": "一昨年",
+    "reading": "おととし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_211",
+    "word": "大人",
+    "reading": "おとな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_212",
+    "word": "おなか",
+    "reading": "おなか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_213",
+    "word": "同じ",
+    "reading": "おなじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_214",
+    "word": "お願いします",
+    "reading": "おねがいします",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_215",
+    "word": "おばあさん",
+    "reading": "おばあさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_216",
+    "word": "伯母さん",
+    "reading": "おばさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_217",
+    "word": "お風呂",
+    "reading": "おふろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_218",
+    "word": "お弁当",
+    "reading": "おべんとう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_219",
+    "word": "覚える",
+    "reading": "おぼえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_220",
+    "word": "おまわりさん",
+    "reading": "おまわりさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_221",
+    "word": "重い",
+    "reading": "おもい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_222",
+    "word": "おもしろい",
+    "reading": "おもしろい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_223",
+    "word": "泳ぐ",
+    "reading": "およぐ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_224",
+    "word": "降りる",
+    "reading": "おりる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_225",
+    "word": "終る",
+    "reading": "おわる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_226",
+    "word": "音楽",
+    "reading": "おんがく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_227",
+    "word": "女の子",
+    "reading": "おんなのこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_228",
+    "word": "外国",
+    "reading": "がいこく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_229",
+    "word": "外国人",
+    "reading": "がいこくじん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_230",
+    "word": "会社",
+    "reading": "かいしゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_231",
+    "word": "階段",
+    "reading": "かいだん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_232",
+    "word": "買い物",
+    "reading": "かいもの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_233",
+    "word": "返す",
+    "reading": "かえす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_234",
+    "word": "帰る",
+    "reading": "かえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_235",
+    "word": "かかる",
+    "reading": "かかる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_236",
+    "word": "かぎ",
+    "reading": "かぎ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_237",
+    "word": "かける",
+    "reading": "かける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_238",
+    "word": "傘",
+    "reading": "かさ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_239",
+    "word": "貸す",
+    "reading": "かす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_240",
+    "word": "風邪",
+    "reading": "かぜ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_241",
+    "word": "方",
+    "reading": "かた",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_242",
+    "word": "カップ",
+    "reading": "カップ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_243",
+    "word": "家庭",
+    "reading": "かてい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_244",
+    "word": "角",
+    "reading": "かど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_245",
+    "word": "かばん",
+    "reading": "かばん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_246",
+    "word": "花瓶",
+    "reading": "かびん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_247",
+    "word": "紙",
+    "reading": "かみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_248",
+    "word": "カメラ",
+    "reading": "カメラ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_249",
+    "word": "火曜日",
+    "reading": "かようび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_250",
+    "word": "辛い",
+    "reading": "からい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_251",
+    "word": "体",
+    "reading": "からだ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_252",
+    "word": "借りる",
+    "reading": "かりる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_253",
+    "word": "軽い",
+    "reading": "かるい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_254",
+    "word": "カレー",
+    "reading": "カレー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_255",
+    "word": "カレンダー",
+    "reading": "カレンダー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_256",
+    "word": "かわいい",
+    "reading": "かわいい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_257",
+    "word": "漢字",
+    "reading": "かんじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_258",
+    "word": "木",
+    "reading": "き",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_259",
+    "word": "黄色",
+    "reading": "きいろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_260",
+    "word": "黄色い",
+    "reading": "きいろい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_261",
+    "word": "消える",
+    "reading": "きえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_262",
+    "word": "北",
+    "reading": "きた",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_263",
+    "word": "ギター",
+    "reading": "ギター",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_264",
+    "word": "汚い",
+    "reading": "きたない",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_265",
+    "word": "喫茶店",
+    "reading": "きっさてん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_266",
+    "word": "切手",
+    "reading": "きって",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_267",
+    "word": "切符",
+    "reading": "きっぷ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_268",
+    "word": "牛肉",
+    "reading": "ぎゅうにく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_269",
+    "word": "教室",
+    "reading": "きょうしつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_270",
+    "word": "兄弟",
+    "reading": "きょうだい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_271",
+    "word": "去年",
+    "reading": "きょねん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_272",
+    "word": "嫌い",
+    "reading": "きらい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_273",
+    "word": "切る",
+    "reading": "きる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_274",
+    "word": "着る",
+    "reading": "きる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_275",
+    "word": "きれい",
+    "reading": "きれい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_276",
+    "word": "キロ",
+    "reading": "キロ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_277",
+    "word": "金曜日",
+    "reading": "きんようび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_278",
+    "word": "薬",
+    "reading": "くすり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_279",
+    "word": "ください",
+    "reading": "ください",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_280",
+    "word": "靴",
+    "reading": "くつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_281",
+    "word": "靴下",
+    "reading": "くつした",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_282",
+    "word": "国",
+    "reading": "くに",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_283",
+    "word": "曇り",
+    "reading": "くもり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_284",
+    "word": "曇る",
+    "reading": "くもる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_285",
+    "word": "暗い",
+    "reading": "くらい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_286",
+    "word": "クラス",
+    "reading": "クラス",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_287",
+    "word": "グラム",
+    "reading": "グラム",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_288",
+    "word": "黒",
+    "reading": "くろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_289",
+    "word": "黒い",
+    "reading": "くろい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_290",
+    "word": "警官",
+    "reading": "けいかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_291",
+    "word": "今朝",
+    "reading": "けさ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_292",
+    "word": "消す",
+    "reading": "けす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_293",
+    "word": "結構",
+    "reading": "けっこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_294",
+    "word": "結婚",
+    "reading": "けっこん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_295",
+    "word": "月曜日",
+    "reading": "げつようび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_296",
+    "word": "玄関",
+    "reading": "げんかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_297",
+    "word": "元気",
+    "reading": "げんき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_298",
+    "word": "交差点",
+    "reading": "こうさてん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_299",
+    "word": "紅茶",
+    "reading": "こうちゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_300",
+    "word": "交番",
+    "reading": "こうばん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_301",
+    "word": "声",
+    "reading": "こえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_302",
+    "word": "コート",
+    "reading": "コート",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_303",
+    "word": "コーヒー",
+    "reading": "コーヒー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_304",
+    "word": "ここ",
+    "reading": "ここ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_305",
+    "word": "午後",
+    "reading": "ごご",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_306",
+    "word": "九日",
+    "reading": "ここのか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_307",
+    "word": "九つ",
+    "reading": "ここのつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_308",
+    "word": "午前",
+    "reading": "ごぜん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_309",
+    "word": "答える",
+    "reading": "こたえる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_310",
+    "word": "こちら",
+    "reading": "こちら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_311",
+    "word": "こっち",
+    "reading": "こっち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_312",
+    "word": "コップ",
+    "reading": "コップ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_313",
+    "word": "今年",
+    "reading": "ことし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_314",
+    "word": "言葉",
+    "reading": "ことば",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_315",
+    "word": "この",
+    "reading": "この",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_316",
+    "word": "御飯",
+    "reading": "ごはん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_317",
+    "word": "コピーする",
+    "reading": "コピーする",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_318",
+    "word": "困る",
+    "reading": "こまる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_319",
+    "word": "ごめんなさい",
+    "reading": "ごめんなさい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_320",
+    "word": "これ",
+    "reading": "これ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_321",
+    "word": "今月",
+    "reading": "こんげつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_322",
+    "word": "今週",
+    "reading": "こんしゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_323",
+    "word": "こんな",
+    "reading": "こんな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_324",
+    "word": "今晩",
+    "reading": "こんばん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_325",
+    "word": "こんばんは",
+    "reading": "こんばんは",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_326",
+    "word": "さあ",
+    "reading": "さあ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_327",
+    "word": "財布",
+    "reading": "さいふ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_328",
+    "word": "先",
+    "reading": "さき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_329",
+    "word": "咲く",
+    "reading": "さく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_330",
+    "word": "作文",
+    "reading": "さくぶん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_331",
+    "word": "差す",
+    "reading": "さす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_332",
+    "word": "雑誌",
+    "reading": "ざっし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_333",
+    "word": "砂糖",
+    "reading": "さとう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_334",
+    "word": "再来年",
+    "reading": "さらいねん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_335",
+    "word": "散歩",
+    "reading": "さんぽ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_336",
+    "word": "塩",
+    "reading": "しお",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_337",
+    "word": "しかし",
+    "reading": "しかし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_338",
+    "word": "時間",
+    "reading": "じかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_339",
+    "word": "仕事",
+    "reading": "しごと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_340",
+    "word": "辞書",
+    "reading": "じしょ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_341",
+    "word": "静か",
+    "reading": "しずか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_342",
+    "word": "質問",
+    "reading": "しつもん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_343",
+    "word": "自動車",
+    "reading": "じどうしゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_344",
+    "word": "死ぬ",
+    "reading": "しぬ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_345",
+    "word": "字引",
+    "reading": "じびき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_346",
+    "word": "自分",
+    "reading": "じぶん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_347",
+    "word": "閉まる",
+    "reading": "しまる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_348",
+    "word": "締める",
+    "reading": "しめる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_349",
+    "word": "閉める",
+    "reading": "しめる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_350",
+    "word": "じゃ",
+    "reading": "じゃ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_351",
+    "word": "写真",
+    "reading": "しゃしん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_352",
+    "word": "シャツ",
+    "reading": "シャツ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_353",
+    "word": "シャワー",
+    "reading": "シャワー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_354",
+    "word": "授業",
+    "reading": "じゅぎょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_355",
+    "word": "宿題",
+    "reading": "しゅくだい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_356",
+    "word": "上手",
+    "reading": "じょうず",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_357",
+    "word": "丈夫",
+    "reading": "じょうぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_358",
+    "word": "しょうゆ",
+    "reading": "しょうゆ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_359",
+    "word": "食堂",
+    "reading": "しょくどう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_360",
+    "word": "知る",
+    "reading": "しる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_361",
+    "word": "白",
+    "reading": "しろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_362",
+    "word": "白い",
+    "reading": "しろい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_363",
+    "word": "新聞",
+    "reading": "しんぶん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_364",
+    "word": "水曜日",
+    "reading": "すいようび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_365",
+    "word": "吸う",
+    "reading": "すう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_366",
+    "word": "スカート",
+    "reading": "スカート",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_367",
+    "word": "好き",
+    "reading": "すき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_368",
+    "word": "すぐ",
+    "reading": "すぐ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_369",
+    "word": "少ない",
+    "reading": "すくない",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_370",
+    "word": "すぐに",
+    "reading": "すぐに",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_371",
+    "word": "少し",
+    "reading": "すこし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_372",
+    "word": "涼しい",
+    "reading": "すずしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_373",
+    "word": "ストーブ",
+    "reading": "ストーブ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_374",
+    "word": "スプーン",
+    "reading": "スプーン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_375",
+    "word": "スポーツ",
+    "reading": "スポーツ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_376",
+    "word": "ズボン",
+    "reading": "ズボン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_377",
+    "word": "住む",
+    "reading": "すむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_378",
+    "word": "スリッパ",
+    "reading": "スリッパ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_379",
+    "word": "する",
+    "reading": "する",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_380",
+    "word": "背",
+    "reading": "せ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_381",
+    "word": "生徒",
+    "reading": "せいと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_382",
+    "word": "セーター",
+    "reading": "セーター",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_383",
+    "word": "せっけん",
+    "reading": "せっけん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_384",
+    "word": "背広",
+    "reading": "せびろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_385",
+    "word": "狭い",
+    "reading": "せまい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_386",
+    "word": "ゼロ",
+    "reading": "ゼロ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_387",
+    "word": "千",
+    "reading": "せん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_388",
+    "word": "先月",
+    "reading": "せんげつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_389",
+    "word": "先週",
+    "reading": "せんしゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_390",
+    "word": "洗濯",
+    "reading": "せんたく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_391",
+    "word": "全部",
+    "reading": "ぜんぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_392",
+    "word": "掃除",
+    "reading": "そうじ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_393",
+    "word": "そうして",
+    "reading": "そうして",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_394",
+    "word": "そこ",
+    "reading": "そこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_395",
+    "word": "そちら",
+    "reading": "そちら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_396",
+    "word": "そっち",
+    "reading": "そっち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_397",
+    "word": "外",
+    "reading": "そと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_398",
+    "word": "その",
+    "reading": "その",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_399",
+    "word": "そば",
+    "reading": "そば",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_400",
+    "word": "それ",
+    "reading": "それ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_401",
+    "word": "それから",
+    "reading": "それから",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_402",
+    "word": "それでは",
+    "reading": "それでは",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_403",
+    "word": "大学",
+    "reading": "だいがく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_404",
+    "word": "大使館",
+    "reading": "たいしかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_405",
+    "word": "大丈夫",
+    "reading": "だいじょうぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_406",
+    "word": "大好き",
+    "reading": "だいすき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_407",
+    "word": "大切",
+    "reading": "たいせつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_408",
+    "word": "台所",
+    "reading": "だいどころ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_409",
+    "word": "たいへん",
+    "reading": "たいへん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_410",
+    "word": "たくさん",
+    "reading": "たくさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_411",
+    "word": "タクシー",
+    "reading": "タクシー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_412",
+    "word": "出す",
+    "reading": "だす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_413",
+    "word": "たて",
+    "reading": "たて",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_414",
+    "word": "建物",
+    "reading": "たてもの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_415",
+    "word": "頼む",
+    "reading": "たのむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_416",
+    "word": "たばこ",
+    "reading": "たばこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_417",
+    "word": "たぶん",
+    "reading": "たぶん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_418",
+    "word": "食べ物",
+    "reading": "たべもの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_419",
+    "word": "誰",
+    "reading": "だれ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_420",
+    "word": "誕生日",
+    "reading": "たんじょうび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_421",
+    "word": "だんだん",
+    "reading": "だんだん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_422",
+    "word": "小さな",
+    "reading": "ちいさな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_423",
+    "word": "近い",
+    "reading": "ちかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_424",
+    "word": "違う",
+    "reading": "ちがう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_425",
+    "word": "近く",
+    "reading": "ちかく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_426",
+    "word": "地下鉄",
+    "reading": "ちかてつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_427",
+    "word": "地図",
+    "reading": "ちず",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_428",
+    "word": "茶色",
+    "reading": "ちゃいろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_429",
+    "word": "ちゃわん",
+    "reading": "ちゃわん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_430",
+    "word": "ちょうど",
+    "reading": "ちょうど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_431",
+    "word": "ちょっと",
+    "reading": "ちょっと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_432",
+    "word": "使う",
+    "reading": "つかう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_433",
+    "word": "疲れる",
+    "reading": "つかれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_434",
+    "word": "次",
+    "reading": "つぎ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_435",
+    "word": "着く",
+    "reading": "つく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_436",
+    "word": "机",
+    "reading": "つくえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_437",
+    "word": "つける",
+    "reading": "つける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_438",
+    "word": "勤める",
+    "reading": "つとめる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_439",
+    "word": "つまらない",
+    "reading": "つまらない",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_440",
+    "word": "冷たい",
+    "reading": "つめたい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_441",
+    "word": "強い",
+    "reading": "つよい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_442",
+    "word": "テープ",
+    "reading": "テープ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_443",
+    "word": "テーブル",
+    "reading": "テーブル",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_444",
+    "word": "テープレコーダー",
+    "reading": "テープレコーダー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_445",
+    "word": "出かける",
+    "reading": "でかける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_446",
+    "word": "手紙",
+    "reading": "てがみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_447",
+    "word": "できる",
+    "reading": "できる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_448",
+    "word": "出口",
+    "reading": "でぐち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_449",
+    "word": "テスト",
+    "reading": "テスト",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_450",
+    "word": "では",
+    "reading": "では",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_451",
+    "word": "デパート",
+    "reading": "デパート",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_452",
+    "word": "でも",
+    "reading": "でも",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_453",
+    "word": "出る",
+    "reading": "でる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_454",
+    "word": "テレビ",
+    "reading": "テレビ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_455",
+    "word": "電気",
+    "reading": "でんき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_456",
+    "word": "電話",
+    "reading": "でんわ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_457",
+    "word": "戸",
+    "reading": "と",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_458",
+    "word": "ドア",
+    "reading": "ドア",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_459",
+    "word": "トイレ",
+    "reading": "トイレ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_460",
+    "word": "どう",
+    "reading": "どう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_461",
+    "word": "どうして",
+    "reading": "どうして",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_462",
+    "word": "どうぞ",
+    "reading": "どうぞ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_463",
+    "word": "どうぞよろしく",
+    "reading": "どうぞよろしく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_464",
+    "word": "動物",
+    "reading": "どうぶつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_465",
+    "word": "どうも",
+    "reading": "どうも",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_466",
+    "word": "遠い",
+    "reading": "とおい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_467",
+    "word": "十日",
+    "reading": "とおか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_468",
+    "word": "時々",
+    "reading": "ときどき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_469",
+    "word": "時計",
+    "reading": "とけい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_470",
+    "word": "どこ",
+    "reading": "どこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_471",
+    "word": "所",
+    "reading": "ところ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_472",
+    "word": "年",
+    "reading": "とし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_473",
+    "word": "どちら",
+    "reading": "どちら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_474",
+    "word": "どっち",
+    "reading": "どっち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_475",
+    "word": "とても",
+    "reading": "とても",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_476",
+    "word": "どなた",
+    "reading": "どなた",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_477",
+    "word": "隣",
+    "reading": "となり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_478",
+    "word": "どの",
+    "reading": "どの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_479",
+    "word": "飛ぶ",
+    "reading": "とぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_480",
+    "word": "止まる",
+    "reading": "とまる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_481",
+    "word": "土曜日",
+    "reading": "どようび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_482",
+    "word": "鳥",
+    "reading": "とり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_483",
+    "word": "鶏肉",
+    "reading": "とりにく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_484",
+    "word": "撮る",
+    "reading": "とる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_485",
+    "word": "取る",
+    "reading": "とる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_486",
+    "word": "どれ",
+    "reading": "どれ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_487",
+    "word": "ナイフ",
+    "reading": "ナイフ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_488",
+    "word": "鳴く",
+    "reading": "なく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_489",
+    "word": "無くす",
+    "reading": "なくす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_490",
+    "word": "なぜ",
+    "reading": "なぜ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_491",
+    "word": "夏",
+    "reading": "なつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_492",
+    "word": "夏休み",
+    "reading": "なつやすみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_493",
+    "word": "など",
+    "reading": "など",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_494",
+    "word": "七つ",
+    "reading": "ななつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_495",
+    "word": "七日",
+    "reading": "なのか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_496",
+    "word": "名前",
+    "reading": "なまえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_497",
+    "word": "習う",
+    "reading": "ならう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_498",
+    "word": "並ぶ",
+    "reading": "ならぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_499",
+    "word": "並べる",
+    "reading": "ならべる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_500",
+    "word": "なる",
+    "reading": "なる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_501",
+    "word": "何",
+    "reading": "なん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_502",
+    "word": "賑やか",
+    "reading": "にぎやか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_503",
+    "word": "西",
+    "reading": "にし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_504",
+    "word": "日曜日",
+    "reading": "にちようび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_505",
+    "word": "荷物",
+    "reading": "にもつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_506",
+    "word": "ニュース",
+    "reading": "ニュース",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_507",
+    "word": "庭",
+    "reading": "にわ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_508",
+    "word": "脱ぐ",
+    "reading": "ぬぐ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_509",
+    "word": "温い",
+    "reading": "ぬるい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_510",
+    "word": "ネクタイ",
+    "reading": "ネクタイ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_511",
+    "word": "寝る",
+    "reading": "ねる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_512",
+    "word": "ノート",
+    "reading": "ノート",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_513",
+    "word": "登る",
+    "reading": "のぼる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_514",
+    "word": "飲み物",
+    "reading": "のみもの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_515",
+    "word": "乗る",
+    "reading": "のる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_516",
+    "word": "歯",
+    "reading": "は",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_517",
+    "word": "パーティー",
+    "reading": "パーティー",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_518",
+    "word": "灰皿",
+    "reading": "はいざら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_519",
+    "word": "入る",
+    "reading": "はいる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_520",
+    "word": "葉書",
+    "reading": "はがき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_521",
+    "word": "はく",
+    "reading": "はく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_522",
+    "word": "箱",
+    "reading": "はこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_523",
+    "word": "はし",
+    "reading": "はし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_524",
+    "word": "橋",
+    "reading": "はし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_525",
+    "word": "始まる",
+    "reading": "はじまる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_526",
+    "word": "初め",
+    "reading": "はじめ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_527",
+    "word": "初めて",
+    "reading": "はじめて",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_528",
+    "word": "はじめまして",
+    "reading": "はじめまして",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_529",
+    "word": "バター",
+    "reading": "バター",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_530",
+    "word": "二十歳",
+    "reading": "はたち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_531",
+    "word": "働く",
+    "reading": "はたらく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_532",
+    "word": "二十日",
+    "reading": "はつか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_533",
+    "word": "鼻",
+    "reading": "はな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_534",
+    "word": "話",
+    "reading": "はなし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_535",
+    "word": "早い",
+    "reading": "はやい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_536",
+    "word": "速い",
+    "reading": "はやい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_537",
+    "word": "春",
+    "reading": "はる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_538",
+    "word": "貼る",
+    "reading": "はる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_539",
+    "word": "晴れ",
+    "reading": "はれ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_540",
+    "word": "晴れる",
+    "reading": "はれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_541",
+    "word": "半",
+    "reading": "はん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_542",
+    "word": "晩",
+    "reading": "ばん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_543",
+    "word": "ハンカチ",
+    "reading": "ハンカチ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_544",
+    "word": "番号",
+    "reading": "ばんごう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_545",
+    "word": "晩御飯",
+    "reading": "ばんごはん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_546",
+    "word": "半分",
+    "reading": "はんぶん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_547",
+    "word": "東",
+    "reading": "ひがし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_548",
+    "word": "引く",
+    "reading": "ひく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_549",
+    "word": "弾く",
+    "reading": "ひく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_550",
+    "word": "低い",
+    "reading": "ひくい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_551",
+    "word": "飛行機",
+    "reading": "ひこうき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_552",
+    "word": "一つ",
+    "reading": "ひとつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_553",
+    "word": "一月",
+    "reading": "ひとつき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_554",
+    "word": "一人",
+    "reading": "ひとり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_555",
+    "word": "暇",
+    "reading": "ひま",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_556",
+    "word": "百",
+    "reading": "ひゃく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_557",
+    "word": "病気",
+    "reading": "びょうき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_558",
+    "word": "昼",
+    "reading": "ひる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_559",
+    "word": "昼御飯",
+    "reading": "ひるごはん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_560",
+    "word": "広い",
+    "reading": "ひろい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_561",
+    "word": "フィルム",
+    "reading": "フィルム",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_562",
+    "word": "封筒",
+    "reading": "ふうとう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_563",
+    "word": "プール",
+    "reading": "プール",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_564",
+    "word": "フォーク",
+    "reading": "フォーク",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_565",
+    "word": "吹く",
+    "reading": "ふく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_566",
+    "word": "服",
+    "reading": "ふく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_567",
+    "word": "二つ",
+    "reading": "ふたつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_568",
+    "word": "豚肉",
+    "reading": "ぶたにく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_569",
+    "word": "二人",
+    "reading": "ふたり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_570",
+    "word": "二日",
+    "reading": "ふつか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_571",
+    "word": "太い",
+    "reading": "ふとい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_572",
+    "word": "冬",
+    "reading": "ふゆ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_573",
+    "word": "降る",
+    "reading": "ふる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_574",
+    "word": "ふろ",
+    "reading": "ふろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_575",
+    "word": "文章",
+    "reading": "ぶんしょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_576",
+    "word": "ページ",
+    "reading": "ページ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_577",
+    "word": "下手",
+    "reading": "へた",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_578",
+    "word": "ベッド",
+    "reading": "ベッド",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_579",
+    "word": "ペット",
+    "reading": "ペット",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_580",
+    "word": "部屋",
+    "reading": "へや",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_581",
+    "word": "辺",
+    "reading": "へん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_582",
+    "word": "ペン",
+    "reading": "ペン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_583",
+    "word": "勉強",
+    "reading": "べんきょう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_584",
+    "word": "便利",
+    "reading": "べんり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_585",
+    "word": "帽子",
+    "reading": "ぼうし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_586",
+    "word": "ボールペン",
+    "reading": "ボールペン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_587",
+    "word": "ほか",
+    "reading": "ほか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_588",
+    "word": "ポケット",
+    "reading": "ポケット",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_589",
+    "word": "欲しい",
+    "reading": "ほしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_590",
+    "word": "ポスト",
+    "reading": "ポスト",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_591",
+    "word": "細い",
+    "reading": "ほそい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_592",
+    "word": "ボタン",
+    "reading": "ボタン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_593",
+    "word": "ホテル",
+    "reading": "ホテル",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_594",
+    "word": "本棚",
+    "reading": "ほんだな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_595",
+    "word": "ほんとう",
+    "reading": "ほんとう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_596",
+    "word": "毎朝",
+    "reading": "まいあさ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_597",
+    "word": "毎月",
+    "reading": "まいげつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_598",
+    "word": "毎週",
+    "reading": "まいしゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_599",
+    "word": "毎日",
+    "reading": "まいにち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_600",
+    "word": "毎年",
+    "reading": "まいねん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_601",
+    "word": "毎晩",
+    "reading": "まいばん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_602",
+    "word": "曲る",
+    "reading": "まがる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_603",
+    "word": "まずい",
+    "reading": "まずい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_604",
+    "word": "また",
+    "reading": "また",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_605",
+    "word": "まだ",
+    "reading": "まだ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_606",
+    "word": "町",
+    "reading": "まち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_607",
+    "word": "まっすぐ",
+    "reading": "まっすぐ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_608",
+    "word": "マッチ",
+    "reading": "マッチ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_609",
+    "word": "窓",
+    "reading": "まど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_610",
+    "word": "丸い",
+    "reading": "まるい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_611",
+    "word": "万",
+    "reading": "まん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_612",
+    "word": "万年筆",
+    "reading": "まんねんひつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_613",
+    "word": "磨く",
+    "reading": "みがく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_614",
+    "word": "店",
+    "reading": "みせ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_615",
+    "word": "見せる",
+    "reading": "みせる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_616",
+    "word": "道",
+    "reading": "みち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_617",
+    "word": "三日",
+    "reading": "みっか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_618",
+    "word": "三つ",
+    "reading": "みっつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_619",
+    "word": "緑",
+    "reading": "みどり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_620",
+    "word": "皆さん",
+    "reading": "みなさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_621",
+    "word": "南",
+    "reading": "みなみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_622",
+    "word": "みんな",
+    "reading": "みんな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_623",
+    "word": "六日",
+    "reading": "むいか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_624",
+    "word": "向こう",
+    "reading": "むこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_625",
+    "word": "難しい",
+    "reading": "むずかしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_626",
+    "word": "六つ",
+    "reading": "むっつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_627",
+    "word": "村",
+    "reading": "むら",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_628",
+    "word": "メートル",
+    "reading": "メートル",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_629",
+    "word": "眼鏡",
+    "reading": "めがね",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_630",
+    "word": "もう",
+    "reading": "もう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_631",
+    "word": "もう一度",
+    "reading": "もういちど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_632",
+    "word": "木曜日",
+    "reading": "もくようび",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_633",
+    "word": "持つ",
+    "reading": "もつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_634",
+    "word": "もっと",
+    "reading": "もっと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_635",
+    "word": "物",
+    "reading": "もの",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_636",
+    "word": "門",
+    "reading": "もん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_637",
+    "word": "問題",
+    "reading": "もんだい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_638",
+    "word": "八百屋",
+    "reading": "やおや",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_639",
+    "word": "易しい",
+    "reading": "やさしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_640",
+    "word": "休み",
+    "reading": "やすみ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_641",
+    "word": "休む",
+    "reading": "やすむ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_642",
+    "word": "八つ",
+    "reading": "やっつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_643",
+    "word": "やる",
+    "reading": "やる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_644",
+    "word": "夕方",
+    "reading": "ゆうがた",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_645",
+    "word": "夕飯",
+    "reading": "ゆうはん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_646",
+    "word": "昨夜",
+    "reading": "ゆうべ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_647",
+    "word": "有名",
+    "reading": "ゆうめい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_648",
+    "word": "ゆっくりと",
+    "reading": "ゆっくりと",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_649",
+    "word": "八日",
+    "reading": "ようか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_650",
+    "word": "洋服",
+    "reading": "ようふく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_651",
+    "word": "よく",
+    "reading": "よく",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_652",
+    "word": "横",
+    "reading": "よこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_653",
+    "word": "四日",
+    "reading": "よっか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_654",
+    "word": "四つ",
+    "reading": "よっつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_655",
+    "word": "呼ぶ",
+    "reading": "よぶ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_656",
+    "word": "より",
+    "reading": "より",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_657",
+    "word": "弱い",
+    "reading": "よわい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_658",
+    "word": "来月",
+    "reading": "らいげつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_659",
+    "word": "来週",
+    "reading": "らいしゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_660",
+    "word": "来年",
+    "reading": "らいねん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_661",
+    "word": "ラジオ",
+    "reading": "ラジオ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_662",
+    "word": "ラジカセ",
+    "reading": "ラジカセ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_663",
+    "word": "りっぱ",
+    "reading": "りっぱ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_664",
+    "word": "留学生",
+    "reading": "りゅうがくせい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_665",
+    "word": "両親",
+    "reading": "りょうしん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_666",
+    "word": "料理",
+    "reading": "りょうり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_667",
+    "word": "旅行",
+    "reading": "りょこう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_668",
+    "word": "零",
+    "reading": "れい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_669",
+    "word": "冷蔵庫",
+    "reading": "れいぞうこ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_670",
+    "word": "レコード",
+    "reading": "レコード",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_671",
+    "word": "レストラン",
+    "reading": "レストラン",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_672",
+    "word": "練習",
+    "reading": "れんしゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_673",
+    "word": "廊下",
+    "reading": "ろうか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_674",
+    "word": "ワイシャツ",
+    "reading": "ワイシャツ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_675",
+    "word": "若い",
+    "reading": "わかい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_676",
+    "word": "分かる",
+    "reading": "わかる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_677",
+    "word": "忘れる",
+    "reading": "わすれる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_678",
+    "word": "私",
+    "reading": "わたくし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_679",
+    "word": "渡す",
+    "reading": "わたす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_680",
+    "word": "渡る",
+    "reading": "わたる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_681",
+    "word": "ああ",
+    "reading": "ああ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_682",
+    "word": "朝御飯",
+    "reading": "あさごはん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_683",
+    "word": "明後日",
+    "reading": "あさって",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_684",
+    "word": "足; 脚",
+    "reading": "あし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_685",
+    "word": "浴びる",
+    "reading": "あびる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_686",
+    "word": "余り",
+    "reading": "あまり",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_687",
+    "word": "在る",
+    "reading": "ある",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_688",
+    "word": "有る",
+    "reading": "ある",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_689",
+    "word": "いい; よい",
+    "reading": "いい; よい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_690",
+    "word": "椅子",
+    "reading": "いす",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_691",
+    "word": "一番",
+    "reading": "いちばん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_692",
+    "word": "居る",
+    "reading": "いる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_693",
+    "word": "色々",
+    "reading": "いろいろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_694",
+    "word": "うち",
+    "reading": "うち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_695",
+    "word": "うるさい",
+    "reading": "うるさい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_696",
+    "word": "～円",
+    "reading": "～えん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_697",
+    "word": "お～",
+    "reading": "お～",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_698",
+    "word": "美味しい",
+    "reading": "おいしい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_699",
+    "word": "伯父; 叔父さん",
+    "reading": "おじさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_700",
+    "word": "おじいさん",
+    "reading": "おじいさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_701",
+    "word": "おととし",
+    "reading": "おととし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_702",
+    "word": "お腹",
+    "reading": "おなか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_703",
+    "word": "伯母さん; 叔母さん",
+    "reading": "おばさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_704",
+    "word": "面白い",
+    "reading": "おもしろい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_705",
+    "word": "～回",
+    "reading": "～かい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_706",
+    "word": "～階",
+    "reading": "～かい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_707",
+    "word": "顔",
+    "reading": "かお",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_708",
+    "word": "鍵",
+    "reading": "かぎ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_709",
+    "word": "～か月",
+    "reading": "～かげつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_710",
+    "word": "掛ける",
+    "reading": "かける",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_711",
+    "word": "片仮名",
+    "reading": "かたかな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_712",
+    "word": "～月",
+    "reading": "～がつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_713",
+    "word": "かぶる",
+    "reading": "かぶる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_714",
+    "word": "～がる",
+    "reading": "～がる",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_715",
+    "word": "川; 河",
+    "reading": "かわ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_716",
+    "word": "～側",
+    "reading": "～がわ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_717",
+    "word": "可愛い",
+    "reading": "かわいい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_718",
+    "word": "綺麗",
+    "reading": "きれい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_719",
+    "word": "キロ; キログラム",
+    "reading": "キロ; キログラム",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_720",
+    "word": "キロ; キロメートル",
+    "reading": "キロ; キロメートル",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_721",
+    "word": "下さい",
+    "reading": "ください",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_722",
+    "word": "～くらい; ぐらい",
+    "reading": "～くらい; ぐらい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_723",
+    "word": "～個",
+    "reading": "～こ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_724",
+    "word": "～語",
+    "reading": "～ご",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_725",
+    "word": "～ころ; ～ごろ",
+    "reading": "～ころ; ～ごろ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_726",
+    "word": "～歳",
+    "reading": "～さい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_727",
+    "word": "～冊",
+    "reading": "～さつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_728",
+    "word": "さ来年",
+    "reading": "さらいねん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_729",
+    "word": "～さん",
+    "reading": "～さん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_730",
+    "word": "～時",
+    "reading": "～じ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_731",
+    "word": "～時間",
+    "reading": "～じかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_732",
+    "word": "じゃ; じゃあ",
+    "reading": "じゃ; じゃあ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_733",
+    "word": "～中",
+    "reading": "～じゅう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_734",
+    "word": "～週間",
+    "reading": "～しゅうかん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_735",
+    "word": "醤油",
+    "reading": "しょうゆ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_736",
+    "word": "～人",
+    "reading": "～じん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_737",
+    "word": "～すぎ",
+    "reading": "～すぎ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_738",
+    "word": "～ずつ",
+    "reading": "～ずつ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_739",
+    "word": "石鹸",
+    "reading": "せっけん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_740",
+    "word": "そう; そうです",
+    "reading": "そう; そうです",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_741",
+    "word": "そうして; そして",
+    "reading": "そうして; そして",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_742",
+    "word": "～台",
+    "reading": "～だい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_743",
+    "word": "大変",
+    "reading": "たいへん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_744",
+    "word": "～だけ",
+    "reading": "～だけ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_745",
+    "word": "沢山",
+    "reading": "たくさん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_746",
+    "word": "～たち",
+    "reading": "～たち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_747",
+    "word": "多分",
+    "reading": "たぶん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_748",
+    "word": "誰か",
+    "reading": "だれか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_749",
+    "word": "段々",
+    "reading": "だんだん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_750",
+    "word": "父",
+    "reading": "ちち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_751",
+    "word": "茶碗",
+    "reading": "ちゃわん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_752",
+    "word": "丁度",
+    "reading": "ちょうど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_753",
+    "word": "～度",
+    "reading": "～ど",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_754",
+    "word": "どんな",
+    "reading": "どんな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_755",
+    "word": "ない",
+    "reading": "ない",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_756",
+    "word": "～など",
+    "reading": "～など",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_757",
+    "word": "何～",
+    "reading": "なん～",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_758",
+    "word": "にぎやか",
+    "reading": "にぎやか",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_759",
+    "word": "～日",
+    "reading": "～にち",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_760",
+    "word": "～年",
+    "reading": "～ねん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_761",
+    "word": "～杯",
+    "reading": "～はい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_762",
+    "word": "箸",
+    "reading": "はし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_763",
+    "word": "初め; 始め",
+    "reading": "はじめ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_764",
+    "word": "母",
+    "reading": "はは",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_765",
+    "word": "～番",
+    "reading": "～ばん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_766",
+    "word": "～匹",
+    "reading": "～ひき",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_767",
+    "word": "平仮名",
+    "reading": "ひらがな",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_768",
+    "word": "～分",
+    "reading": "～ふん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_769",
+    "word": "～本",
+    "reading": "～ほん",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_770",
+    "word": "本当",
+    "reading": "ほんとう",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_771",
+    "word": "～枚",
+    "reading": "～まい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_772",
+    "word": "～前",
+    "reading": "～まえ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_773",
+    "word": "丸い; 円い",
+    "reading": "まるい",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_774",
+    "word": "もしもし",
+    "reading": "もしもし",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_775",
+    "word": "～屋",
+    "reading": "～や",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_776",
+    "word": "ラジオカセ",
+    "reading": "ラジオカセ",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_777",
+    "word": "ジュース",
+    "reading": "juusu",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_778",
+    "word": "味噌",
+    "reading": "miso",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_779",
+    "word": "朝ご飯",
+    "reading": "asagohan",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_780",
+    "word": "昼ご飯",
+    "reading": "hirugohan",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_781",
+    "word": "晩ご飯",
+    "reading": "bangohan",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_782",
+    "word": "弁当",
+    "reading": "bentou",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_783",
+    "word": "会議",
+    "reading": "kaigi",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_784",
+    "word": "住所",
+    "reading": "juusho",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_785",
+    "word": "電話番号",
+    "reading": "denwabangou",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_786",
+    "word": "鞄",
+    "reading": "kaban",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_787",
+    "word": "答え",
+    "reading": "kotae",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_788",
+    "word": "日本語",
+    "reading": "nihongo",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_789",
+    "word": "試験",
+    "reading": "shiken",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_790",
+    "word": "会話",
+    "reading": "kaiwa",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_791",
+    "word": "日本人",
+    "reading": "nihonjin",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_792",
+    "word": "日本",
+    "reading": "nihon",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_793",
+    "word": "中国",
+    "reading": "chuugoku",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_794",
+    "word": "韓国",
+    "reading": "kankoku",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_795",
+    "word": "アメリカ",
+    "reading": "amerika",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_796",
+    "word": "イギリス",
+    "reading": "igirisu",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_797",
+    "word": "フランス",
+    "reading": "furansu",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_798",
+    "word": "手袋",
+    "reading": "tebukuro",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_799",
+    "word": "皿",
+    "reading": "sara",
+    "cafe_legacy": false
+  },
+  {
+    "id": "n5_800",
+    "word": "タオル",
+    "reading": "taoru",
+    "cafe_legacy": false
+  }
+]

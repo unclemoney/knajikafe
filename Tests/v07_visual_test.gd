@@ -7,6 +7,8 @@ const SCENES := [
 	{"name": "workshop_n4", "path": "res://Scenes/MiniGames/KanjiWorkshop/kanji_workshop.tscn", "game_type": "kanji_workshop"},
 	{"name": "listening_n4", "path": "res://Scenes/MiniGames/ListeningLab/listening_lab.tscn", "game_type": "listening_lab", "submit": true},
 	{"name": "notebook_n4", "path": "res://Scenes/StudyNotebook/study_notebook.tscn", "game_type": "study_notebook", "detail": true},
+	{"name": "notebook_grammar", "path": "res://Scenes/StudyNotebook/study_notebook.tscn", "game_type": "study_notebook", "grammar": true},
+	{"name": "fill_blank_lesson5", "path": "res://Scenes/MiniGames/FillInBlank/fill_in_blank.tscn", "game_type": "fill_in_blank"},
 	{"name": "settings", "path": "res://Scenes/Settings/settings.tscn", "game_type": ""},
 	{"name": "stats_n4", "path": "res://Scenes/Stats/stats_screen.tscn", "game_type": ""},
 	{"name": "register_picker", "path": "res://Scenes/CafeHub/cafe_hub.tscn", "game_type": "", "picker": "_on_typing_pressed"},
@@ -35,10 +37,15 @@ func _run() -> void:
 			add_child(scene)
 			if definition.has("picker"):
 				scene.call(definition["picker"])
-			if definition.get("detail", false):
+			if definition.get("grammar", false):
+				scene._mode_option.select(1)
+				scene.topic_option.select(scene.topic_option.get_item_index(5))
+				scene._on_filters_changed(0)
+				scene._show_grammar_detail(scene._filtered_grammar[0])
+			elif definition.get("detail", false):
 				scene._show_detail(scene._filtered_words[0])
 			if definition.get("submit", false):
-				scene.input_field.text = scene._session_words[0].hiragana
+				scene.input_field.text = scene._session_words[0].get_reading()
 				scene._on_submit_pressed()
 			await get_tree().create_timer(0.25).timeout
 			await RenderingServer.frame_post_draw
@@ -62,8 +69,8 @@ func _setup_profile(game_type: String) -> void:
 	profile.has_completed_tutorial = true
 	for achievement in AchievementManager.get_all_achievements():
 		profile.unlocked_achievements.append(achievement.id)
-	profile.settings["target_jlpt_level"] = 4
-	profile.settings["target_topic"] = "all"
+	profile.settings["target_jlpt_level"] = 0 if game_type == "fill_in_blank" else 4
+	profile.settings["target_lesson"] = 26 if game_type == "reading_shelf" else 5
 	profile.settings["new_cards_per_session"] = 5
 	profile.settings["difficulty"] = "standard"
 	profile.settings["reduced_motion"] = true
@@ -72,8 +79,8 @@ func _setup_profile(game_type: String) -> void:
 	SRSEngine.cards = []
 	SRSEngine.kanji_cards = []
 	var ids := PackedStringArray()
-	for i in range(1, 21):
-		ids.append("n4_%03d" % i)
+	for word in VocabDatabase.get_words_by_jlpt(4).slice(0, 20):
+		ids.append(word.id)
 	for i in range(691, 701):
 		ids.append("n4_%03d" % i)
 	var cards := SRSEngine.add_new_cards(ids)

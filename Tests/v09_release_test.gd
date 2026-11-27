@@ -27,11 +27,11 @@ func _ready() -> void:
 	get_tree().quit(0 if _failures == 0 else 1)
 
 
-func _profile(level: int = 5, topic: String = "all", new_cards: int = 5) -> PlayerProfile:
+func _profile(level: int = 0, lesson: int = 1, new_cards: int = 5) -> PlayerProfile:
 	var profile := PlayerProfile.new()
 	profile.player_name = "V09Test"
 	profile.settings["target_jlpt_level"] = level
-	profile.settings["target_topic"] = topic
+	profile.settings["target_lesson"] = lesson
 	profile.settings["new_cards_per_session"] = new_cards
 	GameController.current_profile = profile
 	return profile
@@ -56,6 +56,7 @@ func _test_catalog() -> void:
 	var profile := _profile()
 	_check("Catalog preserves fixed session sizes", ActivityCatalog.get_config("kanji_matching", profile)["words_per_session"] == 6 and ActivityCatalog.get_config("reading_shelf", profile)["words_per_session"] == 5)
 	_check("Catalog preserves Notebook reference", ActivityCatalog.get_station_options("bookshelf", profile).size() == 3)
+	_check("Café Orders is labeled as a legacy supplement", ActivityCatalog.get_activity("cafe_orders")["name"].contains("Legacy Supplement"))
 
 
 func _test_planner() -> void:
@@ -64,15 +65,18 @@ func _test_planner() -> void:
 	SRSEngine.kanji_cards = []
 	SRSEngine.sessions = []
 	var recommendation := StudyPlanner.get_recommendation()
-	_check("New profile receives N5 Multiple Choice", recommendation.get("game_type") == "multiple_choice")
+	_check("New profile receives Lesson 1 Multiple Choice", recommendation.get("game_type") == "multiple_choice" and recommendation.get("reason", "").contains("Lesson 1"))
 	var before_xp := profile.xp
 	var before_beans := profile.coffee_beans
 	var repeated := StudyPlanner.get_recommendation()
 	_check("Recommendations are deterministic", recommendation == repeated)
 	_check("Recommendations have no progression side effects", SRSEngine.cards.is_empty() and profile.xp == before_xp and profile.coffee_beans == before_beans)
 	var cards: Array[SRSCard] = []
-	for i in range(1, 7):
-		cards.append(_card("n5_%03d" % i))
+	for word in VocabDatabase.get_words_by_lesson(1):
+		if word.has_meaning() and AudioManager.has_speech("vocab:" + word.id):
+			cards.append(_card(word.id))
+			if cards.size() == 6:
+				break
 	var evidence := SkillEvidence.new()
 	for i in 6:
 		evidence.record(SRSEngine.Quality.GOOD if i < 3 else SRSEngine.Quality.WRONG, "2026-01-01", "listening_lab")
@@ -81,52 +85,63 @@ func _test_planner() -> void:
 	recommendation = StudyPlanner.recommend(profile, cards, [], [])
 	_check("Weak Listening recommends a listening activity", recommendation.get("game_type") in ["listening_lab", "cafe_orders"])
 	_check("Recommendation explains evidence", str(recommendation.get("reason", "")).contains("Listening"))
-	profile.settings["target_jlpt_level"] = 0
+	profile.settings["target_lesson"] = 0
 	profile.settings["new_cards_per_session"] = 0
-	var due_cards: Array[SRSCard] = [_card("n5_001", true), _card("n4_001", true)]
+	var due_cards: Array[SRSCard] = []
+	for lesson in [1, 5]:
+		for word in VocabDatabase.get_words_by_lesson(lesson):
+			if word.has_meaning():
+				due_cards.append(_card(word.id, true))
+				break
 	recommendation = StudyPlanner.recommend(profile, due_cards, [], [])
-	_check("Due-only Mixed recommendation remains available", recommendation.get("game_type") not in ["", "study_notebook"])
-	profile.settings["target_jlpt_level"] = 4
-	var empty_topic := ""
-	for category in VocabDatabase.get_categories():
-		if VocabDatabase.get_random_words(1, PackedStringArray(), {"jlpt_level": 4, "category": category}).is_empty():
-			empty_topic = category
+	_check("Due-only all-lesson recommendation remains available", recommendation.get("game_type") not in ["", "study_notebook"])
+	profile.settings["target_lesson"] = 1
+	var empty_level := 0
+	for level in [1, 2, 3, 4, 5]:
+		if VocabDatabase.get_random_words(1, PackedStringArray(), {"lesson": 1, "jlpt_level": level}).is_empty():
+			empty_level = level
 			break
-	profile.settings["target_topic"] = empty_topic
-	recommendation = StudyPlanner.recommend(profile, [], [], [])
-	_check("Empty filters recommend Notebook without substitution", recommendation.get("game_type") == "study_notebook")
-	profile.settings["target_topic"] = "all"
-	profile.settings["target_jlpt_level"] = 5
+	profile.settings["target_jlpt_level"] = empty_level
 	profile.settings["new_cards_per_session"] = 0
-	var menu_due: Array[SRSCard] = [_card("n5_011", true)]
-	var saved_vocab: String = AudioManager._audio_manifest["vocab:n5_011"]
-	var saved_order: String = AudioManager._audio_manifest["order:n5_011"]
-	AudioManager._audio_manifest.erase("vocab:n5_011")
-	AudioManager._audio_manifest.erase("order:n5_011")
+	recommendation = StudyPlanner.recommend(profile, [], [], [])
+	_check("Empty professional filters recommend Notebook without substitution", recommendation.get("game_type") == "study_notebook")
+	profile.settings["target_jlpt_level"] = 0
+	var audio_word: VocabWord = null
+	for word in VocabDatabase.get_words_by_lesson(1):
+		if AudioManager.has_speech("vocab:" + word.id):
+			audio_word = word
+			break
+	var menu_due: Array[SRSCard] = [_card(audio_word.id, true)]
+	var clip_id := "vocab:" + audio_word.id
+	var saved_vocab: String = AudioManager._audio_manifest[clip_id]
+	AudioManager._audio_manifest.erase(clip_id)
 	recommendation = StudyPlanner.recommend(profile, menu_due, [], [])
 	_check("Unavailable audio excludes audio-only recommendations", recommendation.get("game_type") not in ["listening_lab", "cafe_orders"])
-	AudioManager._audio_manifest["vocab:n5_011"] = saved_vocab
-	AudioManager._audio_manifest["order:n5_011"] = saved_order
+	AudioManager._audio_manifest[clip_id] = saved_vocab
 
 
 func _test_metrics() -> void:
 	_check("Evidence labels cover zero and early samples", ProgressMetrics.get_evidence_label(0, 0.0) == "No Evidence" and ProgressMetrics.get_evidence_label(4, 1.0) == "Early Evidence")
 	_check("Developing begins at five attempts", ProgressMetrics.get_evidence_label(5, 1.0) == "Developing")
 	_check("Consistency requires ten attempts and 80%", ProgressMetrics.get_evidence_label(10, 0.8) == "Consistent" and ProgressMetrics.get_evidence_label(10, 0.79) == "Developing")
-	var n5 := _card("n5_001")
-	var n4 := _card("n4_001")
-	var n5_evidence := SkillEvidence.new()
-	n5_evidence.record(SRSEngine.Quality.GOOD, "2026-01-02", "multiple_choice")
-	n5_evidence.record(SRSEngine.Quality.WRONG, "2026-01-03", "multiple_choice")
-	var n4_evidence := SkillEvidence.new()
-	n4_evidence.record(SRSEngine.Quality.GOOD, "2026-01-04", "multiple_choice")
-	n5.skill_evidence["meaning"] = n5_evidence
-	n4.skill_evidence["meaning"] = n4_evidence
-	var cards: Array[SRSCard] = [n5, n4]
-	var n5_summary := ProgressMetrics.get_skill_summary(cards, [], 5)
+	var professional_words: Array[VocabWord] = []
+	for level in [5, 4]:
+		for word in VocabDatabase.get_words_by_jlpt(level):
+			if word.has_meaning():
+				professional_words.append(word)
+				break
+	var cards: Array[SRSCard] = []
+	for i in 2:
+		var card := _card(professional_words[i].id)
+		var card_evidence := SkillEvidence.new()
+		card_evidence.record(SRSEngine.Quality.GOOD, "2026-01-0%d" % (i + 2), "multiple_choice")
+		card_evidence.record(SRSEngine.Quality.WRONG, "2026-01-0%d" % (i + 3), "multiple_choice")
+		card.skill_evidence["meaning"] = card_evidence
+		cards.append(card)
+	var level_summary := ProgressMetrics.get_skill_summary(cards, [], 5)
 	var mixed_summary := ProgressMetrics.get_skill_summary(cards, [], 0)
-	_check("Skill summaries filter by level", n5_summary["meaning"]["attempts"] == 2 and mixed_summary["meaning"]["attempts"] == 3)
-	_check("Skill summaries include lapses and latest practice", n5_summary["meaning"]["lapses"] == 1 and mixed_summary["meaning"]["last_practice"] == "2026-01-04")
+	_check("Skill summaries filter by supplied JLPT tags", level_summary["meaning"]["attempts"] == 2 and mixed_summary["meaning"]["attempts"] == 4)
+	_check("Skill summaries include lapses and latest practice", level_summary["meaning"]["lapses"] == 1 and mixed_summary["meaning"]["last_practice"] == "2026-01-04")
 	_check("Summary labels use shared thresholds", mixed_summary["meaning"]["evidence_label"] == "Early Evidence")
 
 
@@ -137,10 +152,10 @@ func _test_motion() -> void:
 	var label := Label.new()
 	add_child(label)
 	label.modulate.a = 0.0
-	MotionManager.fade_in(label, 1.0)
+	MotionManager.fade_in(label, 0.1)
 	_check("Reduced fade reaches final state immediately", label.modulate.a == 1.0)
 	label.scale = Vector2.ZERO
-	MotionManager.pop_in(label, 1.0)
+	MotionManager.pop_in(label, 0.1)
 	_check("Reduced pop reaches final scale immediately", label.scale == Vector2.ONE)
 	await GameController._fade_out()
 	_check("Reduced scene fade out is immediate", GameController._transition_rect.color.a == 1.0)

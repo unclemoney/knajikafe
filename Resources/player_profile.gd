@@ -46,7 +46,8 @@ class_name PlayerProfile
 
 ## Player settings stored as a flat dictionary.
 ## Keys: "show_kanji", "show_furigana", "show_romaji", "show_english",
-##        "bgm_volume", "sfx_volume", "speech_volume", "words_per_session", "target_jlpt_level"
+##        "bgm_volume", "sfx_volume", "speech_volume", "words_per_session",
+##        "target_lesson", "target_jlpt_level"
 @export var settings: Dictionary = {
 	"show_kanji": true,
 	"show_furigana": true,
@@ -55,12 +56,13 @@ class_name PlayerProfile
 	"bgm_volume": 0.8,
 	"sfx_volume": 0.8,
 	"words_per_session": 10,
-	"target_jlpt_level": 5,
+	"target_jlpt_level": 0,
+	"target_lesson": 1,
 	"speech_volume": 0.85,
-	"target_topic": "all",
 	"new_cards_per_session": 5,
 	"difficulty": "standard",
 	"reduced_motion": false,
+	"professional_curriculum_migrated": true,
 }
 
 

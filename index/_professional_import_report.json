@@ -1,0 +1,853 @@
+{
+  "lesson_files": 45,
+  "vocabulary": 3503,
+  "grammar": 401,
+  "sentences": 1272,
+  "readings": 35,
+  "exercises": 6,
+  "missing_english": 22,
+  "source_missing_english": 10,
+  "quarantined_meaning": 12,
+  "missing_reading": 32,
+  "display_only_headwords": 19,
+  "source_missing_reading": 28,
+  "legacy_exact": 828,
+  "legacy_cafe": 20,
+  "legacy_unmatched": 652,
+  "exclusions": [
+    {
+      "source": "Lesson 17 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 17 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 17 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 17 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 17 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 17 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 17 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 17 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 17 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 17 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 18 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 18 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 18 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 18 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 18 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 19 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 21 exercise(1)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 21 exercise(2)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 21 exercise(3)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 21 exercise(4)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 22 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 22 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 22 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 22 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 22 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(9)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 24 exercise(10)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 25 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 25 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 25 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 25 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 25 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 27 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 27 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 27 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 27 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 27 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 28 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 28 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 28 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 28 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 28 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 28 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 28 exercise(7)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 28 exercise(8)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(7)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(8)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 29 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 31 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 31 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 31 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 31 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 31 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 31 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 32 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 32 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 32 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 32 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 32 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 34 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 34 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 34 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 34 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 35 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 35 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 35 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 35 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 35 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 36 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 36 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 36 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 36 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 36 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 36 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 37 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 37 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 37 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 37 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 37 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 37 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 38 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(7)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(8)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(7)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(7)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 39 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 A(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 A(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 A(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 A(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 A(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 A(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 A(7)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 B(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 B(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 B(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 B(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 B(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 B(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 40 B(7)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 41 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 41 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 41 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 41 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 41 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 41 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 41 exercise(1)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 41 exercise(2)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 41 exercise(3)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 41 exercise(4)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 41 exercise(5)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 41 exercise(6)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 42 exercise(1)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 42 exercise(2)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 42 exercise(3)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 42 exercise(4)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 42 exercise(5)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 42 exercise(6)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 42 exercise(7)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 42 exercise(8)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 42 exercise(9)",
+      "reason": "unsupported_choice_bank"
+    },
+    {
+      "source": "Lesson 42 exercise(1)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 42 exercise(2)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 42 exercise(3)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 42 exercise(4)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 42 exercise(5)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 42 exercise(6)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "Lesson 42 exercise(7)",
+      "reason": "missing_unambiguous_answer_key"
+    },
+    {
+      "source": "x_271e0de2e0a1b8b7",
+      "reason": "no_professional_vocabulary_target"
+    },
+    {
+      "source": "x_79d41b35cee73cd0",
+      "reason": "no_professional_vocabulary_target"
+    },
+    {
+      "source": "x_6a501e7d77a22335",
+      "reason": "no_professional_vocabulary_target"
+    },
+    {
+      "source": "x_0f62a14fb63ef207",
+      "reason": "no_professional_vocabulary_target"
+    }
+  ],
+  "runtime_hashes": {
+    "lessons.json": "a9ebcec088026fb1d2b9398d8ced6f69f631c7b0ba8cf91d9fe397d96856438b",
+    "vocabulary.json": "34492bcf134d2abf4c2c2c7c2b8545eeea91a485b6f9a18c22c6e02467ce71f7",
+    "grammar.json": "abd94f5513a72dafc5032506f7b5c2b157aa4fe4443cd81a5ba835b34863c1b9",
+    "sentences.json": "7982b5500ddb148f502093bfa66e8270a3eed6b48efbec8252a74f80394ed3dd",
+    "readings.json": "070d96a7d7b88705cabe15fca0937b262d59ef9a7271e7830d7024dee88d0395",
+    "exercises.json": "6ffca6b61c8a45892ba54bce51d153f62cccbe3d9c2a8362b6c641189fdcae76",
+    "legacy_id_map.json": "ac629f3bc35d72a6c39757e08aa7e76393868a231199d5666ea85ab25b5fbb0b",
+    "cafe_legacy_vocab.json": "8934da775f986b0dae7f27712fe21e7d75ccab03cc1f1c54ebb63043e8bdd0bb"
+  }
+}

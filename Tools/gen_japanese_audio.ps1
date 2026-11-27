@@ -14,8 +14,7 @@ try {
 $synth.Dispose()
 
 $vocabPaths = @(
-    (Join-Path $root "Resources/Vocabulary/n5_vocab.json"),
-    (Join-Path $root "Resources/Vocabulary/n4_vocab.json")
+    (Join-Path $root "Resources/Curriculum/vocabulary.json")
 )
 $menuPath = Join-Path $root "Resources/Vocabulary/cafe_menu.json"
 $manifestPath = Join-Path $root "Resources/Audio/japanese_audio_manifest.json"
@@ -26,8 +25,7 @@ foreach ($vocabPath in $vocabPaths) {
 $menu = [System.IO.File]::ReadAllText($menuPath, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
 $existing = @{}
 $oldManifestPaths = @(
-    (Join-Path $root "Resources/Audio/japanese_audio_manifest.json"),
-    (Join-Path $root "Resources/Audio/n5_audio_manifest.json")
+    (Join-Path $root "Resources/Audio/japanese_audio_manifest.json")
 )
 foreach ($oldPath in $oldManifestPaths) {
     if ([System.IO.File]::Exists($oldPath)) {
@@ -35,10 +33,21 @@ foreach ($oldPath in $oldManifestPaths) {
         foreach ($entry in $oldManifest) { $existing[$entry.id] = $entry }
     }
 }
+$existingVocabByHash = @{}
+foreach ($entry in $existing.Values) {
+    if ($entry.kind -eq "vocabulary" -and $entry.source_hash -and $entry.file -like "res://*") {
+        $sourcePath = [System.IO.Path]::GetFullPath((Join-Path $root ($entry.file -replace '^res://', '')))
+        if ([System.IO.File]::Exists($sourcePath) -and -not $existingVocabByHash.ContainsKey($entry.source_hash)) {
+            $existingVocabByHash[$entry.source_hash] = $sourcePath
+        }
+    }
+}
 
 $clips = @()
 foreach ($word in $vocab) {
-    $reading = if ($word.hiragana) { $word.hiragana } elseif ($word.katakana) { $word.katakana } else { $word.kanji }
+    if ($word.eligibility -and -not $word.eligibility.reading) { continue }
+    $reading = if ($word.hiragana) { $word.hiragana } elseif ($word.katakana) { $word.katakana } else { "" }
+    if (-not $reading) { continue }
     $clips += [pscustomobject]@{
         id = "vocab:$($word.id)"
         kind = "vocabulary"
@@ -68,20 +77,26 @@ foreach ($clip in $clips) {
     $resourcePath = "res://" + $clip.relative.Replace("\", "/")
     $canReuse = $existing.ContainsKey($clip.id) -and $existing[$clip.id].source_hash -eq $hash -and [System.IO.File]::Exists($output)
     if (-not $canReuse) {
-        $wav = [System.IO.Path]::ChangeExtension($output, ".wav")
-        $speaker = New-Object System.Speech.Synthesis.SpeechSynthesizer
-        try {
-            $speaker.SelectVoice($voiceName)
-            $speaker.Rate = 0
-            $speaker.SetOutputToWaveFile($wav)
-            $speaker.Speak($clip.text)
-        } finally {
-            $speaker.Dispose()
+        $sourceReuse = $existingVocabByHash[$hash]
+        if ($clip.kind -eq "vocabulary" -and $sourceReuse -and [System.IO.File]::Exists($sourceReuse)) {
+            Copy-Item -Path $sourceReuse -Destination $output -Force
+            $reused++
+        } else {
+            $wav = [System.IO.Path]::ChangeExtension($output, ".wav")
+            $speaker = New-Object System.Speech.Synthesis.SpeechSynthesizer
+            try {
+                $speaker.SelectVoice($voiceName)
+                $speaker.Rate = 0
+                $speaker.SetOutputToWaveFile($wav)
+                $speaker.Speak($clip.text)
+            } finally {
+                $speaker.Dispose()
+            }
+            & $ffmpeg -y -loglevel error -i $wav -af "highpass=f=70,lowpass=f=10000,loudnorm=I=-18:TP=-2:LRA=7,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08" -ac 1 -ar 24000 -c:a libvorbis -q:a 4 $output
+            if ($LASTEXITCODE -ne 0) { throw "FFmpeg failed for $($clip.id)" }
+            Remove-Item $wav -Force
+            $generated++
         }
-        & $ffmpeg -y -loglevel error -i $wav -af "highpass=f=70,lowpass=f=10000,loudnorm=I=-18:TP=-2:LRA=7,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08" -ac 1 -ar 24000 -c:a libvorbis -q:a 4 $output
-        if ($LASTEXITCODE -ne 0) { throw "FFmpeg failed for $($clip.id)" }
-        Remove-Item $wav -Force
-        $generated++
     } else {
         $reused++
     }

@@ -3,7 +3,7 @@ extends Node
 ## Handles profile CRUD and versioned learning-data persistence.
 
 const PROFILES_DIR: String = "user://profiles/"
-const LEARNING_SCHEMA_VERSION: int = 3
+const LEARNING_SCHEMA_VERSION: int = 4
 const MAX_SESSION_HISTORY: int = 100
 
 var _write_blocked_profiles: Dictionary = {}
@@ -106,6 +106,7 @@ func load_learning_data(player_name: String) -> Dictionary:
 		"cards": [] as Array[SRSCard],
 		"kanji_cards": [] as Array[KanjiCard],
 		"sessions": [],
+		"archived_cards": [],
 		"load_ok": true,
 		"migrated": false,
 	}
@@ -125,16 +126,18 @@ func load_learning_data(player_name: String) -> Dictionary:
 	var cards_data: Array = []
 	var kanji_data: Array = []
 	var sessions_data: Array = []
+	var archived_cards: Array = []
 	if json.data is Array:
 		cards_data = json.data
 	elif json.data is Dictionary:
 		var envelope: Dictionary = json.data
 		source_version = int(envelope.get("schema_version", 0))
-		if source_version not in [2, 3]:
+		if source_version not in [2, 3, 4]:
 			return _failed_learning_load(safe_name, "Unsupported learning-data schema")
 		cards_data = envelope.get("cards", []) if envelope.get("cards", []) is Array else []
 		kanji_data = envelope.get("kanji_cards", []) if envelope.get("kanji_cards", []) is Array else []
 		sessions_data = envelope.get("sessions", []) if envelope.get("sessions", []) is Array else []
+		archived_cards = envelope.get("archived_cards", []).duplicate(true) if envelope.get("archived_cards", []) is Array else []
 	else:
 		return _failed_learning_load(safe_name, "Learning data must be an array or object")
 
@@ -154,19 +157,25 @@ func load_learning_data(player_name: String) -> Dictionary:
 		sessions = sessions.slice(sessions.size() - MAX_SESSION_HISTORY)
 
 	if source_version < LEARNING_SCHEMA_VERSION:
+		var migrated := _migrate_professional_vocabulary(cards)
+		if not migrated["ok"]:
+			return _failed_learning_load(safe_name, "Could not load professional vocabulary migration map")
+		cards = migrated["cards"]
+		archived_cards.append_array(migrated["archived_cards"])
 		if not _backup_source_data(safe_name, json_text, source_version):
 			return _failed_learning_load(safe_name, "Could not back up source learning data")
-		if not _write_learning_file(path, cards, sessions, kanji_cards):
+		if not _write_learning_file(path, cards, sessions, kanji_cards, archived_cards):
 			return _failed_learning_load(safe_name, "Could not write migrated learning data")
 		result["migrated"] = true
 	_write_blocked_profiles.erase(safe_name)
 	result["cards"] = cards
 	result["kanji_cards"] = kanji_cards
 	result["sessions"] = sessions
+	result["archived_cards"] = archived_cards
 	return result
 
 
-func save_learning_data(player_name: String, cards: Array, sessions: Array, kanji_cards: Array = []) -> bool:
+func save_learning_data(player_name: String, cards: Array, sessions: Array, kanji_cards: Array = [], archived_cards: Array = []) -> bool:
 	var safe_name := _sanitize_name(player_name)
 	if _write_blocked_profiles.has(safe_name):
 		push_error("SaveManager: Learning-data writes are blocked for '%s'." % player_name)
@@ -176,7 +185,7 @@ func save_learning_data(player_name: String, cards: Array, sessions: Array, kanj
 	var bounded_sessions := sessions.duplicate(true)
 	if bounded_sessions.size() > MAX_SESSION_HISTORY:
 		bounded_sessions = bounded_sessions.slice(bounded_sessions.size() - MAX_SESSION_HISTORY)
-	return _write_learning_file(dir_path + "srs_data.json", cards, bounded_sessions, kanji_cards)
+	return _write_learning_file(dir_path + "srs_data.json", cards, bounded_sessions, kanji_cards, archived_cards)
 
 
 func load_srs_cards(player_name: String) -> Array[SRSCard]:
@@ -189,7 +198,7 @@ func save_srs_data(player_name: String, cards: Array) -> bool:
 	var data := load_learning_data(player_name)
 	if not data["load_ok"]:
 		return false
-	return save_learning_data(player_name, cards, data["sessions"], data["kanji_cards"])
+	return save_learning_data(player_name, cards, data["sessions"], data["kanji_cards"], data["archived_cards"])
 
 
 func load_srs_data(player_name: String) -> Array:
@@ -203,7 +212,7 @@ func load_srs_data(player_name: String) -> Array:
 	return []
 
 
-func _write_learning_file(path: String, cards: Array, sessions: Array, kanji_cards: Array) -> bool:
+func _write_learning_file(path: String, cards: Array, sessions: Array, kanji_cards: Array, archived_cards: Array = []) -> bool:
 	var cards_data: Array = []
 	for card in cards:
 		if card is SRSCard:
@@ -217,6 +226,7 @@ func _write_learning_file(path: String, cards: Array, sessions: Array, kanji_car
 		"cards": cards_data,
 		"kanji_cards": kanji_data,
 		"sessions": sessions,
+		"archived_cards": archived_cards,
 	}
 	var json_text := JSON.stringify(envelope, "\t")
 	var temp_path := path + ".tmp"
@@ -290,6 +300,74 @@ func _populate_card(card: SRSCard, entry: Dictionary) -> void:
 				card.skill_evidence[skill] = SkillEvidence.from_dict(evidence_data[skill])
 
 
+func _migrate_professional_vocabulary(source_cards: Array[SRSCard]) -> Dictionary:
+	var mapping := _load_legacy_id_map()
+	if mapping.is_empty():
+		return {"ok": false, "cards": [] as Array[SRSCard], "archived_cards": []}
+	var active: Array[SRSCard] = []
+	var archived: Array = []
+	var grouped: Dictionary = {}
+	for card in source_cards:
+		var original_id := card.vocab_id
+		if original_id.begins_with("v_") and VocabDatabase.get_word_by_id(original_id) != null:
+			if not grouped.has(original_id):
+				grouped[original_id] = []
+			grouped[original_id].append({"card": card, "original_id": original_id})
+			continue
+		var entry: Dictionary = mapping.get(original_id, {})
+		var match_type := str(entry.get("match_type", "no_professional_match"))
+		if match_type == "cafe_legacy":
+			active.append(card)
+			continue
+		var target_id := str(entry.get("target_id", ""))
+		if match_type != "exact" or target_id == "" or VocabDatabase.get_word_by_id(target_id) == null:
+			var reason := "ambiguous_match" if match_type == "ambiguous_match" else "no_professional_match"
+			archived.append(_archive_card(card, original_id, reason))
+			continue
+		if not grouped.has(target_id):
+			grouped[target_id] = []
+		grouped[target_id].append({"card": card, "original_id": original_id})
+	for target_id in grouped:
+		var candidates: Array = grouped[target_id]
+		candidates.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
+			var a_card := a["card"] as SRSCard
+			var b_card := b["card"] as SRSCard
+			if a_card.last_review_date != b_card.last_review_date:
+				return a_card.last_review_date > b_card.last_review_date
+			if a_card.total_reviews != b_card.total_reviews:
+				return a_card.total_reviews > b_card.total_reviews
+			return str(a["original_id"]) < str(b["original_id"])
+		)
+		var selected := candidates[0]["card"] as SRSCard
+		selected.vocab_id = target_id
+		active.append(selected)
+		for index in range(1, candidates.size()):
+			var duplicate := candidates[index]["card"] as SRSCard
+			archived.append(_archive_card(duplicate, str(candidates[index]["original_id"]), "duplicate_content"))
+	return {"ok": true, "cards": active, "archived_cards": archived}
+
+
+func _archive_card(card: SRSCard, original_id: String, reason: String) -> Dictionary:
+	return {
+		"original_id": original_id,
+		"reason": reason,
+		"archived_at": GameController.get_current_date(),
+		"card": _serialize_card(card),
+	}
+
+
+func _load_legacy_id_map() -> Dictionary:
+	var path := "res://Resources/Curriculum/legacy_id_map.json"
+	if not FileAccess.file_exists(path):
+		return {}
+	var file := FileAccess.open(path, FileAccess.READ)
+	if file == null:
+		return {}
+	var parsed = JSON.parse_string(file.get_as_text())
+	file.close()
+	return parsed if parsed is Dictionary else {}
+
+
 func _backup_source_data(safe_name: String, json_text: String, source_version: int) -> bool:
 	var backup_path := PROFILES_DIR + safe_name + "/srs_data_v%d_backup.json" % source_version
 	if FileAccess.file_exists(backup_path):
@@ -310,12 +388,14 @@ func _failed_learning_load(safe_name: String, message: String) -> Dictionary:
 		"cards": [] as Array[SRSCard],
 		"kanji_cards": [] as Array[KanjiCard],
 		"sessions": [],
+		"archived_cards": [],
 		"load_ok": false,
 		"migrated": false,
 	}
 
 
 func _apply_profile_defaults(profile: PlayerProfile) -> void:
+	var needs_curriculum_migration := not bool(profile.settings.get("professional_curriculum_migrated", false))
 	var defaults := {
 		"show_kanji": true,
 		"show_furigana": true,
@@ -324,16 +404,22 @@ func _apply_profile_defaults(profile: PlayerProfile) -> void:
 		"bgm_volume": 0.8,
 		"sfx_volume": 0.8,
 		"words_per_session": 10,
-		"target_jlpt_level": 5,
+		"target_jlpt_level": 0,
+		"target_lesson": 1,
 		"speech_volume": 0.85,
-		"target_topic": "all",
 		"new_cards_per_session": 5,
 		"difficulty": "standard",
 		"reduced_motion": false,
+		"professional_curriculum_migrated": true,
 	}
 	for key in defaults:
 		if not profile.settings.has(key):
 			profile.settings[key] = defaults[key]
+	if needs_curriculum_migration:
+		profile.settings["target_lesson"] = 1
+		profile.settings["target_jlpt_level"] = 0
+		profile.settings["professional_curriculum_migrated"] = true
+	profile.settings.erase("target_topic")
 	for decoration_id in profile.cafe_decorations:
 		profile.owned_decorations[decoration_id] = true
 

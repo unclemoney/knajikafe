@@ -87,14 +87,13 @@ func _test_level_summary() -> void:
 	mixed_kanji[2].jlpt_level = 4
 	var mixed := ProgressMetrics.get_level_summary(mixed_cards, mixed_words, mixed_kanji, 0)
 	_check("Mixed coverage includes N5 and N4", mixed["total_words"] == 3 and mixed["introduced"] == 3)
+	word_a.lesson_ids = PackedInt32Array([1])
+	word_b.lesson_ids = PackedInt32Array([1])
+	word_c.lesson_ids = PackedInt32Array([2])
+	var lesson_one := ProgressMetrics.get_level_summary(mixed_cards, mixed_words, mixed_kanji, 0, 1)
+	_check("Lesson coverage filters professional vocabulary", lesson_one["total_words"] == 2 and lesson_one["introduced"] == 2)
 	var n4 := ProgressMetrics.get_level_summary(mixed_cards, mixed_words, mixed_kanji, 4)
 	_check("N4 coverage excludes N5", n4["total_words"] == 1 and n4["introduced"] == 1)
-	word_a.categories = ["food"]
-	word_b.categories = ["food"]
-	word_c.categories = ["school"]
-	var topics := ProgressMetrics.get_topic_summary(mixed_cards, mixed_words, 0)
-	_check("Topic coverage and retention", topics["food"]["total"] == 2 and topics["food"]["introduced"] == 2 and topics["food"]["retained"] == 1)
-	_check("Mixed topics include both levels", topics.has("school") and topics["school"]["introduced"] == 1)
 
 
 func _test_kanji_summary() -> void:
@@ -150,9 +149,15 @@ func _test_session_selection() -> void:
 	var profile := PlayerProfile.new()
 	profile.player_name = "SessionTest"
 	profile.settings["target_jlpt_level"] = 5
+	profile.settings["target_lesson"] = 1
 	GameController.current_profile = profile
+	var n4_word: VocabWord = null
+	for candidate in VocabDatabase.get_words_by_jlpt(4):
+		if candidate.has_meaning():
+			n4_word = candidate
+			break
 	var n4_card := SRSCard.new()
-	n4_card.vocab_id = "n4_001"
+	n4_card.vocab_id = n4_word.id
 	SRSEngine.cards = [n4_card]
 	GameController.session_data = {"game_type": "multiple_choice", "words_per_session": 10}
 	var session := MiniGameBase.new()
@@ -162,7 +167,7 @@ func _test_session_selection() -> void:
 	_check("Five new cards fill remaining slots", session._session_words.size() == 6)
 	var new_words_valid := true
 	for word in session._session_words:
-		if word.id != "n4_001" and word.jlpt_level != 5:
+		if word.id != n4_word.id and (word.jlpt_level != 5 or 1 not in word.lesson_ids):
 			new_words_valid = false
 	_check("New cards use target N5", new_words_valid)
 	session.free()
@@ -178,6 +183,7 @@ func _test_matching_reporting() -> void:
 	var profile := PlayerProfile.new()
 	profile.player_name = "MatchingTest"
 	profile.settings["target_jlpt_level"] = 5
+	profile.settings["target_lesson"] = 1
 	GameController.current_profile = profile
 	SRSEngine.cards = []
 	GameController.session_data = {"game_type": "kanji_matching", "words_per_session": 6}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "x_12b9f4369667f8c6",
+    "lesson": 25,
+    "stage": "初级下",
+    "group": "",
+    "number": 1,
+    "prompt": "転職した ______ で、まだ仕事のやり方がよくわかりません。",
+    "choices": [
+      "だから",
+      "ばかり",
+      "ところ",
+      "みたい"
+    ],
+    "answer_index": 1,
+    "english": "",
+    "target_vocab_id": "v_dc5947dd4ebec458",
+    "source_file": "初级下/17.梁爽老师日语精讲精练：第25课.md",
+    "source_line": 318,
+    "source_page": 11
+  },
+  {
+    "id": "x_be473041b52820cd",
+    "lesson": 25,
+    "stage": "初级下",
+    "group": "",
+    "number": 2,
+    "prompt": "３歳の子供 ______ 、この絵本はちょっと難しいです。",
+    "choices": [
+      "へ",
+      "について",
+      "から",
+      "にとって"
+    ],
+    "answer_index": 3,
+    "english": "",
+    "target_vocab_id": "v_9439926cff47bb2b",
+    "source_file": "初级下/17.梁爽老师日语精讲精练：第25课.md",
+    "source_line": 322,
+    "source_page": 11
+  },
+  {
+    "id": "x_a8b94dc413479418",
+    "lesson": 25,
+    "stage": "初级下",
+    "group": "",
+    "number": 5,
+    "prompt": "A：Bさんは好き嫌いはありますか。 B：特にありません。おいしいものなら、何 ______ 食べます。",
+    "choices": [
+      "も",
+      "か",
+      "で",
+      "でも"
+    ],
+    "answer_index": 3,
+    "english": "",
+    "target_vocab_id": "v_faad834f515120fc",
+    "source_file": "初级下/17.梁爽老师日语精讲精练：第25课.md",
+    "source_line": 337,
+    "source_page": 11
+  },
+  {
+    "id": "x_0c54771b23606638",
+    "lesson": 26,
+    "stage": "中级上",
+    "group": "",
+    "number": 1,
+    "prompt": "私はいつも鮮度が ______ 果物を選んで買います。",
+    "choices": [
+      "いいそうな",
+      "よさそうな",
+      "よそうな",
+      "よいそうな"
+    ],
+    "answer_index": 1,
+    "english": "",
+    "target_vocab_id": "v_4f33338415ef0d13",
+    "source_file": "中级上/1.梁爽老师日语精讲精练：第26课.md",
+    "source_line": 363,
+    "source_page": 14
+  },
+  {
+    "id": "x_5fb43b866a8138ff",
+    "lesson": 26,
+    "stage": "中级上",
+    "group": "",
+    "number": 3,
+    "prompt": "あそこに撮影禁止と ______ が、写真を撮る人がいる。",
+    "choices": [
+      "書いている",
+      "書いてある",
+      "書いた",
+      "書いていく"
+    ],
+    "answer_index": 1,
+    "english": "",
+    "target_vocab_id": "v_0f20780d21f1649e",
+    "source_file": "中级上/1.梁爽老师日语精讲精练：第26课.md",
+    "source_line": 369,
+    "source_page": 14
+  },
+  {
+    "id": "x_230e329283659b7f",
+    "lesson": 26,
+    "stage": "中级上",
+    "group": "",
+    "number": 4,
+    "prompt": "A：旅行でお金を使い切った。どうしよう。 B： ______ 、友達の会社がアルバイトを募集しているから、紹介しま しょうか。",
+    "choices": [
+      "そういえば",
+      "でも",
+      "ところで",
+      "そこで"
+    ],
+    "answer_index": 0,
+    "english": "",
+    "target_vocab_id": "v_e9054af8a1eaf5e4",
+    "source_file": "中级上/1.梁爽老师日语精讲精练：第26课.md",
+    "source_line": 372,
+    "source_page": 14
+  }
+]

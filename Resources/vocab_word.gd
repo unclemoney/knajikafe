@@ -23,7 +23,7 @@ class_name VocabWord
 ## English meanings / translations.
 @export var english_meanings: PackedStringArray = []
 
-## JLPT level: 5 = N5, 4 = N4, 0 = custom/unclassified.
+## JLPT level: 5 = N5 through 1 = N1, 0 = untagged.
 @export_range(0, 5) var jlpt_level: int = 5
 
 ## Topic categories (e.g., "food", "greetings", "cafe", "verbs").
@@ -34,6 +34,62 @@ class_name VocabWord
 
 ## Part of speech (e.g., "noun", "verb", "adjective", "adverb").
 @export var part_of_speech: String = ""
+
+## Professional lesson numbers in which this word appears.
+@export var lesson_ids: PackedInt32Array = []
+
+## First professional lesson introducing this word.
+@export var first_lesson: int = 0
+
+## Professional course stage containing the first lesson.
+@export var stage: String = ""
+
+## Original vocabulary-table sections.
+@export var source_sections: PackedStringArray = []
+
+## Pitch-accent notation supplied by the lesson.
+@export var pitch: String = ""
+
+## Language of origin supplied by the lesson.
+@export var origin: String = ""
+
+## Unmodified professional part-of-speech notation.
+@export var source_pos: String = ""
+
+## Professional Markdown source file.
+@export var source_file: String = ""
+
+## Original headword used for sentence/exercise occurrence matching.
+@export var source_word: String = ""
+
+## Original reading used for identity and migration matching.
+@export var source_reading: String = ""
+
+## Content origin; official curriculum words use professional_lesson.
+@export var content_source: String = "professional_lesson"
+
+## Whether the runtime reading is reliable enough for typing and audio.
+@export var reading_eligible: bool = true
+
+## Whether the English meaning passed extraction reliability checks.
+@export var meaning_eligible: bool = true
+
+## Whether the headword is usable as Japanese study content.
+@export var japanese_eligible: bool = true
+
+
+## Returns the kana reading, preferring hiragana.
+func get_reading() -> String:
+	if not reading_eligible:
+		return ""
+	if hiragana != "":
+		return hiragana
+	return katakana
+
+
+## Returns whether the professional source supplies an English meaning.
+func has_meaning() -> bool:
+	return not english_meanings.is_empty()
 
 
 ## Returns the primary display text — kanji if available, then hiragana, then katakana.

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ch52srwxc6ita"
+
+[deps]
+
+files=["res://index/vocab.reading.translation", "res://index/vocab.origin.translation", "res://index/vocab.pitch.translation", "res://index/vocab.pos.translation", "res://index/vocab.meaning.translation", "res://index/vocab.meaning.translation", "res://index/vocab.jlpt.translation", "res://index/vocab.level.translation", "res://index/vocab.lesson.translation", "res://index/vocab.lessons.translation", "res://index/vocab.sections.translation", "res://index/vocab.occurrences.translation", "res://index/vocab.source.translation"]
+
+source_file="res://index/vocab.csv"
+dest_files=["res://index/vocab.reading.translation", "res://index/vocab.origin.translation", "res://index/vocab.pitch.translation", "res://index/vocab.pos.translation", "res://index/vocab.meaning.translation", "res://index/vocab.meaning.translation", "res://index/vocab.jlpt.translation", "res://index/vocab.level.translation", "res://index/vocab.lesson.translation", "res://index/vocab.lessons.translation", "res://index/vocab.sections.translation", "res://index/vocab.occurrences.translation", "res://index/vocab.source.translation"]
+
+[params]
+
+compress=true
+delimiter=0

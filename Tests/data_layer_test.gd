@@ -118,9 +118,9 @@ func _test_vocab_database() -> void:
 	for source_vocab_word in VocabDatabase.get_all_words():
 		var number := int(source_vocab_word.id.right(3))
 		if (source_vocab_word.jlpt_level == 5 and number > 120) or (source_vocab_word.jlpt_level == 4 and number > 100):
-			if source_words_by_id[source_vocab_word.id].get("review_status", "") != "draft_pending_human_review":
+			if source_words_by_id[source_vocab_word.id].get("review_status", "") not in ["draft_pending_human_review", "needs_correction", "human_reviewed"]:
 				drafts_valid = false
-	_assert("Imported vocabulary remains marked for human review", drafts_valid, "")
+	_assert("Imported vocabulary has valid review states", drafts_valid, "")
 
 	# Test: get_words_by_category
 	var cafe_words := VocabDatabase.get_words_by_category("cafe")
@@ -207,6 +207,8 @@ func _test_production_resources() -> void:
 		"res://Scenes/MiniGames/CafeOrders/cafe_orders.tscn",
 		"res://Scenes/MiniGames/ReadingShelf/reading_shelf.tscn",
 		"res://Scenes/MiniGames/KanjiWorkshop/kanji_workshop.tscn",
+		"res://Scenes/MiniGames/ListeningLab/listening_lab.tscn",
+		"res://Scenes/StudyNotebook/study_notebook.tscn",
 		"res://Scenes/Results/results_screen.tscn",
 		"res://Scenes/Stats/stats_screen.tscn",
 	]

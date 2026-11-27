@@ -107,6 +107,8 @@ def build_words(level):
     sources = load_json(SOURCE / f"{level}_vocab.json")
     source_by_display = {source["word"]: source for source in sources}
     for entry in current:
+        for review_field in ("review_status", "reviewer", "reviewed_at", "review_notes"):
+            entry.pop(review_field, None)
         if not entry.get("example_sentences"):
             source = source_by_display.get(entry["kanji"])
             if source:
@@ -175,8 +177,8 @@ def build_words(level):
         raise ValueError(f"{level} vocabulary target mismatch: {len(records)}")
     if level == "n4":
         from content.menu import N4_MENU_WORDS
-        for index, (display, reading, meanings, example) in enumerate(N4_MENU_WORDS):
-            record = make_word(level, next_id - 10 + index, display, reading, reading, meanings, [], "noun")
+        for index, (display, reading, romaji, meanings, example) in enumerate(N4_MENU_WORDS):
+            record = make_word(level, next_id - 10 + index, display, reading, romaji, meanings, [], "noun")
             record["categories"] = ["food", "cafe"]
             record["example_sentences"] = [example]
             records[-10 + index] = record

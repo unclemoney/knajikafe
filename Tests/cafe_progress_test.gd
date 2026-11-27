@@ -14,6 +14,8 @@ func _ready() -> void:
 	profile.cafe_decorations = PackedStringArray(["plant_bonsai"])
 	GameController.current_profile = profile
 	SaveManager._apply_profile_defaults(profile)
+	CafeProgressManager._ensure_quest_state(profile, GameController.get_current_date())
+	profile.quest_progress["focus_skill"] = "meaning"
 	_check("Equipped items migrate to ownership", profile.owned_decorations.has("plant_bonsai"))
 	_check("Café defaults start empty", profile.coffee_beans == 0 and profile.total_beans_earned == 0 and profile.cat_bonds.is_empty())
 

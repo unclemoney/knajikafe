@@ -101,6 +101,8 @@ func word_matches_filters(word: VocabWord, filters: Dictionary) -> bool:
 		return false
 	if filters.get("require_kanji", false) and word.kanji == "":
 		return false
+	if filters.get("require_audio", false) and not AudioManager.has_speech("vocab:" + word.id):
+		return false
 	var part_of_speech: String = filters.get("part_of_speech", "")
 	if part_of_speech != "" and word.part_of_speech != part_of_speech:
 		return false

@@ -22,7 +22,11 @@
       "A cheaper apartment"
     ],
     "answer_index": 0,
-    "explanation": "新しい経験を楽しみにしています means looking forward to the new experience."
+    "explanation": "新しい経験を楽しみにしています means looking forward to the new experience.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_002",
@@ -47,7 +51,11 @@
       "Japanese schools"
     ],
     "answer_index": 0,
-    "explanation": "日本の歴史にも興味を持ちました means became interested in Japanese history."
+    "explanation": "日本の歴史にも興味を持ちました means became interested in Japanese history.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_003",
@@ -72,7 +80,11 @@
       "They missed the bus"
     ],
     "answer_index": 1,
-    "explanation": "電車が止まっていたことです says the train had stopped."
+    "explanation": "電車が止まっていたことです says the train had stopped.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_004",
@@ -97,7 +109,11 @@
       "Its location"
     ],
     "answer_index": 0,
-    "explanation": "その意味を知って means after understanding its meaning."
+    "explanation": "その意味を知って means after understanding its meaning.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_005",
@@ -122,7 +138,11 @@
       "Cats"
     ],
     "answer_index": 1,
-    "explanation": "山や川の写真を撮ります says photos of mountains and rivers."
+    "explanation": "山や川の写真を撮ります says photos of mountains and rivers.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_006",
@@ -147,7 +167,11 @@
       "Dark"
     ],
     "answer_index": 1,
-    "explanation": "家の中は暖かく、気持ちがいいです describes a warm comfortable home."
+    "explanation": "家の中は暖かく、気持ちがいいです describes a warm comfortable home.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_007",
@@ -172,7 +196,11 @@
       "At home"
     ],
     "answer_index": 1,
-    "explanation": "駅の前の喫茶店 is the café in front of the station."
+    "explanation": "駅の前の喫茶店 is the café in front of the station.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_008",
@@ -197,7 +225,11 @@
       "A camera"
     ],
     "answer_index": 1,
-    "explanation": "傘と長靴を準備しておきます means prepare an umbrella and rain boots."
+    "explanation": "傘と長靴を準備しておきます means prepare an umbrella and rain boots.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_009",
@@ -222,7 +254,11 @@
       "Last month"
     ],
     "answer_index": 1,
-    "explanation": "来月の三日です means the third of next month."
+    "explanation": "来月の三日です means the third of next month.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_010",
@@ -247,7 +283,11 @@
       "Makes breakfast"
     ],
     "answer_index": 0,
-    "explanation": "そのあと、ニュースを読みます says they read the news afterward."
+    "explanation": "そのあと、ニュースを読みます says they read the news afterward.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_011",
@@ -272,7 +312,11 @@
       "City traffic"
     ],
     "answer_index": 0,
-    "explanation": "日本の四季を表しています means it expresses Japan's four seasons."
+    "explanation": "日本の四季を表しています means it expresses Japan's four seasons.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_012",
@@ -297,7 +341,11 @@
       "To take exams"
     ],
     "answer_index": 0,
-    "explanation": "町の歴史を知るために means to learn about the town's history."
+    "explanation": "町の歴史を知るために means to learn about the town's history.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_013",
@@ -322,7 +370,11 @@
       "To become a chef"
     ],
     "answer_index": 0,
-    "explanation": "日本語の先生になりたいです says the speaker wants to become a Japanese teacher."
+    "explanation": "日本語の先生になりたいです says the speaker wants to become a Japanese teacher.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_014",
@@ -347,7 +399,11 @@
       "Cake"
     ],
     "answer_index": 1,
-    "explanation": "家族にカレーを作ってくれました means he made curry for the family."
+    "explanation": "家族にカレーを作ってくれました means he made curry for the family.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_015",
@@ -372,7 +428,11 @@
       "News articles"
     ],
     "answer_index": 0,
-    "explanation": "電車の時間もすぐにわかります means train times are shown right away."
+    "explanation": "電車の時間もすぐにわかります means train times are shown right away.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_016",
@@ -397,7 +457,11 @@
       "On foot"
     ],
     "answer_index": 1,
-    "explanation": "そのため、明日はバスを使います says the speaker will use the bus tomorrow."
+    "explanation": "そのため、明日はバスを使います says the speaker will use the bus tomorrow.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_017",
@@ -422,7 +486,11 @@
       "For a game"
     ],
     "answer_index": 0,
-    "explanation": "来週の発表のために means for next week's presentation."
+    "explanation": "来週の発表のために means for next week's presentation.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_018",
@@ -447,7 +515,11 @@
       "It is a school holiday"
     ],
     "answer_index": 0,
-    "explanation": "今日は特別な日です says it is a special day for the family."
+    "explanation": "今日は特別な日です says it is a special day for the family.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_019",
@@ -472,7 +544,11 @@
       "The book"
     ],
     "answer_index": 0,
-    "explanation": "答えは難しいです says the answer is difficult."
+    "explanation": "答えは難しいです says the answer is difficult.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_020",
@@ -497,7 +573,11 @@
       "Call a friend"
     ],
     "answer_index": 0,
-    "explanation": "先生に聞いてから、決めます says decide after asking the teacher."
+    "explanation": "先生に聞いてから、決めます says decide after asking the teacher.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_021",
@@ -522,7 +602,11 @@
       "The answers are easy"
     ],
     "answer_index": 0,
-    "explanation": "丁寧に説明してくれます means the teacher explains politely."
+    "explanation": "丁寧に説明してくれます means the teacher explains politely.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_022",
@@ -547,7 +631,11 @@
       "Worried"
     ],
     "answer_index": 0,
-    "explanation": "次の映画には期待しています means looking forward to the next movie."
+    "explanation": "次の映画には期待しています means looking forward to the next movie.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_023",
@@ -572,7 +660,11 @@
       "Read a book"
     ],
     "answer_index": 0,
-    "explanation": "写真をたくさん撮りたいです means wants to take many photos."
+    "explanation": "写真をたくさん撮りたいです means wants to take many photos.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_024",
@@ -597,7 +689,11 @@
       "A ticket"
     ],
     "answer_index": 1,
-    "explanation": "友達に本を届けました means delivered a book to a friend."
+    "explanation": "友達に本を届けました means delivered a book to a friend.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_025",
@@ -622,7 +718,11 @@
       "Monday"
     ],
     "answer_index": 1,
-    "explanation": "荷物が届く日は、金曜日です says the package arrives Friday."
+    "explanation": "荷物が届く日は、金曜日です says the package arrives Friday.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_026",
@@ -647,7 +747,11 @@
       "Typing speed"
     ],
     "answer_index": 0,
-    "explanation": "最近は漢字も覚えられてきました means remembering more kanji."
+    "explanation": "最近は漢字も覚えられてきました means remembering more kanji.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_027",
@@ -672,7 +776,11 @@
       "Weather"
     ],
     "answer_index": 0,
-    "explanation": "もっと効率が良くなると思います means expects better efficiency."
+    "explanation": "もっと効率が良くなると思います means expects better efficiency.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_028",
@@ -697,7 +805,11 @@
       "Two jobs"
     ],
     "answer_index": 0,
-    "explanation": "日本語と英語を比べると means comparing Japanese and English."
+    "explanation": "日本語と英語を比べると means comparing Japanese and English.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_029",
@@ -722,7 +834,11 @@
       "Draw it"
     ],
     "answer_index": 0,
-    "explanation": "その歌をみんなで歌います means sing the song together."
+    "explanation": "その歌をみんなで歌います means sing the song together.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_n4_030",
@@ -747,6 +863,10 @@
       "The station staff"
     ],
     "answer_index": 1,
-    "explanation": "その後、友達にも知らせます means telling friends afterward."
+    "explanation": "その後、友達にも知らせます means telling friends afterward.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   }
 ]

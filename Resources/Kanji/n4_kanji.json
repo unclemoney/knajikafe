@@ -23,7 +23,10 @@
     "radical": "人",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "同",
@@ -43,7 +46,10 @@
     "radical": "口",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "事",
@@ -69,7 +75,10 @@
     "radical": "亅",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "社",
@@ -91,7 +100,10 @@
     "radical": "示",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "発",
@@ -120,7 +132,10 @@
     "radical": "癶",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "者",
@@ -139,7 +154,10 @@
     "radical": "老",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "地",
@@ -157,7 +175,10 @@
     "radical": "土",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "業",
@@ -179,7 +200,10 @@
     "radical": "木",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "方",
@@ -201,7 +225,10 @@
     "radical": "方",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "場",
@@ -221,7 +248,10 @@
     "radical": "土",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "員",
@@ -240,7 +270,10 @@
     "radical": "口",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "開",
@@ -265,7 +298,10 @@
     "radical": "門",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "手",
@@ -287,7 +323,10 @@
     "radical": "手",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "力",
@@ -312,7 +351,10 @@
     "radical": "力",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "問",
@@ -334,7 +376,10 @@
     "radical": "口",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "代",
@@ -371,7 +416,10 @@
     "radical": "人",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "動",
@@ -395,7 +443,10 @@
     "radical": "力",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "京",
@@ -416,7 +467,10 @@
     "radical": "亠",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "目",
@@ -443,7 +497,10 @@
     "radical": "目",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "通",
@@ -473,7 +530,10 @@
     "radical": "辵",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "言",
@@ -494,7 +554,10 @@
     "radical": "言",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "理",
@@ -516,7 +579,10 @@
     "radical": "玉",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "体",
@@ -540,7 +606,10 @@
     "radical": "人",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "田",
@@ -559,7 +628,10 @@
     "radical": "田",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "主",
@@ -585,7 +657,10 @@
     "radical": "丶",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "題",
@@ -602,7 +677,10 @@
     "radical": "頁",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "意",
@@ -625,7 +703,10 @@
     "radical": "心",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "不",
@@ -646,7 +727,10 @@
     "radical": "一",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "作",
@@ -670,7 +754,10 @@
     "radical": "人",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "用",
@@ -692,7 +779,10 @@
     "radical": "用",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "度",
@@ -718,7 +808,10 @@
     "radical": "广",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "強",
@@ -741,7 +834,10 @@
     "radical": "弓",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "公",
@@ -763,7 +859,10 @@
     "radical": "八",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "持",
@@ -784,7 +883,10 @@
     "radical": "手",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "野",
@@ -807,7 +909,10 @@
     "radical": "里",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "以",
@@ -828,7 +933,10 @@
     "radical": "人",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "思",
@@ -848,7 +956,10 @@
     "radical": "心",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "世",
@@ -871,7 +982,10 @@
     "radical": "一",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "正",
@@ -896,7 +1010,10 @@
     "radical": "止",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "院",
@@ -916,7 +1033,10 @@
     "radical": "阜",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "心",
@@ -938,7 +1058,10 @@
     "radical": "心",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "界",
@@ -955,7 +1078,10 @@
     "radical": "田",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "教",
@@ -976,7 +1102,10 @@
     "radical": "攴",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "文",
@@ -1003,7 +1132,10 @@
     "radical": "文",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "元",
@@ -1024,7 +1156,10 @@
     "radical": "儿",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "重",
@@ -1056,7 +1191,10 @@
     "radical": "里",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "近",
@@ -1078,7 +1216,10 @@
     "radical": "辵",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "考",
@@ -1098,7 +1239,10 @@
     "radical": "老",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "画",
@@ -1124,7 +1268,10 @@
     "radical": "田",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "売",
@@ -1143,7 +1290,10 @@
     "radical": "士",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "知",
@@ -1163,7 +1313,10 @@
     "radical": "矢",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "道",
@@ -1189,7 +1342,10 @@
     "radical": "辵",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "集",
@@ -1213,7 +1369,10 @@
     "radical": "隹",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "別",
@@ -1238,7 +1397,10 @@
     "radical": "刀",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "物",
@@ -1260,7 +1422,10 @@
     "radical": "牛",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "使",
@@ -1287,7 +1452,10 @@
     "radical": "人",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "品",
@@ -1310,7 +1478,10 @@
     "radical": "口",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "計",
@@ -1332,7 +1503,10 @@
     "radical": "言",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "死",
@@ -1352,7 +1526,10 @@
     "radical": "歹",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "特",
@@ -1368,7 +1545,10 @@
     "radical": "牛",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "始",
@@ -1389,7 +1569,10 @@
     "radical": "女",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "運",
@@ -1414,7 +1597,10 @@
     "radical": "辵",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "終",
@@ -1438,7 +1624,10 @@
     "radical": "糸",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "台",
@@ -1461,7 +1650,10 @@
     "radical": "口",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "広",
@@ -1485,7 +1677,10 @@
     "radical": "广",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "住",
@@ -1510,7 +1705,10 @@
     "radical": "人",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "真",
@@ -1532,7 +1730,10 @@
     "radical": "目",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "有",
@@ -1556,7 +1757,10 @@
     "radical": "月",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "口",
@@ -1575,7 +1779,10 @@
     "radical": "口",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "町",
@@ -1596,7 +1803,10 @@
     "radical": "田",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "料",
@@ -1613,7 +1823,10 @@
     "radical": "斗",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "工",
@@ -1633,7 +1846,10 @@
     "radical": "工",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "建",
@@ -1655,7 +1871,10 @@
     "radical": "廴",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "急",
@@ -1678,7 +1897,10 @@
     "radical": "心",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "止",
@@ -1710,7 +1932,10 @@
     "radical": "止",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "送",
@@ -1729,7 +1954,10 @@
     "radical": "辵",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "切",
@@ -1759,7 +1987,10 @@
     "radical": "刀",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "転",
@@ -1786,7 +2017,10 @@
     "radical": "車",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "研",
@@ -1806,7 +2040,10 @@
     "radical": "石",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "足",
@@ -1830,7 +2067,10 @@
     "radical": "足",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "究",
@@ -1850,7 +2090,10 @@
     "radical": "穴",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "楽",
@@ -1874,7 +2117,10 @@
     "radical": "木",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "着",
@@ -1899,7 +2145,10 @@
     "radical": "目",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "病",
@@ -1921,7 +2170,10 @@
     "radical": "疒",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "質",
@@ -1947,7 +2199,10 @@
     "radical": "貝",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "待",
@@ -1967,7 +2222,10 @@
     "radical": "彳",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "試",
@@ -1990,7 +2248,10 @@
     "radical": "言",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "銀",
@@ -2008,7 +2269,10 @@
     "radical": "金",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "早",
@@ -2033,7 +2297,10 @@
     "radical": "日",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "映",
@@ -2056,7 +2323,10 @@
     "radical": "日",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "親",
@@ -2081,7 +2351,10 @@
     "radical": "見",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "験",
@@ -2105,7 +2378,10 @@
     "radical": "馬",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "英",
@@ -2127,7 +2403,10 @@
     "radical": "艸",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "医",
@@ -2148,7 +2427,10 @@
     "radical": "匸",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "仕",
@@ -2170,7 +2452,10 @@
     "radical": "人",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "去",
@@ -2196,7 +2481,10 @@
     "radical": "厶",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "味",
@@ -2216,7 +2504,10 @@
     "radical": "口",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "写",
@@ -2240,7 +2531,10 @@
     "radical": "冖",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "字",
@@ -2263,7 +2557,10 @@
     "radical": "子",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "答",
@@ -2283,7 +2580,10 @@
     "radical": "竹",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "音",
@@ -2305,7 +2605,10 @@
     "radical": "音",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "注",
@@ -2332,7 +2635,10 @@
     "radical": "水",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "歌",
@@ -2352,7 +2658,10 @@
     "radical": "欠",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "悪",
@@ -2384,7 +2693,10 @@
     "radical": "心",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "図",
@@ -2408,7 +2720,10 @@
     "radical": "囗",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "室",
@@ -2430,7 +2745,10 @@
     "radical": "宀",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "歩",
@@ -2452,7 +2770,10 @@
     "radical": "止",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "紙",
@@ -2470,7 +2791,10 @@
     "radical": "糸",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "黒",
@@ -2490,7 +2814,10 @@
     "radical": "黑",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "春",
@@ -2509,7 +2836,10 @@
     "radical": "日",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "赤",
@@ -2532,7 +2862,10 @@
     "radical": "赤",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "青",
@@ -2554,7 +2887,10 @@
     "radical": "靑",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "館",
@@ -2576,7 +2912,10 @@
     "radical": "食",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "屋",
@@ -2598,7 +2937,10 @@
     "radical": "尸",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "色",
@@ -2617,7 +2959,10 @@
     "radical": "色",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "走",
@@ -2635,7 +2980,10 @@
     "radical": "走",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "秋",
@@ -2654,7 +3002,10 @@
     "radical": "禾",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "夏",
@@ -2674,7 +3025,10 @@
     "radical": "夊",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "習",
@@ -2694,7 +3048,10 @@
     "radical": "羽",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "駅",
@@ -2710,7 +3067,10 @@
     "radical": "馬",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "洋",
@@ -2729,7 +3089,10 @@
     "radical": "水",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "旅",
@@ -2748,7 +3111,10 @@
     "radical": "方",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "服",
@@ -2767,7 +3133,10 @@
     "radical": "月",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "夕",
@@ -2785,7 +3154,10 @@
     "radical": "夕",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "借",
@@ -2804,7 +3176,10 @@
     "radical": "人",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "曜",
@@ -2820,7 +3195,10 @@
     "radical": "日",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "肉",
@@ -2838,7 +3216,10 @@
     "radical": "肉",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "貸",
@@ -2858,7 +3239,10 @@
     "radical": "貝",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "堂",
@@ -2875,7 +3259,10 @@
     "radical": "土",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "鳥",
@@ -2894,7 +3281,10 @@
     "radical": "鳥",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "飯",
@@ -2913,7 +3303,10 @@
     "radical": "食",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "勉",
@@ -2936,7 +3329,10 @@
     "radical": "力",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "冬",
@@ -2954,7 +3350,10 @@
     "radical": "冫",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "昼",
@@ -2973,7 +3372,10 @@
     "radical": "日",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "茶",
@@ -2990,7 +3392,10 @@
     "radical": "艸",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "弟",
@@ -3011,7 +3416,10 @@
     "radical": "弓",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "牛",
@@ -3029,7 +3437,10 @@
     "radical": "牛",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "魚",
@@ -3049,7 +3460,10 @@
     "radical": "魚",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "兄",
@@ -3069,7 +3483,10 @@
     "radical": "儿",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "犬",
@@ -3088,7 +3505,10 @@
     "radical": "犬",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "妹",
@@ -3106,7 +3526,10 @@
     "radical": "女",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "姉",
@@ -3125,7 +3548,10 @@
     "radical": "女",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "漢",
@@ -3142,7 +3568,10 @@
     "radical": "水",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "坊",
@@ -3161,7 +3590,10 @@
     "radical": "土",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "凄",
@@ -3185,7 +3617,10 @@
     "radical": "冫",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "痩",
@@ -3206,7 +3641,10 @@
     "radical": "疒",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 4
+    "source_level": 4,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "合",
@@ -3250,7 +3688,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "部",
@@ -3295,7 +3736,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "彼",
@@ -3325,7 +3769,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "実",
@@ -3365,7 +3812,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "当",
@@ -3404,7 +3854,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "戦",
@@ -3441,7 +3894,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "性",
@@ -3473,7 +3929,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "対",
@@ -3520,7 +3979,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "関",
@@ -3561,7 +4023,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "感",
@@ -3588,7 +4053,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "定",
@@ -3623,7 +4091,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "政",
@@ -3651,7 +4122,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "取",
@@ -3682,7 +4156,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "所",
@@ -3707,7 +4184,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "現",
@@ -3745,7 +4225,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "最",
@@ -3777,7 +4260,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "化",
@@ -3824,7 +4310,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "民",
@@ -3852,7 +4341,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "相",
@@ -3901,7 +4393,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "法",
@@ -3942,7 +4437,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "全",
@@ -3979,7 +4477,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "情",
@@ -4018,7 +4519,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "向",
@@ -4072,7 +4576,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "平",
@@ -4107,7 +4614,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "成",
@@ -4151,7 +4661,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "経",
@@ -4197,7 +4710,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "信",
@@ -4229,7 +4745,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "面",
@@ -4264,7 +4783,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "連",
@@ -4310,7 +4832,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "原",
@@ -4354,7 +4879,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "顔",
@@ -4382,7 +4910,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "機",
@@ -4423,7 +4954,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "次",
@@ -4453,7 +4987,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "数",
@@ -4496,7 +5033,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "美",
@@ -4522,7 +5062,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "回",
@@ -4573,7 +5116,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "表",
@@ -4612,7 +5158,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "声",
@@ -4638,7 +5187,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "報",
@@ -4673,7 +5225,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "要",
@@ -4710,7 +5265,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "変",
@@ -4744,7 +5302,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "神",
@@ -4777,7 +5338,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "記",
@@ -4809,7 +5373,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "和",
@@ -4854,7 +5421,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "引",
@@ -4899,7 +5469,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "治",
@@ -4954,7 +5527,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "決",
@@ -4989,7 +5565,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "太",
@@ -5021,7 +5600,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "込",
@@ -5057,7 +5639,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "受",
@@ -5102,7 +5687,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "解",
@@ -5171,7 +5759,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "市",
@@ -5198,7 +5789,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "期",
@@ -5230,7 +5824,10 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "様",
@@ -5271,6 +5868,9 @@
     "radical": "\n",
     "components": [],
     "review_status": "draft_pending_human_review",
-    "source_level": 3
+    "source_level": 3,
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   }
 ]

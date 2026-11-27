@@ -10,17 +10,20 @@ KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who
 
 ## Features
 
-### Activities (8 total)
+### Activities (9 total)
 | Game | Description | Station |
 |------|-------------|---------|
 | **Multiple Choice Quiz** | Pick the correct English meaning from 4 cards | Menu Board |
 | **Flashcard Review** | Flip cards, self-rate with SM-2 quality ratings | Counter |
 | **Kanji Matching** | Memory card game — match kanji to meanings | Table |
 | **Typing Input** | Type readings using on-screen Hiragana/Katakana keyboard | Register |
+| **Listening Lab** | Transcribe spoken vocabulary with kana or romaji; assisted attempts record Reading | Register |
 | **Fill in the Blank** | Complete Japanese sentences with the correct word | Bookshelf |
 | **Cat Cafe Orders** | Listen to Japanese orders and choose picture items | Kitchen |
 | **Reading Shelf** | Read short N5/N4 passages and answer comprehension questions | Bookshelf |
 | **Kanji Workshop** | Practice tracked N5/N4 kanji meanings, readings, and components | Table |
+
+The **Study Notebook** is a non-scored Bookshelf reference with Japanese/romaji/English search, level/topic/study-state filters, examples, progress details, and pronunciation playback. Browsing never changes SRS cards or café rewards.
 
 ### Learning Content
 - **N5 curriculum:** 800 vocabulary words with examples, 100 kanji, and 30 reading passages
@@ -31,7 +34,7 @@ KanjiKafe puts you inside a cozy cat cafe staffed by animated cat companions who
 - Topic selection, 0–10 new cards per session (zero means due-only), and Relaxed/Standard/Challenge presentation modes
 - Difficulty changes distractors and the Orders timer only; it does not change SRS quality, XP, Beans, or assisted-attempt classification
 
-These are curated JLPT-aligned study sets, not official or exhaustive JLPT coverage. Newly imported vocabulary and N4 kanji remain `draft_pending_human_review`. The N4 set includes explicitly marked N3-source bridge characters (`source_level: 3`) as curriculum extensions; this is not a claim that they are official N4-only characters. Qualified Japanese content and pronunciation review is required before the v0.7 final release.
+These are curated JLPT-aligned study sets, not official or exhaustive JLPT coverage. Vocabulary, kanji, passages, and audio have explicit `draft_pending_human_review`, `needs_correction`, or `human_reviewed` states. The N4 set includes marked N3-source bridge characters (`source_level: 3`) as curriculum extensions; this is not a claim that they are official N4-only characters. Qualified Japanese content and pronunciation review is required before final v0.8 release labeling.
 
 ### Spaced Repetition (SM-2)
 - Anki-style SM-2 algorithm tracks ease factor, interval, and repetitions per word
@@ -146,9 +149,9 @@ res://
 │   │   ├── TypingInput/          # Type reading from English prompt
 │   │   │   ├── typing_input.tscn
 │   │   │   └── typing_input.gd
-│   │   └── CafeOrders/           # Timed cafe ordering game
-│   │       ├── cafe_orders.tscn
-│   │       └── cafe_orders.gd
+│   │   ├── CafeOrders/           # Timed cafe ordering game
+│   │   └── ListeningLab/         # Audio-first vocabulary dictation
+│   ├── StudyNotebook/            # Non-scored searchable curriculum reference
 │   ├── Results/                  # Post-quiz summary with XP and accuracy
 │   │   ├── results_screen.tscn
 │   │   └── results_screen.gd
@@ -163,8 +166,8 @@ res://
 │   │   │   └── level_up_notification.gd
 │   │   ├── AchievementPopup/     # Queue-based achievement popup
 │   │   │   └── achievement_popup.gd
-│   │   └── KanaKeyboard/         # On-screen hiragana keyboard
-│   │       └── kana_keyboard.gd
+│   │   ├── KanaKeyboard/         # On-screen hiragana keyboard
+│   │   └── JapaneseAnswerNormalizer/ # Shared kana/romaji answer normalization
 │   ├── Tutorial/                 # First-time onboarding (Mochi guide)
 │   │   ├── tutorial.tscn
 │   │   └── tutorial.gd
@@ -239,9 +242,11 @@ Learning data uses `schema_version: 3` with `cards`, `kanji_cards`, and a maximu
 Test scenes are located in `Tests/`. Run content validation and the headless suites from the project root:
 ```
 python Tools/validate_content.py
+python Tools/test_review_pipeline.py
 godot --headless --path . res://Tests/data_layer_test.tscn -- --run-all
 godot --headless --path . res://Tests/progress_metrics_test.tscn
 godot --headless --path . res://Tests/v05_activities_test.tscn
+godot --headless --path . res://Tests/v08_activities_test.tscn
 godot --headless --path . res://Tests/cafe_progress_test.tscn
 godot --headless --path . res://Tests/cat_state_machine_test.tscn
 ```
@@ -370,6 +375,14 @@ Replace `godot` with the installed Godot 4.4.1 executable path when it is not on
 - [ ] Qualified Japanese content and pronunciation review
 - [ ] Final v0.7 release labeling after review findings are resolved
 
+### Phase 13: Trusted Content & Active Recall — Draft
+- [x] Reviewer-owned vocabulary, kanji, reading, and audio workbooks with correction persistence
+- [x] Listening Lab audio dictation with assisted evidence separation and shared answer normalization
+- [x] Searchable Study Notebook with study-state filters, examples, progress, and pronunciation
+- [x] Draft and strict reviewed-release validation
+- [ ] Qualified approval of all v0.7/v0.8 content and pronunciation
+- [ ] Final v0.8 release labeling after review findings are resolved
+
 ## Curriculum Sources and Licenses
 
 The import uses [OpenJLPT](https://github.com/evanclan/OpenJLPT), [Bluskyo/JLPT_Vocabulary](https://github.com/Bluskyo/JLPT_Vocabulary), [elzup/jlpt-word-list](https://github.com/elzup/jlpt-word-list), and [AnchorI/jlpt-kanji-dictionary](https://github.com/AnchorI/jlpt-kanji-dictionary). Dictionary data comes from [JMdict/KANJIDIC2 by the EDRDG](https://www.edrdg.org/), with example sentences sourced through the imported data from [Tatoeba](https://tatoeba.org/). Review each linked source's license before redistribution. Imported source snapshots are under `Tools/content/source/`.
@@ -377,6 +390,27 @@ The import uses [OpenJLPT](https://github.com/evanclan/OpenJLPT), [Bluskyo/JLPT_
 ## Japanese Audio Workflow
 
 Run `powershell -ExecutionPolicy Bypass -File Tools/gen_japanese_audio.ps1` on Windows with Microsoft Haruka and FFmpeg installed. The script generates 1,500 word clips and 20 café order clips, writes `Resources/Audio/japanese_audio_manifest.json`, and reuses clips whose source-text hash is unchanged. `Tools/gen_n5_audio.ps1` remains a compatibility wrapper. Audio is synthetic and has not received qualified pronunciation review; replace it with reviewed recordings when available. Reading passages are generated with `python Tools/gen_reading.py` and `python Tools/gen_n4_reading.py`. Run `python Tools/validate_content.py` after any content, menu, art, or audio change.
+
+## Qualified Content Review Workflow
+
+Review workbooks live in `Tools/content/review/` and cover all 1,500 vocabulary entries, 300 kanji, 60 passages, and 1,520 audio clips. They are local UTF-8 CSV files suitable for spreadsheet editing; no hosted service is required.
+
+1. Run `python Tools/export_review_workbook.py` to create or refresh workbooks. Existing corrections and approvals are preserved. A changed audio source hash resets that clip to draft.
+2. A qualified reviewer edits content fields and sets `review_status` to `human_reviewed` only after checking the row. Approval requires `reviewer` and `reviewed_at` (`YYYY-MM-DD`). Use `needs_correction` for unresolved findings.
+3. Run `python Tools/apply_content_review.py`. Approved corrections and review metadata are applied by stable IDs. Draft/rejected rows do not overwrite generated content with unapproved edits.
+4. Regenerate speech if reviewed readings or order text changed, then apply review metadata again:
+   ```
+   powershell -ExecutionPolicy Bypass -File Tools/gen_japanese_audio.ps1
+   python Tools/apply_content_review.py
+   ```
+5. Run normal validation during development and strict validation for release:
+   ```
+   python Tools/validate_content.py
+   python Tools/validate_content.py --require-reviewed
+   python Tools/test_review_pipeline.py
+   ```
+
+After rerunning source importers/generators, rerun `apply_content_review.py` to restore approved corrections. Strict validation fails while any draft or rejected row remains. Automated generation and validation do not constitute qualified review.
 
 ## File-backed Audio
 
@@ -427,7 +461,7 @@ Each JSON entry must contain these keys (all strings unless noted):
 | `categories` | array of strings | `["greetings"]` |
 | `example_sentences` | array of strings | `"Japanese|English"`; required for every word |
 | `part_of_speech` | string | `"expression"` |
-| `review_status` | string | `"draft_pending_human_review"` on newly imported entries |
+| `review_status` | string | Draft, needs-correction, or human-reviewed state from the review layer |
 | `source_pos` | array of strings | Source dictionary part-of-speech tags, when available |
 
 ### JSON Encoding Rules

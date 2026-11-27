@@ -321,6 +321,7 @@ func _on_fill_blank_pressed() -> void:
 	_show_mode_picker("Bookshelf Activities", [
 		{"name": "Fill in the Blank", "description": "Complete Japanese sentences", "config": {"game_type": "fill_in_blank", "words_per_session": words_per_session, "scene_path": "res://Scenes/MiniGames/FillInBlank/fill_in_blank.tscn"}},
 		{"name": "Reading Shelf", "description": "Read short passages and answer questions", "config": {"game_type": "reading_shelf", "words_per_session": 5, "scene_path": "res://Scenes/MiniGames/ReadingShelf/reading_shelf.tscn"}},
+		{"name": "Study Notebook", "description": "Search vocabulary, examples, progress, and audio", "config": {"game_type": "study_notebook", "words_per_session": 0, "scene_path": "res://Scenes/StudyNotebook/study_notebook.tscn"}},
 	])
 
 
@@ -336,20 +337,16 @@ func _on_station_mode_selected(config: Dictionary) -> void:
 	GameController.change_scene(config["scene_path"])
 
 
-## Starts the Typing Input game.
+## Opens Register activity selection.
 func _on_typing_pressed() -> void:
 	var profile := GameController.current_profile
 	if profile == null:
 		return
-
 	var words_per_session: int = profile.settings.get("words_per_session", 10)
-	GameController.session_data = {
-		"game_type": "typing_input",
-		"words_per_session": words_per_session,
-	}
-
-	typing_btn.disabled = true
-	GameController.change_scene("res://Scenes/MiniGames/TypingInput/typing_input.tscn")
+	_show_mode_picker("Register Activities", [
+		{"name": "Typing Input", "description": "Type readings from meaning prompts", "config": {"game_type": "typing_input", "words_per_session": words_per_session, "scene_path": "res://Scenes/MiniGames/TypingInput/typing_input.tscn"}},
+		{"name": "Listening Lab", "description": "Listen and transcribe vocabulary readings", "config": {"game_type": "listening_lab", "words_per_session": words_per_session, "scene_path": "res://Scenes/MiniGames/ListeningLab/listening_lab.tscn"}},
+	])
 
 
 ## Starts the Cat Cafe Orders game.

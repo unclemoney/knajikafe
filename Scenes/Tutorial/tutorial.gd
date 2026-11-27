@@ -39,13 +39,13 @@ const STEPS: Array = [
 	},
 	{
 		"cat": "🐱 🔤",
-		"title": "Typing Practice",
-		"text": "In typing mode, you see the English meaning and type the hiragana reading. Use the on-screen keyboard or type directly!",
+		"title": "Typing & Listening",
+		"text": "At the Register, type readings from prompts or try Listening Lab to transcribe spoken words. Use the kana keyboard or type directly!",
 	},
 	{
 		"cat": "🐱 🧩",
 		"title": "More Games!",
-		"text": "Try Kanji Matching to pair kanji with meanings, Fill in the Blank for sentences, or Cafe Orders for timed challenges!",
+		"text": "Try Kanji Matching, Reading Shelf, Kanji Workshop, or Cafe Orders. The Bookshelf also has a Study Notebook for words, examples, progress, and audio!",
 	},
 	{
 		"cat": "🐱 ⭐",

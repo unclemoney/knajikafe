@@ -15,7 +15,11 @@
     "stroke_count": 1,
     "jlpt_level": 5,
     "radical": "一",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "二",
@@ -33,7 +37,11 @@
     "stroke_count": 2,
     "jlpt_level": 5,
     "radical": "二",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "三",
@@ -50,7 +58,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "一",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "四",
@@ -68,7 +80,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "囗",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "五",
@@ -85,7 +101,11 @@
     "stroke_count": 5,
     "jlpt_level": 5,
     "radical": "二",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "六",
@@ -104,7 +124,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "八",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "七",
@@ -122,7 +146,11 @@
     "stroke_count": 2,
     "jlpt_level": 5,
     "radical": "一",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "八",
@@ -141,7 +169,11 @@
     "stroke_count": 2,
     "jlpt_level": 5,
     "radical": "八",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "九",
@@ -159,7 +191,11 @@
     "stroke_count": 2,
     "jlpt_level": 5,
     "radical": "乙",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "十",
@@ -178,7 +214,11 @@
     "stroke_count": 2,
     "jlpt_level": 5,
     "radical": "十",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "百",
@@ -196,7 +236,11 @@
     "components": [
       "一",
       "白"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "千",
@@ -212,7 +256,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "十",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "万",
@@ -227,7 +275,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "一",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "円",
@@ -244,7 +296,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "冂",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "年",
@@ -260,7 +316,11 @@
     "stroke_count": 6,
     "jlpt_level": 5,
     "radical": "干",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "月",
@@ -278,7 +338,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "月",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "日",
@@ -297,7 +361,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "日",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "今",
@@ -314,7 +382,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "人",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "週",
@@ -331,7 +403,11 @@
     "components": [
       "周",
       "辶"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "時",
@@ -351,7 +427,11 @@
     "components": [
       "日",
       "寺"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "分",
@@ -376,7 +456,11 @@
     "components": [
       "八",
       "刀"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "朝",
@@ -392,7 +476,11 @@
     "stroke_count": 12,
     "jlpt_level": 5,
     "radical": "月",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "夜",
@@ -410,7 +498,11 @@
     "stroke_count": 8,
     "jlpt_level": 5,
     "radical": "夕",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "午",
@@ -424,7 +516,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "十",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "毎",
@@ -440,7 +536,11 @@
     "stroke_count": 6,
     "jlpt_level": 5,
     "radical": "母",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "先",
@@ -458,7 +558,11 @@
     "stroke_count": 6,
     "jlpt_level": 5,
     "radical": "儿",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "明",
@@ -483,7 +587,11 @@
     "components": [
       "日",
       "月"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "昨",
@@ -501,7 +609,11 @@
     "components": [
       "日",
       "乍"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "上",
@@ -522,7 +634,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "一",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "下",
@@ -545,7 +661,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "一",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "左",
@@ -562,7 +682,11 @@
     "stroke_count": 5,
     "jlpt_level": 5,
     "radical": "工",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "右",
@@ -579,7 +703,11 @@
     "stroke_count": 5,
     "jlpt_level": 5,
     "radical": "口",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "中",
@@ -597,7 +725,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "丨",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "前",
@@ -614,7 +746,11 @@
     "stroke_count": 9,
     "jlpt_level": 5,
     "radical": "刀",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "後",
@@ -634,7 +770,11 @@
     "stroke_count": 9,
     "jlpt_level": 5,
     "radical": "彳",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "内",
@@ -651,7 +791,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "冂",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "外",
@@ -674,7 +818,11 @@
     "components": [
       "夕",
       "卜"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "東",
@@ -690,7 +838,11 @@
     "stroke_count": 8,
     "jlpt_level": 5,
     "radical": "木",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "西",
@@ -708,7 +860,11 @@
     "stroke_count": 6,
     "jlpt_level": 5,
     "radical": "覀",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "南",
@@ -725,7 +881,11 @@
     "stroke_count": 9,
     "jlpt_level": 5,
     "radical": "十",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "北",
@@ -741,7 +901,11 @@
     "stroke_count": 5,
     "jlpt_level": 5,
     "radical": "匕",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "山",
@@ -758,7 +922,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "山",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "川",
@@ -774,7 +942,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "巛",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "水",
@@ -790,7 +962,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "水",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "天",
@@ -811,7 +987,11 @@
     "components": [
       "一",
       "大"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "気",
@@ -828,7 +1008,11 @@
     "stroke_count": 6,
     "jlpt_level": 5,
     "radical": "气",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "雨",
@@ -845,7 +1029,11 @@
     "stroke_count": 8,
     "jlpt_level": 5,
     "radical": "雨",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "雪",
@@ -864,7 +1052,11 @@
     "components": [
       "雨",
       "彐"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "風",
@@ -883,7 +1075,11 @@
     "stroke_count": 9,
     "jlpt_level": 5,
     "radical": "風",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "空",
@@ -906,7 +1102,11 @@
     "components": [
       "穴",
       "工"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "海",
@@ -926,7 +1126,11 @@
     "components": [
       "氵",
       "毎"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "花",
@@ -946,7 +1150,11 @@
     "components": [
       "艹",
       "化"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "火",
@@ -963,7 +1171,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "火",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "木",
@@ -982,7 +1194,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "木",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "土",
@@ -1000,7 +1216,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "土",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "金",
@@ -1020,7 +1240,11 @@
     "stroke_count": 8,
     "jlpt_level": 5,
     "radical": "金",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "人",
@@ -1037,7 +1261,11 @@
     "stroke_count": 2,
     "jlpt_level": 5,
     "radical": "人",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "男",
@@ -1058,7 +1286,11 @@
     "components": [
       "田",
       "力"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "女",
@@ -1078,7 +1310,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "女",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "父",
@@ -1094,7 +1330,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "父",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "母",
@@ -1110,7 +1350,11 @@
     "stroke_count": 5,
     "jlpt_level": 5,
     "radical": "母",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "子",
@@ -1128,7 +1372,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "子",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "家",
@@ -1151,7 +1399,11 @@
     "components": [
       "宀",
       "豕"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "族",
@@ -1166,7 +1418,11 @@
     "stroke_count": 11,
     "jlpt_level": 5,
     "radical": "方",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "友",
@@ -1182,7 +1438,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "又",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "生",
@@ -1205,7 +1465,11 @@
     "stroke_count": 5,
     "jlpt_level": 5,
     "radical": "生",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "学",
@@ -1222,7 +1486,11 @@
     "stroke_count": 8,
     "jlpt_level": 5,
     "radical": "子",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "名",
@@ -1243,7 +1511,11 @@
     "components": [
       "夕",
       "口"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "私",
@@ -1264,7 +1536,11 @@
     "components": [
       "禾",
       "厶"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "自",
@@ -1281,7 +1557,11 @@
     "stroke_count": 6,
     "jlpt_level": 5,
     "radical": "自",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "行",
@@ -1302,7 +1582,11 @@
     "stroke_count": 6,
     "jlpt_level": 5,
     "radical": "彳",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "来",
@@ -1320,7 +1604,11 @@
     "stroke_count": 7,
     "jlpt_level": 5,
     "radical": "木",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "帰",
@@ -1336,7 +1624,11 @@
     "stroke_count": 10,
     "jlpt_level": 5,
     "radical": "巾",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "食",
@@ -1356,7 +1648,11 @@
     "stroke_count": 9,
     "jlpt_level": 5,
     "radical": "食",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "飲",
@@ -1376,7 +1672,11 @@
     "components": [
       "食",
       "欠"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "見",
@@ -1395,7 +1695,11 @@
     "stroke_count": 7,
     "jlpt_level": 5,
     "radical": "見",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "聞",
@@ -1417,7 +1721,11 @@
     "components": [
       "門",
       "耳"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "話",
@@ -1438,7 +1746,11 @@
     "components": [
       "言",
       "舌"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "読",
@@ -1459,7 +1771,11 @@
     "components": [
       "言",
       "売"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "書",
@@ -1475,7 +1791,11 @@
     "stroke_count": 10,
     "jlpt_level": 5,
     "radical": "曰",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "買",
@@ -1494,7 +1814,11 @@
     "components": [
       "罒",
       "貝"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "休",
@@ -1516,7 +1840,11 @@
     "components": [
       "亻",
       "木"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "起",
@@ -1538,7 +1866,11 @@
     "components": [
       "走",
       "己"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "立",
@@ -1556,7 +1888,11 @@
     "stroke_count": 5,
     "jlpt_level": 5,
     "radical": "立",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "大",
@@ -1576,7 +1912,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "大",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "小",
@@ -1596,7 +1936,11 @@
     "stroke_count": 3,
     "jlpt_level": 5,
     "radical": "小",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "高",
@@ -1617,7 +1961,11 @@
     "stroke_count": 10,
     "jlpt_level": 5,
     "radical": "高",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "安",
@@ -1639,7 +1987,11 @@
     "components": [
       "宀",
       "女"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "新",
@@ -1657,7 +2009,11 @@
     "stroke_count": 13,
     "jlpt_level": 5,
     "radical": "斤",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "古",
@@ -1677,7 +2033,11 @@
     "components": [
       "十",
       "口"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "長",
@@ -1694,7 +2054,11 @@
     "stroke_count": 8,
     "jlpt_level": 5,
     "radical": "長",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "短",
@@ -1713,7 +2077,11 @@
     "components": [
       "矢",
       "豆"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "多",
@@ -1732,7 +2100,11 @@
     "components": [
       "夕",
       "夕"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "少",
@@ -1750,7 +2122,11 @@
     "stroke_count": 4,
     "jlpt_level": 5,
     "radical": "小",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "校",
@@ -1768,7 +2144,11 @@
     "components": [
       "木",
       "交"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "車",
@@ -1785,7 +2165,11 @@
     "stroke_count": 7,
     "jlpt_level": 5,
     "radical": "車",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "本",
@@ -1802,7 +2186,11 @@
     "stroke_count": 5,
     "jlpt_level": 5,
     "radical": "木",
-    "components": []
+    "components": [],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "店",
@@ -1822,7 +2210,11 @@
     "components": [
       "广",
       "占"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "国",
@@ -1841,7 +2233,11 @@
     "components": [
       "囗",
       "玉"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "character": "語",
@@ -1862,6 +2258,10 @@
     "components": [
       "言",
       "吾"
-    ]
+    ],
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   }
 ]

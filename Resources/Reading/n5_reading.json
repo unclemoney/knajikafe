@@ -22,7 +22,11 @@
       "Visit the hospital"
     ],
     "answer_index": 0,
-    "explanation": "The second sentence says that the speaker will go to school."
+    "explanation": "The second sentence says that the speaker will go to school.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_002",
@@ -48,7 +52,11 @@
       "Coffee"
     ],
     "answer_index": 2,
-    "explanation": "The second sentence says 妹は牛乳を飲みます: the younger sister drinks milk."
+    "explanation": "The second sentence says 妹は牛乳を飲みます: the younger sister drinks milk.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_003",
@@ -74,7 +82,11 @@
       "To the left of the station"
     ],
     "answer_index": 1,
-    "explanation": "駅の前 means in front of the station."
+    "explanation": "駅の前 means in front of the station.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_004",
@@ -100,7 +112,11 @@
       "At the shop"
     ],
     "answer_index": 2,
-    "explanation": "公園を歩きます means walks in the park."
+    "explanation": "公園を歩きます means walks in the park.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_005",
@@ -126,7 +142,11 @@
       "Fish"
     ],
     "answer_index": 1,
-    "explanation": "The first sentence uses 私は and パンを買います: I buy bread."
+    "explanation": "The first sentence uses 私は and パンを買います: I buy bread.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_006",
@@ -152,7 +172,11 @@
       "At the station"
     ],
     "answer_index": 1,
-    "explanation": "図書館で means at the library."
+    "explanation": "図書館で means at the library.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_007",
@@ -178,7 +202,11 @@
       "The younger sister"
     ],
     "answer_index": 2,
-    "explanation": "父は朝、お茶を飲みます identifies the father as the tea drinker."
+    "explanation": "父は朝、お茶を飲みます identifies the father as the tea drinker.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_008",
@@ -204,7 +232,11 @@
       "By train"
     ],
     "answer_index": 3,
-    "explanation": "電車で means by train."
+    "explanation": "電車で means by train.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_009",
@@ -230,7 +262,11 @@
       "The station"
     ],
     "answer_index": 2,
-    "explanation": "空を見ます means looks at the sky."
+    "explanation": "空を見ます means looks at the sky.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_010",
@@ -256,7 +292,11 @@
       "Buy bread"
     ],
     "answer_index": 1,
-    "explanation": "私たちはご飯を食べます means we eat a meal."
+    "explanation": "私たちはご飯を食べます means we eat a meal.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_011",
@@ -282,7 +322,11 @@
       "Windy"
     ],
     "answer_index": 2,
-    "explanation": "今日は天気が良いです means the weather is good today."
+    "explanation": "今日は天気が良いです means the weather is good today.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_012",
@@ -308,7 +352,11 @@
       "On foot"
     ],
     "answer_index": 1,
-    "explanation": "弟は自転車で identifies the younger brother and bicycle."
+    "explanation": "弟は自転車で identifies the younger brother and bicycle.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_013",
@@ -334,7 +382,11 @@
       "A shop worker"
     ],
     "answer_index": 1,
-    "explanation": "お兄さんは学生です directly says the older brother is a student."
+    "explanation": "お兄さんは学生です directly says the older brother is a student.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_014",
@@ -360,7 +412,11 @@
       "Meat"
     ],
     "answer_index": 2,
-    "explanation": "母は野菜を買います says the mother buys vegetables."
+    "explanation": "母は野菜を買います says the mother buys vegetables.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_015",
@@ -386,7 +442,11 @@
       "To the right of the school"
     ],
     "answer_index": 2,
-    "explanation": "学校の中 means inside the school."
+    "explanation": "学校の中 means inside the school.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_016",
@@ -412,7 +472,11 @@
       "On Monday"
     ],
     "answer_index": 1,
-    "explanation": "夜、家で connects night with reading at home."
+    "explanation": "夜、家で connects night with reading at home.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_017",
@@ -438,7 +502,11 @@
       "To the right of the station"
     ],
     "answer_index": 3,
-    "explanation": "駅の右 means to the right of the station."
+    "explanation": "駅の右 means to the right of the station.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_018",
@@ -464,7 +532,11 @@
       "The shopkeeper"
     ],
     "answer_index": 1,
-    "explanation": "先生に聞きます means ask the teacher."
+    "explanation": "先生に聞きます means ask the teacher.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_019",
@@ -490,7 +562,11 @@
       "The bank"
     ],
     "answer_index": 1,
-    "explanation": "明日 and 海に行きます establish tomorrow and the sea."
+    "explanation": "明日 and 海に行きます establish tomorrow and the sea.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_020",
@@ -516,7 +592,11 @@
       "Fruit"
     ],
     "answer_index": 2,
-    "explanation": "父はご飯を作ります says the father makes rice."
+    "explanation": "父はご飯を作ります says the father makes rice.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_021",
@@ -542,7 +622,11 @@
       "Behind the desk"
     ],
     "answer_index": 2,
-    "explanation": "猫は箱の中です means the cat is inside the box."
+    "explanation": "猫は箱の中です means the cat is inside the box.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_022",
@@ -568,7 +652,11 @@
       "By bicycle"
     ],
     "answer_index": 2,
-    "explanation": "歩いて means on foot."
+    "explanation": "歩いて means on foot.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_023",
@@ -594,7 +682,11 @@
       "A story"
     ],
     "answer_index": 1,
-    "explanation": "本に名前を書きます means writes a name in the book."
+    "explanation": "本に名前を書きます means writes a name in the book.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_024",
@@ -620,7 +712,11 @@
       "It is windy"
     ],
     "answer_index": 1,
-    "explanation": "今日は雨です gives rain as the situation."
+    "explanation": "今日は雨です gives rain as the situation.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_025",
@@ -646,7 +742,11 @@
       "Fish and meat"
     ],
     "answer_index": 1,
-    "explanation": "ご飯 and パンも together identify rice and bread."
+    "explanation": "ご飯 and パンも together identify rice and bread.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_026",
@@ -672,7 +772,11 @@
       "Cold weather"
     ],
     "answer_index": 0,
-    "explanation": "風が強いです means the wind is strong."
+    "explanation": "風が強いです means the wind is strong.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_027",
@@ -698,7 +802,11 @@
       "Books and letters"
     ],
     "answer_index": 2,
-    "explanation": "果物と野菜を売っています means sells fruit and vegetables."
+    "explanation": "果物と野菜を売っています means sells fruit and vegetables.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_028",
@@ -724,7 +832,11 @@
       "Coffee"
     ],
     "answer_index": 2,
-    "explanation": "牛乳も飲みます means also drinks milk."
+    "explanation": "牛乳も飲みます means also drinks milk.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_029",
@@ -750,7 +862,11 @@
       "To the right of the school"
     ],
     "answer_index": 2,
-    "explanation": "学校の後ろ means behind the school."
+    "explanation": "学校の後ろ means behind the school.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   },
   {
     "id": "read_030",
@@ -776,6 +892,10 @@
       "On top of the box"
     ],
     "answer_index": 3,
-    "explanation": "犬は箱の上です places the dog on top of the box."
+    "explanation": "犬は箱の上です places the dog on top of the box.",
+    "review_status": "draft_pending_human_review",
+    "reviewer": "",
+    "reviewed_at": "",
+    "review_notes": ""
   }
 ]

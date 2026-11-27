@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
 """Validate KanjiKafe curriculum, reading, menu, art, and audio references."""
+import argparse
 import hashlib
 import json
 import struct
 from pathlib import Path
 
+from apply_content_review import DRAFT, STATUSES, ReviewError, read_rows
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class ContentValidator:
-    def __init__(self):
+    def __init__(self, require_reviewed=False):
         self.errors = []
+        self.require_reviewed = require_reviewed
 
     def check(self, condition, message):
         if not condition:
@@ -69,10 +73,11 @@ class ContentValidator:
                     if len(parts) == 2:
                         self.check(display in parts[0], f"{context}: example does not contain {display}")
                 if index >= original_count:
-                    self.check(word.get("review_status") == "draft_pending_human_review", f"{context}: imported word must remain draft")
+                    self.check(word.get("review_status") in STATUSES, f"{context}: invalid imported-word review status")
             vocab.update({word["id"]: word for word in entries if isinstance(word, dict) and "id" in word})
 
         all_kanji = set()
+        kanji_by_character = {}
         for level, expected in ((5, 100), (4, 200)):
             entries = self.load_json(f"Resources/Kanji/n{level}_kanji.json")
             self.check(len(entries) == expected, f"N{level}: expected {expected} kanji, got {len(entries)}")
@@ -88,6 +93,7 @@ class ContentValidator:
                 self.check(character not in all_kanji, f"{context}: duplicate across N5/N4: {character}")
                 level_seen.add(character)
                 all_kanji.add(character)
+                kanji_by_character[character] = entry
                 self.check(entry.get("jlpt_level") == level, f"{context}: wrong JLPT level")
                 self.check(isinstance(entry.get("stroke_count"), int) and entry["stroke_count"] > 0, f"{context}: invalid stroke count")
                 for field in ("meanings", "components"):
@@ -96,10 +102,11 @@ class ContentValidator:
                 readings = entry.get("on_readings", []) + entry.get("kun_readings", [])
                 self.check(bool(readings) and all(isinstance(item, str) and item.strip() for item in readings), f"{context}: readings are required")
                 if level == 4:
-                    self.check(entry.get("review_status") == "draft_pending_human_review", f"{context}: N4 kanji must remain draft")
+                    self.check(entry.get("review_status") in STATUSES, f"{context}: invalid N4 kanji review status")
                     self.check(entry.get("source_level") in (3, 4), f"{context}: invalid source level")
 
         passage_ids = set()
+        passages_by_id = {}
         for level in (5, 4):
             passages = self.load_json(f"Resources/Reading/n{level}_reading.json")
             self.check(len(passages) == 30, f"N{level}: expected 30 passages, got {len(passages)}")
@@ -111,6 +118,7 @@ class ContentValidator:
                 passage_id = passage.get("id")
                 self.check(isinstance(passage_id, str) and passage_id and passage_id not in passage_ids, f"{context}: duplicate/missing ID")
                 passage_ids.add(passage_id)
+                passages_by_id[passage_id] = passage
                 self.check(passage.get("jlpt_level") == level, f"{context}: wrong JLPT level")
                 target = passage.get("target_vocab_id")
                 self.check(target in vocab and vocab[target].get("jlpt_level") == level, f"{context}: invalid target {target}")
@@ -133,6 +141,10 @@ class ContentValidator:
             word_id = item.get("vocab_id")
             self.check(word_id in vocab and word_id not in menu_ids, f"{context}: invalid/duplicate vocabulary ID")
             menu_ids.add(word_id)
+            if word_id in vocab:
+                word = vocab[word_id]
+                reading = word.get("hiragana") or word.get("katakana") or word.get("kanji")
+                self.check(any("\u3040" <= character <= "\u30ff" for character in reading), f"{context}: speech reading must be Japanese kana, not romaji")
             self.check(isinstance(item.get("label"), str) and item["label"].strip(), f"{context}: label required")
             self.check(isinstance(item.get("order_text"), str) and item["order_text"].strip(), f"{context}: order text required")
             self.check(item.get("order_clip") == f"order:{word_id}", f"{context}: invalid order clip ID")
@@ -172,6 +184,11 @@ class ContentValidator:
             clip = by_id.get(item.get("order_clip"), {})
             self.check(clip.get("source_text") == item.get("order_text"), f"Audio: order source mismatch for {item.get('vocab_id')}")
 
+        self._validate_review_rows("vocabulary_review.csv", "id", vocab)
+        self._validate_review_rows("kanji_review.csv", "character", kanji_by_character)
+        self._validate_review_rows("reading_review.csv", "id", passages_by_id)
+        self._validate_review_rows("audio_review.csv", "id", by_id)
+
         if self.errors:
             for error in self.errors:
                 print("ERROR:", error)
@@ -179,5 +196,24 @@ class ContentValidator:
         print("Content validation passed: 800 N5 words, 700 N4 words, 100 N5 + 200 N4 unique kanji, 60 passages, 20 menu textures, 1520 audio clips.")
 
 
+    def _validate_review_rows(self, filename, key, entries):
+        try:
+            rows = read_rows(filename, key, list(entries))
+        except ReviewError as error:
+            self.errors.append(str(error))
+            return
+        pending = 0
+        for identity, row in rows.items():
+            entry = entries[identity]
+            self.check(entry.get("review_status", DRAFT) == row["review_status"], f"{filename}:{identity}: review status differs from applied content")
+            if row["review_status"] != "human_reviewed":
+                pending += 1
+        if self.require_reviewed and pending:
+            self.errors.append(f"{filename}: {pending} entries still require qualified review or correction")
+
+
 if __name__ == "__main__":
-    ContentValidator().validate()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--require-reviewed", action="store_true")
+    arguments = parser.parse_args()
+    ContentValidator(require_reviewed=arguments.require_reviewed).validate()

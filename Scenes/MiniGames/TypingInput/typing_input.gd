@@ -15,15 +15,6 @@ extends MiniGameBase
 @onready var score_label: Label = $TopBar/ScoreLabel
 @onready var cat_label: Label = $CatReaction/CatLabel
 
-const HALFWIDTH_KANA := {
-	"ｦ": "ヲ", "ｱ": "ア", "ｲ": "イ", "ｳ": "ウ", "ｴ": "エ", "ｵ": "オ",
-	"ｧ": "ァ", "ｨ": "ィ", "ｩ": "ゥ", "ｪ": "ェ", "ｫ": "ォ", "ｬ": "ャ", "ｭ": "ュ", "ｮ": "ョ", "ｯ": "ッ", "ｰ": "ー",
-	"ｶ": "カ", "ｷ": "キ", "ｸ": "ク", "ｹ": "ケ", "ｺ": "コ", "ｻ": "サ", "ｼ": "シ", "ｽ": "ス", "ｾ": "セ", "ｿ": "ソ",
-	"ﾀ": "タ", "ﾁ": "チ", "ﾂ": "ツ", "ﾃ": "テ", "ﾄ": "ト", "ﾅ": "ナ", "ﾆ": "ニ", "ﾇ": "ヌ", "ﾈ": "ネ", "ﾉ": "ノ",
-	"ﾊ": "ハ", "ﾋ": "ヒ", "ﾌ": "フ", "ﾍ": "ヘ", "ﾎ": "ホ", "ﾏ": "マ", "ﾐ": "ミ", "ﾑ": "ム", "ﾒ": "メ", "ﾓ": "モ",
-	"ﾔ": "ヤ", "ﾕ": "ユ", "ﾖ": "ヨ", "ﾗ": "ラ", "ﾘ": "リ", "ﾙ": "ル", "ﾚ": "レ", "ﾛ": "ロ", "ﾜ": "ワ", "ﾝ": "ン",
-}
-
 ## On-screen kana keyboard instance.
 var _kana_keyboard: KanaKeyboard = null
 
@@ -109,14 +100,7 @@ func _on_submit_pressed() -> void:
 	var word := _session_words[_current_index]
 	var card := _session_cards[_current_index]
 
-	var normalized := _normalize_answer(typed)
-	var is_correct := false
-	if normalized == _normalize_answer(word.hiragana):
-		is_correct = true
-	elif normalized == _normalize_answer(word.katakana):
-		is_correct = true
-	elif normalized.to_lower() == _normalize_answer(word.romaji).to_lower():
-		is_correct = true
+	var is_correct := JapaneseAnswerNormalizer.matches(word, typed)
 
 	if is_correct:
 		feedback_label.text = "Correct! (%s)" % word.hiragana
@@ -168,21 +152,7 @@ func _on_skip_pressed() -> void:
 
 
 func _normalize_answer(value: String) -> String:
-	var text := value.strip_edges()
-	var normalized := ""
-	for i in text.length():
-		var character := text[i]
-		if HALFWIDTH_KANA.has(character):
-			character = HALFWIDTH_KANA[character]
-		var code := character.unicode_at(0)
-		if code >= 0xFF01 and code <= 0xFF5E:
-			code -= 0xFEE0
-			normalized += String.chr(code)
-		elif code >= 0x30A1 and code <= 0x30F6:
-			normalized += String.chr(code - 0x60)
-		else:
-			normalized += character
-	return normalized
+	return JapaneseAnswerNormalizer.normalize(value)
 
 
 ## Handles kana keyboard key press — appends character to input field.

@@ -340,6 +340,7 @@ func _test_learning_data_migration() -> void:
 	ResourceSaver.save(profile, "user://profiles/__test_profile__/profile.tres")
 	var defaulted_profile := SaveManager.load_profile(TEST_PROFILE_NAME)
 	_assert("Profile curriculum default", defaulted_profile.settings.get("target_jlpt_level", -1) == 5, "")
+	_assert("Reduced Motion defaults off", defaulted_profile.settings.get("reduced_motion", true) == false, "")
 
 	var legacy: Array = [{
 		"vocab_id": "n5_001",

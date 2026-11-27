@@ -25,6 +25,7 @@ VocabDatabase="*res://Autoloads/vocab_database.gd"
 AchievementManager="*res://Autoloads/achievement_manager.gd"
 CafeProgressManager="*res://Autoloads/cafe_progress_manager.gd"
 TweenFX="*res://addons/TweenFX/TweenFX.gd"
+MotionManager="*res://Autoloads/motion_manager.gd"
 GDAIMCPRuntime="*res://addons/gdai-mcp-plugin-godot/gdai_mcp_runtime.gd"
 
 [display]

@@ -20,6 +20,30 @@ var _stage_before: Dictionary = {}
 var _assisted_count: int = 0
 
 
+func _focus_first_available() -> void:
+	if get_viewport().gui_get_focus_owner():
+		return
+	var button := _find_first_button(self)
+	if button:
+		button.grab_focus()
+
+
+func _find_first_button(node: Node) -> Button:
+	if node is Button and node.is_visible_in_tree() and not node.disabled:
+		return node
+	for child in node.get_children():
+		var found := _find_first_button(child)
+		if found:
+			return found
+	return null
+
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_on_exit_pressed()
+		get_viewport().set_input_as_handled()
+
+
 func _add_exit_button() -> void:
 	var exit_btn := Button.new()
 	exit_btn.text = "✕"
@@ -54,6 +78,7 @@ func _setup_session() -> void:
 		_stage_before[card.vocab_id] = ProgressMetrics.get_card_stage(card)
 	AudioManager.play_quiz_bgm()
 	_on_session_ready()
+	call_deferred("_focus_first_available")
 
 
 func _populate_session(_config: Dictionary) -> void:
@@ -209,6 +234,7 @@ func _finish_session() -> void:
 			GameController.show_level_up(profile.level)
 			AudioManager.play_level_up()
 		AchievementManager.check_achievements()
+		var recommendation := StudyPlanner.get_recommendation()
 		GameController.session_data = {
 			"game_type": _game_type,
 			"item_label": _get_item_label(),
@@ -225,6 +251,7 @@ func _finish_session() -> void:
 			"stage_changes": stage_changes,
 			"next_review_date": next_review_date,
 			"cafe_rewards": cafe_rewards,
+			"recommendation": recommendation,
 		}
 	GameController.change_scene("res://Scenes/Results/results_screen.tscn")
 

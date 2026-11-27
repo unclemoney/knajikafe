@@ -329,6 +329,7 @@ func _apply_profile_defaults(profile: PlayerProfile) -> void:
 		"target_topic": "all",
 		"new_cards_per_session": 5,
 		"difficulty": "standard",
+		"reduced_motion": false,
 	}
 	for key in defaults:
 		if not profile.settings.has(key):

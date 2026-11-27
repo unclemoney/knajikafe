@@ -109,13 +109,13 @@ func _on_rate_pressed(quality: int) -> void:
 		feedback_label.text = "Nice! 📚"
 		cat_label.text = "🐱 ✨"
 		AudioManager.play_correct()
-		TweenFX.pop_in(feedback_label, 0.3)
+		MotionManager.pop_in(feedback_label, 0.3)
 	else:
 		_report_incorrect(card, "meaning")
 		feedback_label.text = "Keep studying! 💪"
 		cat_label.text = "🐱 💦"
 		AudioManager.play_wrong()
-		TweenFX.shake(feedback_label, 0.3, 5.0)
+		MotionManager.shake(feedback_label, 0.3, 5.0)
 
 	await get_tree().create_timer(FEEDBACK_DELAY).timeout
 	_advance()

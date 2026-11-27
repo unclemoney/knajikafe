@@ -9,6 +9,8 @@ signal speech_finished(clip_id: String)
 var _bgm_player: AudioStreamPlayer = null
 var _bgm_players: Array[AudioStreamPlayer] = []
 var _bgm_active_index := 0
+var _bgm_tween: Tween = null
+var _bgm_generation := 0
 
 ## SFX player pool for overlapping sound effects.
 var _sfx_players: Array[AudioStreamPlayer] = []
@@ -57,6 +59,7 @@ func _ready() -> void:
 
 
 func _exit_tree() -> void:
+	_cancel_bgm_tween()
 	if _speech_player:
 		_speech_player.stop()
 		_speech_player.stream = null
@@ -75,38 +78,72 @@ func play_bgm(stream: AudioStream, fade_duration: float = 0.5) -> void:
 	if stream == null:
 		stop_bgm(fade_duration)
 		return
+	_cancel_bgm_tween()
+	if _bgm_player.playing and _bgm_player.stream == stream:
+		_bgm_player.volume_db = linear_to_db(bgm_volume)
+		return
 	if not _bgm_player.playing:
+		for player in _bgm_players:
+			player.stop()
 		_bgm_player.stream = stream
 		_bgm_player.volume_db = linear_to_db(bgm_volume)
 		_bgm_player.play()
 		return
 
 	var previous := _bgm_player
+	for player in _bgm_players:
+		if player != previous:
+			player.stop()
 	_bgm_active_index = 1 - _bgm_active_index
 	_bgm_player = _bgm_players[_bgm_active_index]
 	_bgm_player.stream = stream
 	_bgm_player.volume_db = -80.0
 	_bgm_player.play()
-	var tween := create_tween()
-	tween.set_parallel(true)
-	tween.tween_property(previous, "volume_db", -80.0, fade_duration)
-	tween.tween_property(_bgm_player, "volume_db", linear_to_db(bgm_volume), fade_duration)
-	await tween.finished
-	previous.stop()
+	var generation := _bgm_generation
+	_bgm_tween = create_tween()
+	_bgm_tween.set_parallel(true)
+	_bgm_tween.tween_property(previous, "volume_db", -80.0, fade_duration)
+	_bgm_tween.tween_property(_bgm_player, "volume_db", linear_to_db(bgm_volume), fade_duration)
+	_bgm_tween.finished.connect(_on_bgm_crossfade_finished.bind(generation, previous), CONNECT_ONE_SHOT)
 
 
 ## Stops the current BGM with a fade-out.
 func stop_bgm(fade_duration: float = 0.5) -> void:
+	_cancel_bgm_tween()
 	if fade_duration <= 0.0:
 		for player in _bgm_players:
 			player.stop()
+			player.stream = null
 		return
+	var generation := _bgm_generation
+	_bgm_tween = create_tween()
+	_bgm_tween.set_parallel(true)
 	for player in _bgm_players:
 		if player.playing:
-			var tween := create_tween()
-			tween.tween_property(player, "volume_db", -80.0, fade_duration)
-			await tween.finished
-			player.stop()
+			_bgm_tween.tween_property(player, "volume_db", -80.0, fade_duration)
+	_bgm_tween.finished.connect(_on_bgm_stop_finished.bind(generation), CONNECT_ONE_SHOT)
+
+
+func _cancel_bgm_tween() -> void:
+	_bgm_generation += 1
+	if _bgm_tween and _bgm_tween.is_valid():
+		_bgm_tween.kill()
+	_bgm_tween = null
+
+
+func _on_bgm_crossfade_finished(generation: int, previous: AudioStreamPlayer) -> void:
+	if generation != _bgm_generation:
+		return
+	previous.stop()
+	_bgm_tween = null
+
+
+func _on_bgm_stop_finished(generation: int) -> void:
+	if generation != _bgm_generation:
+		return
+	for player in _bgm_players:
+		player.stop()
+	_bgm_tween = null
 
 
 ## Plays a one-shot sound effect.

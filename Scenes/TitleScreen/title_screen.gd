@@ -23,6 +23,13 @@ func _on_start_pressed() -> void:
 
 ## Plays the intro animation: fade in title, then subtitle, then button.
 func _animate_intro() -> void:
+	if MotionManager.is_reduced():
+		title_label.modulate.a = 1.0
+		subtitle_label.modulate.a = 1.0
+		start_btn.modulate.a = 1.0
+		version_label.modulate.a = 0.6
+		start_btn.grab_focus()
+		return
 	title_label.modulate.a = 0.0
 	subtitle_label.modulate.a = 0.0
 	start_btn.modulate.a = 0.0
@@ -30,8 +37,8 @@ func _animate_intro() -> void:
 
 	var tween := create_tween()
 	tween.tween_property(title_label, "modulate:a", 1.0, 0.8)
-	tween.tween_callback(func(): TweenFX.pop_in(title_label, 0.4))
+	tween.tween_callback(func(): MotionManager.pop_in(title_label, 0.4))
 	tween.tween_property(subtitle_label, "modulate:a", 1.0, 0.5)
 	tween.tween_property(start_btn, "modulate:a", 1.0, 0.4)
-	tween.tween_callback(func(): TweenFX.pulsate(start_btn, 0.6))
+	tween.tween_callback(func(): MotionManager.pulsate(start_btn, 0.6))
 	tween.tween_property(version_label, "modulate:a", 0.6, 0.3)

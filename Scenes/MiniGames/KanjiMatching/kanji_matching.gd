@@ -137,7 +137,7 @@ func _check_match() -> void:
 			quality = SRSEngine.Quality.HARD
 		_report_correct(card, quality, "meaning")
 		AudioManager.play_correct()
-		TweenFX.pop_in(feedback_label, 0.3)
+		MotionManager.pop_in(feedback_label, 0.3)
 
 		# Disable matched cards
 		_card_buttons[_first_flip].disabled = true
@@ -164,7 +164,7 @@ func _check_match() -> void:
 		feedback_label.text = "Not a match!"
 		cat_label.text = "🐱 💦"
 		AudioManager.play_wrong()
-		TweenFX.shake(feedback_label, 0.3, 5.0)
+		MotionManager.shake(feedback_label, 0.3, 5.0)
 
 		# Flip cards back after delay
 		await get_tree().create_timer(1.0).timeout

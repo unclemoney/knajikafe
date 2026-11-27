@@ -11,6 +11,8 @@ const SCENES := [
 	{"name": "stats_n4", "path": "res://Scenes/Stats/stats_screen.tscn", "game_type": ""},
 	{"name": "register_picker", "path": "res://Scenes/CafeHub/cafe_hub.tscn", "game_type": "", "picker": "_on_typing_pressed"},
 	{"name": "bookshelf_picker", "path": "res://Scenes/CafeHub/cafe_hub.tscn", "game_type": "", "picker": "_on_fill_blank_pressed"},
+	{"name": "menu_board_picker", "path": "res://Scenes/CafeHub/cafe_hub.tscn", "game_type": "", "picker": "_on_quiz_pressed"},
+	{"name": "results_n4", "path": "res://Scenes/Results/results_screen.tscn", "game_type": "", "results": true},
 ]
 
 
@@ -27,6 +29,8 @@ func _run() -> void:
 		await get_tree().process_frame
 		for definition in SCENES:
 			_setup_profile(definition["game_type"])
+			if definition.get("results", false):
+				GameController.session_data = {"game_type": "multiple_choice", "item_label": "Words", "words_reviewed": 10, "correct_count": 8, "xp_earned": 80, "base_xp": 80, "streak_multiplier": 1.0, "skill_results": {"meaning": {"correct": 8, "attempts": 10}}, "recommendation": StudyPlanner.get_recommendation()}
 			var scene = load(definition["path"]).instantiate()
 			add_child(scene)
 			if definition.has("picker"):
@@ -62,6 +66,7 @@ func _setup_profile(game_type: String) -> void:
 	profile.settings["target_topic"] = "all"
 	profile.settings["new_cards_per_session"] = 5
 	profile.settings["difficulty"] = "standard"
+	profile.settings["reduced_motion"] = true
 	GameController.current_profile = profile
 	GameController.session_data = {"game_type": game_type, "words_per_session": 10}
 	SRSEngine.cards = []

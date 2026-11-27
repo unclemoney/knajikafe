@@ -187,3 +187,9 @@ func _on_back_pressed() -> void:
 
 func _exit_tree() -> void:
 	AudioManager.stop_speech()
+
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_on_back_pressed()
+		get_viewport().set_input_as_handled()

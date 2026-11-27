@@ -27,6 +27,7 @@ var session_data: Dictionary = {}
 
 ## Transition overlay for fade effects.
 var _transition_rect: ColorRect = null
+var _transition_in_progress := false
 
 ## Level-up notification overlay.
 var _level_up_notification: LevelUpNotification = null
@@ -47,13 +48,22 @@ func set_profile(profile: PlayerProfile) -> void:
 ## Changes to a new scene with a fade transition.
 ## scene_path: full resource path (e.g., "res://Scenes/CafeHub/cafe_hub.tscn").
 func change_scene(scene_path: String) -> void:
+	if _transition_in_progress or scene_path == "":
+		return
+	_transition_in_progress = true
 	scene_changing.emit(scene_path)
 	await _fade_out()
-	get_tree().change_scene_to_file(scene_path)
+	var error := get_tree().change_scene_to_file(scene_path)
+	if error != OK:
+		push_error("GameController: Could not load scene %s (%s)" % [scene_path, error_string(error)])
+		await _fade_in()
+		_transition_in_progress = false
+		return
 	await get_tree().tree_changed
 	current_scene_node = get_tree().current_scene
 	current_scene_path = scene_path
 	await _fade_in()
+	_transition_in_progress = false
 	scene_changed.emit(scene_path)
 
 
@@ -78,6 +88,9 @@ func _setup_transition_overlay() -> void:
 
 ## Fades the screen to black over 0.3 seconds.
 func _fade_out() -> void:
+	if MotionManager.is_reduced():
+		_transition_rect.color.a = 1.0
+		return
 	var tween := create_tween()
 	tween.tween_property(_transition_rect, "color:a", 1.0, 0.3)
 	await tween.finished
@@ -85,6 +98,9 @@ func _fade_out() -> void:
 
 ## Fades the screen from black over 0.3 seconds.
 func _fade_in() -> void:
+	if MotionManager.is_reduced():
+		_transition_rect.color.a = 0.0
+		return
 	var tween := create_tween()
 	tween.tween_property(_transition_rect, "color:a", 0.0, 0.3)
 	await tween.finished

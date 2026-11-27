@@ -17,14 +17,23 @@ extends Control
 @onready var stage_changes_label: Label = $Panel/VBox/StatsBox/StageChangesLabel
 @onready var next_review_label: Label = $Panel/VBox/StatsBox/NextReviewLabel
 @onready var companion_label: Label = $Panel/VBox/StatsBox/CompanionLabel
+@onready var recommendation_label: Label = $Panel/VBox/StatsBox/RecommendationLabel
 @onready var level_up_label: Label = $Panel/VBox/LevelUpLabel
-@onready var return_btn: Button = $Panel/VBox/ReturnBtn
+@onready var recommended_btn: Button = $Panel/VBox/ButtonRow/RecommendedBtn
+@onready var return_btn: Button = $Panel/VBox/ButtonRow/ReturnBtn
+
+var _stat_tweens: Array[Tween] = []
 
 
 func _ready() -> void:
 	return_btn.pressed.connect(_on_return_pressed)
+	recommended_btn.pressed.connect(_on_recommended_pressed)
 	AudioManager.play_results_bgm()
 	_display_results()
+	if recommended_btn.visible:
+		recommended_btn.grab_focus()
+	else:
+		return_btn.grab_focus()
 
 
 ## Populates the results display from session data.
@@ -76,9 +85,10 @@ func _display_results() -> void:
 		streak_label.visible = false
 
 	var profile := GameController.current_profile
+	var target_level := 5
 	if profile:
 		level_label.text = "Level: %d  |  Total XP: %d" % [profile.level, profile.xp]
-		var target_level := int(profile.settings.get("target_jlpt_level", 5))
+		target_level = int(profile.settings.get("target_jlpt_level", 5))
 		var level_name := "Mixed" if target_level == 0 else "N%d" % target_level
 		var topic := str(profile.settings.get("target_topic", "all"))
 		var topic_name := "All topics" if topic == "all" else topic.capitalize()
@@ -90,10 +100,12 @@ func _display_results() -> void:
 
 	var skill_results: Dictionary = data.get("skill_results", {})
 	var skill_parts: Array = []
+	var overall_skills := ProgressMetrics.get_skill_summary(SRSEngine.cards, SRSEngine.kanji_cards, target_level)
 	for skill in ProgressMetrics.SKILL_IDS:
 		var result: Dictionary = skill_results.get(skill, {})
 		if result.get("attempts", 0) > 0:
-			skill_parts.append("%s %d/%d" % [skill.capitalize(), result["correct"], result["attempts"]])
+			var overall: Dictionary = overall_skills[skill]
+			skill_parts.append("%s %d/%d · %s, %d total" % [skill.capitalize(), result["correct"], result["attempts"], overall["evidence_label"], overall["attempts"]])
 	skill_label.visible = not skill_parts.is_empty()
 	if skill_label.visible:
 		skill_label.text = "Learning: " + " | ".join(skill_parts)
@@ -123,36 +135,57 @@ func _display_results() -> void:
 	companion_label.visible = companion_text != ""
 	if companion_label.visible:
 		companion_label.text = companion_text
+	var recommendation: Dictionary = data.get("recommendation", {})
+	recommendation_label.visible = not recommendation.is_empty()
+	recommended_btn.visible = not recommendation.is_empty()
+	if recommendation_label.visible:
+		recommendation_label.text = "Next: %s — %s" % [recommendation.get("name", "Study"), recommendation.get("reason", "")]
+		recommended_btn.text = "Next: " + recommendation.get("name", "Study")
+		recommended_btn.tooltip_text = recommendation.get("reason", "")
 
 	# Set title based on performance
 	if accuracy >= 90.0:
 		title_label.text = "Excellent! 🌟"
-		TweenFX.tada(title_label, 0.6)
+		MotionManager.tada(title_label, 0.6)
 	elif accuracy >= 70.0:
 		title_label.text = "Good job! ✨"
-		TweenFX.pop_in(title_label, 0.4)
+		MotionManager.pop_in(title_label, 0.4)
 	elif accuracy >= 50.0:
 		title_label.text = "Keep practicing! 📖"
-		TweenFX.fade_in(title_label, 0.5)
+		MotionManager.fade_in(title_label, 0.5)
 	else:
 		title_label.text = "Don't give up! 💪"
-		TweenFX.fade_in(title_label, 0.5)
+		MotionManager.fade_in(title_label, 0.5)
 
 	# Animate stats with staggered pop-in
 	var stat_nodes: Array[Label] = [words_label, accuracy_label, xp_label, level_label]
 	for i in stat_nodes.size():
 		var node: Label = stat_nodes[i]
+		if MotionManager.is_reduced():
+			node.modulate.a = 1.0
+			continue
 		node.modulate.a = 0.0
 		var tween := create_tween()
+		_stat_tweens.append(tween)
 		tween.tween_interval(0.15 * i + 0.3)
 		tween.tween_property(node, "modulate:a", 1.0, 0.3)
 
 	if leveled_up:
 		level_up_label.text = "⭐ Level Up! You are now Level %d! ⭐" % new_level
 		level_up_label.visible = true
-		TweenFX.upgrade(level_up_label, 0.8)
+		MotionManager.upgrade(level_up_label, 0.8)
 	else:
 		level_up_label.visible = false
+
+
+func _on_recommended_pressed() -> void:
+	var recommendation: Dictionary = GameController.session_data.get("recommendation", {})
+	var config: Dictionary = recommendation.get("config", {})
+	if config.is_empty():
+		return
+	recommended_btn.disabled = true
+	GameController.session_data = config.duplicate(true)
+	GameController.change_scene(config["scene_path"])
 
 
 ## Returns to the Cafe Hub.
@@ -160,3 +193,17 @@ func _on_return_pressed() -> void:
 	return_btn.disabled = true
 	GameController.session_data = {}
 	GameController.change_scene("res://Scenes/CafeHub/cafe_hub.tscn")
+
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_on_return_pressed()
+		get_viewport().set_input_as_handled()
+
+
+func _exit_tree() -> void:
+	for tween in _stat_tweens:
+		if tween and tween.is_valid():
+			tween.kill()
+	TweenFX.stop_all(title_label)
+	TweenFX.stop_all(level_up_label)

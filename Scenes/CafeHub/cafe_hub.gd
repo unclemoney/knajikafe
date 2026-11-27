@@ -76,6 +76,8 @@ func _ready() -> void:
 	AchievementManager.check_achievements()
 	_animate_hub_entrance()
 	_check_tutorial()
+	if GameController.current_profile and GameController.current_profile.has_completed_tutorial:
+		quiz_btn.grab_focus()
 
 
 # ── Tutorial ────────────────────────────────────────
@@ -272,20 +274,16 @@ func _update_due_count() -> void:
 		due_label.text = "All caught up!"
 
 
-## Starts the Multiple Choice Quiz.
+## Opens recommended study and Multiple Choice selection.
 func _on_quiz_pressed() -> void:
 	var profile := GameController.current_profile
 	if profile == null:
 		return
-
-	var words_per_session: int = profile.settings.get("words_per_session", 10)
-	GameController.session_data = {
-		"game_type": "multiple_choice",
-		"words_per_session": words_per_session,
-	}
-
-	quiz_btn.disabled = true
-	GameController.change_scene("res://Scenes/MiniGames/MultipleChoice/multiple_choice.tscn")
+	var recommended := StudyPlanner.get_recommendation()
+	_show_mode_picker("Menu Board Study", [
+		{"name": "Recommended: " + recommended.get("name", "Study Notebook"), "description": recommended.get("reason", ""), "config": recommended.get("config", ActivityCatalog.get_notebook_option()["config"])},
+		ActivityCatalog.get_option("multiple_choice", profile),
+	])
 
 
 ## Starts the Flashcard Review.
@@ -294,22 +292,14 @@ func _on_flashcard_pressed() -> void:
 	if profile == null:
 		return
 
-	var words_per_session: int = profile.settings.get("words_per_session", 10)
-	GameController.session_data = {
-		"game_type": "flashcard_review",
-		"words_per_session": words_per_session,
-	}
-
+	GameController.session_data = ActivityCatalog.get_config("flashcard_review", profile)
 	flashcard_btn.disabled = true
-	GameController.change_scene("res://Scenes/MiniGames/FlashcardReview/flashcard_review.tscn")
+	GameController.change_scene(GameController.session_data["scene_path"])
 
 
 ## Opens Table activity selection.
 func _on_matching_pressed() -> void:
-	_show_mode_picker("Table Activities", [
-		{"name": "Kanji Matching", "description": "Match vocabulary and meanings", "config": {"game_type": "kanji_matching", "words_per_session": 6, "scene_path": "res://Scenes/MiniGames/KanjiMatching/kanji_matching.tscn"}},
-		{"name": "Kanji Workshop", "description": "Practice kanji meaning, readings, and form", "config": {"game_type": "kanji_workshop", "words_per_session": 8, "scene_path": "res://Scenes/MiniGames/KanjiWorkshop/kanji_workshop.tscn"}},
-	])
+	_show_mode_picker("Table Activities", ActivityCatalog.get_station_options("table", GameController.current_profile))
 
 
 ## Opens Bookshelf activity selection.
@@ -317,12 +307,7 @@ func _on_fill_blank_pressed() -> void:
 	var profile := GameController.current_profile
 	if profile == null:
 		return
-	var words_per_session: int = profile.settings.get("words_per_session", 10)
-	_show_mode_picker("Bookshelf Activities", [
-		{"name": "Fill in the Blank", "description": "Complete Japanese sentences", "config": {"game_type": "fill_in_blank", "words_per_session": words_per_session, "scene_path": "res://Scenes/MiniGames/FillInBlank/fill_in_blank.tscn"}},
-		{"name": "Reading Shelf", "description": "Read short passages and answer questions", "config": {"game_type": "reading_shelf", "words_per_session": 5, "scene_path": "res://Scenes/MiniGames/ReadingShelf/reading_shelf.tscn"}},
-		{"name": "Study Notebook", "description": "Search vocabulary, examples, progress, and audio", "config": {"game_type": "study_notebook", "words_per_session": 0, "scene_path": "res://Scenes/StudyNotebook/study_notebook.tscn"}},
-	])
+	_show_mode_picker("Bookshelf Activities", ActivityCatalog.get_station_options("bookshelf", profile))
 
 
 func _show_mode_picker(title: String, options: Array) -> void:
@@ -342,11 +327,7 @@ func _on_typing_pressed() -> void:
 	var profile := GameController.current_profile
 	if profile == null:
 		return
-	var words_per_session: int = profile.settings.get("words_per_session", 10)
-	_show_mode_picker("Register Activities", [
-		{"name": "Typing Input", "description": "Type readings from meaning prompts", "config": {"game_type": "typing_input", "words_per_session": words_per_session, "scene_path": "res://Scenes/MiniGames/TypingInput/typing_input.tscn"}},
-		{"name": "Listening Lab", "description": "Listen and transcribe vocabulary readings", "config": {"game_type": "listening_lab", "words_per_session": words_per_session, "scene_path": "res://Scenes/MiniGames/ListeningLab/listening_lab.tscn"}},
-	])
+	_show_mode_picker("Register Activities", ActivityCatalog.get_station_options("register", profile))
 
 
 ## Starts the Cat Cafe Orders game.
@@ -355,14 +336,9 @@ func _on_orders_pressed() -> void:
 	if profile == null:
 		return
 
-	var words_per_session: int = profile.settings.get("words_per_session", 10)
-	GameController.session_data = {
-		"game_type": "cafe_orders",
-		"words_per_session": words_per_session,
-	}
-
+	GameController.session_data = ActivityCatalog.get_config("cafe_orders", profile)
 	orders_btn.disabled = true
-	GameController.change_scene("res://Scenes/MiniGames/CafeOrders/cafe_orders.tscn")
+	GameController.change_scene(GameController.session_data["scene_path"])
 
 
 func _on_daily_pressed() -> void:
@@ -423,6 +399,10 @@ func _animate_hub_entrance() -> void:
 	var stations := [quiz_btn, flashcard_btn, matching_btn, fill_blank_btn, typing_btn, orders_btn]
 	for i in stations.size():
 		var btn: Button = stations[i]
+		if MotionManager.is_reduced():
+			btn.modulate.a = 1.0
+			btn.scale = Vector2.ONE
+			continue
 		btn.modulate.a = 0.0
 		btn.scale = Vector2.ZERO
 		var tween := create_tween()

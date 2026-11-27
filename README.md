@@ -48,6 +48,8 @@ These are curated JLPT-aligned study sets, not official or exhaustive JLPT cover
 - New, Learning, Familiar, and Retained vocabulary stages derived from SM-2 outcomes
 - N5, N4, and Mixed coverage, retention, topic breakdowns, and encountered-kanji exposure are reported separately
 - Needs Practice and recent-session summaries use local evidence; no online analytics
+- Level-aware skill evidence distinguishes No Evidence, Early Evidence (1–4 attempts), Developing (5+), and Consistent (10+ attempts with 80% success)
+- The advisory Study Planner recommends an eligible next activity from due cards, skill evidence, and variety without changing SRS or rewards
 - Legacy reviews retain their SM-2 values but are not relabeled as skill-specific evidence
 
 ### Progression System
@@ -68,6 +70,7 @@ These are curated JLPT-aligned study sets, not official or exhaustive JLPT cover
 - Per-profile settings that persist across sessions
 - Independent BGM, SFX, and Speech volume controls
 - Configurable words-per-session count, curriculum level/topic, new-card limit, and difficulty
+- Reduced Motion disables decorative UI movement while preserving final states; keyboard focus, Escape, and modal focus restoration support non-mouse navigation
 
 ## Technical Details
 
@@ -87,7 +90,8 @@ These are curated JLPT-aligned study sets, not official or exhaustive JLPT cover
 | `AudioManager` | BGM crossfade, SFX pool (8 channels), volume control |
 | `SaveManager` | Profile CRUD, SRS data persistence, file I/O to `user://profiles/` |
 | `SRSEngine` | SM-2 algorithm, card scheduling, due queue management |
-| `VocabDatabase` | Loads/queries vocabulary (JSON) and kanji (Resource) data |
+| `VocabDatabase` | Loads/queries vocabulary (JSON) and kanji (JSON) data |
+| `MotionManager` | Reduced-motion-aware decorative UI animation |
 
 #### Custom Resource Types
 | Resource | Purpose |
@@ -100,6 +104,8 @@ These are curated JLPT-aligned study sets, not official or exhaustive JLPT cover
 | `AchievementDef` | Achievement definition with unlock condition and display data |
 | `VocabList` | Container resource holding an array of VocabWord entries |
 | `KanjiList` | Container resource holding an array of KanjiEntry entries |
+| `ActivityCatalog` | Shared scored-activity metadata and session configurations |
+| `StudyPlanner` | Pure, explained next-activity recommendations using existing evidence |
 
 #### Font
 - **PixelMplus** — Japanese pixel font with full JIS Level 1 & 2 kanji coverage
@@ -247,6 +253,7 @@ godot --headless --path . res://Tests/data_layer_test.tscn -- --run-all
 godot --headless --path . res://Tests/progress_metrics_test.tscn
 godot --headless --path . res://Tests/v05_activities_test.tscn
 godot --headless --path . res://Tests/v08_activities_test.tscn
+godot --headless --path . res://Tests/v09_release_test.tscn
 godot --headless --path . res://Tests/cafe_progress_test.tscn
 godot --headless --path . res://Tests/cat_state_machine_test.tscn
 ```
@@ -382,6 +389,15 @@ Replace `godot` with the installed Godot 4.4.1 executable path when it is not on
 - [x] Draft and strict reviewed-release validation
 - [ ] Qualified approval of all v0.7/v0.8 content and pronunciation
 - [ ] Final v0.8 release labeling after review findings are resolved
+
+### Phase 14: Guided Study & Release Candidate — Draft
+- [x] Shared nine-activity catalog and side-effect-free Study Planner with explained recommendations
+- [x] Menu Board and Results recommendation entry points with empty-pool fallbacks
+- [x] Level-aware skill evidence labels, sample sizes, lapses, and latest practice
+- [x] Reduced Motion, keyboard focus, modal focus restoration, and Escape navigation
+- [x] Reentrant scene-transition protection and cancellable audio crossfades
+- [ ] Qualified content/pronunciation review remains in progress and pending
+- [ ] Final v0.9 release labeling after reviewed validation and all release checks pass
 
 ## Curriculum Sources and Licenses
 

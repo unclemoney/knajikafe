@@ -22,6 +22,7 @@ func _ready() -> void:
 	level_option.select(level_option.get_item_index(_selected_level))
 	level_option.item_selected.connect(_on_level_changed)
 	_build_stats()
+	level_option.grab_focus()
 
 
 func _build_stats() -> void:
@@ -64,7 +65,7 @@ func _build_stats() -> void:
 	_add_spacer()
 
 	_add_section_header("Learning Skills")
-	var skill_summary := ProgressMetrics.get_skill_summary(SRSEngine.cards, SRSEngine.kanji_cards)
+	var skill_summary := ProgressMetrics.get_skill_summary(SRSEngine.cards, SRSEngine.kanji_cards, _selected_level)
 	var empty_hints := {
 		"meaning": "No data yet — play Quiz or Flashcards.",
 		"reading": "No data yet — play Typing.",
@@ -75,9 +76,11 @@ func _build_stats() -> void:
 	for skill in ProgressMetrics.SKILL_IDS:
 		var data: Dictionary = skill_summary[skill]
 		if data["has_data"]:
-			_add_stat_row(skill.capitalize(), "%d/%d correct  (%d%%), %d attempts" % [data["correct"], data["attempts"], int(data["success_rate"] * 100.0), data["attempts"]])
+			var last_practice: String = data["last_practice"] if data["last_practice"] != "" else "Unknown"
+			_add_stat_row(skill.capitalize(), "%s · %d/%d correct (%d%%) · Last %s" % [data["evidence_label"], data["correct"], data["attempts"], int(data["success_rate"] * 100.0), last_practice])
 		else:
 			_add_stat_row(skill.capitalize(), empty_hints[skill])
+	_add_note("Early Evidence: 1–4 attempts. Developing: 5+ attempts. Consistent: 10+ attempts and 80% success. These are activity estimates, not certification.")
 	_add_note("Flashcard ratings are self-reported; other activities use answered results.")
 	_add_spacer()
 
@@ -308,3 +311,9 @@ func _on_level_changed(index: int) -> void:
 
 func _on_back_pressed() -> void:
 	GameController.change_scene("res://Scenes/CafeHub/cafe_hub.tscn")
+
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_on_back_pressed()
+		get_viewport().set_input_as_handled()

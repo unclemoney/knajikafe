@@ -267,6 +267,11 @@ layout_mode = 2
 alignment = 1
 theme_override_constants/separation = 16
 
+[node name="ReducedMotionToggle" type="CheckButton" parent="Panel/VBox/ButtonRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Reduced motion"
+
 [node name="SaveBtn" type="Button" parent="Panel/VBox/ButtonRow"]
 layout_mode = 2
 custom_minimum_size = Vector2(100, 28)

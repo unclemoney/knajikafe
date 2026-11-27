@@ -2,9 +2,11 @@ extends Control
 class_name DailyGoalsPanel
 
 var _rows_box: VBoxContainer
+var _previous_focus: Control
 
 
 func _ready() -> void:
+	_previous_focus = get_viewport().gui_get_focus_owner()
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	var backdrop := ColorRect.new()
@@ -35,7 +37,7 @@ func _ready() -> void:
 	close_btn.text = "Close"
 	close_btn.custom_minimum_size = Vector2(120, 28)
 	close_btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	close_btn.pressed.connect(queue_free)
+	close_btn.pressed.connect(_close)
 	vbox.add_child(close_btn)
 	refresh()
 	close_btn.grab_focus()
@@ -67,3 +69,21 @@ func refresh() -> void:
 		status.add_theme_font_size_override("font_size", 8)
 		row.add_child(status)
 		_rows_box.add_child(panel)
+
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_close()
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("ui_focus_next") or event.is_action_pressed("ui_focus_prev"):
+		var close_btn := find_children("*", "Button", true, false)
+		if not close_btn.is_empty():
+			close_btn[0].grab_focus()
+			get_viewport().set_input_as_handled()
+
+
+func _close() -> void:
+	if is_instance_valid(_previous_focus):
+		_previous_focus.call_deferred("grab_focus")
+	queue_free()

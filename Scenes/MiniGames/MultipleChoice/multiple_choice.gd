@@ -126,8 +126,8 @@ func _on_answer_pressed(index: int) -> void:
 		feedback_label.text = "Correct!"
 		cat_label.text = "🐱 ✨"
 		AudioManager.play_correct()
-		TweenFX.pop_in(feedback_label, 0.3)
-		TweenFX.hop(cat_label, 0.4)
+		MotionManager.pop_in(feedback_label, 0.3)
+		MotionManager.hop(cat_label, 0.4)
 
 		_report_correct(card, SRSEngine.Quality.GOOD, "meaning")
 	else:
@@ -139,7 +139,7 @@ func _on_answer_pressed(index: int) -> void:
 		cat_label.text = "🐱 💦"
 		_report_incorrect(card, "meaning")
 		AudioManager.play_wrong()
-		TweenFX.shake(feedback_label, 0.3, 5.0)
+		MotionManager.shake(feedback_label, 0.3, 5.0)
 
 	question_answered.emit(is_correct)
 

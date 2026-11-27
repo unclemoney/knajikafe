@@ -24,6 +24,7 @@ extends Control
 
 @onready var preview_display: VocabDisplay = $Panel/VBox/PreviewSection/VocabDisplay
 
+@onready var reduced_motion_toggle: CheckButton = $Panel/VBox/ButtonRow/ReducedMotionToggle
 @onready var save_btn: Button = $Panel/VBox/ButtonRow/SaveBtn
 @onready var back_btn: Button = $Panel/VBox/ButtonRow/BackBtn
 @onready var status_label: Label = $Panel/VBox/StatusLabel
@@ -45,6 +46,7 @@ func _ready() -> void:
 	target_option.item_selected.connect(_on_target_level_changed)
 	save_btn.pressed.connect(_on_save_pressed)
 	back_btn.pressed.connect(_on_back_pressed)
+	reduced_motion_toggle.toggled.connect(_on_reduced_motion_toggled)
 
 	bgm_slider.value_changed.connect(_on_bgm_changed)
 	sfx_slider.value_changed.connect(_on_sfx_changed)
@@ -57,6 +59,7 @@ func _ready() -> void:
 
 	_load_settings()
 	_setup_preview()
+	kanji_toggle.grab_focus()
 
 
 ## Loads current profile settings into the UI.
@@ -70,6 +73,7 @@ func _load_settings() -> void:
 	furigana_toggle.button_pressed = s.get("show_furigana", true)
 	romaji_toggle.button_pressed = s.get("show_romaji", false)
 	english_toggle.button_pressed = s.get("show_english", true)
+	reduced_motion_toggle.button_pressed = s.get("reduced_motion", false)
 
 	bgm_slider.value = s.get("bgm_volume", 0.8) * 100.0
 	sfx_slider.value = s.get("sfx_volume", 0.8) * 100.0
@@ -161,6 +165,7 @@ func _on_save_pressed() -> void:
 	profile.settings["show_furigana"] = furigana_toggle.button_pressed
 	profile.settings["show_romaji"] = romaji_toggle.button_pressed
 	profile.settings["show_english"] = english_toggle.button_pressed
+	profile.settings["reduced_motion"] = reduced_motion_toggle.button_pressed
 	profile.settings["bgm_volume"] = bgm_slider.value / 100.0
 	profile.settings["sfx_volume"] = sfx_slider.value / 100.0
 	profile.settings["speech_volume"] = speech_slider.value / 100.0
@@ -206,6 +211,18 @@ func _update_volume_labels() -> void:
 	speech_value_label.text = "%d%%" % int(speech_slider.value)
 
 
+func _on_reduced_motion_toggled(pressed: bool) -> void:
+	var profile := GameController.current_profile
+	if profile:
+		profile.settings["reduced_motion"] = pressed
+
+
 ## Called when any display toggle changes — updates preview.
 func _on_display_toggled(_pressed: bool) -> void:
 	_update_preview()
+
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_on_back_pressed()
+		get_viewport().set_input_as_handled()

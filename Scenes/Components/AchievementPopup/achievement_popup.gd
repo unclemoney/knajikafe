@@ -39,12 +39,17 @@ func _show_next() -> void:
 	_panel.position.y = -60.0
 
 	var tween := create_tween()
-	tween.set_parallel(true)
-	tween.tween_property(_panel, "modulate:a", 1.0, 0.3)
-	tween.tween_property(_panel, "position:y", 8.0, 0.3).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
-	tween.set_parallel(false)
-	tween.tween_interval(2.5)
-	tween.tween_property(_panel, "modulate:a", 0.0, 0.5)
+	if MotionManager.is_reduced():
+		_panel.modulate.a = 1.0
+		_panel.position.y = 8.0
+		tween.tween_interval(2.5)
+	else:
+		tween.set_parallel(true)
+		tween.tween_property(_panel, "modulate:a", 1.0, 0.3)
+		tween.tween_property(_panel, "position:y", 8.0, 0.3).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+		tween.set_parallel(false)
+		tween.tween_interval(2.5)
+		tween.tween_property(_panel, "modulate:a", 0.0, 0.5)
 	tween.tween_callback(_panel.set.bind("visible", false))
 	tween.tween_callback(_show_next)
 

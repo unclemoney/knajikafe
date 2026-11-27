@@ -60,6 +60,7 @@ class_name PlayerProfile
 	"target_topic": "all",
 	"new_cards_per_session": 5,
 	"difficulty": "standard",
+	"reduced_motion": false,
 }
 
 

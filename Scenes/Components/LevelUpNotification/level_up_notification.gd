@@ -21,9 +21,13 @@ func show_level_up(new_level: int) -> void:
 	_panel.modulate = Color(1, 1, 1, 0)
 
 	var tween := create_tween()
-	tween.tween_property(_panel, "modulate:a", 1.0, 0.3)
-	tween.tween_interval(2.0)
-	tween.tween_property(_panel, "modulate:a", 0.0, 0.5)
+	if MotionManager.is_reduced():
+		_panel.modulate.a = 1.0
+		tween.tween_interval(2.0)
+	else:
+		tween.tween_property(_panel, "modulate:a", 1.0, 0.3)
+		tween.tween_interval(2.0)
+		tween.tween_property(_panel, "modulate:a", 0.0, 0.5)
 	tween.tween_callback(_panel.set.bind("visible", false))
 
 

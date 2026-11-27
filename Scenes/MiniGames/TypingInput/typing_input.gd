@@ -106,8 +106,8 @@ func _on_submit_pressed() -> void:
 		feedback_label.text = "Correct! (%s)" % word.hiragana
 		cat_label.text = "🐱 ✨"
 		AudioManager.play_correct()
-		TweenFX.pop_in(feedback_label, 0.3)
-		TweenFX.hop(cat_label, 0.4)
+		MotionManager.pop_in(feedback_label, 0.3)
+		MotionManager.hop(cat_label, 0.4)
 
 		_report_correct(card, SRSEngine.Quality.GOOD, "reading")
 	else:
@@ -119,7 +119,7 @@ func _on_submit_pressed() -> void:
 		feedback_label.text = "Answer: %s" % correct_reading
 		cat_label.text = "🐱 💦"
 		AudioManager.play_wrong()
-		TweenFX.shake(feedback_label, 0.3, 5.0)
+		MotionManager.shake(feedback_label, 0.3, 5.0)
 		_report_incorrect(card, "reading")
 
 	await get_tree().create_timer(FEEDBACK_DELAY * 1.5).timeout

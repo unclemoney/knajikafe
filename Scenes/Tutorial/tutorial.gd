@@ -30,7 +30,7 @@ const STEPS: Array = [
 	{
 		"cat": "🐱 📝",
 		"title": "Quiz Station",
-		"text": "Tap 'Quiz' to start a multiple-choice quiz. You'll see a Japanese word and pick the right meaning!",
+		"text": "Tap 'Quiz' for Recommended Study or Multiple Choice. Recommendations use your due cards and skill evidence, but you always choose what to play!",
 	},
 	{
 		"cat": "🐱 🃏",
@@ -76,8 +76,8 @@ func _ready() -> void:
 	continue_btn.pressed.connect(_on_continue)
 	skip_btn.pressed.connect(_on_skip)
 	_show_step(0)
-	TweenFX.fade_in(backdrop, 0.4)
-	TweenFX.pop_in(panel, 0.4)
+	MotionManager.fade_in(backdrop, 0.4)
+	MotionManager.pop_in(panel, 0.4)
 
 
 ## Displays the tutorial step at the given index.
@@ -93,7 +93,7 @@ func _show_step(index: int) -> void:
 	else:
 		continue_btn.text = "Next (%d/%d)" % [index + 1, STEPS.size()]
 
-	TweenFX.pop_in(cat_label, 0.3)
+	MotionManager.pop_in(cat_label, 0.3)
 
 
 func _on_continue() -> void:
@@ -115,5 +115,5 @@ func _complete_tutorial() -> void:
 		profile.has_completed_tutorial = true
 		SaveManager.save_profile(profile)
 	tutorial_completed.emit()
-	await TweenFX.fade_out(self, 0.3).finished
+	await MotionManager.fade_out(self, 0.3).finished
 	queue_free()

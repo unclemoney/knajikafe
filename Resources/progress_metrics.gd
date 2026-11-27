@@ -30,16 +30,23 @@ static func get_stage_name(stage: CardStage) -> String:
 	return "Learning"
 
 
-static func get_skill_summary(cards: Array[SRSCard], kanji_cards: Array[KanjiCard] = []) -> Dictionary:
+static func get_skill_summary(cards: Array[SRSCard], kanji_cards: Array[KanjiCard] = [], level: int = 0) -> Dictionary:
 	var summary: Dictionary = {}
 	for skill in SKILL_IDS:
 		summary[skill] = {
 			"attempts": 0,
 			"correct": 0,
+			"lapses": 0,
 			"success_rate": 0.0,
 			"has_data": false,
+			"last_practice": "",
+			"evidence_label": "No Evidence",
 		}
 	for card in cards:
+		if level > 0:
+			var word := VocabDatabase.get_word_by_id(card.vocab_id)
+			if word == null or word.jlpt_level != level:
+				continue
 		for skill in SKILL_IDS:
 			if not card.skill_evidence.has(skill):
 				continue
@@ -48,7 +55,14 @@ static func get_skill_summary(cards: Array[SRSCard], kanji_cards: Array[KanjiCar
 				continue
 			summary[skill]["attempts"] += evidence.attempts
 			summary[skill]["correct"] += evidence.correct
+			summary[skill]["lapses"] += evidence.lapses
+			if evidence.last_review_date > summary[skill]["last_practice"]:
+				summary[skill]["last_practice"] = evidence.last_review_date
 	for card in kanji_cards:
+		if level > 0:
+			var entry := VocabDatabase.get_kanji(card.character)
+			if entry == null or entry.jlpt_level != level:
+				continue
 		for skill in SKILL_IDS:
 			if not card.skill_evidence.has(skill):
 				continue
@@ -57,12 +71,26 @@ static func get_skill_summary(cards: Array[SRSCard], kanji_cards: Array[KanjiCar
 				continue
 			summary[skill]["attempts"] += evidence.attempts
 			summary[skill]["correct"] += evidence.correct
+			summary[skill]["lapses"] += evidence.lapses
+			if evidence.last_review_date > summary[skill]["last_practice"]:
+				summary[skill]["last_practice"] = evidence.last_review_date
 	for skill in SKILL_IDS:
 		var attempts: int = summary[skill]["attempts"]
 		summary[skill]["has_data"] = attempts > 0
 		if attempts > 0:
 			summary[skill]["success_rate"] = float(summary[skill]["correct"]) / float(attempts)
+		summary[skill]["evidence_label"] = get_evidence_label(attempts, summary[skill]["success_rate"])
 	return summary
+
+
+static func get_evidence_label(attempts: int, success_rate: float) -> String:
+	if attempts == 0:
+		return "No Evidence"
+	if attempts < 5:
+		return "Early Evidence"
+	if attempts >= 10 and success_rate >= 0.8:
+		return "Consistent"
+	return "Developing"
 
 
 static func get_level_summary(cards: Array[SRSCard], words: Array[VocabWord], kanji: Array[KanjiEntry], level: int) -> Dictionary:

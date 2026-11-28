@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 import struct
 from pathlib import Path
 
@@ -157,6 +158,44 @@ class ContentValidator:
             self.check(0 <= exercise.get("answer_index", -1) < 4, f"{context}: invalid answer index")
             self.check(exercise.get("target_vocab_id") in vocab, f"{context}: invalid vocabulary target")
 
+        lesson_test_entries = self.array("Resources/Curriculum/lesson_tests.json")
+        lesson_tests = self.unique_ids(lesson_test_entries, "lesson_tests")
+        self.check(len(lesson_test_entries) == 900, f"Lesson tests: expected 900, got {len(lesson_test_entries)}")
+        for number in lesson_by_number:
+            entries = [item for item in lesson_test_entries if item.get("lesson") == number]
+            self.check(len(entries) == 20, f"Lesson {number}: expected 20 test questions")
+            self.check(sum(item.get("kind") == "vocabulary" for item in entries) == 10, f"Lesson {number}: expected 10 vocabulary questions")
+            self.check(sum(item.get("kind") == "cloze" for item in entries) == 10, f"Lesson {number}: expected 10 cloze questions")
+        for identity, question in lesson_tests.items():
+            context = f"lesson_tests:{identity}"
+            self.validate_source(question, lesson_by_number, context)
+            self.check(question.get("kind") in {"vocabulary", "cloze"}, f"{context}: invalid kind")
+            self.check(question.get("prompt", "").strip(), f"{context}: missing prompt")
+            if question.get("kind") == "cloze":
+                question_format = question.get("question_format", "")
+                self.check(question_format in {"sentence_completion", "word_translation"}, f"{context}: invalid question format")
+                if question_format == "sentence_completion":
+                    self.check(question.get("prompt", "").count("______") == 1, f"{context}: expected one explicit blank")
+                else:
+                    self.check(question.get("prompt", "").startswith("Translate: 「"), f"{context}: direct translation instruction required")
+                    self.check("______" not in question.get("prompt", ""), f"{context}: ambiguous fallback blank")
+            choices = question.get("choices", [])
+            self.check(len(choices) == 4 and len(set(choices)) == 4 and all(isinstance(choice, str) and choice.strip() for choice in choices), f"{context}: four distinct choices required")
+            answer_index = question.get("answer_index", -1)
+            self.check(isinstance(answer_index, int) and 0 <= answer_index < 4, f"{context}: invalid answer index")
+            target_id = question.get("target_vocab_id")
+            self.check(target_id in vocab, f"{context}: invalid vocabulary target")
+            if target_id in vocab:
+                self.check(question.get("lesson") in vocab[target_id].get("lesson_ids", []), f"{context}: target is outside tested lesson")
+                if question.get("question_format") == "sentence_completion" and isinstance(answer_index, int) and 0 <= answer_index < len(choices):
+                    self.check(choices[answer_index] == vocab[target_id].get("source_word"), f"{context}: answer does not match target word")
+                if question.get("question_format") == "word_translation":
+                    self.check(vocab[target_id].get("source_word") in question.get("prompt", ""), f"{context}: translation prompt omits target word")
+                    self.check(all(not re.search(r"[ぁ-ゟ゠-ヿ一-鿿]", choice) for choice in choices), f"{context}: translation choices must be English")
+                    if isinstance(answer_index, int) and 0 <= answer_index < len(choices):
+                        expected = vocab[target_id]["english_meanings"][0].strip().rstrip(".")
+                        self.check(choices[answer_index] == expected, f"{context}: translation answer does not match target meaning")
+
         legacy_map = self.load_json("Resources/Curriculum/legacy_id_map.json")
         self.check(isinstance(legacy_map, dict) and len(legacy_map) == 1500, "Legacy map: expected 1500 old IDs")
         cafe_words_list = self.array("Resources/Vocabulary/cafe_legacy_vocab.json")
@@ -198,7 +237,7 @@ class ContentValidator:
         self.counts = {
             "lessons": len(lesson_entries), "vocabulary": len(vocab), "grammar": len(grammar),
             "sentences": len(sentences), "readings": len(readings), "exercises": len(exercises),
-            "cafe_legacy": len(cafe_words),
+            "lesson_tests": len(lesson_tests), "cafe_legacy": len(cafe_words),
         }
         if self.errors:
             for error in self.errors:

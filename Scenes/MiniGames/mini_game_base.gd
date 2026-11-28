@@ -81,36 +81,12 @@ func _setup_session() -> void:
 	call_deferred("_focus_first_available")
 
 
-func _populate_session(_config: Dictionary) -> void:
-	var filters := _get_session_filters()
-	filters.merge(_get_curriculum_filters(), true)
-	var due_filters := filters.duplicate(true)
-	due_filters.erase("lesson")
-	due_filters.erase("first_lesson")
-	due_filters.erase("jlpt_level")
-	due_filters.erase("source_section")
-	var due := SRSEngine.get_due_cards()
-	for card in due:
-		if _session_cards.size() >= _words_per_session:
-			break
-		var word := VocabDatabase.get_word_by_id(card.vocab_id)
-		if word != null and VocabDatabase.word_matches_filters(word, due_filters):
-			_session_cards.append(card)
-			_session_words.append(word)
-	if _session_cards.size() < _words_per_session:
-		var remaining := mini(_words_per_session - _session_cards.size(), _get_new_card_limit())
-		var existing_ids: PackedStringArray = []
-		for card in SRSEngine.cards:
-			existing_ids.append(card.vocab_id)
-		var new_words := VocabDatabase.get_random_words(remaining, existing_ids, filters)
-		if new_words.size() > 0:
-			var new_ids: PackedStringArray = []
-			for word in new_words:
-				new_ids.append(word.id)
-			var new_cards := SRSEngine.add_new_cards(new_ids)
-			for i in new_cards.size():
-				_session_cards.append(new_cards[i])
-				_session_words.append(new_words[i])
+func _populate_session(config: Dictionary) -> void:
+	var selection := LessonSessionPlanner.build_vocabulary_session(config, _get_session_filters(), _words_per_session, _get_new_card_limit())
+	for card in selection["cards"]:
+		_session_cards.append(card as SRSCard)
+	for word in selection["words"]:
+		_session_words.append(word as VocabWord)
 	_session_item_count = _session_words.size()
 
 
@@ -119,19 +95,11 @@ func _get_session_filters() -> Dictionary:
 
 
 func _get_curriculum_filters() -> Dictionary:
-	var filters: Dictionary = {"require_meaning": true}
-	var target_lesson := _get_target_lesson()
-	if target_lesson > 0:
-		filters["lesson"] = target_lesson
-	var target_level := _get_target_jlpt_level()
-	if target_level > 0:
-		filters["jlpt_level"] = target_level
-	return filters
+	return {"require_meaning": true}
 
 
 func _get_target_lesson() -> int:
-	var profile := GameController.current_profile
-	return int(profile.settings.get("target_lesson", 1)) if profile else 1
+	return LessonProgressManager.get_focus_lesson(GameController.session_data)
 
 
 func _get_target_jlpt_level() -> int:
@@ -156,7 +124,7 @@ func _get_empty_session_message(item_label: String) -> String:
 	var lesson_name := "All lessons" if lesson == 0 else "Lesson %d" % lesson
 	var level := _get_target_jlpt_level()
 	var level_name := "all JLPT tags" if level == 0 else "N%d" % level
-	return "No %s for %s · %s. Change lesson/level or New cards in Settings." % [item_label.to_lower(), lesson_name, level_name]
+	return "No %s for %s · %s. Review the lesson or adjust New cards in Settings." % [item_label.to_lower(), lesson_name, level_name]
 
 
 func _get_item_label() -> String:
@@ -222,6 +190,7 @@ func _finish_session() -> void:
 		var summary := {
 			"timestamp": Time.get_datetime_string_from_system(),
 			"game_type": _game_type,
+			"lesson_number": _get_target_lesson(),
 			"item_label": _get_item_label(),
 			"words_reviewed": _words_per_session,
 			"correct_count": _correct_count,
@@ -234,6 +203,7 @@ func _finish_session() -> void:
 		summary["cafe_rewards"] = cafe_rewards
 		SRSEngine.record_session(summary)
 		SRSEngine.save_cards_for_profile(profile)
+		LessonProgressManager.record_practice_session(profile)
 		SaveManager.save_profile(profile)
 		if leveled_up:
 			GameController.show_level_up(profile.level)
@@ -242,6 +212,7 @@ func _finish_session() -> void:
 		var recommendation := StudyPlanner.get_recommendation()
 		GameController.session_data = {
 			"game_type": _game_type,
+			"lesson_number": _get_target_lesson(),
 			"item_label": _get_item_label(),
 			"words_reviewed": _words_per_session,
 			"correct_count": _correct_count,

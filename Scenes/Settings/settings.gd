@@ -18,7 +18,6 @@ extends Control
 
 @onready var words_spin: SpinBox = $Panel/VBox/SessionSection/WordsRow/WordsSpinBox
 @onready var target_option: OptionButton = $Panel/VBox/SessionSection/WordsRow/TargetOption
-@onready var topic_option: OptionButton = $Panel/VBox/SessionSection/TopicRow/TopicOption
 @onready var new_cards_spin: SpinBox = $Panel/VBox/SessionSection/NewCardsRow/NewCardsSpinBox
 @onready var difficulty_option: OptionButton = $Panel/VBox/SessionSection/DifficultyRow/DifficultyOption
 
@@ -37,7 +36,6 @@ func _ready() -> void:
 	target_option.add_item("All JLPT", 0)
 	for level in [5, 4, 3, 2, 1]:
 		target_option.add_item("N%d" % level, level)
-	$Panel/VBox/SessionSection/TopicRow/TopicLabel.text = "Professional lesson:"
 	difficulty_option.add_item("Relaxed")
 	difficulty_option.set_item_metadata(0, "relaxed")
 	difficulty_option.add_item("Standard")
@@ -45,7 +43,6 @@ func _ready() -> void:
 	difficulty_option.add_item("Challenge")
 	difficulty_option.set_item_metadata(2, "challenge")
 	target_option.item_selected.connect(_on_target_level_changed)
-	_populate_lessons()
 	save_btn.pressed.connect(_on_save_pressed)
 	back_btn.pressed.connect(_on_back_pressed)
 	reduced_motion_toggle.toggled.connect(_on_reduced_motion_toggled)
@@ -85,8 +82,6 @@ func _load_settings() -> void:
 	words_spin.value = s.get("words_per_session", 10)
 	var target_level := int(s.get("target_jlpt_level", 0))
 	target_option.select(target_option.get_item_index(target_level))
-	var target_lesson := int(s.get("target_lesson", 1))
-	topic_option.select(topic_option.get_item_index(target_lesson))
 	new_cards_spin.value = s.get("new_cards_per_session", 5)
 	var difficulty := str(s.get("difficulty", "standard"))
 	for i in difficulty_option.item_count:
@@ -99,15 +94,6 @@ func _load_settings() -> void:
 
 func _on_target_level_changed(_index: int) -> void:
 	pass
-
-
-func _populate_lessons() -> void:
-	topic_option.clear()
-	topic_option.add_item("All professional lessons", 0)
-	for lesson in VocabDatabase.get_lessons():
-		var index := topic_option.item_count
-		topic_option.add_item("Lesson %02d · %s" % [lesson["number"], lesson["stage"]], lesson["number"])
-		topic_option.set_item_tooltip(index, lesson["source_file"])
 
 
 ## Sets up a preview word to demonstrate display settings.
@@ -154,7 +140,6 @@ func _on_save_pressed() -> void:
 	profile.settings["speech_volume"] = speech_slider.value / 100.0
 	profile.settings["words_per_session"] = int(words_spin.value)
 	profile.settings["target_jlpt_level"] = target_option.get_selected_id()
-	profile.settings["target_lesson"] = topic_option.get_selected_id()
 	profile.settings["new_cards_per_session"] = int(new_cards_spin.value)
 	profile.settings["difficulty"] = str(difficulty_option.get_item_metadata(difficulty_option.selected))
 

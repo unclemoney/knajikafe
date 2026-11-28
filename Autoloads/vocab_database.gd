@@ -13,6 +13,7 @@ var _sentences: Dictionary = {}
 
 var reading_passages: Array = []
 var exercises: Array = []
+var lesson_tests: Array = []
 var cafe_menu: Array = []
 
 
@@ -92,9 +93,11 @@ func get_grammar_by_id(grammar_id: String) -> Dictionary:
 	return _grammar.get(grammar_id, {})
 
 
-func get_sentences_for_word(word_id: String) -> Array:
+func get_sentences_for_word(word_id: String, allowed_lessons: Array = []) -> Array:
 	var results: Array = []
 	for sentence in _sentences.values():
+		if not allowed_lessons.is_empty() and int(sentence.get("lesson", 0)) not in allowed_lessons:
+			continue
 		if word_id in sentence.get("vocab_ids", []):
 			results.append(sentence)
 	results.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
@@ -105,11 +108,21 @@ func get_sentences_for_word(word_id: String) -> Array:
 	return results
 
 
-func get_exercises_for_word(word_id: String) -> Array:
+func get_exercises_for_word(word_id: String, allowed_lessons: Array = []) -> Array:
 	var results: Array = []
 	for exercise in exercises:
+		if not allowed_lessons.is_empty() and int(exercise.get("lesson", 0)) not in allowed_lessons:
+			continue
 		if exercise.get("target_vocab_id", "") == word_id:
 			results.append(exercise)
+	return results
+
+
+func get_lesson_tests(lesson: int) -> Array:
+	var results: Array = []
+	for question in lesson_tests:
+		if int(question.get("lesson", 0)) == lesson:
+			results.append(question)
 	return results
 
 
@@ -155,7 +168,8 @@ func word_matches_filters(word: VocabWord, filters: Dictionary) -> bool:
 	if filters.get("require_examples", false) and word.example_sentences.is_empty():
 		return false
 	if filters.get("require_cloze", false):
-		if word.example_sentences.is_empty() and get_exercises_for_word(word.id).is_empty():
+		var allowed_lessons: Array = filters.get("allowed_lessons", [])
+		if get_sentences_for_word(word.id, allowed_lessons).is_empty() and get_exercises_for_word(word.id, allowed_lessons).is_empty():
 			return false
 	if filters.get("require_reading", false) and word.get_reading() == "":
 		return false
@@ -211,6 +225,7 @@ func _load_all_data() -> void:
 		_sentences[sentence["id"]] = sentence
 	reading_passages = _load_json_array("res://Resources/Curriculum/readings.json")
 	exercises = _load_json_array("res://Resources/Curriculum/exercises.json")
+	lesson_tests = _load_json_array("res://Resources/Curriculum/lesson_tests.json")
 	cafe_menu = _load_json_array("res://Resources/Vocabulary/cafe_menu.json")
 	print("VocabDatabase: Loaded %d professional words, %d lessons, %d grammar points, %d kanji." % [_words.size(), _lessons.size(), _grammar.size(), _kanji.size()])
 

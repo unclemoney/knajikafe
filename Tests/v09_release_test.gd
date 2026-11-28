@@ -32,6 +32,8 @@ func _profile(level: int = 0, lesson: int = 1, new_cards: int = 5) -> PlayerProf
 	profile.player_name = "V09Test"
 	profile.settings["target_jlpt_level"] = level
 	profile.settings["target_lesson"] = lesson
+	profile.current_lesson = lesson
+	profile.highest_unlocked_lesson = lesson
 	profile.settings["new_cards_per_session"] = new_cards
 	GameController.current_profile = profile
 	return profile
@@ -94,7 +96,7 @@ func _test_planner() -> void:
 				due_cards.append(_card(word.id, true))
 				break
 	recommendation = StudyPlanner.recommend(profile, due_cards, [], [])
-	_check("Due-only all-lesson recommendation remains available", recommendation.get("game_type") not in ["", "study_notebook"])
+	_check("Due-only lesson recommendation ignores locked lessons", recommendation.get("game_type") not in ["", "study_notebook"])
 	profile.settings["target_lesson"] = 1
 	var empty_level := 0
 	for level in [1, 2, 3, 4, 5]:
@@ -102,15 +104,16 @@ func _test_planner() -> void:
 			empty_level = level
 			break
 	profile.settings["target_jlpt_level"] = empty_level
-	profile.settings["new_cards_per_session"] = 0
+	profile.settings["new_cards_per_session"] = 5
 	recommendation = StudyPlanner.recommend(profile, [], [], [])
-	_check("Empty professional filters recommend Notebook without substitution", recommendation.get("game_type") == "study_notebook")
+	_check("Lesson recommendations ignore empty JLPT combinations", recommendation.get("game_type") != "study_notebook")
 	profile.settings["target_jlpt_level"] = 0
 	var audio_word: VocabWord = null
 	for word in VocabDatabase.get_words_by_lesson(1):
 		if AudioManager.has_speech("vocab:" + word.id):
 			audio_word = word
 			break
+	profile.settings["new_cards_per_session"] = 0
 	var menu_due: Array[SRSCard] = [_card(audio_word.id, true)]
 	var clip_id := "vocab:" + audio_word.id
 	var saved_vocab: String = AudioManager._audio_manifest[clip_id]

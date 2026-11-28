@@ -43,6 +43,10 @@ class_name PlayerProfile
 @export var quest_claimed: Dictionary = {}
 @export var cat_bonds: Dictionary = {}
 @export var cat_bond_dates: Dictionary = {}
+@export var current_lesson: int = 1
+@export var highest_unlocked_lesson: int = 1
+@export var lesson_results: Dictionary = {}
+@export var lesson_test_practice_required: Dictionary = {}
 
 ## Player settings stored as a flat dictionary.
 ## Keys: "show_kanji", "show_furigana", "show_romaji", "show_english",

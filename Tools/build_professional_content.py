@@ -440,6 +440,127 @@ def load_legacy_identities(menu_ids):
     return sorted(identities, key=lambda item: item["id"])
 
 
+def _question_choices(answer, distractors, answer_position):
+    choices = list(distractors[:3])
+    choices.insert(answer_position % 4, answer)
+    return choices
+
+
+def _fallback_translation(word):
+    return "Translate: 「%s」" % word["source_word"]
+
+
+def _translation_choice(word):
+    return word["english_meanings"][0].strip().rstrip(".")
+
+
+def _word_source_location(word):
+    path = MARKDOWN / word["source_file"]
+    for item in source_lines(path):
+        if word["source_word"] in item["text"]:
+            return item["line"], item["page"]
+    return 1, 1
+
+
+def build_lesson_tests(lessons, vocabulary, sentences):
+    tests = []
+    for lesson in lessons:
+        number = lesson["number"]
+        words = [
+            word for word in vocabulary
+            if number in word["lesson_ids"] and word["english_meanings"]
+            and word["source_word"] and len(word["source_word"]) <= 40
+        ]
+        words.sort(key=lambda word: (word["first_lesson"] != number, word["id"]))
+        if len(words) < 10:
+            raise ValueError("Lesson %d has fewer than 10 testable words" % number)
+        for index, word in enumerate(words[:10]):
+            distractors = [item for item in words if item["id"] != word["id"] and item["part_of_speech"] == word["part_of_speech"]]
+            distractors.extend(item for item in words if item["id"] != word["id"] and item not in distractors)
+            meanings = []
+            for item in distractors:
+                meaning = item["english_meanings"][0]
+                if meaning != word["english_meanings"][0] and meaning not in meanings:
+                    meanings.append(meaning)
+            answer = word["english_meanings"][0]
+            line, page = _word_source_location(word)
+            tests.append({
+                "id": stable_id("lt_", number, "vocabulary", word["id"]),
+                "lesson": number,
+                "kind": "vocabulary",
+                "prompt": "Which meaning matches 「%s」?" % word["source_word"],
+                "choices": _question_choices(answer, meanings, index),
+                "answer_index": index % 4,
+                "target_vocab_id": word["id"],
+                "english": "",
+                "explanation": "%s means %s." % (word["source_word"], answer),
+                "source_file": word["source_file"],
+                "source_line": line,
+                "source_page": page,
+                "question_source": "lesson_vocabulary",
+            })
+        cloze_words = []
+        cloze_sentences = {}
+        for word in words:
+            matches = [sentence for sentence in sentences if sentence["lesson"] == number and word["source_word"] in sentence["japanese"]]
+            if matches:
+                cloze_words.append(word)
+                cloze_sentences[word["id"]] = matches[0]
+        fallback_words = [word for word in words if word not in cloze_words]
+        fallback_words.sort(key=lambda word: (len(word["english_meanings"][0]) > 80, len(word["english_meanings"][0]), word["id"]))
+        for word in fallback_words:
+            if len(cloze_words) >= 10:
+                break
+            cloze_words.append(word)
+        for index, word in enumerate(cloze_words[:10]):
+            sentence = cloze_sentences.get(word["id"])
+            if sentence:
+                prompt = sentence["japanese"].replace(word["source_word"], "______", 1)
+                english = sentence["english"]
+                source_file = sentence["source_file"]
+                line = sentence["source_line"]
+                page = sentence["source_page"]
+                question_source = "lesson_sentence"
+                question_format = "sentence_completion"
+                correct_answer = word["source_word"]
+                explanation = "The lesson word is 「%s」." % word["source_word"]
+            else:
+                prompt = _fallback_translation(word)
+                english = ""
+                source_file = word["source_file"]
+                line, page = _word_source_location(word)
+                question_source = "lesson_vocabulary_translation"
+                question_format = "word_translation"
+                correct_answer = _translation_choice(word)
+                explanation = "The correct translation is: %s" % correct_answer
+            distractors = [item for item in words if item["id"] != word["id"] and item["part_of_speech"] == word["part_of_speech"]]
+            distractors.extend(item for item in words if item["id"] != word["id"] and item not in distractors)
+            if question_format == "word_translation":
+                distractors.sort(key=lambda item: (len(item["english_meanings"][0]) > 100, len(item["english_meanings"][0]), item["id"]))
+            answers = []
+            for item in distractors:
+                answer = _translation_choice(item) if question_format == "word_translation" else item["source_word"]
+                if answer != correct_answer and answer not in answers:
+                    answers.append(answer)
+            tests.append({
+                "id": stable_id("lt_", number, "cloze", word["id"]),
+                "lesson": number,
+                "kind": "cloze",
+                "question_format": question_format,
+                "prompt": prompt,
+                "choices": _question_choices(correct_answer, answers, index + 1),
+                "answer_index": (index + 1) % 4,
+                "target_vocab_id": word["id"],
+                "english": english,
+                "explanation": explanation,
+                "source_file": source_file,
+                "source_line": line,
+                "source_page": page,
+                "question_source": question_source,
+            })
+    return tests
+
+
 def build():
     exclusions = []
     menu = json.loads(LEGACY_MENU.read_text(encoding="utf-8"))
@@ -625,6 +746,7 @@ def build():
         word = dict(old_by_id[word_id])
         word["content_source"] = "legacy_cafe"
         legacy_words.append(word)
+    lesson_tests = build_lesson_tests(lessons, vocabulary, sentences)
     outputs = {
         OUTPUT / "lessons.json": lessons,
         OUTPUT / "vocabulary.json": vocabulary,
@@ -632,6 +754,7 @@ def build():
         OUTPUT / "sentences.json": sentences,
         OUTPUT / "readings.json": readings,
         OUTPUT / "exercises.json": exercises,
+        OUTPUT / "lesson_tests.json": lesson_tests,
         OUTPUT / "legacy_id_map.json": legacy_map,
         LEGACY_VOCAB_OUTPUT: sorted(legacy_words, key=lambda word: word["id"]),
     }
@@ -642,6 +765,7 @@ def build():
         "sentences": len(sentences),
         "readings": len(readings),
         "exercises": len(exercises),
+        "lesson_tests": len(lesson_tests),
         "missing_english": sum(not word["english_meanings"] for word in vocabulary),
         "source_missing_english": sum(not word["source_meaning"] for word in vocabulary),
         "quarantined_meaning": sum(bool(word["source_meaning"]) and not word["english_meanings"] for word in vocabulary),

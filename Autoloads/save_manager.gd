@@ -395,6 +395,9 @@ func _failed_learning_load(safe_name: String, message: String) -> Dictionary:
 
 
 func _apply_profile_defaults(profile: PlayerProfile) -> void:
+	profile.current_lesson = maxi(1, profile.current_lesson)
+	profile.highest_unlocked_lesson = maxi(1, profile.highest_unlocked_lesson)
+	profile.current_lesson = mini(profile.current_lesson, profile.highest_unlocked_lesson)
 	var needs_curriculum_migration := not bool(profile.settings.get("professional_curriculum_migrated", false))
 	var defaults := {
 		"show_kanji": true,
@@ -420,6 +423,7 @@ func _apply_profile_defaults(profile: PlayerProfile) -> void:
 		profile.settings["target_jlpt_level"] = 0
 		profile.settings["professional_curriculum_migrated"] = true
 	profile.settings.erase("target_topic")
+	profile.settings["target_lesson"] = profile.current_lesson
 	for decoration_id in profile.cafe_decorations:
 		profile.owned_decorations[decoration_id] = true
 

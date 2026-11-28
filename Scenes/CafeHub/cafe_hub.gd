@@ -13,6 +13,7 @@ extends Control
 @onready var streak_label: Label = $TopBar/StreakLabel
 @onready var beans_label: Label = $TopBar/BeansLabel
 @onready var daily_btn: Button = $TopBar/DailyBtn
+@onready var lessons_btn: Button = $TopBar/LessonsBtn
 
 @onready var stats_btn: Button = $TopBar/StatsBtn
 @onready var cats_btn: Button = $TopBar/CatsBtn
@@ -65,6 +66,7 @@ func _ready() -> void:
 	decor_btn.pressed.connect(_on_decor_pressed)
 	logout_btn.pressed.connect(_on_logout_pressed)
 	daily_btn.pressed.connect(_on_daily_pressed)
+	lessons_btn.pressed.connect(_on_lessons_pressed)
 	_load_cats()
 	_load_decorations()
 	_update_streak()
@@ -339,6 +341,11 @@ func _on_orders_pressed() -> void:
 	GameController.session_data = ActivityCatalog.get_config("cafe_orders", profile)
 	orders_btn.disabled = true
 	GameController.change_scene(GameController.session_data["scene_path"])
+
+
+func _on_lessons_pressed() -> void:
+	GameController.session_data = {}
+	GameController.change_scene("res://Scenes/Lessons/lessons_screen.tscn")
 
 
 func _on_daily_pressed() -> void:

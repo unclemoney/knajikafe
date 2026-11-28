@@ -5,6 +5,7 @@
   "sentences": 1272,
   "readings": 35,
   "exercises": 6,
+  "lesson_tests": 900,
   "missing_english": 22,
   "source_missing_english": 10,
   "quarantined_meaning": 12,
@@ -841,12 +842,13 @@
     }
   ],
   "runtime_hashes": {
-    "lessons.json": "a9ebcec088026fb1d2b9398d8ced6f69f631c7b0ba8cf91d9fe397d96856438b",
+    "lessons.json": "3da2b1d985fa7744461561ac10b9085e66c815c2ba90d80de511fbc30f7c8abc",
     "vocabulary.json": "34492bcf134d2abf4c2c2c7c2b8545eeea91a485b6f9a18c22c6e02467ce71f7",
     "grammar.json": "abd94f5513a72dafc5032506f7b5c2b157aa4fe4443cd81a5ba835b34863c1b9",
     "sentences.json": "7982b5500ddb148f502093bfa66e8270a3eed6b48efbec8252a74f80394ed3dd",
     "readings.json": "070d96a7d7b88705cabe15fca0937b262d59ef9a7271e7830d7024dee88d0395",
     "exercises.json": "6ffca6b61c8a45892ba54bce51d153f62cccbe3d9c2a8362b6c641189fdcae76",
+    "lesson_tests.json": "3ed32bc36599b7494bc7eb502fe13de8120a9727fa0f78d2561b5510920c9397",
     "legacy_id_map.json": "ac629f3bc35d72a6c39757e08aa7e76393868a231199d5666ea85ab25b5fbb0b",
     "cafe_legacy_vocab.json": "8934da775f986b0dae7f27712fe21e7d75ccab03cc1f1c54ebb63043e8bdd0bb"
   }

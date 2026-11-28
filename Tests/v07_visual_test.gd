@@ -15,6 +15,11 @@ const SCENES := [
 	{"name": "bookshelf_picker", "path": "res://Scenes/CafeHub/cafe_hub.tscn", "game_type": "", "picker": "_on_fill_blank_pressed"},
 	{"name": "menu_board_picker", "path": "res://Scenes/CafeHub/cafe_hub.tscn", "game_type": "", "picker": "_on_quiz_pressed"},
 	{"name": "results_n4", "path": "res://Scenes/Results/results_screen.tscn", "game_type": "", "results": true},
+	{"name": "lessons", "path": "res://Scenes/Lessons/lessons_screen.tscn", "game_type": "lessons"},
+	{"name": "lesson_test", "path": "res://Scenes/Lessons/lesson_test.tscn", "game_type": "lesson_test"},
+	{"name": "lesson_translation", "path": "res://Scenes/Lessons/lesson_test.tscn", "game_type": "lesson_translation"},
+	{"name": "lesson_test_failed", "path": "res://Scenes/Results/results_screen.tscn", "game_type": "", "lesson_test_results": false},
+	{"name": "lesson_test_passed", "path": "res://Scenes/Results/results_screen.tscn", "game_type": "", "lesson_test_results": true},
 ]
 
 
@@ -33,10 +38,19 @@ func _run() -> void:
 			_setup_profile(definition["game_type"])
 			if definition.get("results", false):
 				GameController.session_data = {"game_type": "multiple_choice", "item_label": "Words", "words_reviewed": 10, "correct_count": 8, "xp_earned": 80, "base_xp": 80, "streak_multiplier": 1.0, "skill_results": {"meaning": {"correct": 8, "attempts": 10}}, "recommendation": StudyPlanner.get_recommendation()}
+			if definition.has("lesson_test_results"):
+				var passed: bool = definition["lesson_test_results"]
+				GameController.session_data = {"result_kind": "lesson_test", "lesson_number": 5, "correct_count": 18 if passed else 12, "vocabulary_correct": 9 if passed else 7, "cloze_correct": 9 if passed else 5, "passed": passed, "practice_required": not passed, "save_ok": true, "newly_unlocked": 6 if passed else 0, "best_score": 18 if passed else 12, "attempts": 2}
 			var scene = load(definition["path"]).instantiate()
 			add_child(scene)
 			if definition.has("picker"):
 				scene.call(definition["picker"])
+			if definition["game_type"] == "lesson_translation":
+				for index in scene._questions.size():
+					if scene._questions[index].get("question_format", "") == "word_translation":
+						scene._questions.insert(0, scene._questions.pop_at(index))
+						scene._show_question()
+						break
 			if definition.get("grammar", false):
 				scene._mode_option.select(1)
 				scene.topic_option.select(scene.topic_option.get_item_index(5))
@@ -71,6 +85,10 @@ func _setup_profile(game_type: String) -> void:
 		profile.unlocked_achievements.append(achievement.id)
 	profile.settings["target_jlpt_level"] = 0 if game_type == "fill_in_blank" else 4
 	profile.settings["target_lesson"] = 26 if game_type == "reading_shelf" else 5
+	if game_type == "lesson_translation":
+		profile.settings["target_lesson"] = 1
+	profile.current_lesson = int(profile.settings["target_lesson"])
+	profile.highest_unlocked_lesson = profile.current_lesson
 	profile.settings["new_cards_per_session"] = 5
 	profile.settings["difficulty"] = "standard"
 	profile.settings["reduced_motion"] = true

@@ -39,6 +39,9 @@ func _ready() -> void:
 ## Populates the results display from session data.
 func _display_results() -> void:
 	var data := GameController.session_data
+	if data.get("result_kind", "") == "lesson_test":
+		_display_lesson_test(data)
+		return
 
 	var words_reviewed: int = data.get("words_reviewed", 0)
 	var correct_count: int = data.get("correct_count", 0)
@@ -90,7 +93,7 @@ func _display_results() -> void:
 	if profile:
 		level_label.text = "Level: %d  |  Total XP: %d" % [profile.level, profile.xp]
 		target_level = int(profile.settings.get("target_jlpt_level", 0))
-		target_lesson = int(profile.settings.get("target_lesson", 1))
+		target_lesson = int(data.get("lesson_number", LessonProgressManager.get_current_lesson(profile)))
 		var level_name := "All JLPT" if target_level == 0 else "N%d" % target_level
 		var lesson_name := "All lessons" if target_lesson == 0 else "Lesson %d" % target_lesson
 		var difficulty := str(profile.settings.get("difficulty", "standard")).capitalize()
@@ -179,6 +182,45 @@ func _display_results() -> void:
 		level_up_label.visible = false
 
 
+func _display_lesson_test(data: Dictionary) -> void:
+	for label in [xp_label, beans_label, goals_label, streak_label, level_label, stage_changes_label, next_review_label, companion_label, level_up_label]:
+		label.visible = false
+	var lesson := int(data.get("lesson_number", 1))
+	var correct := int(data.get("correct_count", 0))
+	var passed := bool(data.get("passed", false))
+	var save_ok := bool(data.get("save_ok", false))
+	curriculum_label.text = "Lesson %d · Vocabulary + Fill in the Blank" % lesson
+	words_label.text = "Vocabulary: %d/10 · Fill in the Blank: %d/10" % [int(data.get("vocabulary_correct", 0)), int(data.get("cloze_correct", 0))]
+	accuracy_label.text = "Overall: %d/20 (%d%%) · Pass: 16/20" % [correct, int(float(correct) / 20.0 * 100.0)]
+	skill_label.visible = true
+	skill_label.text = "Best: %d/20 · Attempts: %d" % [int(data.get("best_score", correct)), int(data.get("attempts", 1))]
+	if int(data.get("questions_answered", 20)) < 20:
+		skill_label.text += " · Answered: %d/20" % int(data["questions_answered"])
+	if not save_ok:
+		title_label.text = "Result not saved"
+		recommendation_label.text = data.get("error", "Please retry the test.")
+	elif passed:
+		var unlocked := int(data.get("newly_unlocked", 0))
+		title_label.text = "Lesson Passed!"
+		recommendation_label.text = "Lesson %d unlocked!" % unlocked if unlocked > 0 else "Lesson complete. Review remains available."
+	else:
+		title_label.text = "Keep Practicing"
+		recommendation_label.text = "Complete any practice session before retrying this test."
+	recommendation_label.visible = true
+	recommended_btn.visible = true
+	if passed and save_ok:
+		recommended_btn.text = "Continue Lessons"
+		data["recommendation"] = {"config": {"scene_path": "res://Scenes/Lessons/lessons_screen.tscn"}}
+	elif save_ok and bool(data.get("practice_required", false)):
+		recommended_btn.text = "Choose Practice"
+		data["recommendation"] = {"config": {"scene_path": "res://Scenes/Lessons/lessons_screen.tscn"}}
+	else:
+		recommended_btn.text = "Retry Test"
+		data["recommendation"] = {"config": {"scene_path": "res://Scenes/Lessons/lesson_test.tscn", "lesson_number": lesson, "game_type": "lesson_test"}}
+	GameController.session_data = data
+	return_btn.text = "Lessons"
+
+
 func _on_recommended_pressed() -> void:
 	var recommendation: Dictionary = GameController.session_data.get("recommendation", {})
 	var config: Dictionary = recommendation.get("config", {})
@@ -192,8 +234,9 @@ func _on_recommended_pressed() -> void:
 ## Returns to the Cafe Hub.
 func _on_return_pressed() -> void:
 	return_btn.disabled = true
+	var is_lesson_test: bool = GameController.session_data.get("result_kind", "") == "lesson_test"
 	GameController.session_data = {}
-	GameController.change_scene("res://Scenes/CafeHub/cafe_hub.tscn")
+	GameController.change_scene("res://Scenes/Lessons/lessons_screen.tscn" if is_lesson_test else "res://Scenes/CafeHub/cafe_hub.tscn")
 
 
 func _unhandled_key_input(event: InputEvent) -> void:

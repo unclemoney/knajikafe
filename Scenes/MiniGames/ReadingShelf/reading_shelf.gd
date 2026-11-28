@@ -49,24 +49,8 @@ func _get_item_label() -> String:
 	return "Readings"
 
 
-func _populate_session(_config: Dictionary) -> void:
-	var lesson := _get_target_lesson()
-	var level := _get_target_jlpt_level()
-	for passage in VocabDatabase.reading_passages:
-		if lesson > 0 and int(passage.get("lesson", 0)) != lesson:
-			continue
-		if level > 0:
-			var has_level := false
-			for word_id in passage.get("related_vocab_ids", []):
-				var word := VocabDatabase.get_word_by_id(word_id)
-				if word != null and word.jlpt_level == level:
-					has_level = true
-					break
-			if not has_level:
-				continue
-		_session_passages.append(passage)
-		if _session_passages.size() >= mini(5, _words_per_session):
-			break
+func _populate_session(config: Dictionary) -> void:
+	_session_passages = LessonSessionPlanner.get_reading_passages(config, mini(5, _words_per_session))
 	_session_item_count = _session_passages.size()
 
 

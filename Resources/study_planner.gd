@@ -11,7 +11,7 @@ static func get_recommendation() -> Dictionary:
 
 static func recommend(profile: PlayerProfile, cards: Array[SRSCard], kanji_cards: Array[KanjiCard], sessions: Array) -> Dictionary:
 	var level := int(profile.settings.get("target_jlpt_level", 0))
-	var lesson := int(profile.settings.get("target_lesson", 1))
+	var lesson := LessonProgressManager.get_current_lesson(profile)
 	var new_limit := int(profile.settings.get("new_cards_per_session", 5))
 	if cards.is_empty() and kanji_cards.is_empty() and lesson == 1 and level == 0 and new_limit > 0:
 		return _recommendation("multiple_choice", profile, "Start with Lesson 1 meanings from the professional curriculum.", {"size": 5, "due": 0}, {})
@@ -49,7 +49,7 @@ static func recommend(profile: PlayerProfile, cards: Array[SRSCard], kanji_cards
 	)
 	if candidates.is_empty():
 		var fallback := ActivityCatalog.get_notebook_option()
-		fallback["reason"] = "No scored activity matches the current professional lesson filters. Browse the Notebook or adjust Settings."
+		fallback["reason"] = "No scored activity has enough material in this lesson. Review the lesson or adjust New cards in Settings."
 		fallback["game_type"] = "study_notebook"
 		return fallback
 	var best: Dictionary = candidates[0]
@@ -79,26 +79,13 @@ static func _activity_pool(activity: Dictionary, profile: PlayerProfile, cards: 
 		return _cafe_pool(cards, int(profile.settings.get("new_cards_per_session", 5)))
 	if activity["game_type"] == "reading_shelf":
 		return _reading_pool(profile)
-	var level := int(profile.settings.get("target_jlpt_level", 0))
-	var lesson := int(profile.settings.get("target_lesson", 1))
-	var new_limit := int(profile.settings.get("new_cards_per_session", 5))
-	var today := GameController.get_current_date()
-	var existing: Dictionary = {}
-	var eligible: Dictionary = {}
-	var due := 0
-	for card in cards:
-		existing[card.vocab_id] = true
-		if not card.is_due(today):
-			continue
-		var word := VocabDatabase.get_word_by_id(card.vocab_id)
-		if word and _word_matches(word, activity, 0, 0):
-			eligible[word.id] = true
-			due += 1
-	if new_limit > 0:
-		for word in VocabDatabase.get_all_words():
-			if not existing.has(word.id) and _word_matches(word, activity, level, lesson):
-				eligible[word.id] = true
-	return {"size": eligible.size(), "due": due}
+	var config := ActivityCatalog.get_config(activity["game_type"], profile)
+	var filters: Dictionary = {}
+	for key in ["require_audio", "require_cloze", "require_examples"]:
+		if activity.get(key, false):
+			filters[key] = true
+	var selection := LessonSessionPlanner.build_vocabulary_session(config, filters, int(config["words_per_session"]), int(profile.settings.get("new_cards_per_session", 5)), false, cards)
+	return {"size": selection["words"].size(), "due": selection["due"]}
 
 
 static func _cafe_pool(cards: Array[SRSCard], new_limit: int) -> Dictionary:
@@ -121,16 +108,11 @@ static func _cafe_pool(cards: Array[SRSCard], new_limit: int) -> Dictionary:
 
 
 static func _reading_pool(profile: PlayerProfile) -> Dictionary:
-	var lesson := int(profile.settings.get("target_lesson", 1))
-	var level := int(profile.settings.get("target_jlpt_level", 0))
+	var config := ActivityCatalog.get_config("reading_shelf", profile)
+	var passages := LessonSessionPlanner.get_reading_passages(config, 5)
 	var count := 0
-	for passage in VocabDatabase.reading_passages:
-		if str(passage.get("question", "")) == "":
-			continue
-		if lesson > 0 and int(passage.get("lesson", 0)) != lesson:
-			continue
-		var word := VocabDatabase.get_word_by_id(str(passage.get("target_vocab_id", "")))
-		if word != null and (level == 0 or word.jlpt_level == level):
+	for passage in passages:
+		if str(passage.get("question", "")) != "":
 			count += 1
 	return {"size": count, "due": 0}
 
@@ -154,24 +136,22 @@ static func _word_matches(word: VocabWord, activity: Dictionary, level: int, les
 
 
 static func _kanji_pool(profile: PlayerProfile, cards: Array[KanjiCard]) -> Dictionary:
-	var level := int(profile.settings.get("target_jlpt_level", 0))
 	var new_limit := mini(3, int(profile.settings.get("new_cards_per_session", 5)))
 	var today := GameController.get_current_date()
+	var config := ActivityCatalog.get_config("kanji_workshop", profile)
+	var entries := LessonSessionPlanner.get_kanji_entries(config)
+	var scoped: Dictionary = {}
+	for entry in entries:
+		scoped[entry.character] = true
 	var existing: Dictionary = {}
 	var eligible: Dictionary = {}
 	var due := 0
 	for card in cards:
 		existing[card.character] = true
-		if card.is_due(today) and VocabDatabase.get_kanji(card.character):
+		if card.is_due(today) and scoped.has(card.character):
 			eligible[card.character] = true
 			due += 1
 	if new_limit > 0:
-		var entries: Array[KanjiEntry] = []
-		if level == 0:
-			entries.append_array(VocabDatabase.get_kanji_by_jlpt(5))
-			entries.append_array(VocabDatabase.get_kanji_by_jlpt(4))
-		else:
-			entries.append_array(VocabDatabase.get_kanji_by_jlpt(level))
 		for entry in entries:
 			if not existing.has(entry.character):
 				eligible[entry.character] = true

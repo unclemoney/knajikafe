@@ -31,6 +31,8 @@ func _profile(level: int = 0, new_cards: int = 5, lesson: int = 5) -> PlayerProf
 	profile.player_name = "V08Test"
 	profile.settings["target_jlpt_level"] = level
 	profile.settings["target_lesson"] = lesson
+	profile.current_lesson = lesson
+	profile.highest_unlocked_lesson = lesson
 	profile.settings["new_cards_per_session"] = new_cards
 	profile.settings["difficulty"] = "standard"
 	GameController.current_profile = profile
@@ -111,22 +113,22 @@ func _test_listening_levels() -> void:
 		add_child(lab)
 		var valid: bool = not lab._session_words.is_empty()
 		for word in lab._session_words:
-			if level > 0 and word.jlpt_level != level:
+			if 5 not in word.lesson_ids:
 				valid = false
-		_check("Listening Lab JLPT %d selection" % level, valid)
+		_check("Listening Lab lesson scope ignores JLPT %d setting" % level, valid)
 		lab.free()
 	_profile(4, 0)
 	SRSEngine.cards = []
 	var due_ids := PackedStringArray()
-	for level in [5, 4]:
-		for word in VocabDatabase.get_words_by_jlpt(level):
+	for lesson in [1, 5]:
+		for word in VocabDatabase.get_words_by_lesson(lesson):
 			if AudioManager.has_speech("vocab:" + word.id):
 				due_ids.append(word.id)
 				break
 	var lab = load("res://Scenes/MiniGames/ListeningLab/listening_lab.tscn").instantiate()
 	SRSEngine.add_new_cards(due_ids)
 	add_child(lab)
-	_check("Listening due-only spans introduced levels and lessons", lab._session_words.size() == 2)
+	_check("Listening due-only includes introduced in-scope lessons", lab._session_words.size() == 2)
 	lab.free()
 	_profile(0, 5, 1)
 	var empty_level := 0
@@ -138,7 +140,7 @@ func _test_listening_levels() -> void:
 	SRSEngine.cards = []
 	lab = load("res://Scenes/MiniGames/ListeningLab/listening_lab.tscn").instantiate()
 	add_child(lab)
-	_check("Listening empty filters do not substitute", lab._session_words.is_empty() and lab.submit_btn.disabled)
+	_check("Listening lesson scope ignores empty JLPT combination", not lab._session_words.is_empty() and not lab.submit_btn.disabled)
 	lab.free()
 
 
@@ -188,16 +190,22 @@ func _test_notebook() -> void:
 	notebook._on_filters_changed(0)
 	notebook.state_option.select(1)
 	notebook._on_filters_changed(0)
-	_check("Notebook Introduced filter uses professional cards", notebook._filtered_words.size() == 2)
+	_check("Notebook Introduced filter excludes locked cards", notebook._filtered_words.size() == 1)
 	notebook.state_option.select(2)
 	notebook._on_filters_changed(0)
-	_check("Notebook Due filter uses professional cards", notebook._filtered_words.size() == 2)
+	_check("Notebook Due filter excludes locked cards", notebook._filtered_words.size() == 1)
 	notebook.state_option.select(3)
 	notebook._on_filters_changed(0)
 	_check("Notebook Needs Practice excludes new cards", notebook._filtered_words.size() == 1 and notebook._filtered_words[0].id == lesson_one_word.id)
 	notebook._show_detail(lesson_one_word)
 	_check("Notebook shows professional provenance", notebook.detail_container.get_child_count() > 8)
 	_check("Notebook does not mutate learning or rewards", SRSEngine.cards.size() == 2 and SRSEngine.get_due_count() == before_due and profile.xp == 0 and profile.coffee_beans == 0)
+	_check("Notebook omits locked lesson choices", notebook.topic_option.get_item_index(5) == -1)
+	profile.current_lesson = 5
+	profile.highest_unlocked_lesson = 5
+	notebook.free()
+	notebook = load("res://Scenes/StudyNotebook/study_notebook.tscn").instantiate()
+	add_child(notebook)
 	notebook._mode_option.select(1)
 	notebook.topic_option.select(notebook.topic_option.get_item_index(5))
 	notebook._on_filters_changed(0)
@@ -209,7 +217,7 @@ func _test_notebook() -> void:
 	SRSEngine.cards = []
 	notebook = load("res://Scenes/StudyNotebook/study_notebook.tscn").instantiate()
 	add_child(notebook)
-	_check("Notebook supports no-profile professional browsing", notebook._filtered_words.size() == VocabDatabase.get_words_by_lesson(1).size())
+	_check("Notebook hides professional browsing without a profile", notebook._filtered_words.is_empty())
 	notebook.free()
 
 

@@ -50,14 +50,15 @@ func _show_question() -> void:
 	sentence_label.add_theme_font_override("font", JAPANESE_FONT)
 	hint_label.visible = false
 
-	var authored := VocabDatabase.get_exercises_for_word(word.id)
+	var allowed := LessonSessionPlanner.get_allowed_lessons(GameController.session_data)
+	var authored := VocabDatabase.get_exercises_for_word(word.id, allowed)
 	if not authored.is_empty():
 		var exercise: Dictionary = authored[randi() % authored.size()]
 		_correct_answer = exercise["choices"][int(exercise["answer_index"])]
 		_set_question(exercise["prompt"], exercise["english"], exercise["choices"])
 		return
 
-	var sentences := VocabDatabase.get_sentences_for_word(word.id)
+	var sentences := VocabDatabase.get_sentences_for_word(word.id, allowed)
 	if not sentences.is_empty():
 		var sentence: Dictionary = sentences[randi() % sentences.size()]
 		var japanese: String = sentence["japanese"]
@@ -91,15 +92,13 @@ func _set_question(prompt: String, english: String, source_choices: Array) -> vo
 
 func _word_choices(word: VocabWord, lesson: int) -> Array:
 	var choices: Array = [word.source_word]
-	var exclude := PackedStringArray([word.id])
-	var filters := {"lesson": lesson, "require_meaning": true}
+	var filters := {"require_meaning": true}
 	if word.part_of_speech != "":
 		filters["part_of_speech"] = word.part_of_speech
-	var distractors := VocabDatabase.get_random_words(40, exclude, filters)
+	var scoped := LessonSessionPlanner.get_scope_words(GameController.session_data, filters)
+	var distractors := scoped.filter(func(candidate: VocabWord) -> bool: return candidate.id != word.id and lesson in candidate.lesson_ids)
 	if distractors.size() < 8:
-		distractors.append_array(VocabDatabase.get_random_words(40, exclude, {"lesson": lesson, "require_meaning": true}))
-	if distractors.size() < 8:
-		distractors.append_array(VocabDatabase.get_random_words(40, exclude, {"require_meaning": true}))
+		distractors = scoped.filter(func(candidate: VocabWord) -> bool: return candidate.id != word.id)
 	distractors.shuffle()
 	for distractor in distractors:
 		if choices.size() >= 4:

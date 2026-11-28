@@ -30,7 +30,10 @@ static func get_config(game_type: String, profile: PlayerProfile) -> Dictionary:
 	var words_per_session := int(profile.settings.get("words_per_session", 10))
 	if int(activity.get("session_size", 0)) > 0:
 		words_per_session = int(activity["session_size"])
-	return {"game_type": game_type, "words_per_session": words_per_session, "scene_path": activity["scene_path"]}
+	var config := {"game_type": game_type, "words_per_session": words_per_session, "scene_path": activity["scene_path"]}
+	if not activity.get("require_menu", false):
+		config["lesson_number"] = LessonProgressManager.get_current_lesson(profile)
+	return config
 
 
 static func get_option(game_type: String, profile: PlayerProfile) -> Dictionary:
@@ -46,9 +49,9 @@ static func get_station_options(station: String, profile: PlayerProfile) -> Arra
 		if activity["station"] == station:
 			options.append(get_option(activity["game_type"], profile))
 	if station == "bookshelf":
-		options.append({"name": NOTEBOOK["name"], "description": NOTEBOOK["description"], "config": {"game_type": "study_notebook", "words_per_session": 0, "scene_path": NOTEBOOK["scene_path"]}})
+		options.append({"name": NOTEBOOK["name"], "description": NOTEBOOK["description"], "config": {"game_type": "study_notebook", "lesson_number": LessonProgressManager.get_current_lesson(profile), "words_per_session": 0, "scene_path": NOTEBOOK["scene_path"]}})
 	return options
 
 
 static func get_notebook_option() -> Dictionary:
-	return {"name": NOTEBOOK["name"], "description": NOTEBOOK["description"], "config": {"game_type": "study_notebook", "words_per_session": 0, "scene_path": NOTEBOOK["scene_path"]}}
+	return {"name": NOTEBOOK["name"], "description": NOTEBOOK["description"], "config": {"game_type": "study_notebook", "lesson_number": LessonProgressManager.get_current_lesson(), "words_per_session": 0, "scene_path": NOTEBOOK["scene_path"]}}

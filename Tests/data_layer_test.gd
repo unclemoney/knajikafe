@@ -604,7 +604,7 @@ func _test_curriculum_settings() -> void:
 	base = MiniGameBase.new()
 	base._words_per_session = 10
 	base._populate_session({})
-	_assert("Empty lesson filters never substitute other content", base._session_words.is_empty() and SRSEngine.cards.is_empty(), "")
+	_assert("Lesson scope overrides the old JLPT filter", not base._session_words.is_empty() and base._session_words.all(func(word: VocabWord) -> bool: return 1 in word.lesson_ids), "")
 	base.free()
 
 	profile.settings["target_jlpt_level"] = 0
@@ -627,16 +627,16 @@ func _test_curriculum_settings() -> void:
 	var due_ids: PackedStringArray = []
 	for word in base._session_words:
 		due_ids.append(word.id)
-	_assert("Due cards span introduced professional lessons", lesson_one_word.id in due_ids and lesson_five_word.id in due_ids, str(due_ids))
-	_assert("Café legacy cards stay out of official sessions", "n5_017" not in due_ids and due_ids.size() == 2, str(due_ids))
+	_assert("Locked future due cards stay out of official sessions", lesson_one_word.id in due_ids and lesson_five_word.id not in due_ids, str(due_ids))
+	_assert("Café legacy cards stay out of official sessions", "n5_017" not in due_ids, str(due_ids))
 	base.free()
 	profile.settings["target_lesson"] = 0
 	base = MiniGameBase.new()
-	_assert("All-lesson selection has no lesson restriction", not base._get_curriculum_filters().has("lesson"), "")
+	_assert("Curriculum filters cannot bypass the lesson planner", not base._get_curriculum_filters().has("lesson"), "")
 	base.free()
 	profile.settings["target_jlpt_level"] = 5
 	base = MiniGameBase.new()
-	_assert("Optional JLPT filter is preserved", base._get_curriculum_filters().get("jlpt_level", 0) == 5, "")
+	_assert("Lesson mode removes the global JLPT filter", base._get_curriculum_filters().get("jlpt_level", 0) == 0, "")
 	base.free()
 	SRSEngine.cards = saved_cards
 	GameController.current_profile = saved_profile

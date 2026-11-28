@@ -34,6 +34,8 @@ func _profile(name: String) -> PlayerProfile:
 	profile.player_name = name
 	profile.settings["target_jlpt_level"] = 5
 	profile.settings["target_lesson"] = 5
+	profile.current_lesson = 5
+	profile.highest_unlocked_lesson = 5
 	profile.settings["new_cards_per_session"] = 5
 	profile.settings["difficulty"] = "standard"
 	GameController.current_profile = profile
@@ -83,14 +85,14 @@ func _test_reading() -> void:
 func _test_kanji() -> void:
 	_profile("KanjiTest")
 	SRSEngine.kanji_cards = []
-	var entries := VocabDatabase.get_kanji_by_jlpt(5)
+	GameController.session_data = {"game_type": "kanji_workshop", "words_per_session": 8}
+	var entries := LessonSessionPlanner.get_kanji_entries(GameController.session_data)
 	var initial: Array[KanjiCard] = []
 	for i in 5:
 		var card := KanjiCard.new()
 		card.setup(entries[i].character)
 		initial.append(card)
 	SRSEngine.kanji_cards = initial
-	GameController.session_data = {"game_type": "kanji_workshop", "words_per_session": 8}
 	var workshop = load("res://Scenes/MiniGames/KanjiWorkshop/kanji_workshop.tscn").instantiate()
 	workshop._forced_exercise = "meaning"
 	add_child(workshop)
@@ -142,9 +144,9 @@ func _test_difficulty() -> void:
 		orders.free()
 		var filters: Dictionary = quiz._get_distractor_filters(word)
 		if mode == "relaxed":
-			_check("Relaxed uses closer professional distractors", filters.has("lesson") and filters.has("part_of_speech"))
+			_check("Relaxed uses closer professional distractors", filters.has("part_of_speech"))
 		elif mode == "standard":
-			_check("Standard retains lesson distractors", filters.has("lesson") and not filters.has("part_of_speech"))
+			_check("Standard retains scoped distractors", not filters.has("lesson") and not filters.has("part_of_speech"))
 		else:
 			_check("Challenge broadens distractors within JLPT level", not filters.has("lesson") and filters.get("jlpt_level") == 4)
 		var base := MiniGameBase.new()
@@ -178,15 +180,17 @@ func _test_n4_reading() -> void:
 	var profile := _profile("ProfessionalReadingTest")
 	profile.settings["target_jlpt_level"] = 0
 	profile.settings["target_lesson"] = 26
+	profile.current_lesson = 26
+	profile.highest_unlocked_lesson = 26
 	SRSEngine.cards = []
 	GameController.session_data = {"game_type": "reading_shelf", "words_per_session": 5}
 	var reading = load("res://Scenes/MiniGames/ReadingShelf/reading_shelf.tscn").instantiate()
 	add_child(reading)
-	var valid: bool = reading._session_passages.size() == 1
+	var valid: bool = not reading._session_passages.is_empty() and int(reading._session_passages[0].get("lesson", 0)) == 26
 	for passage in reading._session_passages:
-		if int(passage.get("lesson", 0)) != 26 or not passage.get("source_file", "").contains("第26课"):
+		if int(passage.get("lesson", 0)) > 26:
 			valid = false
-	_check("Reading Shelf builds professional Lesson 26 text", valid)
+	_check("Reading Shelf builds Lesson 26 and earlier review text", valid)
 	_check("Advanced reading remains unscored without authored comprehension", reading._session_cards.is_empty() and reading._session_passages[0]["question"] == "")
 	reading.free()
 
@@ -199,11 +203,12 @@ func _test_n4_kanji() -> void:
 	var workshop = load("res://Scenes/MiniGames/KanjiWorkshop/kanji_workshop.tscn").instantiate()
 	workshop._forced_exercise = "meaning"
 	add_child(workshop)
+	var scoped := LessonSessionPlanner.get_kanji_entries(GameController.session_data)
 	var valid: bool = workshop._session_entries.size() == 3 and SRSEngine.kanji_cards.size() == 3
 	for entry in workshop._session_entries:
-		if entry.jlpt_level != 4:
+		if entry not in scoped:
 			valid = false
-	_check("N4 Workshop uses N4 kanji and three new cards", valid)
+	_check("Workshop uses lesson vocabulary kanji and three new cards", valid)
 	workshop._build_question(workshop._session_entries[0], "reading")
 	_check("N4 reading exercise has four choices", workshop.answer_btns.all(func(button: Button) -> bool: return button.text != ""))
 	workshop.free()

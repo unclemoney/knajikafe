@@ -36,6 +36,19 @@ class ProfessionalContentTest(unittest.TestCase):
         self.assertEqual(report["vocabulary"], 3503)
         self.assertEqual(report["grammar"], 401)
         self.assertEqual(report["legacy_cafe"], 20)
+        self.assertEqual(report["lesson_tests"], 900)
+        tests = outputs[professional.OUTPUT / "lesson_tests.json"]
+        for lesson in range(1, 46):
+            lesson_tests = [item for item in tests if item["lesson"] == lesson]
+            self.assertEqual(len(lesson_tests), 20)
+            self.assertEqual(sum(item["kind"] == "vocabulary" for item in lesson_tests), 10)
+            self.assertEqual(sum(item["kind"] == "cloze" for item in lesson_tests), 10)
+        fallback_translations = [item for item in tests if item.get("question_source") == "lesson_vocabulary_translation"]
+        self.assertTrue(fallback_translations)
+        self.assertTrue(all(item.get("question_format") == "word_translation" for item in fallback_translations))
+        self.assertTrue(all("______" not in item["prompt"] for item in fallback_translations))
+        self.assertTrue(all(not professional.JAPANESE_RE.search(choice) for item in fallback_translations for choice in item["choices"]))
+        self.assertFalse(any(item.get("question_source") == "lesson_vocabulary_pattern" for item in tests))
         self.assertEqual(len(outputs[professional.OUTPUT / "legacy_id_map.json"]), 1500)
         self.assertEqual(len(outputs[professional.LEGACY_VOCAB_OUTPUT]), 20)
         self.assertTrue(all("______" in item["prompt"] for item in outputs[professional.OUTPUT / "exercises.json"]))
@@ -47,7 +60,7 @@ class ProfessionalContentTest(unittest.TestCase):
 
     def test_every_sentence_and_exercise_has_professional_provenance(self):
         outputs, _ = professional.build()
-        for filename in ("grammar.json", "sentences.json", "readings.json", "exercises.json"):
+        for filename in ("grammar.json", "sentences.json", "readings.json", "exercises.json", "lesson_tests.json"):
             for entry in outputs[professional.OUTPUT / filename]:
                 self.assertIn("source_file", entry)
                 self.assertTrue((professional.MARKDOWN / entry["source_file"]).is_file())

@@ -1,5 +1,5 @@
 extends MiniGameBase
-## N5/N4 kanji meaning, reading, and form practice with independent SRS cards.
+## Lesson-scoped kanji meaning, reading, and form practice with independent SRS cards.
 
 const JAPANESE_FONT = preload("res://Themes/japanese_font.tres")
 
@@ -38,23 +38,21 @@ func _get_card_display_text(card: SRSCard) -> String:
 	return card.character if card is KanjiCard else card.vocab_id
 
 
-func _populate_session(_config: Dictionary) -> void:
+func _populate_session(config: Dictionary) -> void:
 	var desired := mini(8, _words_per_session)
 	var used: Dictionary = {}
+	var scoped_entries := LessonSessionPlanner.get_kanji_entries(config)
+	var scoped: Dictionary = {}
+	for entry in scoped_entries:
+		scoped[entry.character] = true
 	for card in SRSEngine.get_due_kanji_cards():
 		if _session_entries.size() >= desired:
 			break
 		var entry := VocabDatabase.get_kanji(card.character)
-		if entry:
+		if entry and scoped.has(entry.character):
 			_add_entry(entry, card)
 			used[entry.character] = true
-	var candidates: Array[KanjiEntry] = []
-	var target_level := _get_target_jlpt_level()
-	if target_level == 0:
-		candidates.append_array(VocabDatabase.get_kanji_by_jlpt(5))
-		candidates.append_array(VocabDatabase.get_kanji_by_jlpt(4))
-	else:
-		candidates.append_array(VocabDatabase.get_kanji_by_jlpt(target_level))
+	var candidates := scoped_entries
 	candidates.shuffle()
 	var new_count := 0
 	var new_card_limit := mini(3, _get_new_card_limit())

@@ -153,7 +153,7 @@ func _test_session_selection() -> void:
 	GameController.current_profile = profile
 	var n4_word: VocabWord = null
 	for candidate in VocabDatabase.get_words_by_jlpt(4):
-		if candidate.has_meaning():
+		if candidate.has_meaning() and candidate.first_lesson > 1:
 			n4_word = candidate
 			break
 	var n4_card := SRSCard.new()
@@ -163,13 +163,13 @@ func _test_session_selection() -> void:
 	var session := MiniGameBase.new()
 	add_child(session)
 	session._setup_session()
-	_check("Due N4 remains eligible", n4_card in session._session_cards)
-	_check("Five new cards fill remaining slots", session._session_words.size() == 6)
+	_check("Locked future due card is ineligible", n4_card not in session._session_cards)
+	_check("Five new cards fill the session", session._session_words.size() == 5)
 	var new_words_valid := true
 	for word in session._session_words:
-		if word.id != n4_word.id and (word.jlpt_level != 5 or 1 not in word.lesson_ids):
+		if word.id != n4_word.id and 1 not in word.lesson_ids:
 			new_words_valid = false
-	_check("New cards use target N5", new_words_valid)
+	_check("New cards use Lesson 1 regardless of JLPT setting", new_words_valid)
 	session.free()
 	SRSEngine.cards = saved_cards
 	GameController.current_profile = saved_profile

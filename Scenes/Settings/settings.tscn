@@ -198,20 +198,6 @@ text = "  JLPT:"
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 
-[node name="TopicRow" type="HBoxContainer" parent="Panel/VBox/SessionSection"]
-layout_mode = 2
-
-[node name="TopicLabel" type="Label" parent="Panel/VBox/SessionSection/TopicRow"]
-layout_mode = 2
-custom_minimum_size = Vector2(110, 0)
-theme_override_font_sizes/font_size = 9
-text = "Professional lesson:"
-
-[node name="TopicOption" type="OptionButton" parent="Panel/VBox/SessionSection/TopicRow"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 9
-
 [node name="NewCardsRow" type="HBoxContainer" parent="Panel/VBox/SessionSection"]
 layout_mode = 2
 

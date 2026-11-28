@@ -59,10 +59,11 @@ func _show_question() -> void:
 	# Generate only real professional meanings as answer choices.
 	var correct_meaning := word.get_primary_meaning()
 	var choices: Array[String] = [correct_meaning]
-	var exclude := PackedStringArray([word.id])
-	var distractors := VocabDatabase.get_random_words(40, exclude, _get_distractor_filters(word))
+	var distractors := LessonSessionPlanner.get_scope_words(GameController.session_data, _get_distractor_filters(word))
+	distractors = distractors.filter(func(candidate: VocabWord) -> bool: return candidate.id != word.id)
 	if distractors.size() < 8:
-		distractors.append_array(VocabDatabase.get_random_words(40, exclude, {"require_meaning": true}))
+		distractors = LessonSessionPlanner.get_scope_words(GameController.session_data, {"require_meaning": true})
+		distractors = distractors.filter(func(candidate: VocabWord) -> bool: return candidate.id != word.id)
 	distractors.shuffle()
 	for distractor in distractors:
 		if choices.size() >= 4:
@@ -85,17 +86,11 @@ func _show_question() -> void:
 
 
 func _get_distractor_filters(word: VocabWord) -> Dictionary:
-	var lesson := _get_target_lesson()
-	if lesson == 0 or lesson not in word.lesson_ids:
-		lesson = word.first_lesson
-	var filters := {"lesson": lesson, "require_meaning": true}
+	var filters := {"require_meaning": true}
 	if word.jlpt_level > 0:
 		filters["jlpt_level"] = word.jlpt_level
 	else:
 		filters["untagged_only"] = true
-	if _get_difficulty() == "challenge":
-		filters.erase("lesson")
-		filters.erase("untagged_only")
 	if _get_difficulty() == "relaxed" and word.part_of_speech != "":
 		filters["part_of_speech"] = word.part_of_speech
 	return filters

@@ -27,15 +27,17 @@ func _ready() -> void:
 	level_option.add_item("All JLPT", 0)
 	for level in [5, 4, 3, 2, 1]:
 		level_option.add_item("N%d" % level, level)
-	topic_option.add_item("All lessons", 0)
+	topic_option.add_item("All unlocked lessons", 0)
 	for lesson in VocabDatabase.get_lessons():
+		if not LessonProgressManager.is_unlocked(lesson["number"]):
+			continue
 		topic_option.add_item("Lesson %02d" % lesson["number"], lesson["number"])
 		topic_option.set_item_tooltip(topic_option.item_count - 1, "%s · %s" % [lesson["stage"], lesson["source_file"]])
 	var profile := GameController.current_profile
 	var target_level := int(profile.settings.get("target_jlpt_level", 0)) if profile else 0
-	var target_lesson := int(profile.settings.get("target_lesson", 1)) if profile else 1
+	var target_lesson := LessonProgressManager.get_focus_lesson(GameController.session_data) if profile else 0
 	level_option.select(level_option.get_item_index(target_level))
-	topic_option.select(topic_option.get_item_index(target_lesson))
+	topic_option.select(maxi(0, topic_option.get_item_index(target_lesson)))
 	level_option.item_selected.connect(_on_filters_changed)
 	topic_option.item_selected.connect(_on_filters_changed)
 	for value in [["All words", "all"], ["Introduced", "introduced"], ["Due", "due"], ["Needs Practice", "needs_practice"]]:
@@ -55,7 +57,7 @@ func _ready() -> void:
 	next_btn.pressed.connect(_on_next_pressed)
 	_refresh_results()
 	if profile == null:
-		_add_detail_label("No profile loaded. Professional lessons remain browsable; progress filters need a profile.", 9)
+		_add_detail_label("No profile loaded. Select a profile to browse unlocked lessons.", 9)
 	else:
 		_add_detail_label("Select a professional word or grammar point to view its source and study progress.", 9)
 	search_field.grab_focus()
@@ -103,6 +105,7 @@ func _refresh_results() -> void:
 
 func _refresh_grammar_results() -> void:
 	_filtered_grammar = VocabDatabase.get_grammar_points(topic_option.get_selected_id(), search_field.text)
+	_filtered_grammar = _filtered_grammar.filter(func(grammar: Dictionary) -> bool: return LessonProgressManager.is_unlocked(int(grammar["lesson"])))
 	var page_count := maxi(1, int(ceil(float(_filtered_grammar.size()) / float(PAGE_SIZE))))
 	_page = clampi(_page, 0, page_count - 1)
 	var start := _page * PAGE_SIZE
@@ -144,6 +147,8 @@ func _get_filtered_words() -> Array[VocabWord]:
 		for card in ProgressMetrics.get_needs_practice(SRSEngine.cards, GameController.get_current_date(), SRSEngine.cards.size()):
 			needs_practice[card.vocab_id] = card
 	for word in VocabDatabase.get_all_words():
+		if not LessonProgressManager.is_unlocked(word.first_lesson):
+			continue
 		if level > 0 and word.jlpt_level != level:
 			continue
 		if lesson > 0 and lesson not in word.lesson_ids:
@@ -168,58 +173,12 @@ func _search_text(word: VocabWord) -> String:
 
 
 func _show_detail(word: VocabWord) -> void:
-	AudioManager.stop_speech()
-	_clear_details()
-	var display := _add_detail_label(word.get_display_text(), 28, true)
-	display.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_add_detail_label("Reading: %s" % (word.get_reading() if word.get_reading() != "" else "Not supplied"), 12, true)
-	if word.romaji != "":
-		_add_detail_label("Derived romaji: %s" % word.romaji, 10)
-	_add_detail_label("Meaning: %s" % ("; ".join(word.english_meanings) if word.has_meaning() else "Unavailable in extraction"), 11)
-	var level := "N%d" % word.jlpt_level if word.jlpt_level > 0 else "JLPT untagged"
-	var pos := word.source_pos if word.source_pos != "" else word.part_of_speech
-	_add_detail_label("%s · %s · %s" % [level, pos, word.pitch], 8, true)
-	var lessons := PackedStringArray()
-	for lesson in word.lesson_ids:
-		lessons.append(str(lesson))
-	_add_detail_label("Professional lessons: %s · %s" % [", ".join(lessons), word.stage], 9, true)
-	_add_detail_label("Source sections: %s" % ", ".join(word.source_sections), 8, true)
-	var card := SRSEngine.get_card_for_vocab(word.id)
-	if card:
-		var stage := ProgressMetrics.get_stage_name(ProgressMetrics.get_card_stage(card))
-		var review := card.next_review_date if card.next_review_date != "" else "New / unscheduled"
-		_add_detail_label("Learning: %s · %d/%d correct" % [stage, card.correct_reviews, card.total_reviews], 9)
-		_add_detail_label("Next review: %s" % review, 9)
-	else:
-		_add_detail_label("Learning: Not introduced", 9)
-	var audio_btn := Button.new()
-	audio_btn.text = "Play pronunciation"
-	audio_btn.custom_minimum_size = Vector2(0, 28)
-	audio_btn.disabled = word.get_reading() == "" or not AudioManager.has_speech("vocab:" + word.id)
-	audio_btn.pressed.connect(AudioManager.play_speech.bind("vocab:" + word.id))
-	detail_container.add_child(audio_btn)
-	if not word.example_sentences.is_empty():
-		_add_detail_label("Professional examples", 11)
-	for example in word.example_sentences:
-		var parts := example.split("|")
-		_add_detail_label(parts[0], 11, true)
-		if parts.size() > 1:
-			_add_detail_label(parts[1], 9)
-	_add_detail_label("Source: markdown/%s" % word.source_file, 7)
+	LessonDetailRenderer.show_word(detail_container, word)
 	_add_detail_label("Progress estimates describe study activity, not JLPT certification.", 7)
 
 
 func _show_grammar_detail(grammar: Dictionary) -> void:
-	AudioManager.stop_speech()
-	_clear_details()
-	_add_detail_label(grammar["title"], 18, true)
-	_add_detail_label("Lesson %d · %s · %s" % [grammar["lesson"], grammar["stage"], grammar["kind"]], 9, true)
-	if grammar.get("category", "") != "":
-		_add_detail_label("Category: %s" % grammar["category"], 9, true)
-	_add_detail_label("Professional explanation", 11)
-	for line in grammar["body_lines"]:
-		_add_detail_label(line, 9, true)
-	_add_detail_label("Source: markdown/%s · line %d · page %d" % [grammar["source_file"], grammar["source_line"], grammar["source_page"]], 7)
+	LessonDetailRenderer.show_grammar(detail_container, grammar)
 
 
 func _clear_details() -> void:
